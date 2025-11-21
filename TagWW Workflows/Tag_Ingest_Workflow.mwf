@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <transcoder>
  <workflow name="Tag_Ingest_Workflow" nameConvention="[path][baseName][.frame][.ext]">
-  <view y="-583.22337464033365" x="-137.5709621244641" scale="1.0321945693127366"/>
+  <view y="-612.2876624131078" x="-150.16548682599952" scale="1.0321945693127366"/>
   <nodes>
    <node type="input" class="Watcher">
     <properties>
@@ -376,7 +376,7 @@ def onPropertyUpdated(self, name):
      <objectName type="string">H264Transcode</objectName>
      <color type="color">#000000</color>
      <colorByStatus type="bool">false</colorByStatus>
-     <pos type="point2">-257.775,-855.01</pos>
+     <pos type="point2">-256.806,-855.979</pos>
      <schemaName type="string">h264</schemaName>
      <nameConvention type="CnameConvention"></nameConvention>
      <nodeLocked type="bool">false</nodeLocked>
@@ -437,7 +437,7 @@ def onPropertyUpdated(self, name):
      <audioChannels type="int">0</audioChannels>
      <audioBitDepth type="int">0</audioBitDepth>
      <gop type="uint">25</gop>
-     <bitrate type="uint">6</bitrate>
+     <bitrate type="uint">2</bitrate>
      <quality type="uint">10</quality>
     </properties>
     <connections>
@@ -1757,7 +1757,7 @@ def onPropertyUpdated(self, name):
         pass
 </code>
      <iconik_appId type="string">8518e744-c53d-11f0-a825-063ff9288a04</iconik_appId>
-     <iconik_authToken type="string" encrypted="1">AwUEBjBET6lNnsoSSu5havuOotSMBTSNgqGg8mXU06OiA/PNwLVQO5zXBLn8+j//pB7UEvs3kUGfXJxC5JWyVsWdRJOFlL2Gg78tBLpORO47cHVCL1ut5iX34Bmf0yZVJZbHT2xhe0d2NU0n+eMZUWpzAE/KXIsWvpjiISzRMoE9z0qcEsK++5ecMZD7hM9QP72uj6wh6KOCb4NVTLINtUlGuFxE/cj3ZPLdTZPB/gO2P3bDHRlqQHMq54uOWIq9FgO7TWc4TG4cPo5VWaE=</iconik_authToken>
+     <iconik_authToken type="string" encrypted="1">AwXDwfeDiG6KWQ3VjSmmrTxJZRNLwvNKRWZnNaITFGRlxDQKB3KX/FsQw347Pfg4Y9kT1TzwVoZYm1uFI1J1kQJag1RCU3pBRHjqw32Jgyn8t7KF6JxqIeIwJ95YFOGS4lEAiKumvICx8orgPiTelq20x4gNm0zReV8l5usW9Ub6CI1b1QV5PFBb9lc8QwiX+HppSGvmL2RFqESSi3XKco6Bf5uDOg8wozUailQGOcRx+LEE2t6th7TtIExJn0160cR8iqD/i6nb+UmSnmY=</iconik_authToken>
      <iconik_domain type="string">https://app.iconik.io</iconik_domain>
      <fileTypes type="string">.mov,.mp4,.mxf</fileTypes>
      <collectionPath type="string">[brand]/[campaign]/[job]</collectionPath>
@@ -2099,7 +2099,7 @@ def process(self):
 </code>
      <aws_bucket type="string">[s3_path]/[brand]/[campaign]/[job]</aws_bucket>
      <aws_key type="string">AKIAVYGUPQV3QO4PJ2AY</aws_key>
-     <aws_secret type="string" encrypted="1">AwXKo5Wgu6t0WLGSIkduG0ol8H0O3K8WGTrSgBfAABMQ/83rUTnblNaCyEr1HiWXUHsVtTI+freLXlGLjiVbEmtij+7WdrwlVHpP</aws_secret>
+     <aws_secret type="string" encrypted="1">AwWP5tDl/u4xHfTXZwIrXg9gtThLmepTXH+XxVKFRVZVuoiuFHye0ZPHjQ+wW2DSFT5Q8Hd7O/LOGxTOy2AeVy4nyquTM/lgET8K</aws_secret>
     </properties>
     <connections>
      <rankFrom type="input" specialType="order" name="rankFrom" id="a76211e8-13bd-4a04-9c72-e4c68d32aa41"/>
@@ -2963,12 +2963,12 @@ def onPropertyUpdated(self, name):
         pass
 </code>
      <iconik_appId type="string">8518e744-c53d-11f0-a825-063ff9288a04</iconik_appId>
-     <iconik_authToken type="string" encrypted="1">AwWMjrjMxyHFFkKawmbp4nMGKlwEjbwFCikoeu1cWysqi3tFSD3YsxRfjDF0crd3LJZcmnO/GckX1BTKbB063k0VzBsNHDUOCzeljDLGzGaz+P3Kp9Mlbq1/aJEXW67drR5Px+Tp88/+vcWvcWuR2eL7iMdC1AOeNhBqqaRZugm1R8IUmko2cx8UuRhzDEfYtzUmBySpYCsK5wvdxDqFPcHOMNTMdUB/7HpVxRtJdos+t/5LlZHiyPuibwMG0AI1noszxe+wxOaUtgbd0Sk=</iconik_authToken>
+     <iconik_authToken type="string" encrypted="1">AwWDgbfDyC7KGU2VzWnm7XwJJVMLgrMKBSYndeJTVCQlhHRKRzLXvBtQgz57fbh4I5lTlXywFsYY2xvFYxI10UIawxQCEzoBBDiqgz3Jw2m89/LFqNwqYaJwZ54YVKHSohFAyOvm/MDxssqgfmSe1u30h8hN2wyROR9lpqtWtQa6SM0blUU5fBAbthd8A0jXuDopCCumbyQF6ATSyzWKMs7BP9vDek9w43VayhRGeYQxuPFEmp7tx/StYAwJ3w06kYQ8yuC/y+mbuQnS3iY=</iconik_authToken>
      <iconik_domain type="string">https://app.iconik.io</iconik_domain>
      <aws_bucket type="string">[s3_path]</aws_bucket>
      <s3Prefix type="string"></s3Prefix>
      <aws_key type="string">AKIAVYGUPQV3QO4PJ2AY</aws_key>
-     <aws_secret type="string" encrypted="1">AwXuh7GEn49QfJW2BmNKP24B1Fkq+IsyPR72pDPkJDc02+nPdR3/sPKm7G7ROgGzdF8xkRYaWpOvenWvqgF/Nk9Gq8ryUpgBcF5r</aws_secret>
+     <aws_secret type="string" encrypted="1">AwUVfEp/ZHSrh25N/ZixxJX6L6LRA3DJxuUNX8gf38zPIBI0juYESwldF5UqwfpIj6TKau3hoWhUgY5UUfqEzbS9UDEJqWP6i6WQ</aws_secret>
      <metadataViewId type="string">5522f18c-bbfc-11f0-875b-bae5e7a01d69</metadataViewId>
      <overwriteExisting type="bool">false</overwriteExisting>
     </properties>
