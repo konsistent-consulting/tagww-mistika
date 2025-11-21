@@ -1,0 +1,168 @@
+2025.11.06 11:05:06.758|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:05:06.759|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:05:06.759|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:05:06.775|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:05:06.853|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:05:06.853|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:06:28.415|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:06:28.416|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:06:28.416|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:06:28.417|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:06:28.479|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:06:28.479|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:07:08.255|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:07:08.255|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:07:08.255|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:07:08.256|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:07:08.301|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:07:08.301|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:07:10.659|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:07:10.660|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:07:10.660|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:07:10.661|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:07:10.667|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:07:10.668|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:07:32.758|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:07:32.759|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:07:32.759|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:07:32.782|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:07:48.646|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:07:48.647|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:11:25.465|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:25.466|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:25.483|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:27.916|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:27.916|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:31.507|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:31.508|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:33.936|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:33.936|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.436|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.436|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.437|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.437|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.437|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.437|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.437|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.438|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:11:40.438|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.438|Critical Error|watchfolder_s3_upload|watchfolder_s3_upload|Group is not Ready
+2025.11.06 11:11:40.438|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Failed
+2025.11.06 11:11:40.438|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:40.438|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:53.756|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:53.757|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:11:53.758|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:53.758|Critical Error|watchfolder_s3_upload|watchfolder_s3_upload|Group is not Ready
+2025.11.06 11:11:53.760|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Failed
+2025.11.06 11:11:53.764|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:11:53.764|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:12:20.171|Critical Error|watchfolder_s3_upload|S3Out|Missing 'isReady' function
+2025.11.06 11:12:47.353|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:12:47.354|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:12:47.354|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:12:47.356|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:12:47.393|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:12:47.393|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:13:03.756|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:13:03.757|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:13:03.757|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:13:03.779|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:15:56.024|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:15:56.024|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:20:10.757|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:20:10.758|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:20:10.758|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:20:10.790|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:24:32.706|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Cancelled
+2025.11.06 11:24:32.706|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Failed
+2025.11.06 11:25:57.797|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:25:57.797|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:25:57.797|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:25:57.805|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:25:57.854|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:25:57.855|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:26:11.758|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:26:11.759|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:26:11.760|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:26:11.781|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:26:42.907|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:26:42.908|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:32:08.552|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:32:08.552|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:32:08.552|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:32:08.554|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:32:08.608|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:32:08.608|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:38:49.014|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:38:49.014|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:38:49.015|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:38:49.016|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:38:49.078|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:38:49.078|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 11:39:08.722|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 11:39:08.723|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 11:39:08.723|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 11:39:08.740|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 11:39:36.798|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 11:39:36.798|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 14:16:26.758|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 14:16:26.759|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 14:16:26.759|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 14:16:26.810|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 14:16:56.922|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 14:16:56.923|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 14:19:22.764|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 14:19:22.765|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 14:19:22.765|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 14:19:22.787|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 14:19:52.726|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 14:19:52.730|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 14:21:31.913|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 14:21:31.914|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 14:21:31.914|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 14:21:31.945|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 14:22:02.586|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 14:22:02.586|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 14:58:33.553|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 14:58:33.554|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 14:58:33.554|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 14:58:33.556|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 14:58:33.648|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering MoveProcessedFiles
+2025.11.06 14:58:34.654|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 14:58:34.655|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 14:58:51.769|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 14:58:51.770|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 14:58:51.770|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 14:58:51.806|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 14:59:48.486|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering MoveProcessedFiles
+2025.11.06 14:59:49.527|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 14:59:49.529|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 15:23:13.680|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 15:23:13.682|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 15:23:13.682|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 15:23:13.685|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 15:23:14.298|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering MoveProcessedFiles
+2025.11.06 15:23:15.303|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 15:23:15.308|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 15:26:34.774|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 15:26:34.775|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 15:26:34.775|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 15:26:34.836|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 15:50:01.006|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering MoveProcessedFiles
+2025.11.06 15:50:02.077|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 15:50:02.088|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 16:02:17.549|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 16:02:17.549|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 16:02:17.549|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 16:02:17.557|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 16:02:18.117|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering MoveProcessedFiles
+2025.11.06 16:02:19.121|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 16:02:19.129|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished
+2025.11.06 16:03:13.819|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Starting Workflow
+2025.11.06 16:03:13.820|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Started
+2025.11.06 16:03:13.820|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering Watcher
+2025.11.06 16:03:13.908|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering S3Out
+2025.11.06 16:07:07.905|Info|watchfolder_s3_upload|watchfolder_s3_upload|Rendering MoveProcessedFiles
+2025.11.06 16:07:10.374|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload Finished
+2025.11.06 16:07:10.387|Info|watchfolder_s3_upload|watchfolder_s3_upload|watchfolder_s3_upload: Workflow Successfully Finished

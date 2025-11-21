@@ -1,0 +1,6 @@
+2025.11.11 10:51:34.386|Info|watchfolder_prores_encode|watchfolder_prores_encode|watchfolder_prores_encode: Starting Workflow
+2025.11.11 10:51:34.387|Info|watchfolder_prores_encode|watchfolder_prores_encode|watchfolder_prores_encode Started
+2025.11.11 10:51:34.387|Info|watchfolder_prores_encode|watchfolder_prores_encode|Rendering ingest
+2025.11.11 10:51:34.470|Info|watchfolder_prores_encode|watchfolder_prores_encode|Rendering MetadataToCSV
+2025.11.11 10:51:34.986|Info|watchfolder_prores_encode|watchfolder_prores_encode|watchfolder_prores_encode Finished
+2025.11.11 10:51:34.988|Info|watchfolder_prores_encode|watchfolder_prores_encode|watchfolder_prores_encode: Workflow Successfully Finished

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OFXConfig>
+  <Default>
+    <Valid>0</Valid>
+  </Default>
+
+  <!-- Boris plugins -->
+  <Plugin>
+    <Name>BCC9_OFX</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>BCC12_OFX</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>BCC_OFX_3DObjects</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>BorisGRF</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>mochaPro6</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>mochaVR6</Name>
+    <Valid>1</Valid>
+  </Plugin>
+
+  <!-- RE:Vision plugins -->
+  <Plugin>
+    <Name>clamp_time</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>DENoise</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>DENoiseFrameAvg</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>FilmConvertPro2.0</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>motion_vectors_create</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>twixtor</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>twixtor_pro</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  <Plugin>
+    <Name>twixtor_vectors_in</Name>
+    <Valid>1</Valid>
+  </Plugin>
+
+  <!-- RE:NeatVideo plugins -->
+  <Plugin>
+    <Name>NeatVideo</Name>
+    <Valid>0</Valid>
+    <LazyLoad>1</LazyLoad>
+  </Plugin>
+  <Plugin>
+    <Name>NeatVideo4</Name>
+    <Valid>1</Valid>
+    <LazyLoad>1</LazyLoad>
+  </Plugin>
+  <Plugin>
+    <Name>NeatVideo5</Name>
+    <Valid>1</Valid>
+    <LazyLoad>1</LazyLoad>
+  </Plugin>
+
+  <!-- Genarts plugins -->
+  <Plugin>
+    <Name>Sapphire</Name>
+    <Valid>1</Valid>
+  </Plugin>  
+
+  <!-- Filmworkz DVO Tools -->
+  <Plugin>
+    <Name>DVO</Name>
+    <Valid>1</Valid>
+  </Plugin>
+  
+  <!-- Topaz -->
+  <Plugin>
+    <Name>Topaz Video AI</Name>
+    <Valid>1</Valid>
+  </Plugin>
+
+</OFXConfig>

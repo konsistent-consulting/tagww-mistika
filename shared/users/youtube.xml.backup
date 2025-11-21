@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <YouTube>
+    <TermsOfServices>&lt;a href="https://www.youtube.com/t/terms"&gt;'YouTube's Terms of Services'&lt;/a&gt;</TermsOfServices>
+    <category>22</category>
+    <clientId/>
+    <color>#1fa3e9</color>
+    <description>File Uploaded with Mistika Workflows</description>
+    <keywords>keyword1, keyword2, etc</keywords>
+    <objectName>YouTube</objectName>
+    <privacyStatus>public</privacyStatus>
+    <title>Example title</title>
+  </YouTube>
+</nodeCommonRoot>

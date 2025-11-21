@@ -1,0 +1,102 @@
+2025.09.25 09:57:03.041|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.09.25 09:57:03.041|Info|New Workflow|New Workflow|New Workflow Started
+2025.09.25 09:57:03.041|Info|New Workflow|New Workflow|Rendering Folder
+2025.09.25 09:57:03.061|Info|New Workflow|New Workflow|Rendering ShotGridCreate
+2025.09.25 09:57:03.480|Info|New Workflow|ShotGridCreate|Processing 000_tst0010_bg01_v0001.mov
+2025.09.25 09:57:04.194|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': '', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:04.194|Info|New Workflow|ShotGridCreate|Processing XR0001_20250312.ale
+2025.09.25 09:57:04.849|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': '', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:04.849|Info|New Workflow|ShotGridCreate|Processing tst0010_bg01_v0001.png
+2025.09.25 09:57:05.462|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': '', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:05.462|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.mov
+2025.09.25 09:57:06.127|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': '', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:06.127|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.png
+2025.09.25 09:57:06.737|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': '', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:06.738|Info|New Workflow|ShotGridCreate|Processing tst0030_rf01_v0001.mov
+2025.09.25 09:57:07.359|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': '', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:07.360|Info|New Workflow|ShotGridCreate|Processing tst0030_rf01_v0001.png
+2025.09.25 09:57:07.982|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': '', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:07.982|Info|New Workflow|New Workflow|New Workflow Finished
+2025.09.25 09:57:07.982|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.09.25 09:57:51.219|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.09.25 09:57:51.220|Info|New Workflow|New Workflow|New Workflow Started
+2025.09.25 09:57:51.220|Info|New Workflow|New Workflow|Rendering Folder
+2025.09.25 09:57:51.238|Info|New Workflow|New Workflow|Rendering ShotGridCreate
+2025.09.25 09:57:51.627|Info|New Workflow|ShotGridCreate|Processing 000_tst0010_bg01_v0001.mov
+2025.09.25 09:57:52.310|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': 'tst100_100', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:52.310|Info|New Workflow|ShotGridCreate|Processing XR0001_20250312.ale
+2025.09.25 09:57:52.934|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': 'tst100_100', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:52.934|Info|New Workflow|ShotGridCreate|Processing tst0010_bg01_v0001.png
+2025.09.25 09:57:53.634|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': 'tst100_100', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:53.634|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.mov
+2025.09.25 09:57:54.280|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': 'tst100_100', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:54.280|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.png
+2025.09.25 09:57:54.920|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': 'tst100_100', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:54.920|Info|New Workflow|ShotGridCreate|Processing tst0030_rf01_v0001.mov
+2025.09.25 09:57:55.553|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': 'tst100_100', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:55.553|Info|New Workflow|ShotGridCreate|Processing tst0030_rf01_v0001.png
+2025.09.25 09:57:56.153|Critical Error|New Workflow|ShotGridCreate|API create() CRUD ERROR #6: Invalid field value, update failed [5 - Update failed for [Version.sg_status_list]: 'act' is not a valid status. Valid statuses: 'na', 'rev', 'vwd', 'apr', 'plt'.],Version,{'project': {'type': 'Project', 'id': 188}, 'code': 'tst100_100', 'entity': {'type': 'Shot', 'id': 1306}, 'sg_status_list': 'act'}
+2025.09.25 09:57:56.154|Info|New Workflow|New Workflow|New Workflow Finished
+2025.09.25 09:57:56.154|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.09.25 09:59:42.647|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.09.25 09:59:42.647|Info|New Workflow|New Workflow|New Workflow Started
+2025.09.25 09:59:42.647|Info|New Workflow|New Workflow|Rendering Folder
+2025.09.25 09:59:42.662|Info|New Workflow|New Workflow|Rendering ShotGridCreate
+2025.09.25 09:59:43.038|Info|New Workflow|ShotGridCreate|Processing 000_tst0010_bg01_v0001.mov
+2025.09.25 09:59:43.759|Info|New Workflow|ShotGridCreate|Processing XR0001_20250312.ale
+2025.09.25 09:59:44.190|Warning|New Workflow|ShotGridCreate|Version tst100_100 not created. It already exists
+2025.09.25 09:59:44.190|Info|New Workflow|ShotGridCreate|Processing tst0010_bg01_v0001.png
+2025.09.25 09:59:44.627|Warning|New Workflow|ShotGridCreate|Version tst100_100 not created. It already exists
+2025.09.25 09:59:44.628|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.mov
+2025.09.25 09:59:45.053|Warning|New Workflow|ShotGridCreate|Version tst100_100 not created. It already exists
+2025.09.25 09:59:45.054|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.png
+2025.09.25 09:59:45.494|Warning|New Workflow|ShotGridCreate|Version tst100_100 not created. It already exists
+2025.09.25 09:59:45.494|Info|New Workflow|ShotGridCreate|Processing tst0030_rf01_v0001.mov
+2025.09.25 09:59:45.929|Warning|New Workflow|ShotGridCreate|Version tst100_100 not created. It already exists
+2025.09.25 09:59:45.930|Info|New Workflow|ShotGridCreate|Processing tst0030_rf01_v0001.png
+2025.09.25 09:59:46.353|Warning|New Workflow|ShotGridCreate|Version tst100_100 not created. It already exists
+2025.09.25 09:59:46.354|Info|New Workflow|New Workflow|New Workflow Finished
+2025.09.25 09:59:46.354|Info|New Workflow|New Workflow|New Workflow: Workflow Successfully Finished
+2025.09.25 10:01:01.272|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.09.25 10:01:01.273|Info|New Workflow|New Workflow|New Workflow Started
+2025.09.25 10:01:01.273|Info|New Workflow|New Workflow|Rendering MediaMovie
+2025.09.25 10:01:01.275|Info|New Workflow|New Workflow|Rendering ShotGridCreate
+2025.09.25 10:01:01.762|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.mov
+2025.09.25 10:01:02.246|Warning|New Workflow|ShotGridCreate|Version tst100_100 not created. It already exists
+2025.09.25 10:01:02.247|Info|New Workflow|New Workflow|New Workflow Finished
+2025.09.25 10:01:02.247|Info|New Workflow|New Workflow|New Workflow: Workflow Successfully Finished
+2025.09.25 10:01:15.353|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.09.25 10:01:15.355|Info|New Workflow|New Workflow|New Workflow Started
+2025.09.25 10:01:15.355|Info|New Workflow|New Workflow|Rendering MediaMovie
+2025.09.25 10:01:15.356|Info|New Workflow|New Workflow|Rendering ShotGridCreate
+2025.09.25 10:01:15.740|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.mov
+2025.09.25 10:01:16.182|Warning|New Workflow|ShotGridCreate|Version tst100_100 not created. It already exists
+2025.09.25 10:01:16.182|Info|New Workflow|New Workflow|New Workflow Finished
+2025.09.25 10:01:16.182|Info|New Workflow|New Workflow|New Workflow: Workflow Successfully Finished
+2025.09.25 10:01:30.679|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.09.25 10:01:30.684|Info|New Workflow|New Workflow|New Workflow Started
+2025.09.25 10:01:30.684|Info|New Workflow|New Workflow|Rendering MediaMovie
+2025.09.25 10:01:30.686|Info|New Workflow|New Workflow|Rendering ShotGridCreate
+2025.09.25 10:01:31.089|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.mov
+2025.09.25 10:01:31.964|Info|New Workflow|New Workflow|New Workflow Finished
+2025.09.25 10:01:31.964|Info|New Workflow|New Workflow|New Workflow: Workflow Successfully Finished
+2025.09.25 10:02:24.475|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.09.25 10:02:24.476|Info|New Workflow|New Workflow|New Workflow Started
+2025.09.25 10:02:24.476|Info|New Workflow|New Workflow|Rendering MediaMovie
+2025.09.25 10:02:24.480|Info|New Workflow|New Workflow|Rendering ShotGridCreate
+2025.09.25 10:02:24.939|Info|New Workflow|ShotGridCreate|Processing tst0020_cp01_v0001.mov
+2025.09.25 10:02:25.383|Warning|New Workflow|ShotGridCreate|Version tst100_100 not created. It already exists
+2025.09.25 10:02:27.136|Info|New Workflow|New Workflow|New Workflow Finished
+2025.09.25 10:02:27.136|Info|New Workflow|New Workflow|New Workflow: Workflow Successfully Finished
+2025.09.25 10:07:48.802|Critical Error|New Workflow|ShotGridCreate_2|apiKey can not be empty
+2025.09.25 10:07:48.804|Critical Error|New Workflow|ShotGridCreate_2|scriptName can not be empty
+2025.09.25 10:07:48.804|Critical Error|New Workflow|ShotGridCreate_2|Project can not be empty
+2025.09.25 10:07:48.805|Critical Error|New Workflow|ShotGridCreate_2|apiKey can not be empty
+2025.09.25 10:07:48.805|Critical Error|New Workflow|ShotGridCreate_2|scriptName can not be empty
+2025.09.25 10:07:48.805|Critical Error|New Workflow|ShotGridCreate_2|Project can not be empty
+2025.09.25 10:07:48.806|Critical Error|New Workflow|ShotGridCreate_2|apiKey can not be empty
+2025.09.25 10:07:48.806|Critical Error|New Workflow|ShotGridCreate_2|scriptName can not be empty
+2025.09.25 10:07:48.806|Critical Error|New Workflow|ShotGridCreate_2|Project can not be empty
+2025.09.25 10:07:48.807|Critical Error|New Workflow|ShotGridCreate_2|apiKey can not be empty
+2025.09.25 10:07:48.807|Critical Error|New Workflow|ShotGridCreate_2|scriptName can not be empty
+2025.09.25 10:07:48.807|Critical Error|New Workflow|ShotGridCreate_2|Project can not be empty

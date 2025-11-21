@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; Mistika Render</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;The MistikaRender node permits to execute render processes for Mistika render jobs (.rnd script files), which can be created with other Mistika applications. Note: If" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "mistikarender.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Mistika Render</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?mistikarender.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Mistika Render</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="mistikamlnk.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="move.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">The </span><span class="f_T_Menu10p">MistikaRender</span><span class="f_BodyText"> node permits to execute render processes for Mistika render jobs (</span><span class="f_T_Emphasis">.rnd</span><span class="f_BodyText"> script files), which can be created with other Mistika applications.</span></p>
+<p class="p_BodyText"><span class="f_T_Emphasis">Note: If you plan to render &nbsp;.rnd scripts coming from other systems please note that the local system may need additional third party plugins and additional licenses </span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#file" class="topiclink">File Path</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Standard Transcoding properties</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#renderfarmenabled" class="topiclink" title="Image Res X">Render Farm</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">rnd:</span> <span class="f_BodyText">The</span><span class="f_T_Emphasis"> .rnd</span><span class="f_BodyText"> file or files containing the Mistika render scripts.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">AV Out: </span>Rendered media file (image files)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Ext. Audio:</span> Rendered media file (a<span class="f_BodyText">udio file)</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">Notes:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">The render process will create video and/or audio files in the target folder that was defined in the Mistika render settings (when creating the .rnd), so in principle the path location &nbsp;for the rendered media is not specified in Mistika Workflows but within the rnd scripts themselves. However, the media path can be redefined with the </span><span class="f_T_Menu">File Path</span><span class="f_T_Emphasis"> property, so that they can also be changed within a workflow.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">Once they are rendered, the node outputs provide convenient access to the new media files.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Comment"><span class="f_T_Emphasis">Note: You can generate .rnd render scripts with Mistika Ultima or Mistika Boutique using the </span><span class="f_T_Menu10p">Render panel-&gt;Write Script Only </span><span class="f_T_Emphasis">button. </span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Comment"><span class="f_T_Emphasis">Alternatively, those Mistika products (and also Mistika VR) provide a </span><span class="f_T_Menu10p">Render-&gt;AddToRenderQueue</span><span class="f_T_Emphasis"> function to create .RND Files that can be then submitted to external applications. One of these options is to</span><span class="f_T_Menu10p"> Send rnd to a Mistika Workflows Watch Folder</span><span class="f_T_Emphasis">, so you can then get the files with a </span><span class="f_T_Menu10p"> Watcher</span><span class="f_T_Emphasis"> node connected to this node for basic batch processing.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">Note: The render performance will strongly depend on the job type. You can find hardware recommendations for typical cases <a href="https://support.sgo.es/support/solutions/articles/1000269519-recommended-configurations-for-mistika-boutique" target="_blank" class="weblink">here</a>.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">Example</span>:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">1.- Write a render script (.rnd) with Mistika Boutique. During that process you will specify the render name, destination path, destination format, etc.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">2.- Drop the .rnd File into the workflows editor.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">3.- drop a Mistika Render node into the editor too</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">4.- connect the &quot;To&quot; connector from to the RND File node to the &quot;rnd&quot; connector into the Mistika Render node.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">5.- now, if you add the workflow to the Queue and run it, the render will be executed as defined when you wrote it with Mistika</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Note 1: if you define a path and/or sequence name in the <span class="f_T_Menu">File Path </span>property of the <span class="f_T_Menu">Mistika Render</span> node, then the render destination will be changed. Note that you can only change the destination folder and &nbsp;file name, but not the render codec and other settings that need to be defined in Mistika Boutique.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If you leave the <span class="f_T_Menu">File Path</span> property empty, then the path and name defined in the .rnd File are used</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Note 2: if you have multiple .rnd, you can also drop a folder containing them, in which case all of them will be rendered when you execute the workflow.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Note 3: another option is to connect a <span class="f_T_Menu">Watcher</span> node. In that case, once the workflow has been activated (added to the <span class="f_T_Menu">Queue Panel</span>) any .rnd landing into the watched folder will be rendered automatically.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_BodyText">&nbsp;</span></h3>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

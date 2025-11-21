@@ -1,0 +1,29 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="DCPCompliantFile" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="url" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="resolution" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="5" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_resolutionList"/>
+                <xsd:element name="aspectRatio" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="6" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_aspectRatioList"/>
+                <xsd:element name="frameRate" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="7" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_frameRateList"/>
+                <xsd:element name="format" type="stringPulldown" sgo:stringPulldownValues="J2K$$$J2K.J2K_IMF" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="bitrate" type="xsd:integer" sgo:minValue="100" sgo:maxValue="500" sgo:stepValue="1" sgo:visibility="0" sgo:sortOrder="9"/>
+                <xsd:element name="fit" type="stringPulldown" sgo:stringPulldownValues="Disabled$$$0|Scale To Fit$$$1|Scale To Fill$$$2|Anamorphic$$$3" sgo:visibility="0" sgo:sortOrder="10"/>				
+				<xsd:element name="scaleFilter" type="integerPulldown" sgo:integerPulldownValues="From Input$$$-1|Nearest$$$0|Bilinear$$$1|Bicubic$$$2|7 Taps$$$3|15 Taps$$$4" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="Unicolor" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="12">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="colorSpace" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_colorSpaceList"/>
+                            <xsd:element name="gamma" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="1" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_gammaList"/>
+                            <xsd:element name="gamut" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="2" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_gamutList"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

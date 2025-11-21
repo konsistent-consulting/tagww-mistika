@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="Checksum Usage">
+  <view scale="0.694444" y="23.04" x="250.56"/>
+  <nodes>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-419,-52</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="bd4f204f-a53a-4c60-abb9-73b548071071"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="91ae74ed-988a-4ea0-aa8f-1e0e5cdf8844"/>
+     <Files type="output" name="Files" id="5cc43ded-17cb-49c1-9f4b-d4605251ea76">
+      <linkedTo>47b7540c-2ebc-4e4d-8a08-21ed5deb408b</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="Checksum" type="task">
+    <properties>
+     <objectName type="string">Checksum</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-91,-52</pos>
+     <schemaName type="string">checksum</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <crcType type="int">2</crcType>
+     <validateInput type="bool">false</validateInput>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="7c3dc8a0-3f88-41ae-8d7d-6976496871e7"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="15ef807c-03e8-4423-88fd-14e5a4c1d9ac"/>
+     <File type="input" name="File" id="47b7540c-2ebc-4e4d-8a08-21ed5deb408b">
+      <linkedTo>5cc43ded-17cb-49c1-9f4b-d4605251ea76</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="286f704c-f311-4754-9433-cf68b856f7be">
+      <linkedTo>56f3d1db-7e6c-4ae9-8c53-3e9914b2c112</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="Copy" type="task">
+    <properties>
+     <objectName type="string">Copy</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">240,-51.6</pos>
+     <schemaName type="string">copy</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="adcee33c-26ea-44cd-aa2e-f86f39d50580"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="a80c1514-6316-4771-b0d9-eef9f1f30f7b"/>
+     <File type="input" name="File" id="56f3d1db-7e6c-4ae9-8c53-3e9914b2c112">
+      <linkedTo>286f704c-f311-4754-9433-cf68b856f7be</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="50180543-2c63-4dc7-80d2-0abfe13fb49e">
+      <linkedTo>b454ba7c-1f2c-48e0-92b3-a06c89deab7c</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="Checksum" type="task">
+    <properties>
+     <objectName type="string">Checksum_2</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">573.6,-51.6</pos>
+     <schemaName type="string">checksum</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <crcType type="int">2</crcType>
+     <validateInput type="bool">true</validateInput>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="d24bea19-cd16-40e6-9d19-acfc392b50e2"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="edb6bde8-4599-45f7-b139-38d9de60e167"/>
+     <File type="input" name="File" id="b454ba7c-1f2c-48e0-92b3-a06c89deab7c">
+      <linkedTo>50180543-2c63-4dc7-80d2-0abfe13fb49e</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="97f72db7-8a0b-44d7-9064-62b18ef4459d"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-58.8,82.4</ScenePos>
+     <Size type="size2">182.75,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Checksum Generator</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">614.4,81.2</ScenePos>
+     <Size type="size2">173.094,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Checksum Validator</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-409.2,-154</ScenePos>
+     <Size type="size2">1071.84,36.9531</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">The Checksum node serves a dual purpose: generating data for verification and validating that data.</Text>
+     <TextColor type="color">#ff7bd1ff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

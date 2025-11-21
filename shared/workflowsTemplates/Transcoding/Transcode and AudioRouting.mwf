@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="Transcode and AudioRouting" nameConvention="[path][baseName][.frame][.ext]">
+  <view y="-27.36" x="318.24" scale="0.694444"/>
+  <nodes>
+   <node class="Watcher" type="input">
+    <properties>
+     <objectName type="string">Watcher</objectName>
+     <color type="color">#aa557f</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-658.439,-477.846</pos>
+     <schemaName type="string">watcher</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <latency type="int">7</latency>
+     <forceCheck type="int">0</forceCheck>
+     <recursive type="bool">true</recursive>
+     <addRoot type="bool">true</addRoot>
+     <deleteAfterProcessing type="bool">false</deleteAfterProcessing>
+     <areYouSure type="bool">false</areYouSure>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">false</alphabeticalOrder>
+     <continuePreviousExecutions type="bool">false</continuePreviousExecutions>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="85fd967f-b8ae-43e8-8d14-99e9ab30860f" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="f5896e74-8263-4687-8c5e-5e424978dbb6" specialType="order" type="output"/>
+     <To name="To" id="c7b8cbe6-7fa9-47f8-9287-d9ef750cee5e" type="output">
+      <linkedTo>7f74523a-0138-4498-91c1-57a1682fb1b1</linkedTo>
+      <linkedTo>64b7a758-bdff-4447-8697-d769eee9e2d4</linkedTo>
+      <linkedTo>cf80b29d-193b-439e-b144-d50c1c743488</linkedTo>
+      <linkedTo>9584f886-38d9-4e05-9369-676e367a5991</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node class="AudioRouter" type="task">
+    <properties>
+     <objectName type="string">AudioRouter</objectName>
+     <color type="color">#646ea0</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">253.959,-25.261</pos>
+     <schemaName type="string">audiorouter</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <preset type="string">Stereo</preset>
+     <nChannels type="int">2</nChannels>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="869308af-6c74-4866-a320-43d22ed871c2" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="81615f86-00ec-49f5-b43e-7388333d2bf0" specialType="order" type="output"/>
+     <Out name="Out" id="23829105-1330-458f-9b82-9bea44998cd5" type="output">
+      <linkedTo>fed411d9-0482-41fc-b6a5-1d5fca9200c5</linkedTo>
+     </Out>
+     <L name="L" id="b15fec48-a77c-4ffc-81f1-1c5354407f38" type="input">
+      <linkedTo>c9c70a22-67d5-4a12-afa2-79ab436f95f0</linkedTo>
+     </L>
+     <R name="R" id="e51ee3fe-63ed-4540-aae4-0631fff5c122" type="input">
+      <linkedTo>f9e98e20-2219-42b2-8be5-2e247949ba0c</linkedTo>
+     </R>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes_20Web</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">804.824,-220.346</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES_HQ</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">false</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">168</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="282525da-9727-4001-8005-d5f642b18ac1" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="6026f5f5-1f22-4f1a-b618-b24b4cf08ee1" specialType="order" type="output"/>
+     <VideoOut name="VideoOut" id="dfa8edfa-375a-4b02-8278-2ff9b56c7a77" label="AV Out" type="output"/>
+     <AudioOut visible="0" name="AudioOut" id="20bdb53b-7dd6-46ea-8e89-7fb1d7e8978e" label="Ext. Audio" type="output"/>
+     <VideoIn name="VideoIn" id="7f74523a-0138-4498-91c1-57a1682fb1b1" label="AV In" type="input">
+      <linkedTo>c7b8cbe6-7fa9-47f8-9287-d9ef750cee5e</linkedTo>
+     </VideoIn>
+     <AudioIn name="AudioIn" id="fed411d9-0482-41fc-b6a5-1d5fca9200c5" label="Ext. Audio" type="input">
+      <linkedTo>23829105-1330-458f-9b82-9bea44998cd5</linkedTo>
+     </AudioIn>
+    </connections>
+   </node>
+   <node class="AudioRouter" type="task">
+    <properties>
+     <objectName type="string">AudioRouter_2</objectName>
+     <color type="color">#646ea0</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">273.013,136.906</pos>
+     <schemaName type="string">audiorouter</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <preset type="string">Stereo</preset>
+     <nChannels type="int">2</nChannels>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="735eb66f-da8b-4f13-be34-7e56f7c9cb70" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="99cd250f-94da-4621-9d82-a38995796459" specialType="order" type="output"/>
+     <Out name="Out" id="5a568e09-edca-493a-b41d-6b0a2494e1ac" type="output">
+      <linkedTo>0d0494a1-7681-4a5f-8595-412400955224</linkedTo>
+     </Out>
+     <L name="L" id="96cc0212-8bc9-499a-b369-7fb235358898" type="input">
+      <linkedTo>7e7f86b7-533f-457e-9df6-646d3b4d62d5</linkedTo>
+     </L>
+     <R name="R" id="4bf8dc10-4c57-4bc5-aa0b-a823342e229e" type="input">
+      <linkedTo>9628b542-047c-4ab1-9f20-7aa97025242d</linkedTo>
+     </R>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes_20Broad</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">811.016,-59.9801</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES_HQ</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">false</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">168</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="ea68ab98-fe37-42c2-953c-c2bb062e706c" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="fa61eb09-93d7-4d2d-b7bb-1bc39552b264" specialType="order" type="output"/>
+     <VideoOut name="VideoOut" id="90e2b960-f0dd-4f9d-a7ac-6464207ddac1" label="AV Out" type="output"/>
+     <AudioOut visible="0" name="AudioOut" id="8be32764-461f-45b2-92b4-9cc314acc865" label="Ext. Audio" type="output"/>
+     <VideoIn name="VideoIn" id="64b7a758-bdff-4447-8697-d769eee9e2d4" label="AV In" type="input">
+      <linkedTo>c7b8cbe6-7fa9-47f8-9287-d9ef750cee5e</linkedTo>
+     </VideoIn>
+     <AudioIn name="AudioIn" id="0d0494a1-7681-4a5f-8595-412400955224" label="Ext. Audio" type="input">
+      <linkedTo>5a568e09-edca-493a-b41d-6b0a2494e1ac</linkedTo>
+     </AudioIn>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes_51</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">813.541,-465.75</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">false</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="9d629c68-c199-4f2c-b39c-b90ba8c56d79" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="7ae32fff-5aec-4cb4-94aa-d0510d5d112b" specialType="order" type="output"/>
+     <VideoOut name="VideoOut" id="5da18d35-6036-4879-a940-bb0015f46c45" label="AV Out" type="output"/>
+     <AudioOut visible="0" name="AudioOut" id="11a2f88c-9c96-488e-bf9c-38551cae4ce8" label="Ext. Audio" type="output"/>
+     <VideoIn name="VideoIn" id="cf80b29d-193b-439e-b144-d50c1c743488" label="AV In" type="input">
+      <linkedTo>c7b8cbe6-7fa9-47f8-9287-d9ef750cee5e</linkedTo>
+     </VideoIn>
+     <AudioIn name="AudioIn" id="f5409c85-c0aa-4cae-92ee-cbe3327ccd81" label="Ext. Audio" type="input">
+      <linkedTo>e5c49d02-d092-456d-9e69-9f19f7857d18</linkedTo>
+     </AudioIn>
+     <AudioIn name="AudioIn" id="acd2782e-6eec-4352-9ba2-116988162ad4" label="Ext. Audio" type="input">
+      <linkedTo>c5b79728-1781-4a09-aea2-7a3e7fc6bdca</linkedTo>
+     </AudioIn>
+     <AudioIn name="AudioIn" id="5c03b188-58ab-436a-9dbe-65872767c65d" label="Ext. Audio" type="input">
+      <linkedTo>e806e43a-ccbe-4669-97d1-4756df8d4508</linkedTo>
+     </AudioIn>
+     <AudioIn name="AudioIn" id="bd4989f0-8ad4-437e-a250-fa32c9234395" label="Ext. Audio" type="input">
+      <linkedTo>2557704c-06c5-4c0a-9097-23480ceb276f</linkedTo>
+     </AudioIn>
+     <AudioIn name="AudioIn" id="e19027da-4caa-4d1d-8157-04b792f15bfd" label="Ext. Audio" type="input">
+      <linkedTo>d7e0c8f6-cdb5-4d96-b467-019516f8db5d</linkedTo>
+     </AudioIn>
+     <AudioIn name="AudioIn" id="a1deccd5-2390-4f68-8f06-c013755c49cc" label="Ext. Audio" type="input">
+      <linkedTo>0995e9c6-a317-4ce4-8e77-ef01258653fb</linkedTo>
+     </AudioIn>
+    </connections>
+   </node>
+   <node class="ExtractAudioChannels" type="task">
+    <properties>
+     <objectName type="string">ExtractAudioChannels_2</objectName>
+     <color type="color">#646ea0</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-163.814,-215.654</pos>
+     <schemaName type="string">extractaudiochannels</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <preset type="string">Custom</preset>
+     <nChannels type="int">10</nChannels>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="94aadc8b-02ce-40bf-8b28-832be18aaea2" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="cf0f8ee3-9a7f-4370-b800-0c6cfced87f6" specialType="order" type="output"/>
+     <AV name="AV" id="9584f886-38d9-4e05-9369-676e367a5991" type="input">
+      <linkedTo>c7b8cbe6-7fa9-47f8-9287-d9ef750cee5e</linkedTo>
+     </AV>
+     <ch01 name="ch01" id="e5c49d02-d092-456d-9e69-9f19f7857d18" type="output">
+      <linkedTo>f5409c85-c0aa-4cae-92ee-cbe3327ccd81</linkedTo>
+     </ch01>
+     <ch02 name="ch02" id="c5b79728-1781-4a09-aea2-7a3e7fc6bdca" type="output">
+      <linkedTo>acd2782e-6eec-4352-9ba2-116988162ad4</linkedTo>
+     </ch02>
+     <ch03 name="ch03" id="e806e43a-ccbe-4669-97d1-4756df8d4508" type="output">
+      <linkedTo>5c03b188-58ab-436a-9dbe-65872767c65d</linkedTo>
+     </ch03>
+     <ch04 name="ch04" id="2557704c-06c5-4c0a-9097-23480ceb276f" type="output">
+      <linkedTo>bd4989f0-8ad4-437e-a250-fa32c9234395</linkedTo>
+     </ch04>
+     <ch05 name="ch05" id="d7e0c8f6-cdb5-4d96-b467-019516f8db5d" type="output">
+      <linkedTo>e19027da-4caa-4d1d-8157-04b792f15bfd</linkedTo>
+     </ch05>
+     <ch06 name="ch06" id="0995e9c6-a317-4ce4-8e77-ef01258653fb" type="output">
+      <linkedTo>a1deccd5-2390-4f68-8f06-c013755c49cc</linkedTo>
+     </ch06>
+     <ch07 name="ch07" id="c9c70a22-67d5-4a12-afa2-79ab436f95f0" type="output">
+      <linkedTo>b15fec48-a77c-4ffc-81f1-1c5354407f38</linkedTo>
+     </ch07>
+     <ch08 name="ch08" id="f9e98e20-2219-42b2-8be5-2e247949ba0c" type="output">
+      <linkedTo>e51ee3fe-63ed-4540-aae4-0631fff5c122</linkedTo>
+     </ch08>
+     <ch09 name="ch09" id="7e7f86b7-533f-457e-9df6-646d3b4d62d5" type="output">
+      <linkedTo>96cc0212-8bc9-499a-b369-7fb235358898</linkedTo>
+     </ch09>
+     <ch10 name="ch10" id="9628b542-047c-4ab1-9f20-7aa97025242d" type="output">
+      <linkedTo>4bf8dc10-4c57-4bc5-aa0b-a823342e229e</linkedTo>
+     </ch10>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-780.825,-725.92</ScenePos>
+     <Size type="size2">466,51</Size>
+     <TextSize type="float">26.98122215270996</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Transcode and AudioRouting</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-777.888,-663.424</ScenePos>
+     <Size type="size2">1882,70</Size>
+     <TextSize type="float">19.46477699279785</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Any transcode node can be feed with external audio tracks by disabling its toggle 'Use A/V audio' and connecting the required External Audio sources in the node.
+These External Audio Sources can be manipulated with the Extract Audio Channels and AudioRouter nodes.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-781.939,-523.546</ScenePos>
+     <Size type="size2">490.6,313.08</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ffd2b15e</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-765.6,-347.2</ScenePos>
+     <Size type="size2">442,100</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input master media with the following audio tracks:
+- Tracks 1 to 6: 5.1 Mix (L,R,C,Lfe,Ls,Rs)
+- Tracks 7, 8: 2.0 Mix - Web (L,R)
+- Tracks 9,10: 2.0 Mix - Bropadcast (L,R)</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-186.646,-273.747</ScenePos>
+     <Size type="size2">721.159,543.153</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Audio Extract and Routing</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff394a72</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">789.324,-516.25</ScenePos>
+     <Size type="size2">285.717,588.77</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Transcode</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="Tokens and Folders Creation" nameConvention="[path][baseName][.frame][.ext]">
+  <view scale="0.482253" x="472.781" y="-333.85"/>
+  <nodes>
+   <node type="input" class="Folder">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#808000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-309.12,-412.848</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="53bc9189-d432-48c9-957c-5dd7ad64147f" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="58300893-0d55-41e6-8ba9-145ae9c3e32f" name="rankTo" specialType="order"/>
+     <Files type="output" id="e8183a65-6bc1-444d-9564-b3a84fe204bf" name="Files">
+      <linkedTo>b1fefaf2-4409-4d10-adf4-9cd0244a7fe2</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node type="task" class="ProRes">
+    <properties>
+     <objectName type="string">ProRes</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">644.544,-414.144</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">/YOUR-OUTPUT-PATH/[fps]/[aspectRatio]/[resolutionX]x[resolutionY]/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="e193db92-760c-441e-a766-c481d920232b" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="69b952d8-1dc4-4b42-b4f0-e8a46569b6e5" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="46966e0c-e4fa-4b2c-afe8-9d942530e8a1" name="VideoOut" label="AV Out"/>
+     <AudioOut type="output" id="ce791b0d-2942-4b7a-aa3f-7b3b47ff219e" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="b1fefaf2-4409-4d10-adf4-9cd0244a7fe2" name="VideoIn" label="AV In">
+      <linkedTo>e8183a65-6bc1-444d-9564-b3a84fe204bf</linkedTo>
+     </VideoIn>
+     <AudioIn type="input" id="a4470955-c937-46b9-a507-d29a08052745" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-552.038,-701.728</ScenePos>
+     <Size type="size2">446,51</Size>
+     <TextSize type="float">26.98122215270996</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Tokens and Folder Creation</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-551.52,-626.79</ScenePos>
+     <Size type="size2">1495,70</Size>
+     <TextSize type="float">19.46477699279785</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Dynamic tokens can be used in order to organize the render output in folders, according to the metadata of the output file.
+To make use of them, just type "[" in the Destination File Path of the Transcode node, and a list of available tokens will appear. </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-554.4,-485.568</ScenePos>
+     <Size type="size2">709.776,338.88</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff0e6d72</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-463.968,-277.312</ScenePos>
+     <Size type="size2">560,54</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Inputs can be either local, LAN, or remote 
+- please consult other Basic Transcode templates for more details </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">371.681,-480.978</ScenePos>
+     <Size type="size2">797.944,432.6</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Transcoding</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">483.84,-280.384</ScenePos>
+     <Size type="size2">581,215</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">In this transcode node tokens have been placed in the output folder
+so they will be created with metadata from the input file such as:
+- fps
+|- aspectRatio
+||- resolution
+
+Custom tokens can also be created just editing the file:
+~/SGO AppData/shared/config/nameConventionPlaceHolders.xml
+</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

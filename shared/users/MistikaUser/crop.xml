@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Crop>
+    <Color>
+      <Color_Alpha>0</Color_Alpha>
+      <Color_Blue>0</Color_Blue>
+      <Color_Green>0</Color_Green>
+      <Color_Red>0</Color_Red>
+    </Color>
+    <Crop>
+      <Crop_Down>0</Crop_Down>
+      <Crop_Left>0</Crop_Left>
+      <Crop_Right>100</Crop_Right>
+      <Crop_Up>100</Crop_Up>
+    </Crop>
+    <Modes_Mode>0</Modes_Mode>
+    <Soft>
+      <Soft_Down>0</Soft_Down>
+      <Soft_Left>0</Soft_Left>
+      <Soft_Right>0</Soft_Right>
+      <Soft_Up>0</Soft_Up>
+    </Soft>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#599440</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Crop</objectName>
+  </Crop>
+</nodeCommonRoot>

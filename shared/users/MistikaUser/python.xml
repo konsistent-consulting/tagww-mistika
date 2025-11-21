@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Python>
+    <color>#deb727</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Python</objectName>
+    <python>
+      <code>def init(self):
+  #Write your initialization code here. Create connectors, Parameters, etc.
+  return True
+
+def isReady(self):
+  #Check here if the node is ready to be processed
+  return True
+
+def process(self):
+  #And finally, Do the thing here!
+  return True</code>
+    </python>
+    <schemaName>python</schemaName>
+  </Python>
+</nodeCommonRoot>

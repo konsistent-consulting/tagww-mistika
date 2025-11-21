@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; CSV to UP metadata</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node reads user custom metadata from a .csv file (basically a text file with delimiters representing a simple table or spreadsheet), converting it to Mistika Work" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "csvtoupmdata.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">CSV to UP metadata</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?csvtoupmdata.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">CSV to UP metadata</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="crop.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="csvtodfilt.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">This node reads user custom metadata from a <span class="f_T_Entry10pt"><a href="https://en.wikipedia.org/wiki/Comma-separated_values#:~:text=CSV%20is%20a%20delimited%20data,ends%20at%20a%20line%20terminator." target="_blank" rel="nofollow" class="weblink">.csv</a></span> file (basically a text file with delimiters representing a simple table or spreadsheet), converting it to Mistika Workflows metadata format (<a href="common-parameters.html#universalpath" class="topiclink">UP / Universal Paths</a>) &nbsp;and sending them trough the <span class="f_T_Menu">mdata</span> output connector. &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">This node is a convenient way to inject your own metadata into Mistika Workflows (either by typing it manually in a<span class="f_T_Entry10pt">.csv</span> table or by exporting a<span class="f_T_Entry10pt">.csv </span>file from any other application)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Each line of the <span class="f_T_Entry10pt">.csv</span> table needs to contain a file path and the metadata values you want to associate to that path. By default, metadata &nbsp;Parameter Name/Value pairs are created by getting the name from the column title and its value from the current row. (but this behavior can be changed in the properties explained below, including the capability to ignore a number of header lines).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">An inverse action can be achieved with the <a href="metadatatocsv.html" class="topiclink">MetadataToCSV</a> node.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Use case examples:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><span class="f_TipHeading">Example1 - Classification</span><span class="f_BodyText">: A common use case is to parse a </span><span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> file and pass its metadata to a </span><span class="f_T_Entry">ClassifyByMetadata</span><span class="f_BodyText"> node for deciding next actions based on the metadata values. </span></p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">This node can be extremely useful in order to make complex classifications of the input media to process them in different ways. For example, in the case of a multi-mastering environment where each master file must be processed (or not) in several different workflows, we could make a .csv file similar to this one:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="9U0cIuT3PAjkB4BYT75gcVKfhx0x4drNGY__4JZglbohL20UFHT4-r726UK540o9NWWaNFd98l_j565fLk8o7_YRqjkb9WEJNSu5cp9I5JG3quON6Kq0RMrnVIIj2abKtI8FlRW7V2NnkkWU_TvrpC8" width="862" height="89" style="margin:0;width:862px;height:89px;border:none" src="9u0ciut3pajkb4byt75gcvkfhx0x4drngy__4jzglbohl20ufht4-r726uk540o9nwwanfd98l_j565flk8o7_yrqjkb9wejnsu5cp9i5jg3quon6kq0rmrnviij2abkti8flrw7v2nnkkwu_tvrpc8.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">Then, after injecting the headers as metadata in the UniversalPath, we can make use of several ClassifyByMetadata nodes to distribute the required jobs based on the .csv table:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="kmihldUM-_R_v_rq54W_3aT4Qg-rwKugbKtNzGKCcvTvCnhn1jg2lTMR3hJo68SO6HFtTC8jH00BaNFWHJwHmP0gnHQPgP6e4Oh7cdtumw_h1EemLoMQKuvs2rPrzeTYmJDE7RbZc39y519LH0qJCQs" width="836" height="423" style="margin:0;width:836px;height:423px;border:none" src="kmihldum-_r_v_rq54w_3at4qg-rwkugbktnzgkccvtvcnhn1jg2ltmr3hjo68so6hfttc8jh00banfwhjwhmp0gnhqpgp6e4oh7cdtumw_h1eemlomqkuvs2rprzetymjde7rbzc39y519lh0qjcqs_zoom68.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><span class="f_TipHeading">Example2 - Changing properties of other nodes:</span><span class="f_BodyText"> Another use case is by using the </span><span class="f_T_Menu10p">PrivateData</span><span class="f_BodyText">a toggle, which permits dynamic modification of the properties of other nodes in the current workflow. For example, you could use it to define which  </span><span class="f_T_Menu">DisplayFilter</span><span class="f_BodyText"> or </span><span class="f_T_Menu">LUT3D</span><span class="f_BodyText"> needs to be applied in a transcoding node connected downstream. &nbsp;In that example, the input </span><span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> file may look something like this:</span></p>
+<p class="p_Normal" style="line-height: 1.57; margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57; margin: 0 0 0 13px;"><img alt="CSVtoUPmdata-002A" width="899" height="101" style="margin:0;width:899px;height:101px;border:none" src="csvtoupmdata-002a.png"/></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57; margin: 0 0 0 13px;"><span class="f_BodyText">A full explanation about how to use </span><span class="f_T_Menu10p">PrivateData </span><span class="f_BodyText"> is provided in the </span><span class="f_T_Menu">SetPrivateData</span><span class="f_BodyText"> point below.</span></p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><span class="f_TipHeading">Example3 - After Effects integration &amp; parameter substitution</span><span class="f_BodyText">: Another use case is the After Effects integration. &nbsp; In this case the &nbsp;.</span><span class="f_T_Entry10pt">csv </span><span class="f_BodyText">file is created in After Effects using a Mistika Workflows connectivity plugin, which permits to export the selected parameters (and their current values) to a .</span><span class="f_T_Entry10pt">csv</span><span class="f_BodyText"> file. &nbsp;You can then modify the .</span><span class="f_T_Entry10pt">csv</span><span class="f_BodyText"> &nbsp;file as needed (typically adding more lines with substitution titles and other versioning metadata), and then load the modified .</span><span class="f_T_Entry10pt">csv </span><span class="f_BodyText"> file with this node, which will create the required </span><a href="common-parameters.html#universalpath" class="topiclink">Universal Paths</a><span class="f_BodyText"> &nbsp;to &nbsp;give them to an </span><span class="f_T_Menu">After Effects File</span><span class="f_BodyText"> node, which will perform the parameter substitution.</span></p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">csv</span>: The<span class="f_BodyText">.</span><span class="f_T_Entry10pt">csv</span> file to be parsed. Typically obtained in one of these ways:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"> - Drag &amp; drop your<span class="f_BodyText"> .</span><span class="f_T_Entry10pt">csv</span> file to the <span class="f_T_Menu">Nodegraph</span>, which will create a <span class="f_T_Menu">File </span>node with it. Then connect it to this input connector.</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"> Or</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"> - Create a <a href="watcher.html" class="topiclink">Watcher</a> node and connect it to this connector. &nbsp;From that point every new <span class="f_BodyText"> .</span><span class="f_T_Entry10pt">csv</span> &nbsp;landing in the watched folder (or modified afterward) will trigger the workflow execution and will be passed to this node (as long as the workflow is already in the <span class="f_T_Menu">queue </span>panel). </p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">mdata</span>: The list of files contained in the <span class="f_BodyText">.</span><span class="f_T_Entry10pt">csv</span> file, alongside the injected metadata in their respective Universal Path.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink">Name Convention</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Python standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#code" class="topiclink">code</a></span></h3>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_T_Emphasis">NOTE: An introduction to all the Python tools in Mistika Workflows is available in the <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools </a>section.</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p style="line-height: 1.57;"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">csvDelimiter</span><span class="f_BodyText">: The separator used in the .</span><span class="f_T_Entry10pt">csv</span><span class="f_BodyText"> file. It can be tab (\t), comma (,) or semicolon (;)</span></p>
+<p style="line-height: 1.57;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.57;"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">MediaFilesColIndex</span><span class="f_BodyText">: The index of the column that contains the file paths. A column with absolute file paths is mandatory (it is not possible to inject metadata in the UP of a file if the node doesn’t know where is the file, as there could be multiple incoming files with the same name but in different locations ...)</span></p>
+<p style="line-height: 1.57;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.57;"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">SkipLines</span><span class="f_BodyText">: Number of initial lines to be ignored, in the case of existing header lines with information not to be parsed.</span></p>
+<p style="line-height: 1.57;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.57;"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">SetPrivateData</span><span class="f_BodyText">: This toggle allows to dynamically modify the properties of other nodes in the current workflow. The associated metadata header must have the correct syntax, which can be consulted in any node just by clicking on the desired property without moving the mouse. The corresponding value will appear after a few seconds:</span></p>
+<p style="line-height: 1.57;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.57;"><img alt="CSVtoUPmdata-004" width="484" height="372" style="margin:0;width:484px;height:372px;border:none" src="csvtoupmdata-004.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="line-height: 1.57;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.57;"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">GetTokenFromHeader</span><span class="f_BodyText">: This toggle gets the headers of all columns and uses them as metadata injected into the Universal Path of the files.</span></p>
+<p style="line-height: 1.57;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.57;"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">useCustomTokens</span><span class="f_BodyText">: Toggle that allows the definition of custom metadata fields, taking their values from a specific column content. It can be useful when not all headers are wanted to be used as metadata, or when headers do not exist at all in the .csv file. Up to five columns can be used as custom metadata fields.</span></p>
+<p style="line-height: 1.57;"><img alt="CSVtoUPmdata-002" width="992" height="139" style="margin:0;width:992px;height:139px;border:none" src="csvtoupmdata-002.png"/></p>
+<p style="line-height: 1.57;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_Normal"><a id="docs-internal-guid-a43a7bdc-7fff-dad0-7bb9-84364dc1557e" class="hmanchor"></a><img alt="u5R9QjwALY0N5-1eOrX85ROCpgqF8eNbIgUI5DFxYBQm2OYOmvJUnXQOiuE7AgYj-IEgPUF0KAwDwzbjbxmOHkHf8KyqIvmt6tcivmJcTRdsJzDkoqyzE2PdeIttaEN9Zn6H0ugd276InmW7Ki58nZE" width="787" height="483" style="margin:0 0 0 -25px;width:787px;height:483px;border:none" src="u5r9qjwaly0n5-1eorx85rocpgqf8enbigui5dfxybqm2oyomvjunxqoiue7agyj-iegpuf0kawdwzbjbxmohkhf8kyqivmt6tcivmjctrdsjzdkoqyze2pdeittaen9zn6h0ugd276inmw7ki58nze_zoom64.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">Processing this .csv file alongside the CSV to UPmdata node will lead into the observed added metadata in the UP, which we can see with a pyPrintInputs node in the Script Editor panel:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="PHWaWHxNUOzSkdB3Ook7tDHCeSM6jP4nuyb-WohSMm1_020qlFwV7og0-0mmKDIeil2sRSGnxxF-1ZpJs2LAc5vOW6hBrKN26hOAzi6BFuinY_jymBY1HI67UCKiNH32pPJ5zmuapeQopcycWtW_Zic" width="682" height="90" style="margin:0;width:682px;height:90px;border:none" src="phwawhxnuozskdb3ook7tdhcesm6jp4nuyb-wohsmm1_020qlfwv7og0-0mmkdieil2srsgnxxf-1zpjs2lac5vow6hbrkn26hoazi6bfuiny_jymby1hi67uckinh32ppj5zmuapeqopcycwtw_zic.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><span style="font-weight: bold;">customTokens:  </span>Permits to create user metadata tokens, which each token having a name and a value:</p>
+<p class="p_Normal" style="line-height: 1.57;"><span style="font-weight: bold;">customTokens -&gt; TokenNameX</span>: String literal to name the token.</p>
+<p class="p_Normal" style="line-height: 1.57;"><span style="font-weight: bold;">customTokens -&gt; ColumnTX</span>: Column index where to take the value.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

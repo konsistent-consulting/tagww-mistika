@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; EDL to CC</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node gets one or more EDL files (with .edl extension), extracts the CDL information for each shot and creates a .cc file for each match found. &nbsp;The name of the ." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "edltocc.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">EDL to CC</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?edltocc.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">EDL to CC</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="edlreference.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="edltomarkers.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This node gets one or more EDL files (with .edl extension), extracts the CDL information for each shot and creates a .cc file for each match found. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">The name of the .cc file will be extracted based on the locator selected in the LOC pulldown in the NamingMatchRules property of the node, adding the suffix ‘_cdl’ to each one. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">Please note that only markers from Avid Media Composer, Adobe Premiere and Mistika are supported.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Naming Match Rules</span></h3>
+<p class="p_BodyText"><span class="f_BodyText">The LOC options available are as follows:</span></p>
+<p class="p_Normal"><img alt="BEsxYC0TX5i5Axa0JsLKn1w5ypnYHKy95tejfEp8UGmowhh_8ZImgXSsO-Mgci3bceeeadNf7U9G4SkurQjxHe82varQ59r_tdkqORXP9U4cYJCxlJTPh0Pu_R4020QYgZbljuwqDs_0uKYybjYaZA8" width="260" height="237" style="margin:0;width:260px;height:237px;border:none" src="besxyc0tx5i5axa0jslkn1w5ypnyhky95tejfep8ugmowhh_8zimgxsso-mgci3bceeeadnf7u9g4skurqjxhe82varq59r_tdkqorxp9u4cyjcxljtph0pu_r4020qygzbljuwqds_0ukyybjyaza8.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">Any</span><span class="f_BodyText">: Last valid color marker found in the .edl event will be used (if no Shot Naming is used to match the expected VFX name, find details below)</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">RED, GREEN, BLUE, CYAN, MAGENTA, YELLOW, BLACK, WHITE</span><span class="f_BodyText">: Only the selected color marker is taken into account.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">FromClipName</span><span class="f_BodyText">: The name after the “*FROM CLIP NAME” statement in the .edl event will be used.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">TapeName</span><span class="f_BodyText">: The name found right after the .edl event will be used.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_Normal"><img alt="39bErN_l5TboajNAMgtDo3CHRawZZhhbtf1HnhIhIUSNiT7va1qCIU-tKmXfztWgF_RKugv7ysC3nbDeQ523Yz-MviKO9Ma7_4lDDRh2Qaz5OgKEMfV33PhoSC6RGJS7uyQy8LGnEKOSPgAFA6Mo1p8" width="762" height="141" style="margin:0;width:762px;height:141px;border:none" src="39bern_l5tboajnamgtdo3chrawzzhhbtf1hnhihiusnit7va1qciu-tkmxfztwgf_rkugv7ysc3nbdeq523yz-mviko9ma7_4lddrh2qaz5ogkemfv33phosc6rgjs7uyqy8lgnekospgafa6mo1p8.png"/></p>
+<p class="p_Normal"><img alt="tpkhedfIc5HY9CgUK2Fg0k_LysBBvDWwLxf9vEjk2yUqf6W-3XXTYpn8rGUUcN8p96GVVDEn7CH2XR7vCTBUdPQvCIOUMT1SZJyq2TwuiOnt-hWwd9KwhkkbXcbUC5wKDUkDnajX0vBlH13jnwLungA" width="754" height="107" style="margin:0;width:754px;height:107px;border:none" src="tpkhedfic5hy9cguk2fg0k_lysbbvdwwlxf9vejk2yuqf6w-3xxtypn8rguucn8p96gvvden7ch2xr7vctbudpqvcioumt1szjyq2twuiont-hwwd9kwhkkbxcbuc5wkdukdnajx0vblh13jnwlunga.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">In the provided example, we observe multiple color markers within the EDL event. Specifically, the GREEN marker, from which we intend to extract the VFX name, contains additional comments contributed by the editor (&quot;CLEANUP TRACK MARKS WALL&quot;). To accurately obtain the desired VFX name (&quot;VFX_105_010_0030&quot;), we can incorporate a regular expression for parsing markers within an EDL event.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Within the &quot;Shot Naming&quot; dropdown menu, users can choose from pre-defined VFX naming structures. This enables the selection of appropriate naming conventions.</span></p>
+<p class="p_Normal"><img alt="EUz1csWBICLZOtid0wjkhI8NUh91JkcJgWtp6jpWb4Fgh9HrAOh5KlofxkqQpja-JYCe069qg7d0bs87MtW4Xtpk5PdI20qCT-KYYtwrMuEDU9h5oWYHWs9Nb5r5KmPUbSWynuMdXkTmTN2egpnbEhQ" width="392" height="165" style="margin:0;width:392px;height:165px;border:none" src="euz1cswbiclzotid0wjkhi8nuh91jkcjgwtp6jpwb4fgh9hraoh5klofxkqqpja-jyce069qg7d0bs87mtw4xtpk5pdi20qct-kyytwrmuedu9h5owyhws9nb5r5kmpubswynumdxktmtn2egpnbehq_zoom87.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">The provided regular expressions (regEx) are designed to identify patterns with precisely 3, 4, 5, 6, 7, or 8 alphanumeric segments separated by underscores (_). If the goal is to extract a VFX name comprising a minimum of 3 or 4 elements but up to 8, the suitable choice would be the regExs marked as _[UptoALL].</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">This is useful in the case that we want to process several EDLs in batch, one for each video track. In the main track we may have the VFX name, and in the above tracks the needed assets for that particular VFX, such as layers, background, foreground, cleanplates…</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">For example, if we found this naming and markers color convention in two different EDL files corresponding to tracks V1 and V2:</span></p>
+<p class="p_Normal"><img alt="td9fBC3fCOqP8BmUMjwHBzQDoCDv-hyDstmM9ibpGySRthaBNI60uXYPhqvHfYcWVAPoAYamQeeWFe3boliU7n6whgJX7Vn5RYB_Qi3VQNgxAKuxe3fdXXg5mZLB-ub7_xkYretW21TfnOdCOW5ZXaU" width="797" height="265" style="margin:0;width:797px;height:265px;border:none" src="td9fbc3fcoqp8bmumjwhbzqdocdv-hydstmm9ibpgysrthabni60uxyphqvhfycwvapoayamqeewfe3boliu7n6whgjx7vn5ryb_qi3vqngxakuxe3fdxxg5mzlb-ub7_xkyretw21tfnodcow5zxau_zoom85.png"/></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">In this case we may use the LOC ‘Any’, as the names needed to extract are both in the markers Green and Yellow; and use the ShotNaming ‘showID_episode_seq_shotID_[UptoALL]’,</span></p>
+<p class="p_BodyText"><span class="f_BodyText">so it will take into account also the _Layer001 suffix. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Processing both EDLs the output of the node will be as follows:</span></p>
+<p class="p_Normal"><img alt="JgE0ekYXdkq2cvATydV_COzFJw2oIclg4f66JApw6j6sZAgmGgJ0Fo1IrxZapKvuxYsubA4TeO77yS8nnFI0iAiHFWcsK9F1sSUf5VrErTjOOvqMTeKZKFKPLHP61NScfgDmjh5jk-fuT_6REgOdgvI" width="220" height="173" style="margin:0;width:220px;height:173px;border:none" src="jge0ekyxdkq2cvatydv_cozfjw2oiclg4f66japw6j6szagmggj0fo1irxzapkvuxysuba4teo77ys8nnfi0iaihfwcsk9f1ssuf5vrertjoovqmtekzkfkplhp61nscfgdmjh5jk-fut_6regodgvi_zoom83.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">NOTE</span><span class="f_BodyText">: Choosing 'Any' as a locator option without specifying a corresponding regular expression introduces excessive flexibility when parsing EDL events. This situation is likely to result in unpredictable name values when extracting the .cc file names..</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Since the Python code for the node is provided, users have the flexibility to customize the regEx as per their specific workflow requirements</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">.</span></p>
+<p class="p_Normal"><img alt="M57VUdx_I8ein3HlKmy4FwRV-93xGSLreb_qB6M7rhY1NFoHH3kzHppHKdVjO0stzxviR2wUXylUsAAMjpij8WPg7gsEiG99v22ck7U4Vicac0a40HpP8gMRZ3D5_lW7SzbTFkl4jIpK3Oc1LP-U8RI" width="955" height="349" style="margin:0;width:955px;height:349px;border:none" src="m57vudx_i8ein3hlkmy4fwrv-93xgslreb_qb6m7rhy1nfohh3kzhpphkdvjo0stzxvir2wuxylusaamjpij8wpg7gseig99v22ck7u4vicac0a40hpp8gmrz3d5_lw7szbtfkl4jipk3oc1lp-u8ri_zoom82.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">edl:</span> EDL files containing <span class="f_BodyText">CDL information to be processed.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">cc:</span> .cc files for each match found in the edl.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink">Name Convention</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Python standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#code" class="topiclink">code</a></span></h3>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_T_Emphasis">NOTE: An introduction to all the Python tools in Mistika Workflows is available in the <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools </a>section.</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">CDLs path: </span>Folder to store the .cc files created by this node (it will create one .cc sidecar file for each clip with CDL information found in the EDL).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">NamingMatchRules:</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">LOC</span><span class="f_BodyText">: Locator in the .edl events to extract the .cc file name from: It can be a color marker from Avid Media Composer / Mistika / Adobe Premiere (RED, GREEN, BLUE, CYAN, MAGENTA, YELLOW, BLACK, WHITE), or the TapeName or FromClipName statements in the .edl event.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Shot Naming</span><span class="f_BodyText">: A regular expression to match and extract the vfx name in the selected LOC</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="MetadataToCSV" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+			<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+			<!--xsd:element name="csvFile" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="3"/-->
+			<xsd:element name="csvPath" type="xsd:anyURI" sgo:properties="showDirsOnly" sgo:visibility="0" sgo:sortOrder="3"/>
+			<xsd:element name="overwrite" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="4"/>
+			<xsd:element name="csvOptions" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="10">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="singleCSVperFile" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+						<xsd:element name="FullMediaPath" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="1"/>
+						<xsd:element name="MediaNameOnly" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+						<xsd:element name="RemoveExtension" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+						<xsd:element name="Header" type="nameConventionTextEditor" sgo:visibility="0" sgo:sortOrder="4"/>
+						<xsd:element name="BodyText01" type="nameConventionTextEditor" sgo:visibility="0" sgo:sortOrder="5"/>
+						<xsd:element name="BodyText02" type="nameConventionTextEditor" sgo:visibility="0" sgo:sortOrder="6"/>
+						<xsd:element name="BodyText03" type="nameConventionTextEditor" sgo:visibility="0" sgo:sortOrder="7"/>
+						<xsd:element name="Footer" type="nameConventionTextEditor" sgo:visibility="0" sgo:sortOrder="8"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="20">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

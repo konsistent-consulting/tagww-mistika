@@ -1,0 +1,66 @@
+2025.11.05 11:06:57.477|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.05 11:06:57.480|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.05 11:06:57.480|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.05 11:06:57.583|Info|ProRes 4444|ProRes 4444|Rendering ProResConvert
+2025.11.05 11:06:57.636|Info|ProRes 4444|ProResConvert|Processing Input File: /Users/ed/Desktop/INPUT/DNX_HS_4k_10bit_23fps_ST3-SG2.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:06:57.688|Info|ProRes 4444|ProResConvert|Processing Audio From File: /Users/ed/Desktop/INPUT/DNX_HS_4k_10bit_23fps_ST3-SG2.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:06:57.743|Info|ProRes 4444|ProResConvert|Transcoding from EDL: None
+2025.11.05 11:06:57.743|Info|ProRes 4444|ProResConvert|Transcoding Info:From:DNX_HS_4k_10bit_23fps_ST3-SG2:23.98:ItuBt 709:Rec709:To:DNX_HS_4k_10bit_23fps_ST3-SG2.mov:23.98:ItuBt 709:Rec709:None
+2025.11.05 11:07:18.827|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.05 11:07:19.837|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.05 11:07:19.839|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.05 11:10:54.494|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.05 11:10:54.496|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.05 11:10:54.496|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.05 11:10:54.501|Info|ProRes 4444|ProRes 4444|Rendering ProResConvert
+2025.11.05 11:10:54.509|Info|ProRes 4444|ProResConvert|Processing Input File: /Users/ed/Desktop/INPUT/DNX_HS_4k_10bit_23fps_ST3-SG2.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:10:54.588|Info|ProRes 4444|ProResConvert|Processing Audio From File: /Users/ed/Desktop/INPUT/DNX_HS_4k_10bit_23fps_ST3-SG2.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:10:54.639|Info|ProRes 4444|ProResConvert|Transcoding from EDL: None
+2025.11.05 11:10:54.639|Info|ProRes 4444|ProResConvert|Transcoding Info:From:DNX_HS_4k_10bit_23fps_ST3-SG2:23.98:ItuBt 709:Rec709:To:DNX_HS_4k_10bit_23fps_ST3-SG2.mov:23.98:ItuBt 709:Rec709:None
+2025.11.05 11:11:34.735|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.05 11:11:35.754|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.05 11:11:35.756|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.05 11:23:21.485|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.05 11:23:21.487|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.05 11:23:21.487|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.05 11:23:21.491|Info|ProRes 4444|ProRes 4444|Rendering ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov
+2025.11.05 11:23:21.499|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Processing Input File: /Users/ed/Desktop/INPUT/DNX_HS_4k_10bit_23fps_ST3-SG2.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:23:21.589|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Processing Audio From File: /Users/ed/Desktop/INPUT/DNX_HS_4k_10bit_23fps_ST3-SG2.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:23:21.643|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Transcoding from EDL: None
+2025.11.05 11:23:21.643|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Transcoding Info:From:DNX_HS_4k_10bit_23fps_ST3-SG2:23.98:ItuBt 709:Rec709:To:DNX_HS_4k_10bit_23fps_ST3-SG2.mov:23.98:ItuBt 709:Rec709:None
+2025.11.05 11:23:53.044|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.05 11:23:54.054|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.05 11:23:54.055|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.05 11:48:47.501|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.05 11:48:47.503|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.05 11:48:47.503|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.05 11:48:47.590|Info|ProRes 4444|ProRes 4444|Rendering ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov
+2025.11.05 11:48:47.640|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Processing Input File: /Users/ed/Desktop/INPUT/DNX_HR_4k_10bit_23fps_ST3-SG4.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:48:47.689|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Processing Audio From File: /Users/ed/Desktop/INPUT/DNX_HR_4k_10bit_23fps_ST3-SG4.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:48:47.739|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Transcoding from EDL: None
+2025.11.05 11:48:47.739|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Transcoding Info:From:DNX_HR_4k_10bit_23fps_ST3-SG4:23.98:ItuBt 709:Rec709:To:DNX_HR_4k_10bit_23fps_ST3-SG4.mov:23.98:ItuBt 709:Rec709:None
+2025.11.05 11:49:11.557|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.05 11:49:12.570|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.05 11:49:12.571|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.05 11:57:05.487|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.05 11:57:05.490|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.05 11:57:05.490|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.05 11:57:05.495|Info|ProRes 4444|ProRes 4444|Rendering ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov
+2025.11.05 11:57:05.504|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Processing Input File: /Users/ed/Desktop/INPUT/DNX_HR_4k_10bit_23fps_ST3-SG4.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:57:05.598|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Processing Audio From File: /Users/ed/Desktop/INPUT/DNX_HR_4k_10bit_23fps_ST3-SG4.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 11:57:05.650|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Transcoding from EDL: None
+2025.11.05 11:57:05.650|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Transcoding Info:From:DNX_HR_4k_10bit_23fps_ST3-SG4:23.98:ItuBt 709:Rec709:To:DNX_HR_4k_10bit_23fps_ST3-SG4.mov:23.98:ItuBt 709:Rec709:None
+2025.11.05 11:57:41.349|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.05 11:57:42.359|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.05 11:57:42.361|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.05 12:00:00.499|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.05 12:00:00.500|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.05 12:00:00.500|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.05 12:00:00.505|Info|ProRes 4444|ProRes 4444|Rendering ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov
+2025.11.05 12:00:00.512|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Processing Input File: /Users/ed/Desktop/INPUT/DNX_HR_4k_10bit_23fps_ST3-SG4.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 12:00:00.598|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Processing Audio From File: /Users/ed/Desktop/INPUT/DNX_HR_4k_10bit_23fps_ST3-SG4.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.05 12:00:00.651|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Transcoding from EDL: None
+2025.11.05 12:00:00.651|Info|ProRes 4444|ProResConvertDNX_HS_4k_10bit_23fps_ST3SG2mov|Transcoding Info:From:DNX_HR_4k_10bit_23fps_ST3-SG4:23.98:ItuBt 709:Rec709:To:DNX_HR_4k_10bit_23fps_ST3-SG4.mov:23.98:ItuBt 709:Rec709:None
+2025.11.05 12:00:29.382|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.05 12:00:30.400|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.05 12:00:30.403|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished

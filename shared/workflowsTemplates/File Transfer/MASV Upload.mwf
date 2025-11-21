@@ -1,0 +1,1949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="MASV Upload Package" nameConvention="[path][baseName][.frame][.ext]">
+  <view scale="0.694443" x="897.122" y="-476.641"/>
+  <nodes>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder_EDL_XML_AAF</objectName>
+     <color type="color">#808000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-490.738,-513.34</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <filterMode type="int">1</filterMode>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">false</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">false</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="fe7c4d85-6514-4a38-bb35-717e33601830" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="27d23575-e611-4524-82ea-c8c0002e81c4" specialType="order" type="output"/>
+     <Files name="Files" id="afea5852-6cef-4901-8c35-963ef3ae97aa" type="output">
+      <linkedTo>6b10c520-0fe4-4e4b-a54d-87c6f37cf2c6</linkedTo>
+      <linkedTo>af31a7e2-38c5-4fc2-8de2-ed47b3679f5a</linkedTo>
+      <linkedTo>e4c4e828-df1f-49ce-abfc-46b015d4f259</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder_OCF</objectName>
+     <color type="color">#808000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-492.71,-269.28</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <filterMode type="int">1</filterMode>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">false</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">false</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="fe67ce06-7ae8-48bf-b9cb-bc03952a9351" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="26ac791b-4283-43ae-a235-97d411ef5186" specialType="order" type="output"/>
+     <Files name="Files" id="fbc26471-3163-47c3-9806-67b77c23e720" type="output">
+      <linkedTo>f2fcf5d5-f33c-49e8-85ac-2a76d8890280</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="ConformFilter" type="task">
+    <properties>
+     <objectName type="string">ConformFilter</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-183.243,-345.252</pos>
+     <schemaName type="string">conformfilter</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <comparePath type="bool">false</comparePath>
+     <compareExtension type="bool">false</compareExtension>
+     <numChars type="int">0</numChars>
+     <ignoreFirst type="int">0</ignoreFirst>
+     <ignoreLast type="int">0</ignoreLast>
+     <defaultFps type="float">25</defaultFps>
+     <nameSource type="int">0</nameSource>
+     <handlers type="int">15</handlers>
+     <noTrim type="bool">false</noTrim>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="086b4c30-f252-491f-9d19-b912ba47bd3c" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="ae3a991b-a6b0-4b76-bada-cfb70015762a" specialType="order" type="output"/>
+     <edl name="edl" id="6b10c520-0fe4-4e4b-a54d-87c6f37cf2c6" label="EDL/XML/AAF" type="input">
+      <linkedTo>afea5852-6cef-4901-8c35-963ef3ae97aa</linkedTo>
+     </edl>
+     <in name="in" id="f2fcf5d5-f33c-49e8-85ac-2a76d8890280" type="input">
+      <linkedTo>fbc26471-3163-47c3-9806-67b77c23e720</linkedTo>
+     </in>
+     <included name="included" id="355095ec-740d-4e81-b5c4-d3d8482ed07e" type="output">
+      <linkedTo>437cd8a3-c2a1-4ec7-86ba-421f5d1db246</linkedTo>
+     </included>
+     <excluded name="excluded" id="2bc9b5da-4aa7-49f9-8d56-5e4b6137d789" type="output"/>
+    </connections>
+   </node>
+   <node class="EXR" type="task">
+    <properties>
+     <objectName type="string">Exr_2</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">101.302,-420.043</pos>
+     <schemaName type="string">exr</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">/SomeOutputPath/exr/[markGreen]/[markGreen][.frame][.ext]</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <uniColorValue type="CuniColorValue">uniColor:ACES AP0:Linear</uniColorValue>
+     <gamma type="string">Linear</gamma>
+     <gamut type="string">ACES AP0</gamut>
+     <codec type="string">EXR.EXR_ZIP_RGB</codec>
+     <audioCodec type="string">None</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <pixelAspectRatio type="double">0</pixelAspectRatio>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">false</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <scaleFilter type="int">-1</scaleFilter>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">Linear</colorSpace>
+     <exportCDL type="bool">true</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">1</firstFrameFrom>
+     <firstFrameNumber type="int">1001</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <packAudioTracks type="bool">true</packAudioTracks>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="7f7e3307-06bc-4ea1-a8f9-814f7e896e98" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="100e9e6b-cb85-46b4-a60a-1d7088a10176" specialType="order" type="output"/>
+     <VideoOut name="VideoOut" id="1ec63e83-5c2a-4ec7-a35d-1f3389d5baec" label="AV Out" type="output">
+      <linkedTo>b0ecc6fd-a0f7-4e8e-9035-911bc2d5bc37</linkedTo>
+      <linkedTo>f67815c7-7bb9-447a-b55b-a84d5df154a3</linkedTo>
+     </VideoOut>
+     <AudioOut name="AudioOut" id="8a47ba74-30e5-4535-a641-a310c494d4ea" label="Ext. Audio" visible="0" type="output"/>
+     <VideoIn name="VideoIn" id="437cd8a3-c2a1-4ec7-86ba-421f5d1db246" label="AV In" type="input">
+      <linkedTo>355095ec-740d-4e81-b5c4-d3d8482ed07e</linkedTo>
+     </VideoIn>
+     <AudioIn name="AudioIn" id="2d221f1d-2766-47a4-8096-9e500df7ac12" label="Ext. Audio" type="input"/>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes_3</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">517.392,-204.388</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">/SomeOutputPath/mov/[markGreen][.ext]</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">1920</imageResX>
+     <imageResY type="int">1080</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <pixelAspectRatio type="double">0</pixelAspectRatio>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">false</useMovieAudio>
+     <resolution type="string">HD 1080 (1920x1080)</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <scaleFilter type="int">-1</scaleFilter>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">true</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <packAudioTracks type="bool">true</packAudioTracks>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="aeeeda40-d27d-4d15-8587-3cab062423be" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="bc7decbd-c96e-4cd4-9726-5ee016e4cbed" specialType="order" type="output"/>
+     <VideoOut name="VideoOut" id="1bd5987c-6581-4f2f-8873-2312a6eb4110" label="AV Out" type="output">
+      <linkedTo>ca9dd1a5-3efd-4713-abfc-a1a564fc6d70</linkedTo>
+     </VideoOut>
+     <AudioOut name="AudioOut" id="3398c25a-8e17-4bda-ae71-dcec2e608744" label="Ext. Audio" visible="0" type="output"/>
+     <VideoIn name="VideoIn" id="a7ba71f1-cf46-42d5-94a9-e7f4485ff98d" label="AV In" type="input">
+      <linkedTo>ec4db8d1-fe64-4e61-a556-f444607db58d</linkedTo>
+     </VideoIn>
+     <AudioIn name="AudioIn" id="2dd7f2f2-6b2c-4e08-b23a-07dde3eb6a73" label="Ext. Audio" type="input"/>
+    </connections>
+   </node>
+   <node class="EDLToCC" type="task">
+    <properties>
+     <objectName type="string">EDLToCC</objectName>
+     <color type="color">#00b4b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">82.392,-700.253</pos>
+     <schemaName type="string">edltocc</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CnameConvention,CuniversalPath
+from mistikaTools import installModule
+import os
+try:
+    from xml.dom import minidom
+    import re
+except:
+    installModule("xml.dom")
+    installModule("re")
+
+
+
+def init(self):
+    self.setClassName("EDL To CC")
+    self.addConnector("edl",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("cc",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("ccPath")
+    self.addProperty("LOC", "Any")
+    self.addProperty("ShotNaming",0)
+    # self.addProperty("suffix","_cdl")
+    self.setAcceptConnectors(True,"edl")
+    self.bypassSupported=True
+    self.color=QColor(0,180,180)
+    return True
+
+def isReady(self):
+    res=True
+    if self.bypassSupported and self.bypassEnabled:
+        return res
+    if not self.ccPath:
+        res=self.critical("edl2cc2csv:ccPath:notFound","Destination Path can not be empty") and res
+    return res
+
+def process(self):
+
+    def GenerateCC (outputFileCC,VFXName,eventDescription,SOPValues,SATValue):
+
+        document = minidom.Document()
+
+        CCid = document.createElement('ColorCorrection')
+        CCid.setAttribute ('id',VFXName[0])
+
+        Description = document.createElement('Description')
+        DescriptionText = document.createTextNode(eventDescription)
+        CCid.appendChild (Description)
+        Description.appendChild (DescriptionText)
+
+        SOPNode = document.createElement('SOPNode')
+        CCid.appendChild (SOPNode)
+        Slope = document.createElement('Slope')
+        SlopeValue = document.createTextNode(SOPValues[0])
+        Offset = document.createElement('Offset')
+        OffsetValue = document.createTextNode(SOPValues[1])
+        Power = document.createElement('Power')
+        PowerValue = document.createTextNode(SOPValues[2])
+
+        SOPNode.appendChild(Slope)
+        Slope.appendChild(SlopeValue)
+        SOPNode.appendChild(Offset)
+        Offset.appendChild(OffsetValue)
+        SOPNode.appendChild(Power)
+        Power.appendChild(PowerValue)
+
+        SATNode = document.createElement('SATNode')
+        CCid.appendChild (SATNode)
+        Saturation = document.createElement('Saturation')
+        SaturationValue = document.createTextNode(SATValue[0])
+        SATNode.appendChild(Saturation)
+        Saturation.appendChild(SaturationValue)
+
+        document.appendChild(CCid)
+        xmlStr = document.toprettyxml(indent ="\t",encoding='UTF-8')
+
+        with open (outputFileCC, 'wb') as f:
+            f.write(xmlStr)
+
+        return outputFileCC
+
+
+
+    def checkRegEx(locs,vfxRegex):
+        for loc in locs:
+            vfxn = re.fullmatch(vfxRegex, loc)
+            if vfxn:
+                return vfxn
+        self.warning("edl2cc:getVFXName:RegEx", vfxRegex + '\tDoes Not Match any ShotNaming in markers '+str(locs))
+        return
+
+    def getLOCindex(UserLoc,locs):
+        for i, loc in enumerate(locs):
+            if UserLoc == loc:
+                return i
+        self.warning("edl2cc:getLOCindex:locs", UserLoc + '\tCouldn\'t be found in ' + str(locs))
+        return
+    def getLOCindexMarkers(locs):
+        for i, loc in enumerate(locs):
+            if loc in MistikaMarkers:
+                return i
+        self.warning("edl2cc:getLOCindexMarkers:locs", str(locs) + '\tCouldn\'t be found in ' + str(MistikaMarkers))
+        return
+
+    def getVFXName(line,UserLoc,vfxRegex,VFXName):
+        line=line.strip()
+        locs = line.split()
+        StringRules=["Any","FromClipName","TapeName"]
+        illegalChars='\/:*?"&lt;>|'
+        vfxn = ""
+
+        if ((UserLoc in locs or UserLoc in StringRules) and vfxRegex != ""):
+            vfxn = checkRegEx(locs, vfxRegex)
+            if vfxn:
+                vfxn=vfxn[0]
+
+        elif UserLoc in locs:
+            i=getLOCindex(UserLoc,locs)
+            try:
+                vfxn=locs[i+1]
+            except:
+                vfxn=locs[i]
+                self.warning("edl2cc:getVFXName:locs",str(locs) + '   Has not anything after\t' + str(UserLoc))
+
+        elif UserLoc in StringRules:
+            if UserLoc == StringRules[0]:
+                i = getLOCindexMarkers(locs)
+                try:
+                    vfxn=locs[i+1]
+                except:
+                    vfxn = locs[i]
+                    self.warning("edl2cc:getVFXName:locs", str(locs) + '   Has not anything after\t' + str(UserLoc))
+            elif UserLoc == StringRules[1]:
+                locs=line.split(':')
+                vfxn = locs[1]
+            elif UserLoc==StringRules[2]:
+                vfxn = locs[1]
+        else:
+            vfxn = locs[3]
+            self.warning("edl2cc:getVFXName:RegEx", vfxn + '\tNo ShotNaming neither LOC matched, getting default... GoodLuck... ')
+
+        vfxn=vfxn.strip()
+        for i in illegalChars:
+            if i in vfxn:
+                self.warning("edl2cc:getVFXName:illegalChars", vfxn + '\tContains illegal characters \ /:*?"&lt;>| -> Replacing by \"-"')
+                vfxn = vfxn.replace(i, "-")
+
+        # print(VFXName)
+        VFXName.append(vfxn)
+        return VFXName
+
+
+
+
+    def processEDL (up,dstPathCC):
+        ccFiles=[]
+        files=up.getFiles()
+        metadata = up.getMetadata()
+        print(metadata)
+        if not files:
+            self.critical("edl2cc:processEDL:notEDL","Unable to interpret input UP {}".format(up.getFilePath()))
+            return [False,None,None]
+        filename=files[0]
+        self.info("edl2cc:processEDL:edlName","processing {}".format(filename))
+        if filename.endswith('.edl'):
+            VFXName = []
+            SOPValues = []
+            SATValue = []
+            try:
+                with open (filename) as f:
+                    for line in f:
+                        if line.startswith('0'):                            
+                            if VFXName and not SOPValues:
+                                self.info("edl2cc:processEDL:edlName", VFXName[0] +'\tNOT FOUND SOP/SAT Values in edlEvent: '+edlEvent+':'+IDValue)
+                            VFXName = []
+                            SOPValues = []
+                            SATValue = []
+                            eventDescription=line.strip(' \n')
+                            IDValue = line.split()[1]
+                            edlEvent = line.split()[0]
+                            # srcTCin= line.split()[4]
+                            # srcTCout= line.split()[5]
+                            # recTCin= line.split()[6]
+                            # recTCout= line.split()[7]
+                            if UserLoc == "TapeName":
+                                getVFXName(line, UserLoc, vfxRegex, VFXName)
+
+                        elif (line.__contains__('FROM CLIP NAME') and UserLoc=="FromClipName"):
+                            getVFXName(line, UserLoc, vfxRegex, VFXName)
+                        elif (line.startswith('*LOC:') or line.startswith('* LOC')) and UserLoc != "TapeName" and UserLoc != "FromClipName":
+                            getVFXName(line, UserLoc, vfxRegex, VFXName)
+
+                        elif line.startswith('*ASC_SOP') or line.startswith('* ASC_SOP'):
+                            params=line.split(')(')
+                            Slope=(params[0].split('('))[1]
+                            Offset=params[1]
+                            Power=(params[2].replace(')','')).strip(' \n')
+                            SOPValues.append(Slope)
+                            SOPValues.append(Offset)
+                            SOPValues.append(Power)
+
+                        elif line.startswith('*ASC_SAT') or line.startswith ('* ASC_SAT'):
+                            n=len(line.split())
+                            SATValue.append(line.split()[n-1])
+
+                        else:
+                            continue
+
+                        if IDValue and VFXName and SOPValues and SATValue:
+                            outputFileCC = dstPathCC + VFXName[0] +'_cdl.cc'
+                            outputFiles = GenerateCC(outputFileCC,VFXName,eventDescription,SOPValues,SATValue)
+                            ccFiles.append(outputFiles)
+
+                    if VFXName and not SOPValues:
+                        self.info("edl2cc:processEDL:edlName", VFXName[0] +'\tNOT FOUND SOP/SAT Values in edlEvent: '+edlEvent+':'+IDValue)
+                    f.close()
+
+            except OSError:
+                self.critical("edl2cc:processEDL:notFound","Unable to Open File {}".format(filename))
+                return [False,None,None]
+
+        # print (ccFiles)
+        return [True,ccFiles]
+
+    res=True
+    if self.bypassEnabled:
+        #this node leaves the outputs empty during bypass as the files are not generated
+        return True
+
+    # vfxRegex1=r'[a-zA-Z0-9]+_+[a-zA-Z0-9]+_+[a-zA-Z0-9]+_?+[a-zA-Z0-9]+_?+[a-zA-Z0-9]+'
+    # vfxRegex2="([a-zA-Z0-9]+[_]){2,7}[a-zA-Z0-9]+"
+    # vfxRegex check at https: // regex101.com /
+
+    ShotNaming=int(self.ShotNaming)
+    if ShotNaming == 0:
+        vfxRegex=""
+    elif ShotNaming == 1:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2}[a-zA-Z0-9]+"                           #showID_episode_shotID
+    elif ShotNaming == 2:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2,7}[a-zA-Z0-9]+"                         #showID_episode_shotID_[UptoALL]
+    elif ShotNaming == 3:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3}[a-zA-Z0-9]+"                           #showID_episode_seq_shotID
+    elif ShotNaming == 4:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3,7}[a-zA-Z0-9]+"                         #showID_episode_seq_shotID_[UptoALL]
+    elif ShotNaming == 5:
+        vfxRegex = "([a-zA-Z0-9]+[_]){4}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID
+    elif ShotNaming == 6:
+        vfxRegex = "([a-zA-Z0-9]+[_]){5}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID_task
+    elif ShotNaming == 7:
+        vfxRegex = "([a-zA-Z0-9]+[_]){6}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID_task_vendor
+    elif ShotNaming == 8:
+        vfxRegex = "([a-zA-Z0-9]+[_]){7}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID_task_vendorID_version
+
+    MistikaMarkers=['RED','GREEN','BLUE','CYAN','MAGENTA','YELLOW','BLACK','WHITE']
+
+    nc=CnameConvention(self.getNameConvention())
+    if not nc.toString():
+        nc=self.getWorkflow().getNameConvention()
+
+    outConCC=self.getFirstConnectorByName("cc")
+    outConCC.clearUniversalPaths()
+    UserLoc = self.evaluate(self.LOC)
+    input=self.getFirstConnectorByName("edl")
+    dstPath=self.evaluate(self.ccPath).strip()
+    list=input.getUniversalPaths()
+
+    for up in list:
+        if self.isCancelled():
+            return False
+
+        dstPathCC=up.getStringOverride(dstPath)
+        if not os.path.exists(dstPathCC):
+            os.makedirs(dstPathCC)
+
+        [r,CCs]=processEDL(up,dstPathCC)
+        res=res and r
+        if res:
+            if CCs:
+                for c in CCs:
+                    outUP=CuniversalPath(nc,c)
+                    outUP.setMediaFileInfoData(up.getMediaFileInfoData())
+                    outConCC.addUniversalPath(outUP)
+
+    return res
+</code>
+     <ccPath type="string">/SomeOutputPath/</ccPath>
+     <LOC type="string">GREEN</LOC>
+     <ShotNaming type="string">4</ShotNaming>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="4dc14804-41e1-4c3f-a539-fdc179d9abee" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="d50e0007-482b-404c-a929-141e15a6813f" specialType="order" type="output"/>
+     <edl name="edl" id="af31a7e2-38c5-4fc2-8de2-ed47b3679f5a" type="input">
+      <linkedTo>afea5852-6cef-4901-8c35-963ef3ae97aa</linkedTo>
+     </edl>
+     <cc name="cc" id="66400a48-5f95-4c11-b687-1dc81cda45f2" type="output">
+      <linkedTo>8a9355f6-ea7e-4863-9255-83d4e974e670</linkedTo>
+     </cc>
+    </connections>
+   </node>
+   <node class="EDLToMarkers" type="task">
+    <properties>
+     <objectName type="string">EDLToMarkers</objectName>
+     <color type="color">#005a5a</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">87.1245,-558.986</pos>
+     <schemaName type="string">edltomarkers</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CnameConvention,CuniversalPath
+from mistikaTools import installModule
+import os
+import sys
+
+try:
+    import re
+except:
+    installModule("re")
+
+
+def init(self):
+    self.setClassName("EDL To Markers")
+    self.addConnector("edl",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("edlMarkers",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("edlMarkersPath")
+    self.addProperty("LOC", "Any")
+    self.addProperty("ShotNaming",0)
+    self.addProperty("Mistika", True)
+    self.addProperty("DaVinciResolve", False)
+    self.addProperty("MarkersColorMTK",3)
+    self.addProperty("MarkersColorDVR", 1)
+    # self.addProperty("suffix","_edlMarkers")
+    self.setAcceptConnectors(True,"edl")
+    self.bypassSupported=True
+    self.color=QColor(0,90,90)
+    return True
+
+def isReady(self):
+    res=True
+    if self.bypassSupported and self.bypassEnabled:
+        return res
+    if not self.edlMarkersPath:
+        res=self.critical("edl2Markers:edlMarkersPath:notFound","Destination Path can not be empty") and res
+    return res
+
+def process(self):
+
+    def checkRegEx(locs,vfxRegex):
+        for loc in locs:
+            vfxn = re.fullmatch(vfxRegex, loc)
+            if vfxn:
+                return vfxn
+        self.warning("edl2Markers:getVFXName:RegEx", vfxRegex + '\tDoes Not Match any ShotNaming in markers '+str(locs))
+        return
+
+    def getLOCindex(UserLoc,locs):
+        for i, loc in enumerate(locs):
+            if UserLoc == loc:
+                return i
+        self.warning("edl2Markers:getLOCindex:locs", UserLoc + '\tCouldn\'t be found in ' + str(locs))
+        return
+
+    def getLOCindexMarkers(locs):
+        for i, loc in enumerate(locs):
+            if loc in MistikaMarkers:
+                return i
+        self.warning("edl2Markers:getLOCindexMarkers:locs", str(locs) + '\tCouldn\'t be found in ' + str(MistikaMarkers))
+        return
+
+
+    def getVFXName(line,UserLoc,vfxRegex,VFXName):
+        line=line.strip()
+        locs = line.split()
+        StringRules=["Any","FromClipName","TapeName"]
+        illegalChars='\/:*?"&lt;>|'
+        vfxn = ""
+
+        if ((UserLoc in locs or UserLoc in StringRules) and vfxRegex != ""):
+            vfxn = checkRegEx(locs, vfxRegex)
+            if vfxn:
+                vfxn=vfxn[0]
+
+        elif UserLoc in locs:
+            i = getLOCindex(UserLoc, locs)
+            try:
+                vfxn=locs[i+1]
+            except:
+                vfxn=locs[i]
+                self.warning("edl2Markers:getVFXName:locs",str(locs) + '   Has not anything after\t' + str(UserLoc))
+
+        elif UserLoc in StringRules:
+            if UserLoc == StringRules[0]:
+                i = getLOCindexMarkers(locs)
+                try:
+                    vfxn=locs[i+1]
+                except:
+                    vfxn = locs[i]
+                    self.warning("edl2Markers:getVFXName:locs", str(locs) + '   Has not anything after\t' + str(UserLoc))
+            elif UserLoc == StringRules[1]:
+                locs=line.split(':')
+                vfxn = locs[1]
+            elif UserLoc==StringRules[2]:
+                vfxn = locs[1]
+        else:
+            vfxn = locs[3]
+            self.warning("edl2Markers:getVFXName:RegEx", vfxn + '\tNo ShotNaming neither LOC matched, getting default ')
+
+        vfxn=vfxn.strip()
+        for i in illegalChars:
+            if i in vfxn:
+                self.warning("edl2cc:getVFXName:illegalChars", vfxn + '\tContains illegal characters \ /:*?"&lt;>| -> Replacing by \"-"')
+                vfxn = vfxn.replace(i, "-")
+
+        VFXName.append(vfxn)
+        # print(VFXName)
+        return VFXName
+
+
+    def processEDL (up,dstPath):
+        files=up.getFiles()
+        if not files:
+            self.critical("edl2Markers:processEDL:notEDL","Unable to interpret input UP {}".format(up.getFilePath()))
+            return [False,None,None]
+        filename=files[0]
+        dstFilesDVR = []
+        dstFilesMTK = []
+
+        self.info("edl2Markers:processEDL:edlName","processing {}".format(filename))
+        if filename.endswith('.edl'):
+            VFXName = []
+            VFXNameLine=[]
+            edlMarkers = []
+            edlMarkersLine = []
+            try:
+                with open (filename) as f:
+                    for line in f:
+                        if line.startswith('0'):  ## Weak Condition to find tapename ID (000001  A099C003_220223NE) => should look for int()
+                            VFXName = []
+                            eventDescription = line.strip(' \n')
+                            IDValue = line.split()[1]
+                            edlEvent = line.split()[0]
+                            srcTCin = line.split()[4]
+                            srcTCout = line.split()[5]
+                            recTCin = line.split()[6]
+                            recTCout = line.split()[7]
+
+                            if UserLoc == "TapeName":
+                                getVFXName(line, UserLoc, vfxRegex, VFXName)
+                                VFXNameLine.append(edlEvent + ';' + VFXName[0] + ';' + srcTCin + ';' + srcTCout + ';' + recTCin + ';' + recTCout)
+
+                        elif (line.__contains__('FROM CLIP NAME') and UserLoc=="FromClipName"):
+                            getVFXName(line, UserLoc, vfxRegex, VFXName)
+                            VFXNameLine.append(edlEvent + ';' + VFXName[0] + ';' + srcTCin + ';' + srcTCout + ';' + recTCin + ';' + recTCout)
+                            print(VFXNameLine)
+
+                        elif (line.startswith('*LOC:') or line.startswith('* LOC:')) and UserLoc != "TapeName" and UserLoc != "FromClipName":
+                            getVFXName(line, UserLoc, vfxRegex, VFXName)
+                            VFXNameLine.append(edlEvent + ';' + VFXName[0] + ';' + srcTCin + ';' + srcTCout + ';' + recTCin + ';' + recTCout)
+
+                        else:
+                            continue
+                    # print(VFXNameLine)
+                    if VFXNameLine:
+                        for l in VFXNameLine:
+                            edlMarkers.append(l)
+                f.close()
+
+                [edlMarkersLine.append(x) for x in edlMarkers if x not in edlMarkersLine]  ## REMOVE DUPLICATES IN LIST
+                # print(edlMarkersLine)
+                dstFileDVR = dstPath + os.path.basename(filename)[:-4] + '_edlMarkersDVR.edl'
+                if os.path.isfile(dstFileDVR) and self.DaVinciResolve:
+                    os.remove(dstFileDVR)
+                dstFileMTK = dstPath + os.path.basename(filename)[:-4] + '_edlMarkersMTK.edl'
+                if os.path.isfile(dstFileMTK) and self.Mistika:
+                    os.remove(dstFileMTK)
+
+                for i in edlMarkersLine:
+                    edlEvent = i.split(';')[0]
+                    VFXName = i.split(';')[1]
+                    srcTCin = i.split(';')[2]
+                    srcTCout = i.split(';')[3]
+                    recTCin = i.split(';')[4]
+                    recTCout = i.split(';')[5]
+
+                    if self.DaVinciResolve:
+                        lineDVR = (edlEvent + '  ' + VFXName + '  V  C  ' + srcTCin + ' ' + srcTCout + ' ' + recTCin + ' ' + recTCout + ' ' + '\n'
+                                   + ' ' + DaVinciMarkers[ColorsIndexDVR] + ' |M:' + VFXName + ' |D:1\n')
+                        with open(dstFileDVR, 'a') as f:
+                            f.writelines('\n' + lineDVR)
+                        f.close()
+                        print(lineDVR)
+                    if self.Mistika:
+                        lineMTK = (edlEvent + '  ' + VFXName + '  V  C  ' + srcTCin + ' ' + srcTCout + ' ' + recTCin + ' ' + recTCout + ' ' + '\n'
+                                   + '*LOC:  ' + recTCin + ' ' + MistikaMarkers[ColorsIndexMTK] + '  ' + VFXName + '\n')
+                        with open(dstFileMTK, 'a') as f:
+                            f.writelines('\n' + lineMTK)
+                        f.close()
+                        print(lineMTK)
+
+                if self.DaVinciResolve:
+                    dstFilesDVR.append(dstFileDVR)
+                if self.Mistika:
+                    dstFilesMTK.append(dstFileMTK)
+
+            except OSError:
+                self.critical("edl2Markers:processEDL:notFound","Unable to Open File {}".format(filename))
+                return [False,None,None]
+
+        # print(dstFiles)
+        return [True,dstFilesDVR,dstFilesMTK]
+
+    res=True
+
+
+    if self.bypassEnabled:
+        #this node leaves the outputs empty during bypass as the files are not generated
+        return True
+
+    # vfxRegex check at https: // regex101.com /
+    ShotNaming = int(self.ShotNaming)
+    if ShotNaming == 0:
+        vfxRegex = ""
+    elif ShotNaming == 1:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2}[a-zA-Z0-9]+"  # showID_episode_shotID
+    elif ShotNaming == 2:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2,7}[a-zA-Z0-9]+"  # showID_episode_shotID_[UptoALL]
+    elif ShotNaming == 3:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3}[a-zA-Z0-9]+"  # showID_episode_seq_shotID
+    elif ShotNaming == 4:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3,7}[a-zA-Z0-9]+"  # showID_episode_seq_shotID_[UptoALL]
+    elif ShotNaming == 5:
+        vfxRegex = "([a-zA-Z0-9]+[_]){4}[a-zA-Z0-9]+"  # showID_episode_seq_scene_shotID
+    elif ShotNaming == 6:
+        vfxRegex = "([a-zA-Z0-9]+[_]){5}[a-zA-Z0-9]+"  # showID_episode_seq_scene_shotID_task
+    elif ShotNaming == 7:
+        vfxRegex = "([a-zA-Z0-9]+[_]){6}[a-zA-Z0-9]+"  # showID_episode_seq_scene_shotID_task_vendor
+    elif ShotNaming == 8:
+        vfxRegex = "([a-zA-Z0-9]+[_]){7}[a-zA-Z0-9]+"  # showID_episode_seq_scene_shotID_task_vendorID_version
+
+    ColorsIndexDVR=int(self.MarkersColorDVR)
+    DaVinciMarkers = ['|C:ResolveColorBlue', '|C:ResolveColorCyan', '|C:ResolveColorGreen', '|C:ResolveColorYellow', '|C:ResolveColorRed','|C:ResolveColorPink','|C:ResolveColorPurple','|C:ResolveColorFuchsia',
+                      '|C:ResolveColorRose','|C:ResolveColorLavender','|C:ResolveColorSky','|C:ResolveColorMint','|C:ResolveColorLemon','|C:ResolveColorSand','|C:ResolveColorCocoa','|C:ResolveColorCream']
+    ColorsIndexMTK=int(self.MarkersColorMTK)
+    MistikaMarkers=['RED','GREEN','BLUE','CYAN','MAGENTA','YELLOW','BLACK','WHITE']
+
+    if not self.DaVinciResolve and not self.Mistika:
+        res = self.critical("edl2Markers:edlMarkersFormat:No format selected", "At least one edl format is required") and res
+
+    UserLoc = self.evaluate(self.LOC)
+    outConEDLMarkers=self.getFirstConnectorByName("edlMarkers")
+    outConEDLMarkers.clearUniversalPaths()
+    input=self.getFirstConnectorByName("edl")
+    dstPath=self.evaluate(self.edlMarkersPath).strip()
+    list=input.getUniversalPaths()
+
+    nc=CnameConvention(self.getNameConvention())
+    if not nc.toString():
+        nc=self.getWorkflow().getNameConvention()
+
+    for up in list:
+        if self.isCancelled():
+            return False
+
+        dstPathEDL=up.getStringOverride(dstPath)
+        if not os.path.exists(dstPathEDL):
+            os.makedirs(dstPathEDL)
+
+        [r,dstFilesDVR,dstFilesMTK]=processEDL(up,dstPathEDL)
+        res=res and r
+        if res:
+            if dstFilesDVR:
+                for c in dstFilesDVR:
+                    outUP = CuniversalPath(nc, c)
+                    outConEDLMarkers.addUniversalPath(outUP)
+            if dstFilesMTK:
+                for d in dstFilesMTK:
+                    outUP = CuniversalPath(nc, d)
+                    outConEDLMarkers.addUniversalPath(outUP)
+
+    return res
+</code>
+     <edlMarkersPath type="string">/SomeOutputPath/</edlMarkersPath>
+     <LOC type="string">GREEN</LOC>
+     <ShotNaming type="string">4</ShotNaming>
+     <Mistika type="bool">true</Mistika>
+     <DaVinciResolve type="bool">true</DaVinciResolve>
+     <MarkersColorMTK type="int">3</MarkersColorMTK>
+     <MarkersColorDVR type="int">1</MarkersColorDVR>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="72e1e822-6a99-45b4-9824-445c5d85e06f" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="550129db-dca6-4ef9-b264-cc631970e8a4" specialType="order" type="output"/>
+     <edl name="edl" id="e4c4e828-df1f-49ce-abfc-46b015d4f259" type="input">
+      <linkedTo>afea5852-6cef-4901-8c35-963ef3ae97aa</linkedTo>
+     </edl>
+     <edlMarkers name="edlMarkers" id="6101b5af-32e3-4a49-8d55-3d253ee987e8" type="output">
+      <linkedTo>9d147439-6346-409d-a2c0-195bcabba98a</linkedTo>
+     </edlMarkers>
+    </connections>
+   </node>
+   <node class="ACESODT" type="task">
+    <properties>
+     <objectName type="string">ACESODT</objectName>
+     <color type="color">#3c9e40</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">228.384,-243.072</pos>
+     <schemaName type="string">acesodt</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <inputsAlignment type="int">0</inputsAlignment>
+     <Input_InputCurve type="string">0</Input_InputCurve>
+     <Input_InputGamut type="string">1</Input_InputGamut>
+     <Input_SECRETUseBradfordMatrix type="float">1</Input_SECRETUseBradfordMatrix>
+     <Output_OutputSpace type="float">0</Output_OutputSpace>
+     <Output_SECRETPrecision type="float">1</Output_SECRETPrecision>
+     <Output_OutputScale type="float">0</Output_OutputScale>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="5b78ee2c-4b1b-408e-8228-07056e2354da" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="7524fb37-94d4-4cf9-b99b-3415ba1de1c8" specialType="order" type="output"/>
+     <Output name="Output" id="ec4db8d1-fe64-4e61-a556-f444607db58d" type="output">
+      <linkedTo>a7ba71f1-cf46-42d5-94a9-e7f4485ff98d</linkedTo>
+     </Output>
+     <Input_1 name="Input_1" id="b0ecc6fd-a0f7-4e8e-9035-911bc2d5bc37" type="input">
+      <linkedTo>1ec63e83-5c2a-4ec7-a35d-1f3389d5baec</linkedTo>
+     </Input_1>
+    </connections>
+   </node>
+   <node class="SerializeInputs" type="task">
+    <properties>
+     <objectName type="string">SerializeInputs</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">418.176,-599.616</pos>
+     <schemaName type="string">serializeinputs</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">false</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <logicalOperation type="int">1</logicalOperation>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="e6746e29-bd07-450d-bad6-24b5d17a31ee" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="814ee1fa-dd07-45c3-bda9-f7be0dc89e36" specialType="order" type="output"/>
+     <Out name="Out" id="b4d7b738-1c32-4769-91a9-6bd880c44ba2" type="output">
+      <linkedTo>4358b4ba-05d4-4f65-b002-f2219f9d56e8</linkedTo>
+     </Out>
+     <In name="In" id="8a9355f6-ea7e-4863-9255-83d4e974e670" type="input">
+      <linkedTo>66400a48-5f95-4c11-b687-1dc81cda45f2</linkedTo>
+     </In>
+     <In name="In" id="9d147439-6346-409d-a2c0-195bcabba98a" type="input">
+      <linkedTo>6101b5af-32e3-4a49-8d55-3d253ee987e8</linkedTo>
+     </In>
+     <In name="In" id="f67815c7-7bb9-447a-b55b-a84d5df154a3" type="input">
+      <linkedTo>1ec63e83-5c2a-4ec7-a35d-1f3389d5baec</linkedTo>
+     </In>
+    </connections>
+   </node>
+   <node class="MASV" type="output">
+    <properties>
+     <objectName type="string">MASV</objectName>
+     <color type="color">#03d6b3</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1003.8,-591.379</pos>
+     <schemaName type="string">masv</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector,CuniversalPath,CnameConvention
+from Mistika.Qt import QColor
+import requests
+import os
+import json
+import time
+import re
+
+
+def init(self):
+    self.setClassName("MASV")
+    self.color = QColor(0x00485e)
+
+    self.addConnector("files", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_REQUIRED)
+    self.addConnector("links", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)
+
+    self.addEncryptedProperty("apiKey")
+    self.addProperty("teamID")
+    self.addProperty("baseAPIUrl","https://api.massive.app/v1")
+    self.addProperty("packageName")
+    self.addProperty("description")
+    self.addProperty("recipients")
+    self.addProperty("PacketLink")
+
+    self.addProperty("_chunkList", ['50 Mb$$$50', '100 Mb$$$100', '150 Mb$$$150', '200 Mb$$$200'])
+    self.addProperty("chunksize",100)
+    
+    self.addProperty("recipients_list")
+    self.nameConvention=CnameConvention("[path][baseName][.frame][.ext]")
+
+    self.bypassSupported = True
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)
+
+
+def isReady(self):
+    def getValidEmails(email_string):
+        result=True
+        if not email_string.strip():
+            return [], result
+
+        email_pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+        emails = [email.strip() for email in email_string.split(",")]
+        valid_emails = [email for email in emails if re.match(email_pattern, email)]
+        if len(valid_emails)!=len(emails):
+            result=False
+            errEmails = [elem for elem in emails if elem not in valid_emails]
+            strErrEmails=",".join(errEmails)
+            self.info("massiveIO:isReady:recipients", f"Some email address {'is' if len(errEmails) == 1 else 'are'} not valid ({strErrEmails}). Removed from recipient notification.")
+        return valid_emails,result
+    
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+
+    res = True
+    if not self.apiKey.strip():
+        self.critical("massiveIO:isReady:apiKey", "API Key cannot be empty.")
+        res = False
+    if not self.teamID.strip():
+        self.critical("massiveIO:isReady:teamID", "Team ID cannot be empty.")
+        res = False
+    if not self.baseAPIUrl.strip():
+        self.critical("massiveIO:isReady:baseAPIUrl", "Base API URL cannot be empty.")
+        res = False
+    if not self.packageName.strip():
+        self.critical("massiveIO:isReady:packageName", "Package Name cannot be empty.")
+        res = False
+    if self.chunksize &lt;= 0:
+        self.critical("massiveIO:isReady:chunksize", "Chunksize must be an integer greater than zero.")
+        res = False
+
+    self.recipients_list,res = getValidEmails(self.recipients)
+    if not self.recipients_list:
+        self.info("massiveIO:isReady:recipients", "No valid email found. Upload without recipient notification.")
+
+    return res
+
+
+def process(self):
+    def createPackage(self,packageName,description):
+        url = f"{self.baseAPIUrl}/teams/{self.teamID}/packages"
+        headers = {
+            "X-API-KEY": self.apiKey,
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "name": packageName,
+            "description": description,
+            "password": "",
+            "recipients": self.recipients_list
+        }
+
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        data = response.json()
+        return data["access_token"], data["id"]    
+
+    def uploadFile(self, packageId, filePath, accessToken):
+        fileName = os.path.basename(filePath)
+        url = f"{self.baseAPIUrl}/packages/{packageId}/files"
+        headers = {
+            "X-Package-Token": accessToken,
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "kind": "file",
+            "name": fileName,
+            "path": ""
+        }
+        print("massiveIO:process:info", f"uploadFile Creating file: {url}  {payload}")
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        data = response.json()
+        print("massiveIO:process:info", f"uploadFile Created File - response: {response.text}")
+        fileId = data["file"]["id"]
+
+        blueprint = data.get("create_blueprint") or data.get("createBlueprint", {})
+        uploadUrl = blueprint.get("url")
+        method = blueprint.get("method")
+        uploadHeaders = blueprint.get("headers", {})
+
+        response = requests.request(method, uploadUrl, headers=uploadHeaders)
+        response.raise_for_status()
+        print("massiveIO:process:info", f"uploadFile Created Blueprint - response: {response.text}")
+
+        uploadId = response.text.split("&lt;UploadId>")[1].split("&lt;/UploadId>")[0].strip()
+
+        fileSize = os.path.getsize(filePath)
+        ("massiveIO:process:info", f"uploadFile Created Blueprint - fileSize: {fileSize}")
+        self.chunksize=self.chunksize if isinstance(self.chunksize, int) else 100
+        chunkSizeBytes = self.chunksize * 1024 * 1024
+        print("massiveIO:process:info", f"uploadFile Created Blueprint - chunkSizeBytes: {chunkSizeBytes}")
+        numChunks = max(1, (fileSize + chunkSizeBytes - 1) // chunkSizeBytes)
+        print("massiveIO:process:info", f"uploadFile Created Blueprint - numChunks: {numChunks}")
+
+        url = f"{self.baseAPIUrl}/packages/{packageId}/files/{fileId}?start=0&amp;count={numChunks}"
+        print("massiveIO:process:info", f"uploadFile url prepared: {url}")
+        headers = {
+            "X-Package-Token": accessToken,
+            "Content-Type": "application/json"
+        }
+        payload = {"upload_id": uploadId}
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        print("massiveIO:process:info", f"uploadFile UploadID - response: {response.text}")
+
+        uploadTasks = [(item["url"], item["method"]) for item in response.json()]
+
+        return uploadTasks, uploadId, fileId, fileSize
+
+    def uploadToS3(self, uploadUrl, method, filePath, partNumber):
+        chunkSizeBytes = self.chunksize * 1024 * 1024
+        with open(filePath, "rb") as f:
+            f.seek((partNumber - 1) * chunkSizeBytes)
+            chunk = f.read(chunkSizeBytes)
+            response = requests.request(method, uploadUrl, data=chunk)
+        response.raise_for_status()
+        print("massiveIO:process:info", f"uploadToS3 - filePath: {filePath} - partNumber: {partNumber} - response: {response.text}")
+
+        return {"partNumber": str(partNumber), "etag": response.headers.get("ETag", "").strip('"')}
+
+    def finalizeUpload(self, packageId, fileId, uploadId, etagList, accessToken, fileSize):
+        url = f"{self.baseAPIUrl}/packages/{packageId}/files/{fileId}/finalize"
+        headers = {
+            "X-Package-Token": accessToken,
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "size": fileSize,
+            "file_extras": {"upload_id": uploadId},
+            "chunk_extras": etagList
+        }
+        response = requests.post(url, headers=headers, json=payload)
+        print("massiveIO:process:info", f"finalizeUpload - response: {response.text}")
+        response.raise_for_status()
+
+    def finalizePackage(self, packageId, accessToken):
+        url = f"{self.baseAPIUrl}/packages/{packageId}/finalize"
+        headers = {
+            "X-Package-Token": accessToken,
+            "Content-Type": "application/json"
+        }
+        response = requests.post(url, headers=headers)
+        response.raise_for_status()
+
+
+    def get_downloadLink(self, accessToken, packageId):
+        try:
+            headers = {
+                "X-Package-Token": accessToken,
+                "Content-Type": "application/json"
+            }
+            body = {
+                "email": "",
+                "password": ""
+            }
+            url = f"{self.baseAPIUrl}/packages/{packageId}/links"
+            response = requests.post(url, headers=headers, json=body)
+            response.raise_for_status()
+            data = response.json()
+            downloadID = data.get("id")
+            downloadSecret = data.get("download_secret")
+            print("massiveIO:process:info", f"get_downloadLink - id: {downloadID} - secret: {downloadSecret}")
+
+            if not downloadID or not downloadSecret:
+                self.critical("massiveIO:get_downloadLink:error", "Missing download ID or secret in response.")
+                return []
+
+            url=""
+            if self.PacketLink:
+                url=f"https://get.massive.io/{downloadID}?secret={downloadSecret}"
+
+            return url
+
+        except requests.RequestException as e:
+            self.critical("massiveIO:get_downloadLink:exception", f"Exception while getting download links: {str(e)}")
+            return []
+
+    if self.bypassEnabled:
+        return True
+
+    output = self.getFirstConnectorByName("links")
+    output.clearUniversalPaths()
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    filesToUpload = []
+
+    try:
+        accessToken = packageId = ""
+        for connector in inputs:
+            for up in connector.getUniversalPaths():
+                packageName = self.evaluate(self.packageName).strip()
+                strOpackageName = up.getStringOverride(packageName)
+                description = self.evaluate(self.description).strip()
+                strOdescription = up.getStringOverride(description)
+                print(f"packageName: {strOpackageName}  -  description: {strOdescription}")
+
+                filesToUpload = up.getAllFiles()
+                print("FilesToUpload: {filesToUpload}")
+                if not filesToUpload:
+                    raise ValueError("No files found to upload.")
+                for filePath in filesToUpload:
+                    if not accessToken or not packageId:
+                        accessToken, packageId = createPackage(self,strOpackageName,strOdescription)
+                        print("massiveIO:process:info",
+                              f"created Package - packageId: {packageId} - accessToken: {accessToken}")
+
+                    fileName = os.path.basename(filePath)
+                    print("massiveIO:process:info", f"File to be uploaded: {fileName}")
+                    uploadTasks, uploadId, fileId, fileSize = uploadFile(self, packageId, filePath, accessToken)
+
+                    print("massiveIO:process:def onPropertyUpdated(self, name):info",
+                          f"uploadFile done {fileName} - fileId: {fileId} - fileSize: {fileSize}")
+
+                    etagList = []
+                    for partNumber, (uploadUrl, method) in enumerate(uploadTasks, start=1):
+                        etagList.append(uploadToS3(self, uploadUrl, method, filePath, partNumber))
+
+                    print("massiveIO:process:info", f"uploadToS3 done {fileName} - fileId: {fileId}")
+
+                    finalizeUpload(self, packageId, fileId, uploadId, etagList, accessToken, fileSize)
+                    print("massiveIO:process:info", f"finalizeUpload done {fileName} - fileId: {fileId}")
+        
+        # when upload files loop finished, close package
+        if packageId and accessToken:
+            finalizePackage(self, packageId, accessToken)
+            downloadLink = get_downloadLink(self, accessToken, packageId)
+            print("massiveIO:process:info", f"Download links JSON: {downloadLink}")
+            
+            outUP=CuniversalPath(self.nameConvention, self.packageName) #strOpackageName
+            outUP.setPrivateData("packageLink", downloadLink)
+            output.addUniversalPath(up)
+
+        self.info("massiveIO:process:success", "File uploaded and package finalized successfully.")
+        return True
+
+    except Exception as e:
+        self.critical(f"massiveIO:process:exception", f"Exception during upload: {str(e)}")
+        return False
+</code>
+     <apiKey encrypted="1" type="string">AwUnnbnXZTtxWLDL9RLDRBn//YVREagRHj39</apiKey>
+     <teamID type="string"></teamID>
+     <baseAPIUrl type="string">https://api.massive.app/v1</baseAPIUrl>
+     <packageName type="string">[parentFolder]</packageName>
+     <description type="string">Some Description</description>
+     <recipients type="string">some@mail.com, other@mail.com</recipients>
+     <PacketLink type="string"></PacketLink>
+     <chunksize type="int">100</chunksize>
+     <recipients_list type="QVariantList"></recipients_list>
+     <PackageLink type="bool">true</PackageLink>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="affaff0e-28e7-4f52-9fff-8e0a879ac6da" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="42496c6d-0cf5-40be-a824-a2333b34dd77" specialType="order" type="output"/>
+     <files name="files" id="4358b4ba-05d4-4f65-b002-f2219f9d56e8" type="input">
+      <linkedTo>b4d7b738-1c32-4769-91a9-6bd880c44ba2</linkedTo>
+     </files>
+     <links name="links" id="43fc9b93-251f-4c12-9334-017a66d5b920" type="output"/>
+    </connections>
+   </node>
+   <node class="MASV" type="output">
+    <properties>
+     <objectName type="string">MASV_Proxies</objectName>
+     <color type="color">#03d6b3</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">988.134,-205.68</pos>
+     <schemaName type="string">masv</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector,CuniversalPath,CnameConvention
+from Mistika.Qt import QColor
+import requests
+import os
+import json
+import time
+import re
+
+
+def init(self):
+    self.setClassName("MASV")
+    self.color = QColor(0x00485e)
+
+    self.addConnector("files", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_REQUIRED)
+    self.addConnector("links", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)
+
+    self.addEncryptedProperty("apiKey")
+    self.addProperty("teamID")
+    self.addProperty("baseAPIUrl","https://api.massive.app/v1")
+    self.addProperty("packageName")
+    self.addProperty("description")
+    self.addProperty("recipients")
+    self.addProperty("PacketLink")
+
+    self.addProperty("_chunkList", ['50 Mb$$$50', '100 Mb$$$100', '150 Mb$$$150', '200 Mb$$$200'])
+    self.addProperty("chunksize",100)
+    
+    self.addProperty("recipients_list")
+    self.nameConvention=CnameConvention("[path][baseName][.frame][.ext]")
+
+    self.bypassSupported = True
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)
+
+
+def isReady(self):
+    def getValidEmails(email_string):
+        result=True
+        if not email_string.strip():
+            return [], result
+
+        email_pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+        emails = [email.strip() for email in email_string.split(",")]
+        valid_emails = [email for email in emails if re.match(email_pattern, email)]
+        if len(valid_emails)!=len(emails):
+            result=False
+            errEmails = [elem for elem in emails if elem not in valid_emails]
+            strErrEmails=",".join(errEmails)
+            self.info("massiveIO:isReady:recipients", f"Some email address {'is' if len(errEmails) == 1 else 'are'} not valid ({strErrEmails}). Removed from recipient notification.")
+        return valid_emails,result
+    
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+
+    res = True
+    if not self.apiKey.strip():
+        self.critical("massiveIO:isReady:apiKey", "API Key cannot be empty.")
+        res = False
+    if not self.teamID.strip():
+        self.critical("massiveIO:isReady:teamID", "Team ID cannot be empty.")
+        res = False
+    if not self.baseAPIUrl.strip():
+        self.critical("massiveIO:isReady:baseAPIUrl", "Base API URL cannot be empty.")
+        res = False
+    if not self.packageName.strip():
+        self.critical("massiveIO:isReady:packageName", "Package Name cannot be empty.")
+        res = False
+    if self.chunksize &lt;= 0:
+        self.critical("massiveIO:isReady:chunksize", "Chunksize must be an integer greater than zero.")
+        res = False
+
+    self.recipients_list,res = getValidEmails(self.recipients)
+    if not self.recipients_list:
+        self.info("massiveIO:isReady:recipients", "No valid email found. Upload without recipient notification.")
+
+    return res
+
+
+def process(self):
+    def createPackage(self,packageName,description):
+        url = f"{self.baseAPIUrl}/teams/{self.teamID}/packages"
+        headers = {
+            "X-API-KEY": self.apiKey,
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "name": packageName,
+            "description": description,
+            "password": "",
+            "recipients": self.recipients_list
+        }
+
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        data = response.json()
+        return data["access_token"], data["id"]    
+
+    def uploadFile(self, packageId, filePath, accessToken):
+        fileName = os.path.basename(filePath)
+        url = f"{self.baseAPIUrl}/packages/{packageId}/files"
+        headers = {
+            "X-Package-Token": accessToken,
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "kind": "file",
+            "name": fileName,
+            "path": ""
+        }
+        print("massiveIO:process:info", f"uploadFile Creating file: {url}  {payload}")
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        data = response.json()
+        print("massiveIO:process:info", f"uploadFile Created File - response: {response.text}")
+        fileId = data["file"]["id"]
+
+        blueprint = data.get("create_blueprint") or data.get("createBlueprint", {})
+        uploadUrl = blueprint.get("url")
+        method = blueprint.get("method")
+        uploadHeaders = blueprint.get("headers", {})
+
+        response = requests.request(method, uploadUrl, headers=uploadHeaders)
+        response.raise_for_status()
+        print("massiveIO:process:info", f"uploadFile Created Blueprint - response: {response.text}")
+
+        uploadId = response.text.split("&lt;UploadId>")[1].split("&lt;/UploadId>")[0].strip()
+
+        fileSize = os.path.getsize(filePath)
+        ("massiveIO:process:info", f"uploadFile Created Blueprint - fileSize: {fileSize}")
+        self.chunksize=self.chunksize if isinstance(self.chunksize, int) else 100
+        chunkSizeBytes = self.chunksize * 1024 * 1024
+        print("massiveIO:process:info", f"uploadFile Created Blueprint - chunkSizeBytes: {chunkSizeBytes}")
+        numChunks = max(1, (fileSize + chunkSizeBytes - 1) // chunkSizeBytes)
+        print("massiveIO:process:info", f"uploadFile Created Blueprint - numChunks: {numChunks}")
+
+        url = f"{self.baseAPIUrl}/packages/{packageId}/files/{fileId}?start=0&amp;count={numChunks}"
+        print("massiveIO:process:info", f"uploadFile url prepared: {url}")
+        headers = {
+            "X-Package-Token": accessToken,
+            "Content-Type": "application/json"
+        }
+        payload = {"upload_id": uploadId}
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        print("massiveIO:process:info", f"uploadFile UploadID - response: {response.text}")
+
+        uploadTasks = [(item["url"], item["method"]) for item in response.json()]
+
+        return uploadTasks, uploadId, fileId, fileSize
+
+    def uploadToS3(self, uploadUrl, method, filePath, partNumber):
+        chunkSizeBytes = self.chunksize * 1024 * 1024
+        with open(filePath, "rb") as f:
+            f.seek((partNumber - 1) * chunkSizeBytes)
+            chunk = f.read(chunkSizeBytes)
+            response = requests.request(method, uploadUrl, data=chunk)
+        response.raise_for_status()
+        print("massiveIO:process:info", f"uploadToS3 - filePath: {filePath} - partNumber: {partNumber} - response: {response.text}")
+
+        return {"partNumber": str(partNumber), "etag": response.headers.get("ETag", "").strip('"')}
+
+    def finalizeUpload(self, packageId, fileId, uploadId, etagList, accessToken, fileSize):
+        url = f"{self.baseAPIUrl}/packages/{packageId}/files/{fileId}/finalize"
+        headers = {
+            "X-Package-Token": accessToken,
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "size": fileSize,
+            "file_extras": {"upload_id": uploadId},
+            "chunk_extras": etagList
+        }
+        response = requests.post(url, headers=headers, json=payload)
+        print("massiveIO:process:info", f"finalizeUpload - response: {response.text}")
+        response.raise_for_status()
+
+    def finalizePackage(self, packageId, accessToken):
+        url = f"{self.baseAPIUrl}/packages/{packageId}/finalize"
+        headers = {
+            "X-Package-Token": accessToken,
+            "Content-Type": "application/json"
+        }
+        response = requests.post(url, headers=headers)
+        response.raise_for_status()
+
+
+    def get_downloadLink(self, accessToken, packageId):
+        try:
+            headers = {
+                "X-Package-Token": accessToken,
+                "Content-Type": "application/json"
+            }
+            body = {
+                "email": "",
+                "password": ""
+            }
+            url = f"{self.baseAPIUrl}/packages/{packageId}/links"
+            response = requests.post(url, headers=headers, json=body)
+            response.raise_for_status()
+            data = response.json()
+            downloadID = data.get("id")
+            downloadSecret = data.get("download_secret")
+            print("massiveIO:process:info", f"get_downloadLink - id: {downloadID} - secret: {downloadSecret}")
+
+            if not downloadID or not downloadSecret:
+                self.critical("massiveIO:get_downloadLink:error", "Missing download ID or secret in response.")
+                return []
+
+            url=""
+            if self.PacketLink:
+                url=f"https://get.massive.io/{downloadID}?secret={downloadSecret}"
+
+            return url
+
+        except requests.RequestException as e:
+            self.critical("massiveIO:get_downloadLink:exception", f"Exception while getting download links: {str(e)}")
+            return []
+
+    if self.bypassEnabled:
+        return True
+
+    output = self.getFirstConnectorByName("links")
+    output.clearUniversalPaths()
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    filesToUpload = []
+
+    try:
+        accessToken = packageId = ""
+        for connector in inputs:
+            for up in connector.getUniversalPaths():
+                packageName = self.evaluate(self.packageName).strip()
+                strOpackageName = up.getStringOverride(packageName)
+                description = self.evaluate(self.description).strip()
+                strOdescription = up.getStringOverride(description)
+                print(f"packageName: {strOpackageName}  -  description: {strOdescription}")
+
+                filesToUpload = up.getAllFiles()
+                print("FilesToUpload: {filesToUpload}")
+                if not filesToUpload:
+                    raise ValueError("No files found to upload.")
+                for filePath in filesToUpload:
+                    if not accessToken or not packageId:
+                        accessToken, packageId = createPackage(self,strOpackageName,strOdescription)
+                        print("massiveIO:process:info",
+                              f"created Package - packageId: {packageId} - accessToken: {accessToken}")
+
+                    fileName = os.path.basename(filePath)
+                    print("massiveIO:process:info", f"File to be uploaded: {fileName}")
+                    uploadTasks, uploadId, fileId, fileSize = uploadFile(self, packageId, filePath, accessToken)
+
+                    print("massiveIO:process:def onPropertyUpdated(self, name):info",
+                          f"uploadFile done {fileName} - fileId: {fileId} - fileSize: {fileSize}")
+
+                    etagList = []
+                    for partNumber, (uploadUrl, method) in enumerate(uploadTasks, start=1):
+                        etagList.append(uploadToS3(self, uploadUrl, method, filePath, partNumber))
+
+                    print("massiveIO:process:info", f"uploadToS3 done {fileName} - fileId: {fileId}")
+
+                    finalizeUpload(self, packageId, fileId, uploadId, etagList, accessToken, fileSize)
+                    print("massiveIO:process:info", f"finalizeUpload done {fileName} - fileId: {fileId}")
+        
+        # when upload files loop finished, close package
+        if packageId and accessToken:
+            finalizePackage(self, packageId, accessToken)
+            downloadLink = get_downloadLink(self, accessToken, packageId)
+            print("massiveIO:process:info", f"Download links JSON: {downloadLink}")
+            
+            outUP=CuniversalPath(self.nameConvention, self.packageName) #strOpackageName
+            outUP.setPrivateData("packageLink", downloadLink)
+            output.addUniversalPath(up)
+
+        self.info("massiveIO:process:success", "File uploaded and package finalized successfully.")
+        return True
+
+    except Exception as e:
+        self.critical(f"massiveIO:process:exception", f"Exception during upload: {str(e)}")
+        return False
+</code>
+     <apiKey encrypted="1" type="string">AwXPdVE/jdOZsFgjHforrPEXFW25+UD59tUV</apiKey>
+     <teamID type="string"></teamID>
+     <baseAPIUrl type="string">https://api.massive.app/v1</baseAPIUrl>
+     <packageName type="string">[sgProject]</packageName>
+     <description type="string">[sgSequence]</description>
+     <recipients type="string">some@mail.com, other@mail.com</recipients>
+     <PacketLink type="string"></PacketLink>
+     <chunksize type="int">100</chunksize>
+     <recipients_list type="QVariantList"></recipients_list>
+     <PackageLink type="bool">true</PackageLink>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="437edb06-2313-48d7-83f9-a171b84dce34" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="bb7db68b-dcf4-4ee4-9404-10be10cf69a7" specialType="order" type="output"/>
+     <files name="files" id="ca9dd1a5-3efd-4713-abfc-a1a564fc6d70" type="input">
+      <linkedTo>1bd5987c-6581-4f2f-8873-2312a6eb4110</linkedTo>
+     </files>
+     <links name="links" id="55b1eef8-b655-4cb7-984a-626fede64f51" type="output">
+      <linkedTo>291a192c-2646-4d86-8197-5d077374088c</linkedTo>
+     </links>
+    </connections>
+   </node>
+   <node class="WhatsApp" type="output">
+    <properties>
+     <objectName type="string">WhatsApp</objectName>
+     <color type="color">#25d366</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1517.18,-207.36</pos>
+     <schemaName type="string">whatsapp</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+import requests
+import json
+            
+_WF_WHATSAPP_DEFAULT_MSG="""Put your text here
+List of Input Files: 
+&lt;?py
+for c in self.getConnectors():
+    for p in c.getUniversalPaths():
+      print (p.toString())
+?>"""
+
+def init(self):
+    self.color=QColor(0x25d366)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("onlySendIfInput")
+    self.addProperty("sendFiles")
+    self.addEncryptedProperty("phoneNumberID")
+    self.addEncryptedProperty("accessToken")
+    self.addProperty("msgTo")
+    self.addProperty("body",_WF_WHATSAPP_DEFAULT_MSG)    
+    self.bypassSupported=True
+    self.setAcceptConnectors(True,"input")
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)
+    return True
+    
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    
+    if self.phoneNumberID.strip()=="":
+      res=self.critical("mail:phoneNumberID","'phoneNumberID' can not be empty") and res
+    if self.accessToken.strip()=="":
+      res=self.critical("mail:accessToken","'accessToken' can not be empty") and res
+    if self.msgTo.strip()=="":
+      res=self.critical("mail:msgTo","'msgTo' can not be empty") and res
+    return res
+    
+import json
+import requests
+import mimetypes
+
+import json
+import requests
+import mimetypes
+
+import json
+import requests
+import mimetypes
+
+def process(self):
+    res = True
+    if self.bypassEnabled:
+        return True
+    
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    hasInput = False
+    files_to_upload = []
+    
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            hasInput = True
+            files_to_upload.append(up)
+    
+    if not hasInput and self.onlySendIfInput:
+        return True 
+    
+    headers = {
+        "Authorization": "Bearer " + self.accessToken.strip(),
+        "Content-Type": "application/json"
+    }
+    url = f"https://graph.facebook.com/v17.0/{self.phoneNumberID.strip()}/messages"
+    
+    try:
+        body = self.evaluate(self.body)
+        chunk_length = 4096
+        split_body = [body[i:i + chunk_length] for i in range(0, len(body), chunk_length)]
+        
+        for body_chunk in split_body:
+            data = {
+                "messaging_product": "whatsapp",
+                "recipient_type": "individual",
+                "to": self.msgTo.strip(),
+                "type": "text",
+                "text": {
+                    "preview_url": False,
+                    "body": body_chunk
+                }
+            }
+            response = requests.post(url, data=json.dumps(data), headers=headers)
+            if "error" in response.json():
+                return self.critical("process:smtp", "Error: {}".format(response.json()["error"]["message"]))
+        
+        if not self.sendFiles:
+            return res
+        # Subir y enviar archivos si hay alguno
+        allowed_mime_types = [
+            "image/jpeg", "image/png", "image/webp", 
+            "video/mp4", "video/3gpp", 
+            "audio/aac", "audio/mp4", "audio/mpeg", "audio/amr", "audio/ogg", "audio/opus", 
+            "application/pdf", "application/msword", "application/vnd.ms-excel", 
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", 
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+            "application/vnd.ms-powerpoint", "text/plain"
+        ]
+        
+        for up in files_to_upload:
+            file_path = up.getFilePath()
+            mime_type, _ = mimetypes.guess_type(file_path)
+            if mime_type not in allowed_mime_types:
+                res = self.critical("process:smtp", "File not supported: {}".format(file_path)) * res
+                self.addFailedUP(up)
+                continue
+            
+            with open(file_path, "rb") as file:
+                upload_url = f"https://graph.facebook.com/v17.0/{self.phoneNumberID.strip()}/media"
+                upload_headers = {
+                    "Authorization": "Bearer " + self.accessToken.strip()
+                }
+                files = {"file": (file_path, file, mime_type)}
+                upload_data = {"messaging_product": "whatsapp", "type": mime_type}
+                
+                upload_response = requests.post(upload_url, files=files, data=upload_data, headers=upload_headers)
+                upload_result = upload_response.json()
+                
+                if "id" not in upload_result:
+                    res = self.critical("process:smtp", "Error uploading: {}".format(upload_result)) * res
+                    self.addFailedUP(up)
+                    continue
+                
+                # Determinar el tipo de archivo
+                if "image" in mime_type:
+                    media_type = "image"
+                elif "video" in mime_type:
+                    media_type = "video"
+                elif "audio" in mime_type:
+                    media_type = "audio"
+                else:
+                    media_type = "document"
+                
+                # Enviar archivo
+                file_id = upload_result["id"]
+                file_data = {
+                    "messaging_product": "whatsapp",
+                    "recipient_type": "individual",
+                    "to": self.msgTo.strip(),
+                    "type": media_type,
+                    media_type: {"id": file_id}
+                }
+                
+                file_response = requests.post(url, data=json.dumps(file_data), headers=headers)
+                if "error" in file_response.json():
+                    res = self.critical("process:smtp", "Error sending: {}".format(file_response.json()["error"]["message"])) * res
+                    self.addFailedUP(up)
+    
+    except Exception as e:
+        return self.critical("error", "Error: {}".format(e))
+    
+    return res
+
+</code>
+     <onlySendIfInput type="string"></onlySendIfInput>
+     <sendFiles type="string"></sendFiles>
+     <phoneNumberID encrypted="1" type="string">AwWPNRF/zZPZ8BhjXbpr7LFXVS35uQC5tpVV</phoneNumberID>
+     <accessToken encrypted="1" type="string">AwUxi6/Bcy1nTqbd4wTVUg/p65NHB74HCCvr</accessToken>
+     <msgTo type="string"></msgTo>
+     <body type="string">Hi there! Here is your MASV PackageLink:
+
+&lt;?py
+for c in self.getConnectors():
+    for p in c.getUniversalPaths():
+      print (p.getPrivateData('packageLink'))
+?></body>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="ec3af1e0-51e8-4f81-9676-14cf1101507a" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="260a322d-bab9-48f7-b8e8-d077f185db73" specialType="order" type="output"/>
+     <input name="input" id="291a192c-2646-4d86-8197-5d077374088c" type="input">
+      <linkedTo>55b1eef8-b655-4cb7-984a-626fede64f51</linkedTo>
+     </input>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-508.21,-788.078</ScenePos>
+     <Size type="size2">1287.1,716.19</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Any Previous Workflow</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff864f3e</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-493.862,-747.29</ScenePos>
+     <Size type="size2">1198,37</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">The result of any workflow can feed the MASV node: it can be from  a simple 'Folder' node, to a whole VFX Pull</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">918.491,-718.029</ScenePos>
+     <Size type="size2">372,95</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">- Configure each MASV node with:
+    - Your teamID
+    - Your apiKey</Text>
+     <TextColor type="color">#ff031119</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">822.408,-784.958</ScenePos>
+     <Size type="size2">583.452,731.65</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">MASV Packages</Text>
+     <TextColor type="color">#ff031119</TextColor>
+     <BackgroundColor type="color">#fff5f5f5</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">841.134,-448</ScenePos>
+     <Size type="size2">478,66</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">- Name your Package and add a Description
+      --> Dynamic tokens can be used</Text>
+     <TextColor type="color">#ff031119</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">841.134,-378.88</ScenePos>
+     <Size type="size2">524,66</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">- Add email accounts to receive the PackageLink 
+	</Text>
+     <TextColor type="color">#ff031119</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">841.134,-331.36</ScenePos>
+     <Size type="size2">531,66</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">- Activate the toggle 'PackageLink' to put them in 
+   the output connector</Text>
+     <TextColor type="color">#ff031119</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">1441.55,-373.981</ScenePos>
+     <Size type="size2">405.563,299.122</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Share Package Link</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff3e3172</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1460.85,-311.834</ScenePos>
+     <Size type="size2">378,66</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Message to your internal team 
+with the 'PackageLink' private data</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">8</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

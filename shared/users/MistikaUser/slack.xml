@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Slack>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#000000</color>
+    <message>List of Input Files:
+&lt;?py
+for c in self.getConnectors():
+  for p in c.getUniversalPaths():
+    print (p.toString())
+?&gt;</message>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Slack</objectName>
+    <webHook/>
+  </Slack>
+</nodeCommonRoot>

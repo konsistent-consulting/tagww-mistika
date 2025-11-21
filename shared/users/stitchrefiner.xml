@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <StitchRefiner>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#732b2b</color>
+    <frameOffset>0</frameOffset>
+    <matchColor>0</matchColor>
+    <matchGeometry>0</matchGeometry>
+    <nodeLocked>false</nodeLocked>
+    <objectName>StitchRefiner</objectName>
+  </StitchRefiner>
+</nodeCommonRoot>

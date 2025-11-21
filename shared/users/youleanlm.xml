@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+    <YouLeanLM>
+        <color>#78b4b4</color>
+        <preset></preset>
+        <customPreset></customPreset>
+        <channelConfig></channelConfig>
+        <generateReport>true</generateReport>
+        <normalize>false</normalize>
+        <Reporting>
+            <reportType></reportType>
+            <reportFolderPath></reportFolderPath>
+        </Reporting>
+        <Normalize>
+            <normalizeFolderPath></normalizeFolderPath>
+        </Normalize>
+        <QC>
+            <IntegratedMin>-70</IntegratedMin>
+            <IntegratedMax>30</IntegratedMax>
+            <LoudnessRangeMin>0</LoudnessRangeMin>
+            <LoudnessRangeMax>100</LoudnessRangeMax>
+            <IntegratedDialMin>-70</IntegratedDialMin>
+            <IntegratedDialMax>30</IntegratedDialMax>
+            <LoudnessRangeDialMin>0</LoudnessRangeDialMin>
+            <LoudnessRangeDialMax>100</LoudnessRangeDialMax>
+            <SpeechContentMin>0</SpeechContentMin>
+            <SpeechContentMax>100</SpeechContentMax>
+            <AverageDynamicsMin>0</AverageDynamicsMin>
+            <AverageDynamicsMax>100</AverageDynamicsMax>
+            <MomentaryMaxMin>-70</MomentaryMaxMin>
+            <MomentaryMaxMax>30</MomentaryMaxMax>
+            <ShortTermMaxMin>-70</ShortTermMaxMin>
+            <ShortTermMaxMax>30</ShortTermMaxMax>
+            <TruePeakMaxMin>-70</TruePeakMaxMin>
+            <TruePeakMaxMax>30</TruePeakMaxMax>
+        </QC>
+        <Config>
+            <threads>1</threads>
+            <binPath></binPath>
+        </Config>
+    </YouLeanLM>
+</nodeCommonRoot>

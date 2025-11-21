@@ -1,0 +1,2872 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="Basic Transcode - Remote" nameConvention="[path][baseName][.frame][.ext]">
+  <view scale="0.401878" x="1012.75" y="-44.7897"/>
+  <nodes>
+   <node type="task" class="DNxHD">
+    <properties>
+     <objectName type="string">DNxHD</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">403.2,-429.12</pos>
+     <schemaName type="string">dnxhd</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">MXFVC3.MOVIE_MXF_VC3_36</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">36</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="ccc6dd95-aa8a-465b-8224-b6a10f43fab4" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="eb629cdc-7e73-4e3f-8ecb-e2f0a0fbe6d5" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="f6093400-5549-4062-893d-d813edf4c0d4" name="VideoOut" label="AV Out"/>
+     <AudioOut type="output" id="9d900c38-a478-44c1-b569-69d067b227ba" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="7d9faa12-8703-4947-a0c7-3f90b22f1062" name="VideoIn" label="AV In"/>
+     <AudioIn type="input" id="ebc5ead4-7c15-4ff1-af68-41d2f6ccbe4e" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+   <node type="task" class="DNxHDOpAtom">
+    <properties>
+     <objectName type="string">DNxHDOpAtom</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">442.08,-303.84</pos>
+     <schemaName type="string">dnxhdopatom</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">MXFVC3.MOVIE_MXF_VC3_36</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="8d32fdb3-7033-4832-a8ee-688537d7ed15" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="7bd8fcdf-bf96-4b25-af94-a8a133f6dbba" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="a5611b8b-ef42-4e0e-9897-88e159f973c5" name="VideoOut" label="AV Out"/>
+     <AudioOut type="output" id="8e58abff-9026-4dcb-ab1e-e55a96a2bd25" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="36ece266-de17-4254-accc-8ce16b82e5f5" name="VideoIn" label="AV In"/>
+     <AudioIn type="input" id="b39d0d29-b13b-429c-8de1-cd6b4fa77405" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+   <node type="task" class="DNxHR">
+    <properties>
+     <objectName type="string">DNxHR</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">489.6,-171.36</pos>
+     <schemaName type="string">dnxhr</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MXF.MOVIE_MXF_DNXHRHQ</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="af55a3ff-28d0-4703-a58e-4f2e4fc6151c" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="be8f55b8-d55b-44c1-9c8d-80b47fa3e8f4" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="04a07dd6-744a-4fdb-a599-a11588f6324d" name="VideoOut" label="AV Out"/>
+     <AudioOut type="output" id="b7398515-60e6-43f1-a6c3-cafeac6ebaa3" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="b3f9b239-bd8e-4f00-9d9d-1ad149925eee" name="VideoIn" label="AV In"/>
+     <AudioIn type="input" id="6c77dd5d-ebac-4b70-a6f1-bfca1f74b8f5" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+   <node type="task" class="NVidiaH264">
+    <properties>
+     <objectName type="string">NVidiaH264</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">730.08,-426.24</pos>
+     <schemaName type="string">nvidiah264</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_NVidia.MP4_NV_H264_420_QP</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">0</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="41c53fb2-9d65-4124-bbe6-451fbd17beaf" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="e7d96bbb-ed20-4b95-af93-24c61aee6cf8" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="ab0a3af0-8fcb-4b38-a5bd-41d177919f8a" name="VideoOut" label="AV Out"/>
+     <AudioOut type="output" id="cdd1cb5b-f845-4620-b82d-61707b7c8f27" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="f0377eac-b4f7-4009-9500-1ba7d9216675" name="VideoIn" label="AV In"/>
+     <AudioIn type="input" id="69ed62e7-10eb-4d18-bff2-a8cd03ea67cf" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+   <node type="task" class="NVidiaH265">
+    <properties>
+     <objectName type="string">NVidiaH265</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">775.008,-302.976</pos>
+     <schemaName type="string">nvidiah265</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_NVidia.MP4_NV_HEVC_8B_420_QP</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">0</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="eae72911-835a-4721-81fe-3fd1219ea78c" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="53f93d2f-53b7-42b8-b193-fa0785c4c7bf" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="41a5e7ae-5232-43c2-a98a-de86b3b074a6" name="VideoOut" label="AV Out"/>
+     <AudioOut type="output" id="c403ef7d-628f-4c89-9b11-6fce9228211e" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="f4b38e73-f6cd-46da-b04f-85a4439674c2" name="VideoIn" label="AV In"/>
+     <AudioIn type="input" id="a9461d40-f04b-412d-a319-5d748cb0ec6c" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+   <node type="task" class="ProRes">
+    <properties>
+     <objectName type="string">ProRes</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">527.04,-37.44</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="bc5b03c4-b772-4f57-b28b-729f57a7c8f3" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="1214751c-4110-4ff8-8b74-4bef444cbee8" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="cbaa2faa-34a7-4c0e-a6d5-a1b6cd25eed9" name="VideoOut" label="AV Out"/>
+     <AudioOut type="output" id="203c27e3-2b3f-403d-af2f-621b0e179729" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="bd771b3a-e8cb-40da-95ea-a1005f471520" name="VideoIn" label="AV In"/>
+     <AudioIn type="input" id="d1bc4c88-4bb9-4040-b2a9-c5036fb5d5f4" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+   <node type="task" class="XAVC">
+    <properties>
+     <objectName type="string">XAVC</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">815.04,-169.92</pos>
+     <schemaName type="string">xavc</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">XAVC.MOVIE_MXF_XAVC_4K_CBG_300</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="59731ec8-d710-45c2-a3dd-d490e6327d5c" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="ff973ddd-7223-4892-9520-61983e360293" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="d8e82b5c-57a0-4e14-9944-77f53cf155ee" name="VideoOut" label="AV Out"/>
+     <AudioOut type="output" id="a17dbd5f-195a-4cb7-aa62-8f03596bc7ed" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="065c0189-3fcc-4a49-bab0-45e5e1b98af6" name="VideoIn" label="AV In"/>
+     <AudioIn type="input" id="dfa6d624-45a9-4396-b0f2-a0621989f393" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+   <node type="task" class="XDCAM">
+    <properties>
+     <objectName type="string">XDCAM</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">840.96,-36</pos>
+     <schemaName type="string">xdcam</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">XAVCMC.MOVIE_MXF_XDCAM_HD</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="fddc2eaf-9137-4f61-930e-c4206a925a4a" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="c6d0117b-d5b0-412d-8559-97475e5e1bea" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="c4104f10-8c0e-4269-b287-2b9416e6f43f" name="VideoOut" label="AV Out"/>
+     <AudioOut type="output" id="92cba959-9f6f-4482-b8e0-e121860479cc" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="69bdff82-f9b2-4942-bfb1-922cac2c6c9f" name="VideoIn" label="AV In"/>
+     <AudioIn type="input" id="3e2fd55e-a709-4c17-86fb-e4d961ed1274" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+   <node type="input" class="AsperaClient">
+    <properties>
+     <objectName type="string">AsperaClient</objectName>
+     <color type="color">#74207b</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-523.584,-428.544</pos>
+     <schemaName type="string">asperaclient</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <certificate type="string"></certificate>
+     <user type="string">aspera</user>
+     <pwd type="string" encrypted="1">AwV0DLg8OBWj4GideOzlA8oPy61yviOalbZ8LrlW1aFjD+Pn4mvrVllsBStE</pwd>
+     <tcpPort type="ushort">22</tcpPort>
+     <udpPort type="ushort">33001</udpPort>
+     <targetRate type="qulonglong">100</targetRate>
+     <retries type="int">3</retries>
+     <localFilePath type="string">/MATERIAL/output</localFilePath>
+     <remoteFilePath type="string">ascp://demo.asperasoft.com/Upload</remoteFilePath>
+     <renameFilesList type="string"></renameFilesList>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="92979a30-1008-4463-a37c-b6726e29fd02" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="ce3168f1-54ae-4a88-8d8c-93b4b8cb07b3" name="rankTo" specialType="order"/>
+     <To type="output" id="44af3cb0-18ff-45b3-bea8-24bf62e3afc1" name="To"/>
+    </connections>
+   </node>
+   <node type="input" class="DropboxIn">
+    <properties>
+     <objectName type="string">DropboxIn</objectName>
+     <color type="color">#0061fe</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-480.384,-307.584</pos>
+     <schemaName type="string">dropboxin</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+from Mistika.classes import CuniversalPath&#xd;
+from dbxTools import dbxTools&#xd;
+&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Dropbox In")&#xd;
+    self.color=QColor(0x0061fe)&#xd;
+    self.addConnector("out",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addEncryptedProperty("accessToken")&#xd;
+    self.addProperty("dropboxFilePath", "Leave empty to download all the Dropbox files")&#xd;
+    self.addProperty("localPath")&#xd;
+    self.addProperty("areYouSure")&#xd;
+    self.addProperty("deleteAfterDownload")&#xd;
+    self.setPropertyVisible("areYouSure", False)&#xd;
+    self.addProperty("objectName")&#xd;
+    self.bypassSupported=True&#xd;
+    self.setSupportedTypes(self.NODETYPE_INPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    accessToken = self.accessToken.strip()&#xd;
+    localPath = self.evaluate(self.localPath).strip()&#xd;
+    areYouSure = self.areYouSure&#xd;
+    if localPath == "":&#xd;
+        res = self.critical("dropboxIn:path", "'localPath' can not be empty") and res&#xd;
+    if accessToken == "":&#xd;
+        res = self.critical("dropboxIn:accessToken", "'accessToken' can not be empty") and res&#xd;
+    if not areYouSure:&#xd;
+        res = self.critical("dropboxIn:notSure", "can not delete files from Dropbox after download if not sure") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+&#xd;
+    dropboxFilePath = self.evaluate(self.dropboxFilePath).strip()&#xd;
+    &#xd;
+    if not dropboxFilePath.startswith("/") and not dropboxFilePath == "":&#xd;
+        dropboxFilePath = "/" + dropboxFilePath&#xd;
+    accessToken = self.accessToken.strip()&#xd;
+    &#xd;
+    localPath = self.evaluate(self.localPath).strip()&#xd;
+    deleteAfterDownload = self.deleteAfterDownload&#xd;
+&#xd;
+    dbx = dbxTools(self)&#xd;
+&#xd;
+    if not dbx.connect(accessToken):&#xd;
+        return False&#xd;
+ &#xd;
+    fileList = dbx.downloadPath(dropboxFilePath, localPath, deleteAfterDownload)[1]&#xd;
+    up = CuniversalPath()&#xd;
+    upList= up.buildUPfromFileList(fileList, self.getNameConvention(), localPath)&#xd;
+    out.setUniversalPaths(upList)&#xd;
+&#xd;
+    return res&#xd;
+&#xd;
+def onPropertyUpdated(self, name):&#xd;
+    try:&#xd;
+        if name == "deleteAfterDownload":&#xd;
+            self.setPropertyVisible("areYouSure", self.deleteAfterDownload)&#xd;
+            self.areYouSure = not self.deleteAfterDownload&#xd;
+    except AttributeError:&#xd;
+        pass</code>
+     <accessToken type="string" encrypted="1">AwUhm7/RYz13XrbN8xTFQh/5+4NXF64XGDv7</accessToken>
+     <dropboxFilePath type="string">Leave empty to download all the Dropbox files</dropboxFilePath>
+     <localPath type="string"></localPath>
+     <areYouSure type="bool">true</areYouSure>
+     <deleteAfterDownload type="string"></deleteAfterDownload>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="3dd9dcc2-9921-425c-ab64-6cd210c023cc" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="2fa113ce-22bd-43ba-92a6-a47b19925bf9" name="rankTo" specialType="order"/>
+     <out type="output" id="9b397734-c6c8-42fc-b5fe-ecf843070020" name="out"/>
+    </connections>
+   </node>
+   <node type="input" class="FTP">
+    <properties>
+     <objectName type="string">FTP</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-202.176,-432</pos>
+     <schemaName type="string">ftp</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <protocol type="string">ftp</protocol>
+     <url type="string"></url>
+     <user type="string"></user>
+     <authType type="int">0</authType>
+     <keyFile type="string"></keyFile>
+     <keyPassPhrase type="string" encrypted="1">AwVW7MimFEoAKcG6hGOyNWiOjPQgYNlgb0yM</keyPassPhrase>
+     <pwd type="string" encrypted="1">AwUyiKzCcC5kTaXe4AfWUQzq6JBEBL0ECyjo</pwd>
+     <port type="ushort">21</port>
+     <localPath type="string"></localPath>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <newFilesOnly type="bool">false</newFilesOnly>
+     <deleteAfterTransfer type="bool">false</deleteAfterTransfer>
+     <areYouSure type="bool">false</areYouSure>
+     <renameFilesList type="string"></renameFilesList>
+     <maintainPadding type="bool">true</maintainPadding>
+     <ignoreStandAloneSidecars type="bool">false</ignoreStandAloneSidecars>
+     <retries type="int">10</retries>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="2bc76d14-f487-4a90-9a33-38ac8e1ac6b6" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="96df705a-2057-498b-8cb6-6359725138f8" name="rankTo" specialType="order"/>
+     <To type="output" id="440e2f0c-9608-44fa-b447-51db6a9d4a64" name="To"/>
+    </connections>
+   </node>
+   <node type="input" class="GoogleDriveIn">
+    <properties>
+     <objectName type="string">GoogleDriveIn</objectName>
+     <color type="color">#fbbc04</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-160.704,-307.584</pos>
+     <schemaName type="string">googledrivein</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+from Mistika.classes import CuniversalPath&#xd;
+from googleAuth import GoogleAuth&#xd;
+import Mistika&#xd;
+import os&#xd;
+import io&#xd;
+from googleapiclient.http import MediaIoBaseDownload&#xd;
+import json&#xd;
+&#xd;
+class GoogleDriveInTools:&#xd;
+    def __init__(self, node):&#xd;
+        self.m_node = node&#xd;
+&#xd;
+    def listContentsRecur(self, folderId, drive):&#xd;
+        recuFiles = []&#xd;
+        for item in self.listContents(folderId, drive):&#xd;
+            if item["mimeType"] == "application/vnd.google-apps.folder":&#xd;
+                sublist = self.listContentsRecur(item["id"], drive)&#xd;
+                if sublist is not []:&#xd;
+                    for subitem in sublist:             &#xd;
+                        subitem["path"] = item["name"] + "/" + subitem["path"]                &#xd;
+                        recuFiles.append(subitem)&#xd;
+            else:&#xd;
+                #print("Item: ", item)&#xd;
+                recuFiles.append(item)&#xd;
+        return recuFiles&#xd;
+&#xd;
+    def listContents(self, folderId, drive):&#xd;
+        query = f"parents = '{folderId}' and trashed = false"&#xd;
+        try:&#xd;
+            response = drive.files().list(q=query).execute()&#xd;
+        except Exception as e:&#xd;
+            return self.m_node.critical("GoogleDriveOut:process:error", e)&#xd;
+                    &#xd;
+        files = response.get('files')&#xd;
+        nextPageToken = response.get('nextPageToken')&#xd;
+&#xd;
+        while nextPageToken:&#xd;
+            response = drive.files().list(q=query, pageToken=nextPageToken).execute()&#xd;
+            files.extend(response.get('files'))&#xd;
+            nextPageToken = response.get('nextPageToken')&#xd;
+&#xd;
+        for item in files:&#xd;
+            item["path"] = ""&#xd;
+        &#xd;
+        return files&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Google Drive In")&#xd;
+    self.color=QColor(0xfbbc04)&#xd;
+    self.addConnector("out",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("clientId")&#xd;
+    self.addEncryptedProperty("clientSecret")&#xd;
+    self.addProperty("folderId")&#xd;
+    self.addProperty("localPath")&#xd;
+    self.addProperty("recursive")&#xd;
+    self.addProperty("areYouSure")&#xd;
+    self.addProperty("deleteAfterDownload")&#xd;
+    self.setPropertyVisible("areYouSure", False)&#xd;
+    self.addProperty("objectName")&#xd;
+    self.addProperty("credentialsString", "")  &#xd;
+    self.addProperty("_credentialsDict", {})&#xd;
+    self.bypassSupported=True&#xd;
+    self.setSupportedTypes(self.NODETYPE_INPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.addActionToContextMenu("Authenticate")&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    &#xd;
+    if self.clientId == "":&#xd;
+       res = self.critical("GoogleDriveOut:clientId", "'clientI' can not be empty") and res&#xd;
+    if self.clientSecret == "":&#xd;
+       res = self.critical("GoogleDriveOut:clientSecret", "'clientSecret' can not be empty") and res&#xd;
+    if self.folderId == "":&#xd;
+       res = self.critical("GoogleDriveOut:folderId", "'folderId' can not be empty") and res&#xd;
+    if len(self.localPath) == 0:&#xd;
+        res=self.critical("GoogleDriveOut:localPath:naming","localpath can't be empty") and res&#xd;
+    if len(self.localPath)>0 and not self.localPath.endswith("/"):&#xd;
+        res=self.critical("GoogleDriveOut:localPath:naming","localpath must end with '/' character") and res&#xd;
+    if not os.path.isdir(self.localPath):&#xd;
+        res=self.critical("GoogleDriveOut:localPath:notFound","localpath must be a real path:'{}'".format(self.localPath)) and res&#xd;
+    if not self.areYouSure:&#xd;
+        res = self.critical("dropboxIn:notSure", "can not delete files from Google Drive after download if not sure") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+ &#xd;
+    localPath = self.evaluate(self.localPath).strip()&#xd;
+    folderId = self.folderId.strip()&#xd;
+&#xd;
+    tools = GoogleDriveInTools(self)&#xd;
+&#xd;
+    self._credentialsDict = {} if not self.credentialsString else json.loads(self.credentialsString)&#xd;
+    goo = GoogleAuth(self, "https://www.googleapis.com/auth/drive", "drive", "v3", self._credentialsDict)&#xd;
+    drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)&#xd;
+    self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)&#xd;
+&#xd;
+    if drive == "TimeOut": &#xd;
+        return self.critical("GoogleDriveIn:process:authCanceled", "Authentication timeout")&#xd;
+    if self.credentialsString == None or self.credentialsString == "{}": &#xd;
+        return self.critical("GoogleDriveIn:process:authCanceled", "Authentication was rejected") &#xd;
+    &#xd;
+    #--------------------------------------------------------------------------------------------&#xd;
+    if self.recursive:&#xd;
+        files = tools.listContentsRecur(folderId, drive)&#xd;
+    else:&#xd;
+        files = tools.listContents(folderId, drive)&#xd;
+    if not files:&#xd;
+        return False&#xd;
+    #---------------------------------------------------------------------------------------------&#xd;
+    #print(files)&#xd;
+&#xd;
+    idList = [d["id"] for d in files if d["mimeType"] != "application/vnd.google-apps.folder"]&#xd;
+    nameList = [d["path"] + d["name"] for d in files if d["mimeType"] != "application/vnd.google-apps.folder"]&#xd;
+    fileList = [localPath + d["path"] + d["name"] for d in files if d["mimeType"] != "application/vnd.google-apps.folder"]&#xd;
+    pathList = [localPath + d["path"] for d in files if d["mimeType"] != "application/vnd.google-apps.folder"]&#xd;
+    #print(nameList)&#xd;
+    #print(fileList)&#xd;
+&#xd;
+    for fileId, fileName, path in zip(idList, nameList, pathList):&#xd;
+        if not os.path.isdir(path):&#xd;
+            os.makedirs(path)&#xd;
+&#xd;
+        request = drive.files().get_media(fileId = fileId)&#xd;
+&#xd;
+        fh = io.BytesIO()&#xd;
+        downloader = MediaIoBaseDownload(fd=fh, request=request)&#xd;
+        done = False&#xd;
+&#xd;
+        while not done:&#xd;
+            status, done = downloader.next_chunk()&#xd;
+            #print("Download progress {0}".format(status.progress()*100))&#xd;
+        &#xd;
+        fh.seek(0)&#xd;
+&#xd;
+        with open(os.path.join(localPath, fileName), "wb") as f:&#xd;
+            f.write(fh.read())&#xd;
+            f.close()&#xd;
+&#xd;
+        if self.areYouSure and self.deleteAfterDownload:&#xd;
+            try:&#xd;
+                # Delete the file&#xd;
+                drive.files().delete(fileId=fileId).execute()&#xd;
+                #print(f"File with ID {fileId} deleted successfully.")&#xd;
+            except Exception as e:&#xd;
+                self.warning("googleDriveIn:notDel", "Error deleting file {} from Google Drive".format(fileName))&#xd;
+&#xd;
+    up = CuniversalPath()&#xd;
+    upList= up.buildUPfromFileList(fileList, self.getNameConvention(), localPath)&#xd;
+    out.setUniversalPaths(upList)&#xd;
+    return res&#xd;
+&#xd;
+def onPropertyUpdated(self, name):&#xd;
+    try:&#xd;
+        if name == "deleteAfterDownload":&#xd;
+            self.setPropertyVisible("areYouSure", self.deleteAfterDownload)&#xd;
+            self.areYouSure = not self.deleteAfterDownload&#xd;
+    except AttributeError:&#xd;
+        pass&#xd;
+&#xd;
+def menuAction(self,name):&#xd;
+    print ("menuAction",name)&#xd;
+    if name=="Authenticate":&#xd;
+        self.credentialsString = ""&#xd;
+        self._credentialsDict = {}&#xd;
+        goo = GoogleAuth(self, "https://www.googleapis.com/auth/drive", "drive", "v3", self._credentialsDict)&#xd;
+        drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)&#xd;
+        self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)&#xd;
+&#xd;
+        if drive == "TimeOut": &#xd;
+            return self.critical("GoogleDriveIn:process:authCanceled", "Authentication timeout")&#xd;
+        if self.credentialsString == None or self.credentialsString == "{}": &#xd;
+            return self.critical("GoogleDriveIn:process:authCanceled", "Authentication was rejected") </code>
+     <clientId type="string"></clientId>
+     <clientSecret type="string" encrypted="1">AwVj2f2TIX81HPSPsVaHAF27ucEVVexVWnm5</clientSecret>
+     <folderId type="string"></folderId>
+     <localPath type="string"></localPath>
+     <recursive type="string"></recursive>
+     <areYouSure type="bool">true</areYouSure>
+     <deleteAfterDownload type="string"></deleteAfterDownload>
+     <credentialsString type="string"></credentialsString>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="3a520659-2e2c-4b7e-90dc-51904f051204" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="e0eb4310-8bf8-4fa7-8cf6-d9c7dbc0ce7f" name="rankTo" specialType="order"/>
+     <out type="output" id="7bd57329-4cb4-4cec-9d38-b713022e1fd7" name="out"/>
+    </connections>
+   </node>
+   <node type="input" class="ObjectMatrixIn">
+    <properties>
+     <objectName type="string">ObjectMatrixIn</objectName>
+     <color type="color">#00bcc2</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-419.904,-186.624</pos>
+     <schemaName type="string">objectmatrixin</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+from Mistika.classes import CuniversalPath&#xd;
+from wfAWS import wfAWS&#xd;
+&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Object Matrix In")&#xd;
+    self.color=QColor(0x00bcc2)&#xd;
+    self.addConnector("out",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("endpointUrl")&#xd;
+    self.addProperty("bucket")&#xd;
+    self.addProperty("objectPrefix", "Leave empty to download the bucket completely")&#xd;
+    self.addEncryptedProperty("key")&#xd;
+    self.addEncryptedProperty("secret")&#xd;
+    self.addProperty("localPath")&#xd;
+    self.addProperty("areYouSure")&#xd;
+    self.addProperty("deleteAfterDownload")&#xd;
+    self.setPropertyVisible("areYouSure", False)&#xd;
+    self.addProperty("objectName")&#xd;
+    self.bypassSupported=True&#xd;
+    self.setSupportedTypes(self.NODETYPE_INPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    bucket = self.evaluate(self.bucket).strip()&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    localPath = self.evaluate(self.localPath).strip()&#xd;
+    areYouSure = self.areYouSure&#xd;
+    if localPath == "":&#xd;
+        res = self.critical("ObjectMatrixIn:path", "'path' can not be empty") and res&#xd;
+    if key == "":&#xd;
+        res = self.critical("ObjectMatrixIn:key", "'key' can not be empty") and res&#xd;
+    if secret == "":&#xd;
+        res = self.critical("ObjectMatrixIn:secret", "'secret' can not be empty") and res&#xd;
+    if bucket=="":&#xd;
+        res=self.critical("ObjectMatrixIn:emptyBucket","'bucket' can not be empty") and res&#xd;
+    if not areYouSure:&#xd;
+        res = self.critical("ObjectMatrixIn:notSure", "can not delete files from bucket after download if not sure") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+    endpointUrl = self.endpointUrl.strip()&#xd;
+    if endpointUrl == "": endpointUrl = None&#xd;
+&#xd;
+    bucket=self.evaluate(self.bucket).strip()&#xd;
+    objectPrefix = self.evaluate(self.objectPrefix).strip()&#xd;
+    if objectPrefix == "Leave empty to download the bucket completely":&#xd;
+        objectPrefix = ""&#xd;
+    if objectPrefix.startswith("/"):&#xd;
+        objectPrefix = objectPrefix[1:]&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    localPath = self.evaluate(self.localPath).strip()&#xd;
+    deleteAfterDownload = self.deleteAfterDownload&#xd;
+    aws = wfAWS(self)&#xd;
+&#xd;
+    if not aws.connect(key = key, secret = secret, url = endpointUrl) or not aws.checkIfBucketExists(bucket):&#xd;
+        return False&#xd;
+&#xd;
+    [res, fileList, metadataList] = aws.downloadPath(objectPrefix, localPath, deleteAfterDownload)&#xd;
+    up = CuniversalPath()&#xd;
+    upList= up.buildUPfromFileList(fileList, self.getNameConvention(), localPath)&#xd;
+    aws.addMetadataToUp(upList, metadataList)&#xd;
+    out.setUniversalPaths(upList)&#xd;
+&#xd;
+    return res&#xd;
+&#xd;
+def onPropertyUpdated(self, name):&#xd;
+    try:&#xd;
+        if name == "deleteAfterDownload":&#xd;
+            self.setPropertyVisible("areYouSure", self.deleteAfterDownload)&#xd;
+            self.areYouSure = not self.deleteAfterDownload&#xd;
+    except AttributeError:&#xd;
+        pass&#xd;
+</code>
+     <endpointUrl type="string"></endpointUrl>
+     <bucket type="string"></bucket>
+     <objectPrefix type="string">Leave empty to download the bucket completely</objectPrefix>
+     <key type="string" encrypted="1">AwU5g6fJeyVvRq7V6wzdWgfh45tPD7YPACPj</key>
+     <secret type="string" encrypted="1">AwWpEzdZ67X/1j5Fe5xNypdxcwvfnyafkLNz</secret>
+     <localPath type="string"></localPath>
+     <areYouSure type="bool">true</areYouSure>
+     <deleteAfterDownload type="string"></deleteAfterDownload>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="d4263ee7-7fcc-490b-ba46-9e6d57417b0a" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="67c4f9d1-f84b-497f-823e-53a435fe48fb" name="rankTo" specialType="order"/>
+     <out type="output" id="63fafa24-e6ef-4e15-9780-8a38f1bc1794" name="out"/>
+    </connections>
+   </node>
+   <node type="input" class="S3In">
+    <properties>
+     <objectName type="string">S3In</objectName>
+     <color type="color">#e19900</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-117.504,-184.896</pos>
+     <schemaName type="string">s3in</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+from Mistika.classes import CuniversalPath&#xd;
+from wfAWS import wfAWS&#xd;
+&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("S3 In")&#xd;
+    self.color=QColor(0xe19900)&#xd;
+    self.addConnector("out",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("bucket")&#xd;
+    self.addProperty("objectPrefix", "Leave empty to download the bucket completely")&#xd;
+    self.addEncryptedProperty("key")&#xd;
+    self.addEncryptedProperty("secret")&#xd;
+    self.addProperty("localPath")&#xd;
+    self.addProperty("areYouSure")&#xd;
+    self.addProperty("deleteAfterDownload")&#xd;
+    self.setPropertyVisible("areYouSure", False)&#xd;
+    self.addProperty("objectName")&#xd;
+    self.bypassSupported=True&#xd;
+    self.setSupportedTypes(self.NODETYPE_INPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    bucket = self.evaluate(self.bucket).strip()&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    localPath = self.evaluate(self.localPath).strip()&#xd;
+    areYouSure = self.areYouSure&#xd;
+    if localPath == "":&#xd;
+        res = self.critical("s3Out:path", "'path' can not be empty") and res&#xd;
+    if key == "":&#xd;
+        res = self.critical("s3Out:key", "'key' can not be empty") and res&#xd;
+    if secret == "":&#xd;
+        res = self.critical("s3Out:secret", "'secret' can not be empty") and res&#xd;
+    if bucket=="":&#xd;
+        res=self.critical("s3in:emptyBucket","'bucket' can not be empty") and res&#xd;
+    if not areYouSure:&#xd;
+        res = self.critical("s3in:notSure", "can not delete files from bucket after download if not sure") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+&#xd;
+    bucket=self.evaluate(self.bucket).strip()&#xd;
+    objectPrefix = self.evaluate(self.objectPrefix).strip()&#xd;
+    if objectPrefix == "Leave empty to download the bucket completely":&#xd;
+       objectPrefix = ""&#xd;
+    if objectPrefix.startswith("/"):&#xd;
+        objectPrefix = objectPrefix[1:]&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    localPath = self.evaluate(self.localPath).strip()&#xd;
+    deleteAfterDownload = self.deleteAfterDownload&#xd;
+    aws = wfAWS(self)&#xd;
+&#xd;
+    if not aws.connect(key, secret) or not aws.checkIfBucketExists(bucket):&#xd;
+        return False&#xd;
+&#xd;
+    [res, fileList, metadataList] = aws.downloadPath(objectPrefix, localPath, deleteAfterDownload)&#xd;
+    up = CuniversalPath()&#xd;
+    upList= up.buildUPfromFileList(fileList, self.getNameConvention(), localPath)&#xd;
+    aws.addMetadataToUp(upList, metadataList)&#xd;
+    out.setUniversalPaths(upList)&#xd;
+&#xd;
+    return res&#xd;
+&#xd;
+def onPropertyUpdated(self, name):&#xd;
+    try:&#xd;
+        if name == "deleteAfterDownload":&#xd;
+            self.setPropertyVisible("areYouSure", self.deleteAfterDownload)&#xd;
+            self.areYouSure = not self.deleteAfterDownload&#xd;
+    except AttributeError:&#xd;
+        pass&#xd;
+</code>
+     <bucket type="string"></bucket>
+     <objectPrefix type="string">Leave empty to download the bucket completely</objectPrefix>
+     <key type="string" encrypted="1">AwUdp4PtXwFLYorxzyj5fiPFx79rK5IrJAfH</key>
+     <secret type="string" encrypted="1">AwVL8dW7CVcdNNynmX6vKHWTkek9fcR9clGR</secret>
+     <localPath type="string"></localPath>
+     <areYouSure type="bool">true</areYouSure>
+     <deleteAfterDownload type="string"></deleteAfterDownload>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="da15e759-f6d5-4287-a080-047d898a6233" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="8d95edc1-054c-4a0b-bd79-9ad62ed4fd64" name="rankTo" specialType="order"/>
+     <out type="output" id="7455dd68-6350-4526-921e-2a02280b0d70" name="out"/>
+    </connections>
+   </node>
+   <node type="output" class="AsperaClient">
+    <properties>
+     <objectName type="string">AsperaClient_2</objectName>
+     <color type="color">#74207b</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1302.6,-425.588</pos>
+     <schemaName type="string">asperaclient</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <certificate type="string"></certificate>
+     <user type="string">aspera</user>
+     <pwd type="string" encrypted="1">AwXcpBCUkL0LSMA10ERNq2KnYwXaFosyPR7UhhH+fQnLp0tPSsND/vHErYPs</pwd>
+     <tcpPort type="ushort">22</tcpPort>
+     <udpPort type="ushort">33001</udpPort>
+     <targetRate type="qulonglong">100</targetRate>
+     <retries type="int">3</retries>
+     <localFilePath type="string">/MATERIAL/output</localFilePath>
+     <remoteFilePath type="string">ascp://demo.asperasoft.com/Upload</remoteFilePath>
+     <renameFilesList type="string"></renameFilesList>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="d88b825f-81ce-4668-9348-3b8c17c86859" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="69367c72-4d64-423b-a8a4-62b86db01c8c" name="rankTo" specialType="order"/>
+     <File type="input" id="c9baef04-160c-4eb7-bf51-c0f4167a22eb" name="File"/>
+    </connections>
+   </node>
+   <node type="output" class="DropboxOut">
+    <properties>
+     <objectName type="string">DropboxOut</objectName>
+     <color type="color">#0061fe</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1330.25,-292.532</pos>
+     <schemaName type="string">dropboxout</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+import os&#xd;
+from dbxTools import dbxTools&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Dropbox Out") &#xd;
+    self.color=QColor(0x0061fe)&#xd;
+    self.addConnector("in", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("out", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addEncryptedProperty("accessToken")&#xd;
+    self.addProperty("objectName")&#xd;
+    self.bypassSupported = True&#xd;
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.setAcceptConnectors(True, "in")&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    accessToken = self.accessToken.strip()&#xd;
+    if accessToken == "":&#xd;
+        res = self.critical("dropboxOut:accessToken", "'accessToken' can not be empty") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        for c in inputs:&#xd;
+            for up in c.getUniversalPaths():&#xd;
+                out.addUniversalPath(up)&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+    accessToken = self.accessToken.strip()&#xd;
+    dbx = dbxTools(self)&#xd;
+&#xd;
+    if not dbx.connect(accessToken):&#xd;
+        return False&#xd;
+&#xd;
+    for c in inputs:&#xd;
+        for up in c.getUniversalPaths():&#xd;
+            files = up.getAllFiles()&#xd;
+            relPath = up.getRelPath()&#xd;
+            for f in files:&#xd;
+                if self.isCancelled():&#xd;
+                    return False&#xd;
+                name = "{}{}".format(relPath, os.path.basename(f))&#xd;
+                if not name.startswith("/"):&#xd;
+                    name = "/" + name&#xd;
+                res = dbx.uploadFile(f, name) and res&#xd;
+            out.addUniversalPath(up)&#xd;
+    return res</code>
+     <accessToken type="string" encrypted="1">AwVv1fGfLXM5EPiDvVqLDFG3tc0ZWeBZVnW1</accessToken>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="fad4552c-57c6-434a-8105-79b3c94eab08" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="6777ea85-edee-4fbf-b6ec-fb979e4bb327" name="rankTo" specialType="order"/>
+     <in type="input" id="c4ff50cc-5377-4d40-8fc7-bfa11b5f8f79" name="in"/>
+     <out type="output" id="80ad19e4-12b5-45f0-94be-79b3832aa4b7" name="out"/>
+    </connections>
+   </node>
+   <node type="output" class="Filemail">
+    <properties>
+     <objectName type="string">Filemail</objectName>
+     <color type="color">#ff4167</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1376.91,-154.292</pos>
+     <schemaName type="string">filemail</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+import Mistika&#xd;
+from Mistika.Qt import QColor&#xd;
+import re&#xd;
+import subprocess&#xd;
+import sys&#xd;
+&#xd;
+class Tools:&#xd;
+    def __init__(self, node):&#xd;
+        self.m_node = node&#xd;
+&#xd;
+    def getCliPath(self):&#xd;
+        if sys.platform == "win32":&#xd;
+            return Mistika.sgoPaths.apps() + "/bin/FilemailCli.exe"&#xd;
+        elif sys.platform == "darwin":&#xd;
+            return Mistika.sgoPaths.apps() + "/MacOS/FilemailCli"&#xd;
+        else:&#xd;
+            return Mistika.sgoPaths.apps() + "/bin/FilemailCli"&#xd;
+&#xd;
+    def send(self, pattern, listaArgs, osSymbol, f):&#xd;
+        process = subprocess.run([self.getCliPath()] + listaArgs + [osSymbol+"files", f], capture_output=True)&#xd;
+        processOut = process.stderr&#xd;
+                    &#xd;
+        match = pattern.search(processOut)&#xd;
+        if match:&#xd;
+            error_message = match.group(1).decode('utf-8')&#xd;
+            return self.m_node.critical("filemail:error", "Error: {}".format(error_message))&#xd;
+        return True&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Filemail") &#xd;
+    self.color=QColor(0xff4167)&#xd;
+    self.addConnector("in", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("out", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("username")&#xd;
+    self.addEncryptedProperty("password")&#xd;
+    self.addProperty("packFiles", False)&#xd;
+    self.addProperty("toMail")&#xd;
+    self.addProperty("subject")&#xd;
+    self.addProperty("message")&#xd;
+    self.addProperty("transferPassword")&#xd;
+    self.addProperty("notify", False)&#xd;
+    self.addProperty("confirmation", False)&#xd;
+    self.addProperty("days", 1)&#xd;
+    self.bypassSupported = True&#xd;
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.setAcceptConnectors(True, "in")&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        for c in inputs:&#xd;
+            for up in c.getUniversalPaths():&#xd;
+                out.addUniversalPath(up)&#xd;
+        return True&#xd;
+    res = True&#xd;
+    &#xd;
+    osSymbol = "--"&#xd;
+    if sys.platform == "win32":&#xd;
+        osSymbol = "/"&#xd;
+&#xd;
+    tools = Tools(self)&#xd;
+    listaArgs = []&#xd;
+    if self.username: listaArgs += [osSymbol+"username", self.username]      &#xd;
+    if self.password: listaArgs += [osSymbol+"userpassword", self.password]  &#xd;
+    if self.toMail: listaArgs += [osSymbol+"to", self.toMail]&#xd;
+    if self.subject: listaArgs += [osSymbol+"subject", self.subject]&#xd;
+    if self.message: listaArgs += [osSymbol+"message", self.message]&#xd;
+    if self.transferPassword: listaArgs += [osSymbol+"transferpassword", self.transferPassword]&#xd;
+    if self.notify: listaArgs += [osSymbol+"notify", "true"] &#xd;
+    else: listaArgs += [osSymbol+"notify", "false"] &#xd;
+    if self.confirmation: listaArgs += [osSymbol+"confirmation", "true"]&#xd;
+    else: listaArgs += [osSymbol+"confirmation", "false"]&#xd;
+    listaArgs += [osSymbol+"days", str(self.days)]&#xd;
+    #print(listaArgs)&#xd;
+&#xd;
+    pattern = re.compile(rb'"errormessage": "([^"]+)"')&#xd;
+    fileList = ""&#xd;
+    upList = []&#xd;
+    for c in inputs:&#xd;
+        for up in c.getUniversalPaths():&#xd;
+            files = up.getAllFiles()&#xd;
+            for f in files:&#xd;
+                if self.isCancelled():&#xd;
+                    return False      &#xd;
+                #enviar&#xd;
+                if sys.platform == "win32":&#xd;
+                    f = f.replace("/", "\\")&#xd;
+                if not self.packFiles:&#xd;
+                    sent = tools.send(pattern, listaArgs, osSymbol, f)&#xd;
+                    if not sent:&#xd;
+                        self.addFailedUP(up)&#xd;
+                    res = sent and res&#xd;
+                else:&#xd;
+                    fileList += "{},".format(f)&#xd;
+                    upList.append(up)&#xd;
+            out.addUniversalPath(up)&#xd;
+&#xd;
+    if self.packFiles:&#xd;
+        fileList = fileList.strip(",")&#xd;
+        res = tools.send(pattern, listaArgs, osSymbol, fileList) and res&#xd;
+        if not res:&#xd;
+            for upp in upList:&#xd;
+                self.addFailedUP(upp)&#xd;
+    return res</code>
+     <username type="string"></username>
+     <password type="string" encrypted="1">AwVQ6s6gEkwGL8e8gmW0M26IivImZt9maUqK</password>
+     <packFiles type="bool">false</packFiles>
+     <toMail type="string"></toMail>
+     <subject type="string"></subject>
+     <message type="string"></message>
+     <transferPassword type="string"></transferPassword>
+     <notify type="bool">false</notify>
+     <confirmation type="bool">false</confirmation>
+     <days type="int">1</days>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="5ffb2fd1-59c8-4db0-8194-effa89b0a0b5" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="50e7b610-4b4b-43b6-be22-085f4d27ff5b" name="rankTo" specialType="order"/>
+     <in type="input" id="eff36f3e-3619-4d51-af17-90cad141c35f" name="in"/>
+     <out type="output" id="f574c8a7-42d4-4f96-803b-34dced5533ba" name="out"/>
+    </connections>
+   </node>
+   <node type="output" class="FrameIO">
+    <properties>
+     <objectName type="string">FrameIO</objectName>
+     <color type="color">#6845ff</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1416.65,-12.5962</pos>
+     <schemaName type="string">frameio</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <token type="string" encrypted="1">AwW0DipE9qjiyyNYZoFQ14psbhbCgjuCja5u</token>
+     <api type="string">https://api.frame.io/v2</api>
+     <accountID type="string"></accountID>
+     <email type="string"></email>
+     <team type="string">--- None ---</team>
+     <project type="string">--- None ---</project>
+     <directory type="string">--- None ---</directory>
+     <createReviewLink type="bool">false</createReviewLink>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="cce167fe-e23d-4ed7-9c16-d4f29897442e" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="48d06d0c-e9a7-4b52-83ae-83ef5656ff15" name="rankTo" specialType="order"/>
+     <File type="input" id="1417ffcc-e6f6-4341-8f55-d4ea694b6286" name="File"/>
+     <uploaded type="output" id="5585416e-638b-440a-bf38-35ff6cb88b6d" name="uploaded"/>
+    </connections>
+   </node>
+   <node type="output" class="FTP">
+    <properties>
+     <objectName type="string">FTP_2</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1606.73,-422.132</pos>
+     <schemaName type="string">ftp</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <protocol type="string">ftp</protocol>
+     <url type="string"></url>
+     <user type="string"></user>
+     <authType type="int">0</authType>
+     <keyFile type="string"></keyFile>
+     <keyPassPhrase type="string" encrypted="1">AwX5Q2cJu+Wvhm4VK8wdmschI1uPz3bPwOMj</keyPassPhrase>
+     <pwd type="string" encrypted="1">AwVZ48epG0UPJs61i2y9OmeBg/svb9ZvYEOD</pwd>
+     <port type="ushort">21</port>
+     <localPath type="string"></localPath>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <newFilesOnly type="bool">false</newFilesOnly>
+     <deleteAfterTransfer type="bool">false</deleteAfterTransfer>
+     <areYouSure type="bool">false</areYouSure>
+     <renameFilesList type="string"></renameFilesList>
+     <maintainPadding type="bool">true</maintainPadding>
+     <ignoreStandAloneSidecars type="bool">false</ignoreStandAloneSidecars>
+     <retries type="int">10</retries>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="edbc08e1-3cd3-4195-8684-99fa78a57dce" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="5e318198-1b5b-438f-b56d-b985a5760fa5" name="rankTo" specialType="order"/>
+     <File type="input" id="2a2b2b16-47ab-43f4-aabb-13fc48b0a5e3" name="File"/>
+    </connections>
+   </node>
+   <node type="output" class="GoogleDriveOut">
+    <properties>
+     <objectName type="string">GoogleDriveOut</objectName>
+     <color type="color">#fbbc04</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1637.83,-289.076</pos>
+     <schemaName type="string">googledriveout</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+import Mistika&#xd;
+from Mistika.Qt import QColor&#xd;
+import os&#xd;
+from googleAuth import GoogleAuth&#xd;
+from apiclient.http import MediaFileUpload&#xd;
+import json&#xd;
+&#xd;
+class FolderManager:&#xd;
+    def __init__(self, node):&#xd;
+        self.m_node = node&#xd;
+&#xd;
+    def create_folder_structure(self, folder_path, drive, parent):&#xd;
+        folders = folder_path.split('/')&#xd;
+        folders = folders[:-1]&#xd;
+        current_path = ''&#xd;
+        currentParent = parent&#xd;
+        &#xd;
+        for folder in folders:&#xd;
+            current_path = folder + '/'&#xd;
+            currentParent = self.create_folder_in_drive(current_path[:-1], drive, currentParent)&#xd;
+        &#xd;
+        return currentParent&#xd;
+&#xd;
+    def create_folder_in_drive(self, folder_name, drive, parent):&#xd;
+        query = f"name='{folder_name}' and mimeType='application/vnd.google-apps.folder' and trashed=false"&#xd;
+        results = drive.files().list(q=query).execute()&#xd;
+        items = results.get('files', [])&#xd;
+        &#xd;
+        if not items:&#xd;
+            file_metadata = {&#xd;
+                'name': folder_name,&#xd;
+                'mimeType': 'application/vnd.google-apps.folder',&#xd;
+                'parents': [parent]&#xd;
+            }&#xd;
+            try:&#xd;
+                folder = drive.files().create(body=file_metadata, fields='id').execute()&#xd;
+                #print(f'Se ha creado la carpeta con ID: {folder["id"]}')&#xd;
+                return folder['id']&#xd;
+            except Exception as e:&#xd;
+                self.m_node.critical("driveOut:erroFolderCreation", f'Error creating the folder: {e}')&#xd;
+        return items[0]['id']&#xd;
+&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Google Drive Out") &#xd;
+    self.color=QColor(0xfbbc04)&#xd;
+    self.addConnector("in", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("out", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("clientId")&#xd;
+    self.addEncryptedProperty("clientSecret")&#xd;
+    self.addProperty("folderId")&#xd;
+    self.addProperty("credentialsString", "")  &#xd;
+    self.addProperty("_credentialsDict", {})&#xd;
+    self.bypassSupported = True&#xd;
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.setAcceptConnectors(True, "in")&#xd;
+    self.addActionToContextMenu("Authenticate")&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    if self.clientId == "":&#xd;
+       res = self.critical("GoogleDriveOut:clientId", "'clientId' can not be empty") and res&#xd;
+    if self.clientSecret == "":&#xd;
+       res = self.critical("GoogleDriveOut:clientSecret", "'clientSecret' can not be empty") and res&#xd;
+    if self.folderId == "":&#xd;
+       res = self.critical("GoogleDriveOut:folderId", "'folderId' can not be empty") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        for c in inputs:&#xd;
+            for up in c.getUniversalPaths():&#xd;
+                out.addUniversalPath(up)&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+&#xd;
+    self._credentialsDict = {} if not self.credentialsString else json.loads(self.credentialsString)&#xd;
+    goo = GoogleAuth(self, "https://www.googleapis.com/auth/drive", "drive", "v3", self._credentialsDict)&#xd;
+    drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)&#xd;
+    self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)&#xd;
+&#xd;
+    if drive == "TimeOut": &#xd;
+        return self.critical("GoogleDriveOut:process:authCanceled", "Authentication timeout")&#xd;
+    if self.credentialsString == None or self.credentialsString == "{}": &#xd;
+        return self.critical("GoogleDriveOut:process:authCanceled", "Authentication was rejected")    &#xd;
+&#xd;
+    fm = FolderManager(self)&#xd;
+    parentId = self.folderId.strip()&#xd;
+&#xd;
+    for c in inputs:&#xd;
+        for up in c.getUniversalPaths():&#xd;
+            files = up.getAllFiles()&#xd;
+            relPath = up.getRelPath()&#xd;
+            for f in files:&#xd;
+                if self.isCancelled():&#xd;
+                    return False&#xd;
+                name = "{}{}".format(relPath, os.path.basename(f))&#xd;
+                if "/" in name:&#xd;
+                    parentId = fm.create_folder_structure(name, drive, self.folderId.strip())&#xd;
+                nameReal = name.split("/")[-1]&#xd;
+                file_metadata = {&#xd;
+                    'name': nameReal,&#xd;
+                    'parents': [parentId]&#xd;
+                }&#xd;
+                media_content = MediaFileUpload(f)&#xd;
+                try:&#xd;
+                    file = drive.files().create(&#xd;
+                        body=file_metadata,&#xd;
+                        media_body=media_content&#xd;
+                    ).execute()&#xd;
+                except Exception as e:&#xd;
+                    res = self.critical("GoogleDriveOut:process:error", e) and res&#xd;
+                    self.addFailedUP(up)&#xd;
+            out.addUniversalPath(up)&#xd;
+    return res&#xd;
+&#xd;
+def menuAction(self,name):&#xd;
+    print ("menuAction",name)&#xd;
+    if name=="Authenticate":&#xd;
+        self.credentialsString = ""&#xd;
+        self._credentialsDict = {}&#xd;
+        goo = GoogleAuth(self, "https://www.googleapis.com/auth/drive", "drive", "v3", self._credentialsDict)&#xd;
+        drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)&#xd;
+        self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)&#xd;
+&#xd;
+        if drive == "TimeOut": &#xd;
+            return self.critical("GoogleDriveOut:process:authCanceled", "Authentication timeout")&#xd;
+        if self.credentialsString == None or self.credentialsString == "{}": &#xd;
+            return self.critical("GoogleDriveOut:process:authCanceled", "Authentication was rejected") </code>
+     <clientId type="string"></clientId>
+     <clientSecret type="string" encrypted="1">AwV8xuKMPmAqA+uQrkmYH0Kkpt4KSvNKRWam</clientSecret>
+     <folderId type="string"></folderId>
+     <credentialsString type="string"></credentialsString>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="913d7579-e2ef-4aac-b172-b4daf2a0fc85" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="f6527661-92d2-4a52-911e-40ae2f162a29" name="rankTo" specialType="order"/>
+     <in type="input" id="d188e516-3f4f-496e-a9d3-f1a4d7a985ac" name="in"/>
+     <out type="output" id="4d0027b9-085b-44c1-831a-4ad260877036" name="out"/>
+    </connections>
+   </node>
+   <node type="output" class="ObjectMatrixOut">
+    <properties>
+     <objectName type="string">ObjectMatrixOut</objectName>
+     <color type="color">#00bcc2</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1675.85,-150.836</pos>
+     <schemaName type="string">objectmatrixout</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+from wfAWS import wfAWS&#xd;
+import os&#xd;
+&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Object Matrix Out") &#xd;
+    self.color=QColor(0x00bcc2)&#xd;
+    self.addConnector("in", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("out", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("endpointUrl")&#xd;
+    self.addProperty("bucket")&#xd;
+    self.addEncryptedProperty("key")&#xd;
+    self.addEncryptedProperty("secret")&#xd;
+    self.addProperty("objectName")&#xd;
+    self.bypassSupported = True&#xd;
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.setAcceptConnectors(True, "in")&#xd;
+    return True&#xd;
+&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    bucket = self.evaluate(self.bucket).strip()&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    if key == "":&#xd;
+        res = self.critical("ObjectMatrixOut:key", "'key' can not be empty") and res&#xd;
+    if secret == "":&#xd;
+        res = self.critical("ObjectMatrixOut:secret", "'secret' can not be empty") and res&#xd;
+    if bucket == "":&#xd;
+        res = self.critical("ObjectMatrixOut:emptyBucket", "'bucket' can not be empty") and res&#xd;
+    return res&#xd;
+&#xd;
+&#xd;
+def process(self):&#xd;
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        for c in inputs:&#xd;
+            for up in c.getUniversalPaths():&#xd;
+                out.addUniversalPath(up)&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+    endpointUrl = self.endpointUrl.strip()&#xd;
+    if endpointUrl == "": endpointUrl = None&#xd;
+    bucket = self.evaluate(self.bucket).strip()&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    aws = wfAWS(self)&#xd;
+&#xd;
+    if not aws.connect(key = key, secret = secret, url = endpointUrl) or not aws.checkIfBucketExists(bucket):&#xd;
+        return False&#xd;
+&#xd;
+    for c in inputs:&#xd;
+        for up in c.getUniversalPaths():&#xd;
+            files = up.getAllFiles()&#xd;
+            relPath = up.getRelPath()&#xd;
+&#xd;
+            mfid=up.getMediaFileInfoData()&#xd;
+            if mfid.dataTree() == {}:&#xd;
+                up.readMetadataFromFile()&#xd;
+                mfid=up.getMediaFileInfoData()&#xd;
+            metadata = mfid.getToken("s3metadata")&#xd;
+&#xd;
+            for f in files:&#xd;
+                if self.isCancelled():&#xd;
+                    return False&#xd;
+                name = "{}{}".format(relPath, os.path.basename(f))&#xd;
+                if name.startswith("/"):&#xd;
+                    name = name[1:]&#xd;
+                uploaded = aws.uploadFile(f, name, metadata = metadata)&#xd;
+                if not uploaded:&#xd;
+                    self.addFailedUP(up)&#xd;
+                res = res and uploaded&#xd;
+            out.addUniversalPath(up)&#xd;
+    return res</code>
+     <endpointUrl type="string"></endpointUrl>
+     <bucket type="string"></bucket>
+     <key type="string" encrypted="1">AwWoEjZY6rT+1z9Eep1My5ZwcgrenieekbJy</key>
+     <secret type="string" encrypted="1">AwUqkLTaaDZ8Vb3G+B/OSRTy8IhcHKUcEzDw</secret>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="2b386158-68de-4c1c-a440-89a478baaeb5" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="abbc7bc5-16e6-45cb-9124-efa651bb590b" name="rankTo" specialType="order"/>
+     <in type="input" id="cd76f719-7c18-4fc1-8920-12909df4ac51" name="in"/>
+     <out type="output" id="d82be50f-b036-4f75-9816-756fb666331b" name="out"/>
+    </connections>
+   </node>
+   <node type="output" class="OneDriveOut">
+    <properties>
+     <objectName type="string">OneDriveOut</objectName>
+     <color type="color">#0061fe</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1724.23,-14.3242</pos>
+     <schemaName type="string">onedriveout</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">import Mistika&#xd;
+from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+import os&#xd;
+import requests&#xd;
+import webbrowser&#xd;
+from datetime import datetime&#xd;
+import json&#xd;
+import msal&#xd;
+import baseItemTools&#xd;
+&#xd;
+class oneTools:&#xd;
+    def __init__(self, node):&#xd;
+        self.m_node = node&#xd;
+&#xd;
+    GRAPH_API_ENDPOINT = 'https://graph.microsoft.com/v1.0'&#xd;
+    GRAPH_TOKEN_DIR = Mistika.sgoPaths.workflowsLibrary() + "/onedrive/"&#xd;
+    GRAPH_TOKEN_FILE = Mistika.sgoPaths.workflowsLibrary() + "/onedrive/ms_graph_api_token.json"&#xd;
+&#xd;
+    def generate_access_token(self, app_id, scopes):&#xd;
+        if not os.path.exists(self.GRAPH_TOKEN_DIR):&#xd;
+            os.makedirs(self.GRAPH_TOKEN_DIR)&#xd;
+        # Save Session Token as a token file&#xd;
+        access_token_cache = msal.SerializableTokenCache()&#xd;
+        # read the token file&#xd;
+        if os.path.exists(self.GRAPH_TOKEN_FILE):&#xd;
+            access_token_cache.deserialize(open(self.GRAPH_TOKEN_FILE, "r").read())&#xd;
+            token_detail = json.load(open(self.GRAPH_TOKEN_FILE,))&#xd;
+            token_detail_key = list(token_detail['AccessToken'].keys())[0]&#xd;
+            token_expiration = datetime.fromtimestamp(int(token_detail['AccessToken'][token_detail_key]['expires_on']))&#xd;
+            # print("DatetimeNow: ", datetime.now(), " Expiration: ", token_expiration)&#xd;
+            # if datetime.now() > token_expiration:&#xd;
+            #     # os.remove(self.GRAPH_TOKEN_FILE)&#xd;
+            #     # access_token_cache = msal.SerializableTokenCache()&#xd;
+            #     print("Generating another accestoken form refresh token")&#xd;
+        # assign a SerializableTokenCache object to the client instance&#xd;
+        client = msal.PublicClientApplication(client_id=app_id, token_cache=access_token_cache)&#xd;
+        accounts = client.get_accounts()&#xd;
+        if accounts:&#xd;
+            # load the session&#xd;
+            token_response = client.acquire_token_silent(scopes, accounts[0])&#xd;
+        else:&#xd;
+            # authetnicate your accoutn as usual&#xd;
+            flow = client.initiate_device_flow(scopes=scopes)&#xd;
+            print('user_code: ' + flow['user_code'])&#xd;
+            webbrowser.open('https://microsoft.com/devicelogin')&#xd;
+            token_response = client.acquire_token_by_device_flow(flow)&#xd;
+        with open(self.GRAPH_TOKEN_FILE, 'w') as _f:&#xd;
+            _f.write(access_token_cache.serialize())&#xd;
+        return token_response  &#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("OneDrive Out") &#xd;
+    self.color=QColor(0x0061fe)&#xd;
+    self.addConnector("in", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("out", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("clientId")&#xd;
+    self.addProperty("driveId")&#xd;
+    self.addProperty("folderName")&#xd;
+    self.bypassSupported = True&#xd;
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.setAcceptConnectors(True, "in")&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    # accessToken = self.accessToken.strip()&#xd;
+    # if accessToken == "":&#xd;
+    #     res = self.critical("dropboxOut:accessToken", "'accessToken' can not be empty") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        for c in inputs:&#xd;
+            for up in c.getUniversalPaths():&#xd;
+                out.addUniversalPath(up)&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+  &#xd;
+    tools = oneTools(self) &#xd;
+&#xd;
+    client_id = self.clientId&#xd;
+    drive_id = self.driveId&#xd;
+    scopes = ["Files.ReadWrite"]&#xd;
+&#xd;
+    access_token = tools.generate_access_token(app_id= client_id, scopes= scopes)&#xd;
+    headers = {&#xd;
+        "Authorization": "Bearer " + access_token["access_token"],&#xd;
+        "Content-Type": "application/json"&#xd;
+    }&#xd;
+&#xd;
+    for c in inputs:&#xd;
+        for up in c.getUniversalPaths():&#xd;
+            properties = up.getPrivateData("propertiesOverride")&#xd;
+            print(properties)&#xd;
+            if properties != None:&#xd;
+                baseItemTools.setPropertiesFromJson(self, properties)&#xd;
+            folder_name = self.folderName&#xd;
+            if self.isCancelled():&#xd;
+                return False&#xd;
+            files = up.getAllFiles()&#xd;
+            relPath = up.getRelPath()&#xd;
+            for f in files:&#xd;
+                print(f)&#xd;
+&#xd;
+                if folder_name:&#xd;
+                    #EMPIEZA CREAR FOLDER&#xd;
+                    url = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/root/children"&#xd;
+                    params = {&#xd;
+                        "$filter": f"name eq '{folder_name}'",&#xd;
+                        "$select": "id,name"&#xd;
+                    }&#xd;
+                    response = requests.get(url, headers=headers, params=params)&#xd;
+                    folder_data = response.json()&#xd;
+                    #print(folder_data)&#xd;
+                    # Check if the folder exists&#xd;
+                    if 'value' in folder_data and len(folder_data['value']) > 0:&#xd;
+                        # Folder already exists, retrieve its ID&#xd;
+                        folder_id = folder_data['value'][0]['id']&#xd;
+                        print(f"Folder '{folder_name}' already exists. Folder ID: {folder_id}")&#xd;
+                    else:&#xd;
+                        # Folder does not exist, create it&#xd;
+                        create_url = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/root/children"&#xd;
+                        create_payload = {&#xd;
+                            "name": folder_name,&#xd;
+                            "folder": {},&#xd;
+                            "@microsoft.graph.conflictBehavior": "rename"&#xd;
+                        }&#xd;
+                        create_response = requests.post(create_url, data=json.dumps(create_payload), headers=headers)&#xd;
+                        #print(create_response.json())&#xd;
+                        folder_id = create_response.json()['id']&#xd;
+                        print(f"Folder '{folder_name}' created. Folder ID: {folder_id}")&#xd;
+                else: folder_id = "root"&#xd;
+&#xd;
+                #UPLOOADITA     &#xd;
+                request_body = {&#xd;
+                    "item":{&#xd;
+                        "description": "test description",&#xd;
+                        "name": os.path.basename(f)&#xd;
+                    }&#xd;
+                }&#xd;
+                response_upload_session = requests.post(&#xd;
+                    tools.GRAPH_API_ENDPOINT + f"/me/drive/items/{folder_id}:/{os.path.basename(f)}:/createUploadSession",&#xd;
+                    headers= headers,&#xd;
+                    json= request_body&#xd;
+                )&#xd;
+                #print(response_upload_session.json())&#xd;
+                try:&#xd;
+                    upload_url = response_upload_session.json()["uploadUrl"]&#xd;
+                except Exception as e:&#xd;
+                    raise Exception(str(e))&#xd;
+&#xd;
+                fileSize = os.path.getsize(f)&#xd;
+                print("File size: ", fileSize)&#xd;
+&#xd;
+                with open(f, "rb") as upload:     &#xd;
+                    chunk_size = 32768000&#xd;
+                    chunk_number = fileSize // chunk_size&#xd;
+                    chunk_leftover = fileSize - chunk_size * chunk_number&#xd;
+                    counter = 0&#xd;
+&#xd;
+                    while True:&#xd;
+                        chunk_data = upload.read(chunk_size)&#xd;
+                        &#xd;
+                        start_index = counter * chunk_size&#xd;
+                        end_index = start_index + chunk_size&#xd;
+&#xd;
+&#xd;
+                        if not chunk_data:&#xd;
+                            break;&#xd;
+                        if counter == chunk_number:&#xd;
+                            end_index = start_index + chunk_leftover&#xd;
+                        &#xd;
+                        headers = {&#xd;
+                            "Authorization": "Bearer " + access_token["access_token"],&#xd;
+                            "Content-Length": f"{chunk_size}",&#xd;
+                            "Content-Range": f'bytes {start_index}-{end_index-1}/{fileSize}'&#xd;
+                        }&#xd;
+                        chunk_data_upload_status = requests.put(upload_url, headers=headers, data = chunk_data)&#xd;
+&#xd;
+&#xd;
+                        print(chunk_data_upload_status.json())&#xd;
+                        if "createdBy" in chunk_data_upload_status.json():&#xd;
+                            file_id = chunk_data_upload_status.json()["id"]&#xd;
+                            print("File upload completed, file ID: ", file_id)&#xd;
+ &#xd;
+                            # Define the endpoint URL to get the parent directory ID&#xd;
+                            file_info_url = f"https://graph.microsoft.com/v1.0/drive/items/{file_id}"&#xd;
+                            headers = {&#xd;
+                                "Authorization": "Bearer " + access_token["access_token"],&#xd;
+                                "Content-Type": "application/json"&#xd;
+                            }&#xd;
+                            response = requests.get(file_info_url, headers=headers)&#xd;
+                            #print("LA ESPUETAAAAAAAAAAAAA" , response.json())&#xd;
+                            parent_directory_id = response.json()['parentReference']['id']&#xd;
+&#xd;
+                            # Define the endpoint URL to create the share link for the parent directory&#xd;
+                            url = f"https://graph.microsoft.com/v1.0/drive/items/{parent_directory_id}/createLink"&#xd;
+&#xd;
+                            # Define the payload&#xd;
+                            payload = {&#xd;
+                                "type": "view",&#xd;
+                                "scope": "anonymous"&#xd;
+                            }&#xd;
+&#xd;
+                            # Send the POST request to create the link&#xd;
+                            response = requests.post(url, data=json.dumps(payload), headers=headers)&#xd;
+                            #print("LA SEGUNDAAA  ESPUETAAAAAAAAAAAAA" , response.json())&#xd;
+                            # Extract the link from the response&#xd;
+                            link = response.json()['link']['webUrl']&#xd;
+&#xd;
+                            print(f"Here is the link to the parent directory: {link}")&#xd;
+&#xd;
+                            outJson = {&#xd;
+                                "shareLink": link&#xd;
+                            }&#xd;
+&#xd;
+                            up.setPrivateData("oneDrive", outJson)&#xd;
+&#xd;
+                        elif "error" in chunk_data_upload_status.json():&#xd;
+                            self.critical("dropboxOut:accessToken", "{0} error. --> {1}".format(chunk_data_upload_status.json()["error"]["code"], chunk_data_upload_status.json()["error"]["message"]))&#xd;
+                            self.addFailedUP(up)&#xd;
+                        else:&#xd;
+                            print("Upload Progress: {0}".format(chunk_data_upload_status.json()["nextExpectedRanges"]))&#xd;
+                            counter +=1&#xd;
+&#xd;
+                        if self.isCancelled():&#xd;
+                            requests.delete(upload_url)&#xd;
+                &#xd;
+            out.addUniversalPath(up)&#xd;
+    return res</code>
+     <clientId type="string"></clientId>
+     <driveId type="string"></driveId>
+     <folderName type="string"></folderName>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="ca119b29-13bc-4228-98c5-0eceac18b689" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="cf832de6-87b8-4f9e-9f75-918e183ee3fa" name="rankTo" specialType="order"/>
+     <in type="input" id="e561707a-555b-4b28-9c56-010c7f6a31de" name="in"/>
+     <out type="output" id="3707e753-cce1-4325-aafd-23dcf4aaefee" name="out"/>
+    </connections>
+   </node>
+   <node type="output" class="PIX">
+    <properties>
+     <objectName type="string">PIX</objectName>
+     <color type="color">#292929</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1459.85,113.548</pos>
+     <schemaName type="string">pix</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <userName type="string"></userName>
+     <pwd type="string" encrypted="1">AwXLcVU7idedtFwnGf4vqPUTEWm9/UT98tER</pwd>
+     <project type="string"></project>
+     <folder type="string"></folder>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="53dd7448-36cc-47b6-a537-ec0dac4429c7" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="91db54a3-e416-49a0-9197-c6f20ee2b101" name="rankTo" specialType="order"/>
+     <File type="input" id="7c1840e4-e5be-412c-a929-3aaa8bb9a7fb" name="File"/>
+    </connections>
+   </node>
+   <node type="output" class="S3Out">
+    <properties>
+     <objectName type="string">S3Out</objectName>
+     <color type="color">#e19900</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1757.07,113.548</pos>
+     <schemaName type="string">s3out</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+from wfAWS import wfAWS&#xd;
+import os&#xd;
+&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("S3 Out") &#xd;
+    self.color=QColor(0xe19900)&#xd;
+    self.addConnector("in", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("out", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("bucket")&#xd;
+    self.addEncryptedProperty("key")&#xd;
+    self.addEncryptedProperty("secret")&#xd;
+    self.addProperty("objectName")&#xd;
+    self.bypassSupported = True&#xd;
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.setAcceptConnectors(True, "in")&#xd;
+    return True&#xd;
+&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    bucket = self.evaluate(self.bucket).strip()&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    if key == "":&#xd;
+        res = self.critical("s3Out:key", "'key' can not be empty") and res&#xd;
+    if secret == "":&#xd;
+        res = self.critical("s3Out:secret", "'secret' can not be empty") and res&#xd;
+    if bucket == "":&#xd;
+        res = self.critical("s3Out:emptyBucket", "'bucket' can not be empty") and res&#xd;
+    return res&#xd;
+&#xd;
+&#xd;
+def process(self):&#xd;
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        for c in inputs:&#xd;
+            for up in c.getUniversalPaths():&#xd;
+                out.addUniversalPath(up)&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+    bucket = self.evaluate(self.bucket).strip()&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    aws = wfAWS(self)&#xd;
+&#xd;
+    if not aws.connect(key, secret) or not aws.checkIfBucketExists(bucket):&#xd;
+        return False&#xd;
+&#xd;
+    for c in inputs:&#xd;
+        for up in c.getUniversalPaths():&#xd;
+            files = up.getAllFiles()&#xd;
+            relPath = up.getRelPath()&#xd;
+&#xd;
+            mfid=up.getMediaFileInfoData()&#xd;
+            if mfid.dataTree() == {}:&#xd;
+                up.readMetadataFromFile()&#xd;
+                mfid=up.getMediaFileInfoData()&#xd;
+            metadata = mfid.getToken("s3metadata")&#xd;
+&#xd;
+            for f in files:&#xd;
+                if self.isCancelled():&#xd;
+                    return False&#xd;
+                name = "{}{}".format(relPath, os.path.basename(f))&#xd;
+                if name.startswith("/"):&#xd;
+                    name = name[1:]&#xd;
+                uploaded = aws.uploadFile(f, name, metadata = metadata)&#xd;
+                if not uploaded:&#xd;
+                    self.addFailedUP(up)&#xd;
+                res = res and uploaded&#xd;
+            out.addUniversalPath(up)&#xd;
+    return res</code>
+     <bucket type="string"></bucket>
+     <key type="string" encrypted="1">AwXzSW0Dse+ljGQfIcYXkM0rKVGFxXzFyukp</key>
+     <secret type="string" encrypted="1">AwUSqIziUA5EbYX+wCf2cSzKyLBkJJ0kKwjI</secret>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="197b588e-ddc5-4022-b7f9-882ae812c4aa" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="ecb82938-1155-4ca9-acdb-a73178ab02aa" name="rankTo" specialType="order"/>
+     <in type="input" id="24260b80-260f-4959-aeeb-fe2cc840d546" name="in"/>
+     <out type="output" id="2e193e64-7085-4663-954f-cc9ad7942a57" name="out"/>
+    </connections>
+   </node>
+   <node type="output" class="Signiant">
+    <properties>
+     <objectName type="string">Signiant</objectName>
+     <color type="color">#aac42d</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1485.77,253.516</pos>
+     <schemaName type="string">signiant</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <protocol type="string">http</protocol>
+     <url type="string"></url>
+     <user type="string"></user>
+     <authType type="int">0</authType>
+     <keyFile type="string"></keyFile>
+     <keyPassPhrase type="string"></keyPassPhrase>
+     <pwd type="string" encrypted="1">AwXpU3cZq/W/ln4FO9wNitcxM0uf32bf0PMz</pwd>
+     <port type="ushort">21</port>
+     <localPath type="string"></localPath>
+     <sourceAgent type="string"></sourceAgent>
+     <targetAgent type="string"></targetAgent>
+     <targetDirectory type="string"></targetDirectory>
+     <jobTemplateLibrary type="string">Media_Mover_Workflows</jobTemplateLibrary>
+     <jobGroup type="string">MediaDistributor</jobGroup>
+     <autoSchedule type="bool">false</autoSchedule>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="d2d8d7a4-3295-431d-86a6-5ba819466a02" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="2f87072e-f23f-4d82-930c-424e5c8cb9b3" name="rankTo" specialType="order"/>
+     <File type="input" id="9e21b369-1987-4795-828b-64ac5a74f294" name="File"/>
+    </connections>
+   </node>
+   <node type="output" class="Vimeo">
+    <properties>
+     <objectName type="string">Vimeo</objectName>
+     <color type="color">#1fa3e9</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1795.08,253.516</pos>
+     <schemaName type="string">vimeo</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">import threading&#xd;
+import os&#xd;
+import mimetypes&#xd;
+import vimeo&#xd;
+from Mistika.classes import CuniversalPath&#xd;
+&#xd;
+class vimeoToolsProgressPercentage:&#xd;
+    def __init__(self, node, size):&#xd;
+        self.m_size = size&#xd;
+        self.m_current = 0&#xd;
+        self.m_node = node&#xd;
+        node.setComplexity(self.m_size if self.m_size>0 else 100)&#xd;
+        self.m_lock = threading.Lock()&#xd;
+&#xd;
+    def __call__(self, bytes_amount):&#xd;
+        with self.m_lock:&#xd;
+            self.m_current += bytes_amount&#xd;
+            percentage = round((self.m_current / float(self.m_size)) * 100)if self.m_size>0 else 100&#xd;
+            self.m_node.progressUpdated(percentage)&#xd;
+            &#xd;
+class vimeoTools:&#xd;
+    def __init__(self, node):&#xd;
+        self.m_node = node&#xd;
+        self.m_token = None&#xd;
+        self.m_client = None&#xd;
+&#xd;
+    def connect(self, token):&#xd;
+        self.m_token = token&#xd;
+        #Not in try because it does not return if connection was succesful or not&#xd;
+        self.m_client = vimeo.VimeoClient(&#xd;
+            token = self.m_token,&#xd;
+        )&#xd;
+        return True&#xd;
+    &#xd;
+    def uploadFile(self, file, title, description, view, embed, password):&#xd;
+        try:&#xd;
+            fileData={&#xd;
+                'name': title,&#xd;
+                'description': description,&#xd;
+                'privacy': {&#xd;
+                    'view': view,&#xd;
+                    'embed': embed,&#xd;
+                },&#xd;
+                'password': password&#xd;
+            }&#xd;
+            uri = self.m_client.upload(file, data=fileData)&#xd;
+            # Get the metadata response from the upload and log out the Vimeo.com url&#xd;
+            video_data = self.m_client.get(uri + '?fields=link').json()&#xd;
+            fileData["link"]=video_data['link']&#xd;
+            fileData["uri"]=uri&#xd;
+            self.m_node.info("vimeo:uploadFile:info","'{}' has been uploaded to '{}'. uri: {}".format(file, video_data['link'], uri))&#xd;
+&#xd;
+        except Exception as e:&#xd;
+            print((e.message))&#xd;
+            if "Something strange occurred. Please contact the app owners." in e.message:&#xd;
+                self.m_node.critical("vimeo:uploadFile:wrongToken", "The token is not a valid token")&#xd;
+            elif "Unable to upload video. Please get in touch with the app's creator." in e.message:&#xd;
+                self.m_node.critical("vimeo:uploadFile:tokenWithoutPerms","The token does not have enough permissions to upload files")&#xd;
+            elif "You have provided an invalid parameter. Please contact developer of this application." in e.message:&#xd;
+                self.m_node.critical("vimeo:uploadFile:invalidView","Title or description too long or 'disable/unlisted' view options used with basic membership")&#xd;
+            else:&#xd;
+                self.m_node.critical("vimeo:uploadFile:exception", "{}".format(e.message))&#xd;
+            return {}&#xd;
+        print("fileData",fileData)&#xd;
+        return fileData&#xd;
+    &#xd;
+    def checkIfFileIsVideo(self, file):      &#xd;
+        return str(mimetypes.guess_type(file)[0]).startswith('video')&#xd;
+&#xd;
+&#xd;
+from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+import os&#xd;
+&#xd;
+&#xd;
+def init(self):&#xd;
+    self.color = QColor(0x1fa3e9)&#xd;
+    self.addConnector("in", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("out", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("errorMode",0)&#xd;
+    self.addEncryptedProperty("token")&#xd;
+    self.addProperty("title")&#xd;
+    self.addProperty("description")&#xd;
+    self.addProperty("view", "anybody")&#xd;
+    self.addProperty("embed", "public")&#xd;
+    self.addEncryptedProperty("password")&#xd;
+    self.setPropertyVisible("password", self.view == "password") &#xd;
+    self.bypassSupported = True&#xd;
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.setAcceptConnectors(True, "in")&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    token = self.token.strip()&#xd;
+    title = self.evaluate(str(self.title))&#xd;
+    description = self.evaluate(str(self.description))&#xd;
+    view = self.view&#xd;
+    password = str(self.password).strip()&#xd;
+    if token == "":&#xd;
+        res = self.critical("vimeo:token", "'token' can not be empty") and res&#xd;
+    if title == "":&#xd;
+        res = self.critical("vimeo:title", "'title' can not be empty") and res&#xd;
+    if description == "":&#xd;
+        res = self.critical("vimeo:description", "'description' can not be empty") and res&#xd;
+    if view == "password" and password == "":&#xd;
+        res = self.critical("vimeo:password", "'password' can not be empty") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    func=[None,self.info,self.warning,self.critical][int(self.errorMode)]&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        for c in inputs:&#xd;
+            for up in c.getUniversalPaths():&#xd;
+                out.addUniversalPath(up)&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+    token = self.token.strip()&#xd;
+    view = self.view&#xd;
+    embed = self.embed&#xd;
+    password = str(self.password).strip()&#xd;
+#    print(("Title: " + title + ", Description: "+ description + ", View: " + view + ", Embed: "+ embed + ", Password: " + password))&#xd;
+    &#xd;
+    vimeo = vimeoTools(self)&#xd;
+&#xd;
+    vimeo.connect(token)&#xd;
+&#xd;
+    for c in inputs:&#xd;
+        for up in c.getUniversalPaths():&#xd;
+            self.setPropertiesFromUP(up)&#xd;
+            newUP=CuniversalPath(up)&#xd;
+            files = newUP.getFiles()&#xd;
+            privateData=newUP.getPrivateData("vimeo")&#xd;
+            if not privateData:&#xd;
+                privateData={}&#xd;
+            for f in files:&#xd;
+                if self.isCancelled():&#xd;
+                    return False&#xd;
+                if vimeo.checkIfFileIsVideo(f):&#xd;
+                    title = self.evaluate(str(self.title))&#xd;
+                    title=up.evaluateTokensString(title)&#xd;
+                    description = self.evaluate(str(self.description))&#xd;
+                    description=up.evaluateTokensString(description)&#xd;
+                    fileData=vimeo.uploadFile(&#xd;
+                        file= f, &#xd;
+                        title= title,&#xd;
+                        description= description,&#xd;
+                        view= view,&#xd;
+                        embed= embed,&#xd;
+                        password= password,&#xd;
+                        )&#xd;
+                    if fileData:&#xd;
+                        privateData=fileData&#xd;
+                    else:&#xd;
+                        res=self.critical("vimeo:uploadFileFailed", "Unable to upload file") and res&#xd;
+                else: res = func("vimeo:process:notvideo","'{}' is not a video file".format(f),"")&#xd;
+            if privateData:&#xd;
+                newUP.setPrivateData("vimeo",privateData)&#xd;
+                mfid=newUP.getMediaFileInfoData()&#xd;
+                mfid.setToken("vimeo_link",privateData["link"])&#xd;
+                newUP.setMediaFileInfoData(mfid)&#xd;
+            if res:&#xd;
+                out.addUniversalPath(newUP)&#xd;
+            else:&#xd;
+                self.addFailedUP(up)&#xd;
+    return res&#xd;
+&#xd;
+def  onPropertyUpdated(self,name):&#xd;
+    try:&#xd;
+        if name=="view":&#xd;
+            self.setPropertyVisible("password", self.view == "password") &#xd;
+    except AttributeError:&#xd;
+        pass</code>
+     <errorMode type="int">0</errorMode>
+     <token type="string" encrypted="1">AwWBOx9xw53X/hZtU7Rl4r9ZWyP3tw63uJtb</token>
+     <title type="string"></title>
+     <description type="string">File Uploaded with Mistika Workflows</description>
+     <view type="string">anybody</view>
+     <embed type="string">public</embed>
+     <password type="string" encrypted="1">AwX2TGgGtOqgiWEaJMMSlcguLFSAwHnAz+ws</password>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="63600586-ed55-44be-a255-4b97dea18bce" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="d961f523-8dda-4b3e-adb5-ac86c05f0421" name="rankTo" specialType="order"/>
+     <in type="input" id="68e571da-2680-4fe0-9f50-cd95000f463a" name="in"/>
+     <out type="output" id="a51fab21-f83f-48c0-9211-40a10bc40e64" name="out"/>
+    </connections>
+   </node>
+   <node type="output" class="YouTube">
+    <properties>
+     <objectName type="string">YouTube</objectName>
+     <color type="color">#aa1512</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1842.5,395.419</pos>
+     <schemaName type="string">youtube</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">import mimetypes&#xd;
+import http.client&#xd;
+import httplib2&#xd;
+import random&#xd;
+import time&#xd;
+from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+&#xd;
+from apiclient.errors import HttpError&#xd;
+from apiclient.http import MediaFileUpload&#xd;
+from googleAuth import GoogleAuth&#xd;
+import json&#xd;
+            &#xd;
+class YouTubeTools:&#xd;
+    def __init__(self, node):&#xd;
+        self.m_node = node&#xd;
+&#xd;
+    # Explicitly tell the underlying HTTP transport library not to retry, since&#xd;
+    # we are handling retry logic ourselves.&#xd;
+    httplib2.RETRIES = 1&#xd;
+    # Maximum number of times to retry before giving up.&#xd;
+    MAX_RETRIES = 5&#xd;
+    # Always retry when these exceptions are raised.&#xd;
+    RETRIABLE_EXCEPTIONS = (httplib2.HttpLib2Error, IOError, http.client.NotConnected,&#xd;
+        http.client.IncompleteRead, http.client.ImproperConnectionState,&#xd;
+        http.client.CannotSendRequest, http.client.CannotSendHeader,&#xd;
+        http.client.ResponseNotReady, http.client.BadStatusLine)&#xd;
+    # Always retry when an apiclient.errors.HttpError with one of these status&#xd;
+    # codes is raised.&#xd;
+    RETRIABLE_STATUS_CODES = [500, 502, 503, 504]&#xd;
+        &#xd;
+    def initialize_upload(self, youtube, f, title, description, category, keywords, privacyStatus):&#xd;
+        tags = None&#xd;
+        if keywords:&#xd;
+            tags = keywords.split(",")&#xd;
+&#xd;
+        body=dict(&#xd;
+            snippet=dict(title=title, description=description, tags=tags, categoryId=category),&#xd;
+            status=dict(privacyStatus=privacyStatus)&#xd;
+        )&#xd;
+&#xd;
+        # Call the API's videos.insert method to create and upload the video.&#xd;
+        insert_request = youtube.videos().insert(&#xd;
+            part=",".join(list(body.keys())),&#xd;
+            body=body,&#xd;
+            media_body=MediaFileUpload(f, chunksize= -1, resumable=True)&#xd;
+        )&#xd;
+&#xd;
+        self.resumable_upload(insert_request)&#xd;
+&#xd;
+    # This method implements an exponential backoff strategy to resume a failed upload.&#xd;
+    def resumable_upload(self, insert_request):&#xd;
+        response = None&#xd;
+        error = None&#xd;
+        retry = 0&#xd;
+        while response is None:&#xd;
+            try:&#xd;
+                self.m_node.info("youtube:uploading", "Uploading file...")&#xd;
+                status, response = insert_request.next_chunk()&#xd;
+                if response is not None:&#xd;
+                    if 'id' in response:&#xd;
+                        self.m_node.info("youtube:uploaded", "Video id '%s' was successfully uploaded." % response['id'])&#xd;
+                    else:&#xd;
+                        return self.m_node.critical("youtube:uploadFailed", "The upload failed with an unexpected response: %s" % response)&#xd;
+            except HttpError as e:&#xd;
+                if e.resp.status in self.RETRIABLE_STATUS_CODES:&#xd;
+                    error = "A retriable HTTP error %d occurred:\n%s" % (e.resp.status, e.content)&#xd;
+                else:&#xd;
+                    raise&#xd;
+            except self.RETRIABLE_EXCEPTIONS as e:&#xd;
+                error = "A retriable error occurred: %s" % e&#xd;
+&#xd;
+                if error is not None:&#xd;
+                    self.m_node.warning("youtube:error", error) &#xd;
+                    retry += 1&#xd;
+                    if retry > self.MAX_RETRIES:&#xd;
+                        return self.m_node.critical("youtube:cnoRetriesLeft", "No longer attempting to retry.")&#xd;
+&#xd;
+                    max_sleep = 2 ** retry&#xd;
+                    sleep_seconds = random.random() * max_sleep&#xd;
+                    self.m_node.warning("youtube:clientId", "Sleeping %f seconds and then retrying..." % sleep_seconds)&#xd;
+                    time.sleep(sleep_seconds)&#xd;
+    &#xd;
+    def checkIfFileIsVideo(self, file):      &#xd;
+        return str(mimetypes.guess_type(file)[0]).startswith('video')&#xd;
+&#xd;
+def init(self):&#xd;
+    self.color = QColor(0xAA1512)&#xd;
+    self.addConnector("in", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("out", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("TermsOfServices", "&lt;a href=\"https://www.youtube.com/t/terms\">'YouTube's Terms of Services'&lt;/a>")&#xd;
+    self.addProperty("clientId")&#xd;
+    self.addEncryptedProperty("clientSecret")&#xd;
+    self.addProperty("title", "Example title")&#xd;
+    self.addProperty("description", "Example description")&#xd;
+    self.addProperty("category", "1")&#xd;
+    self.addProperty("keywords", "keyword1, keyword2, etc")&#xd;
+    self.addProperty("privacyStatus", "public")&#xd;
+    self.bypassSupported = True&#xd;
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.setAcceptConnectors(True, "in")&#xd;
+    self.addProperty("credentialsString", "")  &#xd;
+    self.addProperty("_credentialsDict", {})&#xd;
+    self.addActionToContextMenu("Authenticate")&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    if not self.clientId.strip():&#xd;
+        res = self.critical("youtube:clientId", "'clientId' can not be empty") and res&#xd;
+    if not self.clientSecret.strip():&#xd;
+        res = self.critical("youtube:clientSecret", "'clientSecret' can not be empty") and res&#xd;
+    if not self.title.strip():&#xd;
+        res = self.critical("youtube:title", "'title' can not be empty") and res&#xd;
+    if not self.description.strip():&#xd;
+        res = self.critical("youtube:description", "'description' can not be empty") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        for c in inputs:&#xd;
+            for up in c.getUniversalPaths():&#xd;
+                out.addUniversalPath(up)&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+&#xd;
+    title = self.title.strip()&#xd;
+    description = self.description.strip()&#xd;
+    category = self.category&#xd;
+    keywords = self.keywords.strip()&#xd;
+    privacyStatus = self.privacyStatus&#xd;
+    &#xd;
+    YouTube = YouTubeTools(self)&#xd;
+    &#xd;
+    self._credentialsDict = {} if not self.credentialsString else json.loads(self.credentialsString)&#xd;
+    goo = GoogleAuth(self, "https://www.googleapis.com/auth/youtube.upload", "youtube", "v3", self._credentialsDict)&#xd;
+    drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)&#xd;
+    self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)&#xd;
+&#xd;
+    if drive == "TimeOut": &#xd;
+        return self.critical("youtube:process:authCanceled", "Authentication timeout")&#xd;
+    if self.credentialsString == None or self.credentialsString == "{}": &#xd;
+        return self.critical("youtube:process:authCanceled", "Authentication was rejected") &#xd;
+&#xd;
+    for c in inputs:&#xd;
+        for up in c.getUniversalPaths():&#xd;
+            files = up.getAllFiles()&#xd;
+            for f in files:&#xd;
+                if self.isCancelled():&#xd;
+                    return False&#xd;
+                if YouTube.checkIfFileIsVideo(f):&#xd;
+                    try:&#xd;
+                        YouTube.initialize_upload(drive, f, title, description, category, keywords, privacyStatus)&#xd;
+                    except HttpError as e:&#xd;
+                        res = self.critical("YouTube:process:uploaderror","An HTTP error %d occurred:\n%s" % (e.resp.status, e.content))&#xd;
+                else: self.warning("YouTube:process:notvideo","'{}' is not a video file".format(f))&#xd;
+            out.addUniversalPath(up)&#xd;
+    return res&#xd;
+&#xd;
+def onPropertyUpdated(self, name):&#xd;
+    a = 1&#xd;
+&#xd;
+def menuAction(self,name):&#xd;
+    print ("menuAction",name)&#xd;
+    if name=="Authenticate":&#xd;
+        self.credentialsString = ""&#xd;
+        self._credentialsDict = {}&#xd;
+        goo = GoogleAuth(self, "https://www.googleapis.com/auth/youtube.upload", "youtube", "v3", self._credentialsDict)&#xd;
+        drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)&#xd;
+        self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)&#xd;
+&#xd;
+        if drive == "TimeOut": &#xd;
+            return self.critical("GoogleDriveIn:process:authCanceled", "Authentication timeout")&#xd;
+        if self.credentialsString == None or self.credentialsString == "{}": &#xd;
+            return self.critical("GoogleDriveIn:process:authCanceled", "Authentication was rejected") </code>
+     <TermsOfServices type="string">&lt;a href="https://www.youtube.com/t/terms">'YouTube's Terms of Services'&lt;/a></TermsOfServices>
+     <clientId type="string"></clientId>
+     <clientSecret type="string" encrypted="1">AwX9R2MNv+GrgmoRL8gZnsMlJ1+Ly3LLxOcn</clientSecret>
+     <title type="string">Example title</title>
+     <description type="string">File Uploaded with Mistika Workflows</description>
+     <category type="string">22</category>
+     <keywords type="string">keyword1, keyword2, etc</keywords>
+     <privacyStatus type="string">public</privacyStatus>
+     <credentialsString type="string"></credentialsString>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="0c490c4f-61f5-4876-a120-165113d01a03" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="d591a31c-2820-427b-9a7e-dfc0eacd629a" name="rankTo" specialType="order"/>
+     <in type="input" id="dbe1e17d-b71a-41d5-b8ff-007e7246325a" name="in"/>
+     <out type="output" id="e5f8c22a-97f7-4388-a028-b753e9ae188a" name="out"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-552.038,-842.733</ScenePos>
+     <Size type="size2">422,51</Size>
+     <TextSize type="float">26.98122215270996</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Basic Transcode - Remote</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-551.52,-782.31</ScenePos>
+     <Size type="size2">1623,132</Size>
+     <TextSize type="float">19.46477699279785</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">In order to recognize properly the input media files it is important to determine the appropriate NameConvention in them:
+- [path][baseName][.ext] is used to match movie files such as A006C006_201031SQ.mxf
+- [path][baseName][.frame][.ext] is used to match sequential files, such as F004C001_190925_MN99.0175187.arx
+- [path][baseName][_frame][.ext] is used to match sequential files with _ as separator of the frame index, such as: FILENAME_001000.dpx</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-554.4,-485.568</ScenePos>
+     <Size type="size2">784.08,556.608</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff0e6d72</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-538.272,-44.0319</ScenePos>
+     <Size type="size2">761,100</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">In the case of remote web-based sources, any of these input nodes can be used.
+Most of them have their own NC to be set according to input files naming.
+If the NC of the node is not available, it will take the NC declared for the current workflow
+in the top bar Workflows menu -> Current Name Convention </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">371.681,-480.978</ScenePos>
+     <Size type="size2">797.944,871.512</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Transcoding</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">403.68,106.976</ScenePos>
+     <Size type="size2">711,284</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">All Transcode nodes share the same properties: codec, output resolution, framerate
+conversion, TC source, audio codec, etc.
+By default they will keep the original source clip name and TC.
+
+Other properties available for all of them are:
+- Export .csv or .xmp file with clip metadata
+- Add a color space conversion with Unicolor
+- Apply a Lut3D (it must be located at ~/SGO AppData/shared/3DLUTS/
+- Apply a DisplayFilter created with Mistika Boutique (it must be located at 
+~/SGO AppData/shared/display_filters/)
+- Burn-in VirtualSlate information (Timecode, FrameIndex, Source clip name..)
+</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-553.651,-617.344</ScenePos>
+     <Size type="size2">1702,95</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">NOTE that:
+- Both NCs [baseName][.frame][.ext] and [baseName][_frame][.ext] will automatically also recognize movie files with NC [path][baseName][.ext]
+- R3D files are treated as sequential clips with _ as separator, so in order to recognize the full R3D clip the NC [path][baseName][_frame][.ext] MUST be used</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">1287.1,-476.088</ScenePos>
+     <Size type="size2">816.136,1015.9</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Output</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff55557f</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1328.83,424.64</ScenePos>
+     <Size type="size2">426,66</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Any of these output nodes can be used
+to upload your transcoded files</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">8</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

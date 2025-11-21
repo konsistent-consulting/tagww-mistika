@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="Create MLNKs" nameConvention="[path][baseName][.frame][.ext]">
+  <view scale="0.694444" x="364.32" y="273.6"/>
+  <nodes>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-195.84,41.76</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="50b96365-4861-4b93-9fd9-63cd76737f64"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="6d503060-6913-4444-bb04-fe2f8003e675"/>
+     <Files type="output" name="Files" id="6c5e243a-2e11-4a33-b695-d78621fd0913">
+      <linkedTo>78f64524-2dd5-4dac-94db-447b4c5cbad2</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="MistikaMLNK" type="task">
+    <properties>
+     <objectName type="string">MistikaMLNK</objectName>
+     <color type="color">#008000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">180.96,29.76</pos>
+     <schemaName type="string">mistikamlnk</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <dstPath type="string">/Vol/SGO Data/Projects/PDEFAULT</dstPath>
+     <createSubDirs type="bool">true</createSubDirs>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="4bb1e680-7983-455a-8d7d-fa1b8f4b2d8b"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="c9c32529-7de2-403c-9e4d-7fa528bd847d"/>
+     <Files type="input" name="Files" id="78f64524-2dd5-4dac-94db-447b4c5cbad2">
+      <linkedTo>6c5e243a-2e11-4a33-b695-d78621fd0913</linkedTo>
+     </Files>
+     <Lnk type="output" name="Lnk" id="b39250be-2c2a-4b55-8ee8-c89b12a8f670"/>
+    </connections>
+   </node>
+   <node class="MistikaMLNK" type="task">
+    <properties>
+     <objectName type="string">MistikaMLNK</objectName>
+     <color type="color">#008000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">499.68,306</pos>
+     <schemaName type="string">mistikamlnk</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <dstPath type="string">/Vol/SGO Data/Projects/PDEFAULT</dstPath>
+     <createSubDirs type="bool">true</createSubDirs>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="54de136b-7197-4b48-9167-d1df596d2635"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="1917245b-455c-49d8-9b12-071bb511e659"/>
+     <Files type="input" name="Files" id="fffe6b36-fa66-400c-b3f2-a8dfee0fe217">
+      <linkedTo>36339a50-ee17-4a14-8f5e-481c062f94c9</linkedTo>
+     </Files>
+     <Lnk type="output" name="Lnk" id="5d3e5638-2a14-4d8a-b0fe-b2d9af601d1e"/>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Media</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-196.32,403.2</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="626014d0-0ce4-4a88-a365-b9d4023298fb"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="54071cf4-dbbe-4236-9157-88a7381166ec"/>
+     <Files type="output" name="Files" id="af82a262-ac2e-44f6-94e5-becea83385bb">
+      <linkedTo>87c03bbb-87ee-4615-af8d-5386d3e4770c</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="File" type="input">
+    <properties>
+     <objectName type="string">EDL</objectName>
+     <color type="color">#458c65</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-193.92,271.2</pos>
+     <schemaName type="string">file</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="017ec20a-8513-44fb-91e3-befab96f811e"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="b205aa63-c6e4-43cd-ba19-c94d6d451b4b"/>
+     <To type="output" name="To" id="a18b0e87-3e49-4430-868b-a2ce2ba021a7">
+      <linkedTo>cd8a2039-63da-4b54-8e2f-67402508d1f6</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node class="ConformFilter" type="task">
+    <properties>
+     <objectName type="string">ConformFilter</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">168.48,325.2</pos>
+     <schemaName type="string">conformfilter</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <comparePath type="bool">false</comparePath>
+     <compareExtension type="bool">false</compareExtension>
+     <numChars type="int">0</numChars>
+     <ignoreFirst type="int">0</ignoreFirst>
+     <ignoreLast type="int">0</ignoreLast>
+     <defaultFps type="float">24</defaultFps>
+     <nameSource type="int">0</nameSource>
+     <handlers type="int">0</handlers>
+     <noTrim type="bool">true</noTrim>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="8117c536-3393-4dab-952a-575247b9a747"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="fd9dd619-2134-48b7-819f-040071fad3c0"/>
+     <edl label="EDL/XML/AAF" type="input" name="edl" id="cd8a2039-63da-4b54-8e2f-67402508d1f6">
+      <linkedTo>a18b0e87-3e49-4430-868b-a2ce2ba021a7</linkedTo>
+     </edl>
+     <in type="input" name="in" id="87c03bbb-87ee-4615-af8d-5386d3e4770c">
+      <linkedTo>af82a262-ac2e-44f6-94e5-becea83385bb</linkedTo>
+     </in>
+     <included type="output" name="included" id="36339a50-ee17-4a14-8f5e-481c062f94c9">
+      <linkedTo>fffe6b36-fa66-400c-b3f2-a8dfee0fe217</linkedTo>
+     </included>
+     <excluded type="output" name="excluded" id="0cae13ad-3cb2-4795-a43e-e6bb93c2b63c"/>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Media</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-194.16,653.52</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="0d17ec02-8c18-4160-9489-9ed69b8fb1f3"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="62562e1a-0ff6-4f97-a2a7-4048fcdd34a6"/>
+     <Files type="output" name="Files" id="44f6e259-4a09-49b3-91f2-3cf5067e6126">
+      <linkedTo>50249061-3122-4656-8c18-b7d6b9c81b05</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="ClassifyByExtension" type="task">
+    <properties>
+     <objectName type="string">ClassifyByExtension</objectName>
+     <color type="color">#00b4b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">159.84,646.32</pos>
+     <schemaName type="string">classifybyextension</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor&#xd;
+from Mistika.classes import Cconnector&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Classify By Extension")&#xd;
+    self.color=QColor(0x677688)&#xd;
+# creating properties&#xd;
+    self.addProperty("errorMode",0)&#xd;
+    self.addProperty("filterMode", 0)&#xd;
+    self.addProperty("caseSensitive", False)&#xd;
+    self.addProperty("extensions","mov,mxf,mp4,j2k,r3d,rnd")&#xd;
+#creating connectors&#xd;
+    self.addConnector("files",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_REQUIRED)&#xd;
+    extList=self.extensions.split(",")&#xd;
+    if not self.caseSensitive:&#xd;
+        extList=self.extensions.lower().split(",")&#xd;
+    for ext in extList:&#xd;
+        self.addConnector(ext.strip(),Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("other",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.setAcceptConnectors(True,"files")&#xd;
+#configuring the node&#xd;
+    self.bypassSupported=True&#xd;
+    self.color=QColor(0,180,180)&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res=True&#xd;
+    if int(self.errorMode)&lt;0 or int(self.errorMode)>3:&#xd;
+        res=self.critical("filesSplitter:isReady","Invalid errorMode {}".format(self.errorMode),"errorMode") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    #And finally, Do the thing here!&#xd;
+    res=True&#xd;
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    outputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_OUTPUT)&#xd;
+    caseSensitive = self.caseSensitive &#xd;
+    extensions = self.extensions&#xd;
+    filterMode = int(self.filterMode)&#xd;
+&#xd;
+    for c in outputs:&#xd;
+      c.clearUniversalPaths()&#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+    for c in inputs:                                 &#xd;
+        for up in c.getUniversalPaths():&#xd;
+            if self.isCancelled():&#xd;
+                return False&#xd;
+  &#xd;
+            ext=up.getExtension()&#xd;
+&#xd;
+            if not caseSensitive:&#xd;
+                ext = ext.lower()&#xd;
+            &#xd;
+            classified = False&#xd;
+            if caseSensitive:&#xd;
+                extList=self.extensions.replace(" ","").split(",")&#xd;
+            else:&#xd;
+                extList=list(set(self.extensions.lower().replace(" ","").split(",")))&#xd;
+&#xd;
+            for case in extList:&#xd;
+                out = None&#xd;
+ &#xd;
+                if (filterMode == 0 and ext == case) or (filterMode == 1 and ext.startswith(case)) or (filterMode == 2 and case in ext) or (filterMode== 3 and ext.endswith(case)):&#xd;
+                    out=self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, case)&#xd;
+                &#xd;
+                if out:&#xd;
+                    self.info("filesClassifier:process:info","sending {} to {}".format(up.getFileName(),case),"")&#xd;
+                    classified = True&#xd;
+                    out.addUniversalPath(up)&#xd;
+&#xd;
+            if not classified:&#xd;
+                func=[None,self.info,self.warning,self.critical][int(self.errorMode)]&#xd;
+                if func:&#xd;
+                    if func == self.critical:&#xd;
+                        self.addFailedUP(up)&#xd;
+                    res=func("filesClassifier:process:ext","The extension {} could not be classified".format(ext),"") and res&#xd;
+                out = self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, "other")&#xd;
+                out.addUniversalPath(up)&#xd;
+&#xd;
+    return res&#xd;
+&#xd;
+def  onPropertyUpdated(self,name):&#xd;
+    if name=="extensions":&#xd;
+        self.rebuild()&#xd;
+    if name=="caseSensitive":&#xd;
+        self.rebuild()&#xd;
+</code>
+     <errorMode type="int">0</errorMode>
+     <filterMode type="int">0</filterMode>
+     <caseSensitive type="bool">false</caseSensitive>
+     <extensions type="string">mov, r3d</extensions>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="46d17914-7bf4-4e88-844d-0e39b11499da"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="f0ba0215-2898-423b-97f9-2fe7f6f11b52"/>
+     <files type="input" name="files" id="50249061-3122-4656-8c18-b7d6b9c81b05">
+      <linkedTo>44f6e259-4a09-49b3-91f2-3cf5067e6126</linkedTo>
+     </files>
+     <mov type="output" name="mov" id="f5ed8694-3ab8-438f-9a7e-1ea4c064b15b"/>
+     <r3d type="output" name="r3d" id="85ee35c1-8e15-465b-8e7e-5e8a889c5c7d">
+      <linkedTo>05530511-a173-4e83-8bb2-a98ee3b746d9</linkedTo>
+     </r3d>
+     <other type="output" name="other" id="b1e465f2-4419-44d3-88be-e68c4627de12"/>
+    </connections>
+   </node>
+   <node class="MistikaMLNK" type="task">
+    <properties>
+     <objectName type="string">MistikaMLNK</objectName>
+     <color type="color">#008000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">504.24,633.12</pos>
+     <schemaName type="string">mistikamlnk</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <dstPath type="string">/Vol/SGO Data/Projects/PDEFAULT</dstPath>
+     <createSubDirs type="bool">true</createSubDirs>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="a3e0681c-25b2-4f5a-b324-fe9dd558d3a3"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="8bea1255-360d-447a-aad8-a426a0a77141"/>
+     <Files type="input" name="Files" id="05530511-a173-4e83-8bb2-a98ee3b746d9">
+      <linkedTo>85ee35c1-8e15-465b-8e7e-5e8a889c5c7d</linkedTo>
+     </Files>
+     <Lnk type="output" name="Lnk" id="fc0a34e0-2b02-4730-9823-23dc0d19d9b9"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-216.4,-173.4</ScenePos>
+     <Size type="size2">1011.67,99.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">With Mistika Workflows, you can automatically create MLNKs for your Boutique/Ultima projects.
+
+You can combine this feature with the Conform Filter node to create links only to the media used in the conforming file.
+Alternatively, you can use a Classify by Metadata node to ignore proxy files and link to high-quality clips.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-214.8,-246.4</ScenePos>
+     <Size type="size2">341.734,36.9531</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Create MLNK files automatically</Text>
+     <TextColor type="color">#ff7bd1ff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-211.34,-20.74</ScenePos>
+     <Size type="size2">653.8,195</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Creating MLNKs from a Folder</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff3f4f72</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-211.82,220.7</ScenePos>
+     <Size type="size2">973,315</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Creating MLNKs based on an EDL</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff3f4f72</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-209.66,582.62</ScenePos>
+     <Size type="size2">975.4,203.4</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Creating MLNKs after ignoring proxy files</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff3f4f72</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

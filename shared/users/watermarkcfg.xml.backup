@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <WatermarkCfg>
+    <body>Body Text Body Text</body>
+    <color>#94b4f2</color>
+    <footer>Mistika Workflows Footer</footer>
+    <header>HEADER LINE</header>
+    <objectName>WatermarkCfg</objectName>
+  </WatermarkCfg>
+</nodeCommonRoot>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="VodafoneESPxml" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="providerID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+            <xsd:element name="channel" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>	    
+            <xsd:element name="catalog" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+	    
+            <xsd:element name="contentID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+            <xsd:element name="mediaID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+            <xsd:element name="vodPublication" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+            <xsd:element name="lineID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>	    
+	    
+            <xsd:element name="title" type="xsd:string" sgo:visibility="0" sgo:sortOrder="19"/>
+            <xsd:element name="englishTitle" type="xsd:string" sgo:visibility="0" sgo:sortOrder="20"/>
+            <xsd:element name="seasonNr" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="21"/>
+            <xsd:element name="episodeNr" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="22"/>
+            <xsd:element name="startDate" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="24"/>
+            <xsd:element name="endDate" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="25"/>
+			<xsd:element name="episodeCount" type="xsd:integer"  sgo:visibility="0" sgo:sortOrder="26"/>
+	    
+            <xsd:element name="episodic" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="30"/>
+            <xsd:element name="seriesCode" type="xsd:string" sgo:visibility="0" sgo:sortOrder="32"/>
+            <xsd:element name="seasonID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="33"/>
+            <xsd:element name="episodeTitlePOES" type="xsd:string" sgo:visibility="0" sgo:sortOrder="34"/>
+            <xsd:element name="originalEpisodeTitle" type="xsd:string" sgo:visibility="0" sgo:sortOrder="35"/>
+            <xsd:element name="seriesTitlePOES" type="xsd:string" sgo:visibility="0" sgo:sortOrder="36"/>
+            <xsd:element name="originalSeriesTitle" type="xsd:string" sgo:visibility="0" sgo:sortOrder="37"/>
+	    
+            <xsd:element name="synopsisSeries" type="textEditor" sgo:visibility="0" sgo:sortOrder="40"/>
+            <xsd:element name="synopsisProgramme" type="textEditor" sgo:visibility="0" sgo:sortOrder="41"/>
+            <xsd:element name="rating" sgo:stringPulldownValues="Undefined$$$|Todos los públicos|No recom. menores 7|No recom. menores 12|No recom. menores 16|No recom. menores 18" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="44"/>
+	    <xsd:element name="genre" sgo:stringPulldownValues="Undefined$$$|Action|Adventure|Animated|Comedy|Comedy/Romance|Children|Crime|Current affairs|Documentary|Drama|Erotic|Family|Fantasy|Horror|Magazine|Musical|Reality show|Sports|Technology|Thriller|Thriller/Detective|Thriller/Mystery|SciFi|War|Western" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="43"/>
+            <xsd:element name="year" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="42"/>
+            <xsd:element name="directors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="51"/>
+            <xsd:element name="actors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="52"/>
+            <xsd:element name="programmeCategory" type="xsd:string" sgo:visibility="0" sgo:sortOrder="54"/>
+            <xsd:element name="country" type="xsd:string" sgo:visibility="0" sgo:sortOrder="55"/>
+            <xsd:element name="tags" type="xsd:string" sgo:visibility="0" sgo:sortOrder="56"/>
+            <xsd:element name="awards" type="xsd:string" sgo:visibility="0" sgo:sortOrder="57"/>
+            <xsd:element name="contentGenre" type="xsd:string" sgo:visibility="0" sgo:sortOrder="58"/>
+           	    
+            <xsd:element name="download" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="60"/>
+            <xsd:element name="streaming" type="xsd:int" sgo:visibility="0" sgo:sortOrder="61"/>
+	    
+	    <xsd:element name="audioType" sgo:stringPulldownValues="Undefined$$$|Dolby Digital|Stereo|Mono|Monoaural|Dolby ProLogic|Dolby 5.1" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="70"/>
+            <xsd:element name="audio1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="71"/>
+            <xsd:element name="audio2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="72"/>								   	    	    
+            <xsd:element name="videoFormat" type="xsd:string" sgo:visibility="0" sgo:sortOrder="73"/>
+            <xsd:element name="colorBW" type="xsd:string" sgo:visibility="0" sgo:sortOrder="74"/>	    					
+												
+            <xsd:element name="adiFile" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="90"/>
+            <xsd:element name="renameFilesList" type="xsd:string" sgo:visibility="0" sgo:sortOrder="91"/>
+       </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<mailManager>
+  <mailManager>
+    <serverSettings>
+      <connectionType>1</connectionType>
+      <helpUrl/>
+      <mailServer/>
+      <port>465</port>
+      <saveServerData/>
+      <serverName/>
+      <servers>0</servers>
+    </serverSettings>
+    <userSettings>
+      <password/>
+      <username/>
+    </userSettings>
+    <test/>
+  </mailManager>
+</mailManager>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ExternalBinary>
+    <NameConvention>
+      <nameConvention>[path][baseName][.frame][.ext]</nameConvention>
+    </NameConvention>
+    <binFilePath/>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#0063b4</color>
+    <errorRX>ERROR: (.*)$</errorRX>
+    <maxProgress>100</maxProgress>
+    <nodeLocked>false</nodeLocked>
+    <objectName>ExternalBinary</objectName>
+    <outputRX>Output To: (.*)$</outputRX>
+    <params/>
+    <progressRX>Precentage: (.*)$</progressRX>
+    <rosettaMode>true</rosettaMode>
+    <url/>
+  </ExternalBinary>
+</nodeCommonRoot>

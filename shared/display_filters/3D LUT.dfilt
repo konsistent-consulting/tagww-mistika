@@ -1,0 +1,56 @@
+Group(
+groupType(1)
+trimDesc( head(0) speed(1) )
+ungroup(1)
+p(
+	n(3d_lut+1)
+	X(581) Y(5) W(37) F(0)
+)
+F(
+T(143)
+p(
+	X(581) Y(5) W(37) F(0)
+	L(4)
+s(
+	T(n() C(13) t(1))
+	c(R(0)	n(Input/Scale)	m(-100000)	M(100000)	d(1))
+	c(R(1)	n(Input/Offset)	m(-100000)	M(100000)	d(0))
+	c(R(2)	n(Input/Gamma)	m(-100)	M(100)	d(1))
+	c(R(3)	n(Input/Use)	m(0)	M(1)	d(0) s(Direct) s(Inverse))
+	c(R(4)	n(Lut 1D a/LUT File)	m(0)	M(0)	d(0)		c(1DLUTS)	)
+	c(R(5)	n(Lut 1D a/Use)	m(0)	M(1)	d(0) s(Direct) s(Inverse))
+	c(R(6)	n(Lut 3D/LUT File)	m(0)	M(0)	d(0)		c(3DLUTS)	)
+	c(R(7)	n(Lut 1D b/LUT File)	m(0)	M(0)	d(0)		c(1DLUTS)	)
+	c(R(8)	n(Lut 1D b/Use)	m(0)	M(1)	d(0) s(Direct) s(Inverse))
+	c(R(9)	n(Output/Scale)	m(-100000)	M(100000)	d(1))
+	c(R(10)	n(Output/Offset)	m(-100000)	M(100000)	d(0))
+	c(R(11)	n(Output/Gamma)	m(-100)	M(100)	d(1))
+	c(R(12)	n(Output/Use)	m(0)	M(3)	d(0) s(Direct) s(Inverse) s(Input Direct) s(Input Inverse))
+)
+)
+)
+
+C(
+f(0.5) l(0.5)
+F(C:/MATERIAL/WORK/PDEFAULT/DATA/3d_lut.lnk)
+p(
+	n(3d_lut)
+	X(581) Y(4) W(37) F(36)
+)
+d(
+	I(
+		s(0) e(0) t(3d_lut|3d_lut) T(0|00:00:00:00|0)  i(0)
+		L(
+			d(Disk.dev) p(C:/Users/mad/Downloads/) n(L_3d_lut.tif) f()
+		)
+		H(
+			d(Disk.dev) p(C:/Users/mad/Downloads/) n(3d_lut.tif) f(1920x1080)
+		)
+	)
+)
+AudioRoute(
+)
+)
+
+)
+

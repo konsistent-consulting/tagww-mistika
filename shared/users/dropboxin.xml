@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <DropboxIn>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <areYouSure>true</areYouSure>
+    <color>#0061fe</color>
+    <deleteAfterDownload/>
+    <dropboxFilePath>Leave empty to download all the Dropbox files</dropboxFilePath>
+    <localPath/>
+    <objectName>DropboxIn</objectName>
+    <schemaName>dropboxin</schemaName>
+  </DropboxIn>
+</nodeCommonRoot>

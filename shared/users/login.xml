@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<login>
+  <autoLogin>
+    <lastUser>MistikaUser</lastUser>
+    <seconds>20</seconds>
+  </autoLogin>
+  <defaultIcon>Mistika.png</defaultIcon>
+  <iconSize>100</iconSize>
+  <users>
+    <user name="MistikaUser"/>
+  </users>
+</login>

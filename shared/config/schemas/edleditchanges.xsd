@@ -1,0 +1,48 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="EDLEditChanges" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+			<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+            <xsd:element name="edlMarkersPath" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="3"/>
+			<xsd:element name="edlMarkersFormat" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="4">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Mistika" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+						<xsd:element name="DaVinciResolve" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="1"/>
+						<xsd:element name="FrameRate" type="stringPulldown" sgo:stringPulldownValues="23.98|24|25|29.97|30|50|59.94|60" sgo:visibility="0" sgo:sortOrder="2"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="MarkersColors" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="5">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="EditChangesMTK" type="stringPulldown" sgo:stringPulldownValues="Red$$$0|Green$$$1|Blue$$$2|Cyan$$$3|Magenta$$$4|Yellow$$$5|Black$$$6|White$$$7|Pink$$$8|Orange$$$9|Turquoise$$$10|Purple$$$11" sgo:visibility="0" sgo:sortOrder="0"/>
+						<xsd:element name="NewVFXMTK" type="stringPulldown" sgo:stringPulldownValues="Red$$$0|Green$$$1|Blue$$$2|Cyan$$$3|Magenta$$$4|Yellow$$$5|Black$$$6|White$$$7|Pink$$$8|Orange$$$9|Turquoise$$$10|Purple$$$11" sgo:visibility="0" sgo:sortOrder="1"/>
+						<xsd:element name="EditChangesDVR" type="stringPulldown" sgo:stringPulldownValues="Blue$$$0|Cyan$$$1|Green$$$2|Yellow$$$3|Red$$$4|Pink$$$5|Purple$$$6|Fuchsia$$$7|Rose$$$8|Lavender$$$9|Sky$$$10|Mint$$$11|Lemon$$$12|Sand$$$13|Cocoa$$$14|Cream$$$15" sgo:visibility="0" sgo:sortOrder="2"/>
+						<xsd:element name="NewVFXDVR" type="stringPulldown" sgo:stringPulldownValues="Blue$$$0|Cyan$$$1|Green$$$2|Yellow$$$3|Red$$$4|Pink$$$5|Purple$$$6|Fuchsia$$$7|Rose$$$8|Lavender$$$9|Sky$$$10|Mint$$$11|Lemon$$$12|Sand$$$13|Cocoa$$$14|Cream$$$15" sgo:visibility="0" sgo:sortOrder="3"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="6">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Checksum>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#677688</color>
+    <crcType>2</crcType>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Checksum</objectName>
+    <validateInput>true</validateInput>
+  </Checksum>
+</nodeCommonRoot>

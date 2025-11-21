@@ -1,0 +1,15 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="Change8KP2Metadata" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>                            
+			<xsd:element name="userBit" type="integerPulldown" sgo:integerPulldownValues="From Input$$$-1|Date$$$0|Hash$$$1" sgo:visibility="0" sgo:sortOrder="5"/>
+			<xsd:element name="gamut" type="integerPulldown" sgo:integerPulldownValues="From Input$$$0|BT.709$$$1|BT.2020$$$2" sgo:visibility="0" sgo:sortOrder="10"/>
+			<xsd:element name="gamma" type="integerPulldown" sgo:integerPulldownValues="From Input$$$0|HD$$$1|HLG$$$2" sgo:visibility="0" sgo:sortOrder="11"/>
+            <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

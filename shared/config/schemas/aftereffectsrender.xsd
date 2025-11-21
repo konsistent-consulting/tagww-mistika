@@ -1,0 +1,30 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="AfterEffectsRender" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="_adobeEULA" type="label" sgo:visibility="0" sgo:properties="clickable" sgo:sortOrder="4"/>
+                <xsd:element name="url" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="Config" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="20">
+					<xsd:complexType>
+                        <xsd:sequence>
+							<xsd:element name="binFilePath" type="xsd:anyURI" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('AE render File (*.*)')|fileDialogWindowTitle('Select aerender File')" sgo:visibility="0" sgo:sortOrder="10"/>
+							<xsd:element name="maxProgress" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+							<xsd:element name="params" type="xsd:string" sgo:visibility="0" sgo:sortOrder="20"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>	
+                <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="50">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>				
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

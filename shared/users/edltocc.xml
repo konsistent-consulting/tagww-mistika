@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <EDLToCC>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <NamingMatchRules>
+      <LOC>Any</LOC>
+      <ShotNaming>0</ShotNaming>
+    </NamingMatchRules>
+    <bypassEnabled>false</bypassEnabled>
+    <ccPath/>
+    <color>#00b4b4</color>
+    <objectName>EDLToCC</objectName>
+  </EDLToCC>
+</nodeCommonRoot>

@@ -1,0 +1,46 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:element sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0" name="CDL">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element sgo:visibility="0" type="xsd:string" sgo:sortOrder="0" name="objectName"/>
+    <xsd:element sgo:visibility="0" type="color" sgo:sortOrder="1" name="color"/>
+    <xsd:element sgo:visibility="0" type="xsd:boolean" sgo:sortOrder="2" name="bypassEnabled"/>
+	<xsd:element name="source" type="integerPulldown" sgo:integerPulldownValues="Auto$$$0|From Metadata$$$1|From Sidecar$$$2|Custom$$$3" sgo:visibility="0" sgo:sortOrder="10"/>
+    <xsd:element sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="1000" name="Offset">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000"  sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="100" name="Offset_Red"/>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="101" name="Offset_Green"/>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="102" name="Offset_Blue"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="1010" name="Slope">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="103" name="Slope_Red"/>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="104" name="Slope_Green"/>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="105" name="Slope_Blue"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="1020" name="Power">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="106" name="Power_Red"/>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="107" name="Power_Green"/>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="108" name="Power_Blue"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="1030" name="Saturation">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:decimalMaxValue="10.0000" sgo:decimalMinValue="-10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" type="xsd:decimal" sgo:sortOrder="109" name="Saturation_Saturation"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>

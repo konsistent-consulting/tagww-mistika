@@ -1,0 +1,1812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="Youlean Loudness Meter" nameConvention="[path][baseName][.frame][.ext]">
+  <view x="328.32" y="-60.48" scale="0.694444"/>
+  <nodes>
+   <node type="input" class="Folder">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#808000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-681.811,-239.873</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <filterMode type="int">1</filterMode>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="05a857a8-9438-4723-97b4-a9fa7c153475" type="input" specialType="order"/>
+     <rankTo name="rankTo" id="8477a14f-c2e4-473a-ac53-523ebf0d259b" type="output" specialType="order"/>
+     <Files name="Files" id="7015ac9e-74ce-44c3-b88a-abe8c73f6790" type="output">
+      <linkedTo>d35896e0-9235-4d68-bc70-9b3f605dd9dc</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node type="input" class="Watcher">
+    <properties>
+     <objectName type="string">Watcher</objectName>
+     <color type="color">#aa557f</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-680.976,-101.216</pos>
+     <schemaName type="string">watcher</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <filterMode type="int">1</filterMode>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <latency type="int">5</latency>
+     <forceCheck type="int">0</forceCheck>
+     <recursive type="bool">true</recursive>
+     <addRoot type="bool">true</addRoot>
+     <deleteAfterProcessing type="bool">false</deleteAfterProcessing>
+     <areYouSure type="bool">false</areYouSure>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">false</alphabeticalOrder>
+     <continuePreviousExecutions type="bool">false</continuePreviousExecutions>
+     <numberOfTries type="int">5</numberOfTries>
+     <globalTimer type="bool">true</globalTimer>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="4713d558-4afd-4c72-ab4a-a32498b0e885" type="input" specialType="order"/>
+     <rankTo name="rankTo" id="25e6bc3b-d08b-4798-858d-ed48e207f715" type="output" specialType="order"/>
+     <To name="To" id="68ed52c7-2970-4cf4-bca2-0e83c621d6fc" type="output">
+      <linkedTo>0f4fd764-ad52-4975-9bfe-6da97977bb49</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node type="task" class="WAV">
+    <properties>
+     <objectName type="string">WAV</objectName>
+     <color type="color">#78b4b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-374.401,-240.001</pos>
+     <schemaName type="string">wav</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CbaseItem
+from Mistika import sgoPaths
+import os
+import subprocess
+from baseItemTools import totalNumberOfUPs
+import sys
+
+class wavConverter:   
+    def __init__(self,node):      
+        self.m_node=node
+        
+    def convertToWav(self,src,dst,bitsPerSample,sampleRate):
+        print(("wavConverter:Convert","{}->{} :{}kbs,{}".format(src.getFileName(),dst.getFilePath(),bitsPerSample,sampleRate)))
+        self.m_node.info("wavConverter:Convert","{}:{}:{} kbs:{}".format(src.getFileName(),dst.getFileName(),bitsPerSample,sampleRate))
+        # create dst folder if it does not exists
+        path=dst.getPath()
+        if not os.path.exists(path):
+            os.makedirs(path)
+        cmd=self.ffmpegPath()
+        #params=["-y","-i",src.getFilePath(),"-filter_complex","[0:a]amerge=inputs=4,pan=stereo|c0&lt;c0+c1|c1&lt;c2+c3[a]","-map","[a]"]
+        params=["-y","-i",src.getFilePath()]
+        if bitsPerSample>0:
+            params = params+["-c:a", "pcm_s" + str(bitsPerSample) + "le"]
+        if sampleRate>0:        
+            params=params+["-ar",str(sampleRate)]
+        params=params+[dst.getFilePath()]
+        params = [param.replace(' ', '\ ') for param in params]
+        paramsFinal = [cmd]+params if sys.platform == "win32" else ' '.join(['\''+cmd+'\'']+params)
+        print(paramsFinal)
+        try:
+            subprocess.check_call(paramsFinal, shell=True)
+            return True
+        except subprocess.CalledProcessError as e:
+            print("unable to exec",paramsFinal,"error",e)
+            return self.m_node.critical("wavConverter:convert:call","unable to exec {}. error: {}".format([cmd]+params,e))
+        except OSError as e:
+            print("unable to exec",paramsFinal,"OS error",e)
+            return self.m_node.critical("wavConverter:convert:os","unable to exec {}. error: {}".format([cmd]+params,e))
+        return True
+    @staticmethod  
+    def ffmpegPath():
+        ext=".exe" if sys.platform == "win32" else ""
+        fldr = "/MacOS" if sys.platform == "darwin" else "/bin"
+        fp=sgoPaths.apps()+ fldr + "/ffmpeg" + ext
+        return fp
+    
+def init(self):
+    self.setClassName("WAV") 
+    self.color=QColor(120,180,180)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)    
+    self.addConnector("wav",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)    
+    self.setAcceptConnectors(True,"input_%") 
+    self.addProperty("url")
+    self.addProperty("bitsPerSample",0)
+    self.addProperty("sampleRate",0)
+    self.bypassSupported=True
+    self.setDropToProperty("url")
+    #1=Directories, 2=Files, 3=both
+    self.setDropSupportedTypes(1) 
+    return True
+
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True    
+    fp=wavConverter.ffmpegPath();
+    if not os.path.exists(fp):
+        return self.critical("wavConverter:isReady","ffmpeg binary not found: ".format(fp))
+    return True
+
+def process(self):
+    res=True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    out = self.getFirstConnectorByName("wav")
+    out.clearUniversalPaths()
+    dstUrl=self.evaluate(self.url).strip()
+    wav=wavConverter(self)
+    self.setComplexity(totalNumberOfUPs(self)*100)
+    current=0
+    if self.bypassEnabled:
+        return True
+        
+    self.progressUpdated(0)
+    for c in inputs:
+        for input in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            dst=self.composeDstFilePath(dstUrl,input,False,0)
+            dst.setExtension("wav")
+            res=wav.convertToWav(input,dst,int(self.bitsPerSample),int(self.sampleRate)) and res
+            out.addUniversalPath(dst)
+            current=current+1
+            self.progressUpdated(current*100)
+    return res
+    </code>
+     <store type="string"></store>
+     <url type="string"></url>
+     <bitsPerSample type="int">0</bitsPerSample>
+     <sampleRate type="int">0</sampleRate>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="2ff81964-3b96-4a30-93c9-7b200422b087" type="input" specialType="order"/>
+     <rankTo name="rankTo" id="321ffc0b-35c9-4eed-9d36-b4f8d4bcf580" type="output" specialType="order"/>
+     <input name="input" id="d35896e0-9235-4d68-bc70-9b3f605dd9dc" type="input">
+      <linkedTo>7015ac9e-74ce-44c3-b88a-abe8c73f6790</linkedTo>
+     </input>
+     <wav name="wav" id="060aeca2-4671-4ced-b5f0-9d7c651a13fd" type="output">
+      <linkedTo>c5d3d7ea-680a-498a-9598-6a52cb39d9f8</linkedTo>
+     </wav>
+    </connections>
+   </node>
+   <node type="output" class="Mail">
+    <properties>
+     <objectName type="string">Mail</objectName>
+     <color type="color">#e1e1d2</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1213.06,-222.913</pos>
+     <schemaName type="string">mail</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+
+mailModulesLoaded=False
+try:
+    import sys
+    import smtplib
+    import re
+    from email.mime.text import MIMEText
+    from email.mime.multipart import MIMEMultipart
+    mailModulesLoaded=True
+except ImportError as e:
+    print("Unable to import modules: "+e.message)
+    print("check your sys.path ")
+            
+_WF_MAIL_DEFAULT_MSG="""Put Your Text Here
+&lt;?py
+if self.onePerFile:
+    print("Input file:")
+    up=self._localDict['up']
+    print (up.getFilePath())
+else:
+    print("List of input Files:")
+    for c in self.getConnectors():
+        for p in c.getUniversalPaths():
+            print (p.getFilePath())
+?>"""
+
+def init(self):
+    self.color=QColor(225,225,210)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("login")
+    self.addProperty("onlySendIfInput")
+    self.addProperty("onePerFile",False)
+    self.addEncryptedProperty("pwd")
+    self.addProperty("smtpServer","smtp.gmail.com")
+    self.addProperty("port",587)
+    self.addProperty("mailFrom")
+    self.addProperty("to") #comma separated list
+    self.addProperty("replyTo")
+    self.addProperty("subject","Mistika Workflows Mail Node Processed")
+    self.addProperty("bodyType","plain")
+    self.addProperty("body",_WF_MAIL_DEFAULT_MSG)    
+    self.bypassSupported=True
+    self.setAcceptConnectors(True,"input")
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)
+    return True
+    
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    if not mailModulesLoaded:
+        res=self.critical("mail:modules","Modules not loaded. Check your sys.path or install them")
+#    if self.login=="":
+#        res=self.critical("mail:loginEmpty","'Login' can not be empty") and res
+    to=str(self.to).strip()
+    if to=="":
+        res=self.critical("mail:toEmpty","'To' can not be empty") and res
+#    else:
+#        list=to.split(',')
+#        for item in list:
+#            item=item.strip()
+#            if re.match('^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,20})$',item) == None:
+#                res=self.critical("mail:invalidTo","Invalid email address: "+item+". Use ',' to separate multiple mail addresses.") and res
+
+    return res
+    
+def process(self):
+    res=True
+    def sendMail(up=None):
+        try:
+            s = smtplib.SMTP(self.smtpServer,int(self.port))
+        except Exception as e:
+            return self.critical("process:smtp","smtp Error: {}".format(e))
+        try:
+            s.starttls()
+        except smtplib.SMTPException as e:
+             self.warning("process:tls","TLS not supported by server")
+        try:
+            s.ehlo()
+            if self.login!="":
+                s.login(self.login,self.pwd)
+            msg = MIMEMultipart()
+            subject=self.evaluate(str(self.subject))
+            evaluatedTo=self.evaluate(str(self.to))
+            body=self.evaluate(str(self.body))
+            if up!=None:
+                subject=up.evaluateTokensString(subject)
+                evaluatedTo=up.evaluateTokensString(evaluatedTo)
+                body=up.evaluateTokensString(body)
+            msg['Subject']=subject
+            f=self.mailFrom.strip()
+            msg['From']=f if len(f)>0 else self.login
+            msg['To']=evaluatedTo
+            r=self.replyTo.strip()
+            if len(r) > 0:
+                msg['Reply-To']=r
+            msg.attach(MIMEText(body,self.bodyType))
+            s.sendmail(self.login,evaluatedTo.split(","),msg.as_string())
+            s.quit()
+            return True
+        except Exception as e:
+            return self.critical("process:smtp","smtp Error: {}".format(e))
+            
+    if self.bypassEnabled:
+        return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    hasInput = False
+    for c in inputs:                                  
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            hasInput = True
+    if not hasInput and self.onlySendIfInput: 
+        return True     
+    if self.onePerFile:
+        for c in self.getConnectors():
+            for up in c.getUniversalPaths():
+                d={}
+                d["up"]=up
+                self._localDict=d
+                self.setPropertiesFromUP(up)     
+                done=sendMail(up)
+                if not done:
+                    self.addFailedUP(up)
+                res=done and res
+    else:
+        res=sendMail()
+    return res</code>
+     <login type="string"></login>
+     <onlySendIfInput type="string"></onlySendIfInput>
+     <onePerFile type="bool">false</onePerFile>
+     <pwd type="string" encrypted="1">AwWFPxt1x5nT+hJpV7Bh5rtdXyfzswqzvJ9f</pwd>
+     <smtpServer type="string">smtp.gmail.com</smtpServer>
+     <port type="int">587</port>
+     <mailFrom type="string"></mailFrom>
+     <to type="string"></to>
+     <replyTo type="string"></replyTo>
+     <subject type="string">Mistika Workflows Mail Node Processed</subject>
+     <bodyType type="string">plain</bodyType>
+     <body type="string">Here you have the loudness measures!
+
+
+&lt;?py
+import pandas as pd
+def addToList(list,up):
+    def getdata(data,name):
+        return data[name] if name in data else ""
+
+    data=up.getPrivateData("youlean")
+    vector=[]
+    vector.append(up.getFilePath())
+    try:
+        vector.append(getdata(data,"Integrated"))
+        vector.append(getdata(data,"Loudness Range"))
+        vector.append(getdata(data,"Average Dynamics"))
+        vector.append(getdata(data,"Momentary Max"))	
+        vector.append(getdata(data,"Short Term Max"))
+        vector.append(getdata(data,"True Peak Max"))
+        vector.append(getdata(data,"Report"))
+        vector.append(getdata(data,"Errors"))
+    except:
+        print("Error reading youlean metadata from {}".format(up.getFilePath()))
+        print(data)
+		
+    list.append(vector)
+def getHTML(list):
+    cols=["File","Integrated","Loudness Range","Average Dynamics","Momentary Max","Short Term Max","True Peak Max","Report", "Errors"]
+    df=pd.DataFrame(list, columns=cols)
+    html=df.to_html(index=False)
+    html=html.replace("&lt;th>", '&lt;th style="text-align: center;">')
+    return html
+
+list=[]
+if self.onePerFile:
+    up=self._localDict['up']
+    addToList(list,up)
+else:
+    for c in self.getConnectors():
+        for up in c.getUniversalPaths():
+            addToList(list,up)
+print (getHTML(list))
+?></body>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="eb232896-d5c9-4f80-859c-5ac635824bd5" type="input" specialType="order"/>
+     <rankTo name="rankTo" id="319fb6c1-716c-40cb-8759-9189b8959a8d" type="output" specialType="order"/>
+     <input name="input" id="be194037-48c5-4bb5-b7a8-55760f202d9d" type="input">
+      <linkedTo>01632261-3b0f-47e8-ad6a-3ab5a7570c83</linkedTo>
+     </input>
+     <input name="input" id="f65de0b9-0d60-4c80-8818-e056989eb8de" type="input">
+      <linkedTo>5a86e461-ce1d-4dba-a4ce-de8813d75ec3</linkedTo>
+     </input>
+    </connections>
+   </node>
+   <node type="output" class="Mail">
+    <properties>
+     <objectName type="string">Mail_2</objectName>
+     <color type="color">#e1e1d2</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1213.06,-13.824</pos>
+     <schemaName type="string">mail</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+
+mailModulesLoaded=False
+try:
+    import sys
+    import smtplib
+    import re
+    from email.mime.text import MIMEText
+    from email.mime.multipart import MIMEMultipart
+    mailModulesLoaded=True
+except ImportError as e:
+    print("Unable to import modules: "+e.message)
+    print("check your sys.path ")
+            
+_WF_MAIL_DEFAULT_MSG="""Put Your Text Here
+&lt;?py
+if self.onePerFile:
+    print("Input file:")
+    up=self._localDict['up']
+    print (up.getFilePath())
+else:
+    print("List of input Files:")
+    for c in self.getConnectors():
+        for p in c.getUniversalPaths():
+            print (p.getFilePath())
+?>"""
+
+def init(self):
+    self.color=QColor(225,225,210)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("login")
+    self.addProperty("onlySendIfInput")
+    self.addProperty("onePerFile",False)
+    self.addEncryptedProperty("pwd")
+    self.addProperty("smtpServer","smtp.gmail.com")
+    self.addProperty("port",587)
+    self.addProperty("mailFrom")
+    self.addProperty("to") #comma separated list
+    self.addProperty("replyTo")
+    self.addProperty("subject","Mistika Workflows Mail Node Processed")
+    self.addProperty("bodyType","plain")
+    self.addProperty("body",_WF_MAIL_DEFAULT_MSG)    
+    self.bypassSupported=True
+    self.setAcceptConnectors(True,"input")
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)
+    return True
+    
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    if not mailModulesLoaded:
+        res=self.critical("mail:modules","Modules not loaded. Check your sys.path or install them")
+#    if self.login=="":
+#        res=self.critical("mail:loginEmpty","'Login' can not be empty") and res
+    to=str(self.to).strip()
+    if to=="":
+        res=self.critical("mail:toEmpty","'To' can not be empty") and res
+#    else:
+#        list=to.split(',')
+#        for item in list:
+#            item=item.strip()
+#            if re.match('^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,20})$',item) == None:
+#                res=self.critical("mail:invalidTo","Invalid email address: "+item+". Use ',' to separate multiple mail addresses.") and res
+
+    return res
+    
+def process(self):
+    res=True
+    def sendMail(up=None):
+        try:
+            s = smtplib.SMTP(self.smtpServer,int(self.port))
+        except Exception as e:
+            return self.critical("process:smtp","smtp Error: {}".format(e))
+        try:
+            s.starttls()
+        except smtplib.SMTPException as e:
+             self.warning("process:tls","TLS not supported by server")
+        try:
+            s.ehlo()
+            if self.login!="":
+                s.login(self.login,self.pwd)
+            msg = MIMEMultipart()
+            subject=self.evaluate(str(self.subject))
+            evaluatedTo=self.evaluate(str(self.to))
+            body=self.evaluate(str(self.body))
+            if up!=None:
+                subject=up.evaluateTokensString(subject)
+                evaluatedTo=up.evaluateTokensString(evaluatedTo)
+                body=up.evaluateTokensString(body)
+            msg['Subject']=subject
+            f=self.mailFrom.strip()
+            msg['From']=f if len(f)>0 else self.login
+            msg['To']=evaluatedTo
+            r=self.replyTo.strip()
+            if len(r) > 0:
+                msg['Reply-To']=r
+            msg.attach(MIMEText(body,self.bodyType))
+            s.sendmail(self.login,evaluatedTo.split(","),msg.as_string())
+            s.quit()
+            return True
+        except Exception as e:
+            return self.critical("process:smtp","smtp Error: {}".format(e))
+            
+    if self.bypassEnabled:
+        return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    hasInput = False
+    for c in inputs:                                  
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            hasInput = True
+    if not hasInput and self.onlySendIfInput: 
+        return True     
+    if self.onePerFile:
+        for c in self.getConnectors():
+            for up in c.getUniversalPaths():
+                d={}
+                d["up"]=up
+                self._localDict=d
+                self.setPropertiesFromUP(up)     
+                done=sendMail(up)
+                if not done:
+                    self.addFailedUP(up)
+                res=done and res
+    else:
+        res=sendMail()
+    return res</code>
+     <login type="string"></login>
+     <onlySendIfInput type="string"></onlySendIfInput>
+     <onePerFile type="bool">false</onePerFile>
+     <pwd type="string" encrypted="1">AwUAup7wQhxWf5fs0jXkYz7Y2qJ2No82ORra</pwd>
+     <smtpServer type="string">smtp.gmail.com</smtpServer>
+     <port type="int">587</port>
+     <mailFrom type="string"></mailFrom>
+     <to type="string"></to>
+     <replyTo type="string"></replyTo>
+     <subject type="string">Mistika Workflows Mail Node Processed</subject>
+     <bodyType type="string">plain</bodyType>
+     <body type="string">Here you have the loudness measures for failed files!
+
+
+&lt;?py
+import pandas as pd
+def addToList(list,up):
+    def getdata(data,name):
+        return data[name] if name in data else ""
+
+    data=up.getPrivateData("youlean")
+    vector=[]
+    vector.append(up.getFilePath())
+    try:
+        vector.append(getdata(data,"Integrated"))
+        vector.append(getdata(data,"Loudness Range"))
+        vector.append(getdata(data,"Average Dynamics"))
+        vector.append(getdata(data,"Momentary Max"))	
+        vector.append(getdata(data,"Short Term Max"))
+        vector.append(getdata(data,"True Peak Max"))
+        vector.append(getdata(data,"Report"))
+        vector.append(getdata(data,"Errors"))
+    except:
+        print("Error reading youlean metadata from {}".format(up.getFilePath()))
+        print(data)
+		
+    list.append(vector)
+def getHTML(list):
+    cols=["File","Integrated","Loudness Range","Average Dynamics","Momentary Max","Short Term Max","True Peak Max","Report", "Errors"]
+    df=pd.DataFrame(list, columns=cols)
+    html=df.to_html(index=False)
+    html=html.replace("&lt;th>", '&lt;th style="text-align: center;">')
+    return html
+
+list=[]
+if self.onePerFile:
+    up=self._localDict['up']
+    addToList(list,up)
+else:
+    for c in self.getConnectors():
+        for up in c.getUniversalPaths():
+            addToList(list,up)
+print (getHTML(list))
+?></body>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="99e69b61-99a0-478f-8a03-eff6276a4f50" type="input" specialType="order"/>
+     <rankTo name="rankTo" id="21978922-3739-4e28-a908-71b4601aa8a6" type="output" specialType="order"/>
+     <input name="input" id="1ce1b907-9965-478e-a854-c48d51a4b379" type="input">
+      <linkedTo>7019e059-3c2d-4c95-8858-0a0e5a141012</linkedTo>
+     </input>
+    </connections>
+   </node>
+   <node type="task" class="YouleanLoudnessMeter">
+    <properties>
+     <objectName type="string">YouleanLoudnessMeter</objectName>
+     <color type="color">#005481</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">91.2386,-224.391</pos>
+     <schemaName type="string">youleanloudnessmeter</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor,QRegularExpression
+from Mistika.classes import Cconnector,CbaseItem,CexternalAppNodeLink,CuniversalPath,CnameConvention
+from Mistika import sgoPaths
+import subprocess
+import os
+import platform
+import sys
+from baseItemTools import totalNumberOfUPs
+import Mistika
+
+def youleanPath(self):
+    p=self.evaluate(self.binPath).strip()
+    if not p:
+        p=getDefaultYoulinePath()
+    return p
+    
+def getDefaultYoulinePath():
+    if platform.system()=="Windows":
+        return "C:/Program Files/Youlean/Youlean Loudness Meter 2/ylm2.exe"
+    elif platform.system()=="Darwin":
+        return "/usr/local/bin/ylm2"
+    return ""
+
+    
+def parseYouleanConfigPullDowns(self):
+    def parseList(text,startText,endText="--"):
+        lines=text.splitlines()
+        startFound=False
+        result=[]
+        for line in lines:
+            line=line.strip()
+            if line.startswith(startText):
+                startFound=True
+                continue
+            if startFound:
+                if line.startswith(endText):
+                    break
+                if line:
+                    result.append(line)
+        return result
+    if self.getStore().hasAttribute("configLists"):
+        return False
+    fp=youleanPath(self)
+    if not fp:
+        return False
+    cmd="{} -h".format(fp)
+    configLists={}
+    try:
+        if platform.system()=="Windows":
+            result=subprocess.run([fp, "-h"], creationflags=subprocess.CREATE_NO_WINDOW,capture_output=True, text=True)
+        else:
+             result=subprocess.run([fp, "-h"], capture_output=True, text=True)
+        configLists["preset"]=parseList(result.stdout,"--preset-name &lt;name> available options:")
+        configLists["channelConfig"]=["Auto","Custom"]+parseList(result.stdout,"--channel-config &lt;config> available options:")
+        configLists["reportType"]=parseList(result.stdout,"--export-type &lt;type> available options:")
+        if configLists["preset"] and configLists["channelConfig"] and configLists["reportType"]:
+            self.getStore().setAttribute("configLists",configLists)
+            setYouleanDefaultsFromConfigLists(self,configLists)
+    except Exception as e:
+        print("Exception",e)
+        return False
+    return True
+            
+
+def setYouleanDefaultsFromConfigLists(self,configLists=None):
+    if not configLists:
+        configLists=self.getStore().getAttribute("configLists")
+    if configLists:
+        self._presetList=configLists["preset"]
+        self._channelConfigList=configLists["channelConfig"]
+        self._reportTypeList=configLists["reportType"]
+        if self._presetList:
+            self.preset=self._presetList[0]
+        if self._channelConfigList:
+            self.channelConfig=self._channelConfigList[0]
+        if self._reportTypeList:
+            self.reportType=self._reportTypeList[0]
+  
+def init(self):
+    self.setClassName("Youlean Loudness Meter")
+    self.color=QColor(0, 84, 129)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)    
+    self.addConnector("report",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("passed",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("failed",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True,"input_%") 
+    self.addProperty("_presetList")
+    self.addProperty("preset")
+    self.addProperty("customPreset","")
+    self.addProperty("_channelConfigList")   
+    self.addProperty("channelConfig") 
+    self.addProperty("generateReport",True)
+    self.addProperty("_reportTypeList")   
+    self.addProperty("reportType") 
+    self.addProperty("reportFolderPath","") 
+    self.addProperty("normalize",False)
+    self.addProperty("normalizeFolderPath","") 
+    self.addProperty("binPath",getDefaultYoulinePath())
+    self.addProperty("threads",1)
+    self.addProperty("IntegratedMin",-70)
+    self.addProperty("IntegratedMax",30)
+    self.addProperty("IntegratedDialMin",-70)
+    self.addProperty("IntegratedDialMax",30)
+    self.addProperty("LoudnessRangeMin",0)
+    self.addProperty("LoudnessRangeMax",100)
+    self.addProperty("LoudnessRangeDialMin",0)
+    self.addProperty("LoudnessRangeDialMax",100)
+    self.addProperty("SpeechContentMin",0)
+    self.addProperty("SpeechContentMax",100)
+    self.addProperty("AverageDynamicsMin",0)
+    self.addProperty("AverageDynamicsMax",100)
+    self.addProperty("MomentaryMaxMin",-70)
+    self.addProperty("MomentaryMaxMax",30)
+    self.addProperty("ShortTermMaxMin",-70)
+    self.addProperty("ShortTermMaxMax",30)
+    self.addProperty("TruePeakMaxMin",-70)
+    self.addProperty("TruePeakMaxMax",30)
+    
+    self.setPropertyVisible("customPreset",False)
+    self.bypassSupported=True
+    self.setDropToProperty("normalizeFolderPath")
+    self.nameConvention=CnameConvention("[path][baseName][.ext]")
+    #1=Directories, 2=Files, 3=both
+    self.setDropSupportedTypes(1)
+    
+    if parseYouleanConfigPullDowns(self):
+        setYouleanDefaultsFromConfigLists(self)
+
+    return True
+
+def isReady(self):
+    if parseYouleanConfigPullDowns(self):
+        setYouleanDefaultsFromConfigLists(self)
+    if self.bypassSupported and self.bypassEnabled:
+        return True    
+    res=True
+    fp=youleanPath(self)
+    if fp=="":
+        res=self.critical("youlean:isReady:binUndef","Youlean binary not defined") and res
+    elif not os.path.exists(fp):
+        res= self.critical("youlean:isReady:binNotFound","Youlean binary not found: ".format(fp)) and res
+    if self.preset=="Custom":
+        fp=self.evaluate(self.customPreset)
+        if fp=="":
+            res=self.critical("youlean:isReady:presetUndef","Custom Preset not defined") and res
+        elif not os.path.exists(fp):
+            res= self.critical("youlean:isReady:presetNotFound","Youlean Preset not found: {fp}".format(fp)) and res        
+    return res
+
+def process(self):
+
+    def composeCommandLineParams(self,finalRelExportPath,finalRelNormalizedPath):
+        frep=os.path.normpath(finalRelExportPath) if finalRelExportPath else ""
+        frep=frep.rstrip("/\\")
+        frnp=os.path.normpath(finalRelNormalizedPath) if finalRelNormalizedPath else ""
+        frnp=frnp.rstrip("/\\")
+        cmdLineParams="--input-file-path \"[input]\""
+        cmdLineParams+=" --print-result"
+        if self.preset=="Custom":
+            cmdLineParams+=" --preset-import-path \"{}\"".format(os.path.normpath(self.customPreset.strip()))
+        elif not self.preset=="DEFAULT":
+            cmdLineParams+=" --preset-name \"{}\"".format(self.preset)
+        if not self.channelConfig=="Auto":
+            cmdLineParams+=" --channel-config \"{}\"".format(self.channelConfig)
+        if self.generateReport:
+            cmdLineParams+=" --export --export-type \"{}\"".format(self.reportType)    
+            path=os.path.normpath(self.evaluate(self.reportFolderPath.strip()))
+            if frep:
+                path=os.path.join(path,os.path.normpath(frep))
+            if path!="":
+                cmdLineParams+=" --export-folder-path \"{}\"".format(path)         
+                os.makedirs(path,exist_ok=True)
+        if self.normalize:
+            cmdLineParams+=" --normalize"
+            path=os.path.normpath(self.evaluate(self.normalizeFolderPath.strip()))
+            if frnp:
+                path=os.path.join(path,os.path.normpath(frnp))
+            if path!="":
+                cmdLineParams+=" --normalize-folder-path \"{}\"".format(path)                
+                os.makedirs(path,exist_ok=True)
+        return cmdLineParams
+        
+    def getReportExtension(name):
+        if (name=="PDF"):
+            return "pdf"
+        elif (name=="PNG"):
+            return "png"
+        elif(name=="SVG"):
+            return "svg"
+        elif(name=="CSV"):
+            return "csv"
+        elif(name=="DOLBY_CSV"):
+            return "csv"
+        elif(name=="GRAPH_MEMORY"):
+            return "graph"
+        elif(name=="TEXT_SUMMARY"):
+            return "txt"
+        return "unsupported"
+
+    def inRange(data,name,min,max,errors,required):
+        if not required and not name in data:
+            return True
+        v=float(data[name])
+        if v&lt;min or v>max:
+            errors.append("{} is out of range({},{})".format(name,min,max))
+            return False
+        return True
+    
+    def qc(up,data,normalized):
+        correct=False
+        errors=data["Errors"] if "Errors" in data else []
+        required=not normalized
+        try:
+            inRange(data,"Integrated",self.IntegratedMin,self.IntegratedMax,errors,False)
+            inRange(data,"Loudness Range",self.LoudnessRangeMin,self.LoudnessRangeMax,errors,True)
+            inRange(data,"Integrated Dial",self.IntegratedDialMin,self.IntegratedDialMax,errors,False)
+            inRange(data,"Loudness Range Dial",self.LoudnessRangeDialMin,self.LoudnessRangeDialMax,errors,False)
+            inRange(data,"Speech Content",self.SpeechContentMin,self.SpeechContentMax,errors,False)
+            inRange(data,"Average Dynamics",self.AverageDynamicsMin,self.AverageDynamicsMax,errors,False)
+            inRange(data,"Momentary Max",self.MomentaryMaxMin,self.MomentaryMaxMax,errors,False)
+            inRange(data,"Short Term Max",self.ShortTermMaxMin,self.ShortTermMaxMax,errors,False)
+            inRange(data,"True Peak Max",self.TruePeakMaxMin,self.TruePeakMaxMax,errors,False)                            
+        except Exception as e:
+            errors.append("Youlean QC metadata incomplete or not found")
+        up.setPrivateData("youlean",data)
+        if not errors:            
+            correct=True
+        else:
+            data["Errors"]=errors                
+        return [data,correct]
+                
+    res=True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    reportOut = self.getFirstConnectorByName("report")
+    correctOut = self.getFirstConnectorByName("passed")
+    failedOut = self.getFirstConnectorByName("failed")
+    reportOut.clearUniversalPaths()
+    correctOut.clearUniversalPaths()
+    failedOut.clearUniversalPaths()
+    dstUrl=self.evaluate(self.normalizeFolderPath).strip()
+    self.setComplexity(totalNumberOfUPs(self)*100)
+    if self.bypassEnabled:
+        return True
+        
+    self.progressUpdated(0)
+    binfp=youleanPath(self)
+    apps=[]
+    threads=int(self.threads)
+    queue=self.createExecutionQueue(threads)
+    cancelled=False
+    totalFrames=0
+    reportExt=self.reportType.lower()
+    self.getStore().setAttribute("apps",{})
+    reportFolderPath=self.evaluate(self.reportFolderPath.strip()) if self.generateReport else ""
+    for c in inputs:
+        if cancelled:
+            break
+        for up in c.getUniversalPaths():
+            finalRelExportPath=""
+            finalRelNormalizedPath=""
+            # remove output files if they already exist
+            if self.generateReport:
+                #report
+                toRemove=self.composeDstFilePath(reportFolderPath,up,False,0)
+                toRemove.setExtension(getReportExtension(self.reportType))
+                finalRelExportPath=toRemove.getRelPath()
+                try:
+                    os.remove(toRemove.getFilePath())
+                except:
+                    pass
+            if self.normalize:
+                #normalized
+                dst=self.composeDstFilePath(dstUrl,up,False,0)                                
+                finalRelNormalizedPath=dst.getRelPath()
+                try:
+                    os.remove(dst.getFilePath())
+                except:
+                    pass
+            else:
+                dst=up
+                    
+            cmdLineParams=composeCommandLineParams(self,finalRelExportPath,finalRelNormalizedPath)
+            mfid=up.getMediaFileInfoData()
+            frames=mfid.getToken("Frames")
+            frames=100
+            fp=up.getFilePath()
+            #self.info("youlean:process:up","Preparing {}".format(fp))
+            app=self.createExternalApp()
+            if platform.system()=='Darwin':
+                platormResult=subprocess.run(['sysctl', 'machdep.cpu.brand_string'], capture_output=True, text=True)
+                isIntel='Apple' not in platormResult.stdout.strip()
+            else:
+                isIntel=True
+            app.setRosettaMode(isIntel)
+            apps.append((app,up,dst))
+            if frames>0:
+                totalFrames+=frames
+                app.setMaxProgress(frames,totalFrames)                  
+            app.addHookRX("errorRX",QRegularExpression("^((Normalize)? error\\:.*)$"))
+            app.addHookRX("progressRX",QRegularExpression("^frame=\\s*(-?\\d+).*"))
+            app.addHookRX("Integrated",QRegularExpression("^Integrated\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("Integrated Dial",QRegularExpression("^Integrated Dial\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("Loudness Range",QRegularExpression("^Loudness Range\\s*=\\s*(-?\\d+\\.\\d+) L[UK].*"))
+            app.addHookRX("Loudness Range Dial",QRegularExpression("^Loudness Range Dial\\s*=\\s*(-?\\d+\\.\\d+) L[UK].*"))
+            app.addHookRX("Speech Content",QRegularExpression("^Speech Content\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("Average Dynamics",QRegularExpression("^Average Dynamics \\(PLR\\)\\s*=\\s*(-?\\d+\\.\\d+) L[UK].*"))
+            app.addHookRX("Momentary Max",QRegularExpression("^Momentary Max\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("Short Term Max",QRegularExpression("^Short Term Max\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("True Peak Max",QRegularExpression("^True Peak Max\\s*=\\s*(-?\\d+\\.\\d+) dBTP.*"))
+            app.addHookRX("Report",QRegularExpression("^Export file path:\\s*(.*)\\s*"))
+            app.addHookRX("Normalized",QRegularExpression("^Started normalizing:\\s*(.*)\\s*"))
+            
+            app.setOutputUP(dst)
+            app.setPrintOutputs(app.EA_STD_BOTH)
+            defTokens=app.createDefaultDict(up)
+            args=app.createArgumentsList(self.evaluate(cmdLineParams.strip()),up,defTokens,False)
+            #print("args",args)
+            quoted=app.quoteList(args)
+            if self.isCancelled():
+                res=False
+                cancelled=True
+                queue.cancelAll()
+                break
+            self.info("youlean:process:args","\"{}\" {}".format(binfp,' '.join(quoted)))
+            app.setParams(binfp,args)                   
+            queue.addJob(app)
+    queue.wait()
+    yl=self.getStore().getAttribute("apps")
+    reportFP=None
+    for app,up,dst in apps:   
+        exitCode=app.exitCode()
+        fp=up.getFilePath()
+        id=str(app.id())
+        data=yl[id] if id in yl else {}
+        if exitCode&lt;0: #execution error
+            print("Unable to process {}. exitCode={}".format(fp,exitCode))
+            res=self.critical("youlean:process:error","Unable to process {}. exitCode={}".format(fp,exitCode)) and res
+            failedUP=up
+            if not data:
+                data={}
+            if not Errors in data:
+                data["Errors"]=[]            
+            data["Errors"].append("Unable to execute ylm2. exit with code {}".format(exitCode))                
+            failedUP.setPrivateData("youlean",data)
+            self.addFailedUP(failedUP)
+            failedOut.addUniversalPath(failedUP)
+        else:
+            if self.normalize:
+                if "Normalized" in data:
+                    if "Errors" in data:
+                        processed=up
+                    else:
+                        processed=CuniversalPath(self.getNameConvention(),data["Normalized"])
+                else:
+                    processed=dst
+            else:
+                processed=up
+            errors=data["Errors"] if "Errors" in data else []
+            if not self.normalize or not "Errors" in data:                     
+                [data,correct]=qc(processed,data,self.normalize)
+            else:
+                correct=not "Errors" in data
+            
+            if self.generateReport:
+                if "Report" in data:
+                    reported=CuniversalPath(self.getNameConvention(),data["Report"])
+                else:
+                    reported=self.composeDstFilePath(reportFolderPath,up,False,0)
+                    reported.setExtension(getReportExtension(self.reportType))
+                    data["Report"]=reported.getFilePath()
+                reported.setPrivateData("youlean",data)
+                reportOut.addUniversalPath(reported)
+            processed.setPrivateData("youlean",data)            
+            if correct:
+                correctOut.addUniversalPath(processed)
+            else :
+                failedOut.addUniversalPath(processed)
+            
+        app.deleteLater()
+    queue.deleteLater()
+    self.progressUpdated(self.complexity())
+    return res
+
+# appId ExternalApp ID emiting the signal (None is not multithreaded)
+# output can be EA_STD_OUT or EA_STD_ERR
+# name is the hook name
+# rxMatch is the matching QRegularExpressionMatch 
+# line is the matching line
+def onExternalAppHook(self,appId,output,name,rxMatch,line):
+    # you can manage your custom hooks here
+    id=str(appId)
+    value=rxMatch.captured(1)
+    data=self.getStore().getAttribute("apps")
+    if not id in data:
+        data[id]={}
+    if name=="Report":
+        value=value.replace('\\','/')
+    if name=="errorRX":
+        name="Errors"
+        if "Errors" in data[id]:
+            v=data[id]["Errors"]
+            v.append(value)
+            value=v
+        else:
+            v=[]
+            v.append(value)
+            value=v
+            
+        
+    data[id][name]=value
+    self.getStore().setAttribute("apps",data)
+    
+def onPropertyUpdated(self,name):
+    param=None
+    prop=None 
+    try:
+        if name=="preset":
+            self.setPropertyVisible("customPreset",self.preset=="Custom")
+        elif name=="generateReport":
+            visible=self.generateReport==True
+            self.setPropertyVisible("reportType",visible)
+            self.setPropertyVisible("reportFolderPath",visible)
+        elif name=="normalize":
+            visible=self.normalize==True
+            self.setPropertyVisible("normalizeFolderPath",visible)
+#            visible=not visible #QC is hidden when normalizing
+#            self.setPropertyVisible("IntegratedMin",visible)
+#            self.setPropertyVisible("IntegratedMax",visible)
+#            self.setPropertyVisible("IntegratedDialMin",visible)
+#            self.setPropertyVisible("IntegratedDialMax",visible)
+#            self.setPropertyVisible("LoudnessRangeMin",visible)
+#            self.setPropertyVisible("LoudnessRangeMax",visible)
+#            self.setPropertyVisible("LoudnessRangeDialMin",visible)
+#            self.setPropertyVisible("LoudnessRangeDialMax",visible)
+#            self.setPropertyVisible("SpeechContentMin",visible)
+#            self.setPropertyVisible("SpeechContentMax",visible)
+#            self.setPropertyVisible("XXAverageDynamicsMinX",visible)
+#            self.setPropertyVisible("AverageDynamicsMax",visible)
+#            self.setPropertyVisible("MomentaryMaxMin",visible)
+#            self.setPropertyVisible("MomentaryMaxMax",visible)
+#            self.setPropertyVisible("ShortTermMaxMin",visible)
+#            self.setPropertyVisible("ShortTermMaxMax",visible)
+#            self.setPropertyVisible("TruePeakMaxMin",visible)
+#            self.setPropertyVisible("TruePeakMaxMax",visible)
+    except AttributeError:
+        pass
+                </code>
+     <preset type="string">DEFAULT</preset>
+     <customPreset type="string"></customPreset>
+     <channelConfig type="string">Auto</channelConfig>
+     <generateReport type="bool">true</generateReport>
+     <reportType type="string">PDF</reportType>
+     <reportFolderPath type="string"></reportFolderPath>
+     <normalize type="bool">false</normalize>
+     <normalizeFolderPath type="string"></normalizeFolderPath>
+     <binPath type="string"></binPath>
+     <threads type="int">1</threads>
+     <IntegratedMin type="int">-70</IntegratedMin>
+     <IntegratedMax type="int">30</IntegratedMax>
+     <IntegratedDialMin type="int">-70</IntegratedDialMin>
+     <IntegratedDialMax type="int">30</IntegratedDialMax>
+     <LoudnessRangeMin type="int">0</LoudnessRangeMin>
+     <LoudnessRangeMax type="int">100</LoudnessRangeMax>
+     <LoudnessRangeDialMin type="int">0</LoudnessRangeDialMin>
+     <LoudnessRangeDialMax type="int">100</LoudnessRangeDialMax>
+     <SpeechContentMin type="int">0</SpeechContentMin>
+     <SpeechContentMax type="int">100</SpeechContentMax>
+     <AverageDynamicsMin type="int">0</AverageDynamicsMin>
+     <AverageDynamicsMax type="int">100</AverageDynamicsMax>
+     <MomentaryMaxMin type="int">-70</MomentaryMaxMin>
+     <MomentaryMaxMax type="int">30</MomentaryMaxMax>
+     <ShortTermMaxMin type="int">-70</ShortTermMaxMin>
+     <ShortTermMaxMax type="int">30</ShortTermMaxMax>
+     <TruePeakMaxMin type="int">-70</TruePeakMaxMin>
+     <TruePeakMaxMax type="int">30</TruePeakMaxMax>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="efe51172-69f6-4cb6-98d4-0af0e6de8b9e" type="input" specialType="order"/>
+     <rankTo name="rankTo" id="59df07ca-4fb3-4cd9-a83b-d87a3c36e48b" type="output" specialType="order"/>
+     <input_1 name="input_ 1" id="0f4fd764-ad52-4975-9bfe-6da97977bb49" type="input">
+      <linkedTo>68ed52c7-2970-4cf4-bca2-0e83c621d6fc</linkedTo>
+     </input_1>
+     <input name="input" id="c5d3d7ea-680a-498a-9598-6a52cb39d9f8" type="input">
+      <linkedTo>060aeca2-4671-4ced-b5f0-9d7c651a13fd</linkedTo>
+     </input>
+     <report name="report" id="cc3f5553-8be0-4e54-99f7-06856efaa808" type="output"/>
+     <passed name="passed" id="01632261-3b0f-47e8-ad6a-3ab5a7570c83" type="output">
+      <linkedTo>be194037-48c5-4bb5-b7a8-55760f202d9d</linkedTo>
+     </passed>
+     <failed name="failed" id="7b482e8b-558b-4e5f-a92a-07015f6af9b8" type="output">
+      <linkedTo>988cc916-a640-4966-b058-d00d314c6eaf</linkedTo>
+     </failed>
+    </connections>
+   </node>
+   <node type="task" class="YouleanLoudnessMeter">
+    <properties>
+     <objectName type="string">YouleanLoudnessMeter_2</objectName>
+     <color type="color">#005481</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">697.202,-102</pos>
+     <schemaName type="string">youleanloudnessmeter</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor,QRegularExpression
+from Mistika.classes import Cconnector,CbaseItem,CexternalAppNodeLink,CuniversalPath,CnameConvention
+from Mistika import sgoPaths
+import subprocess
+import os
+import platform
+import sys
+from baseItemTools import totalNumberOfUPs
+import Mistika
+
+def youleanPath(self):
+    p=self.evaluate(self.binPath).strip()
+    if not p:
+        p=getDefaultYoulinePath()
+    return p
+    
+def getDefaultYoulinePath():
+    if platform.system()=="Windows":
+        return "C:/Program Files/Youlean/Youlean Loudness Meter 2/ylm2.exe"
+    elif platform.system()=="Darwin":
+        return "/usr/local/bin/ylm2"
+    return ""
+
+    
+def parseYouleanConfigPullDowns(self):
+    def parseList(text,startText,endText="--"):
+        lines=text.splitlines()
+        startFound=False
+        result=[]
+        for line in lines:
+            line=line.strip()
+            if line.startswith(startText):
+                startFound=True
+                continue
+            if startFound:
+                if line.startswith(endText):
+                    break
+                if line:
+                    result.append(line)
+        return result
+    if self.getStore().hasAttribute("configLists"):
+        return False
+    fp=youleanPath(self)
+    if not fp:
+        return False
+    cmd="{} -h".format(fp)
+    configLists={}
+    try:
+        if platform.system()=="Windows":
+            result=subprocess.run([fp, "-h"], creationflags=subprocess.CREATE_NO_WINDOW,capture_output=True, text=True)
+        else:
+             result=subprocess.run([fp, "-h"], capture_output=True, text=True)
+        configLists["preset"]=parseList(result.stdout,"--preset-name &lt;name> available options:")
+        configLists["channelConfig"]=["Auto","Custom"]+parseList(result.stdout,"--channel-config &lt;config> available options:")
+        configLists["reportType"]=parseList(result.stdout,"--export-type &lt;type> available options:")
+        if configLists["preset"] and configLists["channelConfig"] and configLists["reportType"]:
+            self.getStore().setAttribute("configLists",configLists)
+            setYouleanDefaultsFromConfigLists(self,configLists)
+    except Exception as e:
+        print("Exception",e)
+        return False
+    return True
+            
+
+def setYouleanDefaultsFromConfigLists(self,configLists=None):
+    if not configLists:
+        configLists=self.getStore().getAttribute("configLists")
+    if configLists:
+        self._presetList=configLists["preset"]
+        self._channelConfigList=configLists["channelConfig"]
+        self._reportTypeList=configLists["reportType"]
+        if self._presetList:
+            self.preset=self._presetList[0]
+        if self._channelConfigList:
+            self.channelConfig=self._channelConfigList[0]
+        if self._reportTypeList:
+            self.reportType=self._reportTypeList[0]
+  
+def init(self):
+    self.setClassName("Youlean Loudness Meter")
+    self.color=QColor(0, 84, 129)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)    
+    self.addConnector("report",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("passed",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("failed",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True,"input_%") 
+    self.addProperty("_presetList")
+    self.addProperty("preset")
+    self.addProperty("customPreset","")
+    self.addProperty("_channelConfigList")   
+    self.addProperty("channelConfig") 
+    self.addProperty("generateReport",True)
+    self.addProperty("_reportTypeList")   
+    self.addProperty("reportType") 
+    self.addProperty("reportFolderPath","") 
+    self.addProperty("normalize",False)
+    self.addProperty("normalizeFolderPath","") 
+    self.addProperty("binPath",getDefaultYoulinePath())
+    self.addProperty("threads",1)
+    self.addProperty("IntegratedMin",-70)
+    self.addProperty("IntegratedMax",30)
+    self.addProperty("IntegratedDialMin",-70)
+    self.addProperty("IntegratedDialMax",30)
+    self.addProperty("LoudnessRangeMin",0)
+    self.addProperty("LoudnessRangeMax",100)
+    self.addProperty("LoudnessRangeDialMin",0)
+    self.addProperty("LoudnessRangeDialMax",100)
+    self.addProperty("SpeechContentMin",0)
+    self.addProperty("SpeechContentMax",100)
+    self.addProperty("AverageDynamicsMin",0)
+    self.addProperty("AverageDynamicsMax",100)
+    self.addProperty("MomentaryMaxMin",-70)
+    self.addProperty("MomentaryMaxMax",30)
+    self.addProperty("ShortTermMaxMin",-70)
+    self.addProperty("ShortTermMaxMax",30)
+    self.addProperty("TruePeakMaxMin",-70)
+    self.addProperty("TruePeakMaxMax",30)
+    
+    self.setPropertyVisible("customPreset",False)
+    self.bypassSupported=True
+    self.setDropToProperty("normalizeFolderPath")
+    self.nameConvention=CnameConvention("[path][baseName][.ext]")
+    #1=Directories, 2=Files, 3=both
+    self.setDropSupportedTypes(1)
+    
+    if parseYouleanConfigPullDowns(self):
+        setYouleanDefaultsFromConfigLists(self)
+
+    return True
+
+def isReady(self):
+    if parseYouleanConfigPullDowns(self):
+        setYouleanDefaultsFromConfigLists(self)
+    if self.bypassSupported and self.bypassEnabled:
+        return True    
+    res=True
+    fp=youleanPath(self)
+    if fp=="":
+        res=self.critical("youlean:isReady:binUndef","Youlean binary not defined") and res
+    elif not os.path.exists(fp):
+        res= self.critical("youlean:isReady:binNotFound","Youlean binary not found: ".format(fp)) and res
+    if self.preset=="Custom":
+        fp=self.evaluate(self.customPreset)
+        if fp=="":
+            res=self.critical("youlean:isReady:presetUndef","Custom Preset not defined") and res
+        elif not os.path.exists(fp):
+            res= self.critical("youlean:isReady:presetNotFound","Youlean Preset not found: {fp}".format(fp)) and res        
+    return res
+
+def process(self):
+
+    def composeCommandLineParams(self,finalRelExportPath,finalRelNormalizedPath):
+        frep=os.path.normpath(finalRelExportPath) if finalRelExportPath else ""
+        frep=frep.rstrip("/\\")
+        frnp=os.path.normpath(finalRelNormalizedPath) if finalRelNormalizedPath else ""
+        frnp=frnp.rstrip("/\\")
+        cmdLineParams="--input-file-path \"[input]\""
+        cmdLineParams+=" --print-result"
+        if self.preset=="Custom":
+            cmdLineParams+=" --preset-import-path \"{}\"".format(os.path.normpath(self.customPreset.strip()))
+        elif not self.preset=="DEFAULT":
+            cmdLineParams+=" --preset-name \"{}\"".format(self.preset)
+        if not self.channelConfig=="Auto":
+            cmdLineParams+=" --channel-config \"{}\"".format(self.channelConfig)
+        if self.generateReport:
+            cmdLineParams+=" --export --export-type \"{}\"".format(self.reportType)    
+            path=os.path.normpath(self.evaluate(self.reportFolderPath.strip()))
+            if frep:
+                path=os.path.join(path,os.path.normpath(frep))
+            if path!="":
+                cmdLineParams+=" --export-folder-path \"{}\"".format(path)         
+                os.makedirs(path,exist_ok=True)
+        if self.normalize:
+            cmdLineParams+=" --normalize"
+            path=os.path.normpath(self.evaluate(self.normalizeFolderPath.strip()))
+            if frnp:
+                path=os.path.join(path,os.path.normpath(frnp))
+            if path!="":
+                cmdLineParams+=" --normalize-folder-path \"{}\"".format(path)                
+                os.makedirs(path,exist_ok=True)
+        return cmdLineParams
+        
+    def getReportExtension(name):
+        if (name=="PDF"):
+            return "pdf"
+        elif (name=="PNG"):
+            return "png"
+        elif(name=="SVG"):
+            return "svg"
+        elif(name=="CSV"):
+            return "csv"
+        elif(name=="DOLBY_CSV"):
+            return "csv"
+        elif(name=="GRAPH_MEMORY"):
+            return "graph"
+        elif(name=="TEXT_SUMMARY"):
+            return "txt"
+        return "unsupported"
+
+    def inRange(data,name,min,max,errors,required):
+        if not required and not name in data:
+            return True
+        v=float(data[name])
+        if v&lt;min or v>max:
+            errors.append("{} is out of range({},{})".format(name,min,max))
+            return False
+        return True
+    
+    def qc(up,data,normalized):
+        correct=False
+        errors=data["Errors"] if "Errors" in data else []
+        required=not normalized
+        try:
+            inRange(data,"Integrated",self.IntegratedMin,self.IntegratedMax,errors,False)
+            inRange(data,"Loudness Range",self.LoudnessRangeMin,self.LoudnessRangeMax,errors,True)
+            inRange(data,"Integrated Dial",self.IntegratedDialMin,self.IntegratedDialMax,errors,False)
+            inRange(data,"Loudness Range Dial",self.LoudnessRangeDialMin,self.LoudnessRangeDialMax,errors,False)
+            inRange(data,"Speech Content",self.SpeechContentMin,self.SpeechContentMax,errors,False)
+            inRange(data,"Average Dynamics",self.AverageDynamicsMin,self.AverageDynamicsMax,errors,False)
+            inRange(data,"Momentary Max",self.MomentaryMaxMin,self.MomentaryMaxMax,errors,False)
+            inRange(data,"Short Term Max",self.ShortTermMaxMin,self.ShortTermMaxMax,errors,False)
+            inRange(data,"True Peak Max",self.TruePeakMaxMin,self.TruePeakMaxMax,errors,False)                            
+        except Exception as e:
+            errors.append("Youlean QC metadata incomplete or not found")
+        up.setPrivateData("youlean",data)
+        if not errors:            
+            correct=True
+        else:
+            data["Errors"]=errors                
+        return [data,correct]
+                
+    res=True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    reportOut = self.getFirstConnectorByName("report")
+    correctOut = self.getFirstConnectorByName("passed")
+    failedOut = self.getFirstConnectorByName("failed")
+    reportOut.clearUniversalPaths()
+    correctOut.clearUniversalPaths()
+    failedOut.clearUniversalPaths()
+    dstUrl=self.evaluate(self.normalizeFolderPath).strip()
+    self.setComplexity(totalNumberOfUPs(self)*100)
+    if self.bypassEnabled:
+        return True
+        
+    self.progressUpdated(0)
+    binfp=youleanPath(self)
+    apps=[]
+    threads=int(self.threads)
+    queue=self.createExecutionQueue(threads)
+    cancelled=False
+    totalFrames=0
+    reportExt=self.reportType.lower()
+    self.getStore().setAttribute("apps",{})
+    reportFolderPath=self.evaluate(self.reportFolderPath.strip()) if self.generateReport else ""
+    for c in inputs:
+        if cancelled:
+            break
+        for up in c.getUniversalPaths():
+            finalRelExportPath=""
+            finalRelNormalizedPath=""
+            # remove output files if they already exist
+            if self.generateReport:
+                #report
+                toRemove=self.composeDstFilePath(reportFolderPath,up,False,0)
+                toRemove.setExtension(getReportExtension(self.reportType))
+                finalRelExportPath=toRemove.getRelPath()
+                try:
+                    os.remove(toRemove.getFilePath())
+                except:
+                    pass
+            if self.normalize:
+                #normalized
+                dst=self.composeDstFilePath(dstUrl,up,False,0)                                
+                finalRelNormalizedPath=dst.getRelPath()
+                try:
+                    os.remove(dst.getFilePath())
+                except:
+                    pass
+            else:
+                dst=up
+                    
+            cmdLineParams=composeCommandLineParams(self,finalRelExportPath,finalRelNormalizedPath)
+            mfid=up.getMediaFileInfoData()
+            frames=mfid.getToken("Frames")
+            frames=100
+            fp=up.getFilePath()
+            #self.info("youlean:process:up","Preparing {}".format(fp))
+            app=self.createExternalApp()
+            if platform.system()=='Darwin':
+                platormResult=subprocess.run(['sysctl', 'machdep.cpu.brand_string'], capture_output=True, text=True)
+                isIntel='Apple' not in platormResult.stdout.strip()
+            else:
+                isIntel=True
+            app.setRosettaMode(isIntel)
+            apps.append((app,up,dst))
+            if frames>0:
+                totalFrames+=frames
+                app.setMaxProgress(frames,totalFrames)                  
+            app.addHookRX("errorRX",QRegularExpression("^((Normalize)? error\\:.*)$"))
+            app.addHookRX("progressRX",QRegularExpression("^frame=\\s*(-?\\d+).*"))
+            app.addHookRX("Integrated",QRegularExpression("^Integrated\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("Integrated Dial",QRegularExpression("^Integrated Dial\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("Loudness Range",QRegularExpression("^Loudness Range\\s*=\\s*(-?\\d+\\.\\d+) L[UK].*"))
+            app.addHookRX("Loudness Range Dial",QRegularExpression("^Loudness Range Dial\\s*=\\s*(-?\\d+\\.\\d+) L[UK].*"))
+            app.addHookRX("Speech Content",QRegularExpression("^Speech Content\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("Average Dynamics",QRegularExpression("^Average Dynamics \\(PLR\\)\\s*=\\s*(-?\\d+\\.\\d+) L[UK].*"))
+            app.addHookRX("Momentary Max",QRegularExpression("^Momentary Max\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("Short Term Max",QRegularExpression("^Short Term Max\\s*=\\s*(-?\\d+\\.\\d+) L[UK]FS.*"))
+            app.addHookRX("True Peak Max",QRegularExpression("^True Peak Max\\s*=\\s*(-?\\d+\\.\\d+) dBTP.*"))
+            app.addHookRX("Report",QRegularExpression("^Export file path:\\s*(.*)\\s*"))
+            app.addHookRX("Normalized",QRegularExpression("^Started normalizing:\\s*(.*)\\s*"))
+            
+            app.setOutputUP(dst)
+            app.setPrintOutputs(app.EA_STD_BOTH)
+            defTokens=app.createDefaultDict(up)
+            args=app.createArgumentsList(self.evaluate(cmdLineParams.strip()),up,defTokens,False)
+            #print("args",args)
+            quoted=app.quoteList(args)
+            if self.isCancelled():
+                res=False
+                cancelled=True
+                queue.cancelAll()
+                break
+            self.info("youlean:process:args","\"{}\" {}".format(binfp,' '.join(quoted)))
+            app.setParams(binfp,args)                   
+            queue.addJob(app)
+    queue.wait()
+    yl=self.getStore().getAttribute("apps")
+    reportFP=None
+    for app,up,dst in apps:   
+        exitCode=app.exitCode()
+        fp=up.getFilePath()
+        id=str(app.id())
+        data=yl[id] if id in yl else {}
+        if exitCode&lt;0: #execution error
+            print("Unable to process {}. exitCode={}".format(fp,exitCode))
+            res=self.critical("youlean:process:error","Unable to process {}. exitCode={}".format(fp,exitCode)) and res
+            failedUP=up
+            if not data:
+                data={}
+            if not Errors in data:
+                data["Errors"]=[]            
+            data["Errors"].append("Unable to execute ylm2. exit with code {}".format(exitCode))                
+            failedUP.setPrivateData("youlean",data)
+            self.addFailedUP(failedUP)
+            failedOut.addUniversalPath(failedUP)
+        else:
+            if self.normalize:
+                if "Normalized" in data:
+                    if "Errors" in data:
+                        processed=up
+                    else:
+                        processed=CuniversalPath(self.getNameConvention(),data["Normalized"])
+                else:
+                    processed=dst
+            else:
+                processed=up
+            errors=data["Errors"] if "Errors" in data else []
+            if not self.normalize or not "Errors" in data:                     
+                [data,correct]=qc(processed,data,self.normalize)
+            else:
+                correct=not "Errors" in data
+            
+            if self.generateReport:
+                if "Report" in data:
+                    reported=CuniversalPath(self.getNameConvention(),data["Report"])
+                else:
+                    reported=self.composeDstFilePath(reportFolderPath,up,False,0)
+                    reported.setExtension(getReportExtension(self.reportType))
+                    data["Report"]=reported.getFilePath()
+                reported.setPrivateData("youlean",data)
+                reportOut.addUniversalPath(reported)
+            processed.setPrivateData("youlean",data)            
+            if correct:
+                correctOut.addUniversalPath(processed)
+            else :
+                failedOut.addUniversalPath(processed)
+            
+        app.deleteLater()
+    queue.deleteLater()
+    self.progressUpdated(self.complexity())
+    return res
+
+# appId ExternalApp ID emiting the signal (None is not multithreaded)
+# output can be EA_STD_OUT or EA_STD_ERR
+# name is the hook name
+# rxMatch is the matching QRegularExpressionMatch 
+# line is the matching line
+def onExternalAppHook(self,appId,output,name,rxMatch,line):
+    # you can manage your custom hooks here
+    id=str(appId)
+    value=rxMatch.captured(1)
+    data=self.getStore().getAttribute("apps")
+    if not id in data:
+        data[id]={}
+    if name=="Report":
+        value=value.replace('\\','/')
+    if name=="errorRX":
+        name="Errors"
+        if "Errors" in data[id]:
+            v=data[id]["Errors"]
+            v.append(value)
+            value=v
+        else:
+            v=[]
+            v.append(value)
+            value=v
+            
+        
+    data[id][name]=value
+    self.getStore().setAttribute("apps",data)
+    
+def onPropertyUpdated(self,name):
+    param=None
+    prop=None 
+    try:
+        if name=="preset":
+            self.setPropertyVisible("customPreset",self.preset=="Custom")
+        elif name=="generateReport":
+            visible=self.generateReport==True
+            self.setPropertyVisible("reportType",visible)
+            self.setPropertyVisible("reportFolderPath",visible)
+        elif name=="normalize":
+            visible=self.normalize==True
+            self.setPropertyVisible("normalizeFolderPath",visible)
+#            visible=not visible #QC is hidden when normalizing
+#            self.setPropertyVisible("IntegratedMin",visible)
+#            self.setPropertyVisible("IntegratedMax",visible)
+#            self.setPropertyVisible("IntegratedDialMin",visible)
+#            self.setPropertyVisible("IntegratedDialMax",visible)
+#            self.setPropertyVisible("LoudnessRangeMin",visible)
+#            self.setPropertyVisible("LoudnessRangeMax",visible)
+#            self.setPropertyVisible("LoudnessRangeDialMin",visible)
+#            self.setPropertyVisible("LoudnessRangeDialMax",visible)
+#            self.setPropertyVisible("SpeechContentMin",visible)
+#            self.setPropertyVisible("SpeechContentMax",visible)
+#            self.setPropertyVisible("XXAverageDynamicsMinX",visible)
+#            self.setPropertyVisible("AverageDynamicsMax",visible)
+#            self.setPropertyVisible("MomentaryMaxMin",visible)
+#            self.setPropertyVisible("MomentaryMaxMax",visible)
+#            self.setPropertyVisible("ShortTermMaxMin",visible)
+#            self.setPropertyVisible("ShortTermMaxMax",visible)
+#            self.setPropertyVisible("TruePeakMaxMin",visible)
+#            self.setPropertyVisible("TruePeakMaxMax",visible)
+    except AttributeError:
+        pass
+                </code>
+     <preset type="string">DEFAULT</preset>
+     <customPreset type="string"></customPreset>
+     <channelConfig type="string">Auto</channelConfig>
+     <generateReport type="bool">false</generateReport>
+     <reportType type="string">PDF</reportType>
+     <reportFolderPath type="string"></reportFolderPath>
+     <normalize type="bool">true</normalize>
+     <normalizeFolderPath type="string"></normalizeFolderPath>
+     <binPath type="string"></binPath>
+     <threads type="int">1</threads>
+     <IntegratedMin type="int">-70</IntegratedMin>
+     <IntegratedMax type="int">30</IntegratedMax>
+     <IntegratedDialMin type="int">-70</IntegratedDialMin>
+     <IntegratedDialMax type="int">30</IntegratedDialMax>
+     <LoudnessRangeMin type="int">0</LoudnessRangeMin>
+     <LoudnessRangeMax type="int">100</LoudnessRangeMax>
+     <LoudnessRangeDialMin type="int">0</LoudnessRangeDialMin>
+     <LoudnessRangeDialMax type="int">100</LoudnessRangeDialMax>
+     <SpeechContentMin type="int">0</SpeechContentMin>
+     <SpeechContentMax type="int">100</SpeechContentMax>
+     <AverageDynamicsMin type="int">0</AverageDynamicsMin>
+     <AverageDynamicsMax type="int">100</AverageDynamicsMax>
+     <MomentaryMaxMin type="int">-70</MomentaryMaxMin>
+     <MomentaryMaxMax type="int">30</MomentaryMaxMax>
+     <ShortTermMaxMin type="int">-70</ShortTermMaxMin>
+     <ShortTermMaxMax type="int">30</ShortTermMaxMax>
+     <TruePeakMaxMin type="int">-70</TruePeakMaxMin>
+     <TruePeakMaxMax type="int">30</TruePeakMaxMax>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="e2db0e0a-6f31-4f54-9f75-2fec817ada33" type="input" specialType="order"/>
+     <rankTo name="rankTo" id="8281c663-5ac2-44e5-bf33-4df35fdd0586" type="output" specialType="order"/>
+     <input name="input" id="988cc916-a640-4966-b058-d00d314c6eaf" type="input">
+      <linkedTo>7b482e8b-558b-4e5f-a92a-07015f6af9b8</linkedTo>
+     </input>
+     <report name="report" id="98f12d64-0145-4890-b2de-7c1c6f79683e" type="output"/>
+     <passed name="passed" id="5a86e461-ce1d-4dba-a4ce-de8813d75ec3" type="output">
+      <linkedTo>f65de0b9-0d60-4c80-8818-e056989eb8de</linkedTo>
+     </passed>
+     <failed name="failed" id="7019e059-3c2d-4c95-8858-0a0e5a141012" type="output">
+      <linkedTo>1ce1b907-9965-478e-a854-c48d51a4b379</linkedTo>
+     </failed>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">1108.97,-307.333</ScenePos>
+     <Size type="size2">478.6,542.424</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Notify</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff6b7bf8</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1136.68,122.529</ScenePos>
+     <Size type="size2">441,80</Size>
+     <TextSize type="float">15</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Configure mails for notifications.
+A table with the results of the analyze is showed
+in the same e-mail body text.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-696.478,-289.54</ScenePos>
+     <Size type="size2">590.201,353.307</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input Audio Files</Text>
+     <TextColor type="color">#ff323232</TextColor>
+     <BackgroundColor type="color">#ffcfd093</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-763.442,85.3858</ScenePos>
+     <Size type="size2">823,80</Size>
+     <TextSize type="float">15</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Youlean Loudness Meter can accept .wav, .mp3, .flac and .ogg Vorbis YLM in all OS
+It may also accept other formats supported by the OS, but the results may not be accurate.
+In case of doubt, the WAV node can be used to convert the input files</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-44.0036,-284.742</ScenePos>
+     <Size type="size2">540.521,351.28</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Analyze and Report</Text>
+     <TextColor type="color">#ff00007f</TextColor>
+     <BackgroundColor type="color">#ffc262fb</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">215.655,-403.764</ScenePos>
+     <Size type="size2">632,80</Size>
+     <TextSize type="float">15</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Youlean Loudness Meter node can be used for two different purposes:
+- Analyze and generate a report
+- Normalize the input files</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">14.4576,-65.1905</ScenePos>
+     <Size type="size2">425,104</Size>
+     <TextSize type="float">15</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Once the input files have been analyzed,
+the node will make use of the QC range values 
+to classify them as 'correct' or 'failed'
+A report per file can also be exported </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">526.787,-283.509</ScenePos>
+     <Size type="size2">542.421,349.668</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Normalize</Text>
+     <TextColor type="color">#ff00007f</TextColor>
+     <BackgroundColor type="color">#ff32d285</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">544.321,-244.961</ScenePos>
+     <Size type="size2">513,80</Size>
+     <TextSize type="float">15</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">The files out of QC range parameters can be normalized
+in the next step. If some of them cannot be normalized, 
+they will be placed again in the 'failed' output connector.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">8</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">193.536,89.4082</ScenePos>
+     <Size type="size2">767,83</Size>
+     <TextSize type="float">16</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">In both cases take into account that:
+ - Binary file must be indicated
+ - Youlean Loudness Meter license must be managed through its own application</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">9</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

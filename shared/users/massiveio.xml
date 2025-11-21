@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+    <MassiveIO>
+        <objectName>MassiveIO</objectName>
+        <schemaName>massiveio</schemaName>
+        <color>#00bcc2</color>
+        <teamID></teamID>
+        <apiKey></apiKey>
+        <baseAPIUrl></baseAPIUrl>
+        <packageName></packageName>
+        <description></description>
+        <recipients></recipients>
+        <chunksize>100</chunksize>
+    </MassiveIO>
+</nodeCommonRoot>

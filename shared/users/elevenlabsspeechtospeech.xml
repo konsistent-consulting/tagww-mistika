@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ElevenLabsSpeechToSpeech>
+    <Advanced>
+      <similarityBoost>0.8</similarityBoost>
+      <stability>0.5</stability>
+      <style>0</style>
+      <useSpeakerBoost>true</useSpeakerBoost>
+    </Advanced>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <apiKey/>
+    <color>#ffffff</color>
+    <dstPath/>
+    <format>mp3_44100_128</format>
+    <model>eleven_multilingual_sts_v2</model>
+    <objectName>ElevenLabsSpeechToSpeech</objectName>
+    <voice>21m00Tcm4TlvDq8ikWAM</voice>
+  </ElevenLabsSpeechToSpeech>
+</nodeCommonRoot>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <injectLangTokens>
+    <color>#000000</color>
+    <langFile/>
+    <objectName>injectLangTokens</objectName>
+  </injectLangTokens>
+</nodeCommonRoot>

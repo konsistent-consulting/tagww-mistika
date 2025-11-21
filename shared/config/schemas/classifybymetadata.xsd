@@ -1,0 +1,27 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="ClassifyByMetadata" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+            <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+            <xsd:element name="preset" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="4" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_presetList"/>
+			<xsd:element name="dataType" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+            <xsd:element name="outputList" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+            <xsd:element name="filterMode" type="integerPulldown" sgo:integerPulldownValues="Exact Match$$$0|Starts With$$$1|Contains$$$2|Ends With$$$3" sgo:visibility="0" sgo:sortOrder="7"/>
+            <xsd:element name="caseSensitive" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="8"/>
+            <xsd:element name="useDecoratedValues" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="9"/>
+			<xsd:element name="errorMode" type="integerPulldown" sgo:integerPulldownValues="None$$$0|Info$$$1|Warning$$$2|Critical$$$3" sgo:visibility="0" sgo:sortOrder="10"/>
+            <xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="50">
+			<xsd:complexType>
+				<xsd:sequence>
+                        <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+				</xsd:sequence>
+            </xsd:complexType>
+	        </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

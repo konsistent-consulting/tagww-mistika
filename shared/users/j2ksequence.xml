@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <J2KSequence>
+    <color>#0000ff</color>
+    <gamma>Gamma 2 4</gamma>
+    <gamut>Rec709</gamut>
+    <layer>0</layer>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>J2KSequence</objectName>
+    <reduceFactor>0</reduceFactor>
+    <url/>
+  </J2KSequence>
+</nodeCommonRoot>

@@ -1,0 +1,84 @@
+2025.11.06 10:02:34.760|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:02:34.761|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:02:34.761|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:02:34.838|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:06:42.933|Info|Test New Workflow|Test New Workflow|Test New Workflow Cancelled
+2025.11.06 10:06:42.934|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Failed
+2025.11.06 10:07:32.764|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:07:32.766|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:07:32.766|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:07:32.794|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:07:39.843|Info|Test New Workflow|Test New Workflow|Test New Workflow Finished
+2025.11.06 10:07:39.844|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Successfully Finished
+2025.11.06 10:09:22.764|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:09:22.765|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:09:22.765|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:09:22.782|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:09:30.324|Info|Test New Workflow|Test New Workflow|Test New Workflow Finished
+2025.11.06 10:09:30.325|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Successfully Finished
+2025.11.06 10:16:14.766|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:16:14.767|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:16:14.767|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:16:14.778|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:16:21.170|Info|Test New Workflow|Test New Workflow|Test New Workflow Finished
+2025.11.06 10:16:21.172|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Successfully Finished
+2025.11.06 10:18:12.764|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:18:12.765|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:18:12.765|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:18:12.783|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:18:20.039|Info|Test New Workflow|Test New Workflow|Test New Workflow Finished
+2025.11.06 10:18:20.040|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Successfully Finished
+2025.11.06 10:20:50.763|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:20:50.764|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:20:50.764|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:20:50.775|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:20:50.822|Critical Error|Test New Workflow|S3Out|Parameter validation failed:
+Invalid bucket name "ed-mistika-test[ParentFolder]": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2025.11.06 10:20:50.824|Critical Error|Test New Workflow|S3Out|Parameter validation failed:
+Invalid bucket name "ed-mistika-test[ParentFolder]": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2025.11.06 10:20:50.825|Critical Error|Test New Workflow|S3Out|Parameter validation failed:
+Invalid bucket name "ed-mistika-test[ParentFolder]": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2025.11.06 10:20:50.826|Critical Error|Test New Workflow|S3Out|Parameter validation failed:
+Invalid bucket name "ed-mistika-test[ParentFolder]": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2025.11.06 10:20:50.827|Critical Error|Test New Workflow|S3Out|Parameter validation failed:
+Invalid bucket name "ed-mistika-test[ParentFolder]": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2025.11.06 10:20:50.827|Critical Error|Test New Workflow|S3Out|Parameter validation failed:
+Invalid bucket name "ed-mistika-test[ParentFolder]": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2025.11.06 10:20:50.828|Critical Error|Test New Workflow|S3Out|Parameter validation failed:
+Invalid bucket name "ed-mistika-test[ParentFolder]": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2025.11.06 10:20:50.828|Info|Test New Workflow|Test New Workflow|Test New Workflow Finished
+2025.11.06 10:20:50.828|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Failed
+2025.11.06 10:30:54.757|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:30:54.762|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:30:54.762|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:30:54.764|Critical Error|Test New Workflow|Watcher|Max number of retries reached, sending 000_tst0010_bg01_v0001.mov to failed UPs
+2025.11.06 10:30:54.765|Critical Error|Test New Workflow|Watcher|Max number of retries reached, sending XR0001_20250312.ale to failed UPs
+2025.11.06 10:30:54.766|Critical Error|Test New Workflow|Watcher|Max number of retries reached, sending tst0010_bg01_v0001.png to failed UPs
+2025.11.06 10:30:54.767|Critical Error|Test New Workflow|Watcher|Max number of retries reached, sending tst0020_cp01_v0001.mov to failed UPs
+2025.11.06 10:30:54.768|Critical Error|Test New Workflow|Watcher|Max number of retries reached, sending tst0020_cp01_v0001.png to failed UPs
+2025.11.06 10:30:54.768|Critical Error|Test New Workflow|Watcher|Max number of retries reached, sending tst0030_rf01_v0001.mov to failed UPs
+2025.11.06 10:30:54.772|Critical Error|Test New Workflow|Watcher|Max number of retries reached, sending tst0030_rf01_v0001.png to failed UPs
+2025.11.06 10:30:54.772|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:30:54.837|Info|Test New Workflow|Test New Workflow|Test New Workflow Finished
+2025.11.06 10:30:54.838|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Failed
+2025.11.06 10:32:25.757|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:32:25.757|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:32:25.758|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:32:25.763|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:32:34.185|Info|Test New Workflow|Test New Workflow|Test New Workflow Finished
+2025.11.06 10:32:34.189|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Successfully Finished
+2025.11.06 10:36:46.755|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:36:46.757|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:36:46.757|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:36:46.772|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:36:54.453|Info|Test New Workflow|Test New Workflow|Test New Workflow Finished
+2025.11.06 10:36:54.454|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Successfully Finished
+2025.11.06 10:37:38.759|Info|Test New Workflow|Test New Workflow|Test New Workflow: Starting Workflow
+2025.11.06 10:37:38.759|Info|Test New Workflow|Test New Workflow|Test New Workflow Started
+2025.11.06 10:37:38.759|Info|Test New Workflow|Test New Workflow|Rendering Watcher
+2025.11.06 10:37:38.778|Info|Test New Workflow|Test New Workflow|Rendering S3Out
+2025.11.06 10:37:47.580|Info|Test New Workflow|Test New Workflow|Test New Workflow Finished
+2025.11.06 10:37:47.581|Info|Test New Workflow|Test New Workflow|Test New Workflow: Workflow Successfully Finished
+2025.11.06 10:53:32.856|Critical Error|Test New Workflow|S3Out|Missing 'isReady' function
+2025.11.06 10:53:32.856|Critical Error|Test New Workflow|S3Out|Missing 'isReady' function
+2025.11.06 10:53:32.903|Critical Error|Test New Workflow|S3Out|Missing 'isReady' function

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <STMap>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#000040</color>
+    <inputsAlignment>0</inputsAlignment>
+    <nodeLocked>false</nodeLocked>
+    <objectName>STMap</objectName>
+  </STMap>
+</nodeCommonRoot>

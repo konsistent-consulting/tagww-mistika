@@ -1,0 +1,17 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="WhatsApp" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+        <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+        <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+		<xsd:element name="onlySendIfInput" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="5"/>	
+        <xsd:element name="sendFiles" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="8"/>	
+	    <xsd:element name="phoneNumberID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+	    <xsd:element name="accessToken" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+	    <xsd:element name="msgTo" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>
+	    <xsd:element name="body" type="textEditor" sgo:visibility="0" sgo:sortOrder="19"/>
+        <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Mail>
+    <body>Put Yout Text Here
+List of input Files:
+&lt;?py
+for c in self.getConnectors():
+    for p in c.getUniversalPaths():
+      print (p.getFilePath())
+?&gt;</body>
+    <bodyType>plain</bodyType>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#292929</color>
+    <login/>
+    <mailFrom/>
+    <objectName>Mail</objectName>
+    <onePerFile>false</onePerFile>
+    <onlySendIfInput/>
+    <port>587</port>
+    <replyTo/>
+    <smtpServer/>
+    <subject>Mistika Workflows Mail Node Processed</subject>
+    <to/>
+  </Mail>
+</nodeCommonRoot>

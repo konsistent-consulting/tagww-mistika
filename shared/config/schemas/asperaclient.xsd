@@ -1,0 +1,22 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="AsperaClient" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="user" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="certificate" type="xsd:anyURI" sgo:properties="pathNameFilters('Certificate Files (*)')" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="pwd" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="localFilePath" type="xsd:anyURI" sgo:properties="pathNameFilters('All Files (*.*)')" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="remoteFilePath" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="tcpPort" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="9"/>
+                <xsd:element name="udpPort" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="targetRate" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="retries" type="xsd:integer" sgo:minValue="1" sgo:maxValue="99" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="renameFilesList" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

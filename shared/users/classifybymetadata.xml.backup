@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ClassifyByMetadata>
+    <caseSensitive>true</caseSensitive>
+    <color>#677688</color>
+    <dataType>custom</dataType>
+    <errorMode>0</errorMode>
+    <filterMode>0</filterMode>
+    <objectName>ClassifyByMetadata</objectName>
+    <outputList>value0, value1, value2, value3</outputList>
+    <preset>custom</preset>
+  </ClassifyByMetadata>
+</nodeCommonRoot>

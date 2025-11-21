@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; Denoise</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;Denoise input images, either by using optical flow techniques (tracking individual image features over the time) or by using spatial analysis only (traditional denoise" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "denoise.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Denoise</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?denoise.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Denoise</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="csvtodfilt.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="digixml.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">Denoise input images, either by using optical flow techniques (tracking individual image features over the time) or by using spatial analysis only (traditional denoise).</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Optical flow is a powerful technique to remove noise, but in some cases it can introduce artifacts. For example rain drops and other fast moving details could produce false positives, and also similar objects crossing on top of each other. &nbsp;Meanwhile, spatial denoise does not produce optical flow artifacts but it can miss noisy pixels.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">To get the best of both methods, this effect is capable to calculate the probability of having optical flow artifacts on each pixel, and given a user defined threshold it can combine both methods, thus using spatial denoise in the risky areas and optical flow in the rest of the image.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">This node does not create new media files by itself, the output needs to be connected to a transcoder node specialized on your desired output format.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">As a difference to other denoisers this particular one is GPU based and highly optimised, providing faster than realtime processing in most cases.</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Input_1:</span> <span class="f_BodyText">Input media files to be denoised.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Output:</span> </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Object Properties</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Denoise scope (3 frames ... 11 frames):  </span><span class="f_BodyText">How many frames are used for optical flow comparisons. Optical flow will track each individual image feature over the time, and then it will consider noise any details that are only in one frame but not in the previous and posterior frames of that feature. &nbsp;Using more frames can produce more quality, but it is slower to process.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Denoise mode, Denoise Spatial: </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Temporal</span>: Optical flow denoise, it can remove more noise &nbsp;but it an introduce optical flow artifacts.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Spatial</span>: Spatial de-noise only. No optical flow artifacts can appear, but less noise reduction possible.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Combined</span>: It creates and composes both denoised versions, temporal and spatial, with the composition mask being based on the probability of finding optical flow artifacts on each pixel. The <span class="f_T_Menu">Denoise Spatial </span>property defines the compositing threshold (the values of the mask used for Spatial denoise). The higher the <span class="f_T_Menu">Denoise Spatial</span> is the lower probability of creating optical flow artifacts, but at the potential cost of leaving more noise in the images. </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Mask (NGamma, Filter, Level, Scale): </span>Controls the creation of the composition mask mentioned in the previous point. Default values work well in general, but optimal values really depend on the type of image content and potential color transformations that can make the noise more evident. If you want fine tuning it is recommended to find the optimal values in another application that can provide interactive visual feedback for those parameters such as Mistika Boutique, and then bring the desired values to Mistika Workflows.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">NGamma: </span>This has significant influence in optical flow algorithms, so it is one of the things to check when having image artifacts. &nbsp;This parameter will tell Mistika &nbsp;was gamma curve to apply to the image for the calculations (check for it in your camera documentation, or if the source images have been pre-processed ask the originator). Setting the correct value will improve the algorithms. </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Filter, Level, Scale: </span>Mask filtering (blur), leveling, and scaling.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Optical Flow (Min Level, Levels, Iterations, Smoothness): </span>Controls the optical flow algorithm. &nbsp;Default values work well in general, &nbsp;but as in the previous case if you want to find optimal values for a particular case it is recommended to have visual feedback while adjusting those values, for example by using Mistika Boutique.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Min Level: </span>Resolution factor. The higher the value, the lower the resolution of the smallest features to track, thus accelerating the processing at the potential cost of precision. A value 0 will track at pixel level, bigger values will half the resolution for each unit increment.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">- Decreasing it to 0 may provide some extra accuracy or small features and fine textures, &nbsp;but it is only indicated for images with excellent focus, little movement and very little noise. Otherwise it can be counter productive.</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">- Increasing it will provide faster processing, but some artifacts may appear. </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Levels: </span>Refines the calculation of the direction of motion vectors. &nbsp;Increase it in case of complex movements with multiple features crossing their paths.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Iterations: </span>Revises movement in areas with little detail. If there is not enough texture or details in the images then the algorithm may fail to track each little feature correctly. Increasing this parameter will force to calculate more iterations to try more possible solutions of the solver equations, then comparing the accuracy of each solution to find the optimal one.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Smoothness: </span>Tells the algorithm if the features that are moving are following smooth paths or if they can experience abrupt changes in direction. In that way, in case of doubt the solver will choose motion vectors more parallel between them rather than solutions producing motion vectors that are crossing with each other. </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Example: Imagine two similar persons wearing identical clothes and walking on collision course. &nbsp;From the algorithm perspective, an action where the two persons crash into each other and rebound may produce very similar images to one where they avoid collision and simply pass one behind each other. &nbsp;In a situation like this the Mistika OF algorithm could be confused &nbsp;and choose the wrong solution, thus creating artifacts like warped limbs from the first person sticking to the second person for a few frames (the algorithm may find similar limbs without knowing which one is from which person). &nbsp;In these situations you can help the Mistika solver by telling it to expect smoother movements (persons passing in front of each other in the example) or to permit abrupt changes (persons crashing into each other and rebounding in this example).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <SetColorSpace>
+    <color>#00ffff</color>
+    <gamma/>
+    <gamut/>
+    <objectName>SetColorSpace</objectName>
+  </SetColorSpace>
+</nodeCommonRoot>

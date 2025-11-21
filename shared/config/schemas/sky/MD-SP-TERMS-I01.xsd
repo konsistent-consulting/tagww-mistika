@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 sp1 (http://www.altova.com) by Mark Lowe (British Sky Broadcasting Ltd) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" xmlns:core="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" targetNamespace="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1">
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" schemaLocation="MD-SP-CORE-I01.xsd"/>
+	<xsd:complexType name="SubscriberViewLimitType">
+		<xsd:complexContent>
+			<xsd:extension base="core:DateTimeRangeType">
+				<xsd:attribute name="maximumViews" type="xsd:unsignedInt" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RoyaltyInfoType">
+		<xsd:sequence>
+			<xsd:element name="OrganizationName" type="core:OrganizationNameType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name of the distributor/studio.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OrganizationCode" type="core:OrganizationCodeType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The code for the distributor/studio.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RoyaltyPercent" type="core:PercentType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Percentage split of the royalty over the minimum that goes to the distributor/studio.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RoyaltyMinimum" type="core:PriceType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Minumum royalty in currency that goes to the distributor/studio.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RoyaltyFlatRate" type="core:PriceType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Flat rate royalty in currency that goes to the distributor/studio.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TermsType">
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="ContractName" type="core:NonEmptyStringType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Name of the contract under which all titles associated with these terms are licensed.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="BillingGracePeriod" type="xsd:duration" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Free preview period.  How long the customer can watch the content at no charge (called PreviewPeriod in ADI 1.1).</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="RentalPeriod" type="xsd:duration" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The maximum duration of time a title can be made available for viewing once selected for puchase by a customer (called Maximum_Viewing_Length in ADI 1.1). This only defines the maximum period, which may be altered by other windows - actual periods will be determined by the delivery system and business rules.  This element MUST be explicitly provided if the terms originated as V3.0.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="HomeVideoWindow" type="xsd:duration" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Number of days between home video release and PPV/MOD release.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="SubscriberViewLimit" type="SubscriberViewLimitType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>The range of time and the maximum number of views over that period of time.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="SuggestedPrice" type="core:PriceType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Suggested price to assist in determining the retail pricing.  Multiple values are provided for expressing more than one currency.  The default currency is assumed to be dollars.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="DistributorRoyaltyInfo" type="RoyaltyInfoType" minOccurs="0"/>
+					<xsd:element name="StudioRoyaltyInfo" type="RoyaltyInfoType" minOccurs="0"/>
+					<xsd:element name="IsResumeEnabled" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Indication that viewing can be resumed at a later time.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="TrickModesRestricted" type="core:TrickModesRestrictedType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Trick modes that are restricted under these terms.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+		<!-- x_availability_window -->
+	</xsd:complexType>
+</xsd:schema>

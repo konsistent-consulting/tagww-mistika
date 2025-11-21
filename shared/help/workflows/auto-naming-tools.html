@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Mistika Workflows Interface &gt; Name convention for file naming and numbering</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Mistika Workflows provides an auto-naming mechanism to ensure file naming coherence and automatic naming. This system also permits to extract metadata fields from the input..." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "auto-naming-tools.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Name Convention for path creation, file naming, frame numbering and metadata tokens injection</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?auto-naming-tools.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="4_-mistika-wf-interface.html">Mistika Workflows Interface</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Name Convention for path creation, file naming, frame numbering and metadata tokens injection</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="creating-a-project.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="4_-mistika-wf-interface.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="window-tabs.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal" style="text-align: center;">&nbsp;</p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><a id="nameconvention" class="hmanchor"></a><span class="f_BodyText" style="font-weight: bold;">Mistika Workflows</span><span class="f_BodyText"> provides an auto-naming mechanism to ensure file naming coherence and automatic naming. This system also permits to extract metadata fields from the input files (either from embedded metadata or from the paths and file names) and to define the rules to create the new file names for the output files automatically. </span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">In the case of the </span><span class="f_T_Menu">name convention</span><span class="f_BodyText"> it works as follows:</span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">By default all nodes will use the default name convention of their workflow &nbsp;(which is visible at the bottom right corner of the </span><span class="f_T_Menu" style="font-size: 16px;">Nodegraph </span><span class="f_BodyText">and can be changed with its contextual menu). The name convention by default is: </span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_T_Entry">[path][baseName][.ext]</span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">In addition, nodes capable to transform between name conventions (not all nodes have this capability) have a  </span><span class="f_T_Entry">Name Convention</span><span class="f_BodyText"> property. &nbsp;By default (when left empty) they will use the name convention coming from their input connectors, or if there are no connected inputs they will fallback to the default name convention of the workflow. </span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">Depending on the node type:</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 37px;"><span class="f_BodyText">For the case of </span><span class="f_T_Menu10p"> </span><span class="f_T_Menu10p" style="font-size: 16px;">output </span><span class="f_BodyText">and </span><span class="f_T_Menu10p" style="font-size: 16px;">task </span><span class="f_BodyText">nodes the </span><span class="f_T_Entry">Name Convention</span><span class="f_BodyText"> property &nbsp;will establish the path syntax that is passed to the output connectors to inform the next nodes. &nbsp;By default, all nodes get the name convention from the nodes connected to their inputs (or the default name convention if no input is connected), but If the </span><span class="f_T_Entry">Name Convention</span><span class="f_BodyText"> property is specified then the node will transform the name convention to the new syntax and then pass it to the output connectors. </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 37px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 37px;"><span class="f_BodyText">For generic  </span><span class="f_T_Menu10p" style="font-size: 16px;">input</span><span class="f_T_Menu10p"> </span><span class="f_BodyText">nodes (Watcher, FTP, Folder, Media Sequence ...), the </span><span class="f_T_Entry">Name Convention</span><span class="f_BodyText"> property will be passed to output connectors as in the previous case, but in this case it may also be used to interpret the path syntax of the files imported by the node. </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 37px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 37px;"><span class="f_BodyText">When input nodes are importing enumerated sequences you will need to pay attention to the frame index tag (and its separator character, if any) and make sure it is correct, as there is no industry standard for this.</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 37px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 37px;"><span class="f_BodyText">For specialized </span><span class="f_T_Menu10p" style="font-size: 16px;">input</span><span class="f_T_Menu10p"> </span><span class="f_BodyText">nodes from camera manufacturers (ARRI, Canon, Panasonic, RED, Sony ...) the name convention is automatically parsed according to the manufacturer specifications, which has priority over the default name convention. &nbsp; </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">By default the name convention is the same for all workflows. &nbsp;But you can establish a different name convention at per workflow level or even at per node level as we said (for the case of nodes having a </span><span class="f_T_Entry">Name Convention</span><span class="f_BodyText"> property). </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">This naming system can certainly require some practice but it is very powerful, as we will see in next sections it can do things like creating new names based on metadata tokens extracted from media files (or other types of files), or from the source file paths, or from user custom metadata added to certain properties. &nbsp;And it can also be used to ensure that no input file is imported into the workflow if it does not respect the pre-selected naming rules, as otherwise human mistakes could easily propagate to delivery files.</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">Please note that in many cases the input files do not even exist at node creation time, so you should not expect nodes to be created with a matching name convention automatically. &nbsp;Many workflows will work with no action needed on your side, but in general you should check that you have selected the correct name convention in advance.</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 26px;"><span class="f_Heading2">A first example: Removing unwanted characters.</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">By definition, the </span><span class="f_T_Menu">[baseName]</span><span class="f_BodyText"> token always starts at the first character of the file name, but sometimes it is not clear where it needs to end, and there can be &quot;decorative&quot; characters that you want to be removed. </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">As a first example, let's suppose that you have received a folder of enumerated files with potentially confusing names like these:</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_T_Emphasis">Test_#0300.exr</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_T_Emphasis">Test_#0301.exr</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_T_Emphasis">Test_#0302.exr</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">...</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">And &nbsp;now you import those files with a </span><span class="f_T_Menu">Folder</span><span class="f_BodyText"> node. Let's suppose you have selected this name convention, which is the most typical for enumerated sequences:</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_T_Entry">[path][baseName][_frame][.ext]</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">This will not work well in this particular case. If we look at the first file it will take &quot;Test&quot; as the </span><span class="f_T_Menu">baseName</span><span class="f_BodyText"> and &quot;_#0300&quot; as the </span><span class="f_T_Entry">[_frame]</span><span class="f_BodyText">, &nbsp;which will not provide a valid number. &nbsp;A simple solution is to simply set the </span><span class="f_T_Menu">NameConvention</span><span class="f_BodyText"> property of the </span><span class="f_T_Menu">Folder</span><span class="f_BodyText"> node to this:</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_T_Menu">NameConvention:  </span><span class="f_T_Entry">[path]</span><span class="f_T_Menu">[baseName]_#[frame][ext]</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_BodyText">Which will get the proper values for the syntax tokens as we wanted, which will be passed downstream:</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">[baseName]</span><span class="f_BodyText"> = &gt;Test</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">[frame]</span><span class="f_BodyText"> =&gt; 0300</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_BodyText">In this example, the &quot;#&quot; character will be simply discarded when the </span><span class="f_T_Menu">Folder</span><span class="f_BodyText"> node is connected to posterior nodes, because it has been explicitly left out of the name convention tokens.</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_BodyText">Now let's suppose that you connect the resulting </span><span class="f_T_Menu">Folder</span><span class="f_BodyText"> node to a </span><span class="f_T_Menu">ProRes</span><span class="f_BodyText"> node, and you set the </span><span class="f_T_Menu">File</span><span class="f_BodyText"> property (which defines the file name to be created for the ProRes movie) to the usual one:</span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_T_Entry">[path][baseName][_frame][.ext]</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_BodyText">It will create the ProRes file with the name that we expect ( </span><span class="f_Comment">Test.mov </span><span class="f_BodyText">) with no need to repeat the above modifications. This is because once the tokens are redefined they are passed to posterior nodes with their new values.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 26px;"><span class="f_Heading2">Metadata token injection in output paths and filenames (&quot;File Path&quot; property):</span></h2>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">Many nodes can &nbsp;inject additional metadata tokens to the output paths and output file names by using their </span><span class="f_T_Menu">File Path </span><span class="f_BodyText">property (or any other property accepting path syntax, such as </span><span class="f_T_Menu">Dst. Folder</span><span class="f_BodyText">, </span><span class="f_T_Menu">Directory</span><span class="f_BodyText">, </span><span class="f_T_Menu">Name</span><span class="f_BodyText">, etc. ). These can be any metadata tokens extracted from media files (or even user defined by using the </span><span class="f_T_Menu"><a href="editmetadata.html" class="topiclink">Edit Metadata</a> </span><span class="f_BodyText">node or other nodes capable for metadata injection). </span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">To insert a metadata token at some point of the </span><span class="f_T_Menu">File Path </span><span class="f_BodyText">property, type the &quot;</span><span class="f_T_Menu">[</span><span class="f_BodyText">&quot; &nbsp;character and start typing the name of the metadata field. A combo list will appear to let you choose any token starting with the same characters that you are typing. &nbsp;</span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">If you have typed a token field between &quot;[&quot; &quot;]&quot; and it is recognized then it will change to green color (always check that it becomes green, otherwise it is telling you that the token does not exist and it will not work). A good example of this process is shown at the end of this <a href="https://youtu.be/euI9Hc35tpw?t=84" target="_blank" class="weblink">video</a></span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">You can also tell Mistika Workflows to get the values of additional metadata tokens from specific sub-strings appearing in the file paths and file names of the input files. This is normally achieved by using the <a href="nctometadata.html" class="topiclink">NC to metadata</a> node (</span><span class="f_T_Menu">N</span><span class="f_BodyText">ame </span><span class="f_T_Menu">C</span><span class="f_BodyText">onvention to metadata). However, before you can do that </span><span class="f_TipHeading">all the metadata tokens that you want to use need to appear in this configuration file </span><span class="f_BodyText">(before opening Mistika Workflows):</span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText"> </span><span class="f_T_Emphasis">SGO AppData\shared\config\NameConventionPlaceHolders.xml </span><span class="f_BodyText"> &nbsp;</span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">That file comes with the most common metadata tokens used in the media industry, as found embedded in standard media files and typical media production workflows, but you can add more tokens as said (just imitate the existing syntax that you will find within the xml file).</span></p>
+<p class="p_BodyText" style="line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">&quot;File Path&quot; and &quot;Name Convention&quot; properties difference:</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">For the case of nodes creating new files, note that their </span><span class="f_T_Menu">Name Convention </span><span class="f_BodyText">property and the</span><span class="f_T_Menu"> File Path</span><span class="f_BodyText"> property serve different purposes and their syntax does not need to be identical at all. In most cases &nbsp;you will not need to touch them, but sometimes you may want to make changes or to specify different metadata granularity. Now consider this other example: </span><span class="f_T_Menu10p" style="font-size: 16px;"> </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">Let's suppose a previous node imported a file named &quot;MyFile.mxf&quot;, and it found some tokens embedded in the metadata of the media file (for example </span><span class="f_T_Emphasis">location</span><span class="f_BodyText">: &quot;London&quot;, </span><span class="f_T_Emphasis">scene</span><span class="f_BodyText">: &quot;Scene006&quot; and </span><span class="f_T_Emphasis">take</span><span class="f_BodyText">: &nbsp;&quot;Take004&quot;). &nbsp;and now we connect it to a </span><span class="f_T_Menu">ProRes</span><span class="f_BodyText"> task node and we set these properties on it:</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_T_Entry">File Path: [path][location][_scene][_take][.ext] </span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_T_Entry">Name Convention: [path][baseName][.ext]</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">Then, the ProRes node will transcode &nbsp;&quot;MyFile.mxf&quot; to a ProRes file renamed with those metadata tokens. In our example the new ProRes file will be named like: </span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_T_Emphasis">London_Scene006_Take004.mov</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">Meanwhile, the </span><span class="f_T_Entry">Name Convention </span><span class="f_BodyText">property can (and should) be left as </span><span class="f_T_Entry">[path][baseName][.ext]. </span><span class="f_BodyText">Because when changing the </span><span class="f_T_Menu">File Path</span><span class="f_BodyText"> property of a node that is creating new files it will remap the output syntax accordingly, so in the above example the next node will receive this new  </span><span class="f_T_Entry">baseName</span><span class="f_BodyText">: </span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_T_Emphasis">London_Scene006_Take004</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">And thanks to this capability you do not need to repeat the token injection process in posterior nodes, which could complicate things unnecessarily: Alternatively we could use the </span><span class="f_T_Entry">File Path</span><span class="f_BodyText"> syntax in the above example ( </span><span class="f_T_Menu">[path][location][_scene][_take][.ext]</span> )<span class="f_T_Entry"> </span><span class="f_BodyText">also for the  </span><span class="f_T_Entry">Name Convention</span><span class="f_BodyText"> property and it will also work, but if we do so then the next node will need to be aware about what are those new tokens and what to do with them on its path related properties , which depending on the case can be an annoying requirement easily avoidable as explained. </span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">Inserting parent folder names from the original path into the destination path:</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">There is an interesting token that permits to get a certain number of parent folders from the original path and reuse them when creating the destination path:</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_T_Menu"> [fullParentFolder{levels=</span><span class="f_T_Emphasis">value</span><span class="f_T_Menu">}]</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">(Note that you don't need to remember the syntax, as we will see in the next point about the </span><span class="f_T_Menu" style="font-size: 16px;">Name convention manager</span><span class="f_BodyText">)</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">Example: Let's suppose we feed this .mxf file to a </span><span class="f_T_Menu">ProRes</span><span class="f_BodyText"> node:  </span><span class="f_CodeExample">/Volumes/disk1/Location4/Scene007/MyMediaFile.mxf</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">And we set the <span class="f_T_Menu">File Path</span> property of the <span class="f_T_Menu">ProRes</span> node to:  <span class="f_CodeExample">/Volumes/disk4/</span><span class="f_T_Menu">[fullParentFolder{levels=2}]</span><span class="f_T_Entry">[baseName][.ext]</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">Then the </span><span class="f_T_Menu">ProRes</span><span class="f_BodyText"> node will create this file:  </span><span class="f_CodeExample">/Volumes/disk4/Location4/Scene007/MyMediaFile.mov</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><a id="nameconventionmanager" class="hmanchor"></a><span class="f_Heading2">Creating new metadata tokens:</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_BodyText">All tokens that you plan to use must exist in this file before opening Mistika workflows: </span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_BodyText"> </span> <span class="f_T_Emphasis">SGO AppData/shared/config/NameConventionPlaceHolders.xml </span><span class="f_BodyText"> </span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_BodyText">You can add tokens iin any category you prefer, but first you should search for your token, as most of the metadata used in media production is already there. </span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_BodyText">To create a token named &quot;ClientChange&quot;, you could add something like this:</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"> &nbsp; &nbsp; &nbsp;&lt;placeHolder from=&quot;metaData&quot; name=&quot;<span class="f_BodyText">ClientChange</span>&quot;&gt;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;visibility&gt;true&lt;/visibility&gt;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"> &nbsp; &nbsp; &nbsp;&lt;/placeHolder&gt;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">From that point you can use it as any other token mentioned in this manual. For example you can give it values with metadata management nodes like <span class="f_T_Menu"><a href="nctometadata.html" class="topiclink">NC to metadata</a></span> , or your own Python nodes (you can use the code of <span class="f_T_Menu">NC to metadata</span>&quot; as a reference about how to do it, as it is also &nbsp;a python node...)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><a id="nameconventionmanager" class="hmanchor"></a><span class="f_Heading2">Name convention manager:</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_BodyText">Accessible trough these methods:</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 37px;"><span class="f_T_Menu">Main menu -&gt; </span><span class="f_T_Menu" style="font-size: 16px;">File-&gt;Preferences-&gt;Name Convention</span> </h2>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 37px;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 37px;"><span class="f_T_Menu" style="font-size: 16px;">Nodegraph -&gt;Name Convention indicator (contextual menu)-&gt;Open Name Conventions manager</span><span class="f_T_Menu"> </span></h2>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 37px;"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 37px;"><span class="f_BodyText">In the </span><span class="f_T_Menu">Properties Panel </span><span class="f_BodyText">of nodes having a </span><span class="f_T_Menu">Name Convention</span><span class="f_BodyText"> property, by using the &nbsp;&quot;...&quot; icon of that property.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">In this panel you will find a path syntax editor which will allow you to define folder paths, file naming and frame numbering syntax. </span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">This panel provides a lot of extra metadata tags that you can inject to your output filenames, but the most common are the ones from the </span><span class="f_T_Menu">Classic</span><span class="f_BodyText"> category</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">Note that most other metadata tags ([Iso], [Location], etc) will need to be extracted from media files at execution time and are not available to the input nodes, which in general can only use metadata tags from the </span><span class="f_T_Menu">Classic </span><span class="f_BodyText">category in their naming conventions. &nbsp;You can later inject the rest of metadata tags to the output files as needed.</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">This tool is also useful to avoid having to remember the specific syntax of each token. The supported tokens are organized in categories, and a double click in one of them will insert the necessary syntax in the </span><span class="f_T_Menu">Name Convention</span><span class="f_BodyText"> entry. (alternatively, if you are editing a file path property of a node you can start typing the character &quot;[&quot; followed by the starting of a token name, and a combo box will open to select between matching tokens).</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">Note that many tokens accept additional parameters (such as the </span><span class="f_T_Menu10p">levels</span><span class="f_BodyText"> parameter of the </span><span class="f_T_Menu">fullParentFolder </span>token<span class="f_T_Menu"> </span>mentioned above<span class="f_BodyText">). The parameters are shown in the right column, and their values are editable in </span><span class="f_T_Menu">value</span><span class="f_BodyText"> column.</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; margin: 0 0 0 13px;"><img alt="clip0066" width="827" height="1089" style="margin:0 auto 0 auto;width:827px;height:1089px;border:none" src="clip0066.png"/></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;"><span class="f_BodyText">In the</span> <span class="f_T_Menu" style="font-size: 16px;">Presets Name Convention</span><span class="f_T_Menu"> </span><span class="f_BodyText">selector you will find the name conventions list, which permits to select which one to use for the current workflow (or to delete them when not used anymore). You can also create new presets in the Name Convention field and then click </span><span class="f_T_Menu">Add Preset </span><span class="f_BodyText">to save them to the list, which will also make them available to all your future projects.</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;"><span class="f_BodyText">The syntax is case sensitive, and it will refuse syntax errors by removing the brackets automatically. For example the [baseName] tag requires the uppercase &quot;N&quot;. &nbsp;If you just type a mistake like:</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 50px;"><span class="f_T_Code"> [path][basename][ext]</span><span class="f_BodyText"> &nbsp;(wrong!)</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;"><span class="f_BodyText"> then you will notice that the brackets disappear, you will see something like:</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 50px;"><span class="f_T_Code"> [path]</span>basename<span class="f_T_Code">[ext] </span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;"><span class="f_BodyText">Rather than the correct expression:</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 50px;"><span class="f_T_Code">[path][baseName][ext]</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;"><span class="f_BodyText">For example, if you don't fix it and you have and input file named MyFile_0223.dpx &nbsp;connected to an exr node you would expect an output file named as MyFile_0223.exr but the above example will produce something like &quot;basename_2449.dpx. &nbsp;So you can easily find where the problem comes from.</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;"><span class="f_BodyText">When using task nodes for transcoding, the</span><span class="f_T_Menu"> </span><span class="f_T_Menu" style="font-size: 16px;">[.ext]</span><span class="f_BodyText"> extension field will automatically generate the file extension corresponding to the image format created by the node ( .dpx, .exr, etc).</span> &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;"><span class="f_T_Emphasis">Example</span><span class="f_TipHeading">:</span> <span class="f_BodyText"> If we want to use an input node to import files in this style: &nbsp;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_CodeExample">/Volumes/disk1/MyMediaFile.0038.dpx</span> &nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 24px 0 26px;"><span class="f_BodyText">Then we will need to use a name convention different than the default one, as the default &nbsp;syntax uses a </span><span class="f_BodyText" style="font-weight: bold;">&quot;_&quot;</span><span class="f_BodyText"> character as a prefix for the frame number</span> ( <span class="f_T_Menu" style="font-size: 16px;">Default = [path][baseName][_frame][.ext]</span> ).<span class="f_BodyText"> So we will need to use this other one:</span></p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_CodeExample">[path][baseName][.frame][.ext] </span></p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;">or if we have files like:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_CodeExample">/Volumes/disk1/MyMediaFile0038.dpx</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">Then we need to use:</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"> &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_CodeExample">[path][baseName][frame][.ext] </span></p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_BodyText" style="margin: 0 0 10px 24px;"><span class="f_BodyText">In more detail, &nbsp;the task nodes will translate syntax fields of input files as follows. Let's say we connect the input node to a dpx task node, and we do not set any output folder:</span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_CodeExample">file: /Volumes/disk1/MyMediaFile.0038.dpx</span> &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_CodeExample">Name convention: [path][baseName][.frame][.ext] </span></p>
+<p class="p_Normal" style="margin: 0 0 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_BodyText">[path]</span> = <span class="f_CodeExample">/Volumes/disk1/ (the input folder will be translated to the destination folder of the output node)</span></p>
+<p class="p_Normal" style="margin: 0 0 0 39px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_BodyText">[baseName]</span> = <span class="f_CodeExample">MyMediaFile (it will pass unchanged)</span></p>
+<p class="p_Normal" style="margin: 0 0 0 39px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_BodyText">[.frame]</span> = .<span class="f_CodeExample">0038 (unchanged, except for nodes capable to limit frame ranges. The frame number prefix character is the same for input and output files) </span></p>
+<p class="p_Normal" style="margin: 0 0 0 39px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_BodyText">[.ext]</span> = .<span class="f_CodeExample">dpx &nbsp;(translated to the extension of the new format)</span></p>
+<p class="p_Normal" style="margin: 0 0 0 39px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_BodyText">And let's say that now we connect the output of the dpx node to a</span> <span class="f_T_Menu">Jpeg</span> <span class="f_BodyText">task node, with its destination folder property set to /Volumes/disk2. Then we will obtain new files in the style: </span><span class="f_CodeExample"> </span></p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 24px;"><span class="f_CodeExample">/Volumes/disk2/MyMediaFile.0038.jpg</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">Name convention selector:</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_ImageCaption" style="text-align: center;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: center;"><img alt="clip0036" width="1083" height="450" style="margin:0 auto 0 auto;width:1083px;height:450px;border:none" src="clip0036.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="text-align: justify; margin: 0 24px 10px 24px;"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText" style="text-align: justify; margin: 0 24px 10px 24px;"><span class="f_BodyText">Each Workflow can have its own name convention scheme to be used by default, which is visible in this tool. It is available trough the</span><span class="f_ImageCaption" style="font-style: normal;"> </span><span class="f_T_Menu" style="font-size: 16px;">Workflows-&gt;Name convention manager-&gt;Edit name conventions for all workflows</span><span class="f_BodyText">, also available as a contextual menu in the </span><span class="f_T_Menu" style="font-size: 16px;">Nodegraph</span><span class="f_BodyText">. Here you can apply a naming scheme to the selected workflows</span><span class="f_ImageCaption" style="font-style: normal;"> </span><span class="f_BodyText">(</span><span class="f_T_Menu" style="font-size: 16px;">Apply to Selected</span><span class="f_BodyText">), or press</span><span class="f_ImageCaption" style="font-style: normal;"> </span><span class="f_T_Menu" style="font-size: 16px;">Apply to All</span><span class="f_BodyText"> to set a same naming scheme for all the workflows).</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">Current Name Convention: </span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_ImageCaption" style="text-align: center;"><img alt="clip0034" width="452" height="176" style="margin:0 auto 0 auto;width:452px;height:176px;border:none" src="clip0034.png"/></p>
+<p class="p_ImageCaption"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; line-height: 1.38; margin: 0 24px 0 24px;"><span class="f_BodyText">This menu is available trough the main menu trough</span><span class="f_T_Menu"> </span><span class="f_T_Menu" style="font-size: 16px;">Workflows-&gt;Current name convention</span><span class="f_ImageCaption" style="font-style: normal;"> </span><span class="f_BodyText">and also as a contextual menu in the</span><span class="f_ImageCaption" style="font-style: normal;"> </span><span class="f_T_Menu" style="font-size: 16px;">Nodegraph</span><span class="f_BodyText">. And it permits to select the current naming scheme for the input and output files in the current workflow.</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 24px;"><span class="f_BodyText">The current name convention is also shown in the bottom right corner of the</span> <span class="f_T_Menu" style="font-size: 16px;">Nodegraph</span><span class="f_BodyText">.</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 24px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 24px;"><span class="f_BodyText">Note that this is just the name convention to be used by default, &nbsp;it will not be used for nodes that define its own </span><span class="f_T_Menu">Name Convention</span><span class="f_BodyText"> property explicitly.</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><a id="nameconventionmanager" class="hmanchor"></a></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_Heading2">File numbering and tag parameters</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;">Enumerated sequences require the <span class="f_T_Menu">frame</span> tag in their name convention, otherwise they will be interpreted as unrelated files (which sometimes is what you want..). &nbsp;If they have a separator prefix it also needs to be included in the metadata tag (use descriptors like<span class="f_T_Menu10p"> [frame], [_frame]</span>,<span class="f_T_Menu10p"> [.frame]</span>, <span class="f_T_Menu10p">[-frame]</span>...), so that the frame number can be found correctly and that the whole sub string can be added or removed across the workflow depending on trans-coding needs.</p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;">You can also add the padding (lead zeroes) as a tag parameter, with the syntax  <span class="f_T_Menu">[tag{parameter_name=value}]</span>. &nbsp;If a metadata tag has available parameters they will be shown when clicking on it. In this example:</p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: center; margin: 0 0 0 13px;"><img alt="clip0067" width="725" height="486" style="margin:0 auto 0 auto;width:725px;height:486px;border:none" src="clip0067.png"/></p>
+<p class="p_ImageCaption" style="text-align: center; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="margin: 0 0 0 13px;"><span class="f_ImageCaption">Example results for a dpx file with baseName &quot;MyFile&quot;, when writing frame 234:</span></p>
+<p class="p_ImageCaption" style="margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="margin: 0 0 0 13px;"><span class="f_T_Menu">[basename][_frame{padding=5}] -&gt; MyFile_00234.dpx</span> &nbsp;</p>
+<p class="p_ImageCaption" style="margin: 0 0 0 13px;"><span class="f_T_Menu">[basename][frame{padding=7}] -&gt; &nbsp;MyFile0000234.dpx</span></p>
+<p class="p_ImageCaption" style="margin: 0 0 0 13px;"><span class="f_T_Menu">[basename][.frame{padding=0}] -&gt; MyFile.234.dpx</span> </p>
+<p class="p_ImageCaption" style="margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_Heading2">Maintain Padding</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;"><span class="f_ImageCaption">&nbsp;</span></p>
+<p class="p_ImageCaption" style="text-align: justify; margin: 0 0 0 13px;">A &nbsp;property <span class="f_T_Menu">Name Convention -&gt; Maintain Padding</span> has been added to some input nodes for situations when the lead zeros may not be known in advance, such as <span class="f_T_Menu">Watcher </span>and <span class="f_T_Menu">Folder</span> nodes, which basically permits to &quot;Maintain the Input Padding (on/off)&quot;. &nbsp;In any case, if the specifications of your workflow are known it is always recommended to use strict name conventions and strict frame numbering rules (padding digits explicitly defined), as otherwise human misspellings on input files could pass undetected to final deliveries.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

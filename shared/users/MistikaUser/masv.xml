@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <MASV>
+    <Config>
+      <apiKey/>
+      <baseAPIUrl>https://api.massive.app/v1</baseAPIUrl>
+      <chunksize>100</chunksize>
+      <teamID/>
+    </Config>
+    <PackageLink>True</PackageLink>
+    <color>#03d6b3</color>
+    <description/>
+    <objectName>MASV</objectName>
+    <packageName/>
+    <recipients/>
+    <schemaName>masv</schemaName>
+  </MASV>
+</nodeCommonRoot>

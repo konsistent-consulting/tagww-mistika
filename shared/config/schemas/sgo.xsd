@@ -1,0 +1,141 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:simpleType name="pushButton">
+  <xsd:restriction base="xsd:boolean"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="label">
+  <xsd:restriction base="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="stringList">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="multiSelect">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="textEditor">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="universalPath">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="nameConventionEditor">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="nameConventionSimpleEditor">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="nameConventionTextEditor">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="nameConventionFilePathTextEditor">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="scaleForScreenWidget">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="mediaFileInfoWidget">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="slider">
+  <xsd:list itemType="xsd:decimal"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="sizeXY">
+  <xsd:list itemType="xsd:decimal"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="renderFarmWidget">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="integerPulldown">
+  <xsd:list itemType="xsd:integer"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="decimalPulldown">
+  <xsd:list itemType="xsd:decimal"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="stringPulldown">
+  <xsd:list itemType="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="color">
+  <xsd:restriction base="xsd:string">
+   <xsd:pattern value="^#[0-9A-Fa-f]{6}$"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="point2F">
+  <xsd:restriction base="xsd:string">
+   <xsd:pattern value="[0-9]+.[0-9]+;[0-9]+.[0-9]+"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="fontFoundry">
+  <xsd:restriction base="xsd:string">
+   <xsd:pattern value=".*\[.*\]"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="timecode">
+  <xsd:restriction base="xsd:string">
+   <xsd:pattern value="^([0-9]{2}:){3}[0-9]{2}$"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="osPathsTable">
+  <xsd:restriction base="xsd:string">
+   <xsd:pattern value="^(([0-9]+)@(x|w|l):([^#]*)#(x|w|l):([^#]*)#(x|w|l):([^#]*)#)*$"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="ipAddress">
+  <xsd:restriction base="xsd:string">
+   <xsd:pattern value="^((?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.){3}(?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="setupRef">
+  <xsd:restriction base="xsd:string">
+   <xsd:pattern value="^(sref=&quot;.+&quot;)$"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="property">
+  <xsd:restriction base="xsd:string">
+   <xsd:pattern value="(readOnly|widgetLockable|showDirsOnly|urlVisibleButtonBrowser|clickable|leftWidgetHidden|hideTextField|alphaSort|pathNameFilters('All Files (\*)')|acceptMode('OpenMode')|acceptMode('SaveMode')|acceptMode('SaveAsMode')|acceptMode('LinkMode')|textFromValue('')|fileDialogWindowTitle('')|dataValueFromSourceProperty(''))*"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="actionTypeProperty">
+  <xsd:restriction base="xsd:string"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="category">
+  <xsd:restriction base="xsd:string">
+   <xsd:enumeration value="category1"/>
+   <xsd:enumeration value="category2"/>
+   <xsd:enumeration value="category3"/>
+   <xsd:enumeration value="categoryCollapsible"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="actionsToDo">
+  <xsd:restriction base="xsd:string">
+   <xsd:enumeration value="enableWhenSelected"/>
+   <xsd:enumeration value="enableSiblingWhenSelected"/>
+   <xsd:enumeration value="readOnlySiblingWhenSelected"/>
+   <xsd:enumeration value="loadDataFromSW"/>
+   <xsd:enumeration value="getDataFromProperty"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="complexity">
+  <xsd:restriction base="xsd:integer">
+   <xsd:enumeration value="0"/>
+   <xsd:enumeration value="1"/>
+   <xsd:enumeration value="2"/>
+   <xsd:enumeration value="3"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:attribute name="minValue" type="xsd:integer" default="0"/>
+ <xsd:attribute name="maxValue" type="xsd:integer" default="1000"/>
+ <xsd:attribute name="stepValue" type="xsd:integer" default="1"/>
+ <xsd:attribute name="decimalMinValue" type="xsd:decimal" default="0.00"/>
+ <xsd:attribute name="decimalMaxValue" type="xsd:decimal" default="1000.00"/>
+ <xsd:attribute name="decimalStepValue" type="xsd:decimal" default="1.00"/>
+ <xsd:attribute name="decimalDigits" type="xsd:integer" default="2"/>
+ <xsd:attribute name="integerPulldownValues" type="integerPulldown"/>
+ <xsd:attribute name="decimalPulldownValues" type="decimalPulldown"/>
+ <xsd:attribute name="stringPulldownValues" type="stringPulldown"/>
+ <xsd:attribute name="stringListValues" type="stringList"/>
+ <xsd:attribute name="sortOrder" type="xsd:integer"/>
+ <xsd:attribute name="categoryType" type="category"/>
+ <xsd:attribute name="actionType" type="actionsToDo"/>
+ <xsd:attribute name="visibility" type="complexity" default="0"/>
+ <xsd:attribute name="properties" type="property"/>
+ <xsd:attribute name="actionTypeProperties" type="actionTypeProperty"/>
+</xsd:schema>

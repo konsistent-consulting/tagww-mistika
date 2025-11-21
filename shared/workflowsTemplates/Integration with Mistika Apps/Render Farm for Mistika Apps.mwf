@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="Rendering Projects from Mistika Apps">
+  <view scale="0.833333" y="-108" x="236.4"/>
+  <nodes>
+   <node class="Watcher" type="input">
+    <properties>
+     <objectName type="string">Watcher</objectName>
+     <color type="color">#aa557f</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-149.52,9.84</pos>
+     <schemaName type="string">watcher</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/Jobs/RNDs</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <include type="string">*.rnd</include>
+     <exclude type="string"></exclude>
+     <latency type="int">5</latency>
+     <forceCheck type="int">0</forceCheck>
+     <recursive type="bool">true</recursive>
+     <addRoot type="bool">true</addRoot>
+     <deleteAfterProcessing type="bool">false</deleteAfterProcessing>
+     <areYouSure type="bool">false</areYouSure>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">false</alphabeticalOrder>
+     <continuePreviousExecutions type="bool">false</continuePreviousExecutions>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="e6f57f83-b1e7-4975-a8ab-be890ce41dc6"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="d837f55c-75b4-405b-a621-5135346e762e"/>
+     <To type="output" name="To" id="911c30a4-5cc9-4cd4-b362-adda228670d3">
+      <linkedTo>0b94e4ab-91eb-4a29-84a9-fe5d467eef0d</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node class="MistikaRender" type="task">
+    <properties>
+     <objectName type="string">MistikaRender</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">320.4,-43.44</pos>
+     <schemaName type="string">mistikarender</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <exportMetadata type="int">0</exportMetadata>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="5caf0a68-354f-4e20-9a25-c742f059620a"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="f92d59d9-67ab-49ed-b401-61fbaac03176"/>
+     <rnd type="input" name="rnd" id="0b94e4ab-91eb-4a29-84a9-fe5d467eef0d">
+      <linkedTo>911c30a4-5cc9-4cd4-b362-adda228670d3</linkedTo>
+     </rnd>
+     <VideoOut label="AV Out" type="output" name="VideoOut" id="a178850a-23f0-4483-a288-3008faaf4a69"/>
+     <AudioOut label="Ext. Audio" type="output" name="AudioOut" id="10fbd8b3-b2cd-4130-bb6b-7c8eda4c5b4e"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-275.16,-360.28</ScenePos>
+     <Size type="size2">696.219,53.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Mistika Workflows can be used in combination with other Mistika products such as 
+Mistika VR, Boutique, or Ultima to function as a render farm for these products.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-272.16,-424.96</ScenePos>
+     <Size type="size2">517.563,36.9531</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">How to Render Projects from other Mistika Apps</Text>
+     <TextColor type="color">#ff7bd1ff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-272.16,-288.16</ScenePos>
+     <Size type="size2">1045.16,122.922</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">To link both applications, the best approach is to use a Watcher where we generate RNDs from Mistika BT, UA, or VR
+(more information is available in the documentation for each app).
+
+The Mistika Render node will perform the render with the settings defined in the RND. 
+If you want to change the output path and render name specified in the RND, you can do so from the Mistika Render node.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-235.82,-40.66</ScenePos>
+     <Size type="size2">434.2,233.4</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Folder for RND files</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff3c4560</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-211.2,142.16</ScenePos>
+     <Size type="size2">394.266,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">The folder is filtered to trigger only with RNDs</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">295.3,-91.54</ScenePos>
+     <Size type="size2">301,193.8</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Mistika Render Engine</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff434e65</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

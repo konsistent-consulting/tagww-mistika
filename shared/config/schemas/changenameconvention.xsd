@@ -1,0 +1,46 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="ChangeNameConvention" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+        <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+        <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+		<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+        <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="10">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+	    <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="pyDoNothing" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+        <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+        <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+		<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>	
+	    <xsd:element name="schemaName" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="50" sgo:properties="pathNameFilters('xsd Files (*.xsd)')"/>
+            <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>-->

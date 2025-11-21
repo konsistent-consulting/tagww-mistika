@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <SplitMovie>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#677688</color>
+    <frames>864000</frames>
+    <nodeLocked>false</nodeLocked>
+    <objectName>SplitMovie</objectName>
+    <url/>
+  </SplitMovie>
+</nodeCommonRoot>

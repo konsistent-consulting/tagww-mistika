@@ -1,0 +1,16 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="PanasonicP2Pack" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="url" type="universalPath" sgo:visibility="0" sgo:sortOrder="2" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('Panasonic 8K (*.mxf *.xml)')|fileDialogWindowTitle('Select a Panasonic 8K File')"/>
+                <xsd:element name="gamma" type="label" sgo:visibility="0" sgo:sortOrder="4" />
+                <xsd:element name="gamut" type="label" sgo:visibility="0" sgo:sortOrder="5" />
+                <xsd:element name="metadata" type="mediaFileInfoWidget" sgo:visibility="0" sgo:sortOrder="102"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
+

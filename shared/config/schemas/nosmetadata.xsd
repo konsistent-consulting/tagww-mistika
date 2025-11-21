@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+    xmlns:general="https://www.sgo.es/xsd/workflows/general/1"
+    xmlns="https://www.sgo.es/xsd/workflows/skyVOD/1" 
+    targetNamespace="https://www.sgo.es/xsd/workflows/skyVOD/1" 
+    elementFormDefault="qualified" 
+    attributeFormDefault="unqualified" 
+    version="1">
+<xsd:element sgo:categoryType="categoryCollapsible" name="NOSmetadata" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>			        
+			<xsd:element name="nosFilePath" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="2" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('xls file(*.xls)')|fileDialogWindowTitle('Select a XLS Metadata File')"/>
+             <xsd:element name="subtitleType" sgo:stringPulldownValues="None$$$0|Burned$$$1|File$$$2" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="3"/>
+
+            <xsd:element name="title" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+            <xsd:element name="startDate" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="11"/>
+            <xsd:element name="endDate" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="12"/>
+            <xsd:element name="mediaID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+            <xsd:element name="episodeTitle" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>
+            <xsd:element name="synopsisProgramme" type="textEditor" sgo:visibility="0" sgo:sortOrder="15"/>
+            <xsd:element name="productionYear" type="xsd:string" sgo:visibility="0" sgo:sortOrder="16"/>
+            <xsd:element name="genre" sgo:stringPulldownValues="Undefined$$$0|Specialist$$$1|Children$$$2|Entertainment$$$3|Music/Radio$$$4|News/Documentaries$$$5|Movies$$$6|Sports$$$7" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="17"/>
+            <xsd:element name="rating" sgo:stringPulldownValues="Unrated$$$0|Infants$$$1|All Ages$$$2|Cert 7+$$$3|Cert 12+$$$4|Cert 13+$$$5|Cert 16+$$$6|Cert 18+$$$7" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="18"/>		
+            <xsd:element name="cast2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="20"/>
+            <xsd:element name="cast3" type="xsd:string" sgo:visibility="0" sgo:sortOrder="21"/>			
+            <xsd:element name="directors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="22"/>
+            <xsd:element name="productionCountry" type="xsd:string" sgo:visibility="0" sgo:sortOrder="23"/>
+            <xsd:element name="colorBw" sgo:stringPulldownValues="C|BW" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="24"/>
+            <xsd:element name="subtitleVersion" sgo:stringPulldownValues="POR|Original" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="25"/>
+            <xsd:element name="rights" sgo:stringPulldownValues="VOD" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="26"/>
+           
+            <xsd:element name="channel" type="xsd:string" sgo:visibility="0" sgo:sortOrder="30"/>
+            <xsd:element name="providerID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="31"/>
+            <xsd:element name="contentID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="33"/>		
+			
+            <xsd:element name="seriesNr" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="41"/>
+            <xsd:element name="episodeNr" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="42"/>
+            <xsd:element name="episodeCount" type="xsd:integer"  sgo:visibility="0" sgo:sortOrder="43"/>
+			
+            <xsd:element name="videoFormat" type="xsd:string" sgo:visibility="0" sgo:sortOrder="50"/>
+            <xsd:element name="audio1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="51"/>
+            <xsd:element name="audio2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="52"/>
+			
+            <xsd:element name="episodeEnglish" type="xsd:string" sgo:visibility="0" sgo:sortOrder="60"/>
+            <xsd:element name="synopsisSeries" type="textEditor" sgo:visibility="0" sgo:sortOrder="61"/>
+            <xsd:element name="category" type="xsd:string" sgo:visibility="0" sgo:sortOrder="62"/>
+						
+            <xsd:element name="vodPublication" type="xsd:string" sgo:visibility="0" sgo:sortOrder="70"/>
+            <xsd:element name="download" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="71"/>
+            <xsd:element name="streaming" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="72"/>
+            <xsd:element name="code" type="xsd:string" sgo:visibility="0" sgo:sortOrder="73"/>
+            <xsd:element name="lineID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="74"/>
+            <xsd:element name="connectionString" type="xsd:string" sgo:visibility="0" sgo:sortOrder="90"/>
+       </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

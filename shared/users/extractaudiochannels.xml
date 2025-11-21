@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ExtractAudioChannels>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#646ea0</color>
+    <nChannels>2</nChannels>
+    <objectName>ExtractAudioChannels</objectName>
+    <preset>Stereo</preset>
+  </ExtractAudioChannels>
+</nodeCommonRoot>

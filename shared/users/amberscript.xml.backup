@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Amberscript>
+    <Config>
+      <apiKey/>
+    </Config>
+    <color>#005a50</color>
+    <dstPath/>
+    <glossary/>
+    <language>en</language>
+    <numberOfSpeakers>2</numberOfSpeakers>
+    <objectName>Amberscript</objectName>
+    <outputFormat>srt</outputFormat>
+    <targetLanguage>en</targetLanguage>
+    <transcriptionStyle>cleanread</transcriptionStyle>
+    <transcriptionType>transcription</transcriptionType>
+  </Amberscript>
+</nodeCommonRoot>

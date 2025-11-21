@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <EDLToMarkers>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <NamingMatchRules>
+      <LOC>Any</LOC>
+      <ShotNaming>0</ShotNaming>
+    </NamingMatchRules>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#005a5a</color>
+    <edlMarkersFormat>
+      <DaVinciResolve>false</DaVinciResolve>
+      <MarkersColorDVR>1</MarkersColorDVR>
+      <MarkersColorMTK>3</MarkersColorMTK>
+      <Mistika>true</Mistika>
+    </edlMarkersFormat>
+    <edlMarkersPath/>
+    <objectName>EDLToMarkers</objectName>
+  </EDLToMarkers>
+</nodeCommonRoot>

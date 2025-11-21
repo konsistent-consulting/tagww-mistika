@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Trash>
+    <areYouSure>0</areYouSure>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#800000</color>
+    <deleteEmptyFolders>0</deleteEmptyFolders>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Trash</objectName>
+  </Trash>
+</nodeCommonRoot>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ClassifyByTokens>
+    <classifyMode>0</classifyMode>
+    <color>#00b4b4</color>
+    <errorMode>0</errorMode>
+    <objectName>ClassifyByTokens</objectName>
+    <outputList>1,2,3,4,5</outputList>
+    <separator/>
+  </ClassifyByTokens>
+</nodeCommonRoot>

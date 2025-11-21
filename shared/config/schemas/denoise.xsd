@@ -1,0 +1,40 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sgo="http://www.sgo.es/2017/sgo.xsd">
+ <xsd:element name="Denoise" sgo:visibility="0" sgo:sortOrder="0" sgo:categoryType="categoryCollapsible">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+    <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+    <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+    <xsd:element name="Denoise" sgo:visibility="0" sgo:sortOrder="1000" sgo:categoryType="categoryCollapsible">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="Denoise_scope" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="100" sgo:integerPulldownValues="none$$$0|3frames$$$1|5frames$$$2|7frames$$$3|9frames$$$4|11frames$$$5"/>
+       <xsd:element name="Denoise_Mode" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="101" sgo:integerPulldownValues="Temporal$$$0|Spatial$$$1|Combined$$$2"/>
+       <xsd:element name="Denoise_Spatial" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" type="xsd:decimal" sgo:visibility="0" sgo:sortOrder="102" sgo:decimalDigits="2" sgo:decimalMinValue="0"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Mask" sgo:visibility="0" sgo:sortOrder="1010" sgo:categoryType="categoryCollapsible">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="Mask_NGamma" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" type="xsd:decimal" sgo:visibility="0" sgo:sortOrder="103" sgo:decimalDigits="2" sgo:decimalMinValue="0"/>
+       <xsd:element name="Mask_Filter" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" type="xsd:decimal" sgo:visibility="0" sgo:sortOrder="104" sgo:decimalDigits="2" sgo:decimalMinValue="0"/>
+       <xsd:element name="Mask_Level" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" type="xsd:decimal" sgo:visibility="0" sgo:sortOrder="105" sgo:decimalDigits="2" sgo:decimalMinValue="0"/>
+       <xsd:element name="Mask_Scale" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" type="xsd:decimal" sgo:visibility="0" sgo:sortOrder="106" sgo:decimalDigits="2" sgo:decimalMinValue="0"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="OpticalFlow" sgo:visibility="0" sgo:sortOrder="1020" sgo:categoryType="categoryCollapsible">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="OpticalFlow_MinLevel" sgo:decimalMaxValue="8" sgo:decimalStepValue="0.01" type="xsd:decimal" sgo:visibility="0" sgo:sortOrder="107" sgo:decimalDigits="2" sgo:decimalMinValue="0"/>
+       <xsd:element name="OpticalFlow_Levels" sgo:decimalMaxValue="8" sgo:decimalStepValue="0.01" type="xsd:decimal" sgo:visibility="0" sgo:sortOrder="108" sgo:decimalDigits="2" sgo:decimalMinValue="0"/>
+       <xsd:element name="OpticalFlow_Iterations" sgo:decimalMaxValue="1000" sgo:decimalStepValue="0.01" type="xsd:decimal" sgo:visibility="0" sgo:sortOrder="109" sgo:decimalDigits="2" sgo:decimalMinValue="0"/>
+       <xsd:element name="OpticalFlow_Smoothnes" sgo:decimalMaxValue="1000" sgo:decimalStepValue="0.01" type="xsd:decimal" sgo:visibility="0" sgo:sortOrder="110" sgo:decimalDigits="2" sgo:decimalMinValue="0"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>

@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="ShotGrid Publish">
+  <view y="-340.402" x="1103.62" scale="0.279082"/>
+  <nodes>
+   <node type="input" class="Folder">
+    <properties>
+     <objectName type="string">VFX_RefMovies</objectName>
+     <color type="color">#808000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-351.891,-420.469</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][project]_[episodeNr]_[sequence]_[shot][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">false</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">false</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <filterMode type="int">1</filterMode>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="e7ff69fd-b62a-421c-9af1-eb03405e3f86"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="99a269e7-3db5-4d77-928c-184b7d8033a4"/>
+     <Files type="output" name="Files" id="f4941ad2-0d6d-40e8-9f56-984d5ba9e954">
+      <linkedTo>2bd0f6ce-fe9c-4d61-9241-be7582c71e6e</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node type="task" class="NCToMetadata">
+    <properties>
+     <objectName type="string">NCToMetadata</objectName>
+     <color type="color">#01376b</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">382.854,-423.072</pos>
+     <schemaName type="string">nctometadata</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">import Mistika
+from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CbaseItem
+import json
+from token2mdata import token2mdataMapper
+    
+def init(self):
+    self.setClassName("NC To Metadata") 
+    self.color=QColor(0x01376b)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL )    
+    self.addConnector("output",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)    
+    self.setAcceptConnectors(True, "input")
+    self.bypassSupported=True
+    return True
+
+def isReady(self):
+    return True
+
+
+def process(self):
+    res=True
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    output=self.getFirstConnectorByName("output")
+    output.clearUniversalPaths()
+    if self.bypassEnabled:
+        self.progressUpdated(self.complexity())
+        for c in inputs:
+            for up in c.getUniversalPaths():
+                output.addUniversalPath(up)
+        return True
+    mapper=token2mdataMapper(self)
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            up=mapper.nc2mdata(up)
+            output.addUniversalPath(up)
+    return res
+</code>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="51a5057c-3170-40fb-9ba0-f35db13fc895"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="95cd44c2-0021-468d-aba6-9f457b0fa21b"/>
+     <input type="input" name="input" id="2bd0f6ce-fe9c-4d61-9241-be7582c71e6e">
+      <linkedTo>f4941ad2-0d6d-40e8-9f56-984d5ba9e954</linkedTo>
+     </input>
+     <output type="output" name="output" id="28532439-02e4-4aac-90ed-b2a40f7ee61f">
+      <linkedTo>41648b71-5ed1-4c78-ba02-3d692f64fff0</linkedTo>
+     </output>
+    </connections>
+   </node>
+   <node type="task" class="ShotGridCreate">
+    <properties>
+     <objectName type="string">ShotGridCreate</objectName>
+     <color type="color">#38a6cc</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">968.62,-419.179</pos>
+     <schemaName type="string">shotgridcreate</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+from wfShotGrid import CwfShotGrid
+
+def onPropertyUpdated(self,name):
+    print ("onPropertyUpdated",name)
+    param=None
+    prop=None 
+    try:
+        if name=="credentialsType":
+            t=int(self.credentialsType)
+            self.setPropertyVisible("scriptName",t==CwfShotGrid.CREDENTIALS_TYPES_API)
+            self.setPropertyVisible("apiKey",t==CwfShotGrid.CREDENTIALS_TYPES_API)
+            self.setPropertyVisible("user",t==CwfShotGrid.CREDENTIALS_TYPES_USERPWD)
+            self.setPropertyVisible("pwd",t==CwfShotGrid.CREDENTIALS_TYPES_USERPWD)
+        elif name=="table":
+            print (self.table)
+            isAsset=self.table=="Asset"
+            isSeq=self.table=="Sequence"
+            isShot=self.table=="Shot"
+            isVersion=self.table=="Version"
+            self.setPropertyVisible("asset",isAsset)
+            self.setPropertyVisible("sequence",isSeq or isShot)
+            self.setPropertyVisible("shot",isShot or isVersion)
+            self.setPropertyVisible("taskTemplate",isShot)
+            self.setPropertyVisible("version",isVersion)
+            self.setPropertyVisible("task",isVersion)
+            self.setPropertyVisible("taskTemplateList",isShot)
+        elif name=="projectList":
+            if self.projectList!=CwfShotGrid.CUSTOM_VALUE:
+                self.project=self.projectList
+                self.projectList=CwfShotGrid.CUSTOM_VALUE
+        elif name=="taskTemplateList":
+            if self.taskTemplateList!=CwfShotGrid.CUSTOM_VALUE:
+                self.taskTemplate=self.taskTemplateList         
+    except AttributeError:
+        pass
+                
+def init(self):
+    def addGroup(name):
+        self.addProperty("{}List".format(name),CwfShotGrid.CUSTOM_VALUE)
+        self.addProperty("_{}List".format(name),CwfShotGrid.CUSTOM_LIST)
+        self.addProperty(name)
+        
+    self.addProperty("credentialsType",CwfShotGrid.CREDENTIALS_TYPES_API)
+    self.addProperty("restSrv","https://sgoengineering.shotgrid.autodesk.com")
+    self.addProperty("scriptName")
+    self.addEncryptedProperty("apiKey")
+    self.addProperty("user")
+    self.addEncryptedProperty("pwd")
+    
+    self.addProperty("table","Shot")
+    addGroup("project")
+    self.addProperty("asset")
+    self.addProperty("sequence")
+    self.addProperty("shot")
+    addGroup("taskTemplate")
+    self.addProperty("version")
+    self.addProperty("task")
+    self.addProperty("status",'act')
+    self.addProperty("_statusList",["Active$$$act"])
+    self.addProperty("upload",CwfShotGrid.UPLOAD_NONE)
+    self.addConnector("files",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("created",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True,"files_%") 
+    self.color=QColor(0x38a6cc)
+    self.bypassSupported=True
+    self.addActionToContextMenu("Reload Tables")
+    #if the node is part of a workflow, initialize the projects list
+    onPropertyUpdated(self,"credentialsType")
+    onPropertyUpdated(self,"table")
+    return True
+
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    sg=CwfShotGrid(self)
+    res=sg.isReady() and res
+    if self.project.strip() == "":
+        res=self.critical("SgotGrid:isReady:project","Project can not be empty")
+    return res
+ 
+def process(self):            
+    def getRelatedName(table,up):
+        print ("getRelatedName",table)
+        if table=='Project':
+            return ['name',up.getStringOverride(self.project.strip())]
+        elif table=='Asset':
+            return ['code',up.getStringOverride(self.asset.strip())]
+        elif table=='Sequence':
+            return ['code',up.getStringOverride(self.sequence.strip())]
+        elif table=='Shot':
+            return ['code',up.getStringOverride(self.shot.strip())]
+        elif table=='Version':
+            return ['code',up.getStringOverride(self.version.strip())]
+        elif table=='Task':
+            return ['content',up.getStringOverride(self.task.strip())] 
+        return None    
+        
+    def getRelatedData(table,name,up,sg):
+        data=None
+        project=up.getStringOverride(self.project.strip())
+        if table=='Project':
+            data = { 'name': name}
+        elif table=='Asset':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+        elif table=='Sequence':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+        elif table=='Shot':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+            seqName=up.getStringOverride(self.sequence.strip())
+            if (seqName!=""):
+                sequence=sg.findOne('Sequence',[['code',"is",seqName]],['id','code'])
+                if not sequence:
+                    return self.critical("SgotGrid:getRelatedData:sequence","Unable to find sequence {}".format(project))
+                data['sg_sequence']={'type': 'Sequence','id': sequence['id']}
+            templateName=up.getStringOverride(self.taskTemplate.strip())
+            if (templateName!=""):
+                template=sg.findOne('TaskTemplate',[['code',"is",templateName]],['id','code'])
+                if not template:
+                    return self.critical("SgotGrid:getRelatedData:template","Unable to find template {}".format(templateName))
+                data['task_template']={'type': 'TaskTemplate','id': template['id']}
+        elif table=='Version':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+            shotName=up.getStringOverride(self.shot.strip())
+            if (shotName!=""):
+                shot=id=sg.findOne('Shot',[['code',"is",shotName]],['id','code'])
+                if not shot:
+                    return self.critical("SgotGrid:getRelatedData:shot","Unable to find shot {}".format(shotName))
+                data['entity']={'type': 'Shot', 'id': shot['id']}
+            taskName=up.getStringOverride(self.task.strip())
+            if (taskName!=""):            
+                taskFilters = [['project', 'is', {"type": "Project", 'id': prj['id']}],
+                        ['content', 'is', taskName]]
+                task=sg.findOne('Task',taskFilters,['id','code'])                 
+                if not task:
+                    return self.critical("SgotGrid:getRelatedData:task","Unable to find task {}".format(taskName))
+                data['sg_task']={'type': 'Task', 'id': task['id']}                        
+        print ("getRelatedData",data)
+        return data
+        
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    out=self.getFirstConnectorByName("created")
+    out.clearUniversalPaths()
+    if self.bypassEnabled:
+        return True    
+    sg=CwfShotGrid(self)
+    sg.connect() 
+    prj=self.project.strip()
+    seq=self.sequence.strip()
+    template=self.taskTemplate.strip()
+    table=self.table.strip()
+    isVersion=table=="Version"
+    upload=int(self.upload)
+    res=True
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            self.info("SgotGrid:process:input","Processing {}".format(up.getFileName()))
+            print ("table",table)
+            [name,value]=getRelatedName(table,up)
+            print ("getRelatedName result",name,value)
+            record=None
+            data=getRelatedData(table,value,up,sg)
+            error=False
+            if data:
+                record=sg.findOne(table,sg.createToFilter(data))#[[name,"is",value]],["id",name])
+                if record:
+                    self.warning("SgotGrid:process:alreadyExist","{} {} not created. It already exists".format(table,value))
+                else:
+                    if self.status:
+                        data['sg_status_list']=self.status
+                    record=sg.create(table,data)
+                if record:
+                    print ("record",record)
+                    data=up.getPrivateData(sg.PRIVATE_DATA)
+                    if not data:
+                        data={}
+                    data[table]={'id':record['id']}
+                    up.setPrivateData(sg.PRIVATE_DATA,data)
+                    out.addUniversalPath(up)
+                    print ("upload",upload)
+                    if upload:
+                        if not sg.uploadFile(upload,table,record['id'],up.getFilePath(),up.getFileName()):
+                            error=True
+                else:
+                    error=True
+            else:
+                error=True
+            if error:
+                self.addFailedUP(up)
+            res=res and not error
+    return res
+    
+def menuAction(self,name):
+    print ("menuAction",name)
+    if name=="Reload Tables":
+        sg=CwfShotGrid(self)
+        try:
+            sg.connect()
+            self._projectList=CwfShotGrid.CUSTOM_LIST+sg.getList('Project',[["sg_status", "is", "Active"],["is_demo", "is_not", True]],['is_demo','sg_status','id','name'],'name')
+            self.projectList=CwfShotGrid.CUSTOM_VALUE
+            list=CwfShotGrid.CUSTOM_LIST+sg.getList('TaskTemplate',[],['id','code'],'code')
+            self._taskTemplateList=list
+            self.taskTemplateList=CwfShotGrid.CUSTOM_VALUE
+            
+            list=sg.find("Status",[],['id','code','name'])
+            statusList=[]
+            for item in list:
+                statusList.append(item['name']+"$$$"+item['code'])
+            self._statusList=statusList;
+            print ("list",self._statusList)
+            
+        except Exception as e:
+            print (e)
+            pass  </code>
+     <credentialsType type="int">1</credentialsType>
+     <restSrv type="string">https://sgoengineering.shotgrid.autodesk.com</restSrv>
+     <scriptName type="string"></scriptName>
+     <apiKey type="string" encrypted="1">AwUOtJD+TBJYcZni3DvqbTDW1Kx4OIE4NxTU</apiKey>
+     <user type="string"></user>
+     <pwd type="string" encrypted="1">AwUrkbXbaTd9VLzH+R7PSBXz8YldHaQdEjHx</pwd>
+     <table type="string">Project</table>
+     <projectList type="string">Custom</projectList>
+     <project type="string">YOUR-SHOTGRID-PROJECT</project>
+     <asset type="string"></asset>
+     <sequence type="string"></sequence>
+     <shot type="string"></shot>
+     <taskTemplateList type="string">Custom</taskTemplateList>
+     <taskTemplate type="string"></taskTemplate>
+     <version type="string"></version>
+     <task type="string"></task>
+     <status type="string">act</status>
+     <upload type="int">0</upload>
+     <url type="string"></url>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="56b72c7e-55b4-489d-969d-744137918e43"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="be90e55b-68b1-47ff-b33a-9d36700c1f6f"/>
+     <files type="input" name="files" id="41648b71-5ed1-4c78-ba02-3d692f64fff0">
+      <linkedTo>28532439-02e4-4aac-90ed-b2a40f7ee61f</linkedTo>
+     </files>
+     <created type="output" name="created" id="89a13a01-25f8-4663-b26f-799b33427e40">
+      <linkedTo>539170f4-1d54-4840-8980-d85b5c1c64bb</linkedTo>
+     </created>
+    </connections>
+   </node>
+   <node type="task" class="ShotGridCreate">
+    <properties>
+     <objectName type="string">ShotGridCreate_Sequence</objectName>
+     <color type="color">#38a6cc</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1284.07,-417.795</pos>
+     <schemaName type="string">shotgridcreate</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+from wfShotGrid import CwfShotGrid
+
+def onPropertyUpdated(self,name):
+    print ("onPropertyUpdated",name)
+    param=None
+    prop=None 
+    try:
+        if name=="credentialsType":
+            t=int(self.credentialsType)
+            self.setPropertyVisible("scriptName",t==CwfShotGrid.CREDENTIALS_TYPES_API)
+            self.setPropertyVisible("apiKey",t==CwfShotGrid.CREDENTIALS_TYPES_API)
+            self.setPropertyVisible("user",t==CwfShotGrid.CREDENTIALS_TYPES_USERPWD)
+            self.setPropertyVisible("pwd",t==CwfShotGrid.CREDENTIALS_TYPES_USERPWD)
+        elif name=="table":
+            print (self.table)
+            isAsset=self.table=="Asset"
+            isSeq=self.table=="Sequence"
+            isShot=self.table=="Shot"
+            isVersion=self.table=="Version"
+            self.setPropertyVisible("asset",isAsset)
+            self.setPropertyVisible("sequence",isSeq or isShot)
+            self.setPropertyVisible("shot",isShot or isVersion)
+            self.setPropertyVisible("taskTemplate",isShot)
+            self.setPropertyVisible("version",isVersion)
+            self.setPropertyVisible("task",isVersion)
+            self.setPropertyVisible("taskTemplateList",isShot)
+        elif name=="projectList":
+            if self.projectList!=CwfShotGrid.CUSTOM_VALUE:
+                self.project=self.projectList
+                self.projectList=CwfShotGrid.CUSTOM_VALUE
+        elif name=="taskTemplateList":
+            if self.taskTemplateList!=CwfShotGrid.CUSTOM_VALUE:
+                self.taskTemplate=self.taskTemplateList         
+    except AttributeError:
+        pass
+                
+def init(self):
+    def addGroup(name):
+        self.addProperty("{}List".format(name),CwfShotGrid.CUSTOM_VALUE)
+        self.addProperty("_{}List".format(name),CwfShotGrid.CUSTOM_LIST)
+        self.addProperty(name)
+        
+    self.addProperty("credentialsType",CwfShotGrid.CREDENTIALS_TYPES_API)
+    self.addProperty("restSrv","https://sgoengineering.shotgrid.autodesk.com")
+    self.addProperty("scriptName")
+    self.addEncryptedProperty("apiKey")
+    self.addProperty("user")
+    self.addEncryptedProperty("pwd")
+    
+    self.addProperty("table","Shot")
+    addGroup("project")
+    self.addProperty("asset")
+    self.addProperty("sequence")
+    self.addProperty("shot")
+    addGroup("taskTemplate")
+    self.addProperty("version")
+    self.addProperty("task")
+    self.addProperty("status",'act')
+    self.addProperty("_statusList",["Active$$$act"])
+    self.addProperty("upload",CwfShotGrid.UPLOAD_NONE)
+    self.addConnector("files",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("created",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True,"files_%") 
+    self.color=QColor(0x38a6cc)
+    self.bypassSupported=True
+    self.addActionToContextMenu("Reload Tables")
+    #if the node is part of a workflow, initialize the projects list
+    onPropertyUpdated(self,"credentialsType")
+    onPropertyUpdated(self,"table")
+    return True
+
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    sg=CwfShotGrid(self)
+    res=sg.isReady() and res
+    if self.project.strip() == "":
+        res=self.critical("SgotGrid:isReady:project","Project can not be empty")
+    return res
+ 
+def process(self):            
+    def getRelatedName(table,up):
+        print ("getRelatedName",table)
+        if table=='Project':
+            return ['name',up.getStringOverride(self.project.strip())]
+        elif table=='Asset':
+            return ['code',up.getStringOverride(self.asset.strip())]
+        elif table=='Sequence':
+            return ['code',up.getStringOverride(self.sequence.strip())]
+        elif table=='Shot':
+            return ['code',up.getStringOverride(self.shot.strip())]
+        elif table=='Version':
+            return ['code',up.getStringOverride(self.version.strip())]
+        elif table=='Task':
+            return ['content',up.getStringOverride(self.task.strip())] 
+        return None    
+        
+    def getRelatedData(table,name,up,sg):
+        data=None
+        project=up.getStringOverride(self.project.strip())
+        if table=='Project':
+            data = { 'name': name}
+        elif table=='Asset':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+        elif table=='Sequence':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+        elif table=='Shot':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+            seqName=up.getStringOverride(self.sequence.strip())
+            if (seqName!=""):
+                sequence=sg.findOne('Sequence',[['code',"is",seqName]],['id','code'])
+                if not sequence:
+                    return self.critical("SgotGrid:getRelatedData:sequence","Unable to find sequence {}".format(project))
+                data['sg_sequence']={'type': 'Sequence','id': sequence['id']}
+            templateName=up.getStringOverride(self.taskTemplate.strip())
+            if (templateName!=""):
+                template=sg.findOne('TaskTemplate',[['code',"is",templateName]],['id','code'])
+                if not template:
+                    return self.critical("SgotGrid:getRelatedData:template","Unable to find template {}".format(templateName))
+                data['task_template']={'type': 'TaskTemplate','id': template['id']}
+        elif table=='Version':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+            shotName=up.getStringOverride(self.shot.strip())
+            if (shotName!=""):
+                shot=id=sg.findOne('Shot',[['code',"is",shotName]],['id','code'])
+                if not shot:
+                    return self.critical("SgotGrid:getRelatedData:shot","Unable to find shot {}".format(shotName))
+                data['entity']={'type': 'Shot', 'id': shot['id']}
+            taskName=up.getStringOverride(self.task.strip())
+            if (taskName!=""):            
+                taskFilters = [['project', 'is', {"type": "Project", 'id': prj['id']}],
+                        ['content', 'is', taskName]]
+                task=sg.findOne('Task',taskFilters,['id','code'])                 
+                if not task:
+                    return self.critical("SgotGrid:getRelatedData:task","Unable to find task {}".format(taskName))
+                data['sg_task']={'type': 'Task', 'id': task['id']}                        
+        print ("getRelatedData",data)
+        return data
+        
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    out=self.getFirstConnectorByName("created")
+    out.clearUniversalPaths()
+    if self.bypassEnabled:
+        return True    
+    sg=CwfShotGrid(self)
+    sg.connect() 
+    prj=self.project.strip()
+    seq=self.sequence.strip()
+    template=self.taskTemplate.strip()
+    table=self.table.strip()
+    isVersion=table=="Version"
+    upload=int(self.upload)
+    res=True
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            self.info("SgotGrid:process:input","Processing {}".format(up.getFileName()))
+            print ("table",table)
+            [name,value]=getRelatedName(table,up)
+            print ("getRelatedName result",name,value)
+            record=None
+            data=getRelatedData(table,value,up,sg)
+            error=False
+            if data:
+                record=sg.findOne(table,sg.createToFilter(data))#[[name,"is",value]],["id",name])
+                if record:
+                    self.warning("SgotGrid:process:alreadyExist","{} {} not created. It already exists".format(table,value))
+                else:
+                    if self.status:
+                        data['sg_status_list']=self.status
+                    record=sg.create(table,data)
+                if record:
+                    print ("record",record)
+                    data=up.getPrivateData(sg.PRIVATE_DATA)
+                    if not data:
+                        data={}
+                    data[table]={'id':record['id']}
+                    up.setPrivateData(sg.PRIVATE_DATA,data)
+                    out.addUniversalPath(up)
+                    print ("upload",upload)
+                    if upload:
+                        if not sg.uploadFile(upload,table,record['id'],up.getFilePath(),up.getFileName()):
+                            error=True
+                else:
+                    error=True
+            else:
+                error=True
+            if error:
+                self.addFailedUP(up)
+            res=res and not error
+    return res
+    
+def menuAction(self,name):
+    print ("menuAction",name)
+    if name=="Reload Tables":
+        sg=CwfShotGrid(self)
+        try:
+            sg.connect()
+            self._projectList=CwfShotGrid.CUSTOM_LIST+sg.getList('Project',[["sg_status", "is", "Active"],["is_demo", "is_not", True]],['is_demo','sg_status','id','name'],'name')
+            self.projectList=CwfShotGrid.CUSTOM_VALUE
+            list=CwfShotGrid.CUSTOM_LIST+sg.getList('TaskTemplate',[],['id','code'],'code')
+            self._taskTemplateList=list
+            self.taskTemplateList=CwfShotGrid.CUSTOM_VALUE
+            
+            list=sg.find("Status",[],['id','code','name'])
+            statusList=[]
+            for item in list:
+                statusList.append(item['name']+"$$$"+item['code'])
+            self._statusList=statusList;
+            print ("list",self._statusList)
+            
+        except Exception as e:
+            print (e)
+            pass  </code>
+     <credentialsType type="int">1</credentialsType>
+     <restSrv type="string">https://sgoengineering.shotgrid.autodesk.com</restSrv>
+     <scriptName type="string"></scriptName>
+     <apiKey type="string" encrypted="1">AwXiWHwSoP60nXUOMNcGgdw6OECU1G3U2/g4</apiKey>
+     <user type="string"></user>
+     <pwd type="string" encrypted="1">AwXfZUEvncOJoEgzDeo7vOEHBX2p6VDp5sUF</pwd>
+     <table type="string">Sequence</table>
+     <projectList type="string">Custom</projectList>
+     <project type="string">YOUR-SHOTGRID-PROJECT</project>
+     <asset type="string"></asset>
+     <sequence type="string">[project]_[episodeNr]</sequence>
+     <shot type="string"></shot>
+     <taskTemplateList type="string">Custom</taskTemplateList>
+     <taskTemplate type="string"></taskTemplate>
+     <version type="string"></version>
+     <task type="string"></task>
+     <status type="string">wtg</status>
+     <upload type="int">0</upload>
+     <url type="string"></url>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="f82909fb-342c-41f2-8460-23dd662087fd"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="8c2ca96a-802d-467e-931b-a1d2713cf4ec"/>
+     <files type="input" name="files" id="539170f4-1d54-4840-8980-d85b5c1c64bb">
+      <linkedTo>89a13a01-25f8-4663-b26f-799b33427e40</linkedTo>
+     </files>
+     <created type="output" name="created" id="52069f9a-3a2a-4d63-843a-f939e978bfef">
+      <linkedTo>47be7fc1-07da-4d94-8bdc-46ed103b8316</linkedTo>
+     </created>
+    </connections>
+   </node>
+   <node type="task" class="ShotGridCreate">
+    <properties>
+     <objectName type="string">ShotGridCreate_Shot</objectName>
+     <color type="color">#38a6cc</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1678.31,-417.041</pos>
+     <schemaName type="string">shotgridcreate</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+from wfShotGrid import CwfShotGrid
+
+def onPropertyUpdated(self,name):
+    print ("onPropertyUpdated",name)
+    param=None
+    prop=None 
+    try:
+        if name=="credentialsType":
+            t=int(self.credentialsType)
+            self.setPropertyVisible("scriptName",t==CwfShotGrid.CREDENTIALS_TYPES_API)
+            self.setPropertyVisible("apiKey",t==CwfShotGrid.CREDENTIALS_TYPES_API)
+            self.setPropertyVisible("user",t==CwfShotGrid.CREDENTIALS_TYPES_USERPWD)
+            self.setPropertyVisible("pwd",t==CwfShotGrid.CREDENTIALS_TYPES_USERPWD)
+        elif name=="table":
+            print (self.table)
+            isAsset=self.table=="Asset"
+            isSeq=self.table=="Sequence"
+            isShot=self.table=="Shot"
+            isVersion=self.table=="Version"
+            self.setPropertyVisible("asset",isAsset)
+            self.setPropertyVisible("sequence",isSeq or isShot)
+            self.setPropertyVisible("shot",isShot or isVersion)
+            self.setPropertyVisible("taskTemplate",isShot)
+            self.setPropertyVisible("version",isVersion)
+            self.setPropertyVisible("task",isVersion)
+            self.setPropertyVisible("taskTemplateList",isShot)
+        elif name=="projectList":
+            if self.projectList!=CwfShotGrid.CUSTOM_VALUE:
+                self.project=self.projectList
+                self.projectList=CwfShotGrid.CUSTOM_VALUE
+        elif name=="taskTemplateList":
+            if self.taskTemplateList!=CwfShotGrid.CUSTOM_VALUE:
+                self.taskTemplate=self.taskTemplateList         
+    except AttributeError:
+        pass
+                
+def init(self):
+    def addGroup(name):
+        self.addProperty("{}List".format(name),CwfShotGrid.CUSTOM_VALUE)
+        self.addProperty("_{}List".format(name),CwfShotGrid.CUSTOM_LIST)
+        self.addProperty(name)
+        
+    self.addProperty("credentialsType",CwfShotGrid.CREDENTIALS_TYPES_API)
+    self.addProperty("restSrv","https://sgoengineering.shotgrid.autodesk.com")
+    self.addProperty("scriptName")
+    self.addEncryptedProperty("apiKey")
+    self.addProperty("user")
+    self.addEncryptedProperty("pwd")
+    
+    self.addProperty("table","Shot")
+    addGroup("project")
+    self.addProperty("asset")
+    self.addProperty("sequence")
+    self.addProperty("shot")
+    addGroup("taskTemplate")
+    self.addProperty("version")
+    self.addProperty("task")
+    self.addProperty("status",'act')
+    self.addProperty("_statusList",["Active$$$act"])
+    self.addProperty("upload",CwfShotGrid.UPLOAD_NONE)
+    self.addConnector("files",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("created",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True,"files_%") 
+    self.color=QColor(0x38a6cc)
+    self.bypassSupported=True
+    self.addActionToContextMenu("Reload Tables")
+    #if the node is part of a workflow, initialize the projects list
+    onPropertyUpdated(self,"credentialsType")
+    onPropertyUpdated(self,"table")
+    return True
+
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    sg=CwfShotGrid(self)
+    res=sg.isReady() and res
+    if self.project.strip() == "":
+        res=self.critical("SgotGrid:isReady:project","Project can not be empty")
+    return res
+ 
+def process(self):            
+    def getRelatedName(table,up):
+        print ("getRelatedName",table)
+        if table=='Project':
+            return ['name',up.getStringOverride(self.project.strip())]
+        elif table=='Asset':
+            return ['code',up.getStringOverride(self.asset.strip())]
+        elif table=='Sequence':
+            return ['code',up.getStringOverride(self.sequence.strip())]
+        elif table=='Shot':
+            return ['code',up.getStringOverride(self.shot.strip())]
+        elif table=='Version':
+            return ['code',up.getStringOverride(self.version.strip())]
+        elif table=='Task':
+            return ['content',up.getStringOverride(self.task.strip())] 
+        return None    
+        
+    def getRelatedData(table,name,up,sg):
+        data=None
+        project=up.getStringOverride(self.project.strip())
+        if table=='Project':
+            data = { 'name': name}
+        elif table=='Asset':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+        elif table=='Sequence':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+        elif table=='Shot':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+            seqName=up.getStringOverride(self.sequence.strip())
+            if (seqName!=""):
+                sequence=sg.findOne('Sequence',[['code',"is",seqName]],['id','code'])
+                if not sequence:
+                    return self.critical("SgotGrid:getRelatedData:sequence","Unable to find sequence {}".format(project))
+                data['sg_sequence']={'type': 'Sequence','id': sequence['id']}
+            templateName=up.getStringOverride(self.taskTemplate.strip())
+            if (templateName!=""):
+                template=sg.findOne('TaskTemplate',[['code',"is",templateName]],['id','code'])
+                if not template:
+                    return self.critical("SgotGrid:getRelatedData:template","Unable to find template {}".format(templateName))
+                data['task_template']={'type': 'TaskTemplate','id': template['id']}
+        elif table=='Version':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+            shotName=up.getStringOverride(self.shot.strip())
+            if (shotName!=""):
+                shot=id=sg.findOne('Shot',[['code',"is",shotName]],['id','code'])
+                if not shot:
+                    return self.critical("SgotGrid:getRelatedData:shot","Unable to find shot {}".format(shotName))
+                data['entity']={'type': 'Shot', 'id': shot['id']}
+            taskName=up.getStringOverride(self.task.strip())
+            if (taskName!=""):            
+                taskFilters = [['project', 'is', {"type": "Project", 'id': prj['id']}],
+                        ['content', 'is', taskName]]
+                task=sg.findOne('Task',taskFilters,['id','code'])                 
+                if not task:
+                    return self.critical("SgotGrid:getRelatedData:task","Unable to find task {}".format(taskName))
+                data['sg_task']={'type': 'Task', 'id': task['id']}                        
+        print ("getRelatedData",data)
+        return data
+        
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    out=self.getFirstConnectorByName("created")
+    out.clearUniversalPaths()
+    if self.bypassEnabled:
+        return True    
+    sg=CwfShotGrid(self)
+    sg.connect() 
+    prj=self.project.strip()
+    seq=self.sequence.strip()
+    template=self.taskTemplate.strip()
+    table=self.table.strip()
+    isVersion=table=="Version"
+    upload=int(self.upload)
+    res=True
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            self.info("SgotGrid:process:input","Processing {}".format(up.getFileName()))
+            print ("table",table)
+            [name,value]=getRelatedName(table,up)
+            print ("getRelatedName result",name,value)
+            record=None
+            data=getRelatedData(table,value,up,sg)
+            error=False
+            if data:
+                record=sg.findOne(table,sg.createToFilter(data))#[[name,"is",value]],["id",name])
+                if record:
+                    self.warning("SgotGrid:process:alreadyExist","{} {} not created. It already exists".format(table,value))
+                else:
+                    if self.status:
+                        data['sg_status_list']=self.status
+                    record=sg.create(table,data)
+                if record:
+                    print ("record",record)
+                    data=up.getPrivateData(sg.PRIVATE_DATA)
+                    if not data:
+                        data={}
+                    data[table]={'id':record['id']}
+                    up.setPrivateData(sg.PRIVATE_DATA,data)
+                    out.addUniversalPath(up)
+                    print ("upload",upload)
+                    if upload:
+                        if not sg.uploadFile(upload,table,record['id'],up.getFilePath(),up.getFileName()):
+                            error=True
+                else:
+                    error=True
+            else:
+                error=True
+            if error:
+                self.addFailedUP(up)
+            res=res and not error
+    return res
+    
+def menuAction(self,name):
+    print ("menuAction",name)
+    if name=="Reload Tables":
+        sg=CwfShotGrid(self)
+        try:
+            sg.connect()
+            self._projectList=CwfShotGrid.CUSTOM_LIST+sg.getList('Project',[["sg_status", "is", "Active"],["is_demo", "is_not", True]],['is_demo','sg_status','id','name'],'name')
+            self.projectList=CwfShotGrid.CUSTOM_VALUE
+            list=CwfShotGrid.CUSTOM_LIST+sg.getList('TaskTemplate',[],['id','code'],'code')
+            self._taskTemplateList=list
+            self.taskTemplateList=CwfShotGrid.CUSTOM_VALUE
+            
+            list=sg.find("Status",[],['id','code','name'])
+            statusList=[]
+            for item in list:
+                statusList.append(item['name']+"$$$"+item['code'])
+            self._statusList=statusList;
+            print ("list",self._statusList)
+            
+        except Exception as e:
+            print (e)
+            pass  </code>
+     <credentialsType type="int">1</credentialsType>
+     <restSrv type="string">https://sgoengineering.shotgrid.autodesk.com</restSrv>
+     <scriptName type="string"></scriptName>
+     <apiKey type="string" encrypted="1">AwX1T2sFt+mjimIZJ8ARlsstL1eDw3rDzO8v</apiKey>
+     <user type="string"></user>
+     <pwd type="string" encrypted="1">AwXAel4wgtyWv1csEvUko/4YGmK29k/2+doa</pwd>
+     <table type="string">Shot</table>
+     <projectList type="string">Custom</projectList>
+     <project type="string">YOUR-SHOTGRID-PROJECT</project>
+     <asset type="string"></asset>
+     <sequence type="string">[project]_[episodeNr]</sequence>
+     <shot type="string">[project]_[episodeNr]_[sequence]_[shot]</shot>
+     <taskTemplateList type="string">Custom</taskTemplateList>
+     <taskTemplate type="string">Film VFX -  Comp Only Shot</taskTemplate>
+     <version type="string"></version>
+     <task type="string"></task>
+     <status type="string">wtg</status>
+     <upload type="int">0</upload>
+     <url type="string"></url>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="3b420eb3-02fb-4801-a996-3e85a1dcfe6f"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="b9849e45-a8fa-46ac-985b-5ad5513f9251"/>
+     <files type="input" name="files" id="47be7fc1-07da-4d94-8bdc-46ed103b8316">
+      <linkedTo>52069f9a-3a2a-4d63-843a-f939e978bfef</linkedTo>
+     </files>
+     <created type="output" name="created" id="6d1c319f-83f1-4f83-aa5d-155fffcd50b5">
+      <linkedTo>1edf2ffd-ceaf-4313-a6d2-b329b1f9bb21</linkedTo>
+     </created>
+    </connections>
+   </node>
+   <node type="task" class="ShotGridCreate">
+    <properties>
+     <objectName type="string">ShotGridCreate_Version</objectName>
+     <color type="color">#38a6cc</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">2258.34,-416.716</pos>
+     <schemaName type="string">shotgridcreate</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+from wfShotGrid import CwfShotGrid
+
+def onPropertyUpdated(self,name):
+    print ("onPropertyUpdated",name)
+    param=None
+    prop=None 
+    try:
+        if name=="credentialsType":
+            t=int(self.credentialsType)
+            self.setPropertyVisible("scriptName",t==CwfShotGrid.CREDENTIALS_TYPES_API)
+            self.setPropertyVisible("apiKey",t==CwfShotGrid.CREDENTIALS_TYPES_API)
+            self.setPropertyVisible("user",t==CwfShotGrid.CREDENTIALS_TYPES_USERPWD)
+            self.setPropertyVisible("pwd",t==CwfShotGrid.CREDENTIALS_TYPES_USERPWD)
+        elif name=="table":
+            print (self.table)
+            isAsset=self.table=="Asset"
+            isSeq=self.table=="Sequence"
+            isShot=self.table=="Shot"
+            isVersion=self.table=="Version"
+            self.setPropertyVisible("asset",isAsset)
+            self.setPropertyVisible("sequence",isSeq or isShot)
+            self.setPropertyVisible("shot",isShot or isVersion)
+            self.setPropertyVisible("taskTemplate",isShot)
+            self.setPropertyVisible("version",isVersion)
+            self.setPropertyVisible("task",isVersion)
+            self.setPropertyVisible("taskTemplateList",isShot)
+        elif name=="projectList":
+            if self.projectList!=CwfShotGrid.CUSTOM_VALUE:
+                self.project=self.projectList
+                self.projectList=CwfShotGrid.CUSTOM_VALUE
+        elif name=="taskTemplateList":
+            if self.taskTemplateList!=CwfShotGrid.CUSTOM_VALUE:
+                self.taskTemplate=self.taskTemplateList         
+    except AttributeError:
+        pass
+                
+def init(self):
+    def addGroup(name):
+        self.addProperty("{}List".format(name),CwfShotGrid.CUSTOM_VALUE)
+        self.addProperty("_{}List".format(name),CwfShotGrid.CUSTOM_LIST)
+        self.addProperty(name)
+        
+    self.addProperty("credentialsType",CwfShotGrid.CREDENTIALS_TYPES_API)
+    self.addProperty("restSrv","https://sgoengineering.shotgrid.autodesk.com")
+    self.addProperty("scriptName")
+    self.addEncryptedProperty("apiKey")
+    self.addProperty("user")
+    self.addEncryptedProperty("pwd")
+    
+    self.addProperty("table","Shot")
+    addGroup("project")
+    self.addProperty("asset")
+    self.addProperty("sequence")
+    self.addProperty("shot")
+    addGroup("taskTemplate")
+    self.addProperty("version")
+    self.addProperty("task")
+    self.addProperty("status",'act')
+    self.addProperty("_statusList",["Active$$$act"])
+    self.addProperty("upload",CwfShotGrid.UPLOAD_NONE)
+    self.addConnector("files",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("created",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True,"files_%") 
+    self.color=QColor(0x38a6cc)
+    self.bypassSupported=True
+    self.addActionToContextMenu("Reload Tables")
+    #if the node is part of a workflow, initialize the projects list
+    onPropertyUpdated(self,"credentialsType")
+    onPropertyUpdated(self,"table")
+    return True
+
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    sg=CwfShotGrid(self)
+    res=sg.isReady() and res
+    if self.project.strip() == "":
+        res=self.critical("SgotGrid:isReady:project","Project can not be empty")
+    return res
+ 
+def process(self):            
+    def getRelatedName(table,up):
+        print ("getRelatedName",table)
+        if table=='Project':
+            return ['name',up.getStringOverride(self.project.strip())]
+        elif table=='Asset':
+            return ['code',up.getStringOverride(self.asset.strip())]
+        elif table=='Sequence':
+            return ['code',up.getStringOverride(self.sequence.strip())]
+        elif table=='Shot':
+            return ['code',up.getStringOverride(self.shot.strip())]
+        elif table=='Version':
+            return ['code',up.getStringOverride(self.version.strip())]
+        elif table=='Task':
+            return ['content',up.getStringOverride(self.task.strip())] 
+        return None    
+        
+    def getRelatedData(table,name,up,sg):
+        data=None
+        project=up.getStringOverride(self.project.strip())
+        if table=='Project':
+            data = { 'name': name}
+        elif table=='Asset':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+        elif table=='Sequence':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+        elif table=='Shot':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+            seqName=up.getStringOverride(self.sequence.strip())
+            if (seqName!=""):
+                sequence=sg.findOne('Sequence',[['code',"is",seqName]],['id','code'])
+                if not sequence:
+                    return self.critical("SgotGrid:getRelatedData:sequence","Unable to find sequence {}".format(project))
+                data['sg_sequence']={'type': 'Sequence','id': sequence['id']}
+            templateName=up.getStringOverride(self.taskTemplate.strip())
+            if (templateName!=""):
+                template=sg.findOne('TaskTemplate',[['code',"is",templateName]],['id','code'])
+                if not template:
+                    return self.critical("SgotGrid:getRelatedData:template","Unable to find template {}".format(templateName))
+                data['task_template']={'type': 'TaskTemplate','id': template['id']}
+        elif table=='Version':
+            prj=sg.findOne('Project',[['name',"is",project]],['id','name'])
+            if not prj:
+                return self.critical("SgotGrid:getRelatedData:project","Unable to find project {}".format(project))
+            data = { 'project': {'type': 'Project','id': prj['id']},'code': name}
+            shotName=up.getStringOverride(self.shot.strip())
+            if (shotName!=""):
+                shot=id=sg.findOne('Shot',[['code',"is",shotName]],['id','code'])
+                if not shot:
+                    return self.critical("SgotGrid:getRelatedData:shot","Unable to find shot {}".format(shotName))
+                data['entity']={'type': 'Shot', 'id': shot['id']}
+            taskName=up.getStringOverride(self.task.strip())
+            if (taskName!=""):            
+                taskFilters = [['project', 'is', {"type": "Project", 'id': prj['id']}],
+                        ['content', 'is', taskName]]
+                task=sg.findOne('Task',taskFilters,['id','code'])                 
+                if not task:
+                    return self.critical("SgotGrid:getRelatedData:task","Unable to find task {}".format(taskName))
+                data['sg_task']={'type': 'Task', 'id': task['id']}                        
+        print ("getRelatedData",data)
+        return data
+        
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    out=self.getFirstConnectorByName("created")
+    out.clearUniversalPaths()
+    if self.bypassEnabled:
+        return True    
+    sg=CwfShotGrid(self)
+    sg.connect() 
+    prj=self.project.strip()
+    seq=self.sequence.strip()
+    template=self.taskTemplate.strip()
+    table=self.table.strip()
+    isVersion=table=="Version"
+    upload=int(self.upload)
+    res=True
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            self.info("SgotGrid:process:input","Processing {}".format(up.getFileName()))
+            print ("table",table)
+            [name,value]=getRelatedName(table,up)
+            print ("getRelatedName result",name,value)
+            record=None
+            data=getRelatedData(table,value,up,sg)
+            error=False
+            if data:
+                record=sg.findOne(table,sg.createToFilter(data))#[[name,"is",value]],["id",name])
+                if record:
+                    self.warning("SgotGrid:process:alreadyExist","{} {} not created. It already exists".format(table,value))
+                else:
+                    if self.status:
+                        data['sg_status_list']=self.status
+                    record=sg.create(table,data)
+                if record:
+                    print ("record",record)
+                    data=up.getPrivateData(sg.PRIVATE_DATA)
+                    if not data:
+                        data={}
+                    data[table]={'id':record['id']}
+                    up.setPrivateData(sg.PRIVATE_DATA,data)
+                    out.addUniversalPath(up)
+                    print ("upload",upload)
+                    if upload:
+                        if not sg.uploadFile(upload,table,record['id'],up.getFilePath(),up.getFileName()):
+                            error=True
+                else:
+                    error=True
+            else:
+                error=True
+            if error:
+                self.addFailedUP(up)
+            res=res and not error
+    return res
+    
+def menuAction(self,name):
+    print ("menuAction",name)
+    if name=="Reload Tables":
+        sg=CwfShotGrid(self)
+        try:
+            sg.connect()
+            self._projectList=CwfShotGrid.CUSTOM_LIST+sg.getList('Project',[["sg_status", "is", "Active"],["is_demo", "is_not", True]],['is_demo','sg_status','id','name'],'name')
+            self.projectList=CwfShotGrid.CUSTOM_VALUE
+            list=CwfShotGrid.CUSTOM_LIST+sg.getList('TaskTemplate',[],['id','code'],'code')
+            self._taskTemplateList=list
+            self.taskTemplateList=CwfShotGrid.CUSTOM_VALUE
+            
+            list=sg.find("Status",[],['id','code','name'])
+            statusList=[]
+            for item in list:
+                statusList.append(item['name']+"$$$"+item['code'])
+            self._statusList=statusList;
+            print ("list",self._statusList)
+            
+        except Exception as e:
+            print (e)
+            pass  </code>
+     <credentialsType type="int">1</credentialsType>
+     <restSrv type="string">https://sgoengineering.shotgrid.autodesk.com</restSrv>
+     <scriptName type="string"></scriptName>
+     <apiKey type="string" encrypted="1">AwWjGT1T4b/13DRPcZZHwJ17eQHVlSyVmrl5</apiKey>
+     <user type="string"></user>
+     <pwd type="string" encrypted="1">AwVl3/uVJ3kzGvKJt1CBBlu9v8cTU+pTXH+/</pwd>
+     <table type="string">Version</table>
+     <projectList type="string">Custom</projectList>
+     <project type="string">YOUR-SHOTGRID-PROJECT</project>
+     <asset type="string"></asset>
+     <sequence type="string">[project]_[episodeNr]</sequence>
+     <shot type="string">[project]_[episodeNr]_[sequence]_[shot]</shot>
+     <taskTemplateList type="string">Custom</taskTemplateList>
+     <taskTemplate type="string">Film VFX -  Comp Only Shot</taskTemplate>
+     <version type="string">[project]_[episodeNr]_[sequence]_[shot]</version>
+     <task type="string">Comp</task>
+     <status type="string">wtg</status>
+     <upload type="string">1</upload>
+     <url type="string"></url>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="7f3422ed-dfb4-4210-9db9-0e6bacdcbd3d"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="1a2a4f0f-3cc2-4afc-a8f7-b38ad2eec703"/>
+     <files type="input" name="files" id="1edf2ffd-ceaf-4313-a6d2-b329b1f9bb21">
+      <linkedTo>6d1c319f-83f1-4f83-aa5d-155fffcd50b5</linkedTo>
+     </files>
+     <created type="output" name="created" id="347bdb97-c4a4-412e-8b32-20f3ed62bf8a"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-552.038,-747.347</ScenePos>
+     <Size type="size2">179,37</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">ShotGrid Publish</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-549.792,-707.661</ScenePos>
+     <Size type="size2">1417,194</Size>
+     <TextSize type="float">19.46477699279785</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">In this workflow we create different ShotGrid assets extracting their names dynamically from each VFX name components
+i.e: If the VFX naming is SGO_101_015_0010, the following metadata tokens will be determined:
+[project] = SGO
+[episodeNr] = 101
+[sequence] = 015
+[shot] = 0010</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-544.032,-456.538</ScenePos>
+     <Size type="size2">628.992,238.752</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff0e6d72</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-520.704,-302.33</ScenePos>
+     <Size type="size2">525,77</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">A single folder containing all reference movies for each VFX
+In order to determine dynamic tokens, the NameConvention
+is set to: [path][project]_[episodeNr]_[sequence]_[shot][.ext]</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">160.059,-460.655</ScenePos>
+     <Size type="size2">703.125,249.01</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">NameConvention to Metadata</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">193.19,-293.229</ScenePos>
+     <Size type="size2">653,54</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Just placing this node will match the tokens declared in the NameConvention
+into dynamic metadata for each VFX shot</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">948.672,-464.832</ScenePos>
+     <Size type="size2">1776.56,254.016</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">ShotGrid Assets</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff753d75</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1287.26,-285.068</ScenePos>
+     <Size type="size2">905,58</Size>
+     <TextSize type="float">16</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">ShotGrid create node connects to an existing ShotGrid database, and creates the desired assets
+In order to update ShotGrid database status, right-click on the node and select 'Reload tables'</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">966.24,-213.28</ScenePos>
+     <Size type="size2">257,123</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">If table set to 'Project', 
+just connect to your database 
+to retrieve all projects list
+and select the one that
+will be modified</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">8</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1270.08,-206.08</ScenePos>
+     <Size type="size2">325,100</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">If table set to 'Sequence',
+just select which project it belongs to,
+and the desired Sequence naming
+based on dynamic tokens metadata </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">9</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1643.04,-201.76</ScenePos>
+     <Size type="size2">559,146</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">If table set to 'Shot',
+just select which project and sequence it belongs to,
+and the desired Shot naming
+based on dynamic tokens metadata
+You may also select the Task Template of the Shot when created,
+and its Status in ShotGrid</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">10</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">2262.24,-201.76</ScenePos>
+     <Size type="size2">463,169</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">If table set to 'Version',
+it will create a Version of the shot
+also based on dynamic tokens metadata.
+Also the Task of the created Version must be selected,
+as well as its Status.
+Here the VFX ref movie is also uploaded so ShotGrid
+will use it as preview or thumbnail</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">11</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

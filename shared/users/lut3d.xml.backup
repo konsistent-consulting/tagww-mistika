@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <LUT3D>
+    <Input>
+      <Input_Gamma>1</Input_Gamma>
+      <Input_Offset>0</Input_Offset>
+      <Input_Scale>1</Input_Scale>
+      <Input_Use>0</Input_Use>
+    </Input>
+    <Lut1Da>
+      <Lut1Da_LUT1DFile>0</Lut1Da_LUT1DFile>
+      <Lut1Da_Use>0</Lut1Da_Use>
+    </Lut1Da>
+    <Lut1Db>
+      <Lut1Db_Use>0</Lut1Db_Use>
+    </Lut1Db>
+    <Lut3D>
+      <Lut3D_LUT3DFile>0</Lut3D_LUT3DFile>
+    </Lut3D>
+    <Output>
+      <Output_Gamma>1</Output_Gamma>
+      <Output_Offset>0</Output_Offset>
+      <Output_Scale>1</Output_Scale>
+      <Output_Use>0</Output_Use>
+    </Output>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#399140</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>LUT3D</objectName>
+  </LUT3D>
+</nodeCommonRoot>

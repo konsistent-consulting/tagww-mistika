@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 sp1 (http://www.altova.com) by Mark Lowe (British Sky Broadcasting Ltd) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.cablelabs.com/namespaces/metadata/xsd/offer/1" xmlns:core="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" targetNamespace="http://www.cablelabs.com/namespaces/metadata/xsd/offer/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1">
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" schemaLocation="MD-SP-CORE-I01.xsd"/>
+	<xsd:simpleType name="ProviderContentTierType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Value used to determine target market and/or systems.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="256"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="BillingIdType">
+		<xsd:annotation>
+			<xsd:documentation>Typically a 5-character alphanumeric string used by billing systems.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:pattern value="[0-9A-Za-z]{5}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="CategoryPathType">
+		<xsd:annotation>
+			<xsd:documentation>Value denoting a path in the target catalog (may be localized to a target language).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="core:LocalizableStringType">
+				<xsd:maxLength value="256"/>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="CategoryType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to group one or more category paths.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="CategoryPath" type="CategoryPathType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>A localizable path of category values that are used by the end system to put an offer or title into the catalog.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PresentationType">
+		<xsd:annotation>
+			<xsd:documentation>Provides presentation instructions specific to the VOD offer used to determine menu layout and corresponding UI items.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CategoryRef" type="core:AssetRefType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a categorypath set.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DisplayAsNew" type="core:DurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The duration of time after the startDateTime that this offer should be presented as "New" or similar.  This element MUST be explicitly provided if the presentation originated as V3.0.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DisplayAsLastChance" type="core:DurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The duration of time before the endDateTime that this offer should be presented as "Last Chance" or similar.  This element MUST be explicitly provided if the presentation originated as V3.0.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Ext" type="core:ExtType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ContentGroupType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to group a title with one or more media assets.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="TitleRef" type="core:AssetRefType"/>
+					<xsd:choice minOccurs="1" maxOccurs="unbounded">
+						<xsd:element name="MovieRef" type="core:AssetRefType"/>
+						<xsd:element name="PreviewRef" type="core:AssetRefType"/>
+						<xsd:element name="PosterRef" type="core:AssetRefType" minOccurs="0" maxOccurs="0"/>
+						<xsd:element name="BoxCoverRef" type="core:AssetRefType" minOccurs="0" maxOccurs="0"/>
+						<xsd:element name="ThumbnailRef" type="core:AssetRefType" minOccurs="0"/>
+						<xsd:element name="ContentRef" type="core:AssetRefType" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element name="TrickRef" type="core:AssetRefType" minOccurs="0" maxOccurs="0"/>
+						<xsd:element name="BarkerRef" type="core:AssetRefType" minOccurs="0" maxOccurs="0"/>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="OfferType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type combining all of the components needed to display and deliver a VOD product; including presentation, terms and content.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="Presentation" type="PresentationType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Presentation options for this offer.  Note that an offer is not required to have a presentation; that is it may not be presented in the catalog.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="PromotionalContentGroupRef" type="core:AssetRefType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>A content group used for promotional purposes only.  This may represent a title for a movie trilogy, TV series or some other promotional package.  It is expected that this group will contain a title, still images and previews, but may not contain the movies themselves.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ProviderContentTier" type="ProviderContentTierType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Used by the distribution system to determine the target market and/or systems for this particular offer.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="BillingId" type="BillingIdType">
+						<xsd:annotation>
+							<xsd:documentation>A billing ID used for this offer (in ADI1.1 this was a 5-character alphanumeric string).</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="TermsRef" type="core:AssetRefType">
+						<xsd:annotation>
+							<xsd:documentation>A reference to terms for this offer.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ContentGroupRef" type="core:AssetRefType" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>A reference to one or more content groups for this offer.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+		<!-- Used to model X_Offer_Window -->
+	</xsd:complexType>
+</xsd:schema>

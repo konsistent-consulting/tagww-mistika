@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <FrameIO>
+    <api>https://api.frame.io/v2</api>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#6845ff</color>
+    <createReviewLink>false</createReviewLink>
+    <directory>--- None ---</directory>
+    <email/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>FrameIO</objectName>
+    <project>--- None ---</project>
+    <team>--- None ---</team>
+    <token/>
+  </FrameIO>
+</nodeCommonRoot>

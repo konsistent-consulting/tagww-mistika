@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <StereoPairs>
+    <color>#677688</color>
+    <comparePath>false</comparePath>
+    <objectName>StereoPairs</objectName>
+  </StereoPairs>
+</nodeCommonRoot>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nameConvention>
+  <placeHolders>
+    <category name="Aliases">
+      <placeHolder from="metaData" name="test">
+        <param name="id">Gamma</param>
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="Camera">
+      <placeHolder from="metaData" name="cameraDeviceId">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="cameraFirmwareVersion">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="cameraManufacturer">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="cameraModel">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="cameraSerialNr">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="Classic">
+      <placeHolder from="" name="baseName">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="" name="ext">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="" name="eye">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="" name="frame">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="" name="parentFolder">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="" name="absolutePath">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="absolutePath" name="fullParentFolder">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="" name="path">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="" name="range">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="Clip">
+      <placeHolder from="metaData" name="aspectRatio">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="clipVersion">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="fps">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="fromClipName">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="imageCodec">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="imageFormat">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="resolutionX">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="resolutionY">
+        <visibility>true</visibility>
+      </placeHolder>
+	  <placeHolder from="metaData" name="resolution">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="tapeName">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="Custom">
+      <placeHolder from="metaData" name="comment1">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="comment2">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="comment3">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="comment4">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="comment5">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="Edl">
+      <placeHolder from="metaData" name="edlBaseName">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markPink">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markRed">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markOrange">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markYellow">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markGreen">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markCyan">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markTurquoise">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markBlue">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markPurple">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markMagenta">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markBlack">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="markWhite">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>	
+    <category name="Lens">
+      <placeHolder from="metaData" name="lensDeviceId">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="lensManufacturer">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="lensModel">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="lensSerialNr">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="MSG">
+      <placeHolder from="metaData" name="carveID">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="compVersionFormat">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="descriptor">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="display">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="dstCodec">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="dstGamma">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="dstGamut">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="dstPath">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="dstResolution">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="experienceID">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="mapping">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="msgCodec">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="msgGamma">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="msgGamut">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="msgResolution">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="pipeSubTrack">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="pipeTrack">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="process">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="sceneID">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="sceneName">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="sequence">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="server">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="share">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="shotNr">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="tileID">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="zone">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="review">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="Metadata">
+      <placeHolder from="" name="metaData">
+        <param name="id"/>
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="" name="privateData">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="MistikaRender">
+      <placeHolder from="metaData" name="endFrame">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="envName">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="frameCount">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="mediaName">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="project">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="renderName">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="segmentIndex">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="startFrame">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="Production">
+      <placeHolder from="metaData" name="cameraAssistant">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="cameraAssistant2">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="cinematographer">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="copyright">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="dataManager">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="director">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="dit">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="location">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="producer">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="production">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="scriptSupervisor">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="soundMixer">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="Settings">
+      <placeHolder from="metaData" name="focalLength">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="fstops">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="iso">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="shutterSpeed">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="tint">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="whiteBalance">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="Slate">
+      <placeHolder from="metaData" name="dayNight">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="episodeName">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="episodeNr">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="intExt">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="scene">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="season">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="shootingDate">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="shot">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="slateCamera">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="slateDescription">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="take">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="roll">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+    <category name="UniColor">
+      <placeHolder from="metaData" name="colorSource">
+        <param name="id">ColorSource</param>
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="gamma">
+        <param name="id">gamma</param>
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="gamut">
+        <param name="id">gamut</param>
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+   <category name="ShotGrid">
+      <placeHolder from="metaData" name="sgProject">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="sgSequence">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="sgShot">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="sgTask">
+        <visibility>true</visibility>
+      </placeHolder>
+      <placeHolder from="metaData" name="sgVersion">
+        <visibility>true</visibility>
+      </placeHolder>
+    </category>
+ 	
+  </placeHolders>
+</nameConvention>

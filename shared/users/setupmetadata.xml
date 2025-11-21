@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <SetUPMetadata>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#678788</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>SetUPMetadata</objectName>
+  </SetUPMetadata>
+</nodeCommonRoot>

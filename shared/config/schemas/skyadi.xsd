@@ -1,0 +1,60 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="SkyADI" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="providerID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="assetNr" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="serieId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="title" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="episodeTitle" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="seasonNr" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="episodeNr" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="9"/>
+                <xsd:element name="startDate" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="endDate" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="termsPlatformCode" type="multiSelect" sgo:stringListValues="AS|AM|AT" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="termsRegion" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+                <xsd:element name="termsType" type="stringPulldown" sgo:stringPulldownValues="CUTV$$$CUTV|Archive$$$Archive" sgo:visibility="0" sgo:sortOrder="14"/>
+                <xsd:element name="year" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="15"/>
+                <xsd:element name="isDownloadable" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="16"/>
+                <xsd:element name="isStreamable" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="17"/>
+                <xsd:element name="isHD" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="18"/>
+                <xsd:element name="studioDisplay" type="xsd:string" sgo:visibility="0" sgo:sortOrder="19"/>
+                <xsd:element name="directors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="20"/>
+                <xsd:element name="actors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="21"/>
+                <xsd:element name="producers" type="xsd:string" sgo:visibility="0" sgo:sortOrder="22"/>
+                <xsd:element name="adiFile" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="23"/>
+                <xsd:element name="briefDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="24"/>
+                <xsd:element name="shortDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="25"/>
+                <xsd:element name="description" type="textEditor" sgo:visibility="0" sgo:sortOrder="26"/>
+                <xsd:element name="longDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="27"/>
+                <xsd:element name="seasonId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="28"/>
+                <xsd:element name="seasonTitle" type="textEditor" sgo:visibility="0" sgo:sortOrder="29"/>
+                <xsd:element name="seasonBriefDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="30"/>
+                <xsd:element name="seasonShortDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="31"/>
+                <xsd:element name="seasonDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="32"/>
+                <xsd:element name="seasonLongDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="33"/>
+                <xsd:element name="episodeBriefDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="34"/>
+                <xsd:element name="episodeShortDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="35"/>
+                <xsd:element name="episodeDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="36"/>
+                <xsd:element name="episodeLongDescription" type="textEditor" sgo:visibility="0" sgo:sortOrder="37"/>
+                <xsd:element name="isHD" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="38"/>
+                <xsd:element name="rating" type="stringPulldown" sgo:stringPulldownValues="Unrated$$$0|Infants$$$1|All Ages$$$2|Cert 7+$$$3|Cert 12+$$$4|Cert 13+$$$5|Cert 16+$$$6|Cert 18+$$$7" sgo:visibility="0" sgo:sortOrder="39"/>
+                <xsd:element name="genre" type="stringPulldown" sgo:stringPulldownValues="Undefined$$$0|Specialist$$$1|Children$$$2|Entertainment$$$3|Music/Radio$$$4|News/Documentaries$$$5|Movies$$$6|Sports$$$7" sgo:visibility="0" sgo:sortOrder="40"/>
+                <xsd:element name="subgenre" type="xsd:string" sgo:visibility="0" sgo:sortOrder="41"/>
+                <xsd:element name="audio1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="42"/>
+                <xsd:element name="audio2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="43"/>
+                <xsd:element name="type" type="stringPulldown" sgo:stringPulldownValues="Movies$$$M|Entertainment$$$E|Sports$$$S" sgo:visibility="0" sgo:sortOrder="44"/>
+                <xsd:element name="subtype" type="stringPulldown" sgo:stringPulldownValues="1 Hour Series$$$0|1/2 Hour Series$$$1|Biography$$$2|Events$$$3|Filler$$$4|History Alive$$$5|Miscellaneous$$$6|Our Century$$$7|Short Duration Series$$$8|Specials$$$9|VoD Box-set$$$B|Current$$$C|Business$$$D|Interstitial$$$I|Library$$$L|MOW$$$M|PPV Digital (NVOD)$$$N|PPV Analogue$$$O|Ex-PPV$$$P|Subscription$$$Q|PPV Digital (non NVOD)$$$R|Mini-Series$$$S|Subscription Movie Series$$$T|Premium VOD$$$U|Vault$$$V|3rd Party$$$Z" sgo:visibility="0" sgo:sortOrder="45"/>
+                <xsd:element name="imagePrefix" type="xsd:string" sgo:visibility="0" sgo:sortOrder="46"/>
+                <xsd:element name="imageEpisode" type="xsd:string" sgo:visibility="0" sgo:sortOrder="47"/>
+                <xsd:element name="imageSeason" type="xsd:string" sgo:visibility="0" sgo:sortOrder="48"/>
+                <xsd:element name="imageSerie" type="xsd:string" sgo:visibility="0" sgo:sortOrder="49"/>
+                <xsd:element name="subtitleLang" type="xsd:string" sgo:visibility="0" sgo:sortOrder="50"/>
+                <xsd:element name="deleteAsset" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="51"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

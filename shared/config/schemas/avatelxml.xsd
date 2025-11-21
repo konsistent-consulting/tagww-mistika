@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="AvatelXml" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+			<xsd:element name="providerID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+			<xsd:element name="linkedChannel" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+			<xsd:element name="catalog" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+		   <xsd:element name="Content" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="20">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="contentID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+						<xsd:element name="externalID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+						<xsd:element name="title" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+						<xsd:element name="originalTitle" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+						<xsd:element name="synopsis" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+						<xsd:element name="description" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+						<xsd:element name="contentGenre" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+						<xsd:element name="seriesRef" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+						<xsd:element name="number" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="9"/>
+						<xsd:element name="actors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+						<xsd:element name="directors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+						<xsd:element name="year" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="12"/>
+						<xsd:element name="rating" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+						<xsd:element name="countries" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>	
+						<xsd:element name="derechosDescarga" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="20"/>
+						<xsd:element name="derechosStreaming" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="21"/>
+						<xsd:element name="vodPublication" type="xsd:string" sgo:visibility="0" sgo:sortOrder="22"/>
+						<xsd:element name="lineID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="23"/>
+						<xsd:element name="rightsSource" type="xsd:string" sgo:visibility="0" sgo:sortOrder="24"/>
+						<xsd:element name="tags" type="xsd:string" sgo:visibility="0" sgo:sortOrder="25"/>
+						<xsd:element name="awards" type="xsd:string" sgo:visibility="0" sgo:sortOrder="26"/>
+						<xsd:element name="VodItem" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="100">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="vodItemID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+									<xsd:element name="periodStart" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="2"/>
+									<xsd:element name="periodEnd" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="3"/>	
+									<xsd:element name="MediaSource" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="10">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="audioTrack1Lang" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+												<xsd:element name="audioTrack1Type" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+												<xsd:element name="audioTrack2Lang" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+												<xsd:element name="audioTrack2Type" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+												<xsd:element name="subtitleLanguage1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		    <xsd:element name="Series" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="30">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="seriesID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+						<xsd:element name="seriesExternalID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+						<xsd:element name="seriesTitle" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+						<xsd:element name="seriesOriginalTitle" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+						<xsd:element name="seriesSynopsis" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+						<xsd:element name="seriesDescription" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+						<xsd:element name="seriesContentGenre" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+						<xsd:element name="season" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="8"/>						
+						<xsd:element name="episodeCount" type="xsd:integer"  sgo:visibility="0" sgo:sortOrder="9"/>
+						<xsd:element name="seriesYear" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="12"/>
+						<xsd:element name="seriesRating" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+						<xsd:element name="seriesCountries" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>					
+						<xsd:element name="seriesGrpRef" type="xsd:string" sgo:visibility="0" sgo:sortOrder="15"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		    <xsd:element name="GroupSeries" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="40">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="grpSeriesID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+						<xsd:element name="grpSeriesExternalID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+						<xsd:element name="grpSeriesTitle" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+						<xsd:element name="grpSeriesSynopsis" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+						<xsd:element name="grpSeriesDescription" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+						<xsd:element name="grpSeriesContentGenre" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+						<xsd:element name="grpSeriesYear" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="12"/>
+						<xsd:element name="grpSeriesRating" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+						<xsd:element name="grpSeriesCountries" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>	
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>			
+            <xsd:element name="adiFile" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="90"/>
+            <xsd:element name="renameFilesList" type="xsd:string" sgo:visibility="0" sgo:sortOrder="91"/>
+       </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>
+

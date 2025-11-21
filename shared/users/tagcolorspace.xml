@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <TagColorSpace>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#678788</color>
+    <gamma>ITU-BT 709 / ITU-BT 2020</gamma>
+    <gamut>Rec.709</gamut>
+    <nodeLocked>false</nodeLocked>
+    <objectName>TagColorSpace</objectName>
+  </TagColorSpace>
+</nodeCommonRoot>

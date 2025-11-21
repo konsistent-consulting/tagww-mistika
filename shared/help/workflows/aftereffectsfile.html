@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Input &gt; After Effects File</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node imports an After Effects .aep file and overrides selected parameter values with the metadata received trough the override input connector. New.aep files are..." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "aftereffectsfile.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">After Effects File</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?aftereffectsfile.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="input.html">Input</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">After Effects File</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="input.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="input.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="arrifile.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This node imports an After Effects </span><span class="f_T_Entry10pt">.aep </span><span class="f_BodyText">file and overrides selected parameter values</span> with the <span class="f_BodyText">metadata received trough the </span><span class="f_T_Menu">override </span><span class="f_BodyText">input connector. New</span><span class="f_T_Entry10pt">.aep </span><span class="f_BodyText">files are created for each set of new parameter values (the original </span><span class="f_T_Entry10pt">.aep </span><span class="f_BodyText">file is considered a template and it is left untouched).</span></p>
+<p class="p_BodyText"><span class="f_BodyText">It can also substitute media files used in the After Effects composition, both manually and automatically.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">The </span><span class="f_T_Entry10pt">.aep </span><span class="f_BodyText">parameter substitution is made at execution time, then sending the paths to the new</span><span class="f_T_Menu"> .aep</span><span class="f_Heading3"> </span><span class="f_BodyText">files trough the </span><span class="f_Heading3">aep</span><span class="f_BodyText"> output connector (for example to an </span><span class="f_T_Menu"><a href="aftereffectsrender.html" class="topiclink">After Effects Render</a></span><span class="f_BodyText"> node for final rendering).</span></p>
+<p class="p_BodyText"><span class="f_BodyText">The substitution metadata given trough the </span><span class="f_T_Menu">override </span><span class="f_BodyText"> input connector has to come in  </span><a href="common-parameters.html#universalpath" class="topiclink">UP</a> (<a href="common-parameters.html#universalpath" class="topiclink">Universal Path)</a><span class="f_BodyText"> format, so you first need a specialized node to import your substitution metadata. An easy way to do this is to use a </span><span class="f_T_Menu"><a href="csvtoupmdata.html" class="topiclink">CSVtoUpMetadata</a> </span><span class="f_BodyText">node, which can parse a</span><span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> file containing a new set of parameter values per line, then creating </span>one<span class="f_BodyText"> </span><a href="common-parameters.html#universalpath" class="topiclink">UP</a> for each line of the <span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> &nbsp;to be passed to this node. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">A first </span><span class="f_T_Entry10pt">.csv </span><span class="f_BodyText">file can be created by selecting the desired parameters in After Effects and using the </span><span class="f_T_Menu">WF Create CSV From Selection </span><span class="f_BodyText">script.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">The next picture illustrates the above workflow:</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><img alt="AfterFxFile_TipycalWorkflow3" width="1072" height="163" style="margin:0;width:1072px;height:163px;border:none" src="afterfxfile_tipycalworkflow3.png"/></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_BodyText">And here it is the step by step process:</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_T_Menu">1</span><span class="f_BodyText"> - In After Effects, select all the parameters you want to substitute for each new version and click </span><span class="f_T_Menu">File -&gt; Scripts -&gt; WF Create CSV From Selection.jsx , </span><span class="f_BodyText">which will export a reference</span><span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> file with those parameters.</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_TipHeading">Note</span><span class="f_BodyText">: The </span><span class="f_T_Menu">WF Create CSV From Selection.jsx </span><span class="f_BodyText">script is configured by the Mistika Workflows installer, so make sure to install After Effects before installing Mistika Workflows (otherwise reinstall Mistika Workflows afterward's).</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_BodyText">The next example correspond to a commercial with one video and one text overlay (simplified version of a video tutorial). We have selected both layers in After Effects and created this </span><span class="f_T_Entry10pt">.csv </span><span class="f_BodyText">file:</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:100%; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:bottom; width:242px; height:16px; padding:0; border:solid 10px #ffffff; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p class="p_Normal" style="margin: 0 0 0 13px;"><span style="font-size: 11px; color: #000000;">Output</span></p>
+</td>
+<td style="vertical-align:bottom; width:309px; height:16px; padding:0; border:solid 10px #ffffff; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Fashion_Main.Ending_1.media</span></p>
+</td>
+<td style="vertical-align:bottom; width:342px; height:16px; padding:0; border:solid 10px #ffffff; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Discount.Discount_Value.ADBE Text Properties.ADBE Text Document</span></p>
+</td>
+<td style="vertical-align:bottom; width:368px; height:16px; padding:0; border:solid 10px #ffffff; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Discount.Discount_Value.ADBE Text Properties.ADBE Text Document.font</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:242px; height:16px; padding:0; border:solid 10px #ffffff; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p class="p_Normal" style="margin: 0 0 0 13px;"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_WOMAN_ENG.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:309px; height:16px; padding:0; border:solid 10px #ffffff; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Women/Rushes/9836644-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:342px; height:16px; padding:0; border:solid 10px #ffffff; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Now with a 20% discount</span></p>
+</td>
+<td style="vertical-align:bottom; width:368px; height:16px; padding:0; border:solid 10px #ffffff; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_T_Menu">2</span><span class="f_BodyText"> - Now edit the </span><span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> file from point 1 (use a spreadsheet editor supporting .csv, or even a text editor...). Initially it will only have one line of values, &nbsp;which you can copy and modify (one line per new </span><span class="f_T_Entry10pt">.aep </span> to be created). The first column needs to &nbsp;specify the full path to the rendered media for that particular line (even if the actual media file does not exist yet).</p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_BodyText">To continue the example, we could add these lines, to create 10 versions replacing the video and text with others:</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:100%; border:solid 10px #ffffff; border-spacing:0;">
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Output</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Fashion_Main.Ending_1.media</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Discount.Discount_Value.ADBE Text Properties.ADBE Text Document</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Discount.Discount_Value.ADBE Text Properties.ADBE Text Document.font</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_WOMAN_ENG.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Women/Rushes/9836644-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Now with a 20% discount</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_WOMAN_ESP.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E/Media/Women/Rushes/9836644-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Ahora con un 20% de descuento</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_WOMAN_FRA.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Women/Rushes/9836644-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Maintenant avec 20% de rÃ©duction</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_WOMAN_GER.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Women/Rushes/9836644-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Jetzt mit 20% Rabatt</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_WOMAN_ITA.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Women/Rushes/9836644-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Ora con uno sconto del 20%</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_MAN_ENG.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Men/Suit_Int/9065170-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Now with a 20% discount</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_MAN_ESP.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Men/Suit_Int/9065170-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Ahora con un 20% de descuento</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_MAN_FRA.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Men/Suit_Int/9065170-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Maintenant avec 20% de rÃ©duction</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_MAN_GER.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Men/Suit_Int/9065170-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Jetzt mit 20% Rabatt</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; width:237px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">C:/Renders/Fashion_Promo_MAN_ITA.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:313px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">E:/Media/Men/Suit_Int/9065170-uhd_4096_2160_25fps.mp4</span></p>
+</td>
+<td style="vertical-align:bottom; width:341px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">Ora con uno sconto del 20%</span></p>
+</td>
+<td style="vertical-align:bottom; width:370px; height:17px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 11px; color: #000000;">NotoSerif-Bold</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_T_Emphasis">From this point you can follow two alternative methods:</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Emphasis">Method A):</span><span class="f_BodyText"> By using the </span><span class="f_T_Menu">Wizards panel -&gt; Create After Effects Workflow</span><span class="f_BodyText">, which will ask you for the above files and it will build the above workflow for you automatically.</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Emphasis">Method B):</span><span class="f_BodyText"> For more control you can build the workflow manually (for example if you want to use alternative nodes before and after this node), as follows:</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">3</span> - Drag &amp; Drop the edited <span class="f_T_Entry10pt">.csv </span><span class="f_BodyText">file into Mistika Workflows </span><span class="f_T_Menu">Nodegraph</span><span class="f_BodyText"> panel. This action will create a </span><span class="f_T_Menu">File</span><span class="f_BodyText"> node with the </span><span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> file (in the figure below, the first node from the left ).</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">4 </span>- Connect it to a<span class="f_BodyText"> </span><span class="f_T_Menu">CSVtoUpMetadata </span><span class="f_BodyText">node, which will parse the </span><span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> file and will output the substitution metadata in Mistika Workflows </span><a href="common-parameters.html#universalpath" class="topiclink">UP</a> format<span class="f_BodyText">.</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">5</span><span class="f_BodyText"> - Connect the </span><span class="f_T_Menu">CSVtoUpMetadata</span><span class="f_BodyText"> node to an </span><span class="f_T_Menu">After Effects File</span><span class="f_BodyText"> node via the </span><span class="f_T_Menu">override</span><span class="f_BodyText"> input connector.</span> </p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">6 </span>- In the <span class="f_T_Menu">After Effects File </span>node, use the <span class="f_Heading3">aep File </span>property to select the <span class="f_T_Entry10pt">.aep </span>project to be used as a template for the parameter substitution, and use the <span class="f_Heading3">New aep Directory </span>property to define a destination folder for the new <span class="f_T_Entry10pt">.aep </span>versions.</p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">7</span><span class="f_BodyText"> - Optional: If you want to render the </span><span class="f_T_Entry10pt">.aep </span><span class="f_BodyText">files created by this node you can simply connect the </span><span class="f_Heading3">aep</span><span class="f_BodyText"> output connector to an </span><span class="f_T_Menu">After Effects Render</span><span class="f_BodyText"> node.</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">8</span><span class="f_BodyText"> - Add the workflow to the queue (</span><span class="f_T_Menu">Add to queue</span><span class="f_BodyText"> button) and press the start &nbsp;button (</span><span class="f_T_Menu">&gt;</span><span class="f_BodyText">) to execute it. If all goes well the new </span><span class="f_T_Entry10pt">.aep</span><span class="f_BodyText"> files will appear in the </span><span class="f_Heading3">New aep Directory </span><span class="f_BodyText">folder (and they will be rendered if an </span><span class="f_T_Menu">After Effects Render</span><span class="f_BodyText"> node was added at step 7). </span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Alternatively, you can use a </span><span class="f_T_Menu">Watcher </span><span class="f_BodyText">node at the beginning (</span><span class="f_T_Menu">Step</span><span class="f_BodyText"> </span><span class="f_T_Menu">3</span><span class="f_BodyText">), which will execute the workflow for every</span><span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> landing in the watched folder (once the workflow has been added to the </span><span class="f_T_Menu">queue</span><span class="f_BodyText"> panel). &nbsp;This can be a very productive way of working, as you can let the workflow running unattended while you are simply changing values in the </span><span class="f_T_Entry10pt">.csv</span><span class="f_BodyText"> &nbsp;, saving it, and then waiting for the rendered files to appear for your review.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">override: </span>One or more <a href="common-parameters.html#universalpath" class="topiclink">Universal Paths</a> , each one containing a destination path for the media file to be rendered and the associated <span class="f_BodyText">substitution metadata pairs to produce it. &nbsp;Typically connected to a </span><span class="f_T_Menu">CSVtoUpMetadata</span><span class="f_BodyText"> node, as explained above.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">aep:</span> Paths to the newly created After Effects Project files (<span class="f_T_Entry10pt">.aep </span>files), with the substituted parameter values in place. Typically to be connected to an <span class="f_T_Menu">After Effects Render </span>node to automate the posterior rendering of those files.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink">Name Convention</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">aep File: </span><span class="f_BodyText">Path to the original </span><span class="f_T_Entry10pt">.aep</span><span class="f_BodyText"> (After Effects project file), which will be used as a template for parameter substitution.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Composition: </span><span class="f_BodyText">Choose the composition to be changed (After Effects permits to have multiple compositions stored in the same file, and here you can choose which one will be affected by parameter substitution). </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Render Template: </span><span class="f_BodyText">After Effects render template to be selected for posterior rendering. By default it will remain as it was set in After Effects, but here you have a last opportunity to change it when creating the new </span><span class="f_T_Entry10pt">.aep</span><span class="f_BodyText"> file, before passing it to a </span><span class="f_T_Menu">After Effects Render </span><span class="f_BodyText">node.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">New aep Directory:  </span><span class="f_BodyText">Folder to store the new</span><span class="f_T_Entry10pt">.aep</span><span class="f_BodyText"> files created by this node.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Media Connectors:  </span><span class="f_BodyText">Once a </span><span class="f_T_Entry10pt">.aep </span><span class="f_BodyText">is loaded, permits to show input connectors for all the media files mentioned in that composition. This permits to manually override the source media files with different clips (as you can connect new media files to any of those connectors). The next figure is the same example, but now with </span><span class="f_T_Menu">Media Connectors</span><span class="f_BodyText"> activated and one of the input images manually substituted &nbsp;(the original</span><span class="f_T_Entry10pt">.aep</span><span class="f_BodyText"> file was a composition of 22 image layers...):</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="AfterFxFile_TipycalWorkflowWithConnectorNames" width="946" height="438" style="margin:0;width:946px;height:438px;border:none" src="afterfxfile_tipycalworkflowwithconnectornames.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">Note that </span><span class="f_T_Menu">Media Connectors</span><span class="f_BodyText"> are only necessary for manual substitution or for additional processing of input media. If you do not need those capabilities then you can substitute the input media automatically, by using standard parameter substitution as explained above.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Use Names:  </span><span class="f_BodyText">Only used when  </span><span class="f_T_Menu">Media Connectors</span><span class="f_BodyText"> is active. If  </span><span class="f_T_Menu">Use Names</span><span class="f_BodyText"> is </span><span class="f_T_Menu">Off</span><span class="f_BodyText"> then the media connectors will simply receive enumerated labels (</span><span class="f_T_Menu">input0</span><span class="f_BodyText">...</span><span class="f_T_Menu">inputN</span><span class="f_BodyText">). &nbsp;If it is </span><span class="f_T_Menu">On</span><span class="f_BodyText"> &nbsp;then they will show the same names of the media files mentioned in the original</span><span class="f_T_Entry10pt">.aep</span><span class="f_BodyText"> file (like in the picture above). Activate it if those names are meaningful for you, and not otherwise. </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Config -&gt; After Effects Binary:  </span><span class="f_BodyText">Where to find the After Effects executable. It depends on your particular installation. For example:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Entry10pt">C:/Program Files/Adobe/Adobe After Effects 2024/Support Files/AfterFX.com</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

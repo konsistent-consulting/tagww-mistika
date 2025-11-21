@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <DCPReel>
+    <aspectRatio>Flat (1.85:1)</aspectRatio>
+    <assistedListeningTrack>false</assistedListeningTrack>
+    <audioDescriptionTrack>false</audioDescriptionTrack>
+    <audioLanguage>Spanish - Castilian</audioLanguage>
+    <audioType>- No Audio -</audioType>
+    <burnedInSubtitles>false</burnedInSubtitles>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#0063b4</color>
+    <frameRate>24</frameRate>
+    <immersiveSoundFormat>- None -</immersiveSoundFormat>
+    <motionSimulatorFormat>false</motionSimulatorFormat>
+    <nodeLocked>false</nodeLocked>
+    <objectName>DCPReel</objectName>
+    <resolution>-- From Dcp --</resolution>
+    <signLanguageTrack>false</signLanguageTrack>
+    <stereo3D>2D</stereo3D>
+    <subtitleLanguage>- No Subtitle -</subtitleLanguage>
+  </DCPReel>
+</nodeCommonRoot>

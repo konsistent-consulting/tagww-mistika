@@ -1,0 +1,25 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="ElevenLabsDub" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="apiKey" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+            <xsd:element name="sourceLanguage" type="integerPulldown" sgo:integerPulldownValues="Detect$$$auto|English$$$en|Hindi$$$hi|Portuguese$$$pt|Chinese$$$zh|Spanish$$$es|French$$$fr|German$$$de|Japanese$$$ja|Arabic$$$ar|Russian$$$ru|Korean$$$ko|Indonesian$$$id|Italian$$$it|Dutch$$$nl|Turkish$$$tr|Polish$$$pl|Swedish$$$sv|Filipino$$$fil|Malay$$$ms|Romanian$$$ro|Ukrainian$$$uk|Greek$$$el|Czech$$$cs|Danish$$$da|Finnish$$$fi|Bulgarian$$$bg|Croatian$$$hr|Slovak$$$sk|Tamil$$$ta" sgo:visibility="0" sgo:sortOrder="7"/>
+            <xsd:element name="targetLanguage" type="integerPulldown" sgo:integerPulldownValues="English$$$en|Hindi$$$hi|Portuguese$$$pt|Chinese$$$zh|Spanish$$$es|French$$$fr|German$$$de|Japanese$$$ja|Arabic$$$ar|Russian$$$ru|Korean$$$ko|Indonesian$$$id|Italian$$$it|Dutch$$$nl|Turkish$$$tr|Polish$$$pl|Swedish$$$sv|Filipino$$$fil|Malay$$$ms|Romanian$$$ro|Ukrainian$$$uk|Greek$$$el|Czech$$$cs|Danish$$$da|Finnish$$$fi|Bulgarian$$$bg|Croatian$$$hr|Slovak$$$sk|Tamil$$$ta" sgo:visibility="0" sgo:sortOrder="8"/>
+            <xsd:element name="outputFormat" type="integerPulldown" sgo:integerPulldownValues="MP3$$$mp3|WAV$$$wav" sgo:visibility="0" sgo:sortOrder="9"/>
+            <xsd:element name="numberOfSpeakers" type="xsd:integer" sgo:minValue="0" sgo:maxValue="10" sgo:visibility="0" sgo:sortOrder="10"/>
+            <xsd:element name="dstPath" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="20"/>
+            <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="40">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>	
+            <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

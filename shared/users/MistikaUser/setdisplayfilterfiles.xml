@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <SetDisplayFilterFiles>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#678ca0</color>
+    <displayFilter>---None---</displayFilter>
+    <nodeLocked>false</nodeLocked>
+    <objectName>SetDisplayFilterFiles</objectName>
+    <url/>
+    <useNames>true</useNames>
+  </SetDisplayFilterFiles>
+</nodeCommonRoot>

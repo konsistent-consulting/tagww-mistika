@@ -1,0 +1,374 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:element name="setup" sgo:visibility="0" sgo:sortOrder="0">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="animation" sgo:visibility="3" sgo:sortOrder="0">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:stringPulldownValues="Auto Off, AutoKey switches to Off whenever a different object is selected$$$0|AutoKey state kept Per Object, persistent even across different sessions$$$1|AutoKey keeps state. WARNING: This can easily lead to creating unexpected animations in the parameters!$$$2" name="autoKeyState" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="0"/>
+       <xsd:element sgo:stringPulldownValues="Create new points as Smooth$$$0|Create new points as Sharp$$$1|Create new points as Smooth with Flat Tangents$$$2" name="defaultAnimationType" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="1"/>
+       <xsd:element sgo:stringPulldownValues="Local$$$3|Global$$$2|Selected$$$5" name="timeWarpCurves" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="2"/>
+       <xsd:element sgo:stringPulldownValues="Extend$$$0|Stretch$$$1" name="trimMode" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="3"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="cache" sgo:visibility="3" sgo:sortOrder="1">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="autoBatch" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+       <xsd:element name="device" type="xsd:string" sgo:visibility="3" sgo:sortOrder="3" sgo:properties="readOnly"/>
+       <xsd:element sgo:stringPulldownValues="No Stereo$$$0|Left$$$1|Right$$$2|Both$$$3" name="stereoEye" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="1"/>
+       <xsd:element name="syntax" type="xsd:string" sgo:visibility="3" sgo:sortOrder="2"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="general" sgo:visibility="3" sgo:sortOrder="2">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="import" sgo:visibility="3" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="defaultMediaTC" type="timecode" sgo:visibility="3" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="save" sgo:visibility="3" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="autoSave" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="autoSaveNumSaves" type="xsd:integer" sgo:visibility="3" sgo:maxValue="50" sgo:sortOrder="1"/>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="autoSaveTime" type="xsd:integer" sgo:visibility="3" sgo:maxValue="180" sgo:sortOrder="2"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element name="userPresets" sgo:visibility="3" sgo:sortOrder="2"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="interface" sgo:visibility="3" sgo:sortOrder="3">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="checkerboard" sgo:visibility="3" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="maxCheckerLuma" type="xsd:integer" sgo:visibility="3" sgo:maxValue="100" sgo:sortOrder="1"/>
+          <xsd:element name="playbackCache" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="general" sgo:visibility="1" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="backgroundLuma" type="xsd:integer" sgo:visibility="3" sgo:maxValue="80" sgo:sortOrder="4"/>
+          <xsd:element name="controlCanonMonitor" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="11"/>
+          <xsd:element name="doubleBuffer" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="10"/>
+          <xsd:element name="hideText" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element name="liveToVideo" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="7"/>
+          <xsd:element sgo:stringPulldownValues="GUI Zoom Into images will produce large square flat pixels$$$0|GUI Zoom Into images will produce interpolated blurry image$$$1" name="magnifyFilter" type="stringPulldown" sgo:visibility="1" sgo:sortOrder="6"/>
+          <xsd:element sgo:stringPulldownValues="High$$$RES_HIGH|Dynamic$$$RES_DYNAMIC|Low$$$RES_LOW" name="playbackResolution" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="12"/>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="saturation" type="xsd:integer" sgo:visibility="3" sgo:maxValue="100" sgo:sortOrder="5"/>
+          <xsd:element name="showLegacyFx" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="9"/>
+          <xsd:element sgo:stringPulldownValues="Only Label|Label and Value" name="stitchShowParameters" type="stringPulldown" sgo:visibility="1" sgo:sortOrder="13"/>
+          <xsd:element sgo:minValue="10" sgo:stepValue="1" name="textOpacity" type="xsd:integer" sgo:visibility="3" sgo:maxValue="100" sgo:sortOrder="3"/>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="textSaturation" type="xsd:integer" sgo:visibility="3" sgo:maxValue="100" sgo:sortOrder="2"/>
+          <xsd:element name="textShadows" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="1"/>
+          <xsd:element name="trackBallSpin" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="8"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="text" sgo:visibility="0" sgo:sortOrder="2">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="fontName" type="fontFoundry" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="fontSize" type="xsd:integer" sgo:visibility="0" sgo:maxValue="1000" sgo:sortOrder="4"/>
+          <xsd:element name="uiFontName" type="fontFoundry" sgo:visibility="0" sgo:sortOrder="1"/>
+          <xsd:element name="uiFontNameList" type="xsd:string" sgo:visibility="2" sgo:sortOrder="2"/>
+          <xsd:element name="useInputMethod" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="7"/>
+          <xsd:element name="useUIFont" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="5"/>
+          <xsd:element name="useUnicode" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="6"/>
+          <xsd:element name="virtualSlateFontName" type="fontFoundry" sgo:visibility="3" sgo:sortOrder="3"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="timelinemonitor" sgo:visibility="3" sgo:sortOrder="3">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="flowMonitor" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element name="raiseMonitor" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="1"/>
+          <xsd:element name="recordMonitorFullScreen" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="3"/>
+          <xsd:element name="selectMonitor" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="2"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="timelineview" sgo:visibility="3" sgo:sortOrder="4">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="None$$$0|Only for the clips active frame$$$1|First and Last Frame$$$2|Strip of icons forming a waveform$$$3" name="audioIcons" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="7"/>
+          <xsd:element sgo:stringPulldownValues="Left Eye$$$0|Right Eye$$$1" name="groupsTCSource" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="9"/>
+          <xsd:element name="showGraffiti" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="3"/>
+          <xsd:element name="showGrid" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element name="showHFRHalf" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="5"/>
+          <xsd:element name="showOverlaps" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="4"/>
+          <xsd:element name="showRulers" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="1"/>
+          <xsd:element name="showTimeCode" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="2"/>
+          <xsd:element name="undoViewEvents" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="6"/>
+          <xsd:element sgo:stringPulldownValues="None$$$0|Only for the clips active frame$$$1|First and Last Frame$$$2|Strip of icons$$$3" name="videoIcons" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="8"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="license" sgo:visibility="0" sgo:sortOrder="4">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="doNotShowExpireMessage" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="1"/>
+       <xsd:element sgo:minValue="1" sgo:stepValue="1" name="expireWarningDays" type="xsd:integer" sgo:visibility="0" sgo:maxValue="15" sgo:sortOrder="0"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="live" sgo:visibility="3" sgo:sortOrder="5">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="maxFree" type="timecode" sgo:visibility="3" sgo:sortOrder="2"/>
+       <xsd:element name="nameFromCamera" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+       <xsd:element name="nameWithTitle" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="1"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="nameConvention" type="nameConventionEditor" sgo:visibility="0" sgo:sortOrder="5"/>
+    <xsd:element name="paths" sgo:visibility="0" sgo:sortOrder="6">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="audioTools" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="6" sgo:properties="showDirsOnly"/>
+       <xsd:element name="cacheBatchPath" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="5" sgo:properties="showDirsOnly"/>
+       <xsd:element name="dcp" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="3" sgo:properties="showDirsOnly"/>
+       <xsd:element name="devCache" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="4" sgo:properties="showDirsOnly"/>
+       <xsd:element name="displayFilters" type="xsd:anyURI" sgo:visibility="1" sgo:sortOrder="11" sgo:properties="showDirsOnly"/>
+       <xsd:element name="globalPresets" type="xsd:anyURI" sgo:visibility="1" sgo:sortOrder="12" sgo:properties="showDirsOnly"/>
+       <xsd:element name="media" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="1" sgo:properties="showDirsOnly"/>
+       <xsd:element name="os" type="osPathsTable" sgo:visibility="3" sgo:sortOrder="9"/>
+       <xsd:element name="paint" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="7" sgo:properties="showDirsOnly"/>
+       <xsd:element name="project" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="0" sgo:properties="showDirsOnly"/>
+       <xsd:element name="sequenceProxies" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="8"/>
+       <xsd:element name="workflowsTemplates" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="13" sgo:properties="showDirsOnly"/>
+       <xsd:element name="workflowsWizards" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="14" sgo:properties="showDirsOnly"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="private" sgo:visibility="3" sgo:sortOrder="7">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="interface" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:categoryType="category2" name="general" sgo:visibility="0" sgo:sortOrder="0">
+           <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="checkProjectPresets" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+             <xsd:element sgo:minValue="0" sgo:stepValue="1" name="numLeadZeros" type="xsd:integer" sgo:visibility="0" sgo:maxValue="10" sgo:sortOrder="1"/>
+             <xsd:element name="textSplitter" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+            </xsd:sequence>
+           </xsd:complexType>
+          </xsd:element>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="paths" sgo:visibility="0" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="devStorage" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="0"/>
+          <xsd:element name="diskDevStorage" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="1"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="render" sgo:visibility="0" sgo:sortOrder="2">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="" name="cacheDevice" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0"/>
+          <xsd:element sgo:stringPulldownValues="" name="renderPartial" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="1"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="projectPreset" sgo:visibility="3" sgo:sortOrder="8">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="colorSpace709" type="xsd:string" sgo:visibility="3" sgo:sortOrder="0"/>
+       <xsd:element name="factoryPreset" type="xsd:string" sgo:visibility="3" sgo:sortOrder="1"/>
+       <xsd:element name="pulldown" type="xsd:string" sgo:visibility="3" sgo:sortOrder="2"/>
+       <xsd:element name="redBrightness" type="xsd:string" sgo:visibility="3" sgo:sortOrder="3"/>
+       <xsd:element name="redColorSpace" type="xsd:string" sgo:visibility="3" sgo:sortOrder="4"/>
+       <xsd:element name="redContrast" type="xsd:string" sgo:visibility="3" sgo:sortOrder="5"/>
+       <xsd:element name="redDenoise" type="xsd:string" sgo:visibility="3" sgo:sortOrder="6"/>
+       <xsd:element name="redDetail" type="xsd:string" sgo:visibility="3" sgo:sortOrder="7"/>
+       <xsd:element name="redDrx" type="xsd:string" sgo:visibility="3" sgo:sortOrder="8"/>
+       <xsd:element name="redExposureCompensation" type="xsd:string" sgo:visibility="3" sgo:sortOrder="9"/>
+       <xsd:element name="redGainBlue" type="xsd:string" sgo:visibility="3" sgo:sortOrder="10"/>
+       <xsd:element name="redGainGreen" type="xsd:string" sgo:visibility="3" sgo:sortOrder="11"/>
+       <xsd:element name="redGainRed" type="xsd:string" sgo:visibility="3" sgo:sortOrder="12"/>
+       <xsd:element name="redGammaCurve" type="xsd:string" sgo:visibility="3" sgo:sortOrder="13"/>
+       <xsd:element name="redIso" type="xsd:string" sgo:visibility="3" sgo:sortOrder="14"/>
+       <xsd:element name="redKelvin" type="xsd:string" sgo:visibility="3" sgo:sortOrder="15"/>
+       <xsd:element name="redOlpfCompensation" type="xsd:string" sgo:visibility="3" sgo:sortOrder="16"/>
+       <xsd:element name="redSaturation" type="xsd:string" sgo:visibility="3" sgo:sortOrder="17"/>
+       <xsd:element name="redTint" type="xsd:string" sgo:visibility="3" sgo:sortOrder="18"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="render" sgo:visibility="3" sgo:sortOrder="9">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="options" sgo:visibility="3" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="defaultRenderName" type="xsd:string" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element name="renderToVideo" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="1"/>
+          <xsd:element name="saveBeforeRender" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="2"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="stitch" sgo:visibility="3" sgo:sortOrder="10">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="externalTools" sgo:visibility="3" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:categoryType="category2" name="hugin" sgo:visibility="3" sgo:sortOrder="3">
+           <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="path" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="0"/>
+            </xsd:sequence>
+           </xsd:complexType>
+          </xsd:element>
+          <xsd:element sgo:categoryType="category2" name="ptgui" sgo:visibility="3" sgo:sortOrder="2">
+           <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="path" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="0"/>
+            </xsd:sequence>
+           </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="showWindowConfigApps" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element sgo:stringPulldownValues="PtGui(../ptgui)|Hugin(../hugin)" name="stitchTool" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="1" sgo:actionType="enableWhenSelected"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="streaming" type="setupRef" sgo:visibility="3" sgo:sortOrder="11"/>
+    <xsd:element name="tangent" type="setupRef" sgo:visibility="3" sgo:sortOrder="12"/>
+    <xsd:element name="timelineBehaviour" sgo:visibility="3" sgo:sortOrder="13">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="dropFrame" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+       <xsd:element sgo:categoryType="category1" name="edit" sgo:visibility="3" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="autoExpand" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="2"/>
+          <xsd:element name="autoSelection" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="3"/>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="autoSnapPixels" type="xsd:integer" sgo:visibility="3" sgo:maxValue="100" sgo:sortOrder="5"/>
+          <xsd:element name="autoSyncE2T" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="4"/>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="blipFrames" type="xsd:integer" sgo:visibility="3" sgo:maxValue="100" sgo:sortOrder="7"/>
+          <xsd:element name="constraintX" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element name="constraintY" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="1"/>
+          <xsd:element sgo:minValue="-20" sgo:stepValue="1" name="markOffset" type="xsd:integer" sgo:visibility="3" sgo:maxValue="20" sgo:sortOrder="6"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="shuttle" sgo:visibility="3" sgo:sortOrder="2">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="X 1$$$0|X 2$$$1|X 4$$$2|X 8$$$3|X 16$$$4|X 32$$$5|X 1/2$$$6|X 1/3$$$7|X 1/4$$$8" name="playSpeed" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="transition" sgo:visibility="3" sgo:sortOrder="3">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="Align Left$$$0|Align Center$$$1|Align Right$$$2" name="alignment" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element sgo:minValue="1" sgo:stepValue="1" name="duration" type="xsd:integer" sgo:visibility="3" sgo:maxValue="1000" sgo:sortOrder="1"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="timelineSettings" sgo:visibility="3" sgo:sortOrder="14">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:decimalMinValue="0.5000000" sgo:decimalStepValue="0.1" name="aspectRatio" type="xsd:string" sgo:visibility="0" sgo:decimalMaxValue="3.0000000" sgo:decimalDigits="9" sgo:sortOrder="2" sgo:properties="readOnly"/>
+       <xsd:element sgo:minValue="0" sgo:stepValue="1" name="frameRate" type="xsd:integer" sgo:visibility="0" sgo:maxValue="1000" sgo:sortOrder="3"/>
+       <xsd:element sgo:minValue="1" sgo:stepValue="1" name="imageSizeX" type="xsd:integer" sgo:visibility="0" sgo:maxValue="16384" sgo:sortOrder="0"/>
+       <xsd:element sgo:minValue="1" sgo:stepValue="1" name="imageSizeY" type="xsd:integer" sgo:visibility="0" sgo:maxValue="16384" sgo:sortOrder="1"/>
+       <xsd:element name="ntscFields" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="4"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="videoFormat" sgo:visibility="3" sgo:sortOrder="15">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="aja" sgo:visibility="0" sgo:sortOrder="2">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="YUV422|RGB444" name="colorSpace" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="dvs" sgo:visibility="0" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="YUV422|YUV422_12|YUV444_12|RGB444|RGB444_12" name="colorSpace" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0"/>
+          <xsd:element sgo:stringPulldownValues="SDI|QUADSDI|DVI_HDMI" name="connector" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="1"/>
+          <xsd:element sgo:minValue="0" sgo:stepValue="1" name="editLag" type="xsd:integer" sgo:visibility="0" sgo:maxValue="20" sgo:sortOrder="5"/>
+          <xsd:element name="embeddedAudioIn" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="4"/>
+          <xsd:element sgo:stringPulldownValues="3GA|3GB" name="level3g" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="2"/>
+          <xsd:element sgo:stringPulldownValues="Mono$$$MONO|Stereo Single Channel$$$STEREO_SINGLE_CHANNEL|Stereo Dual Channel$$$STEREO_DUAL_CHANNEL" name="stereo3dMultichannelMode" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="3"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="general" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="YUV422|YUV422_10|RGB_8|RGBA_8|RGB_10" name="internalVideoStorage" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="8"/>
+          <xsd:element sgo:categoryType="category2" name="stereo3d" sgo:visibility="0" sgo:sortOrder="11">
+           <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="dualLink" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+             <xsd:element name="mirrorLeftEye" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="1"/>
+            </xsd:sequence>
+           </xsd:complexType>
+          </xsd:element>
+          <xsd:element sgo:stringPulldownValues="Internal$$$SYNC_INTERNAL|Genlock$$$SYNC_GENLOCK|Input 1$$$SYNC_INPUT_1|Input 2$$$SYNC_INPUT_2" name="syncSource" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="7"/>
+          <xsd:element name="use3GSDI" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="9"/>
+          <xsd:element name="useSDIUserData" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>
+          <xsd:element name="useVideoBoard" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+          <xsd:element sgo:stringPulldownValues="DVS(../../dvs)|AJA(../../aja)" name="videoBoardModel" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="1"/>
+          <xsd:element sgo:decimalPulldownValues="23$$$23.97602397|24$$$24.00000000|25$$$25.00000000|29$$$29.97002997|30$$$30.00000000|47$$$47.95204795|48$$$48.00000000|50$$$50.00000000|59$$$59.94005994|60$$$60.00000000" name="videoFrameRate" type="decimalPulldown" sgo:visibility="0" sgo:sortOrder="5"/>
+          <xsd:element sgo:stringPulldownValues="Progressive|Interlaced|Segmented" name="videoMode" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="6"/>
+          <xsd:element sgo:stringPulldownValues="PAL$$$720x576|NTSC$$$720x486|1280x720|1920x1080|2048x1080|2048x1536|2048x1556|3840x2160|4096x2160|7680x4320|8192x4320" name="videoResolution" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="2"/>
+          <xsd:element sgo:minValue="720" sgo:stepValue="1" name="videoResolutionX" type="xsd:integer" sgo:visibility="0" sgo:maxValue="131072" sgo:sortOrder="3"/>
+          <xsd:element sgo:minValue="486" sgo:stepValue="1" name="videoResolutionY" type="xsd:integer" sgo:visibility="0" sgo:maxValue="131072" sgo:sortOrder="4"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="visualEditorBehaviour" sgo:visibility="3" sgo:sortOrder="16">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:minValue="1" sgo:stepValue="1" name="fadeInOutShapes" type="xsd:integer" sgo:visibility="0" sgo:maxValue="144" sgo:sortOrder="0"/>
+       <xsd:element sgo:stringPulldownValues="None$$$0|Frame$$$1|TC$$$2" name="playSync" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="1"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>

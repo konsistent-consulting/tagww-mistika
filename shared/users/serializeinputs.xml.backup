@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <SerializeInputs>
+    <color>#677688</color>
+    <logicalOperation>0</logicalOperation>
+    <nodeLocked>false</nodeLocked>
+    <objectName>SerializeInputs</objectName>
+  </SerializeInputs>
+</nodeCommonRoot>

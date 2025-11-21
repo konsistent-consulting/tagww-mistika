@@ -1,0 +1,19 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="ConformFilter" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="url" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="defaultFps" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="180.00" sgo:decimalStepValue="0.01" sgo:decimalDigits="2" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="nameSource" type="integerPulldown" sgo:integerPulldownValues="Tape Name$$$0|Clip Name$$$1" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="comparePath" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="compareExtension" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="noTrim" type="xsd:boolean" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="9"/>
+                <xsd:element name="handlers" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="10"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

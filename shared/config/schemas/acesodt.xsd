@@ -1,0 +1,27 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sgo="http://www.sgo.es/2017/sgo.xsd">
+ <xsd:element name="ACESODT" sgo:categoryType="categoryCollapsible" sgo:sortOrder="0" sgo:visibility="0">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="objectName" type="xsd:string" sgo:sortOrder="0" sgo:visibility="0"/>
+    <xsd:element name="color" type="color" sgo:sortOrder="1" sgo:visibility="0"/>
+    <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:sortOrder="2" sgo:visibility="0"/>
+    <xsd:element name="Input" sgo:categoryType="categoryCollapsible" sgo:sortOrder="1000" sgo:visibility="0">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="Input_InputCurve" sgo:integerPulldownValues="Linear$$$0|Cineon (Kodak)$$$1|ACEScg$$$2|ACESproxy$$$3|ACEScc$$$4|ACEScct$$$5|Apple Log$$$6|ARRI Log-C3 (ISO400)$$$7|ARRI Log-C3 (ISO800)$$$8|ARRI Log-C4$$$9|BMD Film Gen 5$$$10|Canon Log$$$11|Canon Log2$$$12|Canon Log3$$$13|DJI D-Log$$$14|Fuji F-Log$$$15|Panasonic V-Log$$$16|REDlogFilm$$$17|RED Log3G10$$$18|Sony S-Log2$$$19|Sony S-Log3$$$20|GoPro Protune Flat$$$21|Jaunt$$$22|Z CAM Z-Log2$$$23|sRGB$$$24|ITU-BT 709 / ITU-BT 2020$$$25|Gamma 2.2$$$26|Gamma 2.4$$$27|Gamma 2.7$$$28|Gamma 2.8$$$29|Gamma 2.6$$$30|DCDM + Gamma 2.6 (DCI XYZ)$$$31|ST 2084 PQ$$$32|ST 2084 PQ (Scene)$$$33|BBC WHP 283$$$34|Rec.2100 HLG (Scene)$$$35|Rec.2100 HLG 1000$$$36|Rec.2100 HLG 2000$$$37|Rec.2100 HLG 4000$$$38" type="integerPulldown" sgo:sortOrder="100" sgo:visibility="0"/>
+       <xsd:element name="Input_InputGamut" sgo:integerPulldownValues="XYZ (CIE Chromaticities)$$$0|AP0 (ACES)$$$1|AP1 (ACES)$$$2|ARRI ALEXA Wide Gamut 3$$$3|ARRI ALEXA Wide Gamut 4$$$4|BMD Wide Gamut RGB$$$5|Canon Cinema Gamut$$$6|DJI D-Gamut$$$7|Panasonic V-Gamut$$$8|RED DRAGONcolor2$$$9|REDWideGamutRGB$$$10|Sony S-Gamut$$$11|Sony S-Gamut3$$$12|Sony S-Gamut3.Cine$$$13|Sony Venice S-Gamut3$$$14|Sony Venice S-Gamut3.Cine$$$15|Z CAM Z-Log2 Wide Gamut$$$16|Meta CV1$$$17|Adobe RGB$$$18|sRGB$$$19|Rec.709$$$20|Rec.2020$$$21|P3-D60$$$22|P3-D65$$$23|P3-DCI$$$24" type="integerPulldown" sgo:sortOrder="101" sgo:visibility="0"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Output" sgo:categoryType="categoryCollapsible" sgo:sortOrder="1010" sgo:visibility="0">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="Output_OutputSpace" sgo:integerPulldownValues="Rec709$$$0|P3-D65$$$1|DCDM$$$2|Rec2020 1000 nits 15 nits ST2084$$$3|P3-D65 1000 nits 15 nits ST2084$$$4|sRGB$$$5|sRGB (D60 sim.)$$$6|Rec709 (D60 sim.)$$$7|Rec2020$$$8|Rec2020 (P3-D65 clip)$$$9|Rec2020 (Rec709 clip)$$$10|P3-D60$$$11|P3-D65 (Rec709 clip)$$$12|P3-DCI (D60 sim.)$$$13|P3-DCI (D65 sim.)$$$14|P3-D65 (D60 sim.)$$$15|DCDM (P3-D65 clip)$$$16|DCDM (P3-D60 clip)$$$17|Rec2020 1000 nits 15 nits HLG$$$18|Rec2020 2000 nits 15 nits ST2084$$$19|Rec2020 4000 nits 15 nits ST2084$$$20|P3-D65 108 nits 7.2 nits ST2084$$$21|P3-D65 1000 nits 7.2 nits ST2084$$$22|P3-D65 2000 nits 7.2 nits ST2084$$$23|P3-D65 4000 nits 7.2 nits ST2084$$$24|RRT Only$$$25" type="integerPulldown" sgo:sortOrder="102" sgo:visibility="0"/>
+       <xsd:element name="Output_OutputScale" sgo:integerPulldownValues="No Scaling$$$0|Scale to RGB444 SMPTE range$$$1" type="integerPulldown" sgo:sortOrder="103" sgo:visibility="0"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>

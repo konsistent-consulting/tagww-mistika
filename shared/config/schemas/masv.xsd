@@ -1,0 +1,31 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="MASV" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+      <xsd:sequence>
+	  <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+	  <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+	  <xsd:element name="packageName" type="nameConventionTextEditor" sgo:visibility="0" sgo:sortOrder="6"/>
+	  <xsd:element name="description" type="nameConventionTextEditor" sgo:visibility="0" sgo:sortOrder="7"/>
+	  <xsd:element name="recipients" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+	  <xsd:element name="PackageLink" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>
+	  <xsd:element name="Config" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="400">
+			<xsd:complexType>
+				<xsd:sequence>
+		        <xsd:element name="teamID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+		        <xsd:element name="apiKey" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+			    <xsd:element name="chunksize" type="xsd:integer" sgo:minValue="50" sgo:maxValue="1000" sgo:stepValue="50" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_chunkList" sgo:visibility="0" sgo:sortOrder="5"/>
+				<xsd:element name="baseAPIUrl" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="6"/>
+				</xsd:sequence>
+			</xsd:complexType>
+	  </xsd:element>
+	  <xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+		  <xsd:complexType>
+			  <xsd:sequence>
+				  <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+			  </xsd:sequence>
+		  </xsd:complexType>
+	  </xsd:element>				
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

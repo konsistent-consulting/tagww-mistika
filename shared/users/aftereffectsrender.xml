@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <AfterEffectsRender>
+    <Config>
+      <binFilePath/>
+      <maxProgress>100</maxProgress>
+      <params>-project "[input]" -comp "[privateData{id=adobe/comp}]" -rqindex [privateData{id=adobe/rqindex}] -output "[output]"</params>
+    </Config>
+    <NameConvention>
+      <nameConvention>[path][baseName][.frame][.ext]</nameConvention>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#00005b</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>AfterEffectsRender</objectName>
+    <url/>
+  </AfterEffectsRender>
+</nodeCommonRoot>

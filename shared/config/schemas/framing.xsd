@@ -1,0 +1,45 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sgo="http://www.sgo.es/2017/sgo.xsd">
+ <xsd:element sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0" name="Framing">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element sgo:visibility="0" sgo:sortOrder="0" name="objectName" type="xsd:string"/>
+    <xsd:element sgo:visibility="0" sgo:sortOrder="1" name="color" type="color"/>
+    <xsd:element sgo:visibility="0" sgo:sortOrder="2" name="bypassEnabled" type="xsd:boolean"/>
+    <xsd:element sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="1000" name="Options">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:visibility="0" sgo:sortOrder="100" name="Options_ResultSize" type="integerPulldown" sgo:integerPulldownValues="From Input$$$0|Custom$$$3"/>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="101" sgo:decimalMaxValue="0" sgo:decimalStepValue="0.01" name="Options_ResolutionEN0001" type="xsd:decimal" sgo:decimalMinValue="0"/>
+       <xsd:element sgo:visibility="0" sgo:sortOrder="102" name="Options_FitNL" type="integerPulldown" sgo:integerPulldownValues="Pad to fit$$$0|Crop to fit$$$1|Fit width$$$2|Fit height$$$3|Fit to fill (uneven scale)$$$4|1:1 pixels, centre crop/pad$$$5"/>
+       <xsd:element sgo:visibility="0" sgo:sortOrder="103" name="Options_Filter" type="integerPulldown" sgo:integerPulldownValues="Nearest$$$0|Bilinear$$$1|Bicubic$$$2|7 Taps$$$3|15 Taps$$$4"/>
+       <xsd:element sgo:visibility="0" sgo:sortOrder="104" name="Options_Apply" type="integerPulldown" sgo:integerPulldownValues="RGBA Only$$$0|All Channels$$$1"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="1010" name="Transform">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:visibility="0" sgo:sortOrder="105" name="Transform_Mirror" type="integerPulldown" sgo:integerPulldownValues="None$$$0|Horizontal$$$1|Vertical$$$2|Rotate 180 degrees$$$3"/>
+       <xsd:element sgo:visibility="0" sgo:sortOrder="106" name="Transform_Rotate" type="integerPulldown" sgo:integerPulldownValues="  0º$$$0| 90º$$$1|180º$$$2|270º$$$3"/>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="107" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" name="Transform_Roll" type="xsd:decimal" sgo:decimalMinValue="-100000"/>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="108" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" name="Transform_ScaleXNL" type="xsd:decimal" sgo:decimalMinValue="0"/>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="109" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" name="Transform_ScaleY" type="xsd:decimal" sgo:decimalMinValue="0"/>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="110" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" name="Transform_OffsetXNL" type="xsd:decimal" sgo:decimalMinValue="-100000"/>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="111" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" name="Transform_OffsetY" type="xsd:decimal" sgo:decimalMinValue="-100000"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="1020" name="Crop">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="112" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" name="Crop_Left" type="xsd:decimal" sgo:decimalMinValue="0"/>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="113" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" name="Crop_Right" type="xsd:decimal" sgo:decimalMinValue="0"/>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="114" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" name="Crop_TopNL" type="xsd:decimal" sgo:decimalMinValue="0"/>
+       <xsd:element sgo:visibility="0" sgo:decimalDigits="2" sgo:sortOrder="115" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" name="Crop_Bottom" type="xsd:decimal" sgo:decimalMinValue="0"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ShotGridCSVReader>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <SearchPath/>
+    <ShotSearchRules>
+      <CSVShotTokens/>
+      <SinceDays>0</SinceDays>
+      <Status>apr</Status>
+    </ShotSearchRules>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#94b4f2</color>
+    <objectName>ShotGridCSVReader</objectName>
+  </ShotGridCSVReader>
+</nodeCommonRoot>

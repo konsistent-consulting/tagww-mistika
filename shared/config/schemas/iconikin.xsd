@@ -1,0 +1,56 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="iconikIn"
+               sgo:categoryType="categoryCollapsible"
+               sgo:visibility="0"
+               sgo:sortOrder="0">
+    <xsd:complexType>
+      <xsd:sequence>
+
+        <xsd:element name="objectName"
+                     type="xsd:string"
+                     sgo:visibility="0"
+                     sgo:sortOrder="0"/>
+
+        <xsd:element name="color"
+                     type="color"
+                     sgo:visibility="0"
+                     sgo:sortOrder="1"/>
+
+        <xsd:element name="iconik_appId"
+                     type="xsd:string"
+                     sgo:visibility="0"
+                     sgo:sortOrder="10"/>
+        <xsd:element name="iconik_authToken"
+                     type="xsd:string"
+                     sgo:visibility="0"
+                     sgo:sortOrder="11"/>
+
+        <xsd:element name="iconik_domain"
+                     type="xsd:anyURI"
+                     default="https://app.iconik.io"
+                     sgo:visibility="0"
+                     sgo:sortOrder="12"/>
+
+        <xsd:element name="fileTypes"
+                     type="xsd:string"
+                     default=".mov,.mp4,.mxf"
+                     sgo:visibility="0"
+                     sgo:sortOrder="16"/>
+
+        <xsd:element name="collectionPath"
+                     type="xsd:string"
+                     default="[brand]/[campaign]/[job]"
+                     sgo:visibility="0"
+                     sgo:sortOrder="21"/>
+
+        <xsd:element name="skipKeyframes"
+                     type="xsd:boolean"
+                     sgo:visibility="0"
+                     sgo:sortOrder="40"/>
+
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

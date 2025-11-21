@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; Leonard Assist</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node is part of the integration between Mistika Workflows and DaVinci Resolve. The Leonard Assist node runs in the Mistika Workflows side, &nbsp;and it is intended to" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "leonardassist.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Leonard Assist</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?leonardassist.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Leonard Assist</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="jpeg.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="lut3d.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">This node is part of the integration between <span class="f_T_Menu">Mistika Workflows </span>and <span class="f_T_Menu">DaVinci Resolve</span>.</p>
+<p class="p_Normal">The Leonard Assist node runs in the Mistika Workflows side, &nbsp;and it is intended to work together with the <a href="leonardassist.html#mistikaworkflowslauncherfordavinciresolve" class="topiclink">Mistika Workflows Launcher</a> script for DaVinci Resolve (documented at the end of this chapter) . This script will collect all the metadata describing the current Resolve Timeline and it will send it as a <span class="f_T_Emphasis">.json</span> file to this node. </p>
+<p class="p_Normal" style="line-height: 1.57;">Then this node receives the<span class="f_T_Emphasis"> .json</span> file generated by the <span class="f_T_Menu"><a href="leonardassist.html#mistikaworkflowslauncherfordavinciresolve" class="topiclink">Mistika Workflows Launcher</a></span>, it gets all the media files from the Resolve’s timeline and it generates an EDL file with markers information for each video track. </p>
+<p class="p_Normal" style="line-height: 1.57;">The EDLs are then sent trough the <span class="f_T_Menu">edl </span>output connector, and all the media files mentioned in the EDL are sent trough the output <span class="f_T_Menu">files </span>connector.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Any workflow that makes use of EDLs and media files as inputs can then be directly linked to a DaVinci Resolve timeline, and it can be &nbsp;launched from Resolve directly by using the <span class="f_T_Menu"><a href="leonardassist.html#mistikaworkflowslauncherfordavinciresolve" class="topiclink">Mistika Workflows Launcher</a></span>. Please refer to the <span class="f_T_Menu"><a href="leonardassist.html#mistikaworkflowslauncherfordavinciresolve" class="topiclink">Mistika Workflows Launcher</a></span> documentation for more details.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">For example, with this node we can connect directly a DaVinci Resolve's timeline with a workflow that generates all the required assets for a typical VFX Pull:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="LeonardAssist-010" width="1263" height="649" style="margin:0;width:1263px;height:649px;border:none" src="leonardassist-010.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs:</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<p class="p_Normal"><span class="f_Heading3">json</span>: &nbsp;The .json file(s) to be processed generated with the <span style="font-weight: bold; color: #000000;">Mistika Workflows Launcher</span> in DaVinci Resolve's current timeline.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">edl</span>: <span class="f_BodyText"> </span>EDL files generated for each video track processed</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">files</span>: Media files from DaVinci Resolve's current timeline gathered in the .json file, and filtered by the Video tracks processed in the node.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="LeonardAssist-001" width="251" height="158" style="margin:0;width:251px;height:158px;border:none" src="leonardassist-001.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink">Name Convention</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">edlOutputPath</span>: &nbsp;The path where the EDL generated files will be saved. </p>
+<p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">overwrite</span>: Toggle to replace the existing EDL files in the output path.</p>
+<p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">jsonInputOverride</span>: Toggle that ignores the json input files of the node and gets directly the json file sent with the Mistika Workflows Launcher from Resolve.</p>
+<p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">TracksToProcess</span>: Video tracks of Resolve’s timeline to be processed.</p>
+<p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">exportMarkers</span>: Toggle to include markers' information in the EDL files generated.</p>
+<p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">edlEvents</span>: Pulldown menu to select what is to be included in the generated EDL files: only those clips with markers in their same timeline TC location; or all clips present in the video tracks to be processed.</p>
+<p class="p_Normal" style="line-height: 1.80;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.80;"><img alt="LeonardAssist-002d" width="677" height="411" style="margin:0;width:677px;height:411px;border:none" src="leonardassist-002d.png"/></p>
+<p class="p_Normal" style="line-height: 1.80;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">MarkersOptions</span>:</p>
+<p style="text-indent: 0; line-height: 1.80; padding-left: 13px; margin: 0 0 0 27px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Heading3">getMarkersName</span>: &nbsp;toggle to get the text of Resolve’s marker name and insert it as marker metadata in the generated EDL files.</p><p style="text-indent: 0; line-height: 1.80; padding-left: 13px; margin: 0 0 0 27px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Heading3">getMarkersNotes</span>: same as before, but getting the text of Resolve’s marker notes instead of the marker's name.</p><p style="text-indent: 0; line-height: 1.80; padding-left: 13px; margin: 0 0 0 27px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Heading3">MarkersColorX</span>: Pulldown menu to select the desired Resolve’s marker color to be processed.</p><p style="text-indent: 0; line-height: 1.80; padding-left: 13px; margin: 0 0 0 27px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Heading3">MarkersTrackTargetX</span>: Pulldown menu to select the desired Video Track where the MarkersColorX will be attached to. </p><p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">MarkersSuffixX</span>: If the same marker color is selected to be attached to different video tracks, string literals can be added to the MarkerName or MarkerNote selected before.</p>
+<p class="p_Normal" style="line-height: 1.80;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.80;"><img alt="LeonardAssist-003b" width="552" height="403" style="margin:0;width:552px;height:403px;border:none" src="leonardassist-003b.png"/></p>
+<p class="p_Normal" style="line-height: 1.80;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">Name Convention edlNC: </span>Name Convention to be applied to the edl files generated.</p>
+<p class="p_Normal" style="line-height: 1.80;"><span class="f_Heading3">Name Convention filesNC</span>: Name Convention to be applied to the output files.</p>
+<p class="p_Normal" style="line-height: 1.80;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.80;"><img alt="LeonardAssist-011" width="743" height="127" style="margin:0;width:743px;height:127px;border:none" src="leonardassist-011.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Menu">Code</span>: This particular node is written in python language. The script itself has been left accessible as an example for Python programmers, or in case you want to customize it to your particular needs.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold; color: #000000;">How it works:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If we have a timeline in DaVinci Resolve with the necessary elements to generate a VFX Pull like this:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="LeonardAssist-004" width="889" height="269" style="margin:0;width:889px;height:269px;border:none" src="leonardassist-004.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">We find the base plates in the video track 1, the background layers in the video track 2, and the reference movie in the video track 4. We also find that the yellow markers have the VFX name, and there is also a green marker. By setting the MarkerOptions as shown before, the Leonard Assist node will generate three EDLs<span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="LeonardAssist-005" width="204" height="130" style="margin:0;width:204px;height:130px;border:none" src="leonardassist-005.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">And the content of each EDL will be as follows:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="LeonardAssist-006" width="933" height="588" style="margin:0;width:933px;height:588px;border:none" src="leonardassist-006.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="LeonardAssist-007" width="858" height="263" style="margin:0;width:858px;height:263px;border:none" src="leonardassist-007.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="LeonardAssist-008" width="893" height="160" style="margin:0;width:893px;height:160px;border:none" src="leonardassist-008.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">Please note that the Leonard Assist node will generate the markers metadata with Avid/Premiere/Mistika format, not with Resolve’s EDL markers’ format.</p>
+<p class="p_Normal">If it is needed, the EDL to Markers node can be used afterwards in the workflow to convert from Avid/Premiere/Mistika format to Resolve format.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Finally, all EDLs generated, alongside with the files of the video tracks selected, will be placed in their corresponding output connectors of the <span style="font-weight: bold;">Leonard Assist</span> node, so you can continue any workflow based on these elements afterwards.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><a id="mistikaworkflowslauncherfordavinciresolve" class="hmanchor"></a><span class="f_Heading2">Mistika Workflows Launcher for DaVinci Resolve</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">This application is launched within DaVinci Resolve and is intended to work together with the<span style="color: #000000;"><a href="leonardassist.html#leonardassistnode" class="topiclink"> Leonard Assist node</a></span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span>in Mistika Workflows. </p>
+<p class="p_Normal" style="line-height: 1.57;">It allows to load an already configured .mwf file, review its nodes’ states and output paths, and launch the Workflows jobs contained in the .mwf file with the clips and edit information of the current timeline opened in DaVinci.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">Once permanently installed, Mistika Workflows Launcher can be found in Resolve’s<span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span><span style="font-style: italic; font-weight: bold; color: #000000;">Workspace → Scripts → Deliver</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">  </span>menu. </p>
+<p class="p_Normal" style="line-height: 1.57;">If it doesn’t appear please refer to the installation procedure and troubleshooting at the end of this document. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="WorkflowsLauncher-001" width="679" height="664" style="margin:0;width:679px;height:664px;border:none" src="workflowslauncher-001.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">Then a window will appear with several options:</p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="WorkflowsLauncher-002" width="752" height="273" style="margin:0;width:752px;height:273px;border:none" src="workflowslauncher-002.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">If we have our workflow already tested and working, we can connect it with the Launcher in different ways by activating the corresponding checkboxes:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="WorkflowsLauncher-006" width="529" height="44" style="margin:0;width:529px;height:44px;border:none" src="workflowslauncher-006.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-indent: -13px; line-height: 1.57; margin: 0 0 0 40px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -13px; line-height: 1.57; margin: 0 0 0 13px;"><span style="font-weight: bold; color: #000000;">Use Watch Folder</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">: </span>If this option is selected, the Mistika Workflows Launcher will generate a .json file with the required information of the clips and markers involved in the current timeline of DaVinci Resolve. This option is useful in, at least, two different situations:</p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-indent: 0; line-height: 1.57; padding-left: 13px; margin: 0 0 0 35px;"><span class="f_Normal" style="font-size:15px; font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>If we are in the prototype phase of any workflow, by feeding it with our .json file and check the<span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span><span style="font-weight: bold; color: #000000;">Leonard Assist</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span>node parameters configuration<span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">:</span></p><p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="WorkflowsLauncher-007" width="591" height="400" style="margin:0 auto 0 auto;width:591px;height:400px;border:none" src="workflowslauncher-007.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-indent: 0; line-height: 1.57; padding-left: 13px; margin: 0 0 0 35px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>If the workflow is already designed and tested, and there is a Mistika Workflows instance waiting for input files in a Watch Folder node. </p><p class="p_Normal" style="line-height: 1.57; margin: 0 0 0 48px;">This instance can be local in the same computer where Resolve is running, or can be in another system and monitoring a network shared folder where the DaVinci’s operator just drop the .json files:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="WorkflowsLauncher-008" width="597" height="418" style="margin:0 auto 0 auto;width:597px;height:418px;border:none" src="workflowslauncher-008.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">While making use of the<span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span><span style="font-weight: bold; color: #000000;">Use Watch Folder</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span>option<span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">, </span><span style="font-weight: bold; color: #000000; text-decoration: underline;">remember to de-activate the jsonInputOverride checkbox</span> in the<span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span><span style="color: #000000;"><a href="leonardassist.html#leonardassistnode" class="topiclink">Leonard Assist node</a></span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">, </span>so it can process its inputs from other nodes.</p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">Once we have our workflows designed and tested, they can also be directly executed from the Mistika Workflows Launcher.<span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span></p>
+<p class="p_Normal" style="line-height: 1.57;">In this case, the<span style="font-weight: bold; color: #000000;"> jsonInputOverride</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span><span style="font-weight: bold; color: #000000;">checkbox</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #000000;"> </span>in the<span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"> </span><span style="color: #000000;"><a href="leonardassist.html#leonardassistnode" class="topiclink">Leonard Assist node</a></span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #000000;"> </span> must be <span style="font-weight: bold; color: #000000;">activated</span> in order to receive directly the .json timeline data from Resolve. </p>
+<p class="p_Normal" style="line-height: 1.57;">Also deleting or bypassing any input node is recommended before saving the .mwf file and loading it into the Mistika Workflows Launcher.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="WorkflowsLauncher-009" width="810" height="482" style="margin:0;width:810px;height:482px;border:none" src="workflowslauncher-009.png"/></p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.80;">To load our already configured workflow in the Launcher, just click on ‘Open Workflow’ and load the desired .mwf file.</p>
+<p class="p_Normal" style="line-height: 1.80;">Once loaded, the workflows contained are represented by tabs, and in every tab a list of involved nodes is presented, alongside with its configured status and output path. </p>
+<p class="p_Normal" style="line-height: 1.80;">This allows us to have a quick overview of the tasks that are going to take place once we launch the workflow:</p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="WorkflowsLauncher-003" width="750" height="521" style="margin:0;width:750px;height:521px;border:none" src="workflowslauncher-003.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">If we decide to change any node property, it’s just a matter of opening the .mwf file in Mistika Workflows, modify it, and save it. </p>
+<p class="p_Normal" style="line-height: 1.57;">Then by clicking on ‘Reload Workflow’ it will update all properties modified.</p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">In order to launch the loaded workflow, we can select the following options:</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="WorkflowsLauncher-005" width="219" height="53" style="margin:0;width:219px;height:53px;border:none" src="workflowslauncher-005.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-indent: 0; line-height: 1.57; padding-left: 13px; margin: 0 0 0 27px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold; color: #000000;">Launch Mistika Workflows</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">: </span>this option will open a Mistika Workflows instance, load the selected .mwf file, add all workflows to the Render Queue, and execute it. It’s the equivalent of what a human operator would do manually.</p><p style="text-indent: 0; line-height: 1.57; padding-left: 13px; margin: 0 0 0 27px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold; color: #000000;">Silent Mode – no GUI</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">: </span>this option allows to run Mistika Workflows and execute all workflows defined in the .mwf file without opening the application. </p><p class="p_Normal" style="line-height: 1.57; margin: 0 0 0 48px;">As there will not be any GUI, no progress bar nor errors will be presented. In this case it is recommended to connect the Mistika Workflows logs with any log management application, in order to monitor all processes and get some feedback. </p>
+<p class="p_Normal" style="line-height: 1.57; margin: 0 0 0 48px;">Please refer to <a href="https://support.sgo.es/a/solutions/articles/1000320093" class="weblink">this article</a> for more information about Mistika Workflows and how to connect it with other log management applications.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><span style="font-weight: bold; color: #000000; text-decoration: underline;">Mistika Workflows Launcher installation and troubleshooting on DaVinci Resolve's side</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">The required main script <span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">“</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; font-style: italic; font-weight: bold; color: #000000;">Mistika Workflows Launcher.py</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">” </span>is provided in a regular installation of Mistika Workflows under the path <span style="font-style: italic; font-weight: bold;">~/SGO AppData/LeonardAssist/shared/</span></p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">In order to run it, it can be simply drag-and-dropped into Resolve's console, but for a permanent installation it must be copied into DaVinci Resolve scripts folder, which in a standard configuration is something like:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; font-style: italic; color: #000000;">C:\ProgramData\Blackmagic Design\DaVinci Resolve\Fusion\Scripts\Deliver\</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="WorkflowsLauncher-010" width="642" height="99" style="margin:0 auto 0 auto;width:642px;height:99px;border:none" src="workflowslauncher-010.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">The system where the Launcher is installed will also need access to the  <span style="font-style: italic; font-weight: bold;">~/SGO AppData/LeonardAssist/shared/</span> path to make the interchange of the data of the current timeline, as well as other features such as the style and color of the plugin. This path can be found within a regular Mistika Workflows installation on the same system.</p>
+<p class="p_Normal" style="line-height: 1.57;">If you plan to execute Workflows in another system, make sure that both have access to the same <span style="font-style: italic; font-weight: bold;">~/SGO AppData/LeonardAssist/shared/ </span>path under a shared network volume.</p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">The MistikaWorkflowsLauncher.py will also need to have the required python libraries installed. </p>
+<p class="p_Normal" style="line-height: 1.57;">If some of them are missing it will be prompted in DaVinci's Console:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="WorkflowsLauncher-011" width="639" height="267" style="margin:0;width:639px;height:267px;border:none" src="workflowslauncher-011.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">The required libraries that the script needs are:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">os</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">sys</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">platform</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">xml.etree.ElementTree </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">as </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">ET</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">json</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">tempfile</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">from </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">datetime </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">datetime</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">subprocess</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">from </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">PySide6.QtWidgets </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">*</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">from </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">PySide6.QtCore </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">Qt, QStandardPaths, QOperatingSystemVersion</span></p>
+<p class="p_Normal" style="line-height: 1.27; background: #1d1f21;"><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">from </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">PySide6.QtGui </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #b294bb;">import </span><span style="font-size: 12px; font-family: 'Courier New',Courier,monospace; color: #c5c8c6;">QColor, QIcon</span></p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;">Any of them can be solved at system’s level and be installed via pip, or any other preferred method according to your python setup. It is also recommended to keep aligned the python version of your system with Mistika Workflows’ python version, which at the moment of writing this document is 3.11.1.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If the console output of DaVinci Resolve throws any other kind of error, both at launching or in running time, please don’t hesitate to contact SGO support so it can be debugged and fixed.</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

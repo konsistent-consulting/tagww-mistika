@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <MediaMovie>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <color>#0000ff</color>
+    <gamma>Gamma 2 4</gamma>
+    <gamut>Rec709</gamut>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>MediaMovie</objectName>
+    <url/>
+  </MediaMovie>
+</nodeCommonRoot>

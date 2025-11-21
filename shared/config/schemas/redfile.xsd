@@ -1,0 +1,69 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="REDFile" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="url" type="xsd:anyURI" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('Red File (*.r3d)')|fileDialogWindowTitle('Select a Red File')" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="debayer" type="integerPulldown" sgo:integerPulldownValues="From File$$$0|Custom$$$1" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="r3dColorSpace" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="5" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_r3dColorSpaceList"/>
+                <xsd:element name="gamut" type="label" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="r3dGammaCurve" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="7" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_r3dGammaCurveList"/>
+                <xsd:element name="gamma" type="label" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="r3dISO" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="9" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_r3dISOList"/>
+                <xsd:element name="r3dDepth" type="stringPulldown" sgo:stringPulldownValues="8 Bits$$$1|10 Bits$$$2|12 Bits$$$3|16 Bits$$$4" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="r3dReduceFactor" type="stringPulldown" sgo:stringPulldownValues="1:1$$$1|1:2$$$2|1:2 Premium$$$6|1:4$$$3|1:8$$$4|1:16$$$5" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="changer3dKelvin" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="r3dKelvin" type="xsd:integer" sgo:minValue="0" sgo:maxValue="100000" sgo:visibility="0" sgo:sortOrder="13"/>
+                <xsd:element name="changer3dTint" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="14"/>
+                <xsd:element name="r3dTint" type="xsd:integer" sgo:minValue="-100" sgo:maxValue="100" sgo:visibility="0" sgo:sortOrder="15"/>
+                <xsd:element name="changer3dExposureCompensation" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="16"/>
+                <xsd:element name="r3dExposureCompensation" type="xsd:integer" sgo:minValue="-7" sgo:maxValue="7" sgo:visibility="0" sgo:sortOrder="17"/>
+                <xsd:element name="changeGain" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="18"/>
+                <xsd:element name="r3dGainR" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="10" sgo:visibility="0" sgo:sortOrder="19"/>
+                <xsd:element name="r3dGainG" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="10" sgo:visibility="0" sgo:sortOrder="20"/>
+                <xsd:element name="r3dGainB" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="10" sgo:visibility="0" sgo:sortOrder="21"/>
+                <xsd:element name="changer3dSaturation" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="22"/>
+                <xsd:element name="r3dSaturation" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="4" sgo:visibility="0" sgo:sortOrder="23"/>
+                <xsd:element name="changer3dContrast" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="24"/>
+                <xsd:element name="r3dContrast" type="xsd:decimal" sgo:decimalMinValue="-1" sgo:decimalMaxValue="1" sgo:visibility="0" sgo:sortOrder="25"/>
+                <xsd:element name="changer3dBrightness" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="26"/>
+                <xsd:element name="r3dBrightness" type="xsd:decimal" sgo:decimalMinValue="-10" sgo:decimalMaxValue="10" sgo:visibility="0" sgo:sortOrder="27"/>
+                <xsd:element name="changer3dDRX" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="28"/>
+                <xsd:element name="r3dDRX" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="1" sgo:visibility="0" sgo:sortOrder="29"/>
+                <xsd:element name="changer3dShadow" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="30"/>
+                <xsd:element name="r3dShadow" type="xsd:decimal" sgo:decimalMinValue="-2" sgo:decimalMaxValue="2" sgo:visibility="0" sgo:sortOrder="31"/>
+                <xsd:element name="changer3dFlut" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="32"/>
+                <xsd:element name="r3dFlut" type="xsd:integer" sgo:minValue="-8" sgo:maxValue="8" sgo:visibility="0" sgo:sortOrder="33"/>
+                <xsd:element name="r3dipp2Process" type="integerPulldown" sgo:integerPulldownValues="Legacy$$$0|Primary Only$$$1|Full Graded$$$2" sgo:visibility="0" sgo:sortOrder="34"/>
+                <xsd:element name="changer3dipp2Exposure" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="35"/>
+                <xsd:element name="r3dipp2Exposure" type="xsd:decimal" sgo:decimalMinValue="-1" sgo:visibility="0" sgo:sortOrder="36"/>
+                <xsd:element name="changer3dipp2CDLSaturation" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="37"/>
+                <xsd:element name="r3dipp2CDLSaturation" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="38"/>
+                <xsd:element name="r3dipp2CDLRedSlope" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="39"/>
+                <xsd:element name="r3dipp2CDLRedOffset" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="40"/>
+                <xsd:element name="r3dipp2CDLRedPower" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="41"/>
+                <xsd:element name="r3dipp2CDLGreenSlope" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="42"/>
+                <xsd:element name="r3dipp2CDLGreenOffset" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="43"/>
+                <xsd:element name="r3dipp2CDLGreenPower" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="44"/>
+                <xsd:element name="r3dipp2CDLBlueSlope" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="45"/>
+                <xsd:element name="r3dipp2CDLBlueOffset" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="46"/>
+                <xsd:element name="r3dipp2CDLBluePower" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="47"/>
+                <xsd:element name="r3dipp2ShapeCreativeLut" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="48"/>
+                <xsd:element name="r3dipp2ShapeToneMap" type="integerPulldown" sgo:integerPulldownValues="Source$$$0|Low$$$1|Medium$$$2|High$$$3|None$$$4" sgo:visibility="0" sgo:sortOrder="49"/>
+                <xsd:element name="r3dipp2ShapeHighlight" type="integerPulldown" sgo:integerPulldownValues="Source$$$0|None$$$1|Hard$$$2|Medium$$$3|Soft$$$4|Very Soft$$$5" sgo:visibility="0" sgo:sortOrder="50"/>
+                <xsd:element name="changer3dipp2HDRpeak" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="51"/>
+                <xsd:element name="r3dipp2HDRpeak" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="52"/>
+                <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="53">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="metadata" type="mediaFileInfoWidget" sgo:visibility="0" sgo:sortOrder="54"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

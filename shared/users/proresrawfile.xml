@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ProResRawFile>
+    <NameConvention>
+      <nameConvention>[path][baseName][.ext]</nameConvention>
+    </NameConvention>
+    <changeWhiteBalance>false</changeWhiteBalance>
+    <changegain>false</changegain>
+    <color>#458c65</color>
+    <debayer>0</debayer>
+    <gain>10</gain>
+    <gamma>Linear</gamma>
+    <gamut>Rec709</gamut>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>ProResRawFile</objectName>
+    <prrColorSpace>--- From File ---</prrColorSpace>
+    <reduceFactor>0</reduceFactor>
+    <url/>
+    <whiteBalanceBlue>1</whiteBalanceBlue>
+    <whiteBalanceRed>1</whiteBalanceRed>
+  </ProResRawFile>
+</nodeCommonRoot>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ImportMlnk>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <color>#458c65</color>
+    <debayer>0</debayer>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>ImportMlnk</objectName>
+    <trimHead>-1</trimHead>
+    <trimTail>-1</trimTail>
+    <url/>
+  </ImportMlnk>
+</nodeCommonRoot>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ClassifyBySize>
+    <classifyMode>0</classifyMode>
+    <color>#00b4b4</color>
+    <errorMode>0</errorMode>
+    <objectName>ClassifyBySize</objectName>
+    <units>1</units>
+    <value>5</value>
+    <valueRanges>1-2,2-7,7-50</valueRanges>
+  </ClassifyBySize>
+</nodeCommonRoot>

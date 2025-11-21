@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; Audio Router</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;To select and recombine audio channels of the input media, mainly to prepare audio tracks for transcoder nodes downstream . Note: This node does not &quot;render&quot; any outp" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "audiorouter.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Audio Router</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?audiorouter.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Audio Router</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="amberscript.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="avi.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="text-align: center; page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">To select and recombine audio channels of the input media, mainly to prepare audio tracks for transcoder nodes downstream .</span></p>
+<p class="p_Comment"><span class="f_T_Emphasis">Note</span><span class="f_Comment">: </span><span class="f_BodyText">This node does not &quot;render&quot; any output audio files by itself. What it does is to redefine the audio channels routing and pass it to posterior nodes (typically to transcoder nodes), which are the ones that can render actual media files. </span></p>
+<p class="p_Comment"><span class="f_BodyText">This node &nbsp;can be used in combination with the </span><span class="f_T_Menu"><a href="extractaudiochannels.html" class="topiclink">Extract Audio Channels</a> </span><span class="f_BodyText"> node for channel recombination from other audio files.</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Most media formats can have audio &quot;channels&quot; and &quot;audio tracks&quot;, which are different things. &nbsp;In this context an &quot;audio channel&quot; is a single audio stream, while an &quot;audio track&quot; is a collection of audio channels. For example a stereo track has 2 audio channels, a mono track has one audio channel, and a 5.1 track has 6 audio channels. &nbsp;Finally most media formats (mp4, ProRes...) can have multiple audio tracks, each one with multple audio channels, and you can use multiple </span><span class="f_T_Menu">Audio Router </span><span class="f_BodyText">nodes to achieve any combination you want. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">Example: A particular client received a movie file with 8 audio channels and now he wants to create a </span><span class="f_T_Menu">ProRes</span><span class="f_BodyText"> file with two independent audio tracks, one of them with 6 channels (a 5.1 preset) and another track with 2 channels (a stereo preset).</span></p>
+<p class="p_BodyText"><span class="f_BodyText">To do so, &nbsp;he would need to use an </span><span class="f_T_Menu">ExtractAudioChannels </span><span class="f_BodyText">node, two </span><span class="f_T_Menu">AudioRouter </span><span class="f_BodyText">nodes, and a </span><span class="f_T_Menu">ProRes </span><span class="f_BodyText">node with two </span><span class="f_T_Menu">Ext Audio </span><span class="f_BodyText">inputs, as seen in the image:. &nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_Comment"><img alt="audioroute" width="1741" height="482" style="margin:0;width:1741px;height:482px;border:none" src="audioroute.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Also, in the ProRes node he would need to deactivate <span class="f_T_Menu">Use AV Audio </span>to select the <span class="f_T_Menu">Ext-Audio </span>connectors, and also deactivate <span class="f_T_Menu">Pack Audio Tracks</span> to avoid the <span class="f_T_Menu">ProRes</span> node mixing all channels into a single track (as the client in this example requested two independent audio tracks) </p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">A variable number of audio input connectors, with their metadata names and output order depending on the audio standard selected in the <span class="f_T_Menu">Preset </span>property. </p>
+<p class="p_Normal">Note that some audio standards have the same number of channels but in different order, so it can be important to select the proper preset best representing the audio tracks that you want to produce (see below for more details)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Out:</span> An audio track with recombined audio channels according to the selected audio standard. Typically to be connected to the <span class="f_T_Menu">Ext-Audio</span> connector of transcoder nodes. This node can only output one audio track (with multiple audio channels),. When multiple audio tracks are needed you will need to use multiple <span class="f_T_Menu">Audio Router </span>nodes, and then connect their outputs &nbsp;a transcoder node via multiple  <span class="f_T_Menu">Ext-Audio </span>connectors).</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Object Properties</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Preset:</span> Select a supported audio standard, or chose Custom to specify the number of output channels. The supported presets (and their output channels) are:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Custom</span><span class="f_BodyText">:</span></p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"><span class="f_T_Entry">Number of channels</span><span class="f_BodyText">: Given a definable number of channels (n), It will provide n output channels named as </span><span class="f_T_Menu">ch1... chn</span></p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Below are some preset examples that come with the node, but more presets are being added constantly. Please check the node presets even if you don´t find your desired preset here.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Mono: C</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Stereo: &nbsp;L, R</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">LCR: L, C, R</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Quadrophonic: L, R, Lr, Rr </span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Dolby Surround: L, C, R, S</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">5.1 SMPTE: &nbsp;L, R, C, LFE, Ls, Rs</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">5.1 DTS: &nbsp;L, R, Ls, Rs, C, LFE</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">5.1 Film: &nbsp;L, C, R, Ls, Rs, LFE</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">6.1 Dolby Surround EX: L, C, R, Ls, Cc, Rs, LFE</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">7.1. SMPTE: L, R, C, LFE, Ls, Rs, Lr, Rr</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">7.1 DTS: L, R, Ls, Rs, Lr, Rr, C, LFE</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">7.1 Film: L, C, R, Ls, Rs, Lr, Rr, LFE</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">7.1 SDDS: L, Lc, C, Rc, R, Lr, Rs, LFE</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">7.1.2 SMPTE: L, R, C, LFE, Ls, Rs, Lr, Rr, Ltm, Rtm</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">7.1.2 DTS: L, R, Ls, Rs, Lr, Rr, C, LFE, Ltm, Rtm</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_T_Menu" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_T_Menu">7.1.2 Film: L, C, R, Ls, Rs, Lr, Rr, LFE, Ltm, Rtm</span></p><p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">22.2 Surround: FL, FR, FC, LF1, BL, BR, FLc, FRc, BC, LFE2, SiL, SiR, TpFL, TpFC, TpC, TpBL,TpBR, TpSiL, TpSiR, TpBC, BtFC, BtFL, BtFR</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

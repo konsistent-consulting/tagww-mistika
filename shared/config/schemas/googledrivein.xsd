@@ -1,0 +1,26 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="GoogleDriveIn" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="clientId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+            <xsd:element name="clientSecret" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+            <xsd:element name="folderId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+            <xsd:element name="localPath" type="xsd:anyURI" sgo:properties="showDirsOnly|urlVisibleButtonBrowser|fileDialogWindowTitle('Select Folder')" sgo:visibility="0" sgo:sortOrder="12"/>
+            <xsd:element name="recursive" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="14"/>
+            <xsd:element name="deleteAfterDownload" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="20"/>
+            <xsd:element name="areYouSure" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="21"/>
+            <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+            <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="22">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+       </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

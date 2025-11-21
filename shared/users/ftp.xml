@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <FTP>
+    <areYouSure>false</areYouSure>
+    <authType>0</authType>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#8b66a8</color>
+    <deleteAfterTransfer>false</deleteAfterTransfer>
+    <exclude/>
+    <ignoreStandAloneSidecars>false</ignoreStandAloneSidecars>
+    <include/>
+    <keyFile/>
+    <keyPassPhrase></keyPassPhrase>
+    <localPath/>
+    <newFilesOnly>false</newFilesOnly>
+    <nodeLocked>false</nodeLocked>
+    <objectName>FTP</objectName>
+    <port>21</port>
+    <protocol>ftp</protocol>
+    <pwd></pwd>
+    <python>
+      <auxCode/>
+    </python>
+    <renameFilesList/>
+    <retries>10</retries>
+    <url/>
+    <user/>
+  </FTP>
+</nodeCommonRoot>

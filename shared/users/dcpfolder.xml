@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <DCPfolder>
+    <color>#000080</color>
+    <gamma>DCDM + Gamma 2.6 (DCI XYZ)</gamma>
+    <gamut>XYZ (CIE Chromaticities)</gamut>
+    <metadata/>
+    <objectName>DCPfolder</objectName>
+    <url/>
+    <reduceFactor>0</reduceFactor>
+    <layer>0</layer>
+  </DCPfolder>
+</nodeCommonRoot>

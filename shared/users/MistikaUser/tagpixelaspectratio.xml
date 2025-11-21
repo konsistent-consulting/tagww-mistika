@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <TagPixelAspectRatio>
+    <color>#677688</color>
+    <objectName>TagPixelAspectRatio</objectName>
+    <overwriteIfExists/>
+    <pixelAspectRatio>1</pixelAspectRatio>
+  </TagPixelAspectRatio>
+</nodeCommonRoot>

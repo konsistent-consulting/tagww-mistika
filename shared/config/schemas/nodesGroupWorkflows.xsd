@@ -1,0 +1,12 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="Nodes" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="Inputs" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="1" sgo:properties="alphaSort"/>
+            <xsd:element name="Outputs" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="3" sgo:properties="alphaSort"/>
+            <xsd:element name="Tasks" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="2" sgo:properties="alphaSort"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

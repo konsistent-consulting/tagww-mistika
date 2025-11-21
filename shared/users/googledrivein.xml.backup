@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <GoogleDriveIn>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <areYouSure>true</areYouSure>
+    <clientId/>
+    <color>#fbbc04</color>
+    <deleteAfterDownload/>
+    <folderId/>
+    <localPath/>
+    <objectName>GoogleDriveIn</objectName>
+    <recursive/>
+  </GoogleDriveIn>
+</nodeCommonRoot>

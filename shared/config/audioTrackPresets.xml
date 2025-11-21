@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audioRouter>
+  <track name="Mono">
+	<channel name="C"/>
+  </track>
+  <track name="Stereo">
+	<channel name="L"/>
+	<channel name="R"/>
+  </track>
+  <track name="LCR">
+	<channel name="L"/>
+	<channel name="C"/>
+	<channel name="R"/>
+  </track>
+  <track name="Quadraphonic">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+  </track>
+  <track name="Dolby Surround">
+	<channel name="L"/>
+	<channel name="C"/>
+	<channel name="R"/>
+	<channel name="S"/>
+  </track>
+  <track name="5.1 SMPTE">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="C"/>
+	<channel name="LFE"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+  </track>
+  <track name="5.1 DTS">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="C"/>
+	<channel name="LFE"/>
+  </track>
+  <track name="5.1 Film">
+	<channel name="L"/>
+	<channel name="C"/>
+	<channel name="R"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="LFE"/>
+  </track>
+  <track name="6.1 Dolby Surround EX">
+	<channel name="L"/>
+	<channel name="C"/>
+	<channel name="R"/>
+	<channel name="Ls"/>
+	<channel name="Cc"/>
+	<channel name="Rs"/>
+	<channel name="LFE"/>
+  </track>
+  <track name="7.1 SMPTE">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="C"/>
+	<channel name="LFE"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+  </track>
+  <track name="7.1 DTS">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+	<channel name="C"/>
+	<channel name="LFE"/>
+  </track>
+  <track name="7.1 Film">
+	<channel name="L"/>
+	<channel name="C"/>
+	<channel name="R"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+	<channel name="LFE"/>
+  </track>
+  <track name="7.1 SDDS">
+	<channel name="L"/>
+	<channel name="Lc"/>
+	<channel name="C"/>
+	<channel name="Rc"/>
+	<channel name="R"/>
+	<channel name="Lr"/>
+	<channel name="Rs"/>
+	<channel name="LFE"/>
+  </track>
+  <track name="7.1.2 SMPTE">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="C"/>
+	<channel name="LFE"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+	<channel name="Ltm"/>
+	<channel name="Rtm"/>
+  </track>
+  <track name="7.1.2 DTS">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+	<channel name="C"/>
+	<channel name="LFE"/>
+	<channel name="Ltm"/>
+	<channel name="Rtm"/>
+  </track>
+  <track name="7.1.2 Film">
+	<channel name="L"/>
+	<channel name="C"/>
+	<channel name="R"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+	<channel name="LFE"/>
+	<channel name="Ltm"/>
+	<channel name="Rtm"/>
+  </track>
+  <track name="7.1.4 SMPTE">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="C"/>
+	<channel name="LFE"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+	<channel name="Ltf"/>
+	<channel name="Rtf"/>
+	<channel name="Ltr"/>
+	<channel name="Rtr"/>
+  </track>
+  <track name="7.1.4 DTS">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+	<channel name="C"/>
+	<channel name="LFE"/>
+	<channel name="Ltf"/>
+	<channel name="Rtf"/>
+	<channel name="Ltr"/>
+	<channel name="Rtr"/>
+  </track>
+  <track name="7.1.6 SMPTE">
+	<channel name="L"/>
+	<channel name="R"/>
+	<channel name="C"/>
+	<channel name="LFE"/>
+	<channel name="Ls"/>
+	<channel name="Rs"/>
+	<channel name="Lr"/>
+	<channel name="Rr"/>
+	<channel name="Ltf"/>
+	<channel name="Rtf"/>
+	<channel name="Ltm"/>
+	<channel name="Rtm"/>
+	<channel name="Ltr"/>
+	<channel name="Rtr"/>
+  </track>
+    <track name="22.2 Surround">
+	<channel name="FL"/>
+	<channel name="FR"/>
+	<channel name="FC"/>
+	<channel name="LFE1"/>
+	<channel name="BL"/>
+	<channel name="BR"/>
+	<channel name="FLc"/>
+	<channel name="FRc"/>
+	<channel name="BC"/>
+	<channel name="LFE2"/>
+	<channel name="SiL"/>
+	<channel name="SiR"/>
+	<channel name="TpFL"/>
+	<channel name="TpFR"/>
+	<channel name="TpFC"/>
+	<channel name="TpC"/>	
+	<channel name="TpBL"/>
+	<channel name="TpBR"/>
+	<channel name="TpSiL"/>
+	<channel name="TpSiR"/>
+	<channel name="TpBC"/>
+	<channel name="BtFC"/>
+	<channel name="BtFL"/>
+	<channel name="BtFR"/>
+  </track>
+</audioRouter>

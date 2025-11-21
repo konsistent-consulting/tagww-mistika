@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <EditReady>
+    <Config>
+      <binFilePath/>
+      <rosettaMode/>
+    </Config>
+    <NameConvention>
+      <nameConvention>[path][baseName][.frame][.ext]</nameConvention>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <clipIndexerDestination/>
+    <color>#0e0e0e</color>
+    <generateThumbs>false</generateThumbs>
+    <metadataDestination/>
+    <nodeLocked>false</nodeLocked>
+    <normalizeMetadataKeys>false</normalizeMetadataKeys>
+    <objectName>EditReady</objectName>
+    <preset>--- Select Preset ---</preset>
+    <thumbCount>0</thumbCount>
+    <thumbInterval>0</thumbInterval>
+    <thumbSize>0</thumbSize>
+    <url/>
+  </EditReady>
+</nodeCommonRoot>

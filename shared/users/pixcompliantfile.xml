@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <PIXCompliantFile>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#292929</color>
+    <gpu>true</gpu>
+    <mode/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>PIXCompliantFile</objectName>
+    <url/>
+  </PIXCompliantFile>
+</nodeCommonRoot>

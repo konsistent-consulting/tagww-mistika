@@ -1,0 +1,592 @@
+2025.11.13 10:11:44.167|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:11:44.167|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:11:44.167|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:11:48.468|Critical Error|iconik_input|iconikIn|iconik upload failed: CuniversalPath has no attribute named 'setMetadata'
+2025.11.13 10:11:48.468|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:11:48.468|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 10:13:33.778|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:13:33.779|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:13:33.779|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:13:33.779|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:13:33.780|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:13:33.780|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:13:33.780|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:13:33.780|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:13:42.825|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:14:04.904|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:14:04.905|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:14:04.905|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:14:10.074|Critical Error|iconik_input|iconikIn|iconik upload failed: CuniversalPath has no attribute named 'setMetadata'
+2025.11.13 10:14:10.074|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:14:10.074|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 10:14:38.428|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:14:38.428|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:14:38.428|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:14:42.651|Critical Error|iconik_input|iconikIn|iconik upload failed: CuniversalPath has no attribute named 'setMetadata'
+2025.11.13 10:14:42.651|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:14:42.651|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 10:17:05.920|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:17:05.921|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:17:05.922|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:17:05.922|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:17:05.922|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:17:05.922|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:17:05.922|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:17:05.922|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:17:14.115|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:17:14.116|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:17:30.111|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:17:40.227|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:17:40.227|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:17:40.227|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:17:44.662|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:17:44.663|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 10:18:31.804|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:18:31.804|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:18:31.804|Info|iconik_input|iconik_input|Rendering fc5d9386c07911f080db06bae02fb34c
+2025.11.13 10:18:36.916|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:18:36.916|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 10:19:23.808|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:19:23.809|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:19:23.809|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:19:23.809|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:19:23.809|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:19:23.809|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:19:23.810|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:19:23.810|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:23:13.381|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:23:13.382|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:23:13.382|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:23:13.382|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:23:13.383|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:23:13.383|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:23:13.383|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:23:13.383|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:23:15.497|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:23:15.497|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:23:15.497|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:23:15.497|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:25:54.065|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:25:54.066|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:25:54.066|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:25:58.624|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:25:58.624|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 10:28:36.350|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:28:36.350|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:28:36.350|Info|iconik_input|iconik_input|Rendering n2333182cc07b11f0820506bae02fb34c
+2025.11.13 10:28:40.862|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:28:40.862|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 10:35:44.236|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:35:44.236|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:35:44.236|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:35:48.891|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:35:48.892|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 10:38:37.437|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:38:37.437|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:38:37.437|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:38:43.056|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:38:43.057|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 10:42:33.246|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:42:33.246|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:42:33.246|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:42:36.747|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:42:36.748|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 10:43:17.393|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:43:17.393|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:43:17.393|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:43:20.626|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:43:20.627|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 10:50:37.570|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:50:37.571|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:50:37.571|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:50:37.571|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:50:37.572|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:50:37.572|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:50:37.572|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 10:50:37.572|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 10:52:49.683|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:52:49.683|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:52:49.683|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 10:52:49.698|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:52:49.699|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 10:52:49.699|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:52:49.700|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 10:53:57.154|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:53:57.155|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:53:57.155|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 10:53:57.156|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:53:57.156|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 10:53:57.156|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:53:57.157|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 10:54:06.685|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 10:54:06.687|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 10:54:06.687|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 10:54:06.691|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 10:54:06.692|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 10:54:06.693|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 10:54:06.694|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 11:00:12.341|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:00:12.342|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:00:12.342|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:00:12.342|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:00:12.343|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:00:12.343|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:00:12.343|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:00:12.343|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:01:22.377|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:01:22.379|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:01:22.379|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:01:22.380|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:01:22.381|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 11:01:22.381|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:01:22.382|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 11:05:59.235|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:05:59.237|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:05:59.237|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:05:59.237|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:05:59.238|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:05:59.238|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:05:59.238|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:05:59.238|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:06:01.302|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:06:01.302|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:06:01.303|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:06:01.303|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:06:13.244|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:06:23.902|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:06:23.903|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:06:23.903|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:06:23.903|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:06:23.904|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 11:06:23.904|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:06:23.904|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 11:07:16.325|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:07:16.325|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:07:16.325|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:07:16.327|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:07:16.327|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 11:07:16.327|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:07:16.328|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 11:07:21.590|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:07:21.590|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:07:21.590|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:07:21.602|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:07:24.571|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:07:24.573|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:07:47.675|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:07:47.676|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:07:47.676|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:07:47.694|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:07:52.850|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:07:52.851|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:08:33.674|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:08:33.675|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:08:33.675|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:08:33.728|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:08:45.042|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:08:45.043|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:09:42.821|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:09:42.821|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:09:42.821|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:09:42.822|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:09:42.823|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 11:09:42.823|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:09:42.823|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 11:10:27.675|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:10:27.677|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:10:27.677|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:10:27.696|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:10:41.167|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:10:41.168|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:11:14.674|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:11:14.675|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:11:14.675|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:11:14.697|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:12:55.168|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:12:55.170|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:18:16.665|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:18:16.666|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:18:16.666|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:18:16.695|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:18:20.826|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:18:20.828|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:19:15.713|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:19:15.714|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:19:15.714|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:19:15.736|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:19:23.178|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:19:23.179|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:28:56.715|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:28:56.717|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:28:56.717|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:28:56.741|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:28:56.742|Info|iconik_input|iconikIn|received 1 UniversalPaths from 'in' connector
+2025.11.13 11:28:56.743|Info|iconik_input|iconikIn|resolved 1 unique file paths from 'in' connector
+2025.11.13 11:29:01.015|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:29:01.016|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:29:33.717|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:29:33.719|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:29:33.719|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:29:33.744|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:29:33.745|Info|iconik_input|iconikIn|received 1 UniversalPaths from 'in' connector
+2025.11.13 11:29:33.745|Info|iconik_input|iconikIn|resolved 2 unique file paths from 'in' connector
+2025.11.13 11:29:40.697|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:29:40.699|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:36:46.715|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:36:46.716|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:36:46.716|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:36:46.736|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:36:46.736|Info|iconik_input|iconikIn|received 1 UniversalPaths from 'in' connector
+2025.11.13 11:36:46.737|Info|iconik_input|iconikIn|resolved 1 unique file paths from 'in' connector
+2025.11.13 11:36:51.083|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:36:51.084|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:37:16.717|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:37:16.718|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:37:16.718|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:37:16.737|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:37:16.737|Info|iconik_input|iconikIn|received 1 UniversalPaths from 'in' connector
+2025.11.13 11:37:16.737|Info|iconik_input|iconikIn|resolved 2 unique file paths from 'in' connector
+2025.11.13 11:37:21.705|Info|iconik_input|iconikIn|skipping 'tst0010_bg01_v0002.mov' (already in collection 296beff8-c070-11f0-9877-36cae2d258c4)
+2025.11.13 11:37:21.706|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:37:21.707|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:38:00.720|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:38:00.721|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:38:00.722|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:38:00.738|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:38:00.739|Info|iconik_input|iconikIn|received 6 UniversalPaths from 'in' connector
+2025.11.13 11:38:00.740|Info|iconik_input|iconikIn|resolved 2 unique file paths from 'in' connector
+2025.11.13 11:38:01.852|Info|iconik_input|iconikIn|skipping 'tst0010_bg01_v0002.mov' (already in collection 296beff8-c070-11f0-9877-36cae2d258c4)
+2025.11.13 11:38:04.663|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:38:04.667|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:39:22.719|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:39:22.720|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:39:22.720|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:39:22.750|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:39:22.750|Info|iconik_input|iconikIn|received 13 UniversalPaths from 'in' connector
+2025.11.13 11:39:22.752|Info|iconik_input|iconikIn|resolved 5 unique file paths from 'in' connector
+2025.11.13 11:39:39.533|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:39:39.535|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 11:47:58.225|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:47:58.226|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:47:58.226|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:47:58.226|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:47:58.227|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:47:58.227|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:47:58.227|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:47:58.227|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:48:08.083|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:48:08.083|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:48:08.084|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:48:08.084|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:48:11.322|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 11:48:11.322|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:48:26.443|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 11:51:23.726|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 11:51:23.728|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 11:51:23.728|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 11:51:23.757|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 11:51:23.758|Info|iconik_input|iconikIn|received 13 UniversalPaths from 'in' connector
+2025.11.13 11:51:23.760|Info|iconik_input|iconikIn|resolved 5 unique file paths from 'in' connector
+2025.11.13 11:51:37.507|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 11:51:37.508|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 12:21:05.691|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 12:21:05.692|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 12:21:05.692|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 12:21:05.716|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 12:21:05.716|Info|iconik_input|iconikIn|received 13 UniversalPaths from 'in' connector
+2025.11.13 12:21:05.718|Info|iconik_input|iconikIn|resolved 5 unique file paths from 'in' connector
+2025.11.13 12:21:19.824|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 12:21:19.825|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 12:24:03.690|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 12:24:03.691|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 12:24:03.691|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 12:24:03.700|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 12:24:03.700|Info|iconik_input|iconikIn|received 13 UniversalPaths from 'in' connector
+2025.11.13 12:24:03.702|Info|iconik_input|iconikIn|resolved 5 unique file paths from 'in' connector
+2025.11.13 12:24:04.606|Info|iconik_input|iconikIn|subpath for '000_tst0010_bg01_v0001.mov' -> 'XR001_250312'
+2025.11.13 12:24:08.880|Info|iconik_input|iconikIn|subpath for 'tst0020_cp01_v0001.mov' -> 'XR001_250312'
+2025.11.13 12:24:11.880|Info|iconik_input|iconikIn|subpath for 'tst0030_rf01_v0001.mov' -> 'XR001_250312'
+2025.11.13 12:24:14.793|Info|iconik_input|iconikIn|subpath for 'tst0010_bg01_v0002.mov' -> 'XR001_250313'
+2025.11.13 12:24:19.242|Info|iconik_input|iconikIn|subpath for 'tst0020_cp01_v0002.mov' -> 'XR001_250313'
+2025.11.13 12:24:22.357|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 12:24:22.358|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 12:25:03.700|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 12:25:03.701|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 12:25:03.701|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 12:25:03.728|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 12:25:03.729|Info|iconik_input|iconikIn|received 13 UniversalPaths from 'in' connector
+2025.11.13 12:25:03.731|Info|iconik_input|iconikIn|resolved 5 unique file paths from 'in' connector
+2025.11.13 12:25:04.570|Info|iconik_input|iconikIn|subpath for '000_tst0010_bg01_v0001.mov' -> 'XR001_250312'
+2025.11.13 12:25:05.374|Info|iconik_input|iconikIn|skipping '000_tst0010_bg01_v0001.mov' (already in collection a4ec5706-c08b-11f0-99ec-2ebf9ea7d74e)
+2025.11.13 12:25:05.375|Info|iconik_input|iconikIn|subpath for 'tst0020_cp01_v0001.mov' -> 'XR001_250312'
+2025.11.13 12:25:06.158|Info|iconik_input|iconikIn|skipping 'tst0020_cp01_v0001.mov' (already in collection a4ec5706-c08b-11f0-99ec-2ebf9ea7d74e)
+2025.11.13 12:25:06.159|Info|iconik_input|iconikIn|subpath for 'tst0030_rf01_v0001.mov' -> 'XR001_250312'
+2025.11.13 12:25:07.101|Info|iconik_input|iconikIn|skipping 'tst0030_rf01_v0001.mov' (already in collection a4ec5706-c08b-11f0-99ec-2ebf9ea7d74e)
+2025.11.13 12:25:07.101|Info|iconik_input|iconikIn|subpath for 'tst0010_bg01_v0002.mov' -> 'XR001_250313'
+2025.11.13 12:25:07.756|Info|iconik_input|iconikIn|skipping 'tst0010_bg01_v0002.mov' (already in collection ab0c3fc0-c08b-11f0-8491-7256e5944804)
+2025.11.13 12:25:07.756|Info|iconik_input|iconikIn|subpath for 'tst0020_cp01_v0002.mov' -> 'XR001_250313'
+2025.11.13 12:25:08.330|Info|iconik_input|iconikIn|skipping 'tst0020_cp01_v0002.mov' (already in collection ab0c3fc0-c08b-11f0-8491-7256e5944804)
+2025.11.13 12:25:08.330|Critical Error|iconik_input|iconikIn|no valid files were uploaded
+2025.11.13 12:25:08.330|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 12:25:08.333|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 12:28:11.034|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 12:28:11.034|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 12:28:11.034|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 12:28:11.035|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 12:28:11.035|Info|iconik_input|iconikIn|received 0 UniversalPaths from 'in' connector
+2025.11.13 12:28:11.035|Info|iconik_input|iconikIn|resolved 0 unique file paths from 'in' connector
+2025.11.13 12:28:11.035|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 12:28:11.035|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 12:28:11.035|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 12:28:26.693|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 12:28:26.693|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 12:28:26.693|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 12:28:26.700|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 12:28:26.700|Info|iconik_input|iconikIn|received 13 UniversalPaths from 'in' connector
+2025.11.13 12:28:26.703|Info|iconik_input|iconikIn|resolved 5 unique file paths from 'in' connector
+2025.11.13 12:28:27.632|Info|iconik_input|iconikIn|subpath for '000_tst0010_bg01_v0001.mov' -> 'XR001_250312'
+2025.11.13 12:28:31.870|Info|iconik_input|iconikIn|subpath for 'tst0020_cp01_v0001.mov' -> 'XR001_250312'
+2025.11.13 12:28:34.634|Info|iconik_input|iconikIn|subpath for 'tst0030_rf01_v0001.mov' -> 'XR001_250312'
+2025.11.13 12:28:37.284|Info|iconik_input|iconikIn|subpath for 'tst0010_bg01_v0002.mov' -> 'XR001_250313'
+2025.11.13 12:28:40.900|Info|iconik_input|iconikIn|subpath for 'tst0020_cp01_v0002.mov' -> 'XR001_250313'
+2025.11.13 12:28:43.708|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 12:28:43.709|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 13:06:15.576|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 13:06:15.579|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 13:06:15.579|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 13:06:15.618|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 13:06:15.619|Info|iconik_input|iconikIn|received 13 UniversalPaths from 'in' connector
+2025.11.13 13:06:15.623|Info|iconik_input|iconikIn|resolved 5 unique file paths from 'in' connector
+2025.11.13 13:06:16.487|Info|iconik_input|iconikIn|subpath for '000_tst0010_bg01_v0001.mov' -> '001'
+2025.11.13 13:06:20.853|Info|iconik_input|iconikIn|subpath for 'tst0020_cp01_v0001.mov' -> '001'
+2025.11.13 13:06:23.572|Info|iconik_input|iconikIn|subpath for 'tst0030_rf01_v0001.mov' -> '001'
+2025.11.13 13:06:26.760|Info|iconik_input|iconikIn|subpath for 'tst0010_bg01_v0002.mov' -> '002'
+2025.11.13 13:06:31.467|Info|iconik_input|iconikIn|subpath for 'tst0020_cp01_v0002.mov' -> '002'
+2025.11.13 13:06:34.558|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 13:06:34.560|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 13:14:07.700|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 13:14:07.700|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 13:14:07.700|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 13:14:07.722|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 13:14:10.005|Critical Error|iconik_input|iconikIn|iconik upload failed: name 's3_direct_put' is not defined
+2025.11.13 13:14:10.007|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 13:14:10.009|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 13:20:31.691|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 13:20:31.691|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 13:20:31.691|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 13:20:31.757|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 13:20:34.178|Critical Error|iconik_input|iconikIn|iconik upload failed: [Errno 21] Is a directory: '/Users/ed/Desktop/TIDY/INPUT/sub_folder/001'
+2025.11.13 13:20:34.179|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 13:20:34.180|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 13:27:45.724|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 13:27:45.725|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 13:27:45.725|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 13:27:45.758|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 13:29:30.637|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 13:29:30.638|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 13:45:06.717|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 13:45:06.717|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 13:45:06.717|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 13:45:06.744|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 13:47:06.103|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 13:47:06.105|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 14:00:11.724|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 14:00:11.725|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 14:00:11.725|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 14:00:11.751|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 14:00:44.841|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 14:00:44.843|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 14:02:40.724|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 14:02:40.725|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 14:02:40.725|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 14:02:40.753|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 14:03:10.980|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 14:03:10.980|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 14:06:42.727|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 14:06:42.727|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 14:06:42.727|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 14:06:42.817|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 14:22:26.745|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 14:22:26.748|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 14:22:26.749|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 14:22:26.835|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 14:33:13.208|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 14:33:13.211|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 14:35:19.705|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 14:35:19.706|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 14:35:19.706|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 14:35:19.804|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 14:47:42.429|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 14:47:42.438|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 15:00:01.683|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:00:01.684|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:00:01.684|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:00:01.773|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:07:53.529|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:07:53.535|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 15:08:03.677|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:08:03.677|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:08:03.677|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:08:03.703|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:12:22.585|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:12:22.586|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 15:37:11.683|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:37:11.685|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:37:11.685|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:37:11.692|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:39:37.755|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:39:37.758|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 15:40:06.687|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:40:06.687|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:40:06.687|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:40:06.758|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:44:10.889|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:44:10.892|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 15:44:54.250|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:44:54.251|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:44:54.251|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:44:54.252|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:44:54.253|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 15:44:54.253|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:44:54.253|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 15:45:07.710|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:45:07.711|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:45:07.711|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:45:07.726|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:47:37.705|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:47:37.706|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:47:37.706|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:47:37.731|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:47:52.920|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:47:52.922|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 15:48:11.481|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:48:11.481|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:48:11.481|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:48:11.482|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:48:11.482|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 15:48:11.482|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:48:11.483|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 15:48:34.704|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:48:34.705|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:48:34.705|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:48:34.726|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:48:48.517|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:48:48.518|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 15:50:49.704|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:50:49.706|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:50:49.706|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:50:49.741|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:51:04.398|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:51:04.400|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 15:55:14.702|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:55:14.703|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:55:14.703|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:55:14.742|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:55:46.438|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:55:46.440|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 15:57:10.703|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 15:57:10.704|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 15:57:10.704|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 15:57:10.775|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 15:58:40.645|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 15:58:40.649|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 16:21:09.724|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:21:09.724|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:21:09.724|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:21:09.785|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:25:15.730|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:25:15.732|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:25:15.732|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:25:15.808|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:26:42.288|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:26:42.291|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 16:26:52.736|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:26:52.737|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:26:52.737|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:26:52.769|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:27:02.855|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:27:02.860|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 16:34:59.734|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:34:59.734|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:34:59.734|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:34:59.754|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:35:24.256|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:35:24.265|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 16:35:59.741|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:35:59.745|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:35:59.745|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:35:59.820|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:37:40.446|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:37:40.450|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 16:42:25.976|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 16:42:25.977|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 16:42:25.978|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 16:42:25.978|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 16:42:25.978|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 16:42:25.978|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 16:42:25.978|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 16:42:25.979|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 16:42:27.624|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 16:42:27.625|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 16:42:27.625|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 16:42:27.625|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 16:42:52.301|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 16:43:05.663|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:43:05.664|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:43:05.664|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:43:05.665|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:43:05.666|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 16:43:05.666|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:43:05.666|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 16:43:24.745|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:43:24.746|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:43:24.746|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:43:24.748|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:43:27.418|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:43:27.420|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 16:44:16.744|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:44:16.744|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:44:16.744|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:44:16.747|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:44:19.386|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:44:19.388|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 16:45:17.989|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:45:17.990|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:45:17.990|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:45:17.992|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:45:17.992|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 16:45:17.992|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:45:17.993|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 16:45:34.746|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:45:34.747|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:45:34.747|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:45:34.753|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:45:37.460|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:45:37.462|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 16:46:03.750|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:46:03.751|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:46:03.751|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:46:03.775|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:47:01.039|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:47:01.042|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 16:48:34.062|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:48:34.063|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:48:34.063|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:48:34.065|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:48:34.066|Critical Error|iconik_input|iconikIn|no input files (connector or inputFolder)
+2025.11.13 16:48:34.066|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:48:34.067|Info|iconik_input|iconik_input|iconik_input: Workflow Failed
+2025.11.13 16:48:59.754|Info|iconik_input|iconik_input|iconik_input: Starting Workflow
+2025.11.13 16:48:59.757|Info|iconik_input|iconik_input|iconik_input Started
+2025.11.13 16:48:59.757|Info|iconik_input|iconik_input|Rendering Watcher
+2025.11.13 16:48:59.763|Info|iconik_input|iconik_input|Rendering iconikIn
+2025.11.13 16:49:24.292|Info|iconik_input|iconik_input|iconik_input Finished
+2025.11.13 16:49:24.295|Info|iconik_input|iconik_input|iconik_input: Workflow Successfully Finished
+2025.11.13 17:05:31.377|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 17:05:31.379|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 17:05:31.379|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 17:05:31.380|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 17:05:31.380|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 17:05:31.380|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required
+2025.11.13 17:05:31.380|Critical Error|iconik_input|iconikIn|APP_ID required
+2025.11.13 17:05:31.380|Critical Error|iconik_input|iconikIn|AUTH_TOKEN required

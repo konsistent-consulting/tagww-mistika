@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="Extract Ref Movie VFX">
+  <view y="-288.088" x="821.265" scale="0.232568"/>
+  <nodes>
+   <node type="input" class="File">
+    <properties>
+     <objectName type="string">EDL_VFX_base</objectName>
+     <color type="color">#458c65</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-540.465,-486.701</pos>
+     <schemaName type="string">file</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">.edl?format=[path][baseName][.ext]</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="a64ddc78-5ca2-46db-9ff7-0bb0efbf0adf"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="f83d6c1f-59ac-4c99-a8d1-f076c6ed5fb2"/>
+     <To type="output" name="To" id="4827e7db-911e-474b-9d3f-5522ba31f302">
+      <linkedTo>d030e2d8-20e6-4aa8-96b9-0c4497b20491</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node type="task" class="EDLReference">
+    <properties>
+     <objectName type="string">EDLReference</objectName>
+     <color type="color">#ccffe5</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">435.063,-473.063</pos>
+     <schemaName type="string">edlreference</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CnameConvention,CuniversalPath
+from mistikaTools import installModule
+import os
+import sys
+
+try:
+    import re
+except:
+    installModule("re")
+
+
+def init(self):
+    self.setClassName("EDL Reference")
+    self.addConnector("edl",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_REQUIRED)
+    self.addConnector("RefMovie", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_REQUIRED)
+    self.addConnector("edlRef",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("edlRefPath")
+    #self.setAcceptConnectors(True,"RefMovie")
+    self.bypassSupported=True
+    self.color=QColor(204,255,229)
+    return True
+
+def isReady(self):
+    res=True
+    if self.bypassSupported and self.bypassEnabled:
+        return res
+    if not self.edlRefPath:
+        res=self.critical("edl2VFXREF:edlRefPath:notFound","Destination Path can not be empty") and res
+    return res
+
+def process(self):
+
+    def processEDL (UPedl,UPRef,dstPath):
+        dstFiles=[]
+
+        edlFile=UPedl.getFiles()[0]
+        RefName=UPRef.getFileName()
+        # print(edlFile)
+        # print(RefName)
+        if not edlFile:
+            self.critical("edl2Reference:processEDL:notEDL","Unable to interpret input edl UP {}".format(UPedl.getFilePath()))
+            return [False,None,None]
+        if not RefName:
+            self.critical("edl2Reference:processEDL:notRefMovie","Unable to interpret input RefMovie UP {}".format(UPRef.getFilePath()))
+            return [False,None,None]
+
+
+        self.info("edl2Reference:processEDL:edlFile","processing {}".format(edlFile))
+        if edlFile.endswith('.edl'):
+            VFXName = []
+            edlMarkers = []
+            edlVFXLine = []
+
+            dstFile=dstPath+os.path.basename(RefName)[:-4]+'_RefVFXCut.edl'
+
+            try:
+                with open (edlFile) as f:
+                    for line in f:
+                        if line.startswith('0'):  ## Weak Condition to find tapename ID (000001  A099C003_220223NE) => should be a regex 0*[1-9]+ +[1-9A-Z\-\_]+ +V +C +[0-9]{2}:[0-9]{2}:[0-9]{2}
+                            VFXName = []
+                            eventDescription = line.strip(' \n')
+                            IDValue = line.split()[1]
+                            edlEvent = line.split()[0]
+                            srcTCin = line.split()[4]
+                            srcTCout = line.split()[5]
+                            recTCin = line.split()[6]
+                            recTCout = line.split()[7]
+
+                        if line.startswith('*LOC:'):
+                            locs = line.split()
+                            for loc in locs:
+                                vfxn = re.findall(vfxRegex, loc)
+                                if vfxn:
+                                    VFXName.append(edlEvent + ';' + vfxn[0] + ';' + srcTCin + ';' + srcTCout + ';' + recTCin + ';' + recTCout)
+                        else:
+                            continue
+
+                        if VFXName:
+                            edlMarkers.append(VFXName[0])
+                    f.close()
+
+                [edlVFXLine.append(x) for x in edlMarkers if x not in edlVFXLine]  ## REMOVE DUPLICATES IN LIST
+
+                if os.path.isfile(dstFile):
+                    os.remove(dstFile)
+
+                for i in edlMarkers:
+                    edlEvent = i.split(';')[0]
+                    VFXName = i.split(';')[1]
+                    srcTCin = i.split(';')[2]
+                    srcTCout = i.split(';')[3]
+                    recTCin = i.split(';')[4]
+                    recTCout = i.split(';')[5]
+
+
+                    gen_edl = (edlEvent + '  ' + RefName + '  V  C  ' + recTCin + ' ' + recTCout + ' ' + recTCin + ' ' + recTCout + ' ' + '\n' + '*LOC: ' + recTCin + ' GREEN'+'   ' + VFXName + ' \n')
+                    #  002  SGO_101_SEQ020_PULLVFX20230101_REFERENCE V     C        01:00:19:23 01:00:24:16 01:00:19:23 01:00:24:16
+                    # *LOC: 01:00:19:23 GREEN   SGO_101_020_0010
+
+                    with open(dstFile, 'a') as f:
+                        f.writelines('\n' + gen_edl)
+                    f.close()
+                dstFiles.append(dstFile)
+
+            except OSError:
+                self.critical("edl2Reference:processEDL:notFound","Error in ProcessEDL function {}".format(filename))
+                return [False,None,None]
+
+        return [True,dstFiles]
+
+    res=True
+
+    outConEDLref=self.getFirstConnectorByName("edlRef")
+    outConEDLref.clearUniversalPaths()
+
+    if self.bypassEnabled:
+        #this node leaves the outputs empty during bypass as the files are not generated
+        return True
+
+
+    vfxRegex=r'[a-zA-Z0-9]+_+[a-zA-Z0-9]+_+[a-zA-Z0-9]+_?+[a-zA-Z0-9]+_?+[a-zA-Z0-9]+'
+
+    edlInput=self.getFirstConnectorByName("edl")
+    RefInput=self.getFirstConnectorByName("RefMovie")
+    dstPath=self.evaluate(self.edlRefPath).strip()
+    if not os.path.exists(dstPath):
+        try:
+            os.makedirs(dstPath)
+        except OSError:
+            self.critical("edl2Reference:dstPath:notFound","Error creating dir".format(dstPath))
+
+
+    UPedl=edlInput.getUniversalPaths()[0]
+    UPRef=RefInput.getUniversalPaths()[0]
+
+
+    nc=CnameConvention(self.getNameConvention())
+    if not nc.toString():
+        nc=self.getWorkflow().getNameConvention()
+
+    [r,edlRef]=processEDL(UPedl,UPRef,dstPath)
+    res=res and r
+    if res:
+        if edlRef:
+            print (edlRef)
+            outUP=CuniversalPath(nc,edlRef[0])
+            outConEDLref.addUniversalPath(outUP)
+
+    return res
+
+
+
+
+</code>
+     <edlRefPath type="string">YOUR-OUTPUT-PATH/</edlRefPath>
+     <Mistika type="bool">true</Mistika>
+     <LOC type="string">GREEN</LOC>
+     <ShotNaming type="string">4</ShotNaming>
+     <MarkersColorMTK type="string">1</MarkersColorMTK>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="839f96c5-5603-4833-9e10-8c50e6dfa132"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="dff024b8-d794-462e-b6a8-76471a7c15d8"/>
+     <edl type="input" name="edl" id="d030e2d8-20e6-4aa8-96b9-0c4497b20491">
+      <linkedTo>4827e7db-911e-474b-9d3f-5522ba31f302</linkedTo>
+     </edl>
+     <RefMovie type="input" name="RefMovie" id="b47da819-7e0f-422e-b38c-1bfbedb34339">
+      <linkedTo>fd95f8fc-cf10-4322-a3ec-a0617be632aa</linkedTo>
+     </RefMovie>
+     <edlRef type="output" name="edlRef" id="faded514-751e-44c1-918c-5b5158990d2e">
+      <linkedTo>f632842d-acc7-4763-a10b-0fa7585dde25</linkedTo>
+     </edlRef>
+    </connections>
+   </node>
+   <node type="task" class="ConformFilter">
+    <properties>
+     <objectName type="string">ConformFilter</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1148.46,-274.98</pos>
+     <schemaName type="string">conformfilter</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <comparePath type="bool">false</comparePath>
+     <compareExtension type="bool">false</compareExtension>
+     <numChars type="int">0</numChars>
+     <ignoreFirst type="int">0</ignoreFirst>
+     <ignoreLast type="int">0</ignoreLast>
+     <defaultFps type="float">25</defaultFps>
+     <nameSource type="int">0</nameSource>
+     <handlers type="int">0</handlers>
+     <noTrim type="bool">false</noTrim>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="b20b75fd-81a6-4d86-87f5-3209006dcb1c"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="f27248d4-803d-4fe0-a130-0f12f365033f"/>
+     <edl type="input" name="edl" label="EDL/XML/AAF" id="f632842d-acc7-4763-a10b-0fa7585dde25">
+      <linkedTo>faded514-751e-44c1-918c-5b5158990d2e</linkedTo>
+     </edl>
+     <in type="input" name="in" id="b8c14ccb-ea03-4595-824d-27ce23239c8d">
+      <linkedTo>fd95f8fc-cf10-4322-a3ec-a0617be632aa</linkedTo>
+     </in>
+     <included type="output" name="included" id="9adc7902-c119-4e3b-b95c-5a539fa01472">
+      <linkedTo>08ce1ebd-54df-40ab-9f0f-719a56897c19</linkedTo>
+     </included>
+     <excluded type="output" name="excluded" id="ce4602d7-9d05-40c6-b3d0-addc79b96388"/>
+    </connections>
+   </node>
+   <node type="task" class="ProRes">
+    <properties>
+     <objectName type="string">ProRes</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1654.37,-275.245</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">YOUR-OUTPUT-PATH/[markGreen]_reference[.ext]</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES_LT</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">1920</imageResX>
+     <imageResY type="int">1080</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">HD 1080 (1920x1080)</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+     <pixelAspectRatio type="string">0</pixelAspectRatio>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="146080c9-4018-4cdb-b382-6184d1ea4903"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="005b2a0a-9a1d-4726-8384-5c3d2eba60ce"/>
+     <VideoOut type="output" name="VideoOut" label="AV Out" id="12d14198-8eca-4dad-8572-818ff817b190"/>
+     <AudioOut type="output" name="AudioOut" label="Ext. Audio" visible="0" id="ee624473-bd12-467f-ae6b-d8e0b22c8588"/>
+     <VideoIn type="input" name="VideoIn" label="AV In" id="08ce1ebd-54df-40ab-9f0f-719a56897c19">
+      <linkedTo>9adc7902-c119-4e3b-b95c-5a539fa01472</linkedTo>
+     </VideoIn>
+     <AudioIn type="input" name="AudioIn" label="Ext. Audio" id="455b0685-f3c2-40dc-bc08-1421eb2f33c0"/>
+    </connections>
+   </node>
+   <node type="input" class="MediaMovie">
+    <properties>
+     <objectName type="string">MediaMovie</objectName>
+     <color type="color">#0000ff</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-425.088,-283.392</pos>
+     <schemaName type="string">mediamovie</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">false</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Rec709:Gamma 2 4</uniColorValue>
+     <gamma type="string">Gamma 2 4</gamma>
+     <gamut type="string">Rec709</gamut>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="d6ab84a2-6783-4f96-9cd2-74fff38aee06"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="76ec8cd9-02d0-49b5-b3c3-869cf8045adc"/>
+     <VideoOut type="output" name="VideoOut" label="AV Out" id="fd95f8fc-cf10-4322-a3ec-a0617be632aa">
+      <linkedTo>b47da819-7e0f-422e-b38c-1bfbedb34339</linkedTo>
+      <linkedTo>b8c14ccb-ea03-4595-824d-27ce23239c8d</linkedTo>
+     </VideoOut>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-552.038,-747.347</ScenePos>
+     <Size type="size2">245,37</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Extract Ref Movie VFX</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-549.792,-701.44</ScenePos>
+     <Size type="size2">1853,39</Size>
+     <TextSize type="float">19.46477699279785</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">In this workflow we cut the reference movie for a whole sequence of VFX, and each VFX reference is rendered as an independent clip with the same VFX name</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-554.4,-527.04</ScenePos>
+     <Size type="size2">628.992,415.008</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Inputs</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff0e6d72</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-531.072,-372.832</ScenePos>
+     <Size type="size2">566,77</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">single EDL (normally base vfx plates video track) with 
+VFX Naming Information in its markers
+ -> Only Avid/Premiere/Mistika markers format is accepted (* LOC)</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-537.84,-658.192</ScenePos>
+     <Size type="size2">1497,31</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">NOTE: It is mandatory that the timecode of the whole sequence ref movie matches the REC TC info in the EDL with the VFX edit information, otherwise this workflow won't work </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-438.048,-164.32</ScenePos>
+     <Size type="size2">272,31</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">VFX sequence Reference movie</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">1075.11,-338.701</ScenePos>
+     <Size type="size2">404.4,320.28</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">RefMovie Cut</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff8e6386</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1125.95,-151.509</ScenePos>
+     <Size type="size2">283,77</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">- Set EDL fps
+- Match Ref Movie by TapeName
+- No handles added  </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">1543.88,-336.105</ScenePos>
+     <Size type="size2">772.552,318.6</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">ProResLT Transcode</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">8</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1569.96,-135.398</ScenePos>
+     <Size type="size2">707,100</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">- Green Marker token is used to name the extracted VFX shot reference movie
+- Codec set to ProResLT with embedded audio
+- Resolution set to 1920x1080
+- No Color Management (so it keeps the same as the source reference movie input)</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">9</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">178.721,-520.789</ScenePos>
+     <Size type="size2">748.744,319.512</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">EDL to cut RefMovie</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">10</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">216,-328.48</ScenePos>
+     <Size type="size2">706,123</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">- Gets the RefMovie file name and places it in the tapename of every edl event
+- Gets the RecTC information and places it as SrcTC for all events
+- Keeps the VFX name information in the desired color marker
+- RegEx available to match VFX naming in the marker information
+- Generates an EDL in order to conform the RefMovie with the VFX edit information</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">11</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

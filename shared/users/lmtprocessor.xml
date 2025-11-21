@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <LMTProcessor>
+    <Copy>true</Copy>
+    <MarkersOptions>
+      <GetLUTFromComment>false</GetLUTFromComment>
+      <GetLUTFromMarker>true</GetLUTFromMarker>
+    </MarkersOptions>
+    <Move>false</Move>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <TargetLUTsFolder/>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#af286e</color>
+    <objectName>LMTProcessor</objectName>
+    <overwrite>true</overwrite>
+  </LMTProcessor>
+</nodeCommonRoot>

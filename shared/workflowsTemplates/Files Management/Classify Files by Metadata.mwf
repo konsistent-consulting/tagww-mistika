@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="Classify Files by Metadata">
+  <view scale="0.578704" y="32.832" x="539.136"/>
+  <nodes>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-179.053,-172.264</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="0ebe0bb0-af3e-4a42-9427-754e5737b849"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="c8654cde-a5bc-48e7-b245-06a57a525cc9"/>
+     <Files type="output" name="Files" id="68548a30-a4ef-4b82-a810-441e629c0bb8">
+      <linkedTo>4d11c607-d5ca-4bb4-a6d3-b5847838c454</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="ClassifyByExtension" type="task">
+    <properties>
+     <objectName type="string">ClassifyByExtension</objectName>
+     <color type="color">#00b4b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">162.547,-197.664</pos>
+     <schemaName type="string">classifybyextension</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor&#xd;
+from Mistika.classes import Cconnector&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Classify By Extension")&#xd;
+    self.color=QColor(0x677688)&#xd;
+# creating properties&#xd;
+    self.addProperty("errorMode",0)&#xd;
+    self.addProperty("filterMode", 0)&#xd;
+    self.addProperty("caseSensitive", False)&#xd;
+    self.addProperty("extensions","mov,mxf,mp4,j2k,r3d,rnd")&#xd;
+#creating connectors&#xd;
+    self.addConnector("files",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_REQUIRED)&#xd;
+    extList=self.extensions.split(",")&#xd;
+    if not self.caseSensitive:&#xd;
+        extList=self.extensions.lower().split(",")&#xd;
+    for ext in extList:&#xd;
+        self.addConnector(ext.strip(),Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("other",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.setAcceptConnectors(True,"files")&#xd;
+#configuring the node&#xd;
+    self.bypassSupported=True&#xd;
+    self.color=QColor(0,180,180)&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res=True&#xd;
+    if int(self.errorMode)&lt;0 or int(self.errorMode)>3:&#xd;
+        res=self.critical("filesSplitter:isReady","Invalid errorMode {}".format(self.errorMode),"errorMode") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    #And finally, Do the thing here!&#xd;
+    res=True&#xd;
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    outputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_OUTPUT)&#xd;
+    caseSensitive = self.caseSensitive &#xd;
+    extensions = self.extensions&#xd;
+    filterMode = int(self.filterMode)&#xd;
+&#xd;
+    for c in outputs:&#xd;
+      c.clearUniversalPaths()&#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+    for c in inputs:                                 &#xd;
+        for up in c.getUniversalPaths():&#xd;
+            if self.isCancelled():&#xd;
+                return False&#xd;
+  &#xd;
+            ext=up.getExtension()&#xd;
+&#xd;
+            if not caseSensitive:&#xd;
+                ext = ext.lower()&#xd;
+            &#xd;
+            classified = False&#xd;
+            if caseSensitive:&#xd;
+                extList=self.extensions.replace(" ","").split(",")&#xd;
+            else:&#xd;
+                extList=list(set(self.extensions.lower().replace(" ","").split(",")))&#xd;
+&#xd;
+            for case in extList:&#xd;
+                out = None&#xd;
+ &#xd;
+                if (filterMode == 0 and ext == case) or (filterMode == 1 and ext.startswith(case)) or (filterMode == 2 and case in ext) or (filterMode== 3 and ext.endswith(case)):&#xd;
+                    out=self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, case)&#xd;
+                &#xd;
+                if out:&#xd;
+                    self.info("filesClassifier:process:info","sending {} to {}".format(up.getFileName(),case),"")&#xd;
+                    classified = True&#xd;
+                    out.addUniversalPath(up)&#xd;
+&#xd;
+            if not classified:&#xd;
+                func=[None,self.info,self.warning,self.critical][int(self.errorMode)]&#xd;
+                if func:&#xd;
+                    if func == self.critical:&#xd;
+                        self.addFailedUP(up)&#xd;
+                    res=func("filesClassifier:process:ext","The extension {} could not be classified".format(ext),"") and res&#xd;
+                out = self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, "other")&#xd;
+                out.addUniversalPath(up)&#xd;
+&#xd;
+    return res&#xd;
+&#xd;
+def  onPropertyUpdated(self,name):&#xd;
+    if name=="extensions":&#xd;
+        self.rebuild()&#xd;
+    if name=="caseSensitive":&#xd;
+        self.rebuild()&#xd;
+</code>
+     <errorMode type="int">0</errorMode>
+     <filterMode type="int">0</filterMode>
+     <caseSensitive type="bool">false</caseSensitive>
+     <extensions type="string">mov,mxf,exr</extensions>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="3b802806-a080-4d80-a7d3-9a51a8a29d5e"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="56373cb7-5350-4f49-9c1b-83c75070ce31"/>
+     <files type="input" name="files" id="4d11c607-d5ca-4bb4-a6d3-b5847838c454">
+      <linkedTo>68548a30-a4ef-4b82-a810-441e629c0bb8</linkedTo>
+     </files>
+     <mov type="output" name="mov" id="c7407e76-76a7-45a7-99f4-6c84bc7f8b97">
+      <linkedTo>0efac030-9843-4333-9500-6ceababab03c</linkedTo>
+     </mov>
+     <mxf type="output" name="mxf" id="ab8468c4-919b-4a44-90c8-cbf7bcbb3863">
+      <linkedTo>662a11e0-679e-4034-9cfd-7da80afce223</linkedTo>
+     </mxf>
+     <exr type="output" name="exr" id="7f077e26-71bc-4e95-8af1-8a4850632900">
+      <linkedTo>94a26c3f-100b-436b-9ac8-a1a58423963d</linkedTo>
+     </exr>
+     <other type="output" name="other" id="f8d42c77-2e05-4909-8a85-b9216b7a23d0"/>
+    </connections>
+   </node>
+   <node class="Move" type="task">
+    <properties>
+     <objectName type="string">Move</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">554.947,-316.464</pos>
+     <schemaName type="string">move</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/mov/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="67a94bfa-a213-4122-a3fd-7c24f4766480"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="d653f889-ee75-4978-bfee-cc595768dd90"/>
+     <File type="input" name="File" id="0efac030-9843-4333-9500-6ceababab03c">
+      <linkedTo>c7407e76-76a7-45a7-99f4-6c84bc7f8b97</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="ee52ac9d-b35a-489c-96d1-ac22f7214cd3"/>
+    </connections>
+   </node>
+   <node class="Move" type="task">
+    <properties>
+     <objectName type="string">Move</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">559.747,-32.064</pos>
+     <schemaName type="string">move</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/exr/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="fe22dd29-95b1-4aa2-8226-5320f0f9e492"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="d068289f-f1dc-4271-8fac-da318903f954"/>
+     <File type="input" name="File" id="94a26c3f-100b-436b-9ac8-a1a58423963d">
+      <linkedTo>7f077e26-71bc-4e95-8af1-8a4850632900</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="946f5722-593a-4fcf-94ce-b021c043a921"/>
+    </connections>
+   </node>
+   <node class="Move" type="task">
+    <properties>
+     <objectName type="string">Move</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">558.547,-182.064</pos>
+     <schemaName type="string">move</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/mxf/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="e143054c-c899-4482-a6da-9ed8eb6aff91"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="23260236-a59b-43a7-b7f3-48d80c992069"/>
+     <File type="input" name="File" id="662a11e0-679e-4034-9cfd-7da80afce223">
+      <linkedTo>ab8468c4-919b-4a44-90c8-cbf7bcbb3863</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="77b7f9c6-466e-418d-bfe7-4ec2e9fbb007"/>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1017.27,-120.856</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="780e23a8-865d-4bc1-bcb6-0cafe806b13b"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="7170267c-d1fa-456f-94c2-58ec2abc5cf3"/>
+     <Files type="output" name="Files" id="2bef6851-d9a4-4231-b575-747356a02ac5">
+      <linkedTo>debb30e0-abcc-4fa9-99ad-b77477dc003c</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="ClassifyByMetadata" type="task">
+    <properties>
+     <objectName type="string">ClassifyByMetadata</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1364.35,-165.888</pos>
+     <schemaName type="string">classifybymetadata</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from logging import critical&#xd;
+from Mistika.Qt import QColor&#xd;
+from Mistika.classes import Cconnector,CnameConvention,CuniversalPath&#xd;
+import Mistika&#xd;
+import json&#xd;
+import os&#xd;
+&#xd;
+CLASSIFYBYMETADATA_PRESETS_JSON = "/classifyByMetadata/presets.json"&#xd;
+CLASSIFYBYMETADATA_PRESETS_JSON_EXAMPLE = "{\"presets\": [[\"custom\", \"value0, value1, value2, value3\"], [\"fps\", \"23.98, 24.00, 25.00, 29.97, 30.00, 60.00, 120.00\"], [\"resolution\", \"1920X1080, 2048X1080, 2048X1536, 2048X1556, 3840X2160, 4096X2160, 7680X4320\"]]}"&#xd;
+&#xd;
+class CmetadataAssistant:&#xd;
+    def __init__(self,node):      &#xd;
+        self.m_node=node       &#xd;
+        self.m_cosmeticName={'default':self.cosmeticNameDefault,'Fps':self.cosmeticNameFPS} #define conversion cosmetic here&#xd;
+    &#xd;
+    def getMetadataValue(self, up, name):&#xd;
+        mfid=up.getMediaFileInfoData()&#xd;
+        if mfid.dataTree() == {}:&#xd;
+            up.readMetadataFromFile()&#xd;
+            mfid=up.getMediaFileInfoData()&#xd;
+&#xd;
+        res = mfid.getStringKeyValue(mfid.endsStringKeyToMediaDataFieldStringKey(name))&#xd;
+        if res == None: return None&#xd;
+&#xd;
+        if name in self.m_cosmeticName:&#xd;
+            res=self.m_cosmeticName[name](res) &#xd;
+        else:&#xd;
+            res=self.m_cosmeticName['default'](res) &#xd;
+        return res&#xd;
+        &#xd;
+    def cosmeticNameDefault(self, value):&#xd;
+        return value&#xd;
+&#xd;
+    def cosmeticNameFPS(self, value):&#xd;
+        roundedValue = str(round(value, 2)) # keep 2 decimals (rounded)&#xd;
+        return roundedValue&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Classify By Metadata")&#xd;
+    jsonPath = Mistika.sgoPaths.workflowsLibrary() + CLASSIFYBYMETADATA_PRESETS_JSON&#xd;
+    try:&#xd;
+        f = open(jsonPath)&#xd;
+        self.addProperty("jsonString", f.read())&#xd;
+    except Exception:&#xd;
+        self.addProperty("jsonString", CLASSIFYBYMETADATA_PRESETS_JSON_EXAMPLE)&#xd;
+    self.addProperty("presets",json.loads(self.jsonString)["presets"])&#xd;
+    self.addProperty("caseSensitive", True)&#xd;
+    self.addProperty("filterMode", 0)&#xd;
+    self.addProperty("errorMode",0)&#xd;
+&#xd;
+    self.addProperty("dataType")&#xd;
+    self.addProperty("outputList")&#xd;
+&#xd;
+    self.addProperty("preset", 0)&#xd;
+    #creating connectors&#xd;
+    self.addConnector("files",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_REQUIRED)&#xd;
+    self.addConnector("notFound",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("other",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    &#xd;
+    extList=self.outputList.split(",")&#xd;
+    if not self.caseSensitive:&#xd;
+        extList=self.outputList.lower().split(",")&#xd;
+    for ext in extList:&#xd;
+        self.addConnector(ext.strip(),Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.setAcceptConnectors(True,"files")&#xd;
+    #configuring the node&#xd;
+    self.bypassSupported=True&#xd;
+    self.color=QColor(0x677688)&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    dataType = self.evaluate(self.dataType).strip()&#xd;
+    outputList = self.evaluate(self.outputList).strip()&#xd;
+    if dataType == "":&#xd;
+        res = self.critical("classifyByMetadata:isReady", "'datatype' can not be empty") and res&#xd;
+    if outputList == "":&#xd;
+        res = self.critical("classifyByMetadata:isReady", "'outputList' can not be empty") and res   &#xd;
+    if int(self.errorMode)&lt;0 or int(self.errorMode)>3:&#xd;
+        res=self.critical("classifyByMetadata:isReady","Invalid errorMode {}".format(self.errorMode),"errorMode") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    res=True&#xd;
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    outputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_OUTPUT)&#xd;
+    dataType = self.evaluate(self.dataType).strip()&#xd;
+    caseSensitve = self.caseSensitive&#xd;
+    filterMode = int(self.filterMode)&#xd;
+    func=[None,self.info,self.warning,self.critical][int(self.errorMode)]&#xd;
+    &#xd;
+    for c in outputs:&#xd;
+      c.clearUniversalPaths()&#xd;
+    &#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+    &#xd;
+    for c in inputs:                                 &#xd;
+        for up in c.getUniversalPaths():&#xd;
+            if self.isCancelled():&#xd;
+                return False&#xd;
+     &#xd;
+            metadataAssistant=CmetadataAssistant(self)&#xd;
+            v=metadataAssistant.getMetadataValue(up, dataType)&#xd;
+&#xd;
+            print(v)&#xd;
+            if not caseSensitve and v is not None:&#xd;
+                v = str(v).lower()&#xd;
+        &#xd;
+            if v == None:&#xd;
+                if func:&#xd;
+                    res = func("classifyByMetadata:process:ext","'{}' is not a metadata value of '{}'. Sent to 'notFound'".format(dataType, up.getFileName()),"")&#xd;
+                out = self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, "notFound")&#xd;
+                out.addUniversalPath(up)&#xd;
+            else:&#xd;
+                classified = False&#xd;
+                if caseSensitve:&#xd;
+                    outputList=self.outputList.replace(" ","").split(",")&#xd;
+                else:&#xd;
+                    outputList=list(set(self.outputList.lower().replace(" ","").split(",")))&#xd;
+&#xd;
+                for case in outputList:&#xd;
+                    out = None&#xd;
+&#xd;
+                    if (filterMode == 0 and v == case) or (filterMode == 1 and v.startswith(case)) or (filterMode == 2 and case in v) or (filterMode== 3 and v.endswith(case)):&#xd;
+                        out=self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT,case)&#xd;
+&#xd;
+                    if out:&#xd;
+                        self.info("classifyByMetadata:process:info","sending '{}' to '{}'".format(up.getFileName(),case),"")&#xd;
+                        classified = True&#xd;
+                        out.addUniversalPath(up)&#xd;
+&#xd;
+                if not classified:&#xd;
+                    if func:&#xd;
+                        res=func("classifyByMetadata:process:ext","'{}' has '{}' of value '{}', not in output list. Sent to 'other'".format(up.getFileName(), dataType, v),"") and res&#xd;
+                    out = self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, "other")&#xd;
+                    out.addUniversalPath(up)&#xd;
+    return res&#xd;
+&#xd;
+def  onPropertyUpdated(self,name):&#xd;
+    if name=="preset":&#xd;
+        try:&#xd;
+            self.presets = json.loads(self.jsonString)["presets"]&#xd;
+            self.dataType = self.presets[int(self.preset)][0]&#xd;
+            self.outputList = self.presets[int(self.preset)][1]  &#xd;
+        except Exception:&#xd;
+            pass&#xd;
+&#xd;
+    if name =="outputList":&#xd;
+        try:&#xd;
+            self.preset="custom"&#xd;
+            self.rebuild()&#xd;
+        except Exception:&#xd;
+            pass    &#xd;
+        &#xd;
+    if name == "caseSensitive":&#xd;
+        self.rebuild()&#xd;
+        </code>
+     <jsonString type="string">{
+    "presets": [
+    ["custom", "value0, value1, value2, value3"], 
+    ["fps", "23.98, 24.00, 25.00, 29.97, 30.00, 60.00, 120.00"], 
+    ["resolution", "1920X1080, 2048X1080, 2048X1536, 2048X1556, 3840X2160, 4096X2160, 7680X4320"]
+    ]
+}</jsonString>
+     <presets type="QVariantList"></presets>
+     <caseSensitive type="bool">true</caseSensitive>
+     <filterMode type="string">2</filterMode>
+     <errorMode type="int">0</errorMode>
+     <dataType type="string">name</dataType>
+     <outputList type="string">Trailer, Teaser, Promo</outputList>
+     <preset type="string">custom</preset>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="b66bbac0-8a68-48fa-9bfa-c5a359e4c049"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="26240b62-9557-41d0-be13-24f5a7eecfc2"/>
+     <files type="input" name="files" id="debb30e0-abcc-4fa9-99ad-b77477dc003c">
+      <linkedTo>2bef6851-d9a4-4231-b575-747356a02ac5</linkedTo>
+     </files>
+     <notFound type="output" name="notFound" id="96a8b8a9-7c79-470e-9c4b-0a17e1dd1d09"/>
+     <other type="output" name="other" id="4836854e-b71a-4040-aa95-4cc4ea5fc663"/>
+     <Trailer type="output" name="Trailer" id="18c42c0c-9308-4e6b-8cf5-e0f625e64e40">
+      <linkedTo>b9c25428-d25d-4a03-81de-3281ad3f2e80</linkedTo>
+     </Trailer>
+     <Teaser type="output" name="Teaser" id="aa965b97-1d96-4adb-bdc0-c7e7baf35f0a">
+      <linkedTo>7b9ca8d8-b278-4278-89dd-05cafcbc0ddf</linkedTo>
+     </Teaser>
+     <Promo type="output" name="Promo" id="0283b100-7616-4236-b121-5cd06acd6338">
+      <linkedTo>063d5225-28f1-4ebe-b950-eb7fe18018aa</linkedTo>
+     </Promo>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-453.488,414.824</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="08ddcdc6-07f9-4236-a5d6-9626af877799"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="e1a55323-21aa-4eee-b932-f194a6649860"/>
+     <Files type="output" name="Files" id="3eabf06e-3639-4ebd-9eeb-0da6f81512cb">
+      <linkedTo>89e28d93-184b-4be9-8f82-dea9a863ae13</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="ClassifyByMetadata" type="task">
+    <properties>
+     <objectName type="string">ClassifyByMetadata</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-106.234,388.397</pos>
+     <schemaName type="string">classifybymetadata</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from logging import critical&#xd;
+from Mistika.Qt import QColor&#xd;
+from Mistika.classes import Cconnector,CnameConvention,CuniversalPath&#xd;
+import Mistika&#xd;
+import json&#xd;
+import os&#xd;
+&#xd;
+CLASSIFYBYMETADATA_PRESETS_JSON = "/classifyByMetadata/presets.json"&#xd;
+CLASSIFYBYMETADATA_PRESETS_JSON_EXAMPLE = "{\"presets\": [[\"custom\", \"value0, value1, value2, value3\"], [\"fps\", \"23.98, 24.00, 25.00, 29.97, 30.00, 60.00, 120.00\"], [\"resolution\", \"1920X1080, 2048X1080, 2048X1536, 2048X1556, 3840X2160, 4096X2160, 7680X4320\"]]}"&#xd;
+&#xd;
+class CmetadataAssistant:&#xd;
+    def __init__(self,node):      &#xd;
+        self.m_node=node       &#xd;
+        self.m_cosmeticName={'default':self.cosmeticNameDefault,'Fps':self.cosmeticNameFPS} #define conversion cosmetic here&#xd;
+    &#xd;
+    def getMetadataValue(self, up, name):&#xd;
+        mfid=up.getMediaFileInfoData()&#xd;
+        if mfid.dataTree() == {}:&#xd;
+            up.readMetadataFromFile()&#xd;
+            mfid=up.getMediaFileInfoData()&#xd;
+&#xd;
+        res = mfid.getStringKeyValue(mfid.endsStringKeyToMediaDataFieldStringKey(name))&#xd;
+        if res == None: return None&#xd;
+&#xd;
+        if name in self.m_cosmeticName:&#xd;
+            res=self.m_cosmeticName[name](res) &#xd;
+        else:&#xd;
+            res=self.m_cosmeticName['default'](res) &#xd;
+        return res&#xd;
+        &#xd;
+    def cosmeticNameDefault(self, value):&#xd;
+        return value&#xd;
+&#xd;
+    def cosmeticNameFPS(self, value):&#xd;
+        roundedValue = str(round(value, 2)) # keep 2 decimals (rounded)&#xd;
+        return roundedValue&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Classify By Metadata")&#xd;
+    jsonPath = Mistika.sgoPaths.workflowsLibrary() + CLASSIFYBYMETADATA_PRESETS_JSON&#xd;
+    try:&#xd;
+        f = open(jsonPath)&#xd;
+        self.addProperty("jsonString", f.read())&#xd;
+    except Exception:&#xd;
+        self.addProperty("jsonString", CLASSIFYBYMETADATA_PRESETS_JSON_EXAMPLE)&#xd;
+    self.addProperty("presets",json.loads(self.jsonString)["presets"])&#xd;
+    self.addProperty("caseSensitive", True)&#xd;
+    self.addProperty("filterMode", 0)&#xd;
+    self.addProperty("errorMode",0)&#xd;
+&#xd;
+    self.addProperty("dataType")&#xd;
+    self.addProperty("outputList")&#xd;
+&#xd;
+    self.addProperty("preset", 0)&#xd;
+    #creating connectors&#xd;
+    self.addConnector("files",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_REQUIRED)&#xd;
+    self.addConnector("notFound",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("other",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    &#xd;
+    extList=self.outputList.split(",")&#xd;
+    if not self.caseSensitive:&#xd;
+        extList=self.outputList.lower().split(",")&#xd;
+    for ext in extList:&#xd;
+        self.addConnector(ext.strip(),Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.setAcceptConnectors(True,"files")&#xd;
+    #configuring the node&#xd;
+    self.bypassSupported=True&#xd;
+    self.color=QColor(0x677688)&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    dataType = self.evaluate(self.dataType).strip()&#xd;
+    outputList = self.evaluate(self.outputList).strip()&#xd;
+    if dataType == "":&#xd;
+        res = self.critical("classifyByMetadata:isReady", "'datatype' can not be empty") and res&#xd;
+    if outputList == "":&#xd;
+        res = self.critical("classifyByMetadata:isReady", "'outputList' can not be empty") and res   &#xd;
+    if int(self.errorMode)&lt;0 or int(self.errorMode)>3:&#xd;
+        res=self.critical("classifyByMetadata:isReady","Invalid errorMode {}".format(self.errorMode),"errorMode") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    res=True&#xd;
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    outputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_OUTPUT)&#xd;
+    dataType = self.evaluate(self.dataType).strip()&#xd;
+    caseSensitve = self.caseSensitive&#xd;
+    filterMode = int(self.filterMode)&#xd;
+    func=[None,self.info,self.warning,self.critical][int(self.errorMode)]&#xd;
+    &#xd;
+    for c in outputs:&#xd;
+      c.clearUniversalPaths()&#xd;
+    &#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+    &#xd;
+    for c in inputs:                                 &#xd;
+        for up in c.getUniversalPaths():&#xd;
+            if self.isCancelled():&#xd;
+                return False&#xd;
+     &#xd;
+            metadataAssistant=CmetadataAssistant(self)&#xd;
+            v=metadataAssistant.getMetadataValue(up, dataType)&#xd;
+&#xd;
+            print(v)&#xd;
+            if not caseSensitve and v is not None:&#xd;
+                v = str(v).lower()&#xd;
+        &#xd;
+            if v == None:&#xd;
+                if func:&#xd;
+                    res = func("classifyByMetadata:process:ext","'{}' is not a metadata value of '{}'. Sent to 'notFound'".format(dataType, up.getFileName()),"")&#xd;
+                out = self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, "notFound")&#xd;
+                out.addUniversalPath(up)&#xd;
+            else:&#xd;
+                classified = False&#xd;
+                if caseSensitve:&#xd;
+                    outputList=self.outputList.replace(" ","").split(",")&#xd;
+                else:&#xd;
+                    outputList=list(set(self.outputList.lower().replace(" ","").split(",")))&#xd;
+&#xd;
+                for case in outputList:&#xd;
+                    out = None&#xd;
+&#xd;
+                    if (filterMode == 0 and v == case) or (filterMode == 1 and v.startswith(case)) or (filterMode == 2 and case in v) or (filterMode== 3 and v.endswith(case)):&#xd;
+                        out=self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT,case)&#xd;
+&#xd;
+                    if out:&#xd;
+                        self.info("classifyByMetadata:process:info","sending '{}' to '{}'".format(up.getFileName(),case),"")&#xd;
+                        classified = True&#xd;
+                        out.addUniversalPath(up)&#xd;
+&#xd;
+                if not classified:&#xd;
+                    if func:&#xd;
+                        res=func("classifyByMetadata:process:ext","'{}' has '{}' of value '{}', not in output list. Sent to 'other'".format(up.getFileName(), dataType, v),"") and res&#xd;
+                    out = self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, "other")&#xd;
+                    out.addUniversalPath(up)&#xd;
+    return res&#xd;
+&#xd;
+def  onPropertyUpdated(self,name):&#xd;
+    if name=="preset":&#xd;
+        try:&#xd;
+            self.presets = json.loads(self.jsonString)["presets"]&#xd;
+            self.dataType = self.presets[int(self.preset)][0]&#xd;
+            self.outputList = self.presets[int(self.preset)][1]  &#xd;
+        except Exception:&#xd;
+            pass&#xd;
+&#xd;
+    if name =="outputList":&#xd;
+        try:&#xd;
+            self.preset="custom"&#xd;
+            self.rebuild()&#xd;
+        except Exception:&#xd;
+            pass    &#xd;
+        &#xd;
+    if name == "caseSensitive":&#xd;
+        self.rebuild()&#xd;
+        </code>
+     <jsonString type="string">{
+    "presets": [
+    ["custom", "value0, value1, value2, value3"], 
+    ["fps", "23.98, 24.00, 25.00, 29.97, 30.00, 60.00, 120.00"], 
+    ["resolution", "1920X1080, 2048X1080, 2048X1536, 2048X1556, 3840X2160, 4096X2160, 7680X4320"]
+    ]
+}</jsonString>
+     <presets type="QVariantList"></presets>
+     <caseSensitive type="bool">true</caseSensitive>
+     <filterMode type="int">0</filterMode>
+     <errorMode type="int">0</errorMode>
+     <dataType type="string">resolution</dataType>
+     <outputList type="string">1920X1080, 3840X2160</outputList>
+     <preset type="string">custom</preset>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="6f6690b5-6076-4420-a055-62009643eb8b"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="06c12c58-0bb1-4c5a-abb4-fd2f55efd4b2"/>
+     <files type="input" name="files" id="89e28d93-184b-4be9-8f82-dea9a863ae13">
+      <linkedTo>3eabf06e-3639-4ebd-9eeb-0da6f81512cb</linkedTo>
+     </files>
+     <notFound type="output" name="notFound" id="e0bb211c-ff2a-47a2-8a21-bb7f63d55fe4"/>
+     <other type="output" name="other" id="3c5261a4-a812-4fd1-9316-4f2b76a2b3f7"/>
+     <n1920X1080 type="output" name="1920X1080" id="01daa769-9bb6-41ea-9338-0331cde39f2a">
+      <linkedTo>a56adf58-64b2-4a4f-acde-e103011477bb</linkedTo>
+     </n1920X1080>
+     <n3840X2160 type="output" name="3840X2160" id="85599f8a-5312-4647-9336-e927b9328bc4">
+      <linkedTo>652d4a7d-2136-42ed-92e0-83674a05e8a8</linkedTo>
+     </n3840X2160>
+    </connections>
+   </node>
+   <node class="Copy" type="task">
+    <properties>
+     <objectName type="string">Copy</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">240.893,342.797</pos>
+     <schemaName type="string">copy</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/HD1080/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="af47eff2-c727-4ed9-8010-9635b456e732"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="871c3bcb-11fe-455d-8aa8-7b924f75c9f4"/>
+     <File type="input" name="File" id="a56adf58-64b2-4a4f-acde-e103011477bb">
+      <linkedTo>01daa769-9bb6-41ea-9338-0331cde39f2a</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="c27593d0-851c-412d-8e73-bdeaac646bde"/>
+    </connections>
+   </node>
+   <node class="Copy" type="task">
+    <properties>
+     <objectName type="string">Copy</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">245.366,492.797</pos>
+     <schemaName type="string">copy</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/UHD/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="340a82ae-dda4-48f7-854c-87bb61ca7c0f"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="79f81c10-baa7-4ccd-8eae-3306d920875a"/>
+     <File type="input" name="File" id="652d4a7d-2136-42ed-92e0-83674a05e8a8">
+      <linkedTo>85599f8a-5312-4647-9336-e927b9328bc4</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="9355335b-ae75-4c6d-9113-9f5a8dbe6993"/>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-456.368,776.552</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="2b681292-6c5f-44f5-a9ed-a9d1642dda59"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="71a02836-58c7-4454-a96d-c658fbd6f924"/>
+     <Files type="output" name="Files" id="0c2ede35-8d13-4d9a-a737-6de483c4e1b2">
+      <linkedTo>4047a50f-65a5-4a89-ab51-5a52b691fcff</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="ClassifyByMetadata" type="task">
+    <properties>
+     <objectName type="string">ClassifyByMetadata</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-112.954,731.117</pos>
+     <schemaName type="string">classifybymetadata</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from logging import critical&#xd;
+from Mistika.Qt import QColor&#xd;
+from Mistika.classes import Cconnector,CnameConvention,CuniversalPath&#xd;
+import Mistika&#xd;
+import json&#xd;
+import os&#xd;
+&#xd;
+CLASSIFYBYMETADATA_PRESETS_JSON = "/classifyByMetadata/presets.json"&#xd;
+CLASSIFYBYMETADATA_PRESETS_JSON_EXAMPLE = "{\"presets\": [[\"custom\", \"value0, value1, value2, value3\"], [\"fps\", \"23.98, 24.00, 25.00, 29.97, 30.00, 60.00, 120.00\"], [\"resolution\", \"1920X1080, 2048X1080, 2048X1536, 2048X1556, 3840X2160, 4096X2160, 7680X4320\"]]}"&#xd;
+&#xd;
+class CmetadataAssistant:&#xd;
+    def __init__(self,node):      &#xd;
+        self.m_node=node       &#xd;
+        self.m_cosmeticName={'default':self.cosmeticNameDefault,'Fps':self.cosmeticNameFPS} #define conversion cosmetic here&#xd;
+    &#xd;
+    def getMetadataValue(self, up, name):&#xd;
+        mfid=up.getMediaFileInfoData()&#xd;
+        if mfid.dataTree() == {}:&#xd;
+            up.readMetadataFromFile()&#xd;
+            mfid=up.getMediaFileInfoData()&#xd;
+&#xd;
+        res = mfid.getStringKeyValue(mfid.endsStringKeyToMediaDataFieldStringKey(name))&#xd;
+        if res == None: return None&#xd;
+&#xd;
+        if name in self.m_cosmeticName:&#xd;
+            res=self.m_cosmeticName[name](res) &#xd;
+        else:&#xd;
+            res=self.m_cosmeticName['default'](res) &#xd;
+        return res&#xd;
+        &#xd;
+    def cosmeticNameDefault(self, value):&#xd;
+        return value&#xd;
+&#xd;
+    def cosmeticNameFPS(self, value):&#xd;
+        roundedValue = str(round(value, 2)) # keep 2 decimals (rounded)&#xd;
+        return roundedValue&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("Classify By Metadata")&#xd;
+    jsonPath = Mistika.sgoPaths.workflowsLibrary() + CLASSIFYBYMETADATA_PRESETS_JSON&#xd;
+    try:&#xd;
+        f = open(jsonPath)&#xd;
+        self.addProperty("jsonString", f.read())&#xd;
+    except Exception:&#xd;
+        self.addProperty("jsonString", CLASSIFYBYMETADATA_PRESETS_JSON_EXAMPLE)&#xd;
+    self.addProperty("presets",json.loads(self.jsonString)["presets"])&#xd;
+    self.addProperty("caseSensitive", True)&#xd;
+    self.addProperty("filterMode", 0)&#xd;
+    self.addProperty("errorMode",0)&#xd;
+&#xd;
+    self.addProperty("dataType")&#xd;
+    self.addProperty("outputList")&#xd;
+&#xd;
+    self.addProperty("preset", 0)&#xd;
+    #creating connectors&#xd;
+    self.addConnector("files",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_REQUIRED)&#xd;
+    self.addConnector("notFound",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("other",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    &#xd;
+    extList=self.outputList.split(",")&#xd;
+    if not self.caseSensitive:&#xd;
+        extList=self.outputList.lower().split(",")&#xd;
+    for ext in extList:&#xd;
+        self.addConnector(ext.strip(),Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.setAcceptConnectors(True,"files")&#xd;
+    #configuring the node&#xd;
+    self.bypassSupported=True&#xd;
+    self.color=QColor(0x677688)&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    dataType = self.evaluate(self.dataType).strip()&#xd;
+    outputList = self.evaluate(self.outputList).strip()&#xd;
+    if dataType == "":&#xd;
+        res = self.critical("classifyByMetadata:isReady", "'datatype' can not be empty") and res&#xd;
+    if outputList == "":&#xd;
+        res = self.critical("classifyByMetadata:isReady", "'outputList' can not be empty") and res   &#xd;
+    if int(self.errorMode)&lt;0 or int(self.errorMode)>3:&#xd;
+        res=self.critical("classifyByMetadata:isReady","Invalid errorMode {}".format(self.errorMode),"errorMode") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    res=True&#xd;
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    outputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_OUTPUT)&#xd;
+    dataType = self.evaluate(self.dataType).strip()&#xd;
+    caseSensitve = self.caseSensitive&#xd;
+    filterMode = int(self.filterMode)&#xd;
+    func=[None,self.info,self.warning,self.critical][int(self.errorMode)]&#xd;
+    &#xd;
+    for c in outputs:&#xd;
+      c.clearUniversalPaths()&#xd;
+    &#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+    &#xd;
+    for c in inputs:                                 &#xd;
+        for up in c.getUniversalPaths():&#xd;
+            if self.isCancelled():&#xd;
+                return False&#xd;
+     &#xd;
+            metadataAssistant=CmetadataAssistant(self)&#xd;
+            v=metadataAssistant.getMetadataValue(up, dataType)&#xd;
+&#xd;
+            print(v)&#xd;
+            if not caseSensitve and v is not None:&#xd;
+                v = str(v).lower()&#xd;
+        &#xd;
+            if v == None:&#xd;
+                if func:&#xd;
+                    res = func("classifyByMetadata:process:ext","'{}' is not a metadata value of '{}'. Sent to 'notFound'".format(dataType, up.getFileName()),"")&#xd;
+                out = self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, "notFound")&#xd;
+                out.addUniversalPath(up)&#xd;
+            else:&#xd;
+                classified = False&#xd;
+                if caseSensitve:&#xd;
+                    outputList=self.outputList.replace(" ","").split(",")&#xd;
+                else:&#xd;
+                    outputList=list(set(self.outputList.lower().replace(" ","").split(",")))&#xd;
+&#xd;
+                for case in outputList:&#xd;
+                    out = None&#xd;
+&#xd;
+                    if (filterMode == 0 and v == case) or (filterMode == 1 and v.startswith(case)) or (filterMode == 2 and case in v) or (filterMode== 3 and v.endswith(case)):&#xd;
+                        out=self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT,case)&#xd;
+&#xd;
+                    if out:&#xd;
+                        self.info("classifyByMetadata:process:info","sending '{}' to '{}'".format(up.getFileName(),case),"")&#xd;
+                        classified = True&#xd;
+                        out.addUniversalPath(up)&#xd;
+&#xd;
+                if not classified:&#xd;
+                    if func:&#xd;
+                        res=func("classifyByMetadata:process:ext","'{}' has '{}' of value '{}', not in output list. Sent to 'other'".format(up.getFileName(), dataType, v),"") and res&#xd;
+                    out = self.getFirstConnectorByType(Cconnector.CONNECTOR_TYPE_OUTPUT, "other")&#xd;
+                    out.addUniversalPath(up)&#xd;
+    return res&#xd;
+&#xd;
+def  onPropertyUpdated(self,name):&#xd;
+    if name=="preset":&#xd;
+        try:&#xd;
+            self.presets = json.loads(self.jsonString)["presets"]&#xd;
+            self.dataType = self.presets[int(self.preset)][0]&#xd;
+            self.outputList = self.presets[int(self.preset)][1]  &#xd;
+        except Exception:&#xd;
+            pass&#xd;
+&#xd;
+    if name =="outputList":&#xd;
+        try:&#xd;
+            self.preset="custom"&#xd;
+            self.rebuild()&#xd;
+        except Exception:&#xd;
+            pass    &#xd;
+        &#xd;
+    if name == "caseSensitive":&#xd;
+        self.rebuild()&#xd;
+        </code>
+     <jsonString type="string">{
+    "presets": [
+    ["custom", "value0, value1, value2, value3"], 
+    ["fps", "23.98, 24.00, 25.00, 29.97, 30.00, 60.00, 120.00"], 
+    ["resolution", "1920X1080, 2048X1080, 2048X1536, 2048X1556, 3840X2160, 4096X2160, 7680X4320"]
+    ]
+}</jsonString>
+     <presets type="QVariantList"></presets>
+     <caseSensitive type="bool">true</caseSensitive>
+     <filterMode type="int">0</filterMode>
+     <errorMode type="int">0</errorMode>
+     <dataType type="string">fps</dataType>
+     <outputList type="string">24.00, 30.00, 60.00</outputList>
+     <preset type="string">custom</preset>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="0f277b96-ec0b-42c3-bcdf-e9db96504b1d"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="5b53cc27-cd92-43d7-b271-7e834d552ccd"/>
+     <files type="input" name="files" id="4047a50f-65a5-4a89-ab51-5a52b691fcff">
+      <linkedTo>0c2ede35-8d13-4d9a-a737-6de483c4e1b2</linkedTo>
+     </files>
+     <notFound type="output" name="notFound" id="bfd25d6d-5d2c-4583-8844-fd0e6efd33cf"/>
+     <other type="output" name="other" id="6aee6d5e-60b2-4f04-8d76-5b7d1cb97586"/>
+     <n2400 type="output" name="24.00" id="7fe6f977-5437-4352-b491-ab9e25e5d78c">
+      <linkedTo>f4bcdc0e-ab58-485e-bd1b-0f3ee86c8775</linkedTo>
+     </n2400>
+     <n3000 type="output" name="30.00" id="00350b66-a63f-4f2a-ad62-4a2a3ed0625c">
+      <linkedTo>3a91f823-3b96-456e-a40e-0a9c23691c03</linkedTo>
+     </n3000>
+     <n6000 type="output" name="60.00" id="c0084f37-dd1a-4519-a647-924bc427ca44">
+      <linkedTo>0ac87567-7b68-4519-a10b-85ae04128166</linkedTo>
+     </n6000>
+    </connections>
+   </node>
+   <node class="YouTube" type="output">
+    <properties>
+     <objectName type="string">YouTube</objectName>
+     <color type="color">#aa1512</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">579.686,769.997</pos>
+     <schemaName type="string">youtube</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">import mimetypes&#xd;
+import http.client&#xd;
+import httplib2&#xd;
+import random&#xd;
+import time&#xd;
+from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+&#xd;
+from apiclient.errors import HttpError&#xd;
+from apiclient.http import MediaFileUpload&#xd;
+from googleAuth import GoogleAuth&#xd;
+import json&#xd;
+            &#xd;
+class YouTubeTools:&#xd;
+    def __init__(self, node):&#xd;
+        self.m_node = node&#xd;
+&#xd;
+    # Explicitly tell the underlying HTTP transport library not to retry, since&#xd;
+    # we are handling retry logic ourselves.&#xd;
+    httplib2.RETRIES = 1&#xd;
+    # Maximum number of times to retry before giving up.&#xd;
+    MAX_RETRIES = 5&#xd;
+    # Always retry when these exceptions are raised.&#xd;
+    RETRIABLE_EXCEPTIONS = (httplib2.HttpLib2Error, IOError, http.client.NotConnected,&#xd;
+        http.client.IncompleteRead, http.client.ImproperConnectionState,&#xd;
+        http.client.CannotSendRequest, http.client.CannotSendHeader,&#xd;
+        http.client.ResponseNotReady, http.client.BadStatusLine)&#xd;
+    # Always retry when an apiclient.errors.HttpError with one of these status&#xd;
+    # codes is raised.&#xd;
+    RETRIABLE_STATUS_CODES = [500, 502, 503, 504]&#xd;
+        &#xd;
+    def initialize_upload(self, youtube, f, title, description, category, keywords, privacyStatus):&#xd;
+        tags = None&#xd;
+        if keywords:&#xd;
+            tags = keywords.split(",")&#xd;
+&#xd;
+        body=dict(&#xd;
+            snippet=dict(title=title, description=description, tags=tags, categoryId=category),&#xd;
+            status=dict(privacyStatus=privacyStatus)&#xd;
+        )&#xd;
+&#xd;
+        # Call the API's videos.insert method to create and upload the video.&#xd;
+        insert_request = youtube.videos().insert(&#xd;
+            part=",".join(list(body.keys())),&#xd;
+            body=body,&#xd;
+            media_body=MediaFileUpload(f, chunksize= -1, resumable=True)&#xd;
+        )&#xd;
+&#xd;
+        self.resumable_upload(insert_request)&#xd;
+&#xd;
+    # This method implements an exponential backoff strategy to resume a failed upload.&#xd;
+    def resumable_upload(self, insert_request):&#xd;
+        response = None&#xd;
+        error = None&#xd;
+        retry = 0&#xd;
+        while response is None:&#xd;
+            try:&#xd;
+                self.m_node.info("youtube:uploading", "Uploading file...")&#xd;
+                status, response = insert_request.next_chunk()&#xd;
+                if response is not None:&#xd;
+                    if 'id' in response:&#xd;
+                        self.m_node.info("youtube:uploaded", "Video id '%s' was successfully uploaded." % response['id'])&#xd;
+                    else:&#xd;
+                        return self.m_node.critical("youtube:uploadFailed", "The upload failed with an unexpected response: %s" % response)&#xd;
+            except HttpError as e:&#xd;
+                if e.resp.status in self.RETRIABLE_STATUS_CODES:&#xd;
+                    error = "A retriable HTTP error %d occurred:\n%s" % (e.resp.status, e.content)&#xd;
+                else:&#xd;
+                    raise&#xd;
+            except self.RETRIABLE_EXCEPTIONS as e:&#xd;
+                error = "A retriable error occurred: %s" % e&#xd;
+&#xd;
+                if error is not None:&#xd;
+                    self.m_node.warning("youtube:error", error) &#xd;
+                    retry += 1&#xd;
+                    if retry > self.MAX_RETRIES:&#xd;
+                        return self.m_node.critical("youtube:cnoRetriesLeft", "No longer attempting to retry.")&#xd;
+&#xd;
+                    max_sleep = 2 ** retry&#xd;
+                    sleep_seconds = random.random() * max_sleep&#xd;
+                    self.m_node.warning("youtube:clientId", "Sleeping %f seconds and then retrying..." % sleep_seconds)&#xd;
+                    time.sleep(sleep_seconds)&#xd;
+    &#xd;
+    def checkIfFileIsVideo(self, file):      &#xd;
+        return str(mimetypes.guess_type(file)[0]).startswith('video')&#xd;
+&#xd;
+def init(self):&#xd;
+    self.color = QColor(0xAA1512)&#xd;
+    self.addConnector("in", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addConnector("out", Cconnector.CONNECTOR_TYPE_OUTPUT, Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("TermsOfServices", "&lt;a href=\"https://www.youtube.com/t/terms\">'YouTube's Terms of Services'&lt;/a>")&#xd;
+    self.addProperty("clientId")&#xd;
+    self.addEncryptedProperty("clientSecret")&#xd;
+    self.addProperty("title", "Example title")&#xd;
+    self.addProperty("description", "Example description")&#xd;
+    self.addProperty("category", "1")&#xd;
+    self.addProperty("keywords", "keyword1, keyword2, etc")&#xd;
+    self.addProperty("privacyStatus", "public")&#xd;
+    self.bypassSupported = True&#xd;
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    self.setAcceptConnectors(True, "in")&#xd;
+    self.addProperty("credentialsString", "")  &#xd;
+    self.addProperty("_credentialsDict", {})&#xd;
+    self.addActionToContextMenu("Authenticate")&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    if not self.clientId.strip():&#xd;
+        res = self.critical("youtube:clientId", "'clientId' can not be empty") and res&#xd;
+    if not self.clientSecret.strip():&#xd;
+        res = self.critical("youtube:clientSecret", "'clientSecret' can not be empty") and res&#xd;
+    if not self.title.strip():&#xd;
+        res = self.critical("youtube:title", "'title' can not be empty") and res&#xd;
+    if not self.description.strip():&#xd;
+        res = self.critical("youtube:description", "'description' can not be empty") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    inputs = self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        for c in inputs:&#xd;
+            for up in c.getUniversalPaths():&#xd;
+                out.addUniversalPath(up)&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+&#xd;
+    title = self.title.strip()&#xd;
+    description = self.description.strip()&#xd;
+    category = self.category&#xd;
+    keywords = self.keywords.strip()&#xd;
+    privacyStatus = self.privacyStatus&#xd;
+    &#xd;
+    YouTube = YouTubeTools(self)&#xd;
+    &#xd;
+    self._credentialsDict = {} if not self.credentialsString else json.loads(self.credentialsString)&#xd;
+    goo = GoogleAuth(self, "https://www.googleapis.com/auth/youtube.upload", "youtube", "v3", self._credentialsDict)&#xd;
+    drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)&#xd;
+    self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)&#xd;
+&#xd;
+    if drive == "TimeOut": &#xd;
+        return self.critical("youtube:process:authCanceled", "Authentication timeout")&#xd;
+    if self.credentialsString == None or self.credentialsString == "{}": &#xd;
+        return self.critical("youtube:process:authCanceled", "Authentication was rejected") &#xd;
+&#xd;
+    for c in inputs:&#xd;
+        for up in c.getUniversalPaths():&#xd;
+            files = up.getAllFiles()&#xd;
+            for f in files:&#xd;
+                if self.isCancelled():&#xd;
+                    return False&#xd;
+                if YouTube.checkIfFileIsVideo(f):&#xd;
+                    try:&#xd;
+                        YouTube.initialize_upload(drive, f, title, description, category, keywords, privacyStatus)&#xd;
+                    except HttpError as e:&#xd;
+                        res = self.critical("YouTube:process:uploaderror","An HTTP error %d occurred:\n%s" % (e.resp.status, e.content))&#xd;
+                else: self.warning("YouTube:process:notvideo","'{}' is not a video file".format(f))&#xd;
+            out.addUniversalPath(up)&#xd;
+    return res&#xd;
+&#xd;
+def onPropertyUpdated(self, name):&#xd;
+    a = 1&#xd;
+&#xd;
+def menuAction(self,name):&#xd;
+    print ("menuAction",name)&#xd;
+    if name=="Authenticate":&#xd;
+        self.credentialsString = ""&#xd;
+        self._credentialsDict = {}&#xd;
+        goo = GoogleAuth(self, "https://www.googleapis.com/auth/youtube.upload", "youtube", "v3", self._credentialsDict)&#xd;
+        drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)&#xd;
+        self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)&#xd;
+&#xd;
+        if drive == "TimeOut": &#xd;
+            return self.critical("GoogleDriveIn:process:authCanceled", "Authentication timeout")&#xd;
+        if self.credentialsString == None or self.credentialsString == "{}": &#xd;
+            return self.critical("GoogleDriveIn:process:authCanceled", "Authentication was rejected") </code>
+     <TermsOfServices type="string">&lt;a href="https://www.youtube.com/t/terms">'YouTube's Terms of Services'&lt;/a></TermsOfServices>
+     <clientId type="string"></clientId>
+     <clientSecret encrypted="1" type="string">AwUPtZH/TRNZcJjj3TrrbDHX1a15OYA5NhXV</clientSecret>
+     <title type="string">Example title</title>
+     <description type="string">File Uploaded with Mistika Workflows</description>
+     <category type="string">22</category>
+     <keywords type="string">keyword1, keyword2, etc</keywords>
+     <privacyStatus type="string">public</privacyStatus>
+     <credentialsString type="string"></credentialsString>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="f0d0e8a1-bfb0-41a9-b4f7-566388ee3591"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="047e1782-ccb7-462a-a89f-2796b5e78f36"/>
+     <in type="input" name="in" id="8fe3b514-c258-4b93-8a19-b72912c6b521">
+      <linkedTo>2067e289-452d-4784-87c1-89b82a04529e</linkedTo>
+     </in>
+     <out type="output" name="out" id="d8664716-d863-4382-9639-8e9ebe823fac"/>
+     <in type="input" name="in" id="3a91f823-3b96-456e-a40e-0a9c23691c03">
+      <linkedTo>00350b66-a63f-4f2a-ad62-4a2a3ed0625c</linkedTo>
+     </in>
+     <in type="input" name="in" id="0ac87567-7b68-4519-a10b-85ae04128166">
+      <linkedTo>c0084f37-dd1a-4519-a647-924bc427ca44</linkedTo>
+     </in>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">231.206,695.117</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">30</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="5bfb4631-eeab-4833-8892-3cb2417858f2"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="7e0b0b09-59a3-4616-8a48-6a1939985e28"/>
+     <VideoOut label="AV Out" type="output" name="VideoOut" id="2067e289-452d-4784-87c1-89b82a04529e">
+      <linkedTo>8fe3b514-c258-4b93-8a19-b72912c6b521</linkedTo>
+     </VideoOut>
+     <AudioOut label="Ext. Audio" type="output" name="AudioOut" id="c37ac077-03f5-4cbf-ab67-773516216b7a" visible="0"/>
+     <VideoIn label="AV In" type="input" name="VideoIn" id="f4bcdc0e-ab58-485e-bd1b-0f3ee86c8775">
+      <linkedTo>7fe6f977-5437-4352-b491-ab9e25e5d78c</linkedTo>
+     </VideoIn>
+     <AudioIn label="Ext. Audio" type="input" name="AudioIn" id="2c56e20d-3b04-4b59-bbd0-8d1beb0599d7"/>
+    </connections>
+   </node>
+   <node class="Move" type="task">
+    <properties>
+     <objectName type="string">Move</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1760.43,-274.867</pos>
+     <schemaName type="string">move</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/Project/Trailers</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="aa4cdcb6-7dee-4ab5-9911-e1f43f4e728e"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="211b0ece-40a9-4d03-a409-dea8b4b2f8a4"/>
+     <File type="input" name="File" id="b9c25428-d25d-4a03-81de-3281ad3f2e80">
+      <linkedTo>18c42c0c-9308-4e6b-8cf5-e0f625e64e40</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="e9d96442-5398-45a6-9d03-4404d6997f22"/>
+    </connections>
+   </node>
+   <node class="Move" type="task">
+    <properties>
+     <objectName type="string">Move</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1764.75,-133.747</pos>
+     <schemaName type="string">move</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/Project/Teasers</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="2689119a-101b-4121-986c-fdb434a4eeb5"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="0e79ae16-b2ac-47a8-b5e1-789f8bbc6668"/>
+     <File type="input" name="File" id="7b9ca8d8-b278-4278-89dd-05cafcbc0ddf">
+      <linkedTo>aa965b97-1d96-4adb-bdc0-c7e7baf35f0a</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="d9ec9dc3-fce5-4301-97e0-a3aaf86e57b1"/>
+    </connections>
+   </node>
+   <node class="Move" type="task">
+    <properties>
+     <objectName type="string">Move</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1770.51,18.8928</pos>
+     <schemaName type="string">move</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol//Project/Promos</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="c0105f05-3d77-4574-9932-89ace57b301d"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="c7d5ac4f-86aa-465f-bfc8-2a447c17bf10"/>
+     <File type="input" name="File" id="063d5225-28f1-4ebe-b950-eb7fe18018aa">
+      <linkedTo>0283b100-7616-4236-b121-5cd06acd6338</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="3b9caa18-c1c1-4b56-b286-b79d9d51ae66"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">911.693,-406.771</ScenePos>
+     <Size type="size2">1319.04,1007.77</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Classify by Custom Metadata</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff3c4560</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">1678,190.022</ScenePos>
+     <Size type="size2">509.76,321.12</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Drop a clip or an image and select it</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-211.046,-585.376</ScenePos>
+     <Size type="size2">400.453,36.9531</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Classify your files based on Metadata</Text>
+     <TextColor type="color">#ff7bd1ff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-210.413,-526.048</ScenePos>
+     <Size type="size2">918.391,76.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">There are many ways to classify and filter your files based on their metadata. 
+By default, Mistika Workflows provides some classifiers to filter based on extension, resolution, or framerate.
+However, you can always configure the Classify by Metadata node to filter based on any metadata field.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-213.293,-404.064</ScenePos>
+     <Size type="size2">1074.24,552.96</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Classify based on extension</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff3c4560</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-170.093,-314.944</ScenePos>
+     <Size type="size2">550.766,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">You can edit the values (outputs) by editing the Extensions field.</Text>
+     <TextColor type="color">#ffafc2f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-477.274,192.557</ScenePos>
+     <Size type="size2">1344.96,741.6</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Classify by Resolution and Framerate</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff3c4560</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-434.074,275.917</ScenePos>
+     <Size type="size2">458.219,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">You can edit the values by editing the Ouput List field</Text>
+     <TextColor type="color">#ffafc2f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1021.59,-298.355</ScenePos>
+     <Size type="size2">634.484,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">In this example, we use the file name to filter and define our own outputs.</Text>
+     <TextColor type="color">#ffafc2f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">8</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">978.336,115.04</ScenePos>
+     <Size type="size2">440.547,33.3281</Size>
+     <TextSize type="float">16</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">How do we know which metadata field to use?</Text>
+     <TextColor type="color">#ffd5dcff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">9</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">975.168,181.568</ScenePos>
+     <Size type="size2">656.391,352.922</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">The best way to find the metadata tag name you want to use is 
+by loading a sample clip and viewing its metadata tree.
+
+Try it yourself! 
+
+ - Drag and drop a clip or an image and select it. 
+
+ - In the Properties panel, you will see various groups of metadata, 
+   with different metadata tags and their values inside. For example, 
+   in the "file" group, you will see tags like "name," "path," "created," etc. 
+
+ - These are the tags you should use in the Data Type field of the 
+   Classify by Metadata node. 
+
+Depending on the type of file, you will have more or fewer metadata options.</Text>
+     <TextColor type="color">#ffafc2f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">10</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

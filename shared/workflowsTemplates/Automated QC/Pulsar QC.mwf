@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="Pulsar QC" nameConvention="[path][baseName][.ext]">
+  <view scale="0.482253" y="-286.157" x="1246.23"/>
+  <nodes>
+   <node class="Watcher" type="input">
+    <properties>
+     <objectName type="string">Watcher_ACONTRAPLUS</objectName>
+     <color type="color">#aa557f</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">31.1623,-468.183</pos>
+     <schemaName type="string">watcher</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">/SomeWatcherFolder/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <filterMode type="int">1</filterMode>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <latency type="int">5</latency>
+     <forceCheck type="int">0</forceCheck>
+     <recursive type="bool">true</recursive>
+     <addRoot type="bool">false</addRoot>
+     <deleteAfterProcessing type="bool">false</deleteAfterProcessing>
+     <areYouSure type="bool">true</areYouSure>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">false</alphabeticalOrder>
+     <continuePreviousExecutions type="bool">false</continuePreviousExecutions>
+     <numberOfTries type="int">5</numberOfTries>
+     <globalTimer type="bool">true</globalTimer>
+    </properties>
+    <connections>
+     <rankFrom id="cd2618bb-3c4b-46f2-ae17-91557eb65a30" type="input" name="rankFrom" specialType="order"/>
+     <rankTo id="2d2cd972-4ce9-4fa2-9ce2-867215015f05" type="output" name="rankTo" specialType="order"/>
+     <To id="04a64781-d003-4d33-bfb4-d1f2f4e13f3c" type="output" name="To">
+      <linkedTo>09cdd3ac-4a09-4b39-99d0-38e8945cc9e7</linkedTo>
+      <linkedTo>56f1f960-4abd-42a1-b4b0-70e1803147e3</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node class="ExtractAudioChannels" type="task">
+    <properties>
+     <objectName type="string">ExtractAudioChannels</objectName>
+     <color type="color">#646ea0</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">329.666,-352.917</pos>
+     <schemaName type="string">extractaudiochannels</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <preset type="string">5.1 SMPTE</preset>
+     <nChannels type="int">6</nChannels>
+    </properties>
+    <connections>
+     <rankFrom id="49a02af7-a7c1-478f-96a0-46524b0a4a5a" type="input" name="rankFrom" specialType="order"/>
+     <rankTo id="06d89cf4-23f2-413c-8719-0203b285e61b" type="output" name="rankTo" specialType="order"/>
+     <AV id="09cdd3ac-4a09-4b39-99d0-38e8945cc9e7" type="input" name="AV">
+      <linkedTo>04a64781-d003-4d33-bfb4-d1f2f4e13f3c</linkedTo>
+     </AV>
+     <L id="cdaf9de7-8643-412a-a3dd-94870a498d72" type="output" name="L">
+      <linkedTo>31ab23ed-705d-4c7c-b860-fae2f6783da3</linkedTo>
+     </L>
+     <R id="6ec7e2ae-7033-4099-a00b-b5703f9c0f6b" type="output" name="R">
+      <linkedTo>e5d507b6-b1fb-432b-aa26-6ff76581d9fd</linkedTo>
+     </R>
+     <C id="de53c818-0059-47db-afa3-54ad71542eeb" type="output" name="C">
+      <linkedTo>6a70dca4-263b-4f3a-85c7-ca038f17dde4</linkedTo>
+     </C>
+     <LFE id="008e2257-c204-40c5-b3e9-8358c3fa7baf" type="output" name="LFE">
+      <linkedTo>dd874727-5a3c-4863-ac06-3c9265a5ffc7</linkedTo>
+     </LFE>
+     <Ls id="7d8763c2-f51b-43ac-beb4-e71b3f52ae16" type="output" name="Ls">
+      <linkedTo>24c00777-c75f-4d54-a92d-c349e9320617</linkedTo>
+     </Ls>
+     <Rs id="137b304e-9d1a-4460-9b16-473ebc526eed" type="output" name="Rs">
+      <linkedTo>a180b587-0ea6-46d6-ae36-0822a8b80375</linkedTo>
+     </Rs>
+    </connections>
+   </node>
+   <node class="Pulsar" type="task">
+    <properties>
+     <objectName type="string">Pulsar</objectName>
+     <color type="color">#ee7f1d</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">980.067,-395.324</pos>
+     <schemaName type="string">pulsar</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CbaseItem,CuniversalPath,CnameConvention
+from zeep import Client, Settings
+from zeep.helpers import serialize_object
+import time
+import os
+
+def init(self):      
+    self.setClassName("Pulsar")
+    self.color=QColor(0xee7f1d)
+    self.addConnector("in",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("reports",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL) 
+    self.addConnector("passed",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("failed",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True,"in_%") 
+    self.addProperty("ip", "127.0.0.1")
+    self.addProperty("port", "8093")
+    self.addProperty("templateType", "0")
+    self.addProperty("templateId", "")
+    self.addProperty("_templateList")
+    if self._templateList=="":
+        try:
+            client = Client(wsdl="http://"+self.ip.strip()+":"+self.port.strip()+"/pulsar?wsdl", settings=Settings(strict=False, xml_huge_tree=True))
+            SGetTemplateListReq = client.get_type("ns0:SGetTemplateListReq")
+            CSGetTemplateListReq = client.get_type("ns0:CSGetTemplateListReq")
+            response = client.service.GetTemplateList(SGetTemplateListReq(CSGetTemplateListReq("",int(self.templateType))))
+            self._templateList = response["TemplatesList"]
+        except Exception as e:
+            self._templateList = ["Error: Not Connected"]
+            return print("pulsar:controller", "Error: Pulsar Controller not running, wrong Ip, or wrong port: {}".format(e))
+    self.templateId = self._templateList[0]
+    self.addProperty("failedWhen", "Error")
+    self.addProperty("dstPath")
+    self.setDropToProperty("dstPath")
+    self.setDropSupportedTypes(1)
+    self.bypassSupported=True
+    return True
+
+def isReady(self):
+    res = True
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    if self.templateId == "":
+        res = self.critical("pulsar:path", "Pulsar Controller not running, wrong Ip, or wrong port") and res
+    return res
+
+def process(self):
+    def postJob(client, f, dstPath, templateId):
+        try:
+            SPostJobReq = client.get_type("ns0:SPostJobReq")
+            CSPostJobReq = client.get_type("ns0:CSPostJobReq")
+            CSFolderAccessInfo = client.get_type("ns0:CSFolderAccessInfo")
+            CSAutheticationInfo = client.get_type("ns0:CSAutheticationInfo")
+            CSReportLanguageInfo = client.get_type("ns0:CSReportLanguageInfo")
+            CSDecryptionKeyInfo = client.get_type("ns0:CSDecryptionKeyInfo")
+            CSHDRMetaDataFileInfo = client.get_type("ns0:CSHDRMetaDataFileInfo")
+            CSAudioStemInfo = client.get_type("ns0:CSAudioStemInfo")
+            CSReferenceFileInfo = client.get_type("ns0:CSReferenceFileInfo")
+
+            response = client.service.PostJob(
+                SPostJobReq(
+                    CSPostJobReq(
+                        CSFolderAccessInfo(eAccessProtocol = 0, strFilePath=f, sAutheticationInfo=CSAutheticationInfo(0, "", "", "")),
+                        strFtpMirrorPath="",
+                        strUserID="",
+                        strUserNote="",
+                        strTemplateName=templateId,
+                        eFolderType=0,
+                        eTemplateType=0,
+                        strCustomReportPath=dstPath,
+                        strTemplateUpdateData="",
+                        sDefaultReportLanguage=CSReportLanguageInfo(strISOCode="", strTag=""),
+                        sDecryptionInfo=CSDecryptionKeyInfo(strDecryptionKey=""),
+                        nIsHighPriorityJob=0,
+                        sHDRMetaDataFileInfo=CSHDRMetaDataFileInfo("","",""),
+                        sAudioStemInfo=CSAudioStemInfo(),
+                        bStandAloneStemJob=0,
+                        sReferenceFileInfo=CSReferenceFileInfo("","","",0)
+                                )
+                            )
+                         )
+            print(response)
+            return serialize_object(response)
+        except Exception as e:
+            return {'error': str(e)}
+        
+    def query_jobs_status(client, job_id):
+        try:
+            # Obtener los tipos necesarios del WSDL
+            SQueryJobsStatusReq = client.get_type("ns0:SQueryJobsStatusReq")
+            CSQueryJobsStatusReq = client.get_type("ns0:CSQueryJobsStatusReq")
+            CSQueryInfo = client.get_type("ns0:CSQueryInfo")
+    
+            auth_info = CSQueryInfo(0x002,0, job_id, 0,0,0,0,0,0,0,0)
+
+            query_req = SQueryJobsStatusReq(
+                CSQueryJobsStatusReq(
+                sQueryInfo=auth_info
+            ))
+            response = client.service.QueryJobsStatus(QueryReq=query_req)
+
+            #print(response)
+            return serialize_object(response)
+        except Exception as e:
+            return {'error': str(e)}
+        
+    ######################################################################################################################
+    if self.bypassEnabled:
+      return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    outCorrect = self.getFirstConnectorByName("passed")
+    outCorrect.clearUniversalPaths()
+    outFailed = self.getFirstConnectorByName("failed")
+    outFailed.clearUniversalPaths()
+    outReports = self.getFirstConnectorByName("reports")
+    outReports.clearUniversalPaths()
+    res = True
+
+    templateId = self.templateId.strip()
+    dstPath = self.dstPath.strip()
+    ip = self.ip.strip()
+    port = self.port.strip()
+
+    try:
+        client = Client(wsdl="http://"+ip+":"+port+"/pulsar?wsdl", settings=Settings(strict=False, xml_huge_tree=True))
+    except Exception as e:
+        return self.critical("pulsar:controller", "Error: Pulsar Controller not running, wrong Ip, or wrong port: {}".format(e))
+
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            #self.setPropertiesFromUP(up)
+            #mfid = up.getMediaFileInfoData()
+            f = up.getFilePath()
+            
+            dstPathTokens=up.getStringOverride(dstPath)
+            jobResponse = postJob(client, f, dstPathTokens, templateId)
+            if jobResponse["eRetCode"] == 6:
+                return self.critical("Pulsar:jobFailed", "Error: Template does not exist")
+            jobId = jobResponse["strJobId"]
+
+            status = -1
+            while status not in [4, 5 ,6]:
+                statusResponse= query_jobs_status(client, jobId)
+                status = statusResponse["listJobstatus"][0]["eJobStatus"]
+                print(status)
+                time.sleep(2)
+            
+            print(statusResponse)
+            reportPath = statusResponse["listJobstatus"][0]["strReportPath"]
+            print(reportPath)
+            
+            if status == 4:
+                archivos = []
+                for archivo in os.listdir(reportPath):
+                    path_completo = os.path.join(reportPath, archivo).replace("\\", "/")
+                    if os.path.isfile(path_completo) and not archivo.endswith(".html") and archivo != "Template_info.xml":
+
+                        archivos.append(path_completo)
+                print(archivos)
+                upn = CuniversalPath()
+                upList= upn.buildUPfromFileList(archivos, CnameConvention("[path][baseName][.ext]"), reportPath.replace("\\", "/"))
+                outReports.setUniversalPaths(upList)
+
+                up.setPrivateData("PulsarReports", archivos)
+                error_mapping = {
+                    "Info": "nNumberOfInfos",
+                    "Warning": "nNumberOfWarnings",
+                    "Error": "nNumberOfErrors",
+                    "Critical": "nNumberOfCriticals"
+                }
+                selectedErrorKey = error_mapping[self.failedWhen]
+                error_types = ["nNumberOfInfos", "nNumberOfWarnings", "nNumberOfErrors", "nNumberOfCriticals"]
+                selectedIndex = error_types.index(selectedErrorKey)
+                statusR = statusResponse["listJobstatus"][0]
+                if any(statusR[error] > 0 for error in error_types[selectedIndex:]):
+                    outFailed.addUniversalPath(up)
+                else:
+                    outCorrect.addUniversalPath(up)    
+            else:
+                self.addFailedUP(up)
+                res = self.critical("Pulsar:jobFailed", "Error: the job failed or was aborted") and res
+        #-------------------------------------------------------------------------------------------------------------------
+    return res
+
+def  onPropertyUpdated(self,name):
+    try:
+        if self._templateList and self.ip and self.port and (name=="templateType" or name=="ip" or name=="port"):
+            try:
+                ip=self.ip.strip()
+                port=self.port.strip()
+                client = Client(wsdl="http://"+ip+":"+port+"/pulsar?wsdl", settings=Settings(strict=False, xml_huge_tree=True))
+                SGetTemplateListReq = client.get_type("ns0:SGetTemplateListReq")
+                CSGetTemplateListReq = client.get_type("ns0:CSGetTemplateListReq")
+                response = client.service.GetTemplateList(SGetTemplateListReq(CSGetTemplateListReq("",int(self.templateType))))
+                self._templateList = response["TemplatesList"]
+            except Exception as e:
+                self._templateList = ["Error: Not Connected"]
+                return print("pulsar:controller", "Error: Pulsar Controller not running, wrong Ip, or wrong port: {}".format(e))
+            self.rebuild()
+    except AttributeError:
+        pass
+</code>
+     <ip type="string">127.0.0.1</ip>
+     <port type="string">8093</port>
+     <templateType type="string">0</templateType>
+     <templateId type="string">BASIC TESTS</templateId>
+     <failedWhen type="string">Error</failedWhen>
+     <dstPath type="string"></dstPath>
+    </properties>
+    <connections>
+     <rankFrom id="aebab2ac-1243-4a9a-bc6c-6fe74b43b592" type="input" name="rankFrom" specialType="order"/>
+     <rankTo id="58c418b5-c427-43de-bf92-919c95006b69" type="output" name="rankTo" specialType="order"/>
+     <in id="4ec831e1-dcd7-4a41-9e00-28ffb04c1c8e" type="input" name="in">
+      <linkedTo>466687ce-cd93-4a9e-83b6-a220a88e35e6</linkedTo>
+     </in>
+     <reports id="0dcd00a0-3c63-4084-bb1f-545349802484" type="output" name="reports">
+      <linkedTo>c7b2c485-5898-4580-98a2-456d05612a6b</linkedTo>
+     </reports>
+     <passed id="80334f90-bcc7-4872-b952-0457bd5d3027" type="output" name="passed">
+      <linkedTo>081d0459-db09-4478-bcaa-dc5e4244b220</linkedTo>
+     </passed>
+     <failed id="036c7033-1c11-4419-a101-ac7fcfa432be" type="output" name="failed">
+      <linkedTo>ee61ab68-8a7f-4266-8c2e-2ecd392eb4a6</linkedTo>
+     </failed>
+    </connections>
+   </node>
+   <node class="Pulsar" type="task">
+    <properties>
+     <objectName type="string">Pulsar_2</objectName>
+     <color type="color">#ee7f1d</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1333.67,-361.569</pos>
+     <schemaName type="string">pulsar</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CbaseItem,CuniversalPath,CnameConvention
+from zeep import Client, Settings
+from zeep.helpers import serialize_object
+import time
+import os
+
+def init(self):      
+    self.setClassName("Pulsar")
+    self.color=QColor(0xee7f1d)
+    self.addConnector("in",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("reports",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL) 
+    self.addConnector("passed",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("failed",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True,"in_%") 
+    self.addProperty("ip", "127.0.0.1")
+    self.addProperty("port", "8093")
+    self.addProperty("templateType", "0")
+    self.addProperty("templateId", "")
+    self.addProperty("_templateList")
+    if self._templateList=="":
+        try:
+            client = Client(wsdl="http://"+self.ip.strip()+":"+self.port.strip()+"/pulsar?wsdl", settings=Settings(strict=False, xml_huge_tree=True))
+            SGetTemplateListReq = client.get_type("ns0:SGetTemplateListReq")
+            CSGetTemplateListReq = client.get_type("ns0:CSGetTemplateListReq")
+            response = client.service.GetTemplateList(SGetTemplateListReq(CSGetTemplateListReq("",int(self.templateType))))
+            self._templateList = response["TemplatesList"]
+        except Exception as e:
+            self._templateList = ["Error: Not Connected"]
+            return print("pulsar:controller", "Error: Pulsar Controller not running, wrong Ip, or wrong port: {}".format(e))
+    self.templateId = self._templateList[0]
+    self.addProperty("failedWhen", "Error")
+    self.addProperty("dstPath")
+    self.setDropToProperty("dstPath")
+    self.setDropSupportedTypes(1)
+    self.bypassSupported=True
+    return True
+
+def isReady(self):
+    res = True
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    if self.templateId == "":
+        res = self.critical("pulsar:path", "Pulsar Controller not running, wrong Ip, or wrong port") and res
+    return res
+
+def process(self):
+    def postJob(client, f, dstPath, templateId):
+        try:
+            SPostJobReq = client.get_type("ns0:SPostJobReq")
+            CSPostJobReq = client.get_type("ns0:CSPostJobReq")
+            CSFolderAccessInfo = client.get_type("ns0:CSFolderAccessInfo")
+            CSAutheticationInfo = client.get_type("ns0:CSAutheticationInfo")
+            CSReportLanguageInfo = client.get_type("ns0:CSReportLanguageInfo")
+            CSDecryptionKeyInfo = client.get_type("ns0:CSDecryptionKeyInfo")
+            CSHDRMetaDataFileInfo = client.get_type("ns0:CSHDRMetaDataFileInfo")
+            CSAudioStemInfo = client.get_type("ns0:CSAudioStemInfo")
+            CSReferenceFileInfo = client.get_type("ns0:CSReferenceFileInfo")
+
+            response = client.service.PostJob(
+                SPostJobReq(
+                    CSPostJobReq(
+                        CSFolderAccessInfo(eAccessProtocol = 0, strFilePath=f, sAutheticationInfo=CSAutheticationInfo(0, "", "", "")),
+                        strFtpMirrorPath="",
+                        strUserID="",
+                        strUserNote="",
+                        strTemplateName=templateId,
+                        eFolderType=0,
+                        eTemplateType=0,
+                        strCustomReportPath=dstPath,
+                        strTemplateUpdateData="",
+                        sDefaultReportLanguage=CSReportLanguageInfo(strISOCode="", strTag=""),
+                        sDecryptionInfo=CSDecryptionKeyInfo(strDecryptionKey=""),
+                        nIsHighPriorityJob=0,
+                        sHDRMetaDataFileInfo=CSHDRMetaDataFileInfo("","",""),
+                        sAudioStemInfo=CSAudioStemInfo(),
+                        bStandAloneStemJob=0,
+                        sReferenceFileInfo=CSReferenceFileInfo("","","",0)
+                                )
+                            )
+                         )
+            print(response)
+            return serialize_object(response)
+        except Exception as e:
+            return {'error': str(e)}
+        
+    def query_jobs_status(client, job_id):
+        try:
+            # Obtener los tipos necesarios del WSDL
+            SQueryJobsStatusReq = client.get_type("ns0:SQueryJobsStatusReq")
+            CSQueryJobsStatusReq = client.get_type("ns0:CSQueryJobsStatusReq")
+            CSQueryInfo = client.get_type("ns0:CSQueryInfo")
+    
+            auth_info = CSQueryInfo(0x002,0, job_id, 0,0,0,0,0,0,0,0)
+
+            query_req = SQueryJobsStatusReq(
+                CSQueryJobsStatusReq(
+                sQueryInfo=auth_info
+            ))
+            response = client.service.QueryJobsStatus(QueryReq=query_req)
+
+            #print(response)
+            return serialize_object(response)
+        except Exception as e:
+            return {'error': str(e)}
+        
+    ######################################################################################################################
+    if self.bypassEnabled:
+      return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    outCorrect = self.getFirstConnectorByName("passed")
+    outCorrect.clearUniversalPaths()
+    outFailed = self.getFirstConnectorByName("failed")
+    outFailed.clearUniversalPaths()
+    outReports = self.getFirstConnectorByName("reports")
+    outReports.clearUniversalPaths()
+    res = True
+
+    templateId = self.templateId.strip()
+    dstPath = self.dstPath.strip()
+    ip = self.ip.strip()
+    port = self.port.strip()
+
+    try:
+        client = Client(wsdl="http://"+ip+":"+port+"/pulsar?wsdl", settings=Settings(strict=False, xml_huge_tree=True))
+    except Exception as e:
+        return self.critical("pulsar:controller", "Error: Pulsar Controller not running, wrong Ip, or wrong port: {}".format(e))
+
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            #self.setPropertiesFromUP(up)
+            #mfid = up.getMediaFileInfoData()
+            f = up.getFilePath()
+            
+            dstPathTokens=up.getStringOverride(dstPath)
+            jobResponse = postJob(client, f, dstPathTokens, templateId)
+            if jobResponse["eRetCode"] == 6:
+                return self.critical("Pulsar:jobFailed", "Error: Template does not exist")
+            jobId = jobResponse["strJobId"]
+
+            status = -1
+            while status not in [4, 5 ,6]:
+                statusResponse= query_jobs_status(client, jobId)
+                status = statusResponse["listJobstatus"][0]["eJobStatus"]
+                print(status)
+                time.sleep(2)
+            
+            print(statusResponse)
+            reportPath = statusResponse["listJobstatus"][0]["strReportPath"]
+            print(reportPath)
+            
+            if status == 4:
+                archivos = []
+                for archivo in os.listdir(reportPath):
+                    path_completo = os.path.join(reportPath, archivo).replace("\\", "/")
+                    if os.path.isfile(path_completo) and not archivo.endswith(".html") and archivo != "Template_info.xml":
+
+                        archivos.append(path_completo)
+                print(archivos)
+                upn = CuniversalPath()
+                upList= upn.buildUPfromFileList(archivos, CnameConvention("[path][baseName][.ext]"), reportPath.replace("\\", "/"))
+                outReports.setUniversalPaths(upList)
+
+                up.setPrivateData("PulsarReports", archivos)
+                error_mapping = {
+                    "Info": "nNumberOfInfos",
+                    "Warning": "nNumberOfWarnings",
+                    "Error": "nNumberOfErrors",
+                    "Critical": "nNumberOfCriticals"
+                }
+                selectedErrorKey = error_mapping[self.failedWhen]
+                error_types = ["nNumberOfInfos", "nNumberOfWarnings", "nNumberOfErrors", "nNumberOfCriticals"]
+                selectedIndex = error_types.index(selectedErrorKey)
+                statusR = statusResponse["listJobstatus"][0]
+                if any(statusR[error] > 0 for error in error_types[selectedIndex:]):
+                    outFailed.addUniversalPath(up)
+                else:
+                    outCorrect.addUniversalPath(up)    
+            else:
+                self.addFailedUP(up)
+                res = self.critical("Pulsar:jobFailed", "Error: the job failed or was aborted") and res
+        #-------------------------------------------------------------------------------------------------------------------
+    return res
+
+def  onPropertyUpdated(self,name):
+    try:
+        if self._templateList and self.ip and self.port and (name=="templateType" or name=="ip" or name=="port"):
+            try:
+                ip=self.ip.strip()
+                port=self.port.strip()
+                client = Client(wsdl="http://"+ip+":"+port+"/pulsar?wsdl", settings=Settings(strict=False, xml_huge_tree=True))
+                SGetTemplateListReq = client.get_type("ns0:SGetTemplateListReq")
+                CSGetTemplateListReq = client.get_type("ns0:CSGetTemplateListReq")
+                response = client.service.GetTemplateList(SGetTemplateListReq(CSGetTemplateListReq("",int(self.templateType))))
+                self._templateList = response["TemplatesList"]
+            except Exception as e:
+                self._templateList = ["Error: Not Connected"]
+                return print("pulsar:controller", "Error: Pulsar Controller not running, wrong Ip, or wrong port: {}".format(e))
+            self.rebuild()
+    except AttributeError:
+        pass
+</code>
+     <ip type="string">127.0.0.1</ip>
+     <port type="string">8093</port>
+     <templateType type="string">0</templateType>
+     <templateId type="string">BASIC TESTS</templateId>
+     <failedWhen type="string">Error</failedWhen>
+     <dstPath type="string"></dstPath>
+    </properties>
+    <connections>
+     <rankFrom id="bc880ed2-5cfe-44a1-8d0e-6056ee147964" type="input" name="rankFrom" specialType="order"/>
+     <rankTo id="7ceb22ff-5805-457d-8bf3-8485b59a54a8" type="output" name="rankTo" specialType="order"/>
+     <in id="081d0459-db09-4478-bcaa-dc5e4244b220" type="input" name="in">
+      <linkedTo>80334f90-bcc7-4872-b952-0457bd5d3027</linkedTo>
+     </in>
+     <reports id="fea07f46-abe5-4d11-b716-2c4219674815" type="output" name="reports">
+      <linkedTo>cdac782e-9cae-4411-9206-cffe6cda8043</linkedTo>
+      <linkedTo>fe7e1932-8c7a-487c-b360-b0cd37e309d9</linkedTo>
+     </reports>
+     <passed id="84b64a8e-39dd-4206-ac16-5e221cd8a664" type="output" name="passed">
+      <linkedTo>4f9ad7d6-17d8-4535-b7c3-94a31ce448ea</linkedTo>
+      <linkedTo>322571ea-541e-4907-aa84-d493bbc6cad3</linkedTo>
+     </passed>
+     <failed id="bc9799b3-61f9-40f5-a763-0027ad2b935c" type="output" name="failed">
+      <linkedTo>5e9f08eb-a612-43ae-831a-4eeb7f510728</linkedTo>
+     </failed>
+    </connections>
+   </node>
+   <node class="Move" type="task">
+    <properties>
+     <objectName type="string">Move</objectName>
+     <color type="color">#008686</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1695.29,-120.634</pos>
+     <schemaName type="string">move</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">/someMovePath/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom id="75ae41f0-9904-4282-80ab-8424c88940f9" type="input" name="rankFrom" specialType="order"/>
+     <rankTo id="84a9aa69-263e-43b9-9a21-d7a5b8d53f51" type="output" name="rankTo" specialType="order"/>
+     <File id="5e9f08eb-a612-43ae-831a-4eeb7f510728" type="input" name="File">
+      <linkedTo>bc9799b3-61f9-40f5-a763-0027ad2b935c</linkedTo>
+     </File>
+     <Files id="092cc102-4e5c-47c9-88b7-c350ead29f8c" type="output" name="Files">
+      <linkedTo>473936d0-31c6-4d9e-ab69-e614a65c0c46</linkedTo>
+     </Files>
+     <File id="ee61ab68-8a7f-4266-8c2e-2ecd392eb4a6" type="input" name="File">
+      <linkedTo>036c7033-1c11-4419-a101-ac7fcfa432be</linkedTo>
+     </File>
+    </connections>
+   </node>
+   <node class="FTP" type="output">
+    <properties>
+     <objectName type="string">FTP</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">2037.62,-535.535</pos>
+     <schemaName type="string">ftp</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <protocol type="string">ftp</protocol>
+     <url type="string"></url>
+     <user type="string"></user>
+     <authType type="int">0</authType>
+     <keyFile type="string"></keyFile>
+     <keyPassPhrase encrypted="1" type="string">AwXDeV0zgd+VvFQvEfYnoP0bGWG19Uz1+tkZ</keyPassPhrase>
+     <pwd encrypted="1" type="string">AwW0DipE9qjiyyNYZoFQ14psbhbCgjuCja5u</pwd>
+     <port type="ushort">21</port>
+     <localPath type="string"></localPath>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <newFilesOnly type="bool">false</newFilesOnly>
+     <deleteAfterTransfer type="bool">false</deleteAfterTransfer>
+     <areYouSure type="bool">false</areYouSure>
+     <renameFilesList type="string"></renameFilesList>
+     <maintainPadding type="bool">true</maintainPadding>
+     <ignoreStandAloneSidecars type="bool">false</ignoreStandAloneSidecars>
+     <retries type="int">10</retries>
+    </properties>
+    <connections>
+     <rankFrom id="6804bbf2-637e-4f75-9399-55bb8e959c71" type="input" name="rankFrom" specialType="order"/>
+     <rankTo id="d69c42ca-1259-49d5-b287-74e89ae6cfb1" type="output" name="rankTo" specialType="order">
+      <linkedTo>2aab0e67-6400-4d8e-8e91-b86400ead2cb</linkedTo>
+     </rankTo>
+     <File id="cdac782e-9cae-4411-9206-cffe6cda8043" type="input" name="File">
+      <linkedTo>fea07f46-abe5-4d11-b716-2c4219674815</linkedTo>
+     </File>
+     <File id="4f9ad7d6-17d8-4535-b7c3-94a31ce448ea" type="input" name="File">
+      <linkedTo>84b64a8e-39dd-4206-ac16-5e221cd8a664</linkedTo>
+     </File>
+    </connections>
+   </node>
+   <node class="Mail" type="output">
+    <properties>
+     <objectName type="string">Mail</objectName>
+     <color type="color">#e1e1d2</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">2083.57,-353.829</pos>
+     <schemaName type="string">mail</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+
+mailModulesLoaded=False
+try:
+    import sys
+    import smtplib
+    import re
+    from email.mime.text import MIMEText
+    from email.mime.multipart import MIMEMultipart
+    mailModulesLoaded=True
+except ImportError as e:
+    print("Unable to import modules: "+e.message)
+    print("check your sys.path ")
+            
+_WF_MAIL_DEFAULT_MSG="""Put Your Text Here
+&lt;?py
+if self.onePerFile:
+    print("Input file:")
+    up=self._localDict['up']
+    print (up.getFilePath())
+else:
+    print("List of input Files:")
+    for c in self.getConnectors():
+        for p in c.getUniversalPaths():
+            print (p.getFilePath())
+?>"""
+
+def init(self):
+    self.color=QColor(225,225,210)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("login")
+    self.addProperty("onlySendIfInput")
+    self.addProperty("onePerFile",False)
+    self.addEncryptedProperty("pwd")
+    self.addProperty("smtpServer","smtp.gmail.com")
+    self.addProperty("port",587)
+    self.addProperty("mailFrom")
+    self.addProperty("to") #comma separated list
+    self.addProperty("replyTo")
+    self.addProperty("subject","Mistika Workflows Mail Node Processed")
+    self.addProperty("bodyType","plain")
+    self.addProperty("body",_WF_MAIL_DEFAULT_MSG)    
+    self.bypassSupported=True
+    self.setAcceptConnectors(True,"input")
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)
+    return True
+    
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    if not mailModulesLoaded:
+        res=self.critical("mail:modules","Modules not loaded. Check your sys.path or install them")
+#    if self.login=="":
+#        res=self.critical("mail:loginEmpty","'Login' can not be empty") and res
+    to=str(self.to).strip()
+    if to=="":
+        res=self.critical("mail:toEmpty","'To' can not be empty") and res
+#    else:
+#        list=to.split(',')
+#        for item in list:
+#            item=item.strip()
+#            if re.match('^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,20})$',item) == None:
+#                res=self.critical("mail:invalidTo","Invalid email address: "+item+". Use ',' to separate multiple mail addresses.") and res
+
+    return res
+    
+def process(self):
+    res=True
+    def sendMail(up=None):
+        try:
+            s = smtplib.SMTP(self.smtpServer,int(self.port))
+        except Exception as e:
+            return self.critical("process:smtp","smtp Error: {}".format(e))
+        try:
+            s.starttls()
+        except smtplib.SMTPException as e:
+             self.warning("process:tls","TLS not supported by server")
+        try:
+            s.ehlo()
+            if self.login!="":
+                s.login(self.login,self.pwd)
+            msg = MIMEMultipart()
+            subject=self.evaluate(str(self.subject))
+            evaluatedTo=self.evaluate(str(self.to))
+            body=self.evaluate(str(self.body))
+            if up!=None:
+                subject=up.evaluateTokensString(subject)
+                evaluatedTo=up.evaluateTokensString(evaluatedTo)
+                body=up.evaluateTokensString(body)
+            msg['Subject']=subject
+            f=self.mailFrom.strip()
+            msg['From']=f if len(f)>0 else self.login
+            msg['To']=evaluatedTo
+            r=self.replyTo.strip()
+            if len(r) > 0:
+                msg['Reply-To']=r
+            msg.attach(MIMEText(body,self.bodyType))
+            s.sendmail(self.login,evaluatedTo.split(","),msg.as_string())
+            s.quit()
+            return True
+        except Exception as e:
+            return self.critical("process:smtp","smtp Error: {}".format(e))
+            
+    if self.bypassEnabled:
+        return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    hasInput = False
+    for c in inputs:                                  
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            hasInput = True
+    if not hasInput and self.onlySendIfInput: 
+        return True     
+    if self.onePerFile:
+        for c in self.getConnectors():
+            for up in c.getUniversalPaths():
+                d={}
+                d["up"]=up
+                self._localDict=d
+                self.setPropertiesFromUP(up)     
+                done=sendMail(up)
+                if not done:
+                    self.addFailedUP(up)
+                res=done and res
+    else:
+        res=sendMail()
+    return res</code>
+     <login type="string"></login>
+     <onlySendIfInput type="string"></onlySendIfInput>
+     <onePerFile type="bool">false</onePerFile>
+     <pwd encrypted="1" type="string">AwVm3PiWJHowGfGKtFOCBVi+vMQQUOlQX3y8</pwd>
+     <smtpServer type="string">smtp.gmail.com</smtpServer>
+     <port type="int">587</port>
+     <mailFrom type="string"></mailFrom>
+     <to type="string"></to>
+     <replyTo type="string"></replyTo>
+     <subject type="string">Mistika Workflows Mail Node Processed</subject>
+     <bodyType type="string">plain</bodyType>
+     <body type="string">Put Yout Text Here
+List of input Files:
+&lt;?py
+for c in self.getConnectors():
+    for p in c.getUniversalPaths():
+      print (p.getFilePath())
+?></body>
+    </properties>
+    <connections>
+     <rankFrom id="2aab0e67-6400-4d8e-8e91-b86400ead2cb" type="input" name="rankFrom" specialType="order">
+      <linkedTo>d69c42ca-1259-49d5-b287-74e89ae6cfb1</linkedTo>
+     </rankFrom>
+     <rankTo id="ab5c08f4-24a9-4b28-9cd0-4898180a1df9" type="output" name="rankTo" specialType="order"/>
+     <input id="322571ea-541e-4907-aa84-d493bbc6cad3" type="input" name="input">
+      <linkedTo>84b64a8e-39dd-4206-ac16-5e221cd8a664</linkedTo>
+     </input>
+    </connections>
+   </node>
+   <node class="Copy" type="task">
+    <properties>
+     <objectName type="string">Copy</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1693.61,-553.193</pos>
+     <schemaName type="string">copy</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">/SomeCopyPath/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom id="4f3cee66-cd7a-4456-bf67-b4481f58ec79" type="input" name="rankFrom" specialType="order"/>
+     <rankTo id="590a1530-cd27-4a26-bbbe-7f7cdf2df3b5" type="output" name="rankTo" specialType="order"/>
+     <File id="c7b2c485-5898-4580-98a2-456d05612a6b" type="input" name="File">
+      <linkedTo>0dcd00a0-3c63-4084-bb1f-545349802484</linkedTo>
+     </File>
+     <Files id="4d728b62-2b24-49ec-a151-f27bf9fc4a97" type="output" name="Files"/>
+     <File id="fe7e1932-8c7a-487c-b360-b0cd37e309d9" type="input" name="File">
+      <linkedTo>fea07f46-abe5-4d11-b716-2c4219674815</linkedTo>
+     </File>
+    </connections>
+   </node>
+   <node class="Slack" type="output">
+    <properties>
+     <objectName type="string">Slack</objectName>
+     <color type="color">#000000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">2055.78,-178.687</pos>
+     <schemaName type="string">slack</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <webHook type="string"></webHook>
+     <message type="string">List of Input Files:
+&lt;?py
+for c in self.getConnectors():
+  for p in c.getUniversalPaths():
+    print (p.toString())
+?></message>
+    </properties>
+    <connections>
+     <rankFrom id="89dd049e-251a-4684-afb3-e03a45399d2f" type="input" name="rankFrom" specialType="order"/>
+     <rankTo id="75206759-83ad-4a74-85b3-e7a1bd6b58a5" type="output" name="rankTo" specialType="order"/>
+     <File id="473936d0-31c6-4d9e-ab69-e614a65c0c46" type="input" name="File">
+      <linkedTo>092cc102-4e5c-47c9-88b7-c350ead29f8c</linkedTo>
+     </File>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">649.7,-442.09</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <pixelAspectRatio type="double">0</pixelAspectRatio>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">false</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <scaleFilter type="int">-1</scaleFilter>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <packAudioTracks type="bool">true</packAudioTracks>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom id="cd3d5ac1-b999-4ee4-b7b2-404ed8cb6816" type="input" name="rankFrom" specialType="order"/>
+     <rankTo id="9cfabc7a-bf9e-455e-a95f-8b805f4cb66f" type="output" name="rankTo" specialType="order"/>
+     <VideoOut id="466687ce-cd93-4a9e-83b6-a220a88e35e6" label="AV Out" type="output" name="VideoOut">
+      <linkedTo>4ec831e1-dcd7-4a41-9e00-28ffb04c1c8e</linkedTo>
+     </VideoOut>
+     <AudioOut id="151561de-84b9-4abf-b1b0-2676ae7d11b6" visible="0" label="Ext. Audio" type="output" name="AudioOut"/>
+     <VideoIn id="56f1f960-4abd-42a1-b4b0-70e1803147e3" label="AV In" type="input" name="VideoIn">
+      <linkedTo>04a64781-d003-4d33-bfb4-d1f2f4e13f3c</linkedTo>
+     </VideoIn>
+     <AudioIn id="31ab23ed-705d-4c7c-b860-fae2f6783da3" label="Ext. Audio" type="input" name="AudioIn">
+      <linkedTo>cdaf9de7-8643-412a-a3dd-94870a498d72</linkedTo>
+     </AudioIn>
+     <AudioIn id="e5d507b6-b1fb-432b-aa26-6ff76581d9fd" label="Ext. Audio" type="input" name="AudioIn">
+      <linkedTo>6ec7e2ae-7033-4099-a00b-b5703f9c0f6b</linkedTo>
+     </AudioIn>
+     <AudioIn id="6a70dca4-263b-4f3a-85c7-ca038f17dde4" label="Ext. Audio" type="input" name="AudioIn">
+      <linkedTo>de53c818-0059-47db-afa3-54ad71542eeb</linkedTo>
+     </AudioIn>
+     <AudioIn id="dd874727-5a3c-4863-ac06-3c9265a5ffc7" label="Ext. Audio" type="input" name="AudioIn">
+      <linkedTo>008e2257-c204-40c5-b3e9-8358c3fa7baf</linkedTo>
+     </AudioIn>
+     <AudioIn id="24c00777-c75f-4d54-a92d-c349e9320617" label="Ext. Audio" type="input" name="AudioIn">
+      <linkedTo>7d8763c2-f51b-43ac-beb4-e71b3f52ae16</linkedTo>
+     </AudioIn>
+     <AudioIn id="a180b587-0ea6-46d6-ae36-0822a8b80375" label="Ext. Audio" type="input" name="AudioIn">
+      <linkedTo>137b304e-9d1a-4460-9b16-473ebc526eed</linkedTo>
+     </AudioIn>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">15.6623,-580.891</ScenePos>
+     <Size type="size2">895.537,436.916</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Any Previous Workflow</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff5b5834</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">51.84,-546.842</ScenePos>
+     <Size type="size2">838,66</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">The result of any workflow can feed the Pulsar node: it can be from  a simple 
+'Folder' or 'Watcher' node, to a previous full mastering process</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">964.567,-577.824</ScenePos>
+     <Size type="size2">623.691,438.315</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Automated Pulsar QC</Text>
+     <TextColor type="color">#ffee7f1d</TextColor>
+     <BackgroundColor type="color">#ff05335f</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">991.873,-518.848</ScenePos>
+     <Size type="size2">488,95</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Configure your Pulsar hosts' ip+port
+Select your template to be applied
+Kind of error that will make a file fail the QC </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1178.5,-233.728</ScenePos>
+     <Size type="size2">396,66</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Concatenate several Pulsar nodes to 
+perform different levels of QC</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">1678.11,-603.693</ScenePos>
+     <Size type="size2">278.676,615.559</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">File Management</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff004f65</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1700.35,-242.368</ScenePos>
+     <Size type="size2">232,95</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Based on QC results,
+manage your reports
+and files processed</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">2023.84,-596.403</ScenePos>
+     <Size type="size2">321.227,608.968</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Deliver and Notify</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

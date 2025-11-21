@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="VFX Edit Changes to Markers">
+  <view x="89.1649" y="-462.413" scale="0.482252"/>
+  <nodes>
+   <node type="input" class="File">
+    <properties>
+     <objectName type="string">EDL_BeforeEdit</objectName>
+     <color type="color">#458c65</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-397.453,-442.414</pos>
+     <schemaName type="string">file</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">.edl?format=[path][baseName][.ext]</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="a2034944-ec1f-4980-b23a-457b9706c077"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="a73de59a-5c45-4b02-99db-8c029bb7296d"/>
+     <To name="To" type="output" id="803a9f2f-53ea-423d-b22d-85825c8a4fa1">
+      <linkedTo>16583352-0ca2-4769-bf92-09746604eada</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node type="input" class="File">
+    <properties>
+     <objectName type="string">EDL_AfterEdit</objectName>
+     <color type="color">#458c65</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-395.333,-303.264</pos>
+     <schemaName type="string">file</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">.edl?format=[path][baseName][.ext]</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="0157fa3f-716d-4996-a6ae-ef9ac94b71c6"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="b0d04060-d30a-4346-b885-c98dadd38f13"/>
+     <To name="To" type="output" id="137f0cfc-ad96-460a-9320-a99894a56c24">
+      <linkedTo>6ec098c2-94e7-4ded-8e0c-d04e179d0714</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node type="task" class="EDLEditChanges">
+    <properties>
+     <objectName type="string">EDLEditChanges</objectName>
+     <color type="color">#002d2d</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">227.267,-403.108</pos>
+     <schemaName type="string">edleditchanges</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CnameConvention,CuniversalPath
+from mistikaTools import installModule
+import os
+import sys
+from timecode import Timecode
+
+
+
+def init(self):
+    self.setClassName("EDL Edit Changes")
+    self.addConnector("edlBefore",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_REQUIRED)
+    self.addConnector("edlAfter", Cconnector.CONNECTOR_TYPE_INPUT, Cconnector.MODE_REQUIRED)
+    self.addConnector("edlMarkers",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("edlMarkersPath")
+    self.addProperty("Mistika", True)
+    self.addProperty("DaVinciResolve", False)
+    self.addProperty("FrameRate", "25")
+    self.addProperty("EditChangesMTK",5)
+    self.addProperty("NewVFXMTK", 0)
+    self.addProperty("EditChangesDVR", 3)
+    self.addProperty("NewVFXDVR", 4)
+
+
+    self.setAcceptConnectors(False,"edlBefore")
+    self.setAcceptConnectors(False, "edlAfter")
+    self.bypassSupported=True
+    self.color=QColor(0,45,45)
+    return True
+
+def isReady(self):
+    res=True
+    if self.bypassSupported and self.bypassEnabled:
+        return res
+    if not self.edlMarkersPath:
+        res=self.critical("edl2EditChange:edlMarkersPath:notFound","Destination Path can not be empty") and res
+    return res
+
+def process(self):
+
+    def getEvents(up):
+        edlEvents=[]
+        files=up.getFiles()
+        if not files:
+            self.critical("edl2EditChange:getEvents:notEDL", "Unable to interpret input UP {}".format(up.getFilePath()))
+            return False
+        filename=files[0]
+        if filename.endswith('.edl'):
+            try:
+                with open(filename) as f:
+                    for line in f:
+                        try:
+                            eventNumber = int(line.split()[0])
+                            isEvent = isinstance(eventNumber, int)
+                        except:
+                            continue
+                        if isEvent:
+                            line = line.strip()
+                            edlEvents.append(line)
+                    f.close()
+            except:
+                self.critical("edl2EditChange:getEvents:'.edl' file", ".edl file not found".format(up.getFilePath()))
+                return False
+
+        return edlEvents
+
+    def rmEqualEvents(eventsBefore,eventsAfter):
+        eventsIndex=[]
+        eventsClean=eventsAfter
+        for i, EventAfter in enumerate (eventsAfter):
+            for j, EventBefore in enumerate (eventsBefore):
+                if EventAfter == EventBefore:
+                    eventsIndex.append(i)
+                else:
+                    continue
+        for k in reversed(eventsIndex):
+            eventsClean.pop(k)
+        return eventsClean
+
+    def tryDeltaZero(FrameRate,TCin,TCout):
+        try:
+            delta=Timecode(FrameRate,TCin).frames-Timecode(FrameRate,TCout).frames
+        except:
+            return 0
+        else:
+            return delta
+
+    def tryDeltaZeroTC(FrameRate,TCin,TCout):
+        try:
+            TC=Timecode(FrameRate,TCin)-Timecode(FrameRate,TCout)
+        except:
+            return 0
+        else:
+            return TC
+
+    def processEDL (up1,up2,dstPathEDL):
+        eventsBefore=[]
+        eventsAfter=[]
+        files = up2.getFiles()
+        filename = files[0]
+        dstFileDVR = dstPathEDL + os.path.basename(filename)[:-4] + '_EditChangesDVR.edl'
+        if os.path.isfile(dstFileDVR) and self.DaVinciResolve:
+            os.remove(dstFileDVR)
+        dstFileMTK = dstPathEDL + os.path.basename(filename)[:-4] + '_EditChangesMTK.edl'
+        if os.path.isfile(dstFileMTK) and self.Mistika:
+            os.remove(dstFileMTK)
+        dstFilesDVR = []
+        dstFilesMTK = []
+        eventsBefore=getEvents(up1)
+        eventsAfter=getEvents(up2)
+        eventsAfter=rmEqualEvents(eventsBefore,eventsAfter)
+        eventsProcessed = []
+        eventsIndex=[]
+        try:
+            for i, EventAfter in enumerate (eventsAfter):
+                for j, EventBefore in enumerate (eventsBefore):
+                    if EventAfter.split()[1] == EventBefore.split()[1]:
+                        deltas=[]
+                        deltasTC=[]
+                        edlEvent=EventAfter.split()[0]
+                        VFXName=EventAfter.split()[1]
+                        srcTCinBefore=EventBefore.split()[4]
+                        srcTCinAfter=EventAfter.split()[4]
+                        srcTCoutBefore=EventBefore.split()[5]
+                        srcTCoutAfter=EventAfter.split()[5]
+                        recTCinBefore=EventBefore.split()[6]
+                        recTCinAfter=EventAfter.split()[6]
+                        recTCoutBefore=EventBefore.split()[7]
+                        recTCoutAfter=EventAfter.split()[7]
+
+                        deltaSrcTCin = tryDeltaZero(FrameRate,srcTCinAfter,srcTCinBefore)
+                        deltaSrcTCout = tryDeltaZero(FrameRate,srcTCoutAfter,srcTCoutBefore)
+                        deltaRecTCin = tryDeltaZero(FrameRate,recTCinAfter,recTCinBefore)
+                        deltaRecTCout = tryDeltaZero(FrameRate,recTCoutAfter,recTCoutBefore)
+                        deltas.extend([deltaSrcTCin,deltaSrcTCout,deltaRecTCin,deltaRecTCout])
+
+                        deltaTCRecTCin=tryDeltaZeroTC(FrameRate,recTCinAfter,recTCinBefore)
+                        deltaTCRecTCOut=tryDeltaZeroTC(FrameRate,recTCoutAfter,recTCoutBefore)
+                        deltasTC.extend([deltaTCRecTCin,deltaTCRecTCOut])
+
+                        eventsIndex.append(i)
+
+
+                        if self.DaVinciResolve:
+                            lineDVR = (edlEvent + '  ' + VFXName + '  V  C  ' + srcTCinAfter + ' ' + srcTCoutAfter + ' ' + recTCinAfter + ' ' + recTCoutAfter + ' ' + '\n'
+                                    + 'Head Trim:' + str(deltas[0]) + ' frames' +' --- '
+                                    + 'Tail Trim:' + str(deltas[1]) + ' frames' + '\n'
+                                    + 'Rec TC In:' + str(deltas[2]) + ' frames (' + str(deltaTCRecTCin) +')\n'
+                                    + 'Rec TC Out:' + str(deltas[3]) + ' frames (' + str(deltaTCRecTCOut) +')\n'
+                                    + ' ' + DaVinciMarkers[EditColorsIndexDVR] + ' |M:' + VFXName + ' |D:1\n')
+                            with open(dstFileDVR, 'a') as f:
+                                f.writelines('\n' + lineDVR)
+                            f.close()
+                            print(lineDVR)
+
+                        if self.Mistika:
+                            lineMTK = (edlEvent + '  ' + VFXName + '  V  C  ' + srcTCinAfter + ' ' + srcTCoutAfter + ' ' + recTCinAfter + ' ' + recTCoutAfter + ' ' + '\n'
+                                    + '*LOC: ' + recTCinAfter + '  ' + MistikaMarkers[EditColorsIndexMTK] + '  ' + VFXName
+                                    + ' HeadTrim:' + str(deltas[0]) + ' frames'
+                                    + ' TailTrim:' + str(deltas[1]) + ' frames'
+                                    + ' RecTCIn:' + str(deltas[2]) + ' frames (' + str(deltaTCRecTCin) + ')'
+                                    + ' RecTCOut:' + str(deltas[3]) + ' frames (' + str(deltaTCRecTCOut) + ')'
+                                    + ' \n')
+
+                            with open(dstFileMTK, 'a') as f:
+                                f.writelines('\n' + lineMTK)
+                            f.close()
+                            print(lineMTK)
+
+            eventsRemain=eventsAfter
+            [eventsProcessed.append(x) for x in eventsIndex if x not in eventsProcessed]
+
+            for k in reversed(eventsProcessed):
+                eventsRemain.pop(k)
+
+            for event in eventsRemain:
+                edlEvent = EventAfter.split()[0]
+                VFXName = EventAfter.split()[1]
+                srcTCinAfter = EventAfter.split()[4]
+                srcTCoutAfter = EventAfter.split()[5]
+                recTCinAfter = EventAfter.split()[6]
+                recTCoutAfter = EventAfter.split()[7]
+
+                if self.DaVinciResolve:
+                    lineDVR = (edlEvent + '  ' + VFXName + '  V  C  ' + srcTCinAfter + ' ' + srcTCoutAfter + ' ' + recTCinAfter + ' ' + recTCoutAfter + ' ' + '\n'
+                                + 'NEW VFX  ' + '\n'
+                                + ' ' + DaVinciMarkers[NewVFXColorsIndexDVR] + ' |M:' + VFXName + ' |D:1\n')
+                    with open(dstFileDVR, 'a') as f:
+                        f.writelines('\n' + lineDVR)
+                    f.close()
+                    print(lineDVR)
+
+                if self.Mistika:
+                    lineMTK = (edlEvent + '  ' + VFXName + '  V  C  ' + srcTCinAfter + ' ' + srcTCoutAfter + ' ' + recTCinAfter + ' ' + recTCoutAfter + ' ' + '\n'
+                                + '*LOC: ' + recTCinAfter + '  ' + MistikaMarkers[NewVFXColorsIndexMTK] + '  ' + VFXName
+                                + '  NEW VFX  ' + ' \n')
+
+                    with open(dstFileMTK, 'a') as f:
+                        f.writelines('\n' + lineMTK)
+                    f.close()
+                    print(lineMTK)
+
+            if self.DaVinciResolve:
+                dstFilesDVR.append(dstFileDVR)
+            if self.Mistika:
+                dstFilesMTK.append(dstFileMTK)
+
+        except OSError:
+            self.critical("edl2EditChange:processEDL:notFound","Unable to process File {}".format(filename))
+            return [False,None,None]
+
+        return [True,dstFilesDVR,dstFilesMTK]
+
+    res=True
+
+
+    if self.bypassEnabled:
+        #this node leaves the outputs empty during bypass as the files are not generated
+        return True
+
+    EditColorsIndexDVR=int(self.EditChangesDVR)
+    NewVFXColorsIndexDVR=int(self.NewVFXDVR)
+    DaVinciMarkers = ['|C:ResolveColorBlue', '|C:ResolveColorCyan', '|C:ResolveColorGreen', '|C:ResolveColorYellow', '|C:ResolveColorRed','|C:ResolveColorPink','|C:ResolveColorPurple','|C:ResolveColorFuchsia',
+                      '|C:ResolveColorRose','|C:ResolveColorLavender','|C:ResolveColorSky','|C:ResolveColorMint','|C:ResolveColorLemon','|C:ResolveColorSand','|C:ResolveColorCocoa','|C:ResolveColorCream']
+    EditColorsIndexMTK=int(self.EditChangesMTK)
+    NewVFXColorsIndexMTK=int(self.NewVFXMTK)
+    MistikaMarkers=['RED','GREEN','BLUE','CYAN','MAGENTA','YELLOW','BLACK','WHITE']
+
+    outConEDLMarkers=self.getFirstConnectorByName("edlMarkers")
+    outConEDLMarkers.clearUniversalPaths()
+    input1=self.getFirstConnectorByName("edlBefore")
+    input2=self.getFirstConnectorByName("edlAfter")
+    FrameRate=float(self.FrameRate)
+
+    if not self.DaVinciResolve and not self.Mistika:
+        res = self.critical("edl2EditChange:edlMarkersFormat:No format selected", "At least one edl format is required") and res
+
+    dstPath=self.evaluate(self.edlMarkersPath).strip()
+    list1=input1.getUniversalPaths()
+    if len(list1) > 1:
+        res = self.critical("edl2EditChange:edlBeforeCut:TooManyFiles", "Only one edl file can be compared") and res
+    list2=input2.getUniversalPaths()
+    if len(list2) > 1:
+        res = self.critical("edl2EditChange:edlAfterCut:TooManyFiles", "Only one edl file can be compared") and res
+
+    nc=CnameConvention(self.getNameConvention())
+    if not nc.toString():
+        nc=self.getWorkflow().getNameConvention()
+
+    for up1 in list1:
+        if self.isCancelled():
+            return False
+        dstPathEDL=up1.getStringOverride(dstPath)
+        if not os.path.exists(dstPathEDL):
+            os.makedirs(dstPathEDL)
+
+        for up2 in list2:
+            [r,dstFilesDVR,dstFilesMTK]=processEDL(up1,up2,dstPathEDL)
+            res=res and r
+            if res:
+                if dstFilesDVR:
+                    for c in dstFilesDVR:
+                        outUP=CuniversalPath(nc,c)
+                        outConEDLMarkers.addUniversalPath(outUP)
+                if dstFilesMTK:
+                    for d in dstFilesMTK:
+                        outUP=CuniversalPath(nc,d)
+                        outConEDLMarkers.addUniversalPath(outUP)
+
+    return res
+</code>
+     <edlMarkersPath type="string">YOUR-EDL-OUTPUT-PATH/</edlMarkersPath>
+     <Mistika type="bool">true</Mistika>
+     <DaVinciResolve type="bool">true</DaVinciResolve>
+     <FrameRate type="string">25</FrameRate>
+     <EditChangesMTK type="int">5</EditChangesMTK>
+     <NewVFXMTK type="int">0</NewVFXMTK>
+     <EditChangesDVR type="int">3</EditChangesDVR>
+     <NewVFXDVR type="int">4</NewVFXDVR>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="32c0eb56-699a-4672-8d2e-950cdadcaca3"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="ebae8ad1-5313-4bda-9ee1-be963ef9c554"/>
+     <edlBefore name="edlBefore" type="input" id="16583352-0ca2-4769-bf92-09746604eada">
+      <linkedTo>803a9f2f-53ea-423d-b22d-85825c8a4fa1</linkedTo>
+     </edlBefore>
+     <edlAfter name="edlAfter" type="input" id="6ec098c2-94e7-4ded-8e0c-d04e179d0714">
+      <linkedTo>137f0cfc-ad96-460a-9320-a99894a56c24</linkedTo>
+     </edlAfter>
+     <edlMarkers name="edlMarkers" type="output" id="10d11626-7957-4552-a038-99537de56856"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-552.038,-752.531</ScenePos>
+     <Size type="size2">317,37</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">VFX Edit Changes to Markers</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-549.792,-707.661</ScenePos>
+     <Size type="size2">1564,108</Size>
+     <TextSize type="float">16</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">This workflow provides an EDL with markers information about Edit Changes that affect VFXs when a new edit of certain sequence is made
+The inputs of the main node are two EDLs: the one used before the re-edit, and the one after the re-edit.
+Both input EDLs need to have the VFX Name in the tapename of its corresponding edl events. 
+If that is not happening but the VFX Name is in the marker information of the EDL (*LOC), please refer to the "VFX EDL Markers" template in order to convert them  </Text>
+     <TextColor type="color">#ffffffff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-513.342,-490.96</ScenePos>
+     <Size type="size2">492.192,337.402</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Inputs</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ffd6c882</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">108.126,-506.863</ScenePos>
+     <Size type="size2">541.384,384.37</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">create EDL with Edit Changes in Markers</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ffa29862</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">160.497,-277.274</ScenePos>
+     <Size type="size2">475,146</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Choose output EDL markers format:
+- Avid/Premiere/Mistika (*LOC)
+- DaVinci Resolve
+Set Project fps for offset calculations
+Choose different colors for edit changes in existing VFX,
+or new VFX added to the sequence</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

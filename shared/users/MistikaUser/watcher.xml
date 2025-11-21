@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Watcher>
+    <NameConvention>
+      <maintainPadding>true</maintainPadding>
+      <nameConvention/>
+    </NameConvention>
+    <addRoot>true</addRoot>
+    <alphabeticalOrder>false</alphabeticalOrder>
+    <areYouSure>false</areYouSure>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#aa557f</color>
+    <continuePreviousExecutions>false</continuePreviousExecutions>
+    <deleteAfterProcessing>false</deleteAfterProcessing>
+    <exclude/>
+    <forceCheck>0</forceCheck>
+    <globalTimer>true</globalTimer>
+    <include/>
+    <latency>5</latency>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Watcher</objectName>
+    <recursive>true</recursive>
+    <url/>
+  </Watcher>
+</nodeCommonRoot>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <GoogleDriveOut>
+    <clientId/>
+    <color>#fbbc04</color>
+    <folderId/>
+    <objectName>GoogleDriveOut</objectName>
+  </GoogleDriveOut>
+</nodeCommonRoot>

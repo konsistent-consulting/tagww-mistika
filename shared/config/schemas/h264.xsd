@@ -1,0 +1,89 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="H264" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="url" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="Transcoding" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="5">
+                    <xsd:complexType>
+                        <xsd:sequence>
+							<xsd:element name="useMovieAudio" type="xsd:boolean" default="false" sgo:visibility="0" sgo:sortOrder="0"/>	
+                            <xsd:element name="enableFrameRange" type="xsd:boolean" default="false" sgo:visibility="0" sgo:sortOrder="10"/>
+                            <xsd:element name="rangeFirstFrame" type="xsd:integer" default="0" sgo:minValue="0" sgo:maxValue="1000000" sgo:stepValue="1" sgo:visibility="0" sgo:sortOrder="11"/>
+                            <xsd:element name="rangeDuration" type="xsd:integer" default="0" sgo:minValue="0" sgo:maxValue="1000000" sgo:stepValue="1" sgo:visibility="0" sgo:sortOrder="12"/>
+                            <xsd:element name="codec" type="stringPulldown" sgo:stringPulldownValues="H264 VBR$$$ffmpeg_MP4.MP4_H264_BITRATE" sgo:visibility="0" sgo:sortOrder="13"/>
+                            <xsd:element name="bitrate" type="xsd:integer" sgo:minValue="0" sgo:stepValue="1000000" sgo:visibility="0" sgo:sortOrder="14"/>
+                            <xsd:element name="gop" type="xsd:integer" sgo:minValue="0" sgo:maxValue="1000000" sgo:stepValue="1" sgo:visibility="0" sgo:sortOrder="15"/>
+                            <xsd:element name="resolution" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="16" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_resolutionList"/>
+                            <xsd:element name="imageResX" type="xsd:integer" sgo:minValue="0" sgo:properties="textFromValue('From Input$$$0')" sgo:visibility="0" sgo:sortOrder="17"/>
+                            <xsd:element name="imageResY" type="xsd:integer" sgo:minValue="0" sgo:properties="textFromValue('From Input$$$0')" sgo:visibility="0" sgo:sortOrder="18"/>
+                            <xsd:element name="fit" type="stringPulldown" sgo:stringPulldownValues="Disabled$$$0|Fit$$$1|Fill$$$2|Anamorphic$$$3" sgo:visibility="0" sgo:sortOrder="19"/>
+							<xsd:element name="scaleFilter" type="integerPulldown" sgo:integerPulldownValues="From Input$$$-1|Nearest$$$0|Bilinear$$$1|Bicubic$$$2|7 Taps$$$3|15 Taps$$$4" sgo:visibility="0" sgo:sortOrder="20"/>
+                            <xsd:element name="fps" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="180.00" sgo:decimalStepValue="0.01" sgo:decimalDigits="2" sgo:properties="textFromValue('From Input$$$0;')" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_fpsList" sgo:visibility="0" sgo:sortOrder="21"/>
+							<xsd:element name="interlaced" type="integerPulldown" sgo:integerPulldownValues="From Input$$$-1|No$$$0|PAL$$$1|NTSC$$$2" sgo:visibility="0" sgo:sortOrder="22"/>
+                            <xsd:element name="pixelAspectRatioConversion" type="integerPulldown" sgo:integerPulldownValues="As Input$$$0|HD to NTSC$$$4121|HD to PAL$$$4111" sgo:visibility="0" sgo:sortOrder="23"/>
+                            <xsd:element name="changetimecode" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="24"/>
+                            <xsd:element name="timecode" type="timecode" sgo:visibility="0" sgo:sortOrder="33"/>
+                            <xsd:element name="dropFrame" type="integerPulldown" sgo:integerPulldownValues="From Input$$$-1|No Drop Frame$$$0|Drop Frame$$$1|Auto$$$2" sgo:visibility="0" sgo:sortOrder="34"/>
+                            <xsd:element name="audioCodec" type="stringPulldown" sgo:stringPulldownValues="None$$$None|Audio In Movie$$$Null.dev|Wav 16 bits$$$WAVE.AUDIO_WAVE_16|Wav 24 bits$$$WAVE.AUDIO_WAVE_24|Wav 32 bits$$$WAVE.AUDIO_WAVE_32|Wav64 32 bits$$$WAVE.AUDIO_W64_32|aiff 16 bits$$$WAVE.AUDIO_AIFF_16|caf 32 bits$$$WAVE.AUDIO_CAF_32|rf64 32 bits$$$WAVE.AUDIO_RF64_32" sgo:visibility="0" sgo:sortOrder="35"/>
+                            <xsd:element name="packAudioTracks" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="40"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Metadata" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="6">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="exportMetadata" type="integerPulldown" sgo:integerPulldownValues="None$$$0|XMP$$$1|CSV$$$2" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="tapeNameSource" type="integerPulldown" sgo:integerPulldownValues="Source TapeName$$$0|Source FileName$$$1|Render FileName$$$3" sgo:visibility="0" sgo:sortOrder="1"/>
+                           <xsd:element name="exportCDL" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Unicolor" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="7">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="colorSpace" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_colorSpaceList"/>
+                            <xsd:element name="gamma" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="1" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_gammaList"/>
+                            <xsd:element name="gamut" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="2" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_gamutList"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Lut3D" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="8">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="lut3D" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_lut3DList"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="DisplayFilter" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="9">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="displayFilter" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_displayFilterList"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="VirtualSlate" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="10">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="virtualSlate" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_virtualSlateList"/>
+                            <xsd:element name="virtualSlateDuration" type="stringPulldown" sgo:stringPulldownValues="All Frames$$$-1|1 Frame$$$1|2 Frames$$$2|5 Frames$$$5" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="11">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="addTimeStamp" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="renderFarmEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="farmParams" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Python scripting tools &gt; System integration</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Introduction &nbsp;The main system integration resource is the integrated Python engine, which is covered in its own &nbsp;chapters Python scripting tools and Mistika python extension li" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "system-integration.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">System integration</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?system-integration.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="python-scripting-tools-in-mist.html">Python scripting tools</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">System integration</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="mistika-python-extension-libra.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="python-scripting-tools-in-mist.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <span class="hmbtnnext"></span>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1Black" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading1Black">Introduction</span></h1>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;"><span class="f_BodyText">The main system integration resource is the integrated Python engine, which is covered in its own &nbsp;chapters</span> <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools</a> and <span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;"><a href="https://www.sgo.es/doc/python/." target="_blank" class="weblink">Mistika python extension library</a></span><span class="f_BodyText">. This chapter is about other external resources and configuration files for programmers and system integrators.</span></p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 24px 0 24px;"><span class="f_BodyText">As any Mistika product, Mistika Workflows is an open environment, there are no proprietary databases and all the data structures are stored in text files, either ASCII or XML. A first introduction (for non programmers) was covered</span> <span class="f_BodyText">in the</span>  <a href="mistika-wf-folder-structure.html" class="topiclink">Mistika Folder structures </a><span class="f_BodyText">section. </span></p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 24px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 24px 0 24px;"><span class="f_BodyText">Here &nbsp;you will find extra details for engineers and programmers.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">The shared folder.</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">&nbsp;</span></h2>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;"><span class="f_BodyText">When you install a Mistika product, the location of the installation folders is defined in the SGO Apps/installation.xml file. </span></p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;"><span class="f_BodyText">One &nbsp;of those folders is specially relevant for &nbsp;Mistika Workflows, which is the &quot;shared&quot; folder. Among other things this folder contains all the python nodes and their xsd schemas, plus all the display filters that are available.</span><span class="f_Heading2"> &nbsp;</span></p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">SGO AppData/shared/config/schemas</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">SGO AppData/shared/workflowsLibrary</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">SGO AppData/shared/display_filters</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">(the shared folder also contains more folders, &nbsp;but in general they are only relevant for other Mistika applications)</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">The interesting thing of the shared folder is that it is designed to be shared between different computers having any Mistika applications installed. To take advantage of this capability you can copy the shared folder to a shared network drive and then change its location in the installations.xml file of all computers sharing it. &nbsp;In that way, any display filter or python node created (or modified) in any system will be immediately available to the other systems.</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">You can change the location of the shared folder trough the preferences menu, or directly in this configuration file:</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">&nbsp;</p>
+<p style="text-align: justify; background: #ffffff; margin: 0 0 0 21px;"><span style="font-size: 13px;">Mac, Linux:  </span><span style="font-size: 13px; font-style: italic; color: #272c33;">.sgoMistika/mistikaPaths.xml</span></p>
+<p style="text-align: justify; background: #ffffff; margin: 0 0 0 21px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000; background-color: #ffffff;">&nbsp;</span></p>
+<p style="text-align: justify; background: #ffffff; margin: 0 0 0 21px;"><span style="font-size: 13px;">Windows:  </span><span style="font-size: 13px; font-style: italic; color: #272c33;">AppData/Local/sgoMistika/mistikaPaths.xml</span> </p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">External script syntax. &nbsp;</span></h2>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38;">&nbsp;</p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 23px 10px 24px;"><span class="f_BodyText">The workflow .mwf files use standard Xml syntax. A single file contain all the workflows defined in a Mistika Workflows section. Programming is normally managed in the Python script editor, which provides the necessary</span> <a href="https://www.sgo.es/doc/python/." target="_blank" class="weblink">Mistika Workflows Python extensions module</a><span class="f_BodyText">. You should rarely need direct modifications to these files, although they are indeed possible.</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 23px 10px 0;"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 24px 0 24px;"><span class="f_BodyText">Meanwhile, the .RND Files (which you can load and execute with the</span> <a href="mistikarender.html" class="topiclink">Mistika Render</a> <span class="f_BodyText">task node) &nbsp;and the </span><span class="f_T_Entry10pt">.dfilt </span><span class="f_BodyText"> files (display filters that you can apply to transcoding nodes) are Mistika traditional scripts, which are documented</span> <a href="https://support.sgo.es/a/solutions/articles/1000237044" target="_blank" class="weblink">here</a><span class="f_BodyText">.</span> </p>
+<p class="p_Normal" style="line-height: 1.38;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">Task nodes with Mistika &quot;render&quot; capabilities (MistikaRender and transcoder task nodes). &nbsp;</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="text-align: justify; margin: 0 0 10px 24px;"><span class="f_BodyText">When nodes with Mistika render capability (transcoders and MistikaRender) are executed in the queue they will render a .RND File, which is saved in the temporal folder ( /tmp, but it depends on each OS). </span></p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 0 0 24px;"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">Note:</span><span class="f_BodyText"> In the particular case of the</span> <a href="mistikarender.html" class="topiclink">MistikaRender </a><span class="f_BodyText">node the path to the .rnd is defined on its own property.</span></p>
+<p class="p_Normal" style="text-align: justify;">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 24px 0 24px;"><span class="f_BodyText">Once the rnd is created, a render process is launched automatically, equivalent to what you could do with the CLI (</span> <span class="f_T_Menu">workflows -r PathToTemporalRND.rnd</span> <span class="f_BodyText">). &nbsp;And the queue workflow will &nbsp;not continue until this render is finished. &nbsp;(if you want to run more workflows in parallel you can open other instances of the Mistika Workflows application).</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 24px 0 24px;"><span class="f_BodyText">Please note that those .RND Files do not contain a whole workflow, just the render job for the ongoing task node. </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">Display filter files</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">Display filters are inserted in the RND Files by &nbsp;transcoder nodes, and they are equivalent to activate the same display filter in the </span><span class="f_BodyText" style="font-weight: bold;">Mistika Ultima</span><span class="f_BodyText"> &amp; </span><span class="f_BodyText" style="font-weight: bold;">Boutique</span><span class="f_BodyText"> (going to the display filters panel and selecting the &quot;render&quot; type in there). &nbsp;A display filter can contain any combination of Mistika effects, and it is highly recommended to create them with Mistika Ultima or Mistika Boutique, but not mandatory.</span></p>
+<p class="p_BodyText" style="text-align: justify; margin: 0 0 10px 24px;"><span class="f_BodyText">These files are &nbsp;.dfilt &nbsp;files stored in the folder: </span><span class="f_T_Menu">SGO AppData/shared/display_filters</span><span class="f_BodyText">, and they use traditional <a href="https://support.sgo.es/a/solutions/articles/1000237044" target="_blank" class="weblink">Mistika ASCII syntax</a> &nbsp;(not Xml)</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">Display filters can be modified before execution, the &nbsp;CSV To DFILT node is a good example node about how to do it. This particular example will configure a display filter (a watermark overlay in this example) using the text of a .csv file. &nbsp;Find more details about complex (multilayer) display filters in the </span> <a href="common-parameters.html#displayfilter" class="topiclink">display filter</a> point.</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">Image processing at pixel level</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">Python is a powerful language to process &quot;files&quot; and to manage &quot;transcoders&quot; of image formats, but this language it is not optimized for processing image content at pixel level, although many python modules exist for that. If you need high performance, Mistika also provides a way to execute <span class="f_T_Menu">GLSL</span> code at render time. To do this you will need to use a <a href="common-parameters.html#displayfilter" class="topiclink">display filter</a> node containing a <span class="f_T_Menu">GLSL</span> effect with your code (see Mistika Ultima and Boutique documentation).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 23px 0 24px;">The <span class="f_T_Menu">OFX </span>plugin standard is also supported for 3rd party effects included on display filters, although in Mistika Workflows this is only possible for render purposes (access to the GUI interface &nbsp;of an OFX plugin requires Mistika Ultima or Mistika Boutique).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">Supported image and audio formats</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: justify; margin: 0 24px 0 24px;"><span class="f_BodyText">Specialized nodes are provided for the most common formats, but generic read support is provided for many other formats trough the</span> <a href="mediasequence.html" class="topiclink">Media Sequence </a><span class="f_BodyText">and</span> <a href="mediamovie.html" class="topiclink">Media Movie </a><span class="f_BodyText">nodes. Here is a compilation with the </span> <a href="https://support.sgo.es/a/solutions/articles/1000236984" target="_blank" class="weblink">Mistika supported formats</a></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">Running Mistika Workflows in virtual machines / AWS / cloud servers</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="text-align: justify; margin: 0 0 10px 24px;"><span class="f_BodyText">This can be feasible but it is a bit more complicated that you might think. If you plan to run Mistika Workflows on virtual machines there are a couple of important aspects to consider:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText" style="font-weight: bold;">1</span><span class="f_BodyText"> - The virtual machine needs to have a GPU available to it and a graphic session active. This is because many important tasks are GPU based. &nbsp;Some formats can be decoded or encoded by GPU, and many image processes like color conversions, display filters, LUT, rescaling, etc are GPU based.</span></p>
+<p class="p_BodyText" style="text-align: justify; margin: 0 0 10px 24px;"><span class="f_BodyText" style="font-style: italic; font-weight: bold;">Note:</span><span class="f_BodyText"> Multiple GPUs are not supported, if there is more than one Mistika will only use one (the one where its session is launched)</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText" style="font-weight: bold;">2</span><span class="f_BodyText"> - A local license may fail to work on some virtual machines (they are serialized with mac addresses, and in some cases the license server can fail depending on how are they virtualized). However, if that happens Mistika can still get the license remotely from a physical machine (see next), so it can be solved in this way.</span></p>
+<p class="p_BodyText" style="text-align: justify; line-height: 1.38; margin: 0 24px 10px 24px;"><span class="f_BodyText">A particular case are AWS virtual machines. &nbsp;To run Mistika Workflows on AWS the AMI image needs to include the &quot;NVIDIA RTX software for virtual workstations&quot; or equivalent.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid; margin: 0 0 0 24px;"><span class="f_Heading2">Floating licenses</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<p class="p_Normal" style="text-align: justify; line-height: 1.38; margin: 0 24px 0 24px;"><span class="f_BodyText">All Mistika licenses are &quot;floating licenses&quot;, which means that they can be obtained dynamically from a remote license server. In the client computer just set the license server &nbsp;ip (or resolvable hostname) using the SGO Activation tool . &nbsp;In the server side nothing needs to be done (apart from activating enough licenses on it). &nbsp;The license is returned to the server the moment the Mistika Workflows is closed &nbsp;(or if the network connection is interrupted for too many seconds). &nbsp;More about licensing procedures</span> <a href="2_2-activating-a-mistika-vr-li.html" class="topiclink">here</a>.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

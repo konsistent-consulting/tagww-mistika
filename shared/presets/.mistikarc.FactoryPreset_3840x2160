@@ -1,0 +1,337 @@
+CACHE_STEREO_EYE               BOTH
+PATH_PROXY_SECUENCES           
+IMAGESIZEX                     3840
+IMAGESIZEY                     2160
+SCREENRATIO                    1.7777
+COLOR_SPACE_709                1
+NTSCFIELDS                     0
+FRAMESSEG                      23.97602397
+VIDEO_SIZE                     3840x2160
+VIDEO_RATE                     23
+VIDEO_MODE                     Progressive
+VIDEO_CONNECTOR                QUADSDI
+VIDEO_IO_MODE                  YUV422
+USE_3G                         0
+3G_LEVEL                       3GA
+VIDEO_STEREO                   0
+MULTICHANNEL_MODE              STEREO_DUAL_CHANNEL
+STEREO_DUAL_LINK_LEFT_MIRROR   0
+INTERNAL_VIDEO_STORAGE         YUV422
+SYNC_SOURCE                    SYNC_INTERNAL
+USE_EMBEBED_AUDIO              1
+CHECK_VTR_USER_DATA            0
+DROPFRAME                      0
+DVS_VTREDITLAG                 5
+EXR_DECOMPRESS                 SINGLE_LAYER
+MAXMEM                         1024
+VIDEO_RING_BUFFER              250
+PLAY_BUFFER                    50
+REEL_SETUP_DO_PREWIEWS         0
+LOWRESRATIO                    2
+READMULTIPLEDISKS              0
+CVFS_THREADS                   24
+PIPE_UNITS                     24
+RENDER_UNITS                   10
+BACKLOAD                       1
+RENDERMAIL                     NONE_FAIL
+MAILREPORTFAILURES             ONE_MAIL_PER_FILE
+MAILREPORTSUCCESS              ONE_MAIL_PER_FILE
+MONITORS_DOUBLE_BUFFER         1
+MONITOR_RESOLUTION             RES_HIGH
+USE_LIVE_VIDEO                 1
+RENDER_TO_VIDEO                0
+SAVE_BEFORE_RENDER             1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

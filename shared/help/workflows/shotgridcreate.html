@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; ShotGrid Create</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node connects to a Shotgrid database and allows the creation of Shotgrid’s entities based on any kind of input files: Project, Asset, Sequence, Shot and Version." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "shotgridcreate.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">ShotGrid Create</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?shotgridcreate.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">ShotGrid Create</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="seven7th.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="shotgridcsvreader.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This node connects to a Shotgrid database and allows the creation of Shotgrid’s entities based on any kind of input files: Project, Asset, Sequence, Shot and Version.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">In order to connect to an existing Shotgrid database, credentials can be granted in two different ways </span><span class="f_BodyText" style="font-weight: bold;">(1)</span><span class="f_BodyText">:</span></p>
+<p class="p_BodyText" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_BodyText" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BodyText">User/Pwd: Uses an existing user in the database. To perform the creation of new entities it must have the appropriate privileges in the database.</span></p><p class="p_BodyText" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_BodyText" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BodyText">API Key: Uses a script created in the ShotGrid database with its corresponding API Key. The script must also have the appropriate privileges. </span></p><p class="p_BodyText"><span class="f_BodyText">To learn more about creating scripts in ShotGrid, please consult the official documentation: <a href="https://developer.shotgridsoftware.com/99105475/" class="weblink">https://developer.shotgridsoftware.com/99105475/</a></span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">To check your connection with the Shotgrid database, simply right-click on the node and select ‘Reload Tables’ in the contextual menu </span><span class="f_BodyText" style="font-weight: bold;">(2)</span><span class="f_BodyText">. This will update the menus in the node according to the database getting the projects available, as well as the TaskTemplates and other properties needed to create the different assets. The ‘Reload Tables’ response from the ShotGrid site showing this information can be observed in the Script Editor panel </span><span class="f_BodyText" style="font-weight: bold;">(3)</span><span class="f_BodyText">.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="7s4Nb6E99-xYFGNUURzLf78B382FHPpsOJX86kJiO3Twkn5wUPbTOsTs49XXblICZwCioNY32dRK_VzMBsCrsHJBFoiab88zXbyEorL869uWDp4JlhoqUPRLpYxxTelx_4uzyBAh_ZLnNqvjMS60sVA" width="1572" height="744" style="margin:0;width:1572px;height:744px;border:none" src="7s4nb6e99-xyfgnuurzlf78b382fhppsojx86kjio3twkn5wupbtosts49xxbliczwciony32drk_vzmbscrshjbfoiab88zxbyeorl869uwdp4jlhoquprlpyxxtelx_4uzybah_zlnnqvjms60sva_zoom98.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">Once tables are updated, in the node Properties we can select the kind of table to be created. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">If the table is ‘Project’, then in the Project List pulldown menu we can select an existing project where we want to create the rest of the assets.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="wyVJi9xSb6EufIc5f5s5H7yTj0w1TN6t-0-xWt6iklGRCKWhj6fZ_VWEHWeX6lTfh3JWsXb68PSi42wLdxUSmpL3iceX85oRnovDMCI1x_z1ZvrR9Y9IeP2GeSkP_VxaG18CUpNdgrdkrRmAX-cs7ns" width="239" height="176" style="margin:0 auto 0 auto;width:239px;height:176px;border:none" src="wyvji9xsb6eufic5f5s5h7ytj0w1tn6t-0-xwt6iklgrckwhj6fz_vwehwex6ltfh3jwsxb68psi42wldxusmpl3icex85ornovdmci1x_z1zvrr9y9iep2geskp_vxag18cupndgrdkrrmax-cs7ns.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">If we want to create Sequence type of table, a box will appear to introduce its naming. A Sequence must always be created &nbsp;within an existing Project. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">In order to establish a dynamic sequence naming, tokens can be used here (refer to </span><span class="f_T_Menu"><a href="nctometadata.html" class="topiclink">NC to metadata</a></span><span class="f_BodyText"> node for more information about how to extract tokens from a file naming structure).</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="V9HclOTrY1Wt-BnAqjurtNQeq4dVrZeKxUEpwjPS9_SwkbjxjirGd_xKj2uUKlukIdxHqpEWfkSvZyAL7bGxlLgF15uRz1ega_20AoGLt6Aq98oJOQDtlESeQ9uSERzmyXn2VINx9tjK6QBesuzG2AA" width="1249" height="211" style="margin:0;width:1249px;height:211px;border:none" src="v9hclotry1wt-bnaqjurtnqeq4dvrzekxuepwjps9_swkbjxjirgd_xkj2uuklukidxhqpewfksvzyal7bgxllgf15urz1ega_20aoglt6aq98ojoqdtleseq9userzmyxn2vinx9tjk6qbesuzg2aa.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">If we want to create Shot table type , another box will appear to introduce its naming, where tokens can also be used. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">A Shot must always be created &nbsp;within an existing Sequence in a Project. A Shot also needs to have assigned a Task Template and a status. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">To get the list of available Task Templates just right click on the node and select ‘Reload tables’. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">We can also see the available statuses to be assigned to the created shots in the Script Editor panel after reloading the tables.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="ruHrAk2iX9i-Aj7mq6sH_B_sldpfFGBu5W3eL68ujT8zFjHEd67IprL5WCfp2rD_RW84YQvtTJUV6Bavk5UKpD4P2yx_ExDYcA1xw0qpLeVxo1ML34nIuMArRi00XLNToTaFn1d-Haxypn8ngbZ-mTg" width="1213" height="312" style="margin:0;width:1213px;height:312px;border:none" src="ruhrak2ix9i-aj7mq6sh_b_sldpffgbu5w3el68ujt8zfjhed67iprl5wcfp2rd_rw84yqvttjuv6bavk5ukpd4p2yx_exdyca1xw0qplevxo1ml34niumarri00xlntotafn1d-haxypn8ngbz-mtg.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="mENzyHYl1ewIx5BrEt_xdeOiKta8xTmeOLjeSrXRYNPxmzH2t8JiU0hhC-X5glyFXgNm5I1jECqgbOEaOBzDkTZ2_OivKG3ScAceTS8tq4eBRWZNON-FwIHnRcuDlO2dtMRzil-kYGhlcIFvsDs_h3M" width="1178" height="270" style="margin:0;width:1178px;height:270px;border:none" src="menzyhyl1ewix5bret_xdeoikta8xtmeoljesrxrynpxmzh2t8jiu0hhc-x5glyfxgnm5i1jecqgboeaobzdktz2_oivkg3scacets8tq4ebrwznon-fwihnrcudlo2dtmrzil-kyghlcifvsds_h3m.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">If we want to create a ‘Version’ table type, another box will appear to introduce its naming, and also another one to assign the Task where the version of the shot is wanted to be created. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">In addition, a pulldown menu with the Status to be assigned to the Version will appear.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="l4y_GdLji9nfEn2spu64SUuPOkPi3Xi21kEc1hIPLGgxa4F59F9mMm7u0RbM_2-e7FUUi9kvc6DTEmXP8uTGuSuHGj0_YyutKuMROJk76_NL-KoiicT-5BTzHEn8qgKgXxr_MMlYMGKxM0TQORZTh0Y" width="1248" height="269" style="margin:0;width:1248px;height:269px;border:none" src="l4y_gdlji9nfen2spu64suupokpi3xi21kec1hiplggxa4f59f9mmm7u0rbm_2-e7fuui9kvc6dtemxp8utgusuhgj0_yyutkumrojk76_nl-koiict-5btzhen8qgkgxxr_mmlymgkxm0tqorzth0y.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">All assets offer the possibility of uploading the input files processed as attachment or as thumbnail. However, due to ShotGrid's internal behavior, only if a file is uploaded when creating a Version it will be automatically transcoded and appear as playable media in the browser. Uploaded files when creating a Shot will appear as a downloable attachment in a column field, but they </span><span class="f_BodyText" style="font-weight: bold;">will not</span><span class="f_BodyText"> be automatically transcoded neither will appear as playable media with its corresponding thumbnail.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">All uploaded videos are transcoded into a streamable 1080p, H.264 format. To learn more about transcoding in ShotGrid, please consult the official documentation: <a href="https://help.autodesk.com/view/SGSUB/ENU/?guid=SG_Supervisor_Artist_sa_review_approval_sa_transcoding_html" class="weblink">https://help.autodesk.com/view/SGSUB/ENU/?guid=SG_Supervisor_Artist_sa_review_approval_sa_transcoding_html</a></span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Finally, in order to automate the creation of different Assets, Sequences, Shots and Versions, several ShotGrid Create nodes can be concatenated, and its naming structure can be extracted from the source files name convention. For example, if we want to create the shots corresponding to this reference files:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="iv_6A0Q1w3ciOFDt8GzCVSBKL7ltps3Pq_ZZHYiVjDRRFY5SpiEuszuVHZmp-7ZsFHjSvEXZBiGekPdRtuzEfvj5ZkLx39C85vPd7rNsjAxjKfQ8l7TIAMqCf7plf-34w1jsxzxau1FH4QC4gKvE3r8" width="242" height="80" style="margin:0 auto 0 auto;width:242px;height:80px;border:none" src="iv_6a0q1w3ciofdt8gzcvsbkl7ltps3pq_zzhyivjdrrfy5spieuszuvhzmp-7zsfhjsvexzbigekpdrtuzefvj5zklx39c85vpd7rnsjaxjkfq8l7tiamqcf7plf-34w1jsxzxau1fh4qc4gkve3r8.png"/></p>
+<p class="p_BodyText"><span class="f_BodyText">We can define the name convention in the source folder of this files as following:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="vQg1_4ceIzx9AX4sKAUIFaNdfNpoVS7beTCYfDY9HJ2rfID_4bmGbbjrmRCdIoGvcSGhJd_C8xtgau2-fsuMGKOQ4fsCHdlmqUSngSsbBiEgvn6sQqqXRBwiidyaC2bMs01Krw7r9yYSw81XCvl-9BM" width="606" height="88" style="margin:0 auto 0 auto;width:606px;height:88px;border:none" src="vqg1_4ceizx9ax4skauifandfnpovs7betcyfdy9hj2rfid_4bmgbbjrmrcdiogvcsghjd_c8xtgau2-fsumgkoq4fschdlmqusngssbbiegvn6sqqqxrbwiidyac2bms01krw7r9yysw81xcvl-9bm.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">You can use the </span><span class="f_T_Menu"><a href="nctometadata.html" class="topiclink">NC to metadata</a></span><span class="f_BodyText"> node to get token values from filenames. Then, combine multiple ShotGrid Create nodes to create assets, using these tokens to determine asset names.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="UR6AKiTT059sBI_OE0r-aqTIlJ90p2uDZJbP1R_yT5OeyNQ_DljPmyGL547WjyciqOSAuOpz38XBJkdJ9-sIwYczZwGiQ5z-7G1YeWAjIPgX3dSMHAv3NZj3uy9loG-lwIiQghr4Mai4T0PqYQCfLPg" width="1317" height="464" style="margin:0;width:1317px;height:464px;border:none" src="ur6akitt059sbi_oe0r-aqtilj90p2udzjbp1r_yt5oeynq_dljpmygl547wjyciqosauopz38xbjkdj9-siwyczzwgiq5z-7g1yewajipgx3dsmhav3nzj3uy9log-lwiiqghr4mai4t0pqyqcflpg.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">After the execution of this workflow we will have the following structure created in our ShotGrid site:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="z5_G-jMWp0zRSdMCdVvvNGqhML1ZnH51nNL2vPPe-EouS19XS7NOG34l9qPj7FrIBEOUjNysJGxnhV6vGDGdExBNg2m_ZL3N412tThBZzJEYQmy6QTgHgFghsNqTIQn75L7NT3KSaUOstiLYR-3j1m0" width="970" height="346" style="margin:0;width:970px;height:346px;border:none" src="z5_g-jmwp0zrsdmcdvvvngqhml1znh51nnl2vppe-eous19xs7nog34l9qpj7fribeoujnysjgxnhv6vgdgdexbng2m_zl3n412tthbzzjeyqmy6qtghgfghsnqtiqn75l7nt3ksauostilyr-3j1m0.png"/></p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">files:</span> <span class="f_BodyText">Files to be used to create the ShotGrid asset structure.</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">created:</span> <span class="f_BodyText">The files used as input and processed, as well as it creates the desired asset structure in the ShotGrid site.</span></p>
+<p class="p_Normal">.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Python standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#code" class="topiclink">code</a></span></h3>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_T_Emphasis">NOTE: An introduction to all the Python tools in Mistika Workflows is available in the <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools </a>section.</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Table</span><span class="f_BodyText">: the kind of table to be consulted or created in the ShotGridsite. It can be ‘Project’, ‘Asset’, ‘Sequence’, ‘Shot’ or ‘Version</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Project List</span><span class="f_BodyText">: On right click -&gt; Reload Tables, it shows the projects availables in the ShotGridsite.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Project</span><span class="f_BodyText">: the name of the project</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Sequence</span><span class="f_BodyText"> (only if Table ‘Sequence’ is selected): the name of the sequence to be created in the ShotGridsite.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Shot</span><span class="f_BodyText"> (only if Table ‘Shot’ is selected): the name of the shot to be created in the ShotGridsite.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Template List</span><span class="f_BodyText"> (only if Table ‘Shot’ is selected): On right click -&gt; Reload Tables, it shows the TaskTemplates available in the shotgrid site.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Task Template</span><span class="f_BodyText"> (only if Table ‘Shot’ is selected): The TaskTemplate selected in the previous pulldown.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Task</span><span class="f_BodyText"> (only if Table ‘Version’ is selected): The Task of the shot where the Version is going to be created.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Status</span><span class="f_BodyText">: The status to be assigned to the asset created. To learn more, please consult the official documentation: <a href="https://help.autodesk.com/view/SGSUB/ENU/?guid=SG_Producer_pr_project_tracking_pr_statuses_html" class="weblink">https://help.autodesk.com/view/SGSUB/ENU/?guid=SG_Producer_pr_project_tracking_pr_statuses_html</a></span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Upload (Disabled / As Attachment / As Thumbnail)</span><span class="f_BodyText">: Menu to upload the processed file to the shotgrid site as attachment or thumbnail, if desired.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Credentials</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Credentials Type (API Key - User/Pwd)</span><span class="f_BodyText">: Type of credentials used to log in in the shotgrid site and create the assets.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Url:</span><span class="f_BodyText"> the ShotGridsite url</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Script Name</span><span class="f_BodyText">: the name of the script created in the ShotGridsite.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">API Key</span><span class="f_BodyText">: the key generated by shotgrid to authenticate the script created.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">User</span><span class="f_BodyText">: the user to log in</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Pwd</span><span class="f_BodyText">: the password of the user to log in.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

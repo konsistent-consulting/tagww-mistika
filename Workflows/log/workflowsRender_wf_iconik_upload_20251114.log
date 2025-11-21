@@ -1,0 +1,50 @@
+2025.11.14 16:50:16.302|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.14 16:50:16.304|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.14 16:50:16.304|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.14 16:50:16.310|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikIn
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|Process started
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|domain='https://app.iconik.io', appId set=True, authToken set=True
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|collectionId='', collectionPath='[brand]/[campaign]/[job]'
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|Raw (after evaluate) collectionPath='[brand]/[campaign]/[job]'
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|No UPs on 'in' connector
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|Template='[brand]/[campaign]/[job]'  Expanded='[brand]/[campaign]/[job]'
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|mirrorSubfolders=True
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|'in' connector has no UPs
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|No files from connector ? trying inputFolder
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|inputFolder is empty
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|iconikIn|Total input files to process: 0
+2025.11.14 16:50:16.311|Critical Error|wf_iconik_upload|iconikIn|no input files (connector or inputFolder)
+2025.11.14 16:50:16.311|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.14 16:50:16.317|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed
+2025.11.14 16:57:19.856|Critical Error|wf_iconik_upload|jsonToTokens|'jsonFile' must point to a JSON file
+2025.11.14 16:57:19.859|Critical Error|wf_iconik_upload|jsonToTokens|'jsonFile' must point to a JSON file
+2025.11.14 16:57:19.860|Critical Error|wf_iconik_upload|jsonToTokens|'jsonFile' must point to a JSON file
+2025.11.14 16:57:19.860|Critical Error|wf_iconik_upload|jsonToTokens|'jsonFile' must point to a JSON file
+2025.11.14 16:57:21.896|Critical Error|wf_iconik_upload|jsonToTokens|'jsonFile' must point to a JSON file
+2025.11.14 16:57:21.896|Critical Error|wf_iconik_upload|jsonToTokens|'jsonFile' must point to a JSON file
+2025.11.14 16:57:25.200|Critical Error|wf_iconik_upload|jsonToTokens|'jsonFile' must point to a JSON file
+2025.11.14 16:57:25.200|Critical Error|wf_iconik_upload|jsonToTokens|'jsonFile' must point to a JSON file
+2025.11.14 16:57:26.547|Critical Error|wf_iconik_upload|jsonToTokens|'jsonFile' must point to a JSON file
+2025.11.14 17:15:07.510|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.14 17:15:07.510|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.14 17:15:07.510|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.14 17:15:07.520|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.14 17:15:07.529|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json_sample/sample.json
+2025.11.14 17:15:07.529|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.14 17:15:07.529|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.14 17:15:07.529|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.14 17:15:07.529|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikIn
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|Process started
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|domain='https://app.iconik.io', appId set=True, authToken set=True
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|collectionId='', collectionPath='[brand]/[campaign]/[job]'
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|Raw (after evaluate) collectionPath='[brand]/[campaign]/[job]'
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|No UPs on 'in' connector
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|Template='[brand]/[campaign]/[job]'  Expanded='[brand]/[campaign]/[job]'
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|mirrorSubfolders=True
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|'in' connector has no UPs
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|No files from connector ? trying inputFolder
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|inputFolder is empty
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|iconikIn|Total input files to process: 0
+2025.11.14 17:15:07.530|Critical Error|wf_iconik_upload|iconikIn|no input files (connector or inputFolder)
+2025.11.14 17:15:07.530|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.14 17:15:07.534|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <AXNAutoTrigger>
+    <AXNstatus/>
+    <color>#808000</color>
+    <dataPath/>
+    <objectName>AXNAutoTrigger</objectName>
+    <time>15</time>
+    <timeUnits>1</timeUnits>
+  </AXNAutoTrigger>
+</nodeCommonRoot>

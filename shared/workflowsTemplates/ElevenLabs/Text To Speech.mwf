@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="ElevenLabs Text To Speech Template" nameConvention="[path][baseName][_frame][.ext]">
+  <view x="-571.2" scale="0.833333" y="-19.2"/>
+  <nodes>
+   <node class="Watcher" type="input">
+    <properties>
+     <objectName type="string">Watcher</objectName>
+     <color type="color">#aa557f</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-898.493,43.3559</pos>
+     <schemaName type="string">watcher</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <filterMode type="int">1</filterMode>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <include type="string">*.txt</include>
+     <exclude type="string"></exclude>
+     <latency type="int">5</latency>
+     <forceCheck type="int">0</forceCheck>
+     <recursive type="bool">true</recursive>
+     <addRoot type="bool">true</addRoot>
+     <deleteAfterProcessing type="bool">false</deleteAfterProcessing>
+     <areYouSure type="bool">false</areYouSure>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">false</alphabeticalOrder>
+     <continuePreviousExecutions type="bool">false</continuePreviousExecutions>
+     <numberOfTries type="int">5</numberOfTries>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" specialType="order" type="input" id="8e7221a4-3eb6-4f13-bd72-72af6422ab53"/>
+     <rankTo name="rankTo" specialType="order" type="output" id="7115747c-05b9-4720-9730-24e6e79ac45e"/>
+     <To name="To" type="output" id="b3767cc7-60cd-4a5b-a3db-ccf31d42e43d">
+      <linkedTo>eeae8fb3-c1af-444e-b09f-1d4606885db7</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node class="ElevenLabsTextToSpeech" type="task">
+    <properties>
+     <objectName type="string">ElevenLabsTextToSpeech</objectName>
+     <color type="color">#ffffff</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-503,43</pos>
+     <schemaName type="string">elevenlabstexttospeech</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CbaseItem
+import requests
+import json
+
+def init(self):
+    self.setClassName("ElevenLabs Text To Speech")
+    self.addConnector("txt",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("output",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)     
+    self.setAcceptConnectors(True,"txt_%") 
+    self.addProperty("apiKey")
+    self.addProperty("voice", "21m00Tcm4TlvDq8ikWAM")
+    self.addProperty("model", "eleven_multilingual_v2")
+    self.addProperty("dstPath")
+    self.addProperty("format", "mp3_44100_128")
+    self.addProperty("_voiceList", "")
+    self.addProperty("_modelList", "")
+    self.addProperty("stability", 0.50)
+    self.addProperty("similarityBoost", 0.80)
+    self.addProperty("style", 0.00)
+    self.addProperty("useSpeakerBoost", True)
+    self.bypassSupported=True
+    self.color=QColor(255,255,255)
+    return True
+
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    return True
+
+def process(self):
+  if self.bypassEnabled:
+      return True
+  inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+  output=self.getFirstConnectorByName("output")
+  output.clearUniversalPaths()
+
+  res = True 
+
+  for c in inputs:
+      for up in c.getUniversalPaths():
+        if self.isCancelled():
+            return False
+        self.setPropertiesFromUP(up)
+        f = up.getFilePath()
+        dstPath=self.evaluate(self.dstPath).strip()
+        dst=self.composeDstFilePath(dstPath,up,False,0)
+        dst.setExtension("mp3")
+
+        if not f.endswith(".txt"):
+            self.critical("XMLtoXLSX:notXML", "The file'{}' is not an .txt".format(f))
+            continue
+        with open (f, 'r') as fil:
+            textToSpeak = fil.read()
+        #-------------------------------------------------------------------------------------------------------------------
+        CHUNK_SIZE = 1024
+
+        tts_url = f"https://api.elevenlabs.io/v1/text-to-speech/{self.voice}/stream"
+        headers = {
+            "Accept": "application/json",
+            "xi-api-key": self.apiKey.strip()
+        }
+
+        query = {"output_format":self.format}
+
+        data = {
+            "text": textToSpeak,
+            "model_id": self.model,
+            "voice_settings": {
+                "stability": 0.5,
+                "similarity_boost": 0.8,
+                "style": 0.0,
+                "use_speaker_boost": True
+            }
+        }
+
+        response = requests.post(tts_url, headers=headers, json=data, params=query, stream=True)
+
+        if response.ok:
+            with open(dst.getFilePath(), "wb") as f:
+                for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
+                    f.write(chunk)
+            print("Audio stream saved successfully.")
+            output.addUniversalPath(dst)
+        else:
+            res = self.critical("textToSpeech:error", response.json()["detail"]["message"]) and res
+            self.addFailedUP(dst)
+        #-------------------------------------------------------------------------------------------------------------------
+  return res
+
+def  onPropertyUpdated(self,name):
+    if name=="apiKey":
+        headers = {
+        "Accept": "application/json",
+        "xi-api-key": self.apiKey.strip(),
+        "Content-Type": "application/json"
+        }
+        response = requests.get("https://api.elevenlabs.io/v1/voices", headers=headers)
+        data = response.json()
+        try:
+            voiceList = [f"{voice['name']}$$${voice['voice_id']}" for voice in data['voices']]
+        except KeyError:
+            return
+        self._voiceList = voiceList
+
+        responseModels = requests.get("https://api.elevenlabs.io/v1/models", headers=headers)
+        dataModels = responseModels.json()
+        modelList = [f"{model['name']}$$${model['model_id']}" for model in dataModels if not 'sts' in model['model_id']]
+        print(modelList)
+        self._modelList = modelList
+        self.rebuild()</code>
+     <apiKey type="string"></apiKey>
+     <voice type="string">21m00Tcm4TlvDq8ikWAM</voice>
+     <model type="string">eleven_multilingual_v2</model>
+     <dstPath type="string"></dstPath>
+     <format type="string">mp3_44100_128</format>
+     <stability type="string">0.5</stability>
+     <similarityBoost type="string">0.8</similarityBoost>
+     <style type="string">0</style>
+     <useSpeakerBoost type="bool">true</useSpeakerBoost>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" specialType="order" type="input" id="7f4e20ac-999d-458e-8bd2-b0249c4be716"/>
+     <rankTo name="rankTo" specialType="order" type="output" id="b699d8ff-8847-4e28-824e-97392e04c2f7"/>
+     <txt name="txt" type="input" id="eeae8fb3-c1af-444e-b09f-1d4606885db7">
+      <linkedTo>b3767cc7-60cd-4a5b-a3db-ccf31d42e43d</linkedTo>
+     </txt>
+     <output name="output" type="output" id="3ee1c09d-484f-4782-a533-de959daa8aaf"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-949.369,-202.456</ScenePos>
+     <Size type="size2">346.12,400.728</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Reading the .txt files from...</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff004020</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-917.04,-107.92</ScenePos>
+     <Size type="size2">275,46</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Select:
+- Directory to read your .txt files from</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-548.3,-198.1</ScenePos>
+     <Size type="size2">346.6,400.2</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Creating audio file from text...</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff004020</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-500.4,-143.2</ScenePos>
+     <Size type="size2">197,46</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Write:
+- Your ElevenLabs API Key</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-501.6,-92.8</ScenePos>
+     <Size type="size2">251,122</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Then select:
+- The AI model you want to use
+- The codec format of the output
+- The voice you want to use
+- Final audio destination/name
+(empty to create at input file path)</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

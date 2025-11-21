@@ -1,0 +1,667 @@
+2025.11.04 09:40:33.752|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:40:33.754|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:40:33.754|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:40:33.756|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:40:33.757|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:40:33.758|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:41:38.067|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:41:38.068|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:41:38.069|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:41:38.107|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:41:38.119|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 09:41:38.131|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 09:41:38.145|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 09:41:38.145|Info|ProRes 4444|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 09:42:12.958|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:42:12.959|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:43:37.615|Critical Error|ProRes 4444|ProRes|The node needs to be connected
+2025.11.04 09:43:37.637|Critical Error|ProRes 4444|ProRes|The node needs to be connected
+2025.11.04 09:43:37.638|Critical Error|ProRes 4444|ProRes|The node needs to be connected
+2025.11.04 09:43:37.638|Critical Error|ProRes 4444|ProRes|The node needs to be connected
+2025.11.04 09:43:37.638|Critical Error|ProRes 4444|ProRes|The node needs to be connected
+2025.11.04 09:43:37.639|Critical Error|ProRes 4444|ProRes|The node needs to be connected
+2025.11.04 09:43:40.076|Critical Error|ProRes 4444|ProRes|Output File and Video Input File can not have the same name and extension: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/&format=[path][baseName][.ext]
+2025.11.04 09:43:40.078|Critical Error|ProRes 4444|ProRes|Output File and Video Input File can not have the same name and extension: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/&format=[path][baseName][.ext]
+2025.11.04 09:43:40.078|Critical Error|ProRes 4444|ProRes|Output File and Video Input File can not have the same name and extension: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/&format=[path][baseName][.ext]
+2025.11.04 09:43:40.084|Critical Error|ProRes 4444|ProRes|Output File and Video Input File can not have the same name and extension: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/&format=[path][baseName][.ext]
+2025.11.04 09:43:40.554|Critical Error|ProRes 4444|ProRes|Output File and Video Input File can not have the same name and extension: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/&format=[path][baseName][.ext]
+2025.11.04 09:43:45.322|Critical Error|ProRes 4444|ProRes|Output File and Video Input File can not have the same name and extension: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/&format=[path][baseName][.ext]
+2025.11.04 09:44:01.298|Critical Error|ProRes 4444|ProRes|Output File and Video Input File can not have the same name and extension: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.ext]
+2025.11.04 09:46:52.353|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:46:52.354|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:46:52.354|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:46:52.355|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:46:52.355|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:46:52.356|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:47:02.026|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:47:02.026|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:47:02.026|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:47:02.027|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:47:02.027|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:47:02.027|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:47:11.101|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:47:11.101|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:47:11.101|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:47:11.102|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:47:11.102|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:47:11.102|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:47:31.049|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:47:31.050|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:47:31.050|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:47:31.051|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:47:31.051|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:47:31.051|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:47:32.719|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:47:32.720|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:47:32.720|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:47:32.721|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:47:32.722|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:47:32.723|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:47:33.558|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:47:33.558|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:47:33.558|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:47:33.559|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:47:33.559|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:47:33.560|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:47:37.361|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:47:37.361|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:47:37.361|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:47:37.362|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:47:37.362|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:47:37.362|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:49:16.062|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:49:16.063|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:49:16.063|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:49:16.076|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:49:16.083|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 09:49:16.093|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 09:49:16.104|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 09:49:16.104|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 09:49:21.182|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:49:21.182|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 09:58:29.510|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 09:58:29.511|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 09:58:29.511|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 09:58:29.513|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 09:58:29.513|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 09:58:29.513|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:01:04.611|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:01:04.612|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:01:04.612|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:01:04.613|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:01:04.613|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:01:04.613|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:01:07.398|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:01:07.399|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:01:07.399|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:01:07.401|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:01:07.402|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:01:07.403|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:01:12.176|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:01:12.177|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:01:12.177|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:01:12.197|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:01:12.209|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:01:12.222|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:01:12.238|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:01:12.238|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:02:02.345|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:02:02.346|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:02:35.068|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:02:35.072|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:02:35.072|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:02:35.091|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:02:35.099|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:02:35.110|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:02:35.124|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:02:35.124|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:02:40.399|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:02:40.401|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:06:20.086|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:06:20.088|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:06:20.088|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:06:20.096|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:06:20.100|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:06:20.114|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:06:20.127|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:06:20.127|Info|ProRes 4444|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:07:13.035|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:07:13.054|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:07:13.068|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:07:13.068|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:08:07.743|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:08:07.758|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:08:07.770|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:08:07.770|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:08:13.336|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:08:13.352|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:08:13.364|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:08:13.365|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:08:19.253|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:08:19.253|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:15:07.085|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:15:07.087|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:15:07.087|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:15:07.096|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:15:07.101|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:15:07.122|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:15:07.139|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:15:07.139|Info|ProRes 4444|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:16:04.975|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:16:05.001|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:16:05.017|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:16:05.017|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:17:10.055|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:17:10.078|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:17:10.090|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:17:10.090|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:17:15.897|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:17:15.919|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:17:15.930|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:17:15.930|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:17:21.616|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:17:21.619|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:19:30.092|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:19:30.093|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:19:30.093|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:19:30.101|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:19:30.109|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:19:30.132|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:19:30.152|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:19:30.152|Info|ProRes 4444|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:20:23.830|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:20:23.859|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:20:23.883|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:20:23.883|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:21:18.782|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:21:18.808|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:21:18.825|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:21:18.825|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:21:24.416|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:21:24.437|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:21:24.453|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:21:24.453|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:21:30.051|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:21:30.053|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:25:38.869|Critical Error|ProRes 4444|Move|File not ready
+2025.11.04 10:25:38.870|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:38.870|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:38.912|Critical Error|ProRes 4444|Move|File not ready
+2025.11.04 10:25:38.912|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:38.912|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:38.912|Critical Error|ProRes 4444|Move|File not ready
+2025.11.04 10:25:38.912|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:38.912|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:38.913|Critical Error|ProRes 4444|Move|File not ready
+2025.11.04 10:25:38.913|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:38.913|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.547|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.547|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.547|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.547|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.566|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.566|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.567|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.567|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.567|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:25:42.567|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:30.654|Critical Error|ProRes 4444|Move|File not ready
+2025.11.04 10:26:30.655|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:30.655|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:30.656|Critical Error|ProRes 4444|Move|File not ready
+2025.11.04 10:26:30.656|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:30.656|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:30.675|Critical Error|ProRes 4444|Move|File not ready
+2025.11.04 10:26:30.676|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:30.676|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.826|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.826|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.827|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.827|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.847|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.847|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.848|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.848|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.848|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:26:32.848|Critical Error|ProRes 4444|Move|url can not be empty
+2025.11.04 10:30:52.819|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:30:52.820|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:30:52.820|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:30:52.822|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:30:52.822|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 10:30:53.828|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:30:53.829|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:31:12.097|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:31:12.099|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:31:12.099|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:31:12.107|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:31:12.113|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:31:12.137|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:31:12.157|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:31:12.157|Info|ProRes 4444|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:32:01.236|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:32:01.267|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:32:01.288|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:32:01.288|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:32:58.445|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:32:58.475|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:32:58.495|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:32:58.495|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:33:04.626|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:33:04.654|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:33:04.674|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:33:04.674|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:33:10.176|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 10:33:11.197|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:33:11.198|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:33:59.105|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:33:59.107|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:33:59.107|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:33:59.134|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:33:59.176|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder1/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:33:59.188|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder1/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:33:59.201|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:33:59.201|Info|ProRes 4444|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:34:53.536|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder1/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:34:53.563|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder1/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:34:53.582|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:34:53.583|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:35:56.942|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder2/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:35:56.972|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder2/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:35:56.992|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:35:56.992|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:36:02.920|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder2/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:36:02.947|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder2/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:36:02.968|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:36:02.968|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:36:08.897|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 10:36:09.916|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:36:09.917|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 10:41:19.108|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:41:19.110|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:41:19.110|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:41:19.141|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:41:19.214|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder132/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:41:19.231|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder132/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:41:19.246|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:41:19.246|Info|ProRes 4444|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:42:11.320|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder132/random_text.txt?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:42:11.330|Critical Error|ProRes 4444|ProRes|input video not found
+2025.11.04 10:42:11.330|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 10:42:11.331|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 10:42:11.334|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder132/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:42:11.360|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder132/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:42:11.381|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:42:11.381|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:43:11.773|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/random_text.txt?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:43:11.778|Critical Error|ProRes 4444|ProRes|input video not found
+2025.11.04 10:43:11.778|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 10:43:11.778|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 10:43:11.781|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:43:11.805|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:43:11.823|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:43:11.823|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:43:17.947|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:43:17.971|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:43:17.988|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:43:17.988|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 10:43:23.593|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 10:43:24.611|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:43:24.615|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Failed
+2025.11.04 10:44:25.082|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 10:44:25.083|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 10:44:25.083|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 10:44:25.101|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 10:44:25.128|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder999/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:44:25.141|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder999/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:44:25.155|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:44:25.155|Info|ProRes 4444|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:45:17.001|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder999/random_text.txt?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:45:17.006|Critical Error|ProRes 4444|ProRes|input video not found
+2025.11.04 10:45:17.006|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 10:45:17.006|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 10:45:17.010|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder999/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:45:17.036|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder999/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 10:45:17.055|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 10:45:17.055|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 10:46:13.785|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 10:46:14.800|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 10:46:14.801|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Failed
+2025.11.04 11:36:45.697|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:36:45.698|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 11:36:45.698|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 11:36:45.699|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:36:45.699|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 11:36:45.699|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 11:36:45.700|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:36:45.700|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 11:36:45.700|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 11:36:45.700|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:36:45.700|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 11:36:45.701|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 11:37:03.329|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:37:03.330|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 11:37:03.330|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 11:37:03.330|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:37:03.330|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 11:37:03.330|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 11:39:03.329|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:39:03.330|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 11:42:07.762|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:42:07.762|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 11:43:11.946|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:43:16.769|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:43:16.770|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:43:19.000|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:43:19.001|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 11:43:46.176|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 11:43:46.177|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 11:43:46.177|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 11:43:46.180|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 11:43:46.180|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 11:43:47.186|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 11:43:47.463|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 11:43:47.463|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 11:44:09.055|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 11:44:09.057|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 11:44:09.057|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 11:44:09.062|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 11:44:09.064|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/random_text.txt?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:44:09.066|Critical Error|ProRes 4444|ProRes|input video not found
+2025.11.04 11:44:09.066|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 11:44:09.066|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 11:44:09.068|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:44:09.091|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:44:09.111|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 11:44:09.111|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 11:44:14.728|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:44:14.760|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:44:14.790|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 11:44:14.790|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 11:44:19.965|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 11:44:20.976|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 11:44:21.670|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 11:44:21.671|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Failed
+2025.11.04 11:45:37.053|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 11:45:37.054|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 11:45:37.054|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 11:45:37.058|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 11:45:37.061|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/random_text.txt?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:45:37.066|Critical Error|ProRes 4444|ProRes|input video not found
+2025.11.04 11:45:37.066|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 11:45:37.066|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 11:45:37.068|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:45:37.084|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:45:37.101|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 11:45:37.101|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 11:45:42.489|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:45:42.514|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:45:42.529|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 11:45:42.529|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 11:45:47.721|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 11:45:48.737|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 11:45:48.804|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 11:45:48.805|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Failed
+2025.11.04 11:53:29.581|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 11:53:29.582|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 11:53:29.582|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 11:53:29.584|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 11:53:29.584|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 11:53:30.590|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 11:53:30.652|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 11:53:30.653|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 11:53:48.046|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 11:53:48.048|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 11:53:48.048|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 11:53:48.053|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 11:53:48.057|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/random_text.txt?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:53:48.061|Critical Error|ProRes 4444|ProRes|input video not found
+2025.11.04 11:53:48.061|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 11:53:48.061|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 11:53:48.063|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:53:48.084|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:53:48.099|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 11:53:48.099|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 11:53:53.612|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:53:53.646|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:53:53.665|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 11:53:53.665|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 11:53:58.954|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 11:53:59.968|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 11:54:00.046|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 11:54:00.047|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Failed
+2025.11.04 11:54:05.051|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 11:54:05.053|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 11:54:05.053|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 11:54:05.056|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 11:54:05.056|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 11:54:06.062|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 11:54:06.068|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 11:54:06.069|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 11:56:59.101|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 11:56:59.102|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 11:56:59.102|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 11:56:59.102|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 11:56:59.103|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 11:57:00.108|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 11:57:00.169|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 11:57:00.170|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 11:57:10.067|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 11:57:10.069|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 11:57:10.070|Info|ProRes 4444|ProRes 4444|Rendering Watcher
+2025.11.04 11:57:10.073|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 11:57:10.077|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/random_text.txt?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:57:10.080|Critical Error|ProRes 4444|ProRes|input video not found
+2025.11.04 11:57:10.080|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 11:57:10.080|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 11:57:10.082|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:57:10.100|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:57:10.118|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 11:57:10.118|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 11:57:15.828|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 11:57:15.858|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 11:57:15.858|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:None:None:To:tst0020_cp01_v0002.mov:47.95:None:None:None
+2025.11.04 11:57:21.457|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 11:57:22.469|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 11:57:22.529|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 11:57:22.529|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Failed
+2025.11.04 12:04:31.009|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:04:31.010|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:04:31.010|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:04:31.011|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 12:04:31.011|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 12:04:32.016|Info|ProRes 4444|ProRes 4444|Rendering done_to_s3
+2025.11.04 12:04:32.017|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 12:04:32.063|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:04:32.063|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 12:04:53.067|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:04:53.069|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:04:53.069|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:04:53.073|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 12:04:53.076|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/random_text.txt?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:04:53.078|Critical Error|ProRes 4444|ProRes|input video not found
+2025.11.04 12:04:53.079|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 12:04:53.079|Critical Error|ProRes 4444|ProRes|Unable to create Render Group
+2025.11.04 12:04:53.081|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:04:53.102|Info|ProRes 4444|ProRes|Processing Audio From File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:04:53.119|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 12:04:53.119|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.04 12:04:58.521|Info|ProRes 4444|ProRes|Processing Input File: /Users/ed/Desktop/INPUT/folder256/tst0020_cp01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:04:58.552|Info|ProRes 4444|ProRes|Transcoding from EDL: None
+2025.11.04 12:04:58.552|Info|ProRes 4444|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:None:None:To:tst0020_cp01_v0002.mov:47.95:None:None:None
+2025.11.04 12:05:03.642|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 12:05:04.657|Info|ProRes 4444|ProRes 4444|Rendering done_to_s3
+2025.11.04 12:05:04.661|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 12:05:04.719|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:05:04.720|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Failed
+2025.11.04 12:05:15.073|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:05:15.076|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:05:15.076|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:05:15.078|Info|ProRes 4444|ProRes 4444|Rendering ProRes
+2025.11.04 12:05:15.079|Info|ProRes 4444|ProRes 4444|Rendering Move
+2025.11.04 12:05:16.085|Info|ProRes 4444|ProRes 4444|Rendering done_to_s3
+2025.11.04 12:05:16.100|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 12:05:16.756|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:05:16.758|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 12:11:40.044|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:11:40.045|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:11:40.045|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:11:40.045|Info|ProRes 4444|ProRes 4444|Rendering ProRes4444Convert
+2025.11.04 12:11:40.046|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 12:11:41.051|Info|ProRes 4444|ProRes 4444|Rendering ArchivetoS3
+2025.11.04 12:11:41.102|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:11:41.103|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 12:11:56.064|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:11:56.067|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:11:56.067|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:11:56.070|Info|ProRes 4444|ProRes 4444|Rendering ProRes4444Convert
+2025.11.04 12:11:56.075|Info|ProRes 4444|ProRes4444Convert|Processing Input File: /Users/ed/Desktop/INPUT/folder999/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:11:56.095|Info|ProRes 4444|ProRes4444Convert|Processing Audio From File: /Users/ed/Desktop/INPUT/folder999/000_tst0010_bg01_v0001.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:11:56.117|Info|ProRes 4444|ProRes4444Convert|Transcoding from EDL: None
+2025.11.04 12:11:56.117|Info|ProRes 4444|ProRes4444Convert|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 12:12:49.658|Info|ProRes 4444|ProRes4444Convert|Processing Input File: /Users/ed/Desktop/INPUT/folder999/random_text.txt?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:12:49.664|Critical Error|ProRes 4444|ProRes4444Convert|input video not found
+2025.11.04 12:12:49.664|Critical Error|ProRes 4444|ProRes4444Convert|Unable to create Render Group
+2025.11.04 12:12:49.664|Critical Error|ProRes 4444|ProRes4444Convert|Unable to create Render Group
+2025.11.04 12:12:49.668|Info|ProRes 4444|ProRes4444Convert|Processing Input File: /Users/ed/Desktop/INPUT/folder999/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:12:49.692|Info|ProRes 4444|ProRes4444Convert|Processing Audio From File: /Users/ed/Desktop/INPUT/folder999/tst0010_bg01_v0002.mov?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:12:49.711|Info|ProRes 4444|ProRes4444Convert|Transcoding from EDL: None
+2025.11.04 12:12:49.711|Info|ProRes 4444|ProRes4444Convert|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.04 12:13:46.311|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 12:13:47.330|Info|ProRes 4444|ProRes 4444|Rendering ArchivetoS3
+2025.11.04 12:13:51.086|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:13:51.088|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Failed
+2025.11.04 12:16:31.544|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:31.545|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:31.575|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.444|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.446|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.447|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.447|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.447|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.448|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.449|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.449|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.449|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:16:32.450|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.450|Critical Error|ProRes 4444|ProRes 4444|Group is not Ready
+2025.11.04 12:16:32.450|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Failed
+2025.11.04 12:16:32.451|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:32.451|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:33.836|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:34.093|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:39.744|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:39.744|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:41.311|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:41.312|Critical Error|ProRes 4444|ArchivetoS3|Missing 'isReady' function
+2025.11.04 12:16:58.238|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 12:16:58.238|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 12:16:58.239|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 12:16:58.240|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 12:16:58.240|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 12:16:58.240|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 12:16:58.241|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 12:16:58.241|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 12:16:58.241|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 12:17:01.226|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 12:17:01.227|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 12:17:01.227|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 12:17:01.227|Critical Error|ProRes 4444|S3Out|'key' can not be empty
+2025.11.04 12:17:01.227|Critical Error|ProRes 4444|S3Out|'secret' can not be empty
+2025.11.04 12:17:01.227|Critical Error|ProRes 4444|S3Out|'bucket' can not be empty
+2025.11.04 12:21:44.071|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:21:44.072|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:21:44.072|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:21:44.072|Info|ProRes 4444|ProRes 4444|Rendering ProRes4444Convert
+2025.11.04 12:21:44.072|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 12:21:45.078|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 12:21:45.139|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:21:45.140|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 12:22:47.060|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:22:47.061|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:22:47.061|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:22:47.092|Info|ProRes 4444|ProRes 4444|Rendering ProRes4444Convert
+2025.11.04 12:22:47.102|Info|ProRes 4444|ProRes4444Convert|Processing Input File: /Users/ed/Desktop/INPUT/XAVC_UHD_24p_10bit_ST1_SG3.mxf?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:22:47.153|Info|ProRes 4444|ProRes4444Convert|Processing Audio From File: /Users/ed/Desktop/INPUT/XAVC_UHD_24p_10bit_ST1_SG3.mxf?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:22:47.182|Info|ProRes 4444|ProRes4444Convert|Transcoding from EDL: None
+2025.11.04 12:22:47.182|Info|ProRes 4444|ProRes4444Convert|Transcoding Info:From:XAVC_UHD_24p_10bit_ST1_SG3:23.98:None:None:To:XAVC_UHD_24p_10bit_ST1_SG3.mov:23.98:None:None:None
+2025.11.04 12:23:50.795|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 12:23:51.800|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 12:25:56.704|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:25:56.708|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 12:26:29.978|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:26:29.979|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:26:29.979|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:26:29.980|Info|ProRes 4444|ProRes 4444|Rendering ProResConvert
+2025.11.04 12:26:29.980|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 12:26:30.986|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 12:26:31.053|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:26:31.054|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 12:26:38.419|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:26:38.420|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:26:38.420|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:26:38.421|Info|ProRes 4444|ProRes 4444|Rendering ProResConvert
+2025.11.04 12:26:38.421|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 12:26:39.427|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 12:26:39.440|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:26:39.440|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 12:27:01.067|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 12:27:01.069|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 12:27:01.069|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 12:27:01.074|Info|ProRes 4444|ProRes 4444|Rendering ProResConvert
+2025.11.04 12:27:01.080|Info|ProRes 4444|ProResConvert|Processing Input File: /Users/ed/Desktop/INPUT/XAVC_UHD_24p_10bit_ST1_SG3.mxf?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:27:01.155|Info|ProRes 4444|ProResConvert|Processing Audio From File: /Users/ed/Desktop/INPUT/XAVC_UHD_24p_10bit_ST1_SG3.mxf?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 12:27:01.183|Info|ProRes 4444|ProResConvert|Transcoding from EDL: None
+2025.11.04 12:27:01.183|Info|ProRes 4444|ProResConvert|Transcoding Info:From:XAVC_UHD_24p_10bit_ST1_SG3:23.98:None:None:To:XAVC_UHD_24p_10bit_ST1_SG3.mov:23.98:None:None:None
+2025.11.04 12:27:45.703|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 12:27:46.715|Info|ProRes 4444|ProRes 4444|Rendering S3Out
+2025.11.04 12:29:53.474|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 12:29:53.476|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 14:04:39.689|Critical Error|ProRes 4444|ProResConvert|The node needs to be connected
+2025.11.04 14:04:39.690|Critical Error|ProRes 4444|ProResConvert|The node needs to be connected
+2025.11.04 14:04:39.691|Critical Error|ProRes 4444|ProResConvert|The node needs to be connected
+2025.11.04 14:04:39.692|Critical Error|ProRes 4444|MoveProcessedFiles|File not ready
+2025.11.04 14:04:39.693|Critical Error|ProRes 4444|S3Out|in not ready
+2025.11.04 14:04:39.693|Critical Error|ProRes 4444|ProResConvert|The node needs to be connected
+2025.11.04 14:04:39.693|Critical Error|ProRes 4444|ProResConvert|The node needs to be connected
+2025.11.04 14:04:39.693|Critical Error|ProRes 4444|ProResConvert|The node needs to be connected
+2025.11.04 14:04:39.693|Critical Error|ProRes 4444|ProResConvert|The node needs to be connected
+2025.11.04 14:04:39.694|Critical Error|ProRes 4444|ProResConvert|The node needs to be connected
+2025.11.04 14:04:39.694|Critical Error|ProRes 4444|MoveProcessedFiles|File not ready
+2025.11.04 14:04:39.694|Critical Error|ProRes 4444|MoveProcessedFiles|File not ready
+2025.11.04 15:02:11.442|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 15:02:11.443|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 15:02:11.443|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 15:02:11.443|Info|ProRes 4444|ProRes 4444|Rendering ProResConvert
+2025.11.04 15:02:11.444|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 15:02:12.454|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 15:02:12.458|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 15:08:40.123|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 15:08:40.123|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 15:08:40.123|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 15:08:40.124|Info|ProRes 4444|ProRes 4444|Rendering ProResConvert
+2025.11.04 15:08:40.124|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 15:08:41.130|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 15:08:41.131|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 15:08:55.049|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 15:08:55.051|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 15:08:55.051|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 15:08:55.089|Info|ProRes 4444|ProRes 4444|Rendering ProResConvert
+2025.11.04 15:08:55.100|Info|ProRes 4444|ProResConvert|Processing Input File: /Users/ed/Desktop/INPUT/XAVC_UHD_24p_10bit_ST1_SG3.mxf?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 15:08:55.171|Info|ProRes 4444|ProResConvert|Processing Audio From File: /Users/ed/Desktop/INPUT/XAVC_UHD_24p_10bit_ST1_SG3.mxf?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 15:08:55.199|Info|ProRes 4444|ProResConvert|Transcoding from EDL: None
+2025.11.04 15:08:55.199|Info|ProRes 4444|ProResConvert|Transcoding Info:From:XAVC_UHD_24p_10bit_ST1_SG3:23.98:None:None:To:XAVC_UHD_24p_10bit_ST1_SG3.mov:23.98:None:None:None
+2025.11.04 15:10:01.773|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 15:10:02.781|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 15:10:02.783|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished
+2025.11.04 16:52:37.087|Info|ProRes 4444|ProRes 4444|ProRes 4444: Starting Workflow
+2025.11.04 16:52:37.090|Info|ProRes 4444|ProRes 4444|ProRes 4444 Started
+2025.11.04 16:52:37.090|Info|ProRes 4444|ProRes 4444|Rendering ingest
+2025.11.04 16:52:37.098|Info|ProRes 4444|ProRes 4444|Rendering ProResConvert
+2025.11.04 16:52:37.111|Info|ProRes 4444|ProResConvert|Processing Input File: /Users/ed/Desktop/INPUT/XAVC_UHD_24p_10bit_ST1_SG3.mxf?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 16:52:37.216|Info|ProRes 4444|ProResConvert|Processing Audio From File: /Users/ed/Desktop/INPUT/XAVC_UHD_24p_10bit_ST1_SG3.mxf?root=/Users/ed/Desktop/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.04 16:52:37.251|Info|ProRes 4444|ProResConvert|Transcoding from EDL: None
+2025.11.04 16:52:37.251|Info|ProRes 4444|ProResConvert|Transcoding Info:From:XAVC_UHD_24p_10bit_ST1_SG3:23.98:None:None:To:XAVC_UHD_24p_10bit_ST1_SG3.mov:23.98:None:None:None
+2025.11.04 16:53:31.469|Info|ProRes 4444|ProRes 4444|Rendering MoveProcessedFiles
+2025.11.04 16:53:32.478|Info|ProRes 4444|ProRes 4444|ProRes 4444 Finished
+2025.11.04 16:53:32.479|Info|ProRes 4444|ProRes 4444|ProRes 4444: Workflow Successfully Finished

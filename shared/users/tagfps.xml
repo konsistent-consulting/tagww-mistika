@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <TagFPS>
+    <color>#677688</color>
+    <fps>25.00</fps>
+    <objectName>TagFPS</objectName>
+    <overwriteIfExists/>
+  </TagFPS>
+</nodeCommonRoot>

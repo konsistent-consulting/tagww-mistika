@@ -1,0 +1,1042 @@
+currentDateTime: Tue September 23 25 13:18:52.927
+hostAddress_0: 127.0.0.1
+hostAddress_1: ::1
+hostAddress_10: fe80::1e94:d15d:f4aa:9ef9%utun1
+hostAddress_11: fe80::a651:960d:41e6:871a%utun2
+hostAddress_12: fe80::ce81:b1c:bd2c:69e%utun3
+hostAddress_13: fe80::8f88:fc12:1c94:9d82%utun11
+hostAddress_14: fe80::a23e:dd80:73bb:2114%utun12
+hostAddress_15: fe80::6bbd:93b9:c0fa:452c%utun68
+hostAddress_16: fe80::17e7:a10a:4399:e618%utun69
+hostAddress_17: fe80::68bb:59f3:f8a4:4ee8%utun93
+hostAddress_18: 100.119.60.108
+hostAddress_19: fd7a:115c:a1e0::8501:3c72
+hostAddress_2: fe80::1%lo0
+hostAddress_3: fe80::aa:1416:9332:4e47%en0
+hostAddress_4: 2a02:6b6f:e487:5c00:89e:3efa:7102:ddf
+hostAddress_5: 2a02:6b6f:e487:5c00:30e8:f9f4:33e0:15ed
+hostAddress_6: 10.0.0.11
+hostAddress_7: fe80::f02e:beff:fe72:18a3%awdl0
+hostAddress_8: fe80::b46e:e538:52d9:5220%utun0
+hostAddress_9: fe80::f02e:beff:fe72:18a3%llw0
+mistikaPathsData: <installation>
+ <paths>
+  <env>/Users/ed/SGO AppData</env>
+  <shared>/Users/ed/SGO AppData/shared</shared>
+  <localshared>/Users/ed/SGO AppData/localshared</localshared>
+  <media>/Users/ed/SGO Data/Media</media>
+  <projects>/Users/ed/SGO Data/Projects</projects>
+ </paths>
+ <sw>
+  <licenseServer version="10.14.8-20250812"/>
+  <activationTool version="10.14.8-20250812"/>
+  <mistika/>
+  <vr/>
+  <review/>
+  <workflows version="10.14.8-20250812"/>
+ </sw>
+</installation>
+mistikaPathsDir: /Users/ed/.sgoMistika
+mistikaPathsDirPermissions: drwxr-xr-x----  3 root staff
+mistikaPathsFile: /Users/ed/.sgoMistika/mistikaPaths.xml
+mistikaPathsFilePermissions: -rwxrwxrwx----  1 root staff
+mistikaPathsFileSize: 469
+networkInterface_0_addressEntry_0_ip: 127.0.0.1
+networkInterface_0_addressEntry_1_ip: ::1
+networkInterface_0_addressEntry_2_ip: fe80::1%lo0
+networkInterface_0_flags: 43
+networkInterface_0_hardwareAddress: 
+networkInterface_0_humanReadableName: lo0
+networkInterface_0_isLoopBack: Yes
+networkInterface_0_isRunning: Yes
+networkInterface_0_isUp: Yes
+networkInterface_0_isValid: Yes
+networkInterface_0_name: lo0
+networkInterface_0_type: 1
+networkInterface_100_flags: 51
+networkInterface_100_hardwareAddress: 
+networkInterface_100_humanReadableName: utun86
+networkInterface_100_isLoopBack: No
+networkInterface_100_isRunning: Yes
+networkInterface_100_isUp: Yes
+networkInterface_100_isValid: Yes
+networkInterface_100_name: utun86
+networkInterface_100_type: 0
+networkInterface_101_flags: 51
+networkInterface_101_hardwareAddress: 
+networkInterface_101_humanReadableName: utun87
+networkInterface_101_isLoopBack: No
+networkInterface_101_isRunning: Yes
+networkInterface_101_isUp: Yes
+networkInterface_101_isValid: Yes
+networkInterface_101_name: utun87
+networkInterface_101_type: 0
+networkInterface_102_flags: 51
+networkInterface_102_hardwareAddress: 
+networkInterface_102_humanReadableName: utun88
+networkInterface_102_isLoopBack: No
+networkInterface_102_isRunning: Yes
+networkInterface_102_isUp: Yes
+networkInterface_102_isValid: Yes
+networkInterface_102_name: utun88
+networkInterface_102_type: 0
+networkInterface_103_flags: 51
+networkInterface_103_hardwareAddress: 
+networkInterface_103_humanReadableName: utun89
+networkInterface_103_isLoopBack: No
+networkInterface_103_isRunning: Yes
+networkInterface_103_isUp: Yes
+networkInterface_103_isValid: Yes
+networkInterface_103_name: utun89
+networkInterface_103_type: 0
+networkInterface_104_flags: 51
+networkInterface_104_hardwareAddress: 
+networkInterface_104_humanReadableName: utun90
+networkInterface_104_isLoopBack: No
+networkInterface_104_isRunning: Yes
+networkInterface_104_isUp: Yes
+networkInterface_104_isValid: Yes
+networkInterface_104_name: utun90
+networkInterface_104_type: 0
+networkInterface_105_flags: 51
+networkInterface_105_hardwareAddress: 
+networkInterface_105_humanReadableName: utun91
+networkInterface_105_isLoopBack: No
+networkInterface_105_isRunning: Yes
+networkInterface_105_isUp: Yes
+networkInterface_105_isValid: Yes
+networkInterface_105_name: utun91
+networkInterface_105_type: 0
+networkInterface_106_flags: 51
+networkInterface_106_hardwareAddress: 
+networkInterface_106_humanReadableName: utun92
+networkInterface_106_isLoopBack: No
+networkInterface_106_isRunning: Yes
+networkInterface_106_isUp: Yes
+networkInterface_106_isValid: Yes
+networkInterface_106_name: utun92
+networkInterface_106_type: 0
+networkInterface_107_addressEntry_0_ip: fe80::68bb:59f3:f8a4:4ee8%utun93
+networkInterface_107_addressEntry_1_ip: 100.119.60.108
+networkInterface_107_addressEntry_2_ip: fd7a:115c:a1e0::8501:3c72
+networkInterface_107_flags: 51
+networkInterface_107_hardwareAddress: 
+networkInterface_107_humanReadableName: utun93
+networkInterface_107_isLoopBack: No
+networkInterface_107_isRunning: Yes
+networkInterface_107_isUp: Yes
+networkInterface_107_isValid: Yes
+networkInterface_107_name: utun93
+networkInterface_107_type: 0
+networkInterface_10_flags: 39
+networkInterface_10_hardwareAddress: 5E:8E:21:44:2F:46
+networkInterface_10_humanReadableName: ap1
+networkInterface_10_isLoopBack: No
+networkInterface_10_isRunning: Yes
+networkInterface_10_isUp: Yes
+networkInterface_10_isValid: Yes
+networkInterface_10_name: ap1
+networkInterface_10_type: 8
+networkInterface_11_addressEntry_0_ip: fe80::aa:1416:9332:4e47%en0
+networkInterface_11_addressEntry_1_ip: 2a02:6b6f:e487:5c00:89e:3efa:7102:ddf
+networkInterface_11_addressEntry_2_ip: 2a02:6b6f:e487:5c00:30e8:f9f4:33e0:15ed
+networkInterface_11_addressEntry_3_ip: 10.0.0.11
+networkInterface_11_flags: 39
+networkInterface_11_hardwareAddress: AA:CE:80:57:EB:2A
+networkInterface_11_humanReadableName: en0
+networkInterface_11_isLoopBack: No
+networkInterface_11_isRunning: Yes
+networkInterface_11_isUp: Yes
+networkInterface_11_isValid: Yes
+networkInterface_11_name: en0
+networkInterface_11_type: 8
+networkInterface_12_addressEntry_0_ip: fe80::f02e:beff:fe72:18a3%awdl0
+networkInterface_12_flags: 39
+networkInterface_12_hardwareAddress: F2:2E:BE:72:18:A3
+networkInterface_12_humanReadableName: awdl0
+networkInterface_12_isLoopBack: No
+networkInterface_12_isRunning: Yes
+networkInterface_12_isUp: Yes
+networkInterface_12_isValid: Yes
+networkInterface_12_name: awdl0
+networkInterface_12_type: 8
+networkInterface_13_addressEntry_0_ip: fe80::b46e:e538:52d9:5220%utun0
+networkInterface_13_flags: 51
+networkInterface_13_hardwareAddress: 
+networkInterface_13_humanReadableName: utun0
+networkInterface_13_isLoopBack: No
+networkInterface_13_isRunning: Yes
+networkInterface_13_isUp: Yes
+networkInterface_13_isValid: Yes
+networkInterface_13_name: utun0
+networkInterface_13_type: 0
+networkInterface_14_addressEntry_0_ip: fe80::f02e:beff:fe72:18a3%llw0
+networkInterface_14_flags: 39
+networkInterface_14_hardwareAddress: F2:2E:BE:72:18:A3
+networkInterface_14_humanReadableName: llw0
+networkInterface_14_isLoopBack: No
+networkInterface_14_isRunning: Yes
+networkInterface_14_isUp: Yes
+networkInterface_14_isValid: Yes
+networkInterface_14_name: llw0
+networkInterface_14_type: 8
+networkInterface_15_addressEntry_0_ip: fe80::1e94:d15d:f4aa:9ef9%utun1
+networkInterface_15_flags: 51
+networkInterface_15_hardwareAddress: 
+networkInterface_15_humanReadableName: utun1
+networkInterface_15_isLoopBack: No
+networkInterface_15_isRunning: Yes
+networkInterface_15_isUp: Yes
+networkInterface_15_isValid: Yes
+networkInterface_15_name: utun1
+networkInterface_15_type: 0
+networkInterface_16_addressEntry_0_ip: fe80::a651:960d:41e6:871a%utun2
+networkInterface_16_flags: 51
+networkInterface_16_hardwareAddress: 
+networkInterface_16_humanReadableName: utun2
+networkInterface_16_isLoopBack: No
+networkInterface_16_isRunning: Yes
+networkInterface_16_isUp: Yes
+networkInterface_16_isValid: Yes
+networkInterface_16_name: utun2
+networkInterface_16_type: 0
+networkInterface_17_addressEntry_0_ip: fe80::ce81:b1c:bd2c:69e%utun3
+networkInterface_17_flags: 51
+networkInterface_17_hardwareAddress: 
+networkInterface_17_humanReadableName: utun3
+networkInterface_17_isLoopBack: No
+networkInterface_17_isRunning: Yes
+networkInterface_17_isUp: Yes
+networkInterface_17_isValid: Yes
+networkInterface_17_name: utun3
+networkInterface_17_type: 0
+networkInterface_18_flags: 51
+networkInterface_18_hardwareAddress: 
+networkInterface_18_humanReadableName: utun4
+networkInterface_18_isLoopBack: No
+networkInterface_18_isRunning: Yes
+networkInterface_18_isUp: Yes
+networkInterface_18_isValid: Yes
+networkInterface_18_name: utun4
+networkInterface_18_type: 0
+networkInterface_19_flags: 51
+networkInterface_19_hardwareAddress: 
+networkInterface_19_humanReadableName: utun5
+networkInterface_19_isLoopBack: No
+networkInterface_19_isRunning: Yes
+networkInterface_19_isUp: Yes
+networkInterface_19_isValid: Yes
+networkInterface_19_name: utun5
+networkInterface_19_type: 0
+networkInterface_1_flags: 48
+networkInterface_1_hardwareAddress: 
+networkInterface_1_humanReadableName: gif0
+networkInterface_1_isLoopBack: No
+networkInterface_1_isRunning: No
+networkInterface_1_isUp: No
+networkInterface_1_isValid: No
+networkInterface_1_name: gif0
+networkInterface_1_type: 2
+networkInterface_20_flags: 51
+networkInterface_20_hardwareAddress: 
+networkInterface_20_humanReadableName: utun6
+networkInterface_20_isLoopBack: No
+networkInterface_20_isRunning: Yes
+networkInterface_20_isUp: Yes
+networkInterface_20_isValid: Yes
+networkInterface_20_name: utun6
+networkInterface_20_type: 0
+networkInterface_21_flags: 51
+networkInterface_21_hardwareAddress: 
+networkInterface_21_humanReadableName: utun7
+networkInterface_21_isLoopBack: No
+networkInterface_21_isRunning: Yes
+networkInterface_21_isUp: Yes
+networkInterface_21_isValid: Yes
+networkInterface_21_name: utun7
+networkInterface_21_type: 0
+networkInterface_22_flags: 51
+networkInterface_22_hardwareAddress: 
+networkInterface_22_humanReadableName: utun8
+networkInterface_22_isLoopBack: No
+networkInterface_22_isRunning: Yes
+networkInterface_22_isUp: Yes
+networkInterface_22_isValid: Yes
+networkInterface_22_name: utun8
+networkInterface_22_type: 0
+networkInterface_23_flags: 51
+networkInterface_23_hardwareAddress: 
+networkInterface_23_humanReadableName: utun9
+networkInterface_23_isLoopBack: No
+networkInterface_23_isRunning: Yes
+networkInterface_23_isUp: Yes
+networkInterface_23_isValid: Yes
+networkInterface_23_name: utun9
+networkInterface_23_type: 0
+networkInterface_24_flags: 51
+networkInterface_24_hardwareAddress: 
+networkInterface_24_humanReadableName: utun10
+networkInterface_24_isLoopBack: No
+networkInterface_24_isRunning: Yes
+networkInterface_24_isUp: Yes
+networkInterface_24_isValid: Yes
+networkInterface_24_name: utun10
+networkInterface_24_type: 0
+networkInterface_25_addressEntry_0_ip: fe80::8f88:fc12:1c94:9d82%utun11
+networkInterface_25_flags: 51
+networkInterface_25_hardwareAddress: 
+networkInterface_25_humanReadableName: utun11
+networkInterface_25_isLoopBack: No
+networkInterface_25_isRunning: Yes
+networkInterface_25_isUp: Yes
+networkInterface_25_isValid: Yes
+networkInterface_25_name: utun11
+networkInterface_25_type: 0
+networkInterface_26_addressEntry_0_ip: fe80::a23e:dd80:73bb:2114%utun12
+networkInterface_26_flags: 51
+networkInterface_26_hardwareAddress: 
+networkInterface_26_humanReadableName: utun12
+networkInterface_26_isLoopBack: No
+networkInterface_26_isRunning: Yes
+networkInterface_26_isUp: Yes
+networkInterface_26_isValid: Yes
+networkInterface_26_name: utun12
+networkInterface_26_type: 0
+networkInterface_27_flags: 51
+networkInterface_27_hardwareAddress: 
+networkInterface_27_humanReadableName: utun13
+networkInterface_27_isLoopBack: No
+networkInterface_27_isRunning: Yes
+networkInterface_27_isUp: Yes
+networkInterface_27_isValid: Yes
+networkInterface_27_name: utun13
+networkInterface_27_type: 0
+networkInterface_28_flags: 51
+networkInterface_28_hardwareAddress: 
+networkInterface_28_humanReadableName: utun14
+networkInterface_28_isLoopBack: No
+networkInterface_28_isRunning: Yes
+networkInterface_28_isUp: Yes
+networkInterface_28_isValid: Yes
+networkInterface_28_name: utun14
+networkInterface_28_type: 0
+networkInterface_29_flags: 51
+networkInterface_29_hardwareAddress: 
+networkInterface_29_humanReadableName: utun15
+networkInterface_29_isLoopBack: No
+networkInterface_29_isRunning: Yes
+networkInterface_29_isUp: Yes
+networkInterface_29_isValid: Yes
+networkInterface_29_name: utun15
+networkInterface_29_type: 0
+networkInterface_2_flags: 0
+networkInterface_2_hardwareAddress: 
+networkInterface_2_humanReadableName: stf0
+networkInterface_2_isLoopBack: No
+networkInterface_2_isRunning: No
+networkInterface_2_isUp: No
+networkInterface_2_isValid: No
+networkInterface_2_name: stf0
+networkInterface_2_type: 2
+networkInterface_30_flags: 51
+networkInterface_30_hardwareAddress: 
+networkInterface_30_humanReadableName: utun16
+networkInterface_30_isLoopBack: No
+networkInterface_30_isRunning: Yes
+networkInterface_30_isUp: Yes
+networkInterface_30_isValid: Yes
+networkInterface_30_name: utun16
+networkInterface_30_type: 0
+networkInterface_31_flags: 51
+networkInterface_31_hardwareAddress: 
+networkInterface_31_humanReadableName: utun17
+networkInterface_31_isLoopBack: No
+networkInterface_31_isRunning: Yes
+networkInterface_31_isUp: Yes
+networkInterface_31_isValid: Yes
+networkInterface_31_name: utun17
+networkInterface_31_type: 0
+networkInterface_32_flags: 51
+networkInterface_32_hardwareAddress: 
+networkInterface_32_humanReadableName: utun18
+networkInterface_32_isLoopBack: No
+networkInterface_32_isRunning: Yes
+networkInterface_32_isUp: Yes
+networkInterface_32_isValid: Yes
+networkInterface_32_name: utun18
+networkInterface_32_type: 0
+networkInterface_33_flags: 51
+networkInterface_33_hardwareAddress: 
+networkInterface_33_humanReadableName: utun19
+networkInterface_33_isLoopBack: No
+networkInterface_33_isRunning: Yes
+networkInterface_33_isUp: Yes
+networkInterface_33_isValid: Yes
+networkInterface_33_name: utun19
+networkInterface_33_type: 0
+networkInterface_34_flags: 51
+networkInterface_34_hardwareAddress: 
+networkInterface_34_humanReadableName: utun20
+networkInterface_34_isLoopBack: No
+networkInterface_34_isRunning: Yes
+networkInterface_34_isUp: Yes
+networkInterface_34_isValid: Yes
+networkInterface_34_name: utun20
+networkInterface_34_type: 0
+networkInterface_35_flags: 51
+networkInterface_35_hardwareAddress: 
+networkInterface_35_humanReadableName: utun21
+networkInterface_35_isLoopBack: No
+networkInterface_35_isRunning: Yes
+networkInterface_35_isUp: Yes
+networkInterface_35_isValid: Yes
+networkInterface_35_name: utun21
+networkInterface_35_type: 0
+networkInterface_36_flags: 51
+networkInterface_36_hardwareAddress: 
+networkInterface_36_humanReadableName: utun22
+networkInterface_36_isLoopBack: No
+networkInterface_36_isRunning: Yes
+networkInterface_36_isUp: Yes
+networkInterface_36_isValid: Yes
+networkInterface_36_name: utun22
+networkInterface_36_type: 0
+networkInterface_37_flags: 51
+networkInterface_37_hardwareAddress: 
+networkInterface_37_humanReadableName: utun23
+networkInterface_37_isLoopBack: No
+networkInterface_37_isRunning: Yes
+networkInterface_37_isUp: Yes
+networkInterface_37_isValid: Yes
+networkInterface_37_name: utun23
+networkInterface_37_type: 0
+networkInterface_38_flags: 51
+networkInterface_38_hardwareAddress: 
+networkInterface_38_humanReadableName: utun24
+networkInterface_38_isLoopBack: No
+networkInterface_38_isRunning: Yes
+networkInterface_38_isUp: Yes
+networkInterface_38_isValid: Yes
+networkInterface_38_name: utun24
+networkInterface_38_type: 0
+networkInterface_39_flags: 51
+networkInterface_39_hardwareAddress: 
+networkInterface_39_humanReadableName: utun25
+networkInterface_39_isLoopBack: No
+networkInterface_39_isRunning: Yes
+networkInterface_39_isUp: Yes
+networkInterface_39_isValid: Yes
+networkInterface_39_name: utun25
+networkInterface_39_type: 0
+networkInterface_3_flags: 39
+networkInterface_3_hardwareAddress: A2:1A:9E:DD:A8:F6
+networkInterface_3_humanReadableName: anpi0
+networkInterface_3_isLoopBack: No
+networkInterface_3_isRunning: Yes
+networkInterface_3_isUp: Yes
+networkInterface_3_isValid: Yes
+networkInterface_3_name: anpi0
+networkInterface_3_type: 3
+networkInterface_40_flags: 51
+networkInterface_40_hardwareAddress: 
+networkInterface_40_humanReadableName: utun26
+networkInterface_40_isLoopBack: No
+networkInterface_40_isRunning: Yes
+networkInterface_40_isUp: Yes
+networkInterface_40_isValid: Yes
+networkInterface_40_name: utun26
+networkInterface_40_type: 0
+networkInterface_41_flags: 51
+networkInterface_41_hardwareAddress: 
+networkInterface_41_humanReadableName: utun27
+networkInterface_41_isLoopBack: No
+networkInterface_41_isRunning: Yes
+networkInterface_41_isUp: Yes
+networkInterface_41_isValid: Yes
+networkInterface_41_name: utun27
+networkInterface_41_type: 0
+networkInterface_42_flags: 51
+networkInterface_42_hardwareAddress: 
+networkInterface_42_humanReadableName: utun28
+networkInterface_42_isLoopBack: No
+networkInterface_42_isRunning: Yes
+networkInterface_42_isUp: Yes
+networkInterface_42_isValid: Yes
+networkInterface_42_name: utun28
+networkInterface_42_type: 0
+networkInterface_43_flags: 51
+networkInterface_43_hardwareAddress: 
+networkInterface_43_humanReadableName: utun29
+networkInterface_43_isLoopBack: No
+networkInterface_43_isRunning: Yes
+networkInterface_43_isUp: Yes
+networkInterface_43_isValid: Yes
+networkInterface_43_name: utun29
+networkInterface_43_type: 0
+networkInterface_44_flags: 51
+networkInterface_44_hardwareAddress: 
+networkInterface_44_humanReadableName: utun30
+networkInterface_44_isLoopBack: No
+networkInterface_44_isRunning: Yes
+networkInterface_44_isUp: Yes
+networkInterface_44_isValid: Yes
+networkInterface_44_name: utun30
+networkInterface_44_type: 0
+networkInterface_45_flags: 51
+networkInterface_45_hardwareAddress: 
+networkInterface_45_humanReadableName: utun31
+networkInterface_45_isLoopBack: No
+networkInterface_45_isRunning: Yes
+networkInterface_45_isUp: Yes
+networkInterface_45_isValid: Yes
+networkInterface_45_name: utun31
+networkInterface_45_type: 0
+networkInterface_46_flags: 51
+networkInterface_46_hardwareAddress: 
+networkInterface_46_humanReadableName: utun32
+networkInterface_46_isLoopBack: No
+networkInterface_46_isRunning: Yes
+networkInterface_46_isUp: Yes
+networkInterface_46_isValid: Yes
+networkInterface_46_name: utun32
+networkInterface_46_type: 0
+networkInterface_47_flags: 51
+networkInterface_47_hardwareAddress: 
+networkInterface_47_humanReadableName: utun33
+networkInterface_47_isLoopBack: No
+networkInterface_47_isRunning: Yes
+networkInterface_47_isUp: Yes
+networkInterface_47_isValid: Yes
+networkInterface_47_name: utun33
+networkInterface_47_type: 0
+networkInterface_48_flags: 51
+networkInterface_48_hardwareAddress: 
+networkInterface_48_humanReadableName: utun34
+networkInterface_48_isLoopBack: No
+networkInterface_48_isRunning: Yes
+networkInterface_48_isUp: Yes
+networkInterface_48_isValid: Yes
+networkInterface_48_name: utun34
+networkInterface_48_type: 0
+networkInterface_49_flags: 51
+networkInterface_49_hardwareAddress: 
+networkInterface_49_humanReadableName: utun35
+networkInterface_49_isLoopBack: No
+networkInterface_49_isRunning: Yes
+networkInterface_49_isUp: Yes
+networkInterface_49_isValid: Yes
+networkInterface_49_name: utun35
+networkInterface_49_type: 0
+networkInterface_4_flags: 39
+networkInterface_4_hardwareAddress: A2:1A:9E:DD:A8:F7
+networkInterface_4_humanReadableName: anpi1
+networkInterface_4_isLoopBack: No
+networkInterface_4_isRunning: Yes
+networkInterface_4_isUp: Yes
+networkInterface_4_isValid: Yes
+networkInterface_4_name: anpi1
+networkInterface_4_type: 3
+networkInterface_50_flags: 51
+networkInterface_50_hardwareAddress: 
+networkInterface_50_humanReadableName: utun36
+networkInterface_50_isLoopBack: No
+networkInterface_50_isRunning: Yes
+networkInterface_50_isUp: Yes
+networkInterface_50_isValid: Yes
+networkInterface_50_name: utun36
+networkInterface_50_type: 0
+networkInterface_51_flags: 51
+networkInterface_51_hardwareAddress: 
+networkInterface_51_humanReadableName: utun37
+networkInterface_51_isLoopBack: No
+networkInterface_51_isRunning: Yes
+networkInterface_51_isUp: Yes
+networkInterface_51_isValid: Yes
+networkInterface_51_name: utun37
+networkInterface_51_type: 0
+networkInterface_52_flags: 51
+networkInterface_52_hardwareAddress: 
+networkInterface_52_humanReadableName: utun38
+networkInterface_52_isLoopBack: No
+networkInterface_52_isRunning: Yes
+networkInterface_52_isUp: Yes
+networkInterface_52_isValid: Yes
+networkInterface_52_name: utun38
+networkInterface_52_type: 0
+networkInterface_53_flags: 51
+networkInterface_53_hardwareAddress: 
+networkInterface_53_humanReadableName: utun39
+networkInterface_53_isLoopBack: No
+networkInterface_53_isRunning: Yes
+networkInterface_53_isUp: Yes
+networkInterface_53_isValid: Yes
+networkInterface_53_name: utun39
+networkInterface_53_type: 0
+networkInterface_54_flags: 51
+networkInterface_54_hardwareAddress: 
+networkInterface_54_humanReadableName: utun40
+networkInterface_54_isLoopBack: No
+networkInterface_54_isRunning: Yes
+networkInterface_54_isUp: Yes
+networkInterface_54_isValid: Yes
+networkInterface_54_name: utun40
+networkInterface_54_type: 0
+networkInterface_55_flags: 51
+networkInterface_55_hardwareAddress: 
+networkInterface_55_humanReadableName: utun41
+networkInterface_55_isLoopBack: No
+networkInterface_55_isRunning: Yes
+networkInterface_55_isUp: Yes
+networkInterface_55_isValid: Yes
+networkInterface_55_name: utun41
+networkInterface_55_type: 0
+networkInterface_56_flags: 51
+networkInterface_56_hardwareAddress: 
+networkInterface_56_humanReadableName: utun42
+networkInterface_56_isLoopBack: No
+networkInterface_56_isRunning: Yes
+networkInterface_56_isUp: Yes
+networkInterface_56_isValid: Yes
+networkInterface_56_name: utun42
+networkInterface_56_type: 0
+networkInterface_57_flags: 51
+networkInterface_57_hardwareAddress: 
+networkInterface_57_humanReadableName: utun43
+networkInterface_57_isLoopBack: No
+networkInterface_57_isRunning: Yes
+networkInterface_57_isUp: Yes
+networkInterface_57_isValid: Yes
+networkInterface_57_name: utun43
+networkInterface_57_type: 0
+networkInterface_58_flags: 51
+networkInterface_58_hardwareAddress: 
+networkInterface_58_humanReadableName: utun44
+networkInterface_58_isLoopBack: No
+networkInterface_58_isRunning: Yes
+networkInterface_58_isUp: Yes
+networkInterface_58_isValid: Yes
+networkInterface_58_name: utun44
+networkInterface_58_type: 0
+networkInterface_59_flags: 51
+networkInterface_59_hardwareAddress: 
+networkInterface_59_humanReadableName: utun45
+networkInterface_59_isLoopBack: No
+networkInterface_59_isRunning: Yes
+networkInterface_59_isUp: Yes
+networkInterface_59_isValid: Yes
+networkInterface_59_name: utun45
+networkInterface_59_type: 0
+networkInterface_5_flags: 39
+networkInterface_5_hardwareAddress: A2:1A:9E:DD:A8:D6
+networkInterface_5_humanReadableName: en4
+networkInterface_5_isLoopBack: No
+networkInterface_5_isRunning: Yes
+networkInterface_5_isUp: Yes
+networkInterface_5_isValid: Yes
+networkInterface_5_name: en4
+networkInterface_5_type: 3
+networkInterface_60_flags: 51
+networkInterface_60_hardwareAddress: 
+networkInterface_60_humanReadableName: utun46
+networkInterface_60_isLoopBack: No
+networkInterface_60_isRunning: Yes
+networkInterface_60_isUp: Yes
+networkInterface_60_isValid: Yes
+networkInterface_60_name: utun46
+networkInterface_60_type: 0
+networkInterface_61_flags: 51
+networkInterface_61_hardwareAddress: 
+networkInterface_61_humanReadableName: utun47
+networkInterface_61_isLoopBack: No
+networkInterface_61_isRunning: Yes
+networkInterface_61_isUp: Yes
+networkInterface_61_isValid: Yes
+networkInterface_61_name: utun47
+networkInterface_61_type: 0
+networkInterface_62_flags: 51
+networkInterface_62_hardwareAddress: 
+networkInterface_62_humanReadableName: utun48
+networkInterface_62_isLoopBack: No
+networkInterface_62_isRunning: Yes
+networkInterface_62_isUp: Yes
+networkInterface_62_isValid: Yes
+networkInterface_62_name: utun48
+networkInterface_62_type: 0
+networkInterface_63_flags: 51
+networkInterface_63_hardwareAddress: 
+networkInterface_63_humanReadableName: utun49
+networkInterface_63_isLoopBack: No
+networkInterface_63_isRunning: Yes
+networkInterface_63_isUp: Yes
+networkInterface_63_isValid: Yes
+networkInterface_63_name: utun49
+networkInterface_63_type: 0
+networkInterface_64_flags: 51
+networkInterface_64_hardwareAddress: 
+networkInterface_64_humanReadableName: utun50
+networkInterface_64_isLoopBack: No
+networkInterface_64_isRunning: Yes
+networkInterface_64_isUp: Yes
+networkInterface_64_isValid: Yes
+networkInterface_64_name: utun50
+networkInterface_64_type: 0
+networkInterface_65_flags: 51
+networkInterface_65_hardwareAddress: 
+networkInterface_65_humanReadableName: utun51
+networkInterface_65_isLoopBack: No
+networkInterface_65_isRunning: Yes
+networkInterface_65_isUp: Yes
+networkInterface_65_isValid: Yes
+networkInterface_65_name: utun51
+networkInterface_65_type: 0
+networkInterface_66_flags: 51
+networkInterface_66_hardwareAddress: 
+networkInterface_66_humanReadableName: utun52
+networkInterface_66_isLoopBack: No
+networkInterface_66_isRunning: Yes
+networkInterface_66_isUp: Yes
+networkInterface_66_isValid: Yes
+networkInterface_66_name: utun52
+networkInterface_66_type: 0
+networkInterface_67_flags: 51
+networkInterface_67_hardwareAddress: 
+networkInterface_67_humanReadableName: utun53
+networkInterface_67_isLoopBack: No
+networkInterface_67_isRunning: Yes
+networkInterface_67_isUp: Yes
+networkInterface_67_isValid: Yes
+networkInterface_67_name: utun53
+networkInterface_67_type: 0
+networkInterface_68_flags: 51
+networkInterface_68_hardwareAddress: 
+networkInterface_68_humanReadableName: utun54
+networkInterface_68_isLoopBack: No
+networkInterface_68_isRunning: Yes
+networkInterface_68_isUp: Yes
+networkInterface_68_isValid: Yes
+networkInterface_68_name: utun54
+networkInterface_68_type: 0
+networkInterface_69_flags: 51
+networkInterface_69_hardwareAddress: 
+networkInterface_69_humanReadableName: utun55
+networkInterface_69_isLoopBack: No
+networkInterface_69_isRunning: Yes
+networkInterface_69_isUp: Yes
+networkInterface_69_isValid: Yes
+networkInterface_69_name: utun55
+networkInterface_69_type: 0
+networkInterface_6_flags: 39
+networkInterface_6_hardwareAddress: A2:1A:9E:DD:A8:D7
+networkInterface_6_humanReadableName: en5
+networkInterface_6_isLoopBack: No
+networkInterface_6_isRunning: Yes
+networkInterface_6_isUp: Yes
+networkInterface_6_isValid: Yes
+networkInterface_6_name: en5
+networkInterface_6_type: 3
+networkInterface_70_flags: 51
+networkInterface_70_hardwareAddress: 
+networkInterface_70_humanReadableName: utun56
+networkInterface_70_isLoopBack: No
+networkInterface_70_isRunning: Yes
+networkInterface_70_isUp: Yes
+networkInterface_70_isValid: Yes
+networkInterface_70_name: utun56
+networkInterface_70_type: 0
+networkInterface_71_flags: 51
+networkInterface_71_hardwareAddress: 
+networkInterface_71_humanReadableName: utun57
+networkInterface_71_isLoopBack: No
+networkInterface_71_isRunning: Yes
+networkInterface_71_isUp: Yes
+networkInterface_71_isValid: Yes
+networkInterface_71_name: utun57
+networkInterface_71_type: 0
+networkInterface_72_flags: 51
+networkInterface_72_hardwareAddress: 
+networkInterface_72_humanReadableName: utun58
+networkInterface_72_isLoopBack: No
+networkInterface_72_isRunning: Yes
+networkInterface_72_isUp: Yes
+networkInterface_72_isValid: Yes
+networkInterface_72_name: utun58
+networkInterface_72_type: 0
+networkInterface_73_flags: 51
+networkInterface_73_hardwareAddress: 
+networkInterface_73_humanReadableName: utun59
+networkInterface_73_isLoopBack: No
+networkInterface_73_isRunning: Yes
+networkInterface_73_isUp: Yes
+networkInterface_73_isValid: Yes
+networkInterface_73_name: utun59
+networkInterface_73_type: 0
+networkInterface_74_flags: 51
+networkInterface_74_hardwareAddress: 
+networkInterface_74_humanReadableName: utun60
+networkInterface_74_isLoopBack: No
+networkInterface_74_isRunning: Yes
+networkInterface_74_isUp: Yes
+networkInterface_74_isValid: Yes
+networkInterface_74_name: utun60
+networkInterface_74_type: 0
+networkInterface_75_flags: 51
+networkInterface_75_hardwareAddress: 
+networkInterface_75_humanReadableName: utun61
+networkInterface_75_isLoopBack: No
+networkInterface_75_isRunning: Yes
+networkInterface_75_isUp: Yes
+networkInterface_75_isValid: Yes
+networkInterface_75_name: utun61
+networkInterface_75_type: 0
+networkInterface_76_flags: 51
+networkInterface_76_hardwareAddress: 
+networkInterface_76_humanReadableName: utun62
+networkInterface_76_isLoopBack: No
+networkInterface_76_isRunning: Yes
+networkInterface_76_isUp: Yes
+networkInterface_76_isValid: Yes
+networkInterface_76_name: utun62
+networkInterface_76_type: 0
+networkInterface_77_flags: 51
+networkInterface_77_hardwareAddress: 
+networkInterface_77_humanReadableName: utun63
+networkInterface_77_isLoopBack: No
+networkInterface_77_isRunning: Yes
+networkInterface_77_isUp: Yes
+networkInterface_77_isValid: Yes
+networkInterface_77_name: utun63
+networkInterface_77_type: 0
+networkInterface_78_flags: 51
+networkInterface_78_hardwareAddress: 
+networkInterface_78_humanReadableName: utun64
+networkInterface_78_isLoopBack: No
+networkInterface_78_isRunning: Yes
+networkInterface_78_isUp: Yes
+networkInterface_78_isValid: Yes
+networkInterface_78_name: utun64
+networkInterface_78_type: 0
+networkInterface_79_flags: 51
+networkInterface_79_hardwareAddress: 
+networkInterface_79_humanReadableName: utun65
+networkInterface_79_isLoopBack: No
+networkInterface_79_isRunning: Yes
+networkInterface_79_isUp: Yes
+networkInterface_79_isValid: Yes
+networkInterface_79_name: utun65
+networkInterface_79_type: 0
+networkInterface_7_flags: 39
+networkInterface_7_hardwareAddress: 36:30:3C:36:7A:40
+networkInterface_7_humanReadableName: en1
+networkInterface_7_isLoopBack: No
+networkInterface_7_isRunning: Yes
+networkInterface_7_isUp: Yes
+networkInterface_7_isValid: Yes
+networkInterface_7_name: en1
+networkInterface_7_type: 3
+networkInterface_80_flags: 51
+networkInterface_80_hardwareAddress: 
+networkInterface_80_humanReadableName: utun66
+networkInterface_80_isLoopBack: No
+networkInterface_80_isRunning: Yes
+networkInterface_80_isUp: Yes
+networkInterface_80_isValid: Yes
+networkInterface_80_name: utun66
+networkInterface_80_type: 0
+networkInterface_81_flags: 51
+networkInterface_81_hardwareAddress: 
+networkInterface_81_humanReadableName: utun67
+networkInterface_81_isLoopBack: No
+networkInterface_81_isRunning: Yes
+networkInterface_81_isUp: Yes
+networkInterface_81_isValid: Yes
+networkInterface_81_name: utun67
+networkInterface_81_type: 0
+networkInterface_82_addressEntry_0_ip: fe80::6bbd:93b9:c0fa:452c%utun68
+networkInterface_82_flags: 51
+networkInterface_82_hardwareAddress: 
+networkInterface_82_humanReadableName: utun68
+networkInterface_82_isLoopBack: No
+networkInterface_82_isRunning: Yes
+networkInterface_82_isUp: Yes
+networkInterface_82_isValid: Yes
+networkInterface_82_name: utun68
+networkInterface_82_type: 0
+networkInterface_83_addressEntry_0_ip: fe80::17e7:a10a:4399:e618%utun69
+networkInterface_83_flags: 51
+networkInterface_83_hardwareAddress: 
+networkInterface_83_humanReadableName: utun69
+networkInterface_83_isLoopBack: No
+networkInterface_83_isRunning: Yes
+networkInterface_83_isUp: Yes
+networkInterface_83_isValid: Yes
+networkInterface_83_name: utun69
+networkInterface_83_type: 0
+networkInterface_84_flags: 51
+networkInterface_84_hardwareAddress: 
+networkInterface_84_humanReadableName: utun70
+networkInterface_84_isLoopBack: No
+networkInterface_84_isRunning: Yes
+networkInterface_84_isUp: Yes
+networkInterface_84_isValid: Yes
+networkInterface_84_name: utun70
+networkInterface_84_type: 0
+networkInterface_85_flags: 51
+networkInterface_85_hardwareAddress: 
+networkInterface_85_humanReadableName: utun71
+networkInterface_85_isLoopBack: No
+networkInterface_85_isRunning: Yes
+networkInterface_85_isUp: Yes
+networkInterface_85_isValid: Yes
+networkInterface_85_name: utun71
+networkInterface_85_type: 0
+networkInterface_86_flags: 51
+networkInterface_86_hardwareAddress: 
+networkInterface_86_humanReadableName: utun72
+networkInterface_86_isLoopBack: No
+networkInterface_86_isRunning: Yes
+networkInterface_86_isUp: Yes
+networkInterface_86_isValid: Yes
+networkInterface_86_name: utun72
+networkInterface_86_type: 0
+networkInterface_87_flags: 51
+networkInterface_87_hardwareAddress: 
+networkInterface_87_humanReadableName: utun73
+networkInterface_87_isLoopBack: No
+networkInterface_87_isRunning: Yes
+networkInterface_87_isUp: Yes
+networkInterface_87_isValid: Yes
+networkInterface_87_name: utun73
+networkInterface_87_type: 0
+networkInterface_88_flags: 51
+networkInterface_88_hardwareAddress: 
+networkInterface_88_humanReadableName: utun74
+networkInterface_88_isLoopBack: No
+networkInterface_88_isRunning: Yes
+networkInterface_88_isUp: Yes
+networkInterface_88_isValid: Yes
+networkInterface_88_name: utun74
+networkInterface_88_type: 0
+networkInterface_89_flags: 51
+networkInterface_89_hardwareAddress: 
+networkInterface_89_humanReadableName: utun75
+networkInterface_89_isLoopBack: No
+networkInterface_89_isRunning: Yes
+networkInterface_89_isUp: Yes
+networkInterface_89_isValid: Yes
+networkInterface_89_name: utun75
+networkInterface_89_type: 0
+networkInterface_8_flags: 39
+networkInterface_8_hardwareAddress: 36:30:3C:36:7A:44
+networkInterface_8_humanReadableName: en2
+networkInterface_8_isLoopBack: No
+networkInterface_8_isRunning: Yes
+networkInterface_8_isUp: Yes
+networkInterface_8_isValid: Yes
+networkInterface_8_name: en2
+networkInterface_8_type: 3
+networkInterface_90_flags: 51
+networkInterface_90_hardwareAddress: 
+networkInterface_90_humanReadableName: utun76
+networkInterface_90_isLoopBack: No
+networkInterface_90_isRunning: Yes
+networkInterface_90_isUp: Yes
+networkInterface_90_isValid: Yes
+networkInterface_90_name: utun76
+networkInterface_90_type: 0
+networkInterface_91_flags: 51
+networkInterface_91_hardwareAddress: 
+networkInterface_91_humanReadableName: utun77
+networkInterface_91_isLoopBack: No
+networkInterface_91_isRunning: Yes
+networkInterface_91_isUp: Yes
+networkInterface_91_isValid: Yes
+networkInterface_91_name: utun77
+networkInterface_91_type: 0
+networkInterface_92_flags: 51
+networkInterface_92_hardwareAddress: 
+networkInterface_92_humanReadableName: utun78
+networkInterface_92_isLoopBack: No
+networkInterface_92_isRunning: Yes
+networkInterface_92_isUp: Yes
+networkInterface_92_isValid: Yes
+networkInterface_92_name: utun78
+networkInterface_92_type: 0
+networkInterface_93_flags: 51
+networkInterface_93_hardwareAddress: 
+networkInterface_93_humanReadableName: utun79
+networkInterface_93_isLoopBack: No
+networkInterface_93_isRunning: Yes
+networkInterface_93_isUp: Yes
+networkInterface_93_isValid: Yes
+networkInterface_93_name: utun79
+networkInterface_93_type: 0
+networkInterface_94_flags: 51
+networkInterface_94_hardwareAddress: 
+networkInterface_94_humanReadableName: utun80
+networkInterface_94_isLoopBack: No
+networkInterface_94_isRunning: Yes
+networkInterface_94_isUp: Yes
+networkInterface_94_isValid: Yes
+networkInterface_94_name: utun80
+networkInterface_94_type: 0
+networkInterface_95_flags: 51
+networkInterface_95_hardwareAddress: 
+networkInterface_95_humanReadableName: utun81
+networkInterface_95_isLoopBack: No
+networkInterface_95_isRunning: Yes
+networkInterface_95_isUp: Yes
+networkInterface_95_isValid: Yes
+networkInterface_95_name: utun81
+networkInterface_95_type: 0
+networkInterface_96_flags: 51
+networkInterface_96_hardwareAddress: 
+networkInterface_96_humanReadableName: utun82
+networkInterface_96_isLoopBack: No
+networkInterface_96_isRunning: Yes
+networkInterface_96_isUp: Yes
+networkInterface_96_isValid: Yes
+networkInterface_96_name: utun82
+networkInterface_96_type: 0
+networkInterface_97_flags: 51
+networkInterface_97_hardwareAddress: 
+networkInterface_97_humanReadableName: utun83
+networkInterface_97_isLoopBack: No
+networkInterface_97_isRunning: Yes
+networkInterface_97_isUp: Yes
+networkInterface_97_isValid: Yes
+networkInterface_97_name: utun83
+networkInterface_97_type: 0
+networkInterface_98_flags: 51
+networkInterface_98_hardwareAddress: 
+networkInterface_98_humanReadableName: utun84
+networkInterface_98_isLoopBack: No
+networkInterface_98_isRunning: Yes
+networkInterface_98_isUp: Yes
+networkInterface_98_isValid: Yes
+networkInterface_98_name: utun84
+networkInterface_98_type: 0
+networkInterface_99_flags: 51
+networkInterface_99_hardwareAddress: 
+networkInterface_99_humanReadableName: utun85
+networkInterface_99_isLoopBack: No
+networkInterface_99_isRunning: Yes
+networkInterface_99_isUp: Yes
+networkInterface_99_isValid: Yes
+networkInterface_99_name: utun85
+networkInterface_99_type: 0
+networkInterface_9_flags: 39
+networkInterface_9_hardwareAddress: 36:30:3C:36:7A:40
+networkInterface_9_humanReadableName: bridge0
+networkInterface_9_isLoopBack: No
+networkInterface_9_isRunning: Yes
+networkInterface_9_isUp: Yes
+networkInterface_9_isValid: Yes
+networkInterface_9_name: bridge0
+networkInterface_9_type: 0
+networkInterface_localHost: 127.0.0.1
+osName: Mac
+osUserName: ed
+productDate: Compile Time: Aug 12 2025 01:42:14 Build: 10.14.8
+productName: workflows
+productVersion: 10.14.8 Release
+systemUserName: ed

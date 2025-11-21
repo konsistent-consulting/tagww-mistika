@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <RAFFile>
+    <NameConvention>
+      <nameConvention>[path][baseName][_frame][.ext]</nameConvention>
+    </NameConvention>
+    <amount>50</amount>
+    <blueGain>100</blueGain>
+    <changeGain>false</changeGain>
+    <changeisoGain>false</changeisoGain>
+    <color>#458c65</color>
+    <colorMatrix>0</colorMatrix>
+    <debayer>0</debayer>
+    <filterChroma>0</filterChroma>
+    <filterPC>3</filterPC>
+    <filterPY>6</filterPY>
+    <filterRadC>16</filterRadC>
+    <filterRadY>8</filterRadY>
+    <flop>false</flop>
+    <fujiGammaCurve>--- From File ---</fujiGammaCurve>
+    <fujiGamutCurve>--- From File ---</fujiGamutCurve>
+    <gamma>sRGB</gamma>
+    <gamut>sRGB</gamut>
+    <isoGain>100</isoGain>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>RAFFile</objectName>
+    <pattern>0</pattern>
+    <redGain>100</redGain>
+    <stage>5</stage>
+    <threshold>100</threshold>
+    <url/>
+  </RAFFile>
+</nodeCommonRoot>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <EDLEditChanges>
+    <MarkersColors>
+      <EditChangesDVR>3</EditChangesDVR>
+      <EditChangesMTK>5</EditChangesMTK>
+      <NewVFXDVR>4</NewVFXDVR>
+      <NewVFXMTK>0</NewVFXMTK>
+    </MarkersColors>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#002d2d</color>
+    <edlMarkersFormat>
+      <DaVinciResolve>false</DaVinciResolve>
+      <FrameRate>25</FrameRate>
+      <Mistika>true</Mistika>
+    </edlMarkersFormat>
+    <edlMarkersPath/>
+    <objectName>EDLEditChanges</objectName>
+  </EDLEditChanges>
+</nodeCommonRoot>

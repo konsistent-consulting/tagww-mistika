@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="Color Space Transformations">
+  <view scale="0.482253" y="300.672" x="526.694"/>
+  <nodes>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-339.08,1.664</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="a10275a2-aaf6-4ce8-85e4-ce58dacc10ec"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="3acb358d-b9ec-43a8-8e5f-19fb50d819c5"/>
+     <Files type="output" name="Files" id="9b41a4fc-da83-495b-9584-50ff5a97ed0a">
+      <linkedTo>197598da-a69c-497a-94f1-87a136ba45a6</linkedTo>
+      <linkedTo>686f7e3b-cd50-4b52-8d6d-68c4627e5579</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">99.84,-94.176</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Rec709:Gamma 2 4</uniColorValue>
+     <gamma type="string">Gamma 2 4</gamma>
+     <gamut type="string">Rec709</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">Rec709</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="4a3e8731-9475-41d9-9800-6955c169cab0"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="dd6727b8-2343-4f7b-b973-2c1176459ceb"/>
+     <VideoOut label="AV Out" type="output" name="VideoOut" id="85755ab9-fead-4bea-ac23-b5016c3224c5"/>
+     <AudioOut label="Ext. Audio" type="output" name="AudioOut" id="ed5bfdcd-f423-4e49-83b9-f82b53252199" visible="0"/>
+     <VideoIn label="AV In" type="input" name="VideoIn" id="197598da-a69c-497a-94f1-87a136ba45a6">
+      <linkedTo>9b41a4fc-da83-495b-9584-50ff5a97ed0a</linkedTo>
+     </VideoIn>
+     <AudioIn label="Ext. Audio" type="input" name="AudioIn" id="60395f1a-1af1-47e2-b2f6-13a302dfb8cf"/>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder_2</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-337.16,578.48</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="f2a04c90-7c08-4cc0-a90b-aeb75df03181"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="e931068e-6895-4138-b040-4b98ec8b1833"/>
+     <Files type="output" name="Files" id="9b4abe5a-ee80-40ac-b831-166150c29daa">
+      <linkedTo>9bd91ec8-6858-47c1-a460-34d09accf1d3</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="TagColorSpace" type="task">
+    <properties>
+     <objectName type="string">TagColorSpace</objectName>
+     <color type="color">#678788</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-8.16,578.88</pos>
+     <schemaName type="string">tagcolorspace</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <gamma type="string">ITU-BT 709 / ITU-BT 2020</gamma>
+     <gamut type="string">Rec.709</gamut>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="9c10de75-ef39-4760-b41b-811ba88d0199"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="1d3c6bcd-c0c6-48c0-b767-5b78e98d4f73"/>
+     <Input type="input" name="Input" id="9bd91ec8-6858-47c1-a460-34d09accf1d3">
+      <linkedTo>9b4abe5a-ee80-40ac-b831-166150c29daa</linkedTo>
+     </Input>
+     <Output type="output" name="Output" id="ae159131-8c5f-4daf-8295-14c8ca40a6db">
+      <linkedTo>067af99a-2e8f-449b-b5db-c2bf7a11cd0f</linkedTo>
+     </Output>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes_2</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">333.84,596.88</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Rec709:Gamma 2 4</uniColorValue>
+     <gamma type="string">Gamma 2 4</gamma>
+     <gamut type="string">Rec709</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">Rec709</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="2dbbe07e-407f-4fa5-aff2-c20e257b2888"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="b2ee2aa0-eb03-4c24-a258-a59471a0d507"/>
+     <VideoOut label="AV Out" type="output" name="VideoOut" id="658d2df6-dcda-42e6-8939-aae050fb11bc"/>
+     <AudioOut label="Ext. Audio" type="output" name="AudioOut" id="630ae290-6563-4921-9ee0-ec308b275595" visible="0"/>
+     <VideoIn label="AV In" type="input" name="VideoIn" id="067af99a-2e8f-449b-b5db-c2bf7a11cd0f">
+      <linkedTo>ae159131-8c5f-4daf-8295-14c8ca40a6db</linkedTo>
+     </VideoIn>
+     <AudioIn label="Ext. Audio" type="input" name="AudioIn" id="0dd07823-406f-4777-a77b-82b56c0bb13a"/>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder_3</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-329.72,845.312</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="501aa5e3-7d3b-4bb5-8f2c-e01b83a51565"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="aa313484-27f6-42cf-b8a2-54ef1d444d2e"/>
+     <Files type="output" name="Files" id="800dbd04-d72b-44cc-8db8-b78f76fced64">
+      <linkedTo>f4dcda51-752e-4497-8444-c2ae0f8f9638</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="UniColor" type="task">
+    <properties>
+     <objectName type="string">UniColor</objectName>
+     <color type="color">#3c9e40</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">2.88,845.712</pos>
+     <schemaName type="string">unicolor</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <inputsAlignment type="int">0</inputsAlignment>
+     <Input_InputCurve type="string">18</Input_InputCurve>
+     <Input_InputGamut type="string">12</Input_InputGamut>
+     <GamutOptions_ConvertGamut type="string">1</GamutOptions_ConvertGamut>
+     <GamutOptions_SECRETUseBradfordMatrix type="string">1</GamutOptions_SECRETUseBradfordMatrix>
+     <Output_OutputGamut type="string">19</Output_OutputGamut>
+     <Output_OutputCurve type="string">24</Output_OutputCurve>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="b7e3b58b-430c-44fe-b3e4-faaa49f7cd85"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="9ab36180-2ff7-4bca-ac7f-56bb216f8ed3"/>
+     <Output type="output" name="Output" id="6bf4d5e8-b0dd-4f70-b011-b7c3b9d9db79"/>
+     <Input_1 type="input" name="Input_1" id="f4dcda51-752e-4497-8444-c2ae0f8f9638">
+      <linkedTo>800dbd04-d72b-44cc-8db8-b78f76fced64</linkedTo>
+     </Input_1>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes_3</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">88.56,81.744</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Rec709:Gamma 2 2</uniColorValue>
+     <gamma type="string">Gamma 2 2</gamma>
+     <gamut type="string">Rec709</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Custom ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="3ead15b9-d161-44ee-924c-daef216c5936"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="c2164aa3-b793-43d3-81c3-cc8be2c6f7e2"/>
+     <VideoOut label="AV Out" type="output" name="VideoOut" id="b8358e9e-9310-488f-9f3f-2da069fb2134"/>
+     <AudioOut label="Ext. Audio" type="output" name="AudioOut" id="00d48312-612f-48ea-9688-bdd05ed5a050" visible="0"/>
+     <VideoIn label="AV In" type="input" name="VideoIn" id="686f7e3b-cd50-4b52-8d6d-68c4627e5579">
+      <linkedTo>9b41a4fc-da83-495b-9584-50ff5a97ed0a</linkedTo>
+     </VideoIn>
+     <AudioIn label="Ext. Audio" type="input" name="AudioIn" id="d3315a7c-ec2b-4445-915b-c48cd0f4ec22"/>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder_0</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">467.032,-12.736</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="72e84345-bfdc-4a05-91ba-ab0d0741bb84"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="f39c9a7b-707d-4896-8053-c8bde86bc2cc"/>
+     <Files type="output" name="Files" id="377543cd-85cb-4714-b1f7-492dc35e5b5e">
+      <linkedTo>fed91c52-50e8-4171-a481-62ac2ae0ed10</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="REDFile" type="input">
+    <properties>
+     <objectName type="string">REDFile</objectName>
+     <color type="color">#458c65</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">790.272,-12.096</pos>
+     <schemaName type="string">redfile</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][_frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">false</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">redColor:DRAGONcolor2:Log3G10</uniColorValue>
+     <gamma type="string">Log3G10</gamma>
+     <gamut type="string">DRAGONcolor2</gamut>
+     <codec type="string"></codec>
+     <audioCodec type="string">None</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <debayer type="int">1</debayer>
+     <r3dISO type="string">0</r3dISO>
+     <changer3dKelvin type="bool">false</changer3dKelvin>
+     <r3dKelvin type="qlonglong">0</r3dKelvin>
+     <changer3dTint type="bool">false</changer3dTint>
+     <r3dTint type="int">0</r3dTint>
+     <changer3dExposureCompensation type="bool">false</changer3dExposureCompensation>
+     <r3dExposureCompensation type="float">0</r3dExposureCompensation>
+     <changeGain type="bool">false</changeGain>
+     <r3dGainR type="float">0</r3dGainR>
+     <r3dGainG type="float">0</r3dGainG>
+     <r3dGainB type="float">0</r3dGainB>
+     <changer3dSaturation type="bool">false</changer3dSaturation>
+     <r3dSaturation type="float">0</r3dSaturation>
+     <changer3dContrast type="bool">false</changer3dContrast>
+     <r3dContrast type="float">0</r3dContrast>
+     <changer3dBrightness type="bool">false</changer3dBrightness>
+     <r3dBrightness type="float">0</r3dBrightness>
+     <changer3dDRX type="bool">false</changer3dDRX>
+     <r3dDRX type="float">0</r3dDRX>
+     <changer3dShadow type="bool">false</changer3dShadow>
+     <r3dShadow type="float">0</r3dShadow>
+     <changer3dFlut type="bool">false</changer3dFlut>
+     <r3dFlut type="int">0</r3dFlut>
+     <r3dGammaCurve type="string">Log3.G10</r3dGammaCurve>
+     <r3dColorSpace type="string">DRAGONcolor2</r3dColorSpace>
+     <r3dDepth type="int">2</r3dDepth>
+     <r3dReduceFactor type="int">1</r3dReduceFactor>
+     <r3dipp2Process type="int">2</r3dipp2Process>
+     <changer3dipp2Exposure type="bool">false</changer3dipp2Exposure>
+     <r3dipp2Exposure type="float">0</r3dipp2Exposure>
+     <changer3dipp2CDLSaturation type="bool">true</changer3dipp2CDLSaturation>
+     <r3dipp2CDLSaturation type="float">1</r3dipp2CDLSaturation>
+     <r3dipp2CDLRedSlope type="float">1</r3dipp2CDLRedSlope>
+     <r3dipp2CDLRedOffset type="float">0</r3dipp2CDLRedOffset>
+     <r3dipp2CDLRedPower type="float">1</r3dipp2CDLRedPower>
+     <r3dipp2CDLGreenSlope type="float">1</r3dipp2CDLGreenSlope>
+     <r3dipp2CDLGreenOffset type="float">0</r3dipp2CDLGreenOffset>
+     <r3dipp2CDLGreenPower type="float">1</r3dipp2CDLGreenPower>
+     <r3dipp2CDLBlueSlope type="float">1</r3dipp2CDLBlueSlope>
+     <r3dipp2CDLBlueOffset type="float">0</r3dipp2CDLBlueOffset>
+     <r3dipp2CDLBluePower type="float">1</r3dipp2CDLBluePower>
+     <r3dipp2ShapeCreativeLut type="bool">false</r3dipp2ShapeCreativeLut>
+     <r3dipp2ShapeToneMap type="int">0</r3dipp2ShapeToneMap>
+     <r3dipp2ShapeHighlight type="int">0</r3dipp2ShapeHighlight>
+     <changer3dipp2HDRpeak type="bool">false</changer3dipp2HDRpeak>
+     <r3dipp2HDRpeak type="float">10000</r3dipp2HDRpeak>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="a59efc44-d44a-47ef-8aad-356a4d190fe5"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="65dceb2f-da53-423b-8525-bc7a0032a1fa"/>
+     <VideoOut label="AV Out" type="output" name="VideoOut" id="e627c71a-43e0-4948-b62b-f8a9cba2ac0b">
+      <linkedTo>d06845b0-7a92-45dc-8221-55b710f62916</linkedTo>
+     </VideoOut>
+     <AudioOut label="Ext. Audio" type="output" name="AudioOut" id="b07a9ad2-9899-403a-ad71-b4c0a54916a2" visible="0"/>
+     <Raw type="input" name="Raw" id="fed91c52-50e8-4171-a481-62ac2ae0ed10">
+      <linkedTo>377543cd-85cb-4714-b1f7-492dc35e5b5e</linkedTo>
+     </Raw>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes_0</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1104.67,8.064</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Rec709:Gamma 2 4</uniColorValue>
+     <gamma type="string">Gamma 2 4</gamma>
+     <gamut type="string">Rec709</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">Rec709</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="053fa545-e9a3-4865-a831-60ebdea8ee60"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="4d4bd4c2-1759-468b-86cf-a65c1fd0aba9"/>
+     <VideoOut label="AV Out" type="output" name="VideoOut" id="df861b1f-da4c-4a01-9749-723c950ea629"/>
+     <AudioOut label="Ext. Audio" type="output" name="AudioOut" id="564bb7d3-b81e-4607-83eb-e6ebe077de78" visible="0"/>
+     <VideoIn label="AV In" type="input" name="VideoIn" id="d06845b0-7a92-45dc-8221-55b710f62916">
+      <linkedTo>e627c71a-43e0-4948-b62b-f8a9cba2ac0b</linkedTo>
+     </VideoIn>
+     <AudioIn label="Ext. Audio" type="input" name="AudioIn" id="8d9e3a3e-d241-45a1-ab1a-5d912b69e913"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-381.888,-250.56</ScenePos>
+     <Size type="size2">1779.84,587.52</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Media with Color Space metadata</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff32404e</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-358.08,-372.16</ScenePos>
+     <Size type="size2">905.875,36.9531</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">There are several ways to perform color space transformations in Mistika Workflows:</Text>
+     <TextColor type="color">#ff7bd1ff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-340.992,-197.44</ScenePos>
+     <Size type="size2">1230.34,53.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">If the input material has color metadata (for example, with RAW files), it will only be necessary to define the output color space during rendering. 
+We can always use a camera debayer to define the color space for all RAW files from the same camera.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">808.704,122.24</ScenePos>
+     <Size type="size2">211.406,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Camera debayer applied</Text>
+     <TextColor type="color">#ffb6c7f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-350.784,243.2</ScenePos>
+     <Size type="size2">1309.3,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">For output, ACES can be used as color engine (default output color space list) or the gamma and gamut can be defined separately by using Mistika engine.</Text>
+     <TextColor type="color">#ffb6c7f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-314.496,509.312</ScenePos>
+     <Size type="size2">960.563,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">If the input material does not have color metadata, we can assign this metadata using the Tag Color Space node.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-324.864,789.248</ScenePos>
+     <Size type="size2">689.313,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">If we prefer to do the conversion in a single node, we can use the Unicolor node.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-380.16,437.184</ScenePos>
+     <Size type="size2">1190.59,608.256</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Media without Color Space Metadata</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff32404e</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

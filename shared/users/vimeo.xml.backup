@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Vimeo>
+    <color>#1fa3e9</color>
+    <description>File Uploaded with Mistika Workflows</description>
+    <embed>public</embed>
+    <errorMode>0</errorMode>
+    <objectName>Vimeo</objectName>
+    <title/>
+    <view>anybody</view>
+  </Vimeo>
+</nodeCommonRoot>

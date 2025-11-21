@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <DCP>
+    <aspectRatio>Flat (1.85:1)</aspectRatio>
+    <bypassEnabled>false</bypassEnabled>
+    <certificate>- None -</certificate>
+    <color>#0063b4</color>
+    <colorGrading>- No Specified -</colorGrading>
+    <contentType>--- Undefined ---</contentType>
+    <contentVersion>1</contentVersion>
+    <date>2024-11-09</date>
+    <destinationPath/>
+    <expiration>2025-02-07T00:20:14Z</expiration>
+    <facility/>
+    <fileVersion>1</fileVersion>
+    <footLamberts>0</footLamberts>
+    <frameRate>24</frameRate>
+    <from>2024-11-09T00:20:14Z</from>
+    <nodeLocked>false</nodeLocked>
+    <objectName>DCP</objectName>
+    <overwrite>true</overwrite>
+    <packageType>Original Version</packageType>
+    <rating>--- Undefined ---</rating>
+    <resolution>2K</resolution>
+    <stage>Release</stage>
+    <standard>Smpte</standard>
+    <stereo3D>2D</stereo3D>
+    <studio/>
+    <territory>Spain</territory>
+    <theatreChain/>
+    <title/>
+  </DCP>
+</nodeCommonRoot>

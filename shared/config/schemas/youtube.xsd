@@ -1,0 +1,19 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="YouTube" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="TermsOfServices" type="label" sgo:properties="clickable" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="clientId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="clientSecret" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="title" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="description" type="textEditor" sgo:visibility="0" sgo:sortOrder="9"/>
+                <xsd:element name="privacyStatus" type="stringPulldown" sgo:stringPulldownValues="Public$$$public|Private$$$private|Unlisted$$$unlisted" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="category" type="stringPulldown" sgo:stringPulldownValues="Film &amp; Animation$$$1|Cars &amp; Vehicles$$$2|Music$$$10|Pets &amp; Animals$$$25|Sports$$$17|Short Movies$$$18|Travel &amp; Events$$$19|Gaming$$$20|Videoblogging$$$21|People &amp; Blogs$$$22|Comedy$$$23|Entertainment$$$24|News &amp; Politics$$$25|Howto &amp; Style$$$26|Education$$$27|Science &amp; Technology$$$28|Nonprofits &amp; Activism$$$29|Movies$$$30|Anime/Animation$$$31|Action/Adventure$$$32|Classics$$$33|Comedy$$$34|Documentary$$$35|Drama$$$36|Family$$$37|Foreign$$$38|Horror$$$39|Sci-Fi/Fantasy$$$40|Thriller$$$41|Shorts$$$42|Shows$$$43|Trailers$$$44" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="keywords" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="13"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

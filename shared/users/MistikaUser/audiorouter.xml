@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <AudioRouter>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#646ea0</color>
+    <nChannels>2</nChannels>
+    <objectName>AudioRouter</objectName>
+    <preset>Stereo</preset>
+  </AudioRouter>
+</nodeCommonRoot>

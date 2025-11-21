@@ -1,0 +1,38 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="AfterEffectsFile" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="_adobeEULA" type="label" sgo:visibility="0" sgo:properties="clickable" sgo:sortOrder="4"/>
+                <xsd:element name="url" type="xsd:anyURI" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('AEP File (*.aep)')|fileDialogWindowTitle('Select a AEP File')" sgo:visibility="0" sgo:sortOrder="5"/>
+				<xsd:element name="composition" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="6" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_compositionList"/>					
+				<xsd:element name="renderTemplate" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="7" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_renderTemplateList"/>
+				<xsd:element name="createNewRND" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="newRNDdirectory" type="xsd:anyURI" sgo:properties="showDirsOnly|urlVisibleButtonBrowser|fileDialogWindowTitle('Select Folder')" sgo:visibility="0" sgo:sortOrder="9"/>
+                <xsd:element name="renderNameFromInput" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>
+				<xsd:element name="masterInput" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="mediaConnectors" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="20"/>
+                <xsd:element name="useNames" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="21"/>
+                <xsd:element name="jsonCurvesData" type="textEditor" sgo:visibility="0" sgo:sortOrder="30"/>
+				<xsd:element name="Config" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="30">
+                    <xsd:complexType>
+                        <xsd:sequence>
+							<xsd:element name="afterFxBinPath" type="xsd:anyURI" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('AE render File (*.*)')|fileDialogWindowTitle('Select The AfterFx command File')" sgo:visibility="0" sgo:sortOrder="10"/>
+							
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>	
+                <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="50">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>				
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

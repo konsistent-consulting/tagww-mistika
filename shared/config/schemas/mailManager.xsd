@@ -1,0 +1,36 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:element name="mailManager" sgo:visibility="3" sgo:sortOrder="0">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="mailManager" sgo:visibility="3" sgo:sortOrder="0">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category2" name="serverSettings" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="TCP$$$0|SSL$$$1|TLS$$$2" name="connectionType" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="5"/>
+          <xsd:element name="helpUrl" type="label" sgo:visibility="0" sgo:sortOrder="1" sgo:properties="clickable"/>
+          <xsd:element name="mailServer" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+          <xsd:element name="port" sgo:maxValue="65535" sgo:minValue="0" sgo:stepValue="1" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="4"/>
+          <xsd:element name="saveServerData" type="pushButton" sgo:visibility="0" sgo:sortOrder="6"/>
+          <xsd:element name="serverName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+          <xsd:element sgo:stringPulldownValues="" name="servers" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="smtpServerNames"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category2" name="userSettings" sgo:visibility="0" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="password" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+          <xsd:element name="username" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element name="test" type="pushButton" sgo:visibility="0" sgo:sortOrder="2"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>

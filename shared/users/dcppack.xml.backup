@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <DCPPack>
+    <color>#6671a8</color>
+    <gamma>DCDM 2 6</gamma>
+    <gamut>XYZ</gamut>
+    <layer>0</layer>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>DCPPack</objectName>
+    <reduceFactor>0</reduceFactor>
+    <url/>
+  </DCPPack>
+</nodeCommonRoot>

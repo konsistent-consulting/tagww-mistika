@@ -1,0 +1,36 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="BRAWFile" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="url" type="universalPath" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('Braw File (*.braw)')|fileDialogWindowTitle('Select a BRaw File')" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="debayer" type="integerPulldown" sgo:integerPulldownValues="From File$$$0|Custom$$$1" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="bmGamut" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="5" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_bmGamutList"/>
+                <xsd:element name="gamut" type="label" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="bmGamma" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="7" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_bmGammaList"/>
+                <xsd:element name="gamma" type="label" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="bmISO" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="9" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_bmISOList"/>
+                <xsd:element name="changebmKelvin" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="bmKelvin" type="xsd:integer" sgo:minValue="2000" sgo:maxValue="50000" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="changebmTint" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="bmTint" type="xsd:integer" sgo:minValue="-150" sgo:maxValue="150" sgo:visibility="0" sgo:sortOrder="13"/>
+                <xsd:element name="changebmExposure" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="14"/>
+                <xsd:element name="bmExposure" type="xsd:decimal" sgo:decimalMinValue="-5" sgo:decimalMaxValue="5" sgo:decimalStepValue="0.1" sgo:decimalDigits="1" sgo:visibility="0" sgo:sortOrder="15"/>
+                <xsd:element name="bmHighLightRecovery" type="integerPulldown" sgo:integerPulldownValues="Sourcce$$$0|Disabled$$$1|Enabled$$$2" sgo:visibility="0" sgo:sortOrder="16"/>
+                <xsd:element name="bmLUT" type="integerPulldown" sgo:integerPulldownValues="Sourcce$$$0|Disabled$$$1|Embedded$$$2|Sidecar$$$3" sgo:visibility="0" sgo:sortOrder="17"/>
+                <xsd:element name="bmSaturation" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="4" sgo:decimalStepValue="0.1" sgo:visibility="0" sgo:sortOrder="18"/>
+                <xsd:element name="bmContrast" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="2" sgo:decimalStepValue="0.1" sgo:decimalDigits="1" sgo:visibility="0" sgo:sortOrder="19"/>
+                <xsd:element name="bmShadows" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="2" sgo:decimalStepValue="0.1" sgo:decimalDigits="1" sgo:visibility="0" sgo:sortOrder="20"/>
+                <xsd:element name="bmMidPoint" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="1" sgo:decimalStepValue="0.1" sgo:decimalDigits="1" sgo:visibility="0" sgo:sortOrder="21"/>
+                <xsd:element name="bmHighLight" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="2" sgo:decimalStepValue="0.1" sgo:decimalDigits="1" sgo:visibility="0" sgo:sortOrder="22"/>
+                <xsd:element name="bmBlackLevel" type="xsd:decimal" sgo:decimalMinValue="-1" sgo:decimalMaxValue="1" sgo:decimalStepValue="0.1" sgo:decimalDigits="1" sgo:visibility="0" sgo:sortOrder="23"/>
+                <xsd:element name="bmWhiteLevel" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="2" sgo:decimalStepValue="0.1" sgo:decimalDigits="1" sgo:visibility="0" sgo:sortOrder="24"/>
+                <xsd:element name="bmVideoBlackLevel" type="integerPulldown" sgo:integerPulldownValues="Sourcce$$$0|No$$$1|Yes$$$2" sgo:visibility="0" sgo:sortOrder="25"/>
+                <xsd:element name="bmReduceFactor" type="integerPulldown" sgo:integerPulldownValues="1:1$$$1|1:2$$$2| 1:4$$$3|1:8$$$4" sgo:visibility="0" sgo:sortOrder="26"/>
+                <xsd:element name="metadata" type="mediaFileInfoWidget" sgo:visibility="0" sgo:sortOrder="27"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

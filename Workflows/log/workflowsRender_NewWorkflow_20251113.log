@@ -1,0 +1,348 @@
+2025.11.13 09:22:52.251|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:22:52.251|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:22:52.251|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:22:52.698|Critical Error|New Workflow|iconikIn|iconik upload failed: Could not find matching overload for given arguments:
+('(Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f)',)
+ The following slots are available:
+info(QString identifier, QString description, QString property) -> bool
+info(QString identifier, QString description) -> bool
+
+2025.11.13 09:22:52.699|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:22:52.699|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:24:53.057|Critical Error|New Workflow|DropboxIn|'localPath' can not be empty
+2025.11.13 09:24:53.058|Critical Error|New Workflow|DropboxIn|'accessToken' can not be empty
+2025.11.13 09:24:53.059|Critical Error|New Workflow|DropboxIn|'localPath' can not be empty
+2025.11.13 09:24:53.059|Critical Error|New Workflow|DropboxIn|'accessToken' can not be empty
+2025.11.13 09:24:53.059|Critical Error|New Workflow|DropboxIn|'localPath' can not be empty
+2025.11.13 09:24:53.059|Critical Error|New Workflow|DropboxIn|'accessToken' can not be empty
+2025.11.13 09:24:53.060|Critical Error|New Workflow|DropboxIn|'localPath' can not be empty
+2025.11.13 09:24:53.060|Critical Error|New Workflow|DropboxIn|'accessToken' can not be empty
+2025.11.13 09:34:12.271|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:34:12.271|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:34:12.272|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:12.273|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:34:12.273|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:34:12.273|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:12.273|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:34:12.273|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:34:12.273|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:12.273|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:34:12.273|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:34:12.273|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:25.606|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:34:25.607|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:38.600|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:48.158|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:51.908|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:51.909|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:51.909|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:34:51.909|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:35:09.818|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:35:09.819|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:35:20.573|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:35:53.429|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:35:53.429|Critical Error|New Workflow|iconikIn|set Video Path or feed input
+2025.11.13 09:41:34.471|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:41:34.472|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:41:34.472|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:41:34.474|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:41:34.474|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:41:34.474|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:41:34.475|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:41:35.592|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:41:35.592|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:41:35.592|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:41:35.593|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:41:35.593|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:41:35.593|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:41:35.594|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:41:45.713|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:41:45.714|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:41:45.714|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:41:45.773|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:41:46.268|Critical Error|New Workflow|iconikIn|iconik upload failed: Could not find matching overload for given arguments:
+('(Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f)',)
+ The following slots are available:
+info(QString identifier, QString description, QString property) -> bool
+info(QString identifier, QString description) -> bool
+
+2025.11.13 09:41:46.269|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:41:46.270|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:42:49.071|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:42:49.071|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:42:49.071|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:42:49.077|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:42:49.078|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:42:49.078|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:42:49.079|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:42:52.186|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:42:52.187|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:42:52.187|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:42:52.189|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:42:52.189|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:42:52.189|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:42:52.190|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:42:57.460|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:42:57.461|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:42:57.461|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:42:57.487|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:42:57.845|Critical Error|New Workflow|iconikIn|iconik upload failed: Could not find matching overload for given arguments:
+('(Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f)',)
+ The following slots are available:
+info(QString identifier, QString description, QString property) -> bool
+info(QString identifier, QString description) -> bool
+
+2025.11.13 09:42:57.847|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:42:57.849|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:43:55.778|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:43:55.783|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:43:55.784|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:43:55.785|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:43:55.786|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:43:55.786|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:43:55.786|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:44:18.713|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:44:18.715|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:44:18.715|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:44:18.718|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:44:19.018|Critical Error|New Workflow|iconikIn|iconik upload failed: Could not find matching overload for given arguments:
+('(Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f)',)
+ The following slots are available:
+info(QString identifier, QString description, QString property) -> bool
+info(QString identifier, QString description) -> bool
+
+2025.11.13 09:44:19.018|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:44:19.019|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:44:48.235|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:44:48.236|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:44:48.236|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:44:48.237|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:44:48.237|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:44:48.237|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:44:48.238|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:45:34.715|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:45:34.716|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:45:34.716|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:45:34.721|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:45:35.010|Critical Error|New Workflow|iconikIn|iconik upload failed: Could not find matching overload for given arguments:
+('(Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f)',)
+ The following slots are available:
+info(QString identifier, QString description, QString property) -> bool
+info(QString identifier, QString description) -> bool
+
+2025.11.13 09:45:35.011|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:45:35.016|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:47:53.766|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:47:53.767|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:47:53.768|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:47:53.768|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:47:53.769|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:47:53.769|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:47:53.769|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:47:53.769|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:47:55.578|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:47:55.579|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:47:55.579|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:47:55.579|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:47:57.572|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:47:57.572|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:47:57.572|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:47:57.572|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:48:08.072|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:48:20.330|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:48:20.330|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:48:20.330|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:48:20.332|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:48:20.332|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:48:20.332|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:48:20.332|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:48:50.717|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:48:50.718|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:48:50.718|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:48:50.722|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:48:51.061|Critical Error|New Workflow|iconikIn|iconik upload failed: Could not find matching overload for given arguments:
+('(Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f)',)
+ The following slots are available:
+info(QString identifier, QString description, QString property) -> bool
+info(QString identifier, QString description) -> bool
+
+2025.11.13 09:48:51.062|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:48:51.064|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:49:45.716|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:49:45.718|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:49:45.718|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:49:45.722|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:49:45.948|Critical Error|New Workflow|iconikIn|iconik upload failed: Could not find matching overload for given arguments:
+('(Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f)',)
+ The following slots are available:
+info(QString identifier, QString description, QString property) -> bool
+info(QString identifier, QString description) -> bool
+
+2025.11.13 09:49:45.949|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:49:45.950|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:52:27.836|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:52:27.837|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:52:27.837|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:52:27.837|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:52:27.838|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:52:27.838|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:52:27.838|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:52:27.838|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:52:29.638|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:52:29.638|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:52:29.639|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:52:29.639|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:52:45.699|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:52:58.911|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:52:58.912|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:52:58.912|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:52:58.912|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:52:58.912|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:52:58.912|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:52:58.913|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:53:12.481|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:53:12.482|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:53:12.482|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:53:12.484|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:53:12.485|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:53:12.485|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:53:12.486|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:53:32.724|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:53:32.725|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:53:32.725|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:53:32.730|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:53:33.153|Info|New Workflow|iconikIn|Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.13 09:53:33.154|Warning|New Workflow|iconikIn|Skipping non-video file: /Users/ed/Desktop/TIDY/INPUT
+2025.11.13 09:53:33.154|Critical Error|New Workflow|iconikIn|no valid files were uploaded
+2025.11.13 09:53:33.155|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:53:33.158|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:54:18.722|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:54:18.723|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:54:18.723|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:54:18.725|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:54:18.912|Info|New Workflow|iconikIn|Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.13 09:54:18.912|Warning|New Workflow|iconikIn|Skipping non-video file: /Users/ed/Desktop/TIDY/INPUT
+2025.11.13 09:54:18.912|Critical Error|New Workflow|iconikIn|no valid files were uploaded
+2025.11.13 09:54:18.913|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:54:18.914|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:55:03.722|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:55:03.723|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:55:03.723|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:55:03.739|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:55:04.368|Info|New Workflow|iconikIn|Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.13 09:55:04.368|Warning|New Workflow|iconikIn|Skipping non-video file: /Users/ed/Desktop/TIDY/INPUT
+2025.11.13 09:55:04.369|Critical Error|New Workflow|iconikIn|no valid files were uploaded
+2025.11.13 09:55:04.370|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:55:04.371|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:59:04.742|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:59:04.743|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:59:04.743|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:59:04.743|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:59:04.744|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:59:04.744|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:59:04.744|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:59:04.744|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:59:08.036|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:59:08.037|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:59:08.037|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:59:08.037|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:59:08.808|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:59:08.808|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:59:08.808|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:59:08.808|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 09:59:19.133|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 09:59:24.853|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:59:24.853|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:59:24.853|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:59:24.854|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:59:24.854|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 09:59:24.854|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:59:24.854|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 09:59:40.730|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 09:59:40.732|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 09:59:40.732|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 09:59:40.739|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 09:59:41.014|Info|New Workflow|iconikIn|Auto-detected tenant: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.13 09:59:41.018|Warning|New Workflow|iconikIn|Skipping non-video file: /Users/ed/Desktop/TIDY/INPUT
+2025.11.13 09:59:41.018|Critical Error|New Workflow|iconikIn|no valid files were uploaded
+2025.11.13 09:59:41.019|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 09:59:41.021|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 10:06:34.386|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:06:34.387|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:06:34.387|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:06:34.387|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:06:34.387|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:06:34.388|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:06:34.388|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:06:34.388|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:06:42.203|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:06:42.203|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:06:52.518|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:07:08.438|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 10:07:08.439|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 10:07:08.439|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 10:07:08.439|Critical Error|New Workflow|iconikIn|no input files on 'in' connector
+2025.11.13 10:07:08.439|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 10:07:08.439|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 10:07:53.873|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:07:53.873|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:07:53.873|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:07:53.873|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:07:53.874|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:07:53.874|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:07:53.874|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:07:53.874|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:07:57.102|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:07:57.102|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:07:57.103|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:07:57.103|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:07:57.103|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:07:57.103|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:07:57.103|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:07:57.103|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:09:42.296|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:09:42.297|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:09:42.297|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:09:42.297|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:09:42.298|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:09:42.298|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:09:42.298|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:09:42.298|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:09:45.509|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:09:45.510|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:09:45.510|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:09:45.510|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:09:45.510|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:09:45.510|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:09:45.510|Critical Error|New Workflow|iconikIn|APP_ID required
+2025.11.13 10:09:45.511|Critical Error|New Workflow|iconikIn|AUTH_TOKEN required
+2025.11.13 10:11:04.343|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 10:11:04.345|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 10:11:04.345|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 10:11:08.176|Critical Error|New Workflow|iconikIn|iconik upload failed: CuniversalPath has no attribute named 'setMetadata'
+2025.11.13 10:11:08.180|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 10:11:08.180|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 17:07:53.894|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 17:07:53.894|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 17:07:53.894|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 17:07:57.206|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 17:07:57.207|Info|New Workflow|New Workflow|New Workflow: Workflow Successfully Finished
+2025.11.13 17:08:53.153|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 17:08:53.153|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 17:08:53.153|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 17:08:53.756|Critical Error|New Workflow|iconikIn|no valid files were uploaded
+2025.11.13 17:08:53.757|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 17:08:53.757|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 17:09:48.333|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 17:09:48.334|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 17:09:48.334|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 17:09:48.335|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 17:09:48.335|Critical Error|New Workflow|iconikIn|no input files (connector or inputFolder)
+2025.11.13 17:09:48.335|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 17:09:48.335|Info|New Workflow|New Workflow|New Workflow: Workflow Failed
+2025.11.13 17:10:38.726|Info|New Workflow|New Workflow|New Workflow: Starting Workflow
+2025.11.13 17:10:38.727|Info|New Workflow|New Workflow|New Workflow Started
+2025.11.13 17:10:38.727|Info|New Workflow|New Workflow|Rendering Watcher
+2025.11.13 17:10:38.760|Info|New Workflow|New Workflow|Rendering iconikIn
+2025.11.13 17:11:02.185|Info|New Workflow|New Workflow|New Workflow Finished
+2025.11.13 17:11:02.187|Info|New Workflow|New Workflow|New Workflow: Workflow Successfully Finished

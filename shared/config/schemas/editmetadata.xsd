@@ -1,0 +1,97 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="EditMetadata" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="exportMetadata" type="integerPulldown" sgo:integerPulldownValues="InFile$$$0|XMP$$$1|CSV$$$2" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="SettingsInformation" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="5">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="shutterSpeed" type="integerPulldown" default="0" sgo:integerPulldownValues="From Input$$$0|1/10000$$$10000|1/8000$$$8000|1/6400$$$6400|1/6000$$$6000|1/5000$$$5000|1/4000$$$4000|1/3200$$$3200|1/3000$$$3000|1/2500$$$2500|1/2000$$$2000|1/1500$$$1500|1/1250$$$1250|1/1000$$$1000|1/800$$$800|1/750$$$750|1/640$$$640|1/500$$$500|1/400$$$400|1/350$$$350|1/320$$$320|1/250$$$250|1/200$$$200|1/180$$$180|1/160$$$160|1/125$$$125|1/100$$$100|1/90$$$90|1/80$$$80|1/60$$$60|1/50$$$50|1/45$$$45|1/40$$$40|1/30$$$30|1/25$$$25|1/20$$$20|1/15$$$15|1/13$$$13|1/10$$$10|1/8$$$8|1/6$$$6|1/5$$$5|1/4$$$4" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="changefocalLength" type="xsd:boolean" default="false" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="focalLength" type="xsd:integer" default="0" sgo:minValue="0" sgo:maxValue="100" sgo:stepValue="1" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="changewhiteBalance" type="xsd:boolean" default="false" sgo:visibility="0" sgo:sortOrder="3"/>
+                            <xsd:element name="whiteBalance" type="xsd:integer" default="0" sgo:minValue="0" sgo:maxValue="100" sgo:stepValue="1" sgo:visibility="0" sgo:sortOrder="4"/>
+                            <xsd:element name="changetint" type="xsd:boolean" default="false" sgo:visibility="0" sgo:sortOrder="5"/>
+                            <xsd:element name="tint" type="xsd:decimal" default="0" sgo:decimalMinValue="-180" sgo:decimalMaxValue="180" sgo:decimalStepValue="1" sgo:decimalDigits="1" sgo:visibility="0" sgo:sortOrder="6"/>
+                            <xsd:element name="Fstops" type="decimalPulldown" default="0" sgo:decimalPulldownValues="From Input$$$0|f/1.0$$$1.0|f/1.1$$$1.1|f/1.2$$$1.2|f/1.4$$$1.4|f/1.6$$$1.6|f/1.7$$$1.7|f/1.8$$$1.8|f/2$$$2|f/2.2$$$2.2|f/2.4$$$2.4|f/2.5$$$2.5|f/2.8$$$2.8|f/3.2$$$3.2|f/3.3$$$3.3|f/3.5$$$3.5|f/4$$$4|f/4.5$$$4.5|f/4.8$$$4.8|f/5.0$$$5.0|f/5.6$$$5.6|f/6.3$$$6.3|f/6.7$$$6.7|f/7.1$$$7.1|f/8$$$8|f/9$$$9|f/9.5$$$9.5|f/10$$$10|f/11$$$11|f/13$$$13|f/14$$$14|f/16$$$16|f/18$$$18|f/19$$$19|f/20$$$20|f/22$$$22|f/32$$$32|f/45$$$45|f/64$$$64" sgo:visibility="0" sgo:sortOrder="7"/>
+                            <xsd:element name="iso" type="integerPulldown" default="0" sgo:integerPulldownValues="From Input$$$0|25$$$25|50$$$50|100$$$100|200$$$200|400$$$400|800$$$800|1600$$$1600|3200$$$3200|6400$$$6400|12800$$$12800|25600$$$25600|51200$$$51200|102400$$$102400|204800$$$204800|409600$$$409600|819200$$$819200|1638400$$$1638400|3276800$$$3276800" sgo:visibility="0" sgo:sortOrder="8"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Camera" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="6">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="cameraManufacturer" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="cameraModel" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="cameraSerialNr" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="cameraDeviceID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                            <xsd:element name="cameraFirmwareVersion" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Lens" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="7">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="lensManufacturer" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="lensModel" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="lensSerialNr" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="lensDeviceID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                            <xsd:element name="lensFirmwareVersion" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Production" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="8">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="director" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="production" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="producer" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="cinematographer" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                            <xsd:element name="cameraAssistant" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                            <xsd:element name="cameraAssistant2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                            <xsd:element name="dit" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                            <xsd:element name="dataManager" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                            <xsd:element name="scriptSupervisor" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+                            <xsd:element name="soundMixer" type="xsd:string" sgo:visibility="0" sgo:sortOrder="9"/>
+                            <xsd:element name="location" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+                            <xsd:element name="copyright" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="SlateInformation" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="9">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="season" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="episodeNr" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="episodeName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="scene" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                            <xsd:element name="shot" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                            <xsd:element name="take" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                            <xsd:element name="slateCamera" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                            <xsd:element name="slateDescription" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                            <xsd:element name="intExt" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+                            <xsd:element name="dayNight" type="xsd:string" sgo:visibility="0" sgo:sortOrder="9"/>
+                            <xsd:element name="shootingDate" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="10"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Custom" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="10">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="keywords" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="comment1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="comment2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="comment3" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                            <xsd:element name="comment4" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                            <xsd:element name="comment5" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

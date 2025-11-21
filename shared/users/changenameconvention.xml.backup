@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ChangeNameConvention>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#000000</color>
+    <objectName>ChangeNameConvention</objectName>
+  </ChangeNameConvention>
+</nodeCommonRoot>

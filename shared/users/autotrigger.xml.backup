@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <AutoTrigger>
+    <code>#by default, forces a run on every timer interval
+return True</code>
+    <color>#808000</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>AutoTrigger</objectName>
+    <time>15</time>
+    <timeUnits>1</timeUnits>
+  </AutoTrigger>
+</nodeCommonRoot>

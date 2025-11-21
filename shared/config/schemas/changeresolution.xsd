@@ -1,0 +1,26 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="ChangeResolution" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="mode" type="stringPulldown" sgo:stringPulldownValues="Percentage$$$0|Resolution$$$1" sgo:visibility="0" sgo:sortOrder="5"/>			
+			<xsd:element name="scaleFactor" type="xsd:decimal" sgo:decimalMinValue="0.0000" sgo:decimalMaxValue="10.0000" sgo:decimalStepValue="0.0001" sgo:decimalDigits="4" sgo:visibility="0" sgo:sortOrder="10"/>
+			<xsd:element name="forceEvenRes" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="11"/>
+            <xsd:element name="resolution" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="6" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_resolutionList"/>
+            <xsd:element name="imageResX" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="14"/>
+            <xsd:element name="imageResY" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="15"/>
+            <xsd:element name="dstNode" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+            <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="22">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

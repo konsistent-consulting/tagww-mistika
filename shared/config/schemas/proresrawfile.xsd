@@ -1,0 +1,31 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="ProResRawFile" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="url" type="universalPath" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('Prores Raw (*.mov)')|fileDialogWindowTitle('Select a Prores Raw File')" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="debayer" type="integerPulldown" sgo:integerPulldownValues="From File$$$0|Custom$$$1" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="prrColorSpace" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="5" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_prrColorSpaceList"/>
+                <xsd:element name="gamma" type="label" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="gamut" type="label" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="changeWhiteBalance" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="whiteBalanceRed" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100000" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="whiteBalanceBlue" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100000" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="changegain" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="13"/>
+                <xsd:element name="gain" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100000" sgo:visibility="0" sgo:sortOrder="14"/>
+                <xsd:element name="reduceFactor" type="integerPulldown" sgo:integerPulldownValues="1:1$$$0|1:2$$$1|1:4$$$2|1:8$$$3" sgo:visibility="0" sgo:sortOrder="15"/>
+                <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="40">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="addTimeStamp" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="metadata" type="mediaFileInfoWidget" sgo:visibility="0" sgo:sortOrder="50"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

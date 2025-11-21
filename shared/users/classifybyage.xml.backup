@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ClassifyByAge>
+    <color>#677688</color>
+    <objectName>ClassifyByAge</objectName>
+    <timeUnits>0</timeUnits>
+    <timer>15</timer>
+  </ClassifyByAge>
+</nodeCommonRoot>

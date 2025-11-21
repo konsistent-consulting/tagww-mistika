@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Gmail>
+    <body>Put Your Text Here
+&lt;?py
+if self.onePerFile:
+    print("Input file:")
+    up=self._localDict['up']
+    print (up.getFilePath())
+else:
+    print("List of input Files:")
+    for c in self.getConnectors():
+        for p in c.getUniversalPaths():
+            print (p.getFilePath())
+?&gt;</body>
+    <bodyType>plain</bodyType>
+    <bypassEnabled>false</bypassEnabled>
+    <clientId/>
+    <color>#e1e1d2</color>
+    <objectName>Gmail</objectName>
+    <onePerFile>false</onePerFile>
+    <onlySendIfInput/>
+    <replyTo/>
+    <subject>Mistika Workflows Mail Node Processed</subject>
+    <to/>
+  </Gmail>
+</nodeCommonRoot>

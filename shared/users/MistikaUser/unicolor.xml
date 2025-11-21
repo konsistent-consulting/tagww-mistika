@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <UniColor>
+    <GamutOptions>
+      <GamutOptions_ConvertGamut>1</GamutOptions_ConvertGamut>
+    </GamutOptions>
+    <Input>
+      <Input_InputCurve>0</Input_InputCurve>
+      <Input_InputGamut>1</Input_InputGamut>
+    </Input>
+    <Output>
+      <Output_OutputCurve>0</Output_OutputCurve>
+      <Output_OutputGamut>1</Output_OutputGamut>
+    </Output>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#3c9e40</color>
+    <objectName>UniColor</objectName>
+  </UniColor>
+</nodeCommonRoot>

@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; EDL to Markers</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node takes one or more EDL files (files with the .edl extension) and creates new EDL files for each of them. These new EDL files include markers tailored for spec" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "edltomarkers.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">EDL to Markers</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?edltomarkers.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">EDL to Markers</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="edltocc.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="exr.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This node takes one or more EDL files (files with the .edl extension) and creates new EDL files for each of them. These new EDL files include markers tailored for specific formats like Mistika/Avid Media Composer or DaVinci Resolve. The names extracted from each event in the EDL works in a similar manner to the way detailed in the </span><span class="f_T_Menu">EDL to CC node</span><span class="f_BodyText">, following the rules defined in the NamingMatchRules</span></p>
+<p class="p_BodyText"><span class="f_BodyText">The generated files will have the same file name as the processed EDL, adding as suffix ‘_edlMarkersDVR’ or ‘_edlMarkersMTK’, depending on the selected output format.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">The color of the marker can also be defined for each output format (these colors vary from one software to another):</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="3dV-3ECnkyo5JhSkolInS5_eZFJE8iaOyBGJxtnupL4RPT7ctKrfwj6tkQN-A6Ghu4tILerVjjX25qzoje0BpbbwDYi43i92tv7TMhhV3m9etZv6mieT1UrrSHnVN8-wbcAmcMRo76jh91ksID6Ygbo" width="309" height="168" style="margin:0 auto 0 auto;width:309px;height:168px;border:none" src="3dv-3ecnkyo5jhskolins5_ezfje8iaoybgjxtnupl4rpt7ctkrfwj6tkqn-a6ghu4tilervjjx25qzoje0bpbbwdyi43i92tv7tmhhv3m9etzv6miet1urrshnvn8-wbcamcmro76jh91ksid6ygbo.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">With a single EDL file provided as input and utilizing the NamingMatchRules for VFX name extraction, the resulting two EDLs will take on the following appearance:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.36;"><span style="font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #000000;">Input: SGO_DEMOVFX_V1.edl</span></p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="fR0CM1env1l6kCaRZACqfynOK3fWhjNkqUc0XeRxf8aoc9tNJmrWy10CduwXhh_h4dZdYd6fPUVlRB4kyqfpWMhiavmITabzDnSHf7MsAZtBObJ0BAByibw6XwJv-9fa5d_pXmHzBWySBHDn6Kg9wvM" width="874" height="81" style="margin:0;width:874px;height:81px;border:none" src="fr0cm1env1l6kcarzacqfynok3fwhjnkquc0xerxf8aoc9tnjmrwy10cduwxhh_h4dzdyd6fpuvlrb4kyqfpwmhiavmitabzdnshf7msaztbobj0babyibw6xwjv-9fa5d_pxmhzbwysbhdn6kg9wvm.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.36;"><span style="font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #000000;">Output: SGO_DEMOVFX_V1_edlMarkersMTK.edl</span></p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="H1FHIADxRvqLFvwKrXggOet9NPgILoO0unwi70kr0X6CSS4_Kx65ACaTW_tXZFsq72pqDuMbzOn8dWHWdEFnehJ-SWR9A7-lL9EA4WqsBuTRmYvDeFREwJ66WKX1K_Q90d1L64sfKddIBit4JkzpU0E" width="628" height="46" style="margin:0;width:628px;height:46px;border:none" src="h1fhiadxrvqlfvwkrxggoet9npgiloo0unwi70kr0x6css4_kx65acatw_txzfsq72pqdumbzon8dwhwdefnehj-swr9a7-ll9ea4wqsbutrmyvdefrewj66wkx1k_q90d1l64sfkddibit4jkzpu0e.png"/></p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.36;"><span style="font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #000000;">Output: SGO_DEMOVFX_V1_edlMarkersDVR.edl</span></p>
+<p class="p_Normal" style="line-height: 1.36;"><img alt="7Sxq7g2ge3t8wp1efPuGd4z1WOoQLEITwY2tCt4BHVCOknanwMQJNSSBIuNRuB05dd890uP1ppPdQ4_0V6J_WQhMm89dwlZ7wFIqplHGxskDBVThpJN0eKj9uFpa2D-IRQe0Tbu6MN7gqnnX4PsYNn0" width="625" height="45" style="margin:0;width:625px;height:45px;border:none" src="7sxq7g2ge3t8wp1efpugd4z1wooqleitwy2tct4bhvcoknanwmqjnssbiunrub05dd890up1pppdq4_0v6j_wqhmm89dwlz7wfiqplhgxskdbvthpjn0ekj9ufpa2d-irqe0tbu6mn7gqnnx4psynn0.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This node output can be used to:</span></p>
+<p class="p_BodyText" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_BodyText" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BodyText" style="font-weight: bold;">Conform back the exported VFX:</span><span class="f_BodyText"> As the Tapename of each EDL event is the VFX name itself, they can be conformed without handles directly in their place within the timeline edit.</span></p><p class="p_BodyText" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_BodyText" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BodyText" style="font-weight: bold;">Import only the markers</span><span class="f_BodyText"> so all VFX are automatically located and marked in the timeline. Given that the shot naming has already been completed by the editorial department, there's no necessity to duplicate this effort during the process of preparing the sequence with the RAW material for color grading, export or review vfx. Especially where dozens of VFX shots have to be named, marked and processed, which is a really time consuming task. </span></p><p class="p_BodyText"><span class="f_BodyText">In the case of Mistika is as easy as importing the EDL and activate the toggle ‘Import marker metadata’:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57; margin: 0 0 0 48px;"><img alt="mMD5J1cJTn51kA6XQ6DcX7f0nYVja9MYSCj3LMaeIZWYdLJQ61qs30scLqyIb77FfLE5-MFRPrbjQtbMSmj7plfUGeKjXeY4LUrogIdNOLC1qOnt0KpFBPn4HgIG7lLRz-FgGuHd1me45piiImt8bi4" width="525" height="206" style="margin:0 auto 0 auto;width:525px;height:206px;border:none" src="mmd5j1cjtn51ka6xq6dcx7f0nyvja9myscj3lmaeizwydljq61qs30sclqyib77ffle5-mfrprbjqtbmsmj7plfugekjxey4lurogidnolc1qont0kpfbpn4hgig7llrz-fgguhd1me45piiimt8bi4.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57; margin: 0 0 0 48px;"><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">As a result we will automatically have all VFX marked and named in our timeline:</span></p>
+<p class="p_Normal" style="line-height: 1.57; margin: 0 0 0 48px;"><img alt="seL-poJdWY0LA0aXqlJKKv_1WFyghhRGdM1Wii-cB-AbiiAGY7xIaK6JUmWq7uHo2_IDIYXoygLu1jrFtC2lhC31OqaSIrKZ0OiHRZPZI85J3DcTW3ir3okKCagTFkaZHl2LizpQ_TgCNx4HffX0Dlk" width="1336" height="486" style="margin:0;width:1336px;height:486px;border:none" src="sel-pojdwy0la0axqljkkv_1wfyghhrgdm1wii-cb-abiiagy7xiak6jumwq7uho2_idiyxoyglu1jrftc2lhc31oqasirkz0oihrzpzi85j3dctw3ir3okkcagtfkazhl2lizpq_tgcnx4hffx0dlk_zoom84.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In the case of DaVinci Resolve the process is practically the same, just select ‘Timeline Markers from EDL’ in the Import options of any timeline:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57; margin: 0 0 0 48px;"><img alt="pTsHzTOQtujSz4gippyGlDaskLKBQulvWOkiHJ0faR77apHdRaeW6dcGMIXCATN2j3ed9oG7hf2uACPLzpkX3LWD8cgA4MnT0GBRTbpIGUAHMRATfY7MP19anzBFgj4JoVFumEclX8c8MwUnw4Z3eEI" width="1006" height="254" style="margin:0 auto 0 auto;width:1006px;height:254px;border:none" src="ptshztoqtujsz4gippygldasklkbqulvwokihj0far77aphdraew6dcgmixcatn2j3ed9og7hf2uacplzpkx3lwd8cga4mnt0gbrtbpiguahmratfy7mp19anzbfgj4jovfumeclx8c8mwunw4z3eei_zoom77.png"/></p>
+<p class="p_Normal" style="line-height: 1.57; margin: 0 0 0 48px;"><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57; margin: 0 0 0 48px;"><img alt="428nlhCUvnpL-xsDOUle9pVmnzMhKGXeLfZzZ559rQy8QHVo7pi46JDdC4JpmVGcE0MSY7TqxHdtvyLhMhlQ2CEjGf0jzNrGTaneiF_bM2Q7liL6xQTDTcuUw7wbq4B5WmbZVyAZunmg3e7SzndNxLs" width="1007" height="715" style="margin:0 auto 0 auto;width:1007px;height:715px;border:none" src="428nlhcuvnpl-xsdoule9pvmnzmhkgxelfzzz559rqy8qhvo7pi46jddc4jpmvgce0msy7tqxhdtvylhmhlq2cejgf0jznrgtaneif_bm2q7lil6xqtdtcuuw7wbq4b5wmbzvyazunmg3e7szndnxls_zoom98.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-indent: 0; line-height: 1.57; padding-left: 13px; margin: 0 0 0 27px;"><span class="f_BodyText" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BodyText" style="font-weight: bold;">Feed the </span><span class="f_BodyText" style="font-weight: bold; color: #000000;">EDL Edit Changes</span><span class="f_BodyText" style="font-weight: bold;"> node</span><span class="f_BodyText">: This node evaluates two EDL files as input and looks for edit changes in every event, being these events all the VFX names matched with the EDL to Markers node. For more information about how it works consult the EDL Edit Changes node documentation.</span></p><p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">edl:</span> EDL files containing <span class="f_BodyText">VFX naming information to be processed.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">edlMarkers:</span> .edl files <span class="f_BodyText">containing color markers for each format selected in the ‘edlMarkersFormat’ property</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">.</span></p>
+<p class="p_Normal">.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink">Name Convention</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Python standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#code" class="topiclink">code</a></span></h3>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_T_Emphasis">NOTE: An introduction to all the Python tools in Mistika Workflows is available in the <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools </a>section.</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">EDL Path: </span>Folder to store the .edl files created by this node.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">edlMarkersFormat: </span><span class="f_BodyText">Toggles to select Mistika/Avid or DaVinciResolve format, and the desired color to be used for the markers in each format.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">NamingMatchRules</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">LOC</span><span class="f_BodyText">: Locator in the .edl events to extract the VFX name from: It can be a color marker from Avid Media Composer / Mistika / Adobe Premiere (RED, GREEN, BLUE, CYAN, MAGENTA, YELLOW, BLACK, WHITE), or the TapeName or FromClipName statements in the .edl event</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Shot Naming</span><span class="f_BodyText">: A regular expression to match and extract the vfx name in the selected LOC</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="Mail" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+		<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+		<xsd:element name="onlySendIfInput" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="5"/>	
+		<xsd:element name="onePerFile" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="6"/>	
+	    <xsd:element name="login" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+	    <xsd:element name="pwd" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+	    <xsd:element name="smtpServer" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>
+	    <xsd:element name="port" type="xsd:integer" sgo:minValue="0" sgo:maxValue="65535" sgo:visibility="0" sgo:sortOrder="15"/>
+	    <xsd:element name="mailFrom" type="xsd:string" sgo:visibility="0" sgo:sortOrder="16"/>
+	    <xsd:element name="to" type="xsd:string" sgo:visibility="0" sgo:sortOrder="17"/>
+		<xsd:element name="replyTo" type="xsd:string" sgo:visibility="0" sgo:sortOrder="18"/>
+	    <xsd:element name="subject" type="xsd:string" sgo:visibility="0" sgo:sortOrder="19"/>
+		<xsd:element name="bodyType" type="stringPulldown" sgo:stringPulldownValues="text$$$plain|html$$$html" sgo:visibility="0" sgo:sortOrder="20"/>
+	    <xsd:element name="body" type="textEditor" sgo:visibility="0" sgo:sortOrder="21"/>
+        <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

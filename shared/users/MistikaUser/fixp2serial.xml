@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <FixP2Serial>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#0063b4</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>FixP2Serial</objectName>
+  </FixP2Serial>
+</nodeCommonRoot>

@@ -1,0 +1,243 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:element name="systemSetup" sgo:visibility="0" sgo:sortOrder="0">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="audio" sgo:visibility="0" sgo:sortOrder="0">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="render" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="baseUSID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="codecs" sgo:visibility="0" sgo:sortOrder="0">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="arri" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:minValue="1" sgo:stepValue="1024" name="cpuMemory" type="xsd:integer" sgo:visibility="2" sgo:maxValue="1024000" sgo:sortOrder="3"/>
+          <xsd:element sgo:stringPulldownValues="Auto$$$0|CPU Only$$$2|OpenGL$$$3|OpenCL$$$4|Cuda$$$5" name="decoderType" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0"/>
+          <xsd:element sgo:minValue="1" sgo:stepValue="1" name="decodeThreads" type="xsd:integer" sgo:visibility="2" sgo:maxValue="128" sgo:sortOrder="2"/>
+          <xsd:element sgo:minValue="1" sgo:stepValue="1024" name="gpuMemory" type="xsd:integer" sgo:visibility="2" sgo:maxValue="1024000" sgo:sortOrder="4"/>
+          <xsd:element sgo:stringPulldownValues="1|2|4|8" name="reduceFactor" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="1"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="canon" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="1|2|4|8" name="reduceFactor" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="exr" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="Single Layer$$$SINGLE_LAYER|Multi Layer$$$MULTI_LAYER" name="optimizeRead" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="red" sgo:visibility="0" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="loadRMDFileByDefault" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="1"/>
+          <xsd:element sgo:categoryType="category2" name="r3dPerformance" sgo:visibility="0" sgo:sortOrder="2">
+           <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="autoadjustPerfValues" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+             <xsd:element sgo:minValue="1" sgo:stepValue="12" name="cpuFrames" type="xsd:integer" sgo:visibility="0" sgo:maxValue="64" sgo:sortOrder="6"/>
+             <xsd:element sgo:minValue="1024" sgo:stepValue="1024" name="cpuMemKb" type="xsd:integer" sgo:visibility="0" sgo:maxValue="32768" sgo:sortOrder="4"/>
+             <xsd:element sgo:minValue="1" sgo:stepValue="12" name="cpuThreads" type="xsd:integer" sgo:visibility="0" sgo:maxValue="64" sgo:sortOrder="5"/>
+             <xsd:element name="decoderType" type="stringPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_redR3dDecoderTypesList" sgo:visibility="0" sgo:sortOrder="1"/>
+             <xsd:element sgo:minValue="0" sgo:stepValue="1" name="gpuFrames" type="xsd:integer" sgo:visibility="0" sgo:maxValue="3" sgo:sortOrder="3"/>
+             <xsd:element sgo:minValue="1024" sgo:stepValue="1024" name="gpuMemKb" type="xsd:integer" sgo:visibility="0" sgo:maxValue="16384" sgo:sortOrder="2"/>
+            </xsd:sequence>
+           </xsd:complexType>
+          </xsd:element>
+          <xsd:element sgo:stringPulldownValues="1|2|4|8" name="reduceFactor" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="sony" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:stringPulldownValues="1|2|4|8" name="reduceFactor" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="generalSystem" sgo:visibility="3" sgo:sortOrder="6">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="imageProviderLoaderEnabled" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="2"/>
+       <xsd:element name="initSDKS512GBRRAM" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="4"/>
+       <xsd:element name="useIconProviderCache" type="xsd:boolean" sgo:visibility="1" sgo:sortOrder="1"/>
+       <xsd:element name="useImageProviderCache" type="xsd:boolean" sgo:visibility="1" sgo:sortOrder="0"/>
+       <xsd:element name="useMediaBrowserImagesMaker" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="3"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="import" sgo:visibility="3" sgo:sortOrder="6">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="searchStereo" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"  sgo:actionType="enableSiblingWhenSelected"/>
+       <xsd:element name="stereoLeftPattern" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+       <xsd:element name="stereoRightPattern" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="interface" sgo:visibility="0" sgo:sortOrder="6">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="nodeConnections" sgo:visibility="0" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+           <xsd:element sgo:minValue="0" sgo:stepValue="1" name="connectionCurvature" type="xsd:integer" sgo:visibility="0" sgo:maxValue="10" sgo:sortOrder="0"/>
+           <xsd:element sgo:minValue="1" sgo:stepValue="1" name="connectionQuality" type="xsd:integer" sgo:visibility="0" sgo:maxValue="10" sgo:sortOrder="1"/> 
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element name="screens" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="printScreensInfo" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+          <xsd:element name="scaleForScreens" type="scaleForScreenWidget" sgo:visibility="0" sgo:sortOrder="1"/>
+          <xsd:element name="scaleScreensFactorsOnRuntime" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="3"/>
+          <xsd:element name="useScale" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="networkListener" sgo:visibility="0" sgo:sortOrder="7">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="ip" type="ipAddress" sgo:visibility="0" sgo:sortOrder="0"/>
+       <xsd:element name="port" type="xsd:string" default="8888" sgo:visibility="0" sgo:sortOrder="1"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="performance" sgo:visibility="0" sgo:sortOrder="1">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="backloadBuffers" type="xsd:boolean" sgo:visibility="1" sgo:sortOrder="11"/>
+       <xsd:element sgo:minValue="1" sgo:stepValue="1" name="encodeThreads" type="xsd:integer" sgo:visibility="0" sgo:maxValue="64" sgo:sortOrder="6"/>
+       <xsd:element sgo:minValue="1" sgo:stepValue="1" name="ioThreads" type="xsd:integer" sgo:visibility="0" sgo:maxValue="128" sgo:sortOrder="8"/>
+       <xsd:element sgo:stringPulldownValues="2$$$2|4$$$4|8$$$8|16$$$16|32$$$32" name="lowResRatio" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="4"/>
+       <xsd:element sgo:minValue="1" sgo:stepValue="128" name="maxCacheMemory" type="xsd:integer" sgo:visibility="0" sgo:maxValue="49152" sgo:sortOrder="0"/>
+       <xsd:element sgo:minValue="1" sgo:stepValue="1" name="parallelCpuCores" type="xsd:integer" sgo:visibility="0" sgo:maxValue="64" sgo:sortOrder="5"/>
+       <xsd:element sgo:minValue="1" sgo:stepValue="1" name="pipeUnits" type="xsd:integer" sgo:visibility="3" sgo:maxValue="64" sgo:sortOrder="9"/>
+       <xsd:element sgo:minValue="25" sgo:stepValue="1" name="playBufferThreshold" type="xsd:integer" sgo:visibility="3" sgo:maxValue="1024" sgo:sortOrder="2"/>
+       <xsd:element sgo:minValue="10" sgo:stepValue="4" name="playoutRingBuffer" type="xsd:integer" sgo:visibility="3" sgo:maxValue="1024" sgo:sortOrder="1"/>
+       <xsd:element sgo:minValue="1" sgo:stepValue="1" name="renderUnits" type="xsd:integer" sgo:visibility="0" sgo:maxValue="32" sgo:sortOrder="10"/>
+       <xsd:element name="sanFilePreallocation" type="xsd:boolean" sgo:visibility="2" sgo:sortOrder="12"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="render" sgo:visibility="3" sgo:sortOrder="3">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="batch" sgo:visibility="3" sgo:sortOrder="0">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="path" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="0" sgo:properties="showDirsOnly"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="multiGPU" sgo:visibility="3" sgo:sortOrder="2">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="nvidiaMultiGPU" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element sgo:categoryType="category1" name="totem" sgo:visibility="3" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:minValue="1" sgo:stepValue="1" name="clusterInstances" type="xsd:integer" sgo:visibility="3" sgo:maxValue="8" sgo:sortOrder="3"/>
+          <xsd:element sgo:minValue="1" sgo:stepValue="1" name="clusterParallel" type="xsd:integer" sgo:visibility="3" sgo:maxValue="64" sgo:sortOrder="2"/>
+          <xsd:element sgo:minValue="1" sgo:stepValue="1" name="clusterPlaybackTailFrames" type="xsd:integer" sgo:visibility="3" sgo:maxValue="48" sgo:sortOrder="4"/>
+          <xsd:element sgo:minValue="0" sgo:stepValue="200" name="clusterPlaybackTailMiliseconds" type="xsd:integer" sgo:visibility="3" sgo:maxValue="7200" sgo:sortOrder="5"/>
+          <xsd:element sgo:minValue="1" sgo:stepValue="1" name="clusterRenderUnits" type="xsd:integer" sgo:visibility="3" sgo:maxValue="6" sgo:sortOrder="1"/>
+          <xsd:element name="useTotem" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="0" sgo:actionType="enableSiblingWhenSelected"/>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="renderFarm" sgo:visibility="0" sgo:sortOrder="4">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:categoryType="category1" name="farm" sgo:visibility="3" sgo:sortOrder="1">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element sgo:categoryType="category1" name="deadline" sgo:visibility="3" sgo:sortOrder="1">
+           <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="farmParams" type="xsd:string" sgo:visibility="3" sgo:sortOrder="2"/>
+             <xsd:element name="path" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="0"/>
+             <xsd:element name="submissionPath" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="1"/>
+            </xsd:sequence>
+           </xsd:complexType>
+          </xsd:element>
+          <xsd:element sgo:categoryType="category1" name="smedge" sgo:visibility="3" sgo:sortOrder="0">
+           <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="packetSize" type="xsd:integer" sgo:visibility="3" sgo:sortOrder="1"/>
+             <xsd:element name="path" type="xsd:anyURI" sgo:visibility="3" sgo:sortOrder="0"/>
+            </xsd:sequence>
+           </xsd:complexType>
+          </xsd:element>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element name="farmUsed" type="renderFarmWidget" sgo:visibility="0" sgo:sortOrder="0"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="tabletDevice" sgo:visibility="3" sgo:sortOrder="2">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:minValue="0" sgo:stepValue="1" name="maxPressure" type="xsd:integer" sgo:visibility="0" sgo:maxValue="2000" sgo:sortOrder="0"/>
+       <xsd:element sgo:minValue="0" sgo:stepValue="1" name="minMoveThreshold" type="xsd:integer" sgo:visibility="0" sgo:maxValue="15" sgo:sortOrder="2"/>
+       <xsd:element sgo:minValue="0" sgo:stepValue="1" name="minPressure" type="xsd:integer" sgo:visibility="0" sgo:maxValue="500" sgo:sortOrder="1"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="videoBoard" sgo:visibility="3" sgo:sortOrder="4">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:stringPulldownValues="DVS(../../dvs)|AJA(../../aja)" name="model" type="stringPulldown" sgo:visibility="3" sgo:sortOrder="1" sgo:actionType="enableWhenSelected"/>
+       <xsd:element name="use" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3" sgo:actionType="enableSiblingWhenSelected"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="vtr" sgo:visibility="3" sgo:sortOrder="5">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element sgo:minValue="0" sgo:stepValue="1" name="captureCorrection" type="xsd:integer" sgo:visibility="3" sgo:maxValue="1000" sgo:sortOrder="0"/>
+       <xsd:element sgo:minValue="0" sgo:stepValue="1" name="dumpCorrection" type="xsd:integer" sgo:visibility="3" sgo:maxValue="1000" sgo:sortOrder="1"/>
+       <xsd:element sgo:minValue="0" sgo:stepValue="1" name="editLag" type="xsd:integer" sgo:visibility="3" sgo:maxValue="1000" sgo:sortOrder="2"/>
+       <xsd:element name="freeTC" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="3"/>
+       <xsd:element name="freeIgnoreContinuousTC" type="xsd:boolean" sgo:visibility="3" sgo:sortOrder="4"/>
+       <xsd:element name="maxFree" type="timecode" sgo:visibility="3" sgo:sortOrder="5"/>
+       <xsd:element sgo:minValue="0" sgo:stepValue="1" name="postHandle" type="xsd:integer" sgo:visibility="3" sgo:maxValue="1000" sgo:sortOrder="6"/>
+       <xsd:element sgo:minValue="0" sgo:stepValue="1" name="preHandle" type="xsd:integer" sgo:visibility="3" sgo:maxValue="1000" sgo:sortOrder="7"/>
+       <xsd:element name="preRoll" type="timecode" sgo:visibility="3" sgo:sortOrder="8"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>

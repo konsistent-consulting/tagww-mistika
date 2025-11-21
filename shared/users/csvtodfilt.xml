@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <CSVToDFILT>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <bodyDefault>body Text body Text</bodyDefault>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#94b4f2</color>
+    <delimiter>,</delimiter>
+    <footerDefault>footer line</footerDefault>
+    <headerDefault>MISTIKA WATERMARK</headerDefault>
+    <objectName>CSVToDFILT</objectName>
+  </CSVToDFILT>
+</nodeCommonRoot>

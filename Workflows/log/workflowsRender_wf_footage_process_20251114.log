@@ -1,0 +1,124 @@
+2025.11.14 16:50:36.416|Info|wf_footage_process|wf_footage_process|wf_footage_process: Starting Workflow
+2025.11.14 16:50:36.417|Info|wf_footage_process|wf_footage_process|wf_footage_process Started
+2025.11.14 16:50:36.417|Info|wf_footage_process|wf_footage_process|Rendering ingest
+2025.11.14 16:50:36.424|Info|wf_footage_process|wf_footage_process|Rendering ProResConvert
+2025.11.14 16:50:36.424|Info|wf_footage_process|wf_footage_process|Rendering S3Out
+2025.11.14 16:50:36.657|Info|wf_footage_process|wf_footage_process|Rendering MoveCameraFiles
+2025.11.14 16:50:37.662|Info|wf_footage_process|wf_footage_process|Rendering H264
+2025.11.14 16:50:37.664|Info|wf_footage_process|wf_footage_process|Rendering MoveIconikfiles
+2025.11.14 16:50:38.668|Info|wf_footage_process|wf_footage_process|wf_footage_process Finished
+2025.11.14 16:50:38.677|Info|wf_footage_process|wf_footage_process|wf_footage_process: Workflow Successfully Finished
+2025.11.14 16:51:07.816|Info|wf_footage_process|wf_footage_process|wf_footage_process: Starting Workflow
+2025.11.14 16:51:07.818|Info|wf_footage_process|wf_footage_process|wf_footage_process Started
+2025.11.14 16:51:07.818|Info|wf_footage_process|wf_footage_process|Rendering ingest
+2025.11.14 16:51:07.897|Info|wf_footage_process|wf_footage_process|Rendering ProResConvert
+2025.11.14 16:51:08.130|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/DNX_Sample.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:51:08.134|Critical Error|wf_footage_process|ProResConvert|input video not found
+2025.11.14 16:51:08.134|Critical Error|wf_footage_process|ProResConvert|Unable to create Render Group
+2025.11.14 16:51:08.134|Critical Error|wf_footage_process|ProResConvert|Unable to create Render Group
+2025.11.14 16:51:08.135|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XAVC_Sample.mxf?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:51:08.184|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XAVC_Sample.mxf?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:51:08.214|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 16:51:08.214|Info|wf_footage_process|ProResConvert|Transcoding Info:From:XAVC_Sample:23.98:None:None:To:prores_footage.mov:23.98:None:None:None
+2025.11.14 16:52:02.554|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:52:02.588|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:52:02.617|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 16:52:02.617|Info|wf_footage_process|ProResConvert|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:prores_footage.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.14 16:52:50.508|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/XR0001_20250312.ale?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:52:50.521|Critical Error|wf_footage_process|ProResConvert|input video not found
+2025.11.14 16:52:50.521|Critical Error|wf_footage_process|ProResConvert|Unable to create Render Group
+2025.11.14 16:52:50.521|Critical Error|wf_footage_process|ProResConvert|Unable to create Render Group
+2025.11.14 16:52:50.523|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:52:50.558|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 16:52:50.558|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0010_bg01_v0001:47.95:None:None:To:prores_footage.mov:47.95:None:None:None
+2025.11.14 16:52:51.808|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:52:51.831|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:52:51.858|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 16:52:51.858|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:prores_footage.mov:47.95:ItuBt 709:Rec709:None
+2025.11.14 16:52:58.180|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:52:58.207|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 16:52:58.207|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0020_cp01_v0001:47.95:None:None:To:prores_footage.mov:47.95:None:None:None
+2025.11.14 16:52:59.349|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:52:59.381|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:52:59.401|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 16:52:59.401|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:prores_footage.mov:47.95:ItuBt 709:Rec709:None
+2025.11.14 16:53:04.727|Critical Error|wf_footage_process|ProResConvert|Job canceled
+2025.11.14 16:53:04.731|Info|wf_footage_process|wf_footage_process|wf_footage_process Cancelled
+2025.11.14 16:53:04.745|Info|wf_footage_process|wf_footage_process|wf_footage_process: Workflow Failed
+2025.11.14 16:53:32.817|Info|wf_footage_process|wf_footage_process|wf_footage_process: Starting Workflow
+2025.11.14 16:53:32.819|Info|wf_footage_process|wf_footage_process|wf_footage_process Started
+2025.11.14 16:53:32.819|Info|wf_footage_process|wf_footage_process|Rendering ingest
+2025.11.14 16:53:32.925|Info|wf_footage_process|wf_footage_process|Rendering ProResConvert
+2025.11.14 16:53:32.983|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/DNX_Sample.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:53:33.038|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/DNX_Sample.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 16:53:33.096|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 16:53:33.096|Info|wf_footage_process|ProResConvert|Transcoding Info:From:DNX_Sample:23.98:ItuBt 709:Rec709:To:DNX_Sample.mov:23.98:ItuBt 709:Rec709:None
+2025.11.14 16:54:07.301|Info|wf_footage_process|wf_footage_process|Rendering S3Out
+2025.11.14 17:15:05.389|Info|wf_footage_process|wf_footage_process|Rendering MoveCameraFiles
+2025.11.14 17:15:06.411|Info|wf_footage_process|wf_footage_process|Rendering H264
+2025.11.14 17:15:06.442|Info|wf_footage_process|H264|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/DNX_Sample.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:15:06.443|Critical Error|wf_footage_process|H264|input video not found
+2025.11.14 17:15:06.443|Critical Error|wf_footage_process|H264|Unable to create Render Group
+2025.11.14 17:15:06.443|Critical Error|wf_footage_process|H264|Unable to create Render Group
+2025.11.14 17:15:06.444|Info|wf_footage_process|wf_footage_process|Rendering MoveIconikfiles
+2025.11.14 17:15:07.445|Info|wf_footage_process|wf_footage_process|wf_footage_process Finished
+2025.11.14 17:15:07.455|Info|wf_footage_process|wf_footage_process|wf_footage_process: Workflow Failed
+2025.11.14 17:15:12.800|Info|wf_footage_process|wf_footage_process|wf_footage_process: Starting Workflow
+2025.11.14 17:15:12.802|Info|wf_footage_process|wf_footage_process|wf_footage_process Started
+2025.11.14 17:15:12.802|Info|wf_footage_process|wf_footage_process|Rendering ingest
+2025.11.14 17:15:12.826|Info|wf_footage_process|wf_footage_process|Rendering ProResConvert
+2025.11.14 17:15:12.831|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XAVC_Sample.mxf?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:15:12.956|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XAVC_Sample.mxf?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:15:12.997|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:15:12.997|Info|wf_footage_process|ProResConvert|Transcoding Info:From:XAVC_Sample:23.98:None:None:To:XAVC_Sample.mov:23.98:None:None:None
+2025.11.14 17:16:22.071|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:16:22.114|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:16:22.148|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:16:22.148|Info|wf_footage_process|ProResConvert|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.14 17:17:18.368|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/XR0001_20250312.ale?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:18.385|Critical Error|wf_footage_process|ProResConvert|input video not found
+2025.11.14 17:17:18.385|Critical Error|wf_footage_process|ProResConvert|Unable to create Render Group
+2025.11.14 17:17:18.385|Critical Error|wf_footage_process|ProResConvert|Unable to create Render Group
+2025.11.14 17:17:18.391|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:18.448|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:17:18.448|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0010_bg01_v0001:47.95:None:None:To:tst0010_bg01_v0001.mov:47.95:None:None:None
+2025.11.14 17:17:19.616|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:19.674|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:19.707|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:17:19.707|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.14 17:17:28.384|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:28.426|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:17:28.426|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0020_cp01_v0001:47.95:None:None:To:tst0020_cp01_v0001.mov:47.95:None:None:None
+2025.11.14 17:17:29.572|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:29.601|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:29.626|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:17:29.626|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:tst0030_rf01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.14 17:17:38.371|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250312/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:38.403|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:17:38.403|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0030_rf01_v0001:47.95:None:None:To:tst0030_rf01_v0001.mov:47.95:None:None:None
+2025.11.14 17:17:39.544|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250313/XR0001_20250313.ale?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:39.552|Critical Error|wf_footage_process|ProResConvert|input video not found
+2025.11.14 17:17:39.552|Critical Error|wf_footage_process|ProResConvert|Unable to create Render Group
+2025.11.14 17:17:39.552|Critical Error|wf_footage_process|ProResConvert|Unable to create Render Group
+2025.11.14 17:17:39.562|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250313/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:39.609|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250313/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:17:39.652|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:17:39.652|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.14 17:19:27.350|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250313/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:19:27.421|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:19:27.421|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0010_bg01_v0002:47.95:None:None:To:tst0010_bg01_v0002.mov:47.95:None:None:None
+2025.11.14 17:19:28.827|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250313/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:19:28.854|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250313/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:19:28.885|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:19:28.885|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.14 17:19:42.060|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250313/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:19:42.081|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:19:42.081|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0020_cp01_v0002:47.95:None:None:To:tst0020_cp01_v0002.mov:47.95:None:None:None
+2025.11.14 17:19:43.219|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/XR001_250313/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:19:43.247|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:19:43.247|Info|wf_footage_process|ProResConvert|Transcoding Info:From:tst0030_rf01_v0002:47.95:None:None:To:tst0030_rf01_v0002.mov:47.95:None:None:None
+2025.11.14 17:19:44.403|Info|wf_footage_process|ProResConvert|Processing Input File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/mickey_trailer_sample.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:19:44.438|Info|wf_footage_process|ProResConvert|Processing Audio From File: /Volumes/konsistent/server/mistika-testing/input_camera_footage/mickey_trailer_sample.mov?root=/Volumes/konsistent/server/mistika-testing/input_camera_footage/&format=[path][baseName][.frame][.ext]
+2025.11.14 17:19:44.461|Info|wf_footage_process|ProResConvert|Transcoding from EDL: None
+2025.11.14 17:19:44.461|Info|wf_footage_process|ProResConvert|Transcoding Info:From:mickey_trailer_sample:47.95:ItuBt 709:Rec709:To:mickey_trailer_sample.mov:47.95:ItuBt 709:Rec709:None
+2025.11.14 17:19:54.367|Info|wf_footage_process|wf_footage_process|Rendering S3Out

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <AXNDataImport>
+    <color/>
+    <connectionString>Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};ReadOnly=True</connectionString>
+    <dstPath/>
+    <excludeOlderThan>5</excludeOlderThan>
+    <idConversionTable/>
+    <includeCloserThan>32</includeCloserThan>
+    <jobGroup>MediaDistributor</jobGroup>
+    <moviesPath/>
+    <pelisImgPath/>
+    <pelisMediaPath/>
+    <pelisSubtitlesPath/>
+    <pwd/>
+    <restURL/>
+    <seriesImgPath/>
+    <seriesMediaPath/>
+    <seriesPath/>
+    <seriesSubtitlesPath/>
+    <sourceAgent/>
+    <targetAgent/>
+    <user/>
+  </AXNDataImport>
+</nodeCommonRoot>

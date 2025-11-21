@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Input &gt; Watcher</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This is one of the most important nodes. The Watcher node is useful to automate triggering workflows execution. Use this node to start a queued workflow every time a n" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "watcher.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Watcher</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?watcher.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="input.html">Input</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Watcher</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="sonyxdrootpack.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="input.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="tasks.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This is one of the most important nodes. The Watcher node is useful to automate triggering workflows execution. Use this node to start a queued workflow every time a new file appears in the folder assigned for this purpose.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Every time a new file lands into the watched folder, the watcher checks if that new file correspond to a file sequence, a movie, a MegaPack &nbsp;content (such is P2 folders) or if it is a standalone file. When that file/content stops growing (because the file stops growing, or because other files corresponding to the same content stop landing in the watched folder) then the Universal Path for that content is sent to the output and the workflow is started.</span></p>
+<p class="p_Normal">This node does not require manual execution to start the operation. Just add it to the <span class="f_T_Entry">Queue</span> panel to activate it, and the workflow will be executed automatically every time a new content appears in the assigned folder (or optionally in any sub-folder of it). </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">This node does not block the <span class="f_T_Entry">Queue</span> panel while waiting for new files, it just waits silently, and the workflow containing is executed every time new files are detected.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The <span class="f_T_Menu">Watcher</span> node can only monitor remote volumes that are already mounted, it can not login to cloud services or similar to check for new content. If you need to monitor a remote volume that is not mounted then use the<span class="f_T_Menu"> Auto Trigger</span> instead, which can start a workflow periodically.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_TipHeading">Note</span>: The Watcher node is continuously active waiting for new files. If you only want to trigger workflows for the existing files one time and finish, then use the  <a href="folder.html" class="topiclink">Folder</a> node instead.</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal"><span class="f_TipHeading">Note</span>: <span class="f_T_Emphasis">The Watcher node is not activated by previously existing files</span>, only for new files appearing after the workflow is placed in the queue. If you also want to trigger the execution for pre-existing files then you can do it by adding two Workflows to the queue; first add one workflow using the <a href="folder.html" class="topiclink">Folder</a> node and then add another one with the Watcher node.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">You can watch a basic  <a href="https://www.youtube.com/watch?v=4aAsCCzYus4&amp;t=181s" target="_blank" class="weblink">video tutorial using the Watcher node here</a></span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">To:</span> The list of new files (Universal Paths) detected in the watched folder that have been stable for a period of time, as defined in the <span style="font-weight: bold;">Latency</span> property.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties </span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#file" class="topiclink" title="URL">File</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink" title="Name Convention">Name Convention</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Folder properties</span></h2>
+<p class="p_Normal"><span class="f_Heading3"><a href="common-parameters.html#include" class="topiclink">Include</a></span></p>
+<p class="p_Normal"><span class="f_Heading3"><a href="common-parameters.html#exclude" class="topiclink">Exclude</a></span></p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#filtermode" class="topiclink">Filter Mode</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#alphabeticalorder" class="topiclink">Alphabetical Order</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#recursive" class="topiclink">Include Subfolders</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#addroot" class="topiclink">Add Root</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Latency: </span><span class="f_BodyText">It is the time in seconds that the Watcher will wait to see if a media content stops growing. One file is considered to be growing if its size grows during this period of time, or if a related file of the same media pack lands under &nbsp;the watched folders tree (for example, another frame for the same frame sequence, or another file of the same MegaPack content).</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">Once the related content stops growing, the Watcher will send it to its output and the rest of the workflow is executed. </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">Adjust this value according to your needs. A value too high may delay the task completion, but a value too low may provoke the contents to be processed before they are completely copied or rendered by another program, thus generating a workflow error.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">ForceCheck: </span><span class="f_BodyText">This value is used in systems where the watched folder is not local to your system (it could be a network mounted drive, a SAN drive, etc). In those cases, the operating system may &nbsp;not detect when a new file appears so it will not notify Mistika Workflows about it. For that reason Mistika Workflows needs to actively monitor the folders looking for new files.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">The value &quot;0&quot; means to disable it. You can disable &nbsp;this check to reduce the workload of the system and provide a faster reaction as long as the assigned folder is under control of the local operating system (Then the appearance of local files is detected automatically by the operating system, which will then signal the Workflows application). </span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Normal"><span class="f_Heading3">Delete After Processing: </span><span class="f_BodyText"> If enabled, the new files found in the watched folder will be deleted once the workflow execution is completed. The files are deleted only if the workflow is successfully completed, and not in the case of errors. </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">As this option can be risky, when this option is activated a new &quot;</span><span class="f_T_Menu">Are you Sure?</span><span class="f_BodyText">&quot; property &nbsp;will appear asking you for a double check confirmation, which needs to be enabled as a safety measure against involuntary mistakes. &nbsp;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">It is important to note that only the processed files are deleted. If there are files in the watched folders that are not included, or excluded from the execution (using the </span><span class="f_BodyText" style="font-weight: bold;">Include</span><span class="f_BodyText"> / </span><span class="f_BodyText" style="font-weight: bold;">Exclude</span><span class="f_BodyText"> properties), they will not be deleted.</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<p class="p_Normal"><span class="f_Heading3">Global Timer: </span><span class="f_BodyText"> If enabled, all the content under the watcher folder will share the same timer, meaning that no content will be processed until there is no modifications of any file for a while, even if the modified file belongs to other content. For example, if you have a first enumerated sequence already in the watched folder, and a second one is being copied to it then none of the two sequences will be processed until the second one is completed (and no more modifications happen during the timer interval).</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">Having the </span><span class="f_T_Menu">Global Timer</span><span class="f_BodyText"> activated is recommended for the case of composite megapacks (Panasonic, XDCam, Stereo3D pairs, etc), because this content is typically made of extremely large files that are also related between them, so if one of those files is already copied while a huge companion file is still being copied then the </span><span class="f_T_Menu">Watcher</span><span class="f_BodyText"> node could try to process the first file too early, without waiting for its necessary companion. Having the</span><span class="f_T_Menu"> Global Timer</span><span class="f_BodyText"> activated will prevent this situation.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">But in the other hand, the </span><span class="f_T_Menu">Global Timer</span><span class="f_BodyText"> has the potential problem that if &nbsp;the watched folder is extremely busy (if there are constant modifications being made to files on it) then the workflow will never be triggered. Deactivate the </span><span class="f_T_Menu">Global Timer</span><span class="f_BodyText"> if you want to prevent this situation.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">cont.prev.execution (Continue Previous Executions) / Number Of Tries: </span>These properties are useful for reacting to software or system crashes. It permits to decide what to do with the files that were being processed at the crash time:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">When <span class="f_T_Menu">cont.prev.execution </span>is active, on next execution the <span class="f_T_Menu">Watcher</span> node will retry any files that started a workflow in a previous occasion but didn't complete it (typically due to a crash, blackout, or similar situation). </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">The <span class="f_T_Menu">Number Of Tries </span>property permits to establish a limit of retries, so if a particular file is crashing workflows every time then it will be skipped after that number of retries.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">If <span class="f_T_Menu">cont.prev.execution  </span>is disabled then those files will be ignored.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">These properties are especially useful in combination with <a href="https://support.sgo.es/support/solutions/articles/1000313191-how-to-re-launch-a-workflows-file-automatically-after-crashes-and-after-logout-login-cycles" target="_blank" class="weblink">making Mistika Workflows to automatically restart after crashes</a>. How to do that depends on each operating system, but the idea is simple: &nbsp;First you set the task scheduler of your operating system to restart the workflows &nbsp;application on system restarts (after auto-login) and also if the application crashes, executing something like: </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">workflows  <span class="f_T_Menu">-A</span> Your_mwf_file.mwf </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">And then you can use the above properties to decide what to do with the files that were being processed during the previous crash.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Contextual menu specific options:</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The <span class="f_T_Menu">Watcher </span>node provides additional menu options in the contextual menu (when clicking with right mouse button over the node):</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_Heading3">Contextural Menu -&gt; Reset: </span><span class="f_BodyText">The Watcher node remember which files have already been executed to make sure they are only executed one time. For this purpose, the list of executed files is stored in a private file in the watched folder (named something like </span><span class="f_T_Emphasis">.wfWatcherCacheV2_Watcher.dat </span><span class="f_BodyText">file ). The </span><span class="f_T_Menu">Reset</span><span class="f_BodyText"> function deletes this file, so all the existing files will be processed again on next </span><span class="f_T_Menu">Watcher </span><span class="f_BodyText">execution. It is typically useful for repetitive testing.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_Heading3">Contextural Menu -&gt; &nbsp;Ignore current files: </span><span class="f_BodyText">It will force to ignore all the pre-existing files in the watched folder (files existing before the first </span><span class="f_T_Menu">Watcher </span><span class="f_BodyText">execution). &nbsp;Logically It only works if it is executed before adding the workflow to the </span><span class="f_T_Menu">queue</span><span class="f_BodyText"> panel, otherwise it will be too late and the Watcher will process all the pre-exisitng files.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

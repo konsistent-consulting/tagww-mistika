@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <MP3>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <Transcoding>
+      <bitRate>0</bitRate>
+      <sampleRate>0</sampleRate>
+    </Transcoding>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#78b4b4</color>
+    <objectName>MP3</objectName>
+    <url/>
+  </MP3>
+</nodeCommonRoot>

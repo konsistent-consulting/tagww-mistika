@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="ACES - Advanced Workflow">
+  <view scale="0.401878" y="27.3715" x="684.288"/>
+  <nodes>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Media</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-560.531,-42.5184</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="6163b5d7-9a64-415a-9031-7043343c3a8b"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="399f4241-9c38-42b1-954e-582439abc3cd"/>
+     <Files type="output" name="Files" id="09e57aeb-adcb-4344-85a4-bbf30cedcf14">
+      <linkedTo>d06a9262-9fdd-47fe-bb2f-66b9194be871</linkedTo>
+      <linkedTo>a2763dd3-532d-4237-971f-77815a5a89b4</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="ARRIFile" type="input">
+    <properties>
+     <objectName type="string">ARRIFile</objectName>
+     <color type="color">#458c65</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-121.2,-106.8</pos>
+     <schemaName type="string">arrifile</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">false</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">arriColor:AP0 D60 LINEAR:AP0 D60 LINEAR</uniColorValue>
+     <gamma type="string">AP0 D60 LINEAR</gamma>
+     <gamut type="string">AP0 D60 LINEAR</gamut>
+     <codec type="string"></codec>
+     <audioCodec type="string">None</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <debayer type="int">1</debayer>
+     <ariContainerType type="int">1</ariContainerType>
+     <ariColorSpace type="string">Linear/AP0</ariColorSpace>
+     <changeariISO type="bool">false</changeariISO>
+     <ariISO type="int">200</ariISO>
+     <changeariKelvin type="bool">false</changeariKelvin>
+     <ariKelvin type="int">5600</ariKelvin>
+     <changeariTint type="bool">false</changeariTint>
+     <ariTint type="float">0</ariTint>
+     <ariSharpness type="float">0</ariSharpness>
+     <ariReduceFactor type="int">1</ariReduceFactor>
+     <ariLookMode type="string">--- From File ---</ariLookMode>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="7cd9eed9-b9d3-46eb-855d-bf8215cbd604"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="189f1aac-4ed5-4350-acf1-499313716b20"/>
+     <VideoOut label="AV Out" type="output" name="VideoOut" id="6b5d5165-19ca-4392-951c-daf7178a2a34">
+      <linkedTo>9ffc805b-a218-4045-8863-989d9d77bb54</linkedTo>
+     </VideoOut>
+     <AudioOut label="Ext. Audio" type="output" name="AudioOut" id="1496afc3-8093-45a2-a91f-f2fd98ef130f" visible="0"/>
+     <Raw type="input" name="Raw" id="d06a9262-9fdd-47fe-bb2f-66b9194be871">
+      <linkedTo>09e57aeb-adcb-4344-85a4-bbf30cedcf14</linkedTo>
+     </Raw>
+    </connections>
+   </node>
+   <node class="ACESGamutCompress" type="task">
+    <properties>
+     <objectName type="string">ACESGamutCompress</objectName>
+     <color type="color">#3c9e40</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">308.978,-103.217</pos>
+     <schemaName type="string">acesgamutcompress</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <inputsAlignment type="int">0</inputsAlignment>
+     <SECRETCurve type="float">0</SECRETCurve>
+     <SECRETGamut type="float">1</SECRETGamut>
+     <Inverse type="float">0</Inverse>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="918acf68-687d-4f4c-9d32-00211d23ea29"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="d3088100-68f2-430d-abf7-b0c2631966c2"/>
+     <Output type="output" name="Output" id="1ab9e18c-1db4-465b-bc6b-a9c0b7ed7797">
+      <linkedTo>2414921d-565d-4f98-900c-a8eb7561636b</linkedTo>
+     </Output>
+     <Input_1 type="input" name="Input_1" id="9ffc805b-a218-4045-8863-989d9d77bb54">
+      <linkedTo>6b5d5165-19ca-4392-951c-daf7178a2a34</linkedTo>
+     </Input_1>
+    </connections>
+   </node>
+   <node class="UniColor" type="task">
+    <properties>
+     <objectName type="string">UniColor</objectName>
+     <color type="color">#3c9e40</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">742.54,-107.397</pos>
+     <schemaName type="string">unicolor</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <inputsAlignment type="int">0</inputsAlignment>
+     <Input_InputCurve type="float">0</Input_InputCurve>
+     <Input_InputGamut type="float">1</Input_InputGamut>
+     <GamutOptions_ConvertGamut type="float">1</GamutOptions_ConvertGamut>
+     <GamutOptions_SECRETUseBradfordMatrix type="float">1</GamutOptions_SECRETUseBradfordMatrix>
+     <Output_OutputGamut type="string">2</Output_OutputGamut>
+     <Output_OutputCurve type="string">5</Output_OutputCurve>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="f3373c1d-8756-4689-ba91-45e628d78ba2"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="2bcfc96c-a010-463a-bb7d-c785191a514a"/>
+     <Output type="output" name="Output" id="817015f8-8b7e-4d2c-9f07-69cd4f6e2322">
+      <linkedTo>880868d9-07b2-49af-9eae-ab9583c06ed4</linkedTo>
+     </Output>
+     <Input_1 type="input" name="Input_1" id="2414921d-565d-4f98-900c-a8eb7561636b">
+      <linkedTo>1ab9e18c-1db4-465b-bc6b-a9c0b7ed7797</linkedTo>
+     </Input_1>
+    </connections>
+   </node>
+   <node class="LUT3D" type="task">
+    <properties>
+     <objectName type="string">LUT3D</objectName>
+     <color type="color">#5a5f8c</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1434.82,-111.699</pos>
+     <schemaName type="string">lut3d</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <inputsAlignment type="int">0</inputsAlignment>
+     <Input_Scale type="float">1</Input_Scale>
+     <Input_Offset type="float">0</Input_Offset>
+     <Input_Gamma type="float">1</Input_Gamma>
+     <Input_Use type="float">0</Input_Use>
+     <Lut1Da_LUT1DFile type="float">0</Lut1Da_LUT1DFile>
+     <Lut1Da_Use type="float">0</Lut1Da_Use>
+     <Lut3D_LUT3DFile type="float">0</Lut3D_LUT3DFile>
+     <Lut3D_Interpolation type="float">0</Lut3D_Interpolation>
+     <Lut1Db_LUT1DFile type="float">0</Lut1Db_LUT1DFile>
+     <Lut1Db_Use type="float">0</Lut1Db_Use>
+     <Output_Scale type="float">1</Output_Scale>
+     <Output_Offset type="float">0</Output_Offset>
+     <Output_Gamma type="float">1</Output_Gamma>
+     <Output_Use type="float">0</Output_Use>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="e21ff806-f32f-4fcd-88b9-f5c8f012d3d0"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="e760670e-36a6-4f4a-9b39-56f606afc885"/>
+     <Output type="output" name="Output" id="242f9f11-44d1-4aca-941a-054cd1ddc84b">
+      <linkedTo>4cfb19b2-933e-4f75-986e-00201284da07</linkedTo>
+     </Output>
+     <Input_1 type="input" name="Input_1" id="7593db45-317a-41d5-ab35-d93f76649733">
+      <linkedTo>87177e2b-9e7c-4a35-bd54-831c1ee9719d</linkedTo>
+     </Input_1>
+    </connections>
+   </node>
+   <node class="CDL" type="task">
+    <properties>
+     <objectName type="string">CDL</objectName>
+     <color type="color">#5a5f8c</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1143.42,-113.235</pos>
+     <schemaName type="string">cdl</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <inputsAlignment type="int">0</inputsAlignment>
+     <source type="int">0</source>
+     <Offset_Red type="float">0</Offset_Red>
+     <Offset_Green type="float">0</Offset_Green>
+     <Offset_Blue type="float">0</Offset_Blue>
+     <Slope_Red type="float">1</Slope_Red>
+     <Slope_Green type="float">1</Slope_Green>
+     <Slope_Blue type="float">1</Slope_Blue>
+     <Power_Red type="float">1</Power_Red>
+     <Power_Green type="float">1</Power_Green>
+     <Power_Blue type="float">1</Power_Blue>
+     <Saturation_Saturation type="float">1</Saturation_Saturation>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="c3e9e026-0bc2-4726-b687-a7f86151dbfe"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="123ae72d-0f22-40b7-80a1-2f3e5a3fd91a"/>
+     <Output type="output" name="Output" id="87177e2b-9e7c-4a35-bd54-831c1ee9719d">
+      <linkedTo>7593db45-317a-41d5-ab35-d93f76649733</linkedTo>
+     </Output>
+     <Input_1 type="input" name="Input_1" id="880868d9-07b2-49af-9eae-ab9583c06ed4">
+      <linkedTo>817015f8-8b7e-4d2c-9f07-69cd4f6e2322</linkedTo>
+     </Input_1>
+    </connections>
+   </node>
+   <node class="ACESODT" type="task">
+    <properties>
+     <objectName type="string">ACESODT</objectName>
+     <color type="color">#3c9e40</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1820.88,-113.362</pos>
+     <schemaName type="string">acesodt</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <inputsAlignment type="int">0</inputsAlignment>
+     <Input_InputCurve type="float">5</Input_InputCurve>
+     <Input_InputGamut type="float">2</Input_InputGamut>
+     <Input_SECRETUseBradfordMatrix type="float">1</Input_SECRETUseBradfordMatrix>
+     <Output_OutputSpace type="float">0</Output_OutputSpace>
+     <Output_SECRETPrecision type="float">1</Output_SECRETPrecision>
+     <Output_OutputScale type="float">0</Output_OutputScale>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="d9d90b66-6411-464a-b2ba-1dd8ff850281"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="639b4ddb-9366-4bb2-9ba2-55eebd5c7888"/>
+     <Output type="output" name="Output" id="bd18b560-cf92-4f16-aab9-0f718c495325">
+      <linkedTo>fef150e8-fd65-4a27-a861-6f3c5a4ed896</linkedTo>
+     </Output>
+     <Input_1 type="input" name="Input_1" id="4cfb19b2-933e-4f75-986e-00201284da07">
+      <linkedTo>242f9f11-44d1-4aca-941a-054cd1ddc84b</linkedTo>
+     </Input_1>
+    </connections>
+   </node>
+   <node class="ProRes" type="task">
+    <properties>
+     <objectName type="string">ProRes</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">2196.73,-96.9726</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="fc9c13de-9b5c-4f1d-8504-4a0781f35f34"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="73758f25-e7e7-4886-9245-869b164edc91"/>
+     <VideoOut label="AV Out" type="output" name="VideoOut" id="9ea90e66-34e9-4ed2-b024-fdcf13492032"/>
+     <AudioOut label="Ext. Audio" type="output" name="AudioOut" id="17844777-7dc5-485d-bc89-608835f6aaf4" visible="0"/>
+     <VideoIn label="AV In" type="input" name="VideoIn" id="fef150e8-fd65-4a27-a861-6f3c5a4ed896">
+      <linkedTo>bd18b560-cf92-4f16-aab9-0f718c495325</linkedTo>
+     </VideoIn>
+     <AudioIn label="Ext. Audio" type="input" name="AudioIn" id="f9f09cec-8ec9-4939-ab19-cf480c2fa167"/>
+    </connections>
+   </node>
+   <node class="UniColor" type="task">
+    <properties>
+     <objectName type="string">UniColor</objectName>
+     <color type="color">#3c9e40</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-120.269,55.9872</pos>
+     <schemaName type="string">unicolor</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <inputsAlignment type="int">0</inputsAlignment>
+     <Input_InputCurve type="float">0</Input_InputCurve>
+     <Input_InputGamut type="float">1</Input_InputGamut>
+     <GamutOptions_ConvertGamut type="float">1</GamutOptions_ConvertGamut>
+     <GamutOptions_SECRETUseBradfordMatrix type="float">1</GamutOptions_SECRETUseBradfordMatrix>
+     <Output_OutputGamut type="float">1</Output_OutputGamut>
+     <Output_OutputCurve type="float">0</Output_OutputCurve>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="29f87e09-cf70-442c-93dc-0789ca6777dc"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="9e96ab8c-6858-4483-964a-67e558e6f074"/>
+     <Output type="output" name="Output" id="838d072c-e0f7-4448-a140-ad14bcf03b48"/>
+     <Input_1 type="input" name="Input_1" id="a2763dd3-532d-4237-971f-77815a5a89b4">
+      <linkedTo>09e57aeb-adcb-4344-85a4-bbf30cedcf14</linkedTo>
+     </Input_1>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-250.823,-295.612</ScenePos>
+     <Size type="size2">2397.75,621.085</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">ACES Color Pipeline</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff1c2739</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-136.7,-157.3</ScenePos>
+     <Size type="size2">277,363.403</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">IDT: AP0 Lineal</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff355d72</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">297.061,-153.717</ScenePos>
+     <Size type="size2">277,183</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">ACES Gamut Compress</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">727.04,-157.897</ScenePos>
+     <Size type="size2">277,183</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">AP1 CCT</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff393572</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">1127.92,-163.735</ScenePos>
+     <Size type="size2">568.408,184.536</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">LMT</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff412f57</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">1805.38,-163.862</ScenePos>
+     <Size type="size2">277,183</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">ODT: Rec709</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff355d72</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-196.246,246.186</ScenePos>
+     <Size type="size2">693.688,53.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Depending on the type of media (whether it is RAW or not), 
+we will use the camera debayer or Unicolor to transform the media to Linear AP0.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">261.854,60.9057</ScenePos>
+     <Size type="size2">340.219,59.3281</Size>
+     <TextSize type="float">16</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Apply Gamut Compress if neccesary
+(always in Linear)</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">708.48,60.032</ScenePos>
+     <Size type="size2">334.641,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Define working color space to AP1 CCT</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">8</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1772.93,56.576</ScenePos>
+     <Size type="size2">368.969,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Set the Output Color Space for the pipeline</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">9</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-229.921,-410.15</ScenePos>
+     <Size type="size2">1117.38,36.9531</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Advanced ACES Color Pipeline, combining IDT + Gamut Compress + Working Color Space + LMT + ODT</Text>
+     <TextColor type="color">#ff7bd1ff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">10</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

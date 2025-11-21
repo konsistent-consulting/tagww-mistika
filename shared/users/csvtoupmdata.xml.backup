@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <CSVToUPmdata>
+    <CustomTokens>
+      <ColumnT1>0</ColumnT1>
+      <ColumnT2>0</ColumnT2>
+      <ColumnT3>0</ColumnT3>
+      <ColumnT4>0</ColumnT4>
+      <ColumnT5>0</ColumnT5>
+      <TokenName1/>
+      <TokenName2/>
+      <TokenName3/>
+      <TokenName4/>
+      <TokenName5/>
+    </CustomTokens>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#94b4f2</color>
+    <csvOptions>
+      <ChangeBackSlashes>true</ChangeBackSlashes>
+      <MediaFilesColIndex>0</MediaFilesColIndex>
+      <SetPrivateData>true</SetPrivateData>
+      <SkipLines>0</SkipLines>
+      <TokenNameFrom>0</TokenNameFrom>
+      <csvDelimiter>-1</csvDelimiter>
+    </csvOptions>
+    <objectName>CSVToUPmdata</objectName>
+  </CSVToUPmdata>
+</nodeCommonRoot>

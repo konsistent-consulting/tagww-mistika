@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ObjectMatrixIn>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <areYouSure>true</areYouSure>
+    <bucket/>
+    <color>#00bcc2</color>
+    <deleteAfterDownload/>
+    <endpointUrl/>
+    <localPath/>
+    <objectName>ObjectMatrixIn</objectName>
+    <objectPrefix>Leave empty to download the bucket completely</objectPrefix>
+  </ObjectMatrixIn>
+</nodeCommonRoot>

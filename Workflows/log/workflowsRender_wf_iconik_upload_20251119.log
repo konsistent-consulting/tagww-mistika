@@ -1,0 +1,767 @@
+2025.11.19 09:01:32.392|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 09:01:32.393|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 09:01:32.393|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 09:01:32.394|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 09:01:32.395|Critical Error|wf_iconik_upload|jsonToTokens|JSON file not found: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 09:01:32.395|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 09:01:32.395|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 09:01:32.395|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 09:01:32.395|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version of iconikS3Sync (global collection scan is used instead).
+2025.11.19 09:01:32.396|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', metadataViewId='(auto assets PATCH)', overwriteExisting=False, dryRun=False
+2025.11.19 09:01:33.075|Info|wf_iconik_upload|iconikS3Sync|Tenant autodetected: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 09:01:33.235|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Ford' (id='63ac1682-c49b-11f0-bf8c-ca4f321b29e4')
+2025.11.19 09:01:42.313|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Using Advanced Features' (id='55562dea-bbfc-11f0-9d64-f26ec57834b3')
+2025.11.19 09:01:42.902|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Getting Started' (id='553bc5b8-bbfc-11f0-9699-7256e5944804')
+2025.11.19 09:01:43.530|Info|wf_iconik_upload|iconikS3Sync|Global asset map built with 23 entries
+2025.11.19 09:01:43.784|Info|wf_iconik_upload|iconikS3Sync|Listing S3 bucket='ed-mistika-test' (no prefix)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Collected 22 unique S3 objects (from 30 keys)
+2025.11.19 09:01:43.937|Info|wf_iconik_upload|iconikS3Sync|Asset 64ff28e4-c49b-11f0-aee4-c6429e508199 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 09:01:44.081|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:44.081|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 09:01:44.081|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 09:01:44.081|Info|wf_iconik_upload|iconikS3Sync|Asset 692a6c08-c49b-11f0-95eb-c6429e508199 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 09:01:44.191|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:44.191|Info|wf_iconik_upload|iconikS3Sync|Asset 6b53e8d8-c49b-11f0-a544-42e0776fa099 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 09:01:44.294|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:44.294|Info|wf_iconik_upload|iconikS3Sync|Asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 09:01:44.399|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:44.399|Info|wf_iconik_upload|iconikS3Sync|Asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 09:01:44.514|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:44.514|Info|wf_iconik_upload|iconikS3Sync|Asset 70a67300-c49b-11f0-b4a5-0a7641a4c022 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 09:01:44.624|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:44.624|Info|wf_iconik_upload|iconikS3Sync|Asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 09:01:44.727|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:44.727|Info|wf_iconik_upload|iconikS3Sync|Asset 8b82abda-c49b-11f0-8258-ee4065c5be7a <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample')
+2025.11.19 09:01:44.900|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:44.900|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample' (key='Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample.mov') has no matching iconik asset
+2025.11.19 09:01:44.901|Info|wf_iconik_upload|iconikS3Sync|Asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample')
+2025.11.19 09:01:45.010|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:45.011|Info|wf_iconik_upload|iconikS3Sync|Asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 09:01:45.137|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:45.137|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 09:01:45.138|Info|wf_iconik_upload|iconikS3Sync|Asset d5297fec-c49c-11f0-8034-62f0676e0251 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 09:01:45.255|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:45.256|Info|wf_iconik_upload|iconikS3Sync|Asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 09:01:45.366|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:45.366|Info|wf_iconik_upload|iconikS3Sync|Asset d848a09a-c49c-11f0-a544-42e0776fa099 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 09:01:45.476|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:45.476|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 09:01:45.476|Info|wf_iconik_upload|iconikS3Sync|Asset da260236-c49c-11f0-b03c-d61d8cc2ed8d <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 09:01:45.569|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:45.570|Info|wf_iconik_upload|iconikS3Sync|Asset dbb1183e-c49c-11f0-a6cb-329e4f07c083 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 09:01:45.676|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:45.677|Info|wf_iconik_upload|iconikS3Sync|Asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 09:01:45.798|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:45.798|Info|wf_iconik_upload|iconikS3Sync|Asset deb4d264-c49c-11f0-8174-0a21cdc19976 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample')
+2025.11.19 09:01:45.901|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:01:45.901|Info|wf_iconik_upload|iconikS3Sync|Matches: 17, Updated (incl. dry-run): 17, Skipped existing: 0, S3-without-asset: 5
+2025.11.19 09:01:45.902|Info|wf_iconik_upload|iconikS3Sync|Process finished, 0 UP(s) sent to 'output' unchanged
+2025.11.19 09:01:45.905|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 09:01:45.907|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed
+2025.11.19 09:05:58.477|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 09:05:58.478|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 09:05:58.478|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 09:05:58.487|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version of iconikS3Sync (global collection scan is used instead).
+2025.11.19 09:05:58.492|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', metadataViewId='(auto assets PATCH)', overwriteExisting=False, dryRun=False
+2025.11.19 09:05:58.871|Info|wf_iconik_upload|iconikS3Sync|Tenant autodetected: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 09:05:59.019|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Ford' (id='63ac1682-c49b-11f0-bf8c-ca4f321b29e4')
+2025.11.19 09:06:05.000|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Using Advanced Features' (id='55562dea-bbfc-11f0-9d64-f26ec57834b3')
+2025.11.19 09:06:05.575|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Getting Started' (id='553bc5b8-bbfc-11f0-9699-7256e5944804')
+2025.11.19 09:06:06.105|Info|wf_iconik_upload|iconikS3Sync|Global asset map built with 23 entries
+2025.11.19 09:06:06.146|Info|wf_iconik_upload|iconikS3Sync|Listing S3 bucket='ed-mistika-test' (no prefix)
+2025.11.19 09:06:06.270|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 09:06:06.270|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 09:06:06.270|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 09:06:06.270|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 09:06:06.270|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 09:06:06.270|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 09:06:06.270|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 09:06:06.270|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 09:06:06.270|Info|wf_iconik_upload|iconikS3Sync|Collected 22 unique S3 objects (from 30 keys)
+2025.11.19 09:06:06.271|Info|wf_iconik_upload|iconikS3Sync|Asset 64ff28e4-c49b-11f0-aee4-c6429e508199 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 09:06:06.439|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:06.439|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 09:06:06.439|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 09:06:06.439|Info|wf_iconik_upload|iconikS3Sync|Asset 692a6c08-c49b-11f0-95eb-c6429e508199 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 09:06:06.546|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:06.546|Info|wf_iconik_upload|iconikS3Sync|Asset 6b53e8d8-c49b-11f0-a544-42e0776fa099 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 09:06:06.650|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:06.650|Info|wf_iconik_upload|iconikS3Sync|Asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 09:06:06.752|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:06.752|Info|wf_iconik_upload|iconikS3Sync|Asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 09:06:06.884|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:06.884|Info|wf_iconik_upload|iconikS3Sync|Asset 70a67300-c49b-11f0-b4a5-0a7641a4c022 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 09:06:07.005|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:07.005|Info|wf_iconik_upload|iconikS3Sync|Asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 09:06:07.175|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:07.175|Info|wf_iconik_upload|iconikS3Sync|Asset 8b82abda-c49b-11f0-8258-ee4065c5be7a <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample')
+2025.11.19 09:06:07.286|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:07.287|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample' (key='Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample.mov') has no matching iconik asset
+2025.11.19 09:06:07.287|Info|wf_iconik_upload|iconikS3Sync|Asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample')
+2025.11.19 09:06:07.420|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:07.420|Info|wf_iconik_upload|iconikS3Sync|Asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 09:06:07.547|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:07.547|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 09:06:07.547|Info|wf_iconik_upload|iconikS3Sync|Asset d5297fec-c49c-11f0-8034-62f0676e0251 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 09:06:07.653|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:07.653|Info|wf_iconik_upload|iconikS3Sync|Asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 09:06:07.747|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:07.748|Info|wf_iconik_upload|iconikS3Sync|Asset d848a09a-c49c-11f0-a544-42e0776fa099 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 09:06:07.868|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:07.868|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 09:06:07.868|Info|wf_iconik_upload|iconikS3Sync|Asset da260236-c49c-11f0-b03c-d61d8cc2ed8d <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 09:06:08.000|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:08.000|Info|wf_iconik_upload|iconikS3Sync|Asset dbb1183e-c49c-11f0-a6cb-329e4f07c083 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 09:06:08.106|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:08.106|Info|wf_iconik_upload|iconikS3Sync|Asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 09:06:08.221|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:08.221|Info|wf_iconik_upload|iconikS3Sync|Asset deb4d264-c49c-11f0-8174-0a21cdc19976 <- s3_uri='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov' (logical='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample')
+2025.11.19 09:06:08.356|Info|wf_iconik_upload|iconikS3Sync|Updated via assets API PATCH (metadata field)
+2025.11.19 09:06:08.356|Info|wf_iconik_upload|iconikS3Sync|Matches: 17, Updated (incl. dry-run): 17, Skipped existing: 0, S3-without-asset: 5
+2025.11.19 09:06:08.356|Info|wf_iconik_upload|iconikS3Sync|Process finished, 0 UP(s) sent to 'output' unchanged
+2025.11.19 09:06:08.358|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 09:06:08.366|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Successfully Finished
+2025.11.19 09:28:04.725|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 09:28:04.726|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 09:28:04.726|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 09:28:04.735|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 09:28:04.739|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 09:28:04.739|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 09:28:04.739|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 09:28:04.739|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 09:28:04.739|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 09:28:04.739|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync_2
+2025.11.19 09:28:04.740|Info|wf_iconik_upload|iconikS3Sync_2|Process started
+2025.11.19 09:28:04.740|Info|wf_iconik_upload|iconikS3Sync_2|No UPs on 'input' connector
+2025.11.19 09:28:04.740|Info|wf_iconik_upload|iconikS3Sync_2|NOTE: collectionId/collectionPath are configured but ignored by this version of iconikS3Sync (global collection scan is used instead).
+2025.11.19 09:28:04.740|Info|wf_iconik_upload|iconikS3Sync_2|metadataFieldName='s3_uri', metadataViewId='(auto assets PATCH)', overwriteExisting=False, dryRun=False
+2025.11.19 09:28:05.227|Info|wf_iconik_upload|iconikS3Sync_2|Tenant autodetected: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 09:28:05.422|Info|wf_iconik_upload|iconikS3Sync_2|Scanning collection tree under root 'Ford' (id='63ac1682-c49b-11f0-bf8c-ca4f321b29e4')
+2025.11.19 09:28:15.420|Info|wf_iconik_upload|iconikS3Sync_2|Scanning collection tree under root 'Using Advanced Features' (id='55562dea-bbfc-11f0-9d64-f26ec57834b3')
+2025.11.19 09:28:15.932|Info|wf_iconik_upload|iconikS3Sync_2|Scanning collection tree under root 'Getting Started' (id='553bc5b8-bbfc-11f0-9699-7256e5944804')
+2025.11.19 09:28:16.522|Info|wf_iconik_upload|iconikS3Sync_2|Global asset map built with 23 entries
+2025.11.19 09:28:16.709|Info|wf_iconik_upload|iconikS3Sync_2|Listing S3 bucket='ed-mistika-test' (no prefix)
+2025.11.19 09:28:16.892|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 09:28:16.892|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 09:28:16.892|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 09:28:16.892|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 09:28:16.892|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 09:28:16.892|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 09:28:16.892|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 09:28:16.892|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 09:28:16.892|Info|wf_iconik_upload|iconikS3Sync_2|Collected 22 unique S3 objects (from 30 keys)
+2025.11.19 09:28:16.893|Info|wf_iconik_upload|iconikS3Sync_2|Asset 64ff28e4-c49b-11f0-aee4-c6429e508199 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 09:28:17.021|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:17.021|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 09:28:17.021|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 09:28:17.021|Info|wf_iconik_upload|iconikS3Sync_2|Asset 692a6c08-c49b-11f0-95eb-c6429e508199 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 09:28:17.145|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:17.145|Info|wf_iconik_upload|iconikS3Sync_2|Asset 6b53e8d8-c49b-11f0-a544-42e0776fa099 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 09:28:17.263|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:17.263|Info|wf_iconik_upload|iconikS3Sync_2|Asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 09:28:17.380|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:17.380|Info|wf_iconik_upload|iconikS3Sync_2|Asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 09:28:17.513|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:17.514|Info|wf_iconik_upload|iconikS3Sync_2|Asset 70a67300-c49b-11f0-b4a5-0a7641a4c022 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 09:28:17.621|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:17.621|Info|wf_iconik_upload|iconikS3Sync_2|Asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 09:28:17.725|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:17.725|Info|wf_iconik_upload|iconikS3Sync_2|Asset 8b82abda-c49b-11f0-8258-ee4065c5be7a <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample')
+2025.11.19 09:28:17.836|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:17.836|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample' (key='Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample.mov') has no matching iconik asset
+2025.11.19 09:28:17.836|Info|wf_iconik_upload|iconikS3Sync_2|Asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample')
+2025.11.19 09:28:17.943|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:17.943|Info|wf_iconik_upload|iconikS3Sync_2|Asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 09:28:18.055|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:18.055|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 09:28:18.055|Info|wf_iconik_upload|iconikS3Sync_2|Asset d5297fec-c49c-11f0-8034-62f0676e0251 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 09:28:18.187|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:18.187|Info|wf_iconik_upload|iconikS3Sync_2|Asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 09:28:18.288|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:18.288|Info|wf_iconik_upload|iconikS3Sync_2|Asset d848a09a-c49c-11f0-a544-42e0776fa099 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 09:28:18.402|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:18.402|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 09:28:18.402|Info|wf_iconik_upload|iconikS3Sync_2|Asset da260236-c49c-11f0-b03c-d61d8cc2ed8d <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 09:28:18.513|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:18.513|Info|wf_iconik_upload|iconikS3Sync_2|Asset dbb1183e-c49c-11f0-a6cb-329e4f07c083 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 09:28:18.652|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:18.652|Info|wf_iconik_upload|iconikS3Sync_2|Asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 09:28:18.777|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:18.778|Info|wf_iconik_upload|iconikS3Sync_2|Asset deb4d264-c49c-11f0-8174-0a21cdc19976 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample')
+2025.11.19 09:28:18.890|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:28:18.890|Info|wf_iconik_upload|iconikS3Sync_2|Matches: 17, Updated (incl. dry-run): 17, Skipped existing: 0, S3-without-asset: 5
+2025.11.19 09:28:18.890|Info|wf_iconik_upload|iconikS3Sync_2|Process finished, 0 UP(s) sent to 'output' unchanged
+2025.11.19 09:28:18.891|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 09:28:18.898|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Successfully Finished
+2025.11.19 09:44:42.107|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 09:44:42.108|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 09:44:42.108|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 09:44:42.118|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync_2
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|iconikS3Sync_2|Process started
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|iconikS3Sync_2|No UPs on 'input' connector
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|iconikS3Sync_2|NOTE: collectionId/collectionPath are configured but ignored by this version of iconikS3Sync (global collection scan is used instead).
+2025.11.19 09:44:42.122|Info|wf_iconik_upload|iconikS3Sync_2|metadataFieldName='s3_uri', metadataViewId='(auto assets PATCH)', overwriteExisting=False, dryRun=False
+2025.11.19 09:44:42.679|Info|wf_iconik_upload|iconikS3Sync_2|Tenant autodetected: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 09:44:42.840|Info|wf_iconik_upload|iconikS3Sync_2|Scanning collection tree under root 'Ford' (id='63ac1682-c49b-11f0-bf8c-ca4f321b29e4')
+2025.11.19 09:44:47.254|Info|wf_iconik_upload|iconikS3Sync_2|Scanning collection tree under root 'Using Advanced Features' (id='55562dea-bbfc-11f0-9d64-f26ec57834b3')
+2025.11.19 09:44:47.779|Info|wf_iconik_upload|iconikS3Sync_2|Scanning collection tree under root 'Getting Started' (id='553bc5b8-bbfc-11f0-9699-7256e5944804')
+2025.11.19 09:44:48.340|Info|wf_iconik_upload|iconikS3Sync_2|Global asset map built with 23 entries
+2025.11.19 09:44:48.505|Info|wf_iconik_upload|iconikS3Sync_2|Listing S3 bucket='ed-mistika-test' (no prefix)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Collected 22 unique S3 objects (from 30 keys)
+2025.11.19 09:44:48.657|Info|wf_iconik_upload|iconikS3Sync_2|Asset 64ff28e4-c49b-11f0-aee4-c6429e508199 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 09:44:48.840|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:48.840|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 09:44:48.840|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 09:44:48.840|Info|wf_iconik_upload|iconikS3Sync_2|Asset 692a6c08-c49b-11f0-95eb-c6429e508199 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 09:44:48.957|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:48.957|Info|wf_iconik_upload|iconikS3Sync_2|Asset 6b53e8d8-c49b-11f0-a544-42e0776fa099 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 09:44:49.049|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:49.049|Info|wf_iconik_upload|iconikS3Sync_2|Asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 09:44:49.144|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:49.144|Info|wf_iconik_upload|iconikS3Sync_2|Asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 09:44:49.235|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:49.235|Info|wf_iconik_upload|iconikS3Sync_2|Asset 70a67300-c49b-11f0-b4a5-0a7641a4c022 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 09:44:49.375|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:49.375|Info|wf_iconik_upload|iconikS3Sync_2|Asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 09:44:49.481|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:49.481|Info|wf_iconik_upload|iconikS3Sync_2|Asset 8b82abda-c49b-11f0-8258-ee4065c5be7a <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample')
+2025.11.19 09:44:49.574|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:49.574|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample' (key='Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample.mov') has no matching iconik asset
+2025.11.19 09:44:49.574|Info|wf_iconik_upload|iconikS3Sync_2|Asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample')
+2025.11.19 09:44:49.700|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:49.700|Info|wf_iconik_upload|iconikS3Sync_2|Asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 09:44:49.808|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:49.808|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 09:44:49.808|Info|wf_iconik_upload|iconikS3Sync_2|Asset d5297fec-c49c-11f0-8034-62f0676e0251 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 09:44:49.922|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:49.922|Info|wf_iconik_upload|iconikS3Sync_2|Asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 09:44:50.025|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:50.025|Info|wf_iconik_upload|iconikS3Sync_2|Asset d848a09a-c49c-11f0-a544-42e0776fa099 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 09:44:50.132|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:50.132|Info|wf_iconik_upload|iconikS3Sync_2|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 09:44:50.132|Info|wf_iconik_upload|iconikS3Sync_2|Asset da260236-c49c-11f0-b03c-d61d8cc2ed8d <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 09:44:50.248|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:50.248|Info|wf_iconik_upload|iconikS3Sync_2|Asset dbb1183e-c49c-11f0-a6cb-329e4f07c083 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 09:44:50.357|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:50.357|Info|wf_iconik_upload|iconikS3Sync_2|Asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 09:44:50.489|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:50.489|Info|wf_iconik_upload|iconikS3Sync_2|Asset deb4d264-c49c-11f0-8174-0a21cdc19976 <- s3_uri (label='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov', url='s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov') (logical='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample')
+2025.11.19 09:44:50.628|Info|wf_iconik_upload|iconikS3Sync_2|Updated via assets API PATCH (URL field)
+2025.11.19 09:44:50.629|Info|wf_iconik_upload|iconikS3Sync_2|Matches: 17, Updated (incl. dry-run): 17, Skipped existing: 0, S3-without-asset: 5
+2025.11.19 09:44:50.629|Info|wf_iconik_upload|iconikS3Sync_2|Process finished, 0 UP(s) sent to 'output' unchanged
+2025.11.19 09:44:50.630|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 09:44:50.638|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Successfully Finished
+2025.11.19 11:55:35.627|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 11:55:35.628|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 11:55:35.628|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 11:55:35.635|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 11:55:35.641|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 11:55:35.641|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 11:55:35.641|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 11:55:35.641|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 11:55:35.641|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 11:55:35.641|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync_2
+2025.11.19 11:55:35.642|Info|wf_iconik_upload|iconikS3Sync_2|Process started
+2025.11.19 11:55:35.642|Info|wf_iconik_upload|iconikS3Sync_2|No UPs on 'input' connector
+2025.11.19 11:55:35.642|Info|wf_iconik_upload|iconikS3Sync_2|NOTE: collectionId/collectionPath are configured but ignored by this version of iconikS3Sync (global collection scan is used instead).
+2025.11.19 11:55:35.642|Info|wf_iconik_upload|iconikS3Sync_2|metadataFieldName='s3_uri', metadataViewId='(auto assets PATCH)', overwriteExisting=False, dryRun=False
+2025.11.19 11:55:35.884|Info|wf_iconik_upload|iconikS3Sync_2|Tenant autodetection failed or not needed
+2025.11.19 11:55:35.961|Info|wf_iconik_upload|iconikS3Sync_2|Exception in process(): GET API/assets/v1/collections -> 401: {}
+2025.11.19 11:55:35.961|Critical Error|wf_iconik_upload|iconikS3Sync_2|iconikS3Sync failed: GET API/assets/v1/collections -> 401: {}
+2025.11.19 11:55:35.962|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 11:55:35.974|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed
+2025.11.19 11:56:01.845|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 11:56:01.846|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 11:56:01.846|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 11:56:01.856|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync_2
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|iconikS3Sync_2|Process started
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|iconikS3Sync_2|No UPs on 'input' connector
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|iconikS3Sync_2|NOTE: collectionId/collectionPath are configured but ignored by this version of iconikS3Sync (global collection scan is used instead).
+2025.11.19 11:56:01.858|Info|wf_iconik_upload|iconikS3Sync_2|metadataFieldName='s3_uri', metadataViewId='(auto assets PATCH)', overwriteExisting=False, dryRun=False
+2025.11.19 11:56:02.038|Info|wf_iconik_upload|iconikS3Sync_2|Tenant autodetection failed or not needed
+2025.11.19 11:56:02.118|Info|wf_iconik_upload|iconikS3Sync_2|Exception in process(): GET API/assets/v1/collections -> 401: {}
+2025.11.19 11:56:02.118|Critical Error|wf_iconik_upload|iconikS3Sync_2|iconikS3Sync failed: GET API/assets/v1/collections -> 401: {}
+2025.11.19 11:56:02.119|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 11:56:02.134|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed
+2025.11.19 11:56:16.398|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 11:56:16.400|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 11:56:16.401|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 11:56:16.401|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 11:56:18.142|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 11:56:18.142|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 11:56:32.310|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 11:56:39.402|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 11:57:29.971|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 11:57:29.972|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 11:57:29.972|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 11:57:29.981|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version (global collection scan is used).
+2025.11.19 11:57:29.984|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', overwriteExisting=False, dryRun=False
+2025.11.19 11:57:30.176|Info|wf_iconik_upload|iconikS3Sync|Tenant autodetection failed or not needed
+2025.11.19 11:57:30.335|Info|wf_iconik_upload|iconikS3Sync|Exception in process(): GET API/assets/v1/collections -> 401: {}
+2025.11.19 11:57:30.335|Critical Error|wf_iconik_upload|iconikS3Sync|iconikS3Sync failed: GET API/assets/v1/collections -> 401: {}
+2025.11.19 11:57:30.336|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 11:57:30.351|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed
+2025.11.19 12:10:44.121|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 12:10:44.122|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 12:10:44.122|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 12:10:44.132|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 12:10:44.135|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 12:10:44.135|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 12:10:44.135|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 12:10:44.135|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 12:10:44.135|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 12:10:44.136|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 12:10:44.136|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 12:10:44.136|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 12:10:44.136|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version (global collection scan is used).
+2025.11.19 12:10:44.136|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', overwriteExisting=False, dryRun=False
+2025.11.19 12:10:44.365|Info|wf_iconik_upload|iconikS3Sync|Tenant autodetection failed or not needed
+2025.11.19 12:10:44.436|Info|wf_iconik_upload|iconikS3Sync|Exception in process(): GET API/assets/v1/collections -> 401: {}
+2025.11.19 12:10:44.436|Critical Error|wf_iconik_upload|iconikS3Sync|iconikS3Sync failed: GET API/assets/v1/collections -> 401: {}
+2025.11.19 12:10:44.438|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 12:10:44.451|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed
+2025.11.19 12:10:53.153|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:10:53.156|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:10:53.156|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:10:53.157|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:10:55.134|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:10:55.134|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:11:49.173|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 12:11:49.174|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 12:11:49.174|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 12:11:49.183|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version (global collection scan is used).
+2025.11.19 12:11:49.185|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', overwriteExisting=False, dryRun=False
+2025.11.19 12:11:49.359|Info|wf_iconik_upload|iconikS3Sync|Tenant autodetection failed or not needed
+2025.11.19 12:11:49.429|Info|wf_iconik_upload|iconikS3Sync|Exception in process(): GET API/assets/v1/collections -> 401: {}
+2025.11.19 12:11:49.430|Critical Error|wf_iconik_upload|iconikS3Sync|iconikS3Sync failed: GET API/assets/v1/collections -> 401: {}
+2025.11.19 12:11:49.431|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 12:11:49.440|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed
+2025.11.19 12:23:29.613|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 12:23:29.613|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 12:23:29.613|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 12:23:29.625|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 12:23:29.628|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 12:23:29.628|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 12:23:29.628|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 12:23:29.628|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 12:23:29.628|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 12:23:29.629|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 12:23:29.629|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 12:23:29.629|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 12:23:29.629|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version (global collection scan is used).
+2025.11.19 12:23:29.629|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', overwriteExisting=False, dryRun=False
+2025.11.19 12:23:29.629|Info|wf_iconik_upload|iconikS3Sync|Using explicit tenant id: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 12:23:29.762|Info|wf_iconik_upload|iconikS3Sync|Exception in process(): GET API/assets/v1/collections -> 401: {}
+2025.11.19 12:23:29.762|Critical Error|wf_iconik_upload|iconikS3Sync|iconikS3Sync failed: GET API/assets/v1/collections -> 401: {}
+2025.11.19 12:23:29.762|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 12:23:29.769|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed
+2025.11.19 12:34:12.243|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 12:34:12.243|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 12:34:12.243|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 12:34:12.253|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 12:34:12.256|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 12:34:12.256|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 12:34:12.256|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 12:34:12.256|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 12:34:12.256|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 12:34:12.256|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 12:34:12.256|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 12:34:12.256|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 12:34:12.257|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version (global collection scan is used).
+2025.11.19 12:34:12.257|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', overwriteExisting=False, dryRun=False
+2025.11.19 12:34:12.257|Info|wf_iconik_upload|iconikS3Sync|Using explicit tenant id: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 12:34:12.592|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'TESTING_COLLECTION' (id='09c6170a-bfbc-11f0-9d64-f26ec57834b3')
+2025.11.19 12:34:12.683|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Ford' (id='63ac1682-c49b-11f0-bf8c-ca4f321b29e4')
+2025.11.19 12:34:16.596|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Using Advanced Features' (id='55562dea-bbfc-11f0-9d64-f26ec57834b3')
+2025.11.19 12:34:17.101|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Getting Started' (id='553bc5b8-bbfc-11f0-9699-7256e5944804')
+2025.11.19 12:34:17.567|Info|wf_iconik_upload|iconikS3Sync|Global asset map built with 23 entries
+2025.11.19 12:34:17.702|Info|wf_iconik_upload|iconikS3Sync|Listing S3 bucket='AKIAVYGUPQV3RBMVJHGW' (no prefix)
+2025.11.19 12:34:17.798|Info|wf_iconik_upload|iconikS3Sync|Exception in process(): An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The specified bucket does not exist
+2025.11.19 12:34:17.799|Critical Error|wf_iconik_upload|iconikS3Sync|iconikS3Sync failed: An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The specified bucket does not exist
+2025.11.19 12:34:17.799|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 12:34:17.805|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Failed
+2025.11.19 12:34:33.486|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:34:33.835|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:34:36.763|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:34:36.764|Critical Error|wf_iconik_upload|iconikS3Sync|'bucket' is required
+2025.11.19 12:34:43.957|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 12:34:43.957|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 12:34:43.957|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 12:34:43.966|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version (global collection scan is used).
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', overwriteExisting=False, dryRun=False
+2025.11.19 12:34:43.969|Info|wf_iconik_upload|iconikS3Sync|Using explicit tenant id: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 12:34:44.257|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'TESTING_COLLECTION' (id='09c6170a-bfbc-11f0-9d64-f26ec57834b3')
+2025.11.19 12:34:44.437|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Ford' (id='63ac1682-c49b-11f0-bf8c-ca4f321b29e4')
+2025.11.19 12:34:48.499|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Using Advanced Features' (id='55562dea-bbfc-11f0-9d64-f26ec57834b3')
+2025.11.19 12:34:48.911|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Getting Started' (id='553bc5b8-bbfc-11f0-9699-7256e5944804')
+2025.11.19 12:34:49.408|Info|wf_iconik_upload|iconikS3Sync|Global asset map built with 23 entries
+2025.11.19 12:34:49.439|Info|wf_iconik_upload|iconikS3Sync|Listing S3 bucket='ed-mistika-test' (no prefix)
+2025.11.19 12:34:49.579|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 12:34:49.580|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 12:34:49.580|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 12:34:49.580|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 12:34:49.580|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 12:34:49.580|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 12:34:49.580|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 12:34:49.580|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 12:34:49.580|Info|wf_iconik_upload|iconikS3Sync|Collected 22 unique S3 objects (from 30 keys)
+2025.11.19 12:34:49.580|Info|wf_iconik_upload|iconikS3Sync|Asset 64ff28e4-c49b-11f0-aee4-c6429e508199 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 12:34:49.651|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 64ff28e4-c49b-11f0-aee4-c6429e508199: PUT API/metadata/v1/assets/64ff28e4-c49b-11f0-aee4-c6429e508199/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:49.651|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 12:34:49.651|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 12:34:49.651|Info|wf_iconik_upload|iconikS3Sync|Asset 692a6c08-c49b-11f0-95eb-c6429e508199 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 12:34:49.715|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 692a6c08-c49b-11f0-95eb-c6429e508199: PUT API/metadata/v1/assets/692a6c08-c49b-11f0-95eb-c6429e508199/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:49.715|Info|wf_iconik_upload|iconikS3Sync|Asset 6b53e8d8-c49b-11f0-a544-42e0776fa099 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 12:34:49.796|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 6b53e8d8-c49b-11f0-a544-42e0776fa099: PUT API/metadata/v1/assets/6b53e8d8-c49b-11f0-a544-42e0776fa099/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:49.796|Info|wf_iconik_upload|iconikS3Sync|Asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 12:34:49.860|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d: PUT API/metadata/v1/assets/6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:49.860|Info|wf_iconik_upload|iconikS3Sync|Asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 12:34:49.939|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838: PUT API/metadata/v1/assets/6ee7c1b8-c49b-11f0-9282-a24df8ee4838/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:49.939|Info|wf_iconik_upload|iconikS3Sync|Asset 70a67300-c49b-11f0-b4a5-0a7641a4c022 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 12:34:50.019|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 70a67300-c49b-11f0-b4a5-0a7641a4c022: PUT API/metadata/v1/assets/70a67300-c49b-11f0-b4a5-0a7641a4c022/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.019|Info|wf_iconik_upload|iconikS3Sync|Asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 12:34:50.093|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2: PUT API/metadata/v1/assets/7285ab14-c49b-11f0-ab74-7ec87a87b5a2/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.093|Info|wf_iconik_upload|iconikS3Sync|Asset 8b82abda-c49b-11f0-8258-ee4065c5be7a <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample')
+2025.11.19 12:34:50.160|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 8b82abda-c49b-11f0-8258-ee4065c5be7a: PUT API/metadata/v1/assets/8b82abda-c49b-11f0-8258-ee4065c5be7a/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.160|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample' (key='Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample.mov') has no matching iconik asset
+2025.11.19 12:34:50.160|Info|wf_iconik_upload|iconikS3Sync|Asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample')
+2025.11.19 12:34:50.234|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b: PUT API/metadata/v1/assets/ce7edc5a-c49c-11f0-8ddd-1e38cee2922b/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.234|Info|wf_iconik_upload|iconikS3Sync|Asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 12:34:50.304|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2: PUT API/metadata/v1/assets/d1cf66cc-c49c-11f0-bced-7ec87a87b5a2/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.304|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 12:34:50.304|Info|wf_iconik_upload|iconikS3Sync|Asset d5297fec-c49c-11f0-8034-62f0676e0251 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 12:34:50.376|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset d5297fec-c49c-11f0-8034-62f0676e0251: PUT API/metadata/v1/assets/d5297fec-c49c-11f0-8034-62f0676e0251/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.376|Info|wf_iconik_upload|iconikS3Sync|Asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 12:34:50.448|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022: PUT API/metadata/v1/assets/d6c31f84-c49c-11f0-b4a5-0a7641a4c022/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.448|Info|wf_iconik_upload|iconikS3Sync|Asset d848a09a-c49c-11f0-a544-42e0776fa099 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 12:34:50.517|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset d848a09a-c49c-11f0-a544-42e0776fa099: PUT API/metadata/v1/assets/d848a09a-c49c-11f0-a544-42e0776fa099/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.517|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 12:34:50.517|Info|wf_iconik_upload|iconikS3Sync|Asset da260236-c49c-11f0-b03c-d61d8cc2ed8d <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 12:34:50.584|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset da260236-c49c-11f0-b03c-d61d8cc2ed8d: PUT API/metadata/v1/assets/da260236-c49c-11f0-b03c-d61d8cc2ed8d/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.584|Info|wf_iconik_upload|iconikS3Sync|Asset dbb1183e-c49c-11f0-a6cb-329e4f07c083 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 12:34:50.656|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset dbb1183e-c49c-11f0-a6cb-329e4f07c083: PUT API/metadata/v1/assets/dbb1183e-c49c-11f0-a6cb-329e4f07c083/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.656|Info|wf_iconik_upload|iconikS3Sync|Asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 12:34:50.723|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083: PUT API/metadata/v1/assets/dd5dd5d2-c49c-11f0-a6cb-329e4f07c083/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.723|Info|wf_iconik_upload|iconikS3Sync|Asset deb4d264-c49c-11f0-8174-0a21cdc19976 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample')
+2025.11.19 12:34:50.797|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset deb4d264-c49c-11f0-8174-0a21cdc19976: PUT API/metadata/v1/assets/deb4d264-c49c-11f0-8174-0a21cdc19976/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:34:50.797|Info|wf_iconik_upload|iconikS3Sync|Matches: 17, Updated (incl. dry-run): 0, Skipped existing: 0, S3-without-asset: 5
+2025.11.19 12:34:50.797|Info|wf_iconik_upload|iconikS3Sync|Process finished, 0 UP(s) sent to 'output' unchanged
+2025.11.19 12:34:50.798|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 12:34:50.805|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Successfully Finished
+2025.11.19 12:38:02.212|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 12:38:02.213|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 12:38:02.213|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 12:38:02.221|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 12:38:02.225|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 12:38:02.225|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 12:38:02.225|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 12:38:02.225|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 12:38:02.225|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 12:38:02.225|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 12:38:02.225|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 12:38:02.225|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 12:38:02.225|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version (global collection scan is used).
+2025.11.19 12:38:02.226|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', overwriteExisting=False, dryRun=False
+2025.11.19 12:38:02.505|Info|wf_iconik_upload|iconikS3Sync|Tenant autodetected: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 12:38:02.629|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'TESTING_COLLECTION' (id='09c6170a-bfbc-11f0-9d64-f26ec57834b3')
+2025.11.19 12:38:02.719|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Ford' (id='63ac1682-c49b-11f0-bf8c-ca4f321b29e4')
+2025.11.19 12:38:06.799|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Using Advanced Features' (id='55562dea-bbfc-11f0-9d64-f26ec57834b3')
+2025.11.19 12:38:07.308|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Getting Started' (id='553bc5b8-bbfc-11f0-9699-7256e5944804')
+2025.11.19 12:38:07.716|Info|wf_iconik_upload|iconikS3Sync|Global asset map built with 23 entries
+2025.11.19 12:38:07.840|Info|wf_iconik_upload|iconikS3Sync|Listing S3 bucket='ed-mistika-test' (no prefix)
+2025.11.19 12:38:07.974|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 12:38:07.975|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 12:38:07.975|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 12:38:07.975|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 12:38:07.975|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 12:38:07.975|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 12:38:07.975|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 12:38:07.975|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 12:38:07.975|Info|wf_iconik_upload|iconikS3Sync|Collected 22 unique S3 objects (from 30 keys)
+2025.11.19 12:38:07.975|Info|wf_iconik_upload|iconikS3Sync|Asset 64ff28e4-c49b-11f0-aee4-c6429e508199 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 12:38:08.043|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 64ff28e4-c49b-11f0-aee4-c6429e508199: PUT API/metadata/v1/assets/64ff28e4-c49b-11f0-aee4-c6429e508199/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.043|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 12:38:08.043|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 12:38:08.043|Info|wf_iconik_upload|iconikS3Sync|Asset 692a6c08-c49b-11f0-95eb-c6429e508199 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 12:38:08.116|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 692a6c08-c49b-11f0-95eb-c6429e508199: PUT API/metadata/v1/assets/692a6c08-c49b-11f0-95eb-c6429e508199/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.116|Info|wf_iconik_upload|iconikS3Sync|Asset 6b53e8d8-c49b-11f0-a544-42e0776fa099 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 12:38:08.186|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 6b53e8d8-c49b-11f0-a544-42e0776fa099: PUT API/metadata/v1/assets/6b53e8d8-c49b-11f0-a544-42e0776fa099/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.186|Info|wf_iconik_upload|iconikS3Sync|Asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 12:38:08.261|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d: PUT API/metadata/v1/assets/6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.261|Info|wf_iconik_upload|iconikS3Sync|Asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 12:38:08.339|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838: PUT API/metadata/v1/assets/6ee7c1b8-c49b-11f0-9282-a24df8ee4838/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.339|Info|wf_iconik_upload|iconikS3Sync|Asset 70a67300-c49b-11f0-b4a5-0a7641a4c022 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 12:38:08.498|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 70a67300-c49b-11f0-b4a5-0a7641a4c022: PUT API/metadata/v1/assets/70a67300-c49b-11f0-b4a5-0a7641a4c022/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.498|Info|wf_iconik_upload|iconikS3Sync|Asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 12:38:08.575|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2: PUT API/metadata/v1/assets/7285ab14-c49b-11f0-ab74-7ec87a87b5a2/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.575|Info|wf_iconik_upload|iconikS3Sync|Asset 8b82abda-c49b-11f0-8258-ee4065c5be7a <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample')
+2025.11.19 12:38:08.643|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset 8b82abda-c49b-11f0-8258-ee4065c5be7a: PUT API/metadata/v1/assets/8b82abda-c49b-11f0-8258-ee4065c5be7a/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.643|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample' (key='Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample.mov') has no matching iconik asset
+2025.11.19 12:38:08.643|Info|wf_iconik_upload|iconikS3Sync|Asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample')
+2025.11.19 12:38:08.715|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b: PUT API/metadata/v1/assets/ce7edc5a-c49c-11f0-8ddd-1e38cee2922b/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.715|Info|wf_iconik_upload|iconikS3Sync|Asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 12:38:08.803|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2: PUT API/metadata/v1/assets/d1cf66cc-c49c-11f0-bced-7ec87a87b5a2/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.803|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 12:38:08.803|Info|wf_iconik_upload|iconikS3Sync|Asset d5297fec-c49c-11f0-8034-62f0676e0251 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 12:38:08.879|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset d5297fec-c49c-11f0-8034-62f0676e0251: PUT API/metadata/v1/assets/d5297fec-c49c-11f0-8034-62f0676e0251/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.879|Info|wf_iconik_upload|iconikS3Sync|Asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 12:38:08.960|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022: PUT API/metadata/v1/assets/d6c31f84-c49c-11f0-b4a5-0a7641a4c022/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:08.960|Info|wf_iconik_upload|iconikS3Sync|Asset d848a09a-c49c-11f0-a544-42e0776fa099 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 12:38:09.027|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset d848a09a-c49c-11f0-a544-42e0776fa099: PUT API/metadata/v1/assets/d848a09a-c49c-11f0-a544-42e0776fa099/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:09.027|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 12:38:09.027|Info|wf_iconik_upload|iconikS3Sync|Asset da260236-c49c-11f0-b03c-d61d8cc2ed8d <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 12:38:09.105|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset da260236-c49c-11f0-b03c-d61d8cc2ed8d: PUT API/metadata/v1/assets/da260236-c49c-11f0-b03c-d61d8cc2ed8d/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:09.105|Info|wf_iconik_upload|iconikS3Sync|Asset dbb1183e-c49c-11f0-a6cb-329e4f07c083 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 12:38:09.168|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset dbb1183e-c49c-11f0-a6cb-329e4f07c083: PUT API/metadata/v1/assets/dbb1183e-c49c-11f0-a6cb-329e4f07c083/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:09.168|Info|wf_iconik_upload|iconikS3Sync|Asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 12:38:09.244|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083: PUT API/metadata/v1/assets/dd5dd5d2-c49c-11f0-a6cb-329e4f07c083/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:09.244|Info|wf_iconik_upload|iconikS3Sync|Asset deb4d264-c49c-11f0-8174-0a21cdc19976 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample')
+2025.11.19 12:38:09.313|Info|wf_iconik_upload|iconikS3Sync|Failed to update asset deb4d264-c49c-11f0-8174-0a21cdc19976: PUT API/metadata/v1/assets/deb4d264-c49c-11f0-8174-0a21cdc19976/ -> 400: {"errors":{"metadata_values":{"s3_uri":{"_schema":["Invalid input type."]}}}}
+
+2025.11.19 12:38:09.313|Info|wf_iconik_upload|iconikS3Sync|Matches: 17, Updated (incl. dry-run): 0, Skipped existing: 0, S3-without-asset: 5
+2025.11.19 12:38:09.313|Info|wf_iconik_upload|iconikS3Sync|Process finished, 0 UP(s) sent to 'output' unchanged
+2025.11.19 12:38:09.314|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 12:38:09.319|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Successfully Finished
+2025.11.19 13:45:20.477|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 13:45:20.478|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 13:45:20.478|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 13:45:20.488|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 13:45:20.492|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 13:45:20.492|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 13:45:20.492|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 13:45:20.492|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 13:45:20.492|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 13:45:20.492|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 13:45:20.493|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 13:45:20.493|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 13:45:20.493|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version (global collection scan is used).
+2025.11.19 13:45:20.493|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', metadataViewId='5522f18c-bbfc-11f0-875b-bae5e7a01d69', overwriteExisting=False, dryRun=False
+2025.11.19 13:45:21.050|Info|wf_iconik_upload|iconikS3Sync|Tenant autodetected: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 13:45:21.152|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'TESTING_COLLECTION' (id='09c6170a-bfbc-11f0-9d64-f26ec57834b3')
+2025.11.19 13:45:22.494|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Ford' (id='63ac1682-c49b-11f0-bf8c-ca4f321b29e4')
+2025.11.19 13:45:28.875|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Using Advanced Features' (id='55562dea-bbfc-11f0-9d64-f26ec57834b3')
+2025.11.19 13:45:29.352|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Getting Started' (id='553bc5b8-bbfc-11f0-9699-7256e5944804')
+2025.11.19 13:45:29.958|Info|wf_iconik_upload|iconikS3Sync|Global asset map built with 23 entries
+2025.11.19 13:45:30.116|Info|wf_iconik_upload|iconikS3Sync|Listing S3 bucket='ed-mistika-test' (no prefix)
+2025.11.19 13:45:30.271|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 13:45:30.271|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 13:45:30.272|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 13:45:30.272|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 13:45:30.272|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 13:45:30.272|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 13:45:30.272|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 13:45:30.272|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 13:45:30.272|Info|wf_iconik_upload|iconikS3Sync|Collected 22 unique S3 objects (from 30 keys)
+2025.11.19 13:45:30.272|Info|wf_iconik_upload|iconikS3Sync|Asset 64ff28e4-c49b-11f0-aee4-c6429e508199 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 13:45:30.527|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:30.527|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 13:45:30.527|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 13:45:30.527|Info|wf_iconik_upload|iconikS3Sync|Asset 692a6c08-c49b-11f0-95eb-c6429e508199 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 13:45:30.739|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:30.739|Info|wf_iconik_upload|iconikS3Sync|Asset 6b53e8d8-c49b-11f0-a544-42e0776fa099 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 13:45:30.943|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:30.943|Info|wf_iconik_upload|iconikS3Sync|Asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 13:45:31.190|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:31.190|Info|wf_iconik_upload|iconikS3Sync|Asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 13:45:31.404|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:31.405|Info|wf_iconik_upload|iconikS3Sync|Asset 70a67300-c49b-11f0-b4a5-0a7641a4c022 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 13:45:31.610|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:31.610|Info|wf_iconik_upload|iconikS3Sync|Asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 13:45:31.916|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:31.916|Info|wf_iconik_upload|iconikS3Sync|Asset 8b82abda-c49b-11f0-8258-ee4065c5be7a <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample')
+2025.11.19 13:45:32.198|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:32.198|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample' (key='Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample.mov') has no matching iconik asset
+2025.11.19 13:45:32.198|Info|wf_iconik_upload|iconikS3Sync|Asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample')
+2025.11.19 13:45:32.450|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:32.451|Info|wf_iconik_upload|iconikS3Sync|Asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 13:45:32.696|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:32.696|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 13:45:32.696|Info|wf_iconik_upload|iconikS3Sync|Asset d5297fec-c49c-11f0-8034-62f0676e0251 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 13:45:32.962|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:32.962|Info|wf_iconik_upload|iconikS3Sync|Asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 13:45:33.163|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:33.163|Info|wf_iconik_upload|iconikS3Sync|Asset d848a09a-c49c-11f0-a544-42e0776fa099 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 13:45:33.373|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:33.373|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 13:45:33.373|Info|wf_iconik_upload|iconikS3Sync|Asset da260236-c49c-11f0-b03c-d61d8cc2ed8d <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 13:45:33.624|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:33.624|Info|wf_iconik_upload|iconikS3Sync|Asset dbb1183e-c49c-11f0-a6cb-329e4f07c083 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 13:45:33.842|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:33.842|Info|wf_iconik_upload|iconikS3Sync|Asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 13:45:34.126|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:34.126|Info|wf_iconik_upload|iconikS3Sync|Asset deb4d264-c49c-11f0-8174-0a21cdc19976 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample')
+2025.11.19 13:45:34.358|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:45:34.358|Info|wf_iconik_upload|iconikS3Sync|Matches: 17, Updated (incl. dry-run): 17, Skipped existing: 0, S3-without-asset: 5
+2025.11.19 13:45:34.358|Info|wf_iconik_upload|iconikS3Sync|Process finished, 0 UP(s) sent to 'output' unchanged
+2025.11.19 13:45:34.363|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 13:45:34.376|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Successfully Finished
+2025.11.19 13:52:45.856|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Starting Workflow
+2025.11.19 13:52:45.856|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Started
+2025.11.19 13:52:45.856|Info|wf_iconik_upload|wf_iconik_upload|Rendering Watcher
+2025.11.19 13:52:45.865|Info|wf_iconik_upload|wf_iconik_upload|Rendering jsonToTokens
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|jsonToTokens|Using JSON file: /Volumes/konsistent/server/mistika-testing/json/sample.json
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|jsonToTokens|brand   (JSON) = Ford
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|jsonToTokens|campaign(JSON) = Winter25
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|jsonToTokens|job     (JSON) = ABC123_Ford_Winter_2025
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|jsonToTokens|s3_path (JSON) = ed-mistika-test
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|wf_iconik_upload|Rendering iconikS3Sync
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|iconikS3Sync|Process started
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|iconikS3Sync|No UPs on 'input' connector
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|iconikS3Sync|NOTE: collectionId/collectionPath are configured but ignored by this version (global collection scan is used).
+2025.11.19 13:52:45.869|Info|wf_iconik_upload|iconikS3Sync|metadataFieldName='s3_uri', metadataViewId='5522f18c-bbfc-11f0-875b-bae5e7a01d69', overwriteExisting=False, dryRun=False
+2025.11.19 13:52:46.200|Info|wf_iconik_upload|iconikS3Sync|Tenant autodetected: 54af32e2-bbfc-11f0-9482-de1e50005d3f
+2025.11.19 13:52:46.304|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'TESTING_COLLECTION' (id='09c6170a-bfbc-11f0-9d64-f26ec57834b3')
+2025.11.19 13:52:48.840|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Ford' (id='63ac1682-c49b-11f0-bf8c-ca4f321b29e4')
+2025.11.19 13:52:53.477|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Using Advanced Features' (id='55562dea-bbfc-11f0-9d64-f26ec57834b3')
+2025.11.19 13:52:53.963|Info|wf_iconik_upload|iconikS3Sync|Scanning collection tree under root 'Getting Started' (id='553bc5b8-bbfc-11f0-9699-7256e5944804')
+2025.11.19 13:52:54.506|Info|wf_iconik_upload|iconikS3Sync|Global asset map built with 23 entries
+2025.11.19 13:52:54.661|Info|wf_iconik_upload|iconikS3Sync|Listing S3 bucket='ed-mistika-test' (no prefix)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.png' (keeping first)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.png' (keeping first)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.png' (keeping first)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Duplicate logical name 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002' for keys 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov' and 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.png' (keeping first)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Collected 22 unique S3 objects (from 30 keys)
+2025.11.19 13:52:54.821|Info|wf_iconik_upload|iconikS3Sync|Asset 64ff28e4-c49b-11f0-aee4-c6429e508199 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 13:52:55.021|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:55.021|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 13:52:55.021|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 13:52:55.021|Info|wf_iconik_upload|iconikS3Sync|Asset 692a6c08-c49b-11f0-95eb-c6429e508199 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 13:52:55.272|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:55.272|Info|wf_iconik_upload|iconikS3Sync|Asset 6b53e8d8-c49b-11f0-a544-42e0776fa099 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 13:52:55.467|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:55.468|Info|wf_iconik_upload|iconikS3Sync|Asset 6d3e4bac-c49b-11f0-adc4-d61d8cc2ed8d <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 13:52:55.672|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:55.672|Info|wf_iconik_upload|iconikS3Sync|Asset 6ee7c1b8-c49b-11f0-9282-a24df8ee4838 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 13:52:55.876|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:55.876|Info|wf_iconik_upload|iconikS3Sync|Asset 70a67300-c49b-11f0-b4a5-0a7641a4c022 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 13:52:56.145|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:56.145|Info|wf_iconik_upload|iconikS3Sync|Asset 7285ab14-c49b-11f0-ab74-7ec87a87b5a2 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 13:52:56.336|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:56.336|Info|wf_iconik_upload|iconikS3Sync|Asset 8b82abda-c49b-11f0-8258-ee4065c5be7a <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/COMBINED/mickey_trailer_sample')
+2025.11.19 13:52:56.559|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:56.559|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample' (key='Ford/Winter25/ABC123_Ford_Winter_2025/DNX_Sample.mov') has no matching iconik asset
+2025.11.19 13:52:56.559|Info|wf_iconik_upload|iconikS3Sync|Asset ce7edc5a-c49c-11f0-8ddd-1e38cee2922b <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample.mxf'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XAVC_Sample')
+2025.11.19 13:52:56.768|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:56.769|Info|wf_iconik_upload|iconikS3Sync|Asset d1cf66cc-c49c-11f0-bced-7ec87a87b5a2 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/000_tst0010_bg01_v0001')
+2025.11.19 13:52:56.973|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:56.973|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/XR0001_20250312.ale') has no matching iconik asset
+2025.11.19 13:52:56.973|Info|wf_iconik_upload|iconikS3Sync|Asset d5297fec-c49c-11f0-8034-62f0676e0251 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0010_bg01_v0001')
+2025.11.19 13:52:57.203|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:57.203|Info|wf_iconik_upload|iconikS3Sync|Asset d6c31f84-c49c-11f0-b4a5-0a7641a4c022 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0020_cp01_v0001')
+2025.11.19 13:52:57.400|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:57.401|Info|wf_iconik_upload|iconikS3Sync|Asset d848a09a-c49c-11f0-a544-42e0776fa099 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250312A/tst0030_rf01_v0001')
+2025.11.19 13:52:57.616|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:57.616|Info|wf_iconik_upload|iconikS3Sync|S3 logical 'Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313' (key='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/XR0001_20250313.ale') has no matching iconik asset
+2025.11.19 13:52:57.616|Info|wf_iconik_upload|iconikS3Sync|Asset da260236-c49c-11f0-b03c-d61d8cc2ed8d <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0010_bg01_v0002')
+2025.11.19 13:52:57.890|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:57.890|Info|wf_iconik_upload|iconikS3Sync|Asset dbb1183e-c49c-11f0-a6cb-329e4f07c083 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0020_cp01_v0002')
+2025.11.19 13:52:58.144|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:58.144|Info|wf_iconik_upload|iconikS3Sync|Asset dd5dd5d2-c49c-11f0-a6cb-329e4f07c083 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002.png'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/XR001_250313B/tst0030_rf01_v0002')
+2025.11.19 13:52:58.357|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:58.357|Info|wf_iconik_upload|iconikS3Sync|Asset deb4d264-c49c-11f0-8174-0a21cdc19976 <- s3_uri=['s3://ed-mistika-test/Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample.mov'] (logical='Ford/Winter25/ABC123_Ford_Winter_2025/mickey_trailer_sample')
+2025.11.19 13:52:58.572|Info|wf_iconik_upload|iconikS3Sync|Updated via metadata API PUT on metadata view 5522f18c-bbfc-11f0-875b-bae5e7a01d69
+2025.11.19 13:52:58.572|Info|wf_iconik_upload|iconikS3Sync|Matches: 17, Updated (incl. dry-run): 17, Skipped existing: 0, S3-without-asset: 5
+2025.11.19 13:52:58.572|Info|wf_iconik_upload|iconikS3Sync|Process finished, 0 UP(s) sent to 'output' unchanged
+2025.11.19 13:52:58.576|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload Finished
+2025.11.19 13:52:58.586|Info|wf_iconik_upload|wf_iconik_upload|wf_iconik_upload: Workflow Successfully Finished

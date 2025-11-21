@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+    <Pulsar>
+        <objectName>Pulsar</objectName>
+        <schemaName>pulsar</schemaName>
+        <color>#ee7f1d</color>
+        <dstPath></dstPath>
+        <templateType></templateType>
+        <templateId></templateId>
+        <failedWhen>True</failedWhen>
+        <Config>
+        <ip>127.0.0.1</ip>
+        <port>8093</port>
+        </Config>
+    </Pulsar>
+</nodeCommonRoot>

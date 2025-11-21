@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; ffmpeg</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;To provide a Python example about how to integrate external CLI programs with Mistika Workflows, by using the ffmpeg CLI as an example. This node implements basic asp" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "ffmpeg.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">ffmpeg (calling a external CLI example)</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?ffmpeg.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">ffmpeg (calling a external CLI example)</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="extractaudiochannels.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="fixp2serial.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">To provide a Python example about how to integrate external CLI programs with Mistika Workflows, by using the ffmpeg CLI as an example.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">This node implements basic aspects for CLI integrations including multithreading support, &nbsp;parameter substitution, parsing node connectors into text parameters, adding parameter placeholders, and other common needs for interacting with CLI programs.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">The ffmpeg program (the famous open source application) is provided just as a CLI example. &nbsp;An easy way to integrate other CLI programs can be to copy the Python  </span><span class="f_T_Menu">code </span><span class="f_BodyText">property of this node and just replace the executable path and other neccesary changes to suite your needs.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Input:</span> <span class="f_BodyText">Input files. They are made available to your command line via the </span><span class="f_T_Menu">[input]</span><span class="f_BodyText"> token.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Output: </span><span class="f_BodyText">The new media files created by the ffmpeg call ( as long as the </span><span class="f_T_Menu">URL </span><span class="f_BodyText">properties are correctly set &nbsp;to define the ffmpeg output paths)</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Object Properties</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#file" class="topiclink">URL(Directory, Name)</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Options:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_Heading3">DstExtension:</span> &nbsp;The extension of the new media files to be produced by the command line. &nbsp;It needs to be declared because the new media will be created by an external application, so the node needs to know it in order to prepare the<span class="f_T_Menu"> [output]</span> token properly.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_Heading3">Threads:</span> <span class="f_T_Menu"> </span>If more than one input media (UP) is available in the input connector then Mistika Workflows will execute one command line for each one in parallel, up to the maximum selected <span class="f_T_Menu">Threads</span>. This is specially useful when the external application can not use all the available system resources (CPU cores...) with just one instance. </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Note that this feature does not split jobs in a per-frame granularity. It can be used to process several movies or several enumerated sequences at the same time, &nbsp;but it can not be used to split an enumerated sequence into packets of frames (for doing such a thing please read the point about <a href="introduction-to-python-scripti.html#renderfarms" class="topiclink">Executing workflows on external renderfarms</a></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Parallel instances are only lunched when receiving a batch of media files from the input nodes (for example <span class="f_T_Menu">Watcher </span>or <span class="f_T_Menu">Folder </span>node &nbsp;containing a bunch of files on the same execution), but not for files received one by one on different executions of the input nodes.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_Heading3">cmdLineParams:</span> &nbsp;The parameters to be passed to the ffmpeg binary in the command line. You can type parameters directly as needed, or you can reference parameter tokens between brackets [], such as [param1], [param2], [input] .... </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">The following tokens are pre-defined, &nbsp;you can use them in your command line:</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"><span class="f_T_Menu" style="font-size: 13px;">[input]</span>: &nbsp;Input media (UP) received by this node via the <span class="f_T_Menu">input </span>connector</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"><span class="f_T_Menu">[input-firstFile]</span>: typically used for enumerated sequences, it includes the name of the first file of an enumerated sequence or <a href="common-parameters.html#universalpath" class="topiclink">Universal Path</a>.</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"><span class="f_T_Menu">[output]</span>: This token is only valid if the output media to be created by the command line (in this example the ffmpeg command) can be obtained from the <span class="f_T_Menu">URL </span>property above. </p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">The whole path for the output folder will also be created if it does not exist yet, as other Workflows nodes can do.</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_Heading3">param1 ... param8: </span>Parameter placeholders. They produce tokens that can then be inserted between brackets ( <span class="f_T_Menu">[param1]</span>, <span class="f_T_Menu">[param2]</span>...) in the <span class="f_T_Menu">cmdLineParams</span> property</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span style="font-weight: bold;">Examples</span>:</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"> Let's suppose that a media file<span style="font-style: italic;"> /My Folder/My Media1.avi</span> arrives to the <span class="f_T_Menu">input </span>connector, and you set the node &nbsp;properties in the most simple (but not recommended) way:</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"> &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">  <span class="f_T_Menu">cmdLineParams</span>: &nbsp; -i [input] -codec:v mpeg4 -codec:a aac &quot;/tmp/test1/My Media1.mp4&quot;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">That will execute this command line:</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&quot;<span style="font-style: italic;">Path To SGO Apps</span>/Mistika Workflows/bin/ffmpeg&quot; -i &quot;/My Folder/My Media1.avi&quot; &nbsp;&quot;-codec:v mpeg4&quot; &quot;-codec:a aac&quot; &quot;/tmp/OutFolder/My Media1.mp4&quot;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">So in principle it will do the expected &nbsp;job (to transcode from avi to mp4), but it will not provide a proper integration with Mistika Workflows. The next example will produce an identical command line with a much better integration: &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">URL</span>: &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"> &nbsp; &nbsp;Name: From Input &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"> &nbsp; &nbsp;Dest. Folder: /tmp/OutFolder</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu"> &nbsp;DstExtension</span><span class="f_Heading3">:</span> &nbsp;mp4</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu"> &nbsp;param1</span>: -codec:v mpeg4</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu"> &nbsp;param2</span>:-codec:a aac </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">  <span class="f_T_Menu">cmdLineParams</span>: &nbsp;-i [input] &nbsp;[param1] [param2] [output] </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">It will create a coherent <span class="f_T_Menu">[output]</span> token (in this example &nbsp;&quot;/tmp/OutFolder/My Media1.mp4&quot; ) , and the output naming &nbsp;will still be coherent when changing the input media in posterior executions. The path for the new media will be automatically created, and then sent to posterior nodes via the <span class="f_T_Menu">output </span>connector, as you would expect with any other node in Mistika Workflows:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_Heading3">Avoiding program dialogs:</span> In practice, the real command line executed will have an extra parameter &quot;<span class="f_T_Menu">-y</span>&quot;, which means to auto-answer <span class="f_T_Menu">yes</span> to all questions (being the most typical to confirm if you want to overwrite destination file...). &nbsp;For that purpose the <span class="f_T_Menu">-y</span> parameter is hard coded in the python <span class="f_T_Menu">code. </span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">This is supported by the ffmpeg CLI but please be aware that other CLI applications could not support it, and that you will need to ensure no questions are asked at execution time (otherwise the workflow will never finish. </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">You can detect this type of unexpected questions by executing Mistika Workflows in a console, in that way you should be able to see the standard output of external calls)</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

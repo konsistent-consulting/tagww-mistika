@@ -1,0 +1,156 @@
+{
+    "customServers": [
+    ],
+    "defaultServers": [
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"https://support.google.com/mail/answer/7126229?hl=en\">How to configure...</a>",
+            "name": "Gmail (SSL)",
+            "port": 465,
+            "readOnly": true,
+            "server": "smtp.gmail.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 2,
+            "editable": false,
+            "help": "<a href=\"https://support.google.com/mail/answer/7126229?hl=en\">How to configure...</a>",
+            "name": "Gmail (TLS)",
+            "port": 587,
+            "readOnly": true,
+            "server": "smtp.gmail.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 2,
+            "editable": false,
+            "help": "<a href=\"https://support.office.com/en-us/article/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040?ui=en-US&rs=en-US&ad=US\">How to configure...</a>",
+            "name": "Outlook.com",
+            "port": 587,
+            "readOnly": true,
+            "server": "smtp.live.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 2,
+            "editable": false,
+            "help": "<a href=\"https://support.office.com/en-us/article/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040?ui=en-US&rs=en-US&ad=US\">How to configure...</a>",
+            "name": "Office365.com",
+            "port": 587,
+            "readOnly": true,
+            "server": "smtp.office365.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"https://support.office.com/en-us/article/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040?ui=en-US&rs=en-US&ad=US\">How to configure...</a>",
+            "name": "Hotmail",
+            "port": 465,
+            "readOnly": true,
+            "server": "smtp.live.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"https://help.yahoo.com/kb/SLN3697.htmlhttps://help.yahoo.com/kb/SLN3697.html\">How to configure...</a>",
+            "name": "Yahoo Mail",
+            "port": 465,
+            "readOnly": true,
+            "server": "smtp.mail.yahoo.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"https://help.yahoo.com/kb/SLN3697.htmlhttps://help.yahoo.com/kb/SLN3697.html\">How to configure...</a>",
+            "name": "Yahoo Mail Plus",
+            "port": 465,
+            "readOnly": true,
+            "server": "plus.smtp.mail.yahoo.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"https://help.yahoo.com/kb/SLN3697.htmlhttps://help.yahoo.com/kb/SLN3697.html\">How to configure...</a>",
+            "name": "Yahoo UK",
+            "port": 465,
+            "readOnly": true,
+            "server": "smtp.mail.yahoo.co.uk"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"https://help.yahoo.com/kb/SLN3697.htmlhttps://help.yahoo.com/kb/SLN3697.html\">How to configure...</a>",
+            "name": "Yahoo Deutschland",
+            "port": 465,
+            "readOnly": true,
+            "server": "smtp.mail.yahoo.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"https://help.yahoo.com/kb/SLN3697.htmlhttps://help.yahoo.com/kb/SLN3697.html\">How to configure...</a>",
+            "name": "Yahoo AU/NZ",
+            "port": 465,
+            "readOnly": true,
+            "server": "smtp.mail.yahoo.com.au"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"#\">How to configure not available</a>",
+            "name": "AT&T",
+            "port": 465,
+            "readOnly": true,
+            "server": "smtp.att.yahoo.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"#\">How to configure not available</a>",
+            "name": "Verizon",
+            "port": 465,
+            "readOnly": true,
+            "server": "outgoing.verizon.net"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"#\">How to configure not available</a>",
+            "name": "Mail.com",
+            "port": 465,
+            "readOnly": true,
+            "server": "smtp.mail.com"
+        },
+        {
+            "authentication": 0,
+            "connectionType": 1,
+            "editable": false,
+            "help": "<a href=\"#\">How to configure not available</a>",
+            "name": "GMX.com",
+            "port": 465,
+            "readOnly": true,
+            "server": "smtp.gmx.com"
+        }
+    ],
+    "editableServer": {
+        "authentication": 0,
+        "connectionType": 0,
+        "help": "<a href=\"#\">How to configure not available</a>",
+        "editable": true,
+        "name": "Other",
+        "port": 465,
+        "readOnly": true,
+        "server": ""
+    }
+}

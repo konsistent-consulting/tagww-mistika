@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <WhatsApp>
+    <body>Put your text here
+List of Input Files: 
+&lt;?py
+for c in self.getConnectors():
+    for p in c.getUniversalPaths():
+      print (p.toString())
+?&gt;</body>
+    <color>#25d366</color>
+    <msgTo/>
+    <objectName>WhatsApp</objectName>
+    <onlySendIfInput/>
+  </WhatsApp>
+</nodeCommonRoot>

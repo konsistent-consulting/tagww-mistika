@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; Nvidia H265</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;To create .mp4 media files using the NVidia H265 and NVidia H264 nvenc encoders. These are GPU hardware encoders, so they are much faster than software based encoders." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "nvidiah265.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Nvidia H264, Nvidia H265 </span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?nvidiah265.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Nvidia H264, Nvidia H265 </span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="nvidiah264.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="panasonicavcintra.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="text-align: center; page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">To create .mp4 media files using the </span><span class="f_T_Emphasis">NVidia H265</span><span class="f_BodyText"> and </span><span class="f_T_Emphasis">NVidia H264 nvenc </span><span class="f_BodyText">encoders. These are GPU hardware encoders, so they are much faster than software based encoders.</span></p>
+<p class="p_Comment"><span class="f_Comment">Note: This node is only supported on systems with modern NVidia GPUs. The maximum resolution and other capabilities will depend on each GPU model, as specified in the <a href="https://developer.nvidia.com/nvidia-video-codec-sdk" target="_blank" class="weblink" title="NVENCODE SDK">NVENCODE SDK</a> document (go to that link and click on the &quot;Supported Format Details&quot;).</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">AV In:</span> <span class="f_BodyText">The image track to be encoded.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Ext. Audio (Optional):</span> <span class="f_BodyText">The audio tracks to be encoded. Alternatively, you can use embedded audio from movie files connected to the </span><span class="f_T_Menu">AV In </span><span class="f_BodyText">connector, which is decided with the </span><span class="f_T_Menu">Use AV audio</span><span class="f_BodyText"> property.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">AV Out:</span> <span class="f_BodyText">A video file with </span><span class="f_T_Emphasis">.mp4</span><span class="f_BodyText"> extension, containing all the video and audio tracks.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Object Properties</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#file" class="topiclink">File Path</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink">Name Convention</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Standard Transcoding properties</span></h3>
+<p class="p_Normal"><span class="f_Heading3"><a href="common-parameters.html#useavaudio" class="topiclink">Use AV audio</a></span></p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#enableframerange" class="topiclink">Enable Frame Range (FirstFrame, Duration)</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#resolution" class="topiclink">Resolution</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#fit" class="topiclink">Fit</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#fps" class="topiclink">Framerate</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#interlaced" class="topiclink">interlaced</a> </span><span class="f_Heading3" style="color: #c0504d;">(*1)</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#pixelaspectratio" class="topiclink">Pixel Aspect Ratio</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#overwrite_tc" class="topiclink">Overwrite TC</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#dropframe" class="topiclink">Drop Frame</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#audiocodec" class="topiclink">Audio Codec</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#metadata" class="topiclink">Metadata</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#exportmetadata" class="topiclink">Export Metadata</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#tapename" class="topiclink">TapeName</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#exportcdl" class="topiclink">Export CDL</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#renderfarmenabled" class="topiclink" title="Image Res X">Render Farm</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3" style="color: #c0504d;">(*1) </span>Currently the nvidia encoder does not support to produce interlaced modes, so the <span class="f_T_Entry">Interlace </span>setting should be left as <span class="f_T_Menu10p">No.</span> (in this way interlaced images can still be passed to the node, and they will be de-interlaced on the fly)</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Advanced image processes</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#metadata" class="topiclink">Metadata</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#unicolour" class="topiclink" title="Lut 3D">Unicolor</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lut3d" class="topiclink" title="Lut 3D">Lut3D</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#displayfilter" class="topiclink" title="Display filter">Display Filter</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#virtualslate" class="topiclink" title="Virtual Slate">Virtual Slate</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Transcoding-&gt;Codec:</span> <span class="f_BodyText">The </span><span class="f_T_Emphasis">H264 or H265</span><span class="f_BodyText"> variant to be encoded (depending on the task node you are using). Each value in the codec list will indicate these characteristics:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Comment" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Preliminary note: Main differences between H264 and H265 encoders in Mistika Workflows are as follows:</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Comment" style="margin: 0 0 0 26px;"><span class="f_Comment">Nvidia H264 only supports 8bit. H265 supports 8bit and 10bit.</span></p>
+<p class="p_Comment" style="margin: 0 0 0 26px;"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Comment" style="margin: 0 0 0 26px;"><span class="f_Comment">Nvidia H264 supports up to 4096x4096 resolutions. H265 supports up to 8192x8192 resolutions</span></p>
+<p class="p_Comment" style="margin: 0 0 0 26px;"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Comment" style="margin: 0 0 0 26px;"><span class="f_Comment">In general, H265 is more recommended, for the above reasons and also because it uses less bitrate to achieve the same subjective quality. However, H265 is slower to decode than H264 (except for some hardware decoders) and H265 may not be compatible with older players. </span></p>
+<p class="p_Comment" style="margin: 0 0 0 26px;"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Comment" style="margin: 0 0 0 26px;"><span class="f_Comment">In addition to the NvidiaH264 task node there is also a generic H264 task node that uses a software based encoder (slower) but it does not require an Nvidia GPU. At the date of this document there is no equivalent for H265. &nbsp;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Bit depth</span><span class="f_Heading3">:</span> <span class="f_T_Emphasis">8bits</span><span class="f_BodyText"> or </span><span class="f_T_Emphasis">10bits</span><span class="f_BodyText">. H264 only supports 8bit. H265 supports 8bit and 10bit. In general, when the available bitrate is not very high, it is recommended to use 8bit for more efficient compression, except for HDR formats.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Color sampling</span><span class="f_Heading3">:</span><span class="f_T_Emphasis"> 420</span><span class="f_BodyText"> or </span><span class="f_T_Emphasis">444</span><span class="f_BodyText"> </span> </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Emphasis">444</span><span class="f_BodyText"> produces bigger files, as it will compress information of the three color components of each pixel. </span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Emphasis">420</span><span class="f_BodyText"> produces smaller files, at the cost of significant chroma information, which will be partially shared between pixels. &nbsp;With this method two color components are shared between adjacent pixels (one component in horizontal and one in vertical, but all adjacent pixels are still different in two color components). In general </span><span class="f_T_Emphasis">420</span><span class="f_BodyText"> is only intended for watching final content, not for any intermediate processes. It is based on the fact that the visual perception can distinguish less detail in color differences than in luminance differences. In general this format is just enough for watching content without noticeable artifacts, but it does not provide enough information for further post production tasks. </span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Emphasis">Note:</span><span class="f_BodyText"> A common mistake is to assume that using 444 will always produce more &quot;quality&quot; than 420 and that 10 bit will produce more &quot;quality&quot; than 8 bit. This is because the key aspect when applying compression is the bitrate, and when the available bitrate is limited it is recommended to dedicate the most of it to what is more relevant (a better visual perception or to keep more data for post-processing)</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_T_Emphasis">Bitrate</span><span class="f_Heading3">:</span><span class="f_Heading2"> </span><span class="f_T_Emphasis">Constant bitrate</span>, <span class="f_T_Emphasis">Quality profile</span> or <span class="f_T_Emphasis">Lossless</span>.</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"><span class="f_T_Emphasis">Constant bitrate (CBR):</span> Tell the encoder to try to produce a constant bitrate, independently of the image content. It is only recommended if specifically requested, as it is not as efficient as the other methods. This is because depending on the image content the specified constant bitrate can be either too much in some frames (a waste of bitrate) and too little in others (producing bad quality in difficult scenes). If selected, a property called “bitrate” will appear below where you can specify the desired bitrate.</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"><span class="f_T_Emphasis">Quality Profile (Variable bitrate VBR ):</span> In this mode what you select is a<span class="f_T_Emphasis"> quality profile</span> (basically and index of &quot;subjective&quot; quality) and the encoder will produce more or less bitrate as necessary to achieve it. In this mode the used bitrate is highly efficient because it is concentrated where it is needed. &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">If you select a codec with Quality Profile then a new property named &quot;<span class="f_T_Emphasis">quality profile compression</span>&quot; will appear below (instead of the bitrate field). Please note that lower quality profiles produce more image quality (being 1 the maximum and 50 the minimum). &nbsp;In a way, you can think about this property as the &quot;quality compression&quot;. </p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"><span class="f_T_Emphasis">Lossless:</span> Use as low compression as needed as to be considered “lossless” (according to the encoder manufacturer specifications), at the cost of high bitrates. &nbsp;It is recommended for intermediate formats, at the cost of bigger file sizes.</p>
+<p class="p_Normal" style="margin: 0 0 0 39px;">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Transcoding-&gt;Bitrate, QualityProfile:  </span>Optional properties that will appear depending of the selected codec, as per the above explanation. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Transcoding-&gt;GOP frames (Group of Frames):  </span>It is the number of intermediate frames between keyframes. Keyframes use intra-frame compression (so they don’t depend on previous or next frames). Meanwhile, GOP frames use time compression and motion estimation, so they only store differences between previous and next frames. &nbsp;For editing purposes it is recommended to use a small GOP value (ideally 1). This will produce bigger sizes for a same quality but it will provide instant access to any frame when you load it in other applications, while also avoiding motion estimation artifacts. Longer GOP values will reduce file sizes and they can make a more efficient usage of the available bitrate, but if an artifact happens in one frame then the video images will not recover the affected area until approaching the next keyframe, so long GOP artifacts can be very noticeable.</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal"><span class="f_T_Emphasis">The remaining properties are standard to all codec nodes, please find their links at the top of this document.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Troubleshooting</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If the encoder refuses to start with an error related to NVIDIA (or CUDA):</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Check that your GPU is an NVIDIA &nbsp;board supporting the selected format and resolution (as per the<span class="f_Comment"> <a href="https://developer.nvidia.com/nvidia-video-codec-sdk" target="_blank" class="weblink" title="NVENCODE SDK">NVENCODE SDK</a> document</span>). </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">In particular, note that (at the date of this document) the NVIDIA encoder for H264 is only supported up to 4K resolution, and up to 8K resolution in the case of H265.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Check &nbsp;that other applications that could be using the encoder are closed (many &nbsp;GPU models only support one encoder instance or a very limited number). Specifically, if you need the NVIDIA encoder check that Workflows is not opened two times. </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Install the latest NVidia driver supported for your GPU. &nbsp;NVIDIA encoders are rapidly changing, and having an obsolete NVIDIA driver is a common cause of failure.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">If you are using remote desktops to launch Mistika Workflows (or virtual machines), make sure that the graphic session has a valid CUDA and openGL context. In particular, the basic version of Microsoft RDP is known to destroy the graphics context on disconnection.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If the problem is not to encode but to playback the files that you have produced with these nodes then we recommend to create test files using the default settings to start with, as they are the most compatible and known to work with most players. &nbsp;If the test works then complete it from there.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_BodyText">&nbsp;</span></h3>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

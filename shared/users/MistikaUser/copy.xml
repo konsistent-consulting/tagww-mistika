@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Copy>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#677688</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Copy</objectName>
+    <overwrite>0</overwrite>
+    <url/>
+  </Copy>
+</nodeCommonRoot>

@@ -1,0 +1,36 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="InnerJoinCSV" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+		    <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+			<xsd:element name="csvFilePath" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="10"/>
+			<xsd:element name="inputFirst" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="11"/>
+			<xsd:element name="dstPath" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="20"/>
+            <xsd:element name="csvOptions" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="50">
+				<xsd:complexType>
+					<xsd:sequence>
+                        <xsd:element name="csvDelimiter" type="stringPulldown" sgo:stringPulldownValues="Auto$$$-1|tab$$$0|,$$$1|;$$$2" sgo:visibility="0" sgo:sortOrder="51"/>
+                    </xsd:sequence>
+				</xsd:complexType>
+            </xsd:element>
+            <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="80">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="81"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="501"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+         </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

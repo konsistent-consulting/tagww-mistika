@@ -1,0 +1,564 @@
+2025.11.11 10:55:40.000|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:40.001|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:40.005|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:40.005|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:40.006|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:53.607|Critical Error|watchfolder_metadata_export|MetadataToCSV|files not connected
+2025.11.11 10:55:53.608|Critical Error|watchfolder_metadata_export|MetadataToCSV|files not connected
+2025.11.11 10:55:53.626|Critical Error|watchfolder_metadata_export|MetadataToCSV|files not connected
+2025.11.11 10:55:54.652|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:54.652|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:54.653|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:54.653|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:56.825|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:56.825|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:56.825|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:56.826|Critical Error|watchfolder_metadata_export|ProRes|The node needs to be connected
+2025.11.11 10:55:58.124|Critical Error|watchfolder_metadata_export|MetadataToCSV|files not connected
+2025.11.11 10:55:58.125|Critical Error|watchfolder_metadata_export|MetadataToCSV|files not connected
+2025.11.11 10:58:08.547|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export: Starting Workflow
+2025.11.11 10:58:08.548|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export Started
+2025.11.11 10:58:08.548|Info|watchfolder_metadata_export|watchfolder_metadata_export|Rendering ingest
+2025.11.11 10:58:08.625|Info|watchfolder_metadata_export|watchfolder_metadata_export|Rendering ProRes
+2025.11.11 10:58:08.630|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 10:58:08.666|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 10:58:08.666|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 10:59:10.136|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 10:59:10.204|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 10:59:10.204|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:00:13.759|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:00:13.778|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:00:13.778|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:00:13.779|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:00:13.786|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:00:13.841|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:00:13.841|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:01:32.725|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:01:32.807|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:01:32.807|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:01:35.718|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:01:35.771|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:01:35.771|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:01:43.803|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:01:43.843|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:01:43.843|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:01:46.038|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:01:46.086|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:01:46.086|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:01:53.233|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:01:53.279|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:01:53.279|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:01:55.251|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:01:55.260|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:01:55.260|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:01:55.260|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:01:55.268|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:01:55.326|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:01:55.326|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:01:56.584|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:01:56.635|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:01:56.635|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:02:04.957|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:02:04.996|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:02:04.996|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:02:06.464|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:02:06.515|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:02:06.515|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:02:14.635|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:02:14.692|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:02:14.692|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:02:15.855|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:02:15.865|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:02:15.865|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:02:15.865|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:02:15.876|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:02:15.934|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:02:15.934|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:03:30.099|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:03:30.160|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:03:30.160|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:03:33.407|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:03:33.456|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:03:33.456|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:03:40.466|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:03:40.491|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:03:40.491|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:03:43.004|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:03:43.052|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:03:43.052|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:03:50.479|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:03:50.540|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:03:50.541|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:03:51.798|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:03:51.807|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:03:51.807|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:03:51.807|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:03:51.819|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:03:51.878|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:03:51.878|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:03:53.164|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:03:53.223|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:03:53.223|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:04:01.037|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:04:01.074|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:04:01.074|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:04:02.770|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:04:02.824|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:04:02.824|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:04:10.453|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:04:10.491|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:04:10.491|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:04:11.878|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:04:11.946|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:04:11.946|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:05:52.824|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:05:52.926|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:05:52.926|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:07:23.660|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:07:23.670|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:07:23.670|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:07:23.670|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:07:23.683|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:07:23.753|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:07:23.753|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:08:57.395|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:08:57.461|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:08:57.461|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:09:00.578|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:00.633|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:00.633|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:09:08.701|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:08.740|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:08.741|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:09:09.918|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:09.959|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:09.959|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:09:17.809|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:17.852|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:17.852|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:09:19.439|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:19.448|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:09:19.448|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:09:19.448|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:09:19.453|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:19.502|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:19.502|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:09:20.876|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:20.924|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:20.924|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:09:28.250|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:28.285|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:28.285|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:09:29.545|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:29.584|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:29.584|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:09:36.869|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:36.905|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:36.905|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:09:38.384|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:38.400|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:09:38.400|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:09:38.400|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:09:38.414|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:09:38.480|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:09:38.480|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:11:16.225|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:16.292|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:16.292|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:11:18.786|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:18.826|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:18.826|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:11:28.670|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:28.709|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:28.709|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:11:30.284|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:30.331|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:30.331|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:11:39.102|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:39.135|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:39.135|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:11:41.239|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:41.253|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:11:41.253|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:11:41.253|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:11:41.262|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:41.321|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:41.321|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:11:42.713|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:42.762|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:42.762|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:11:50.180|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:50.217|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:50.217|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:11:51.593|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:51.643|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:51.643|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:11:58.427|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:11:58.477|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:11:58.477|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:11:59.844|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export Finished
+2025.11.11 11:11:59.856|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export: Workflow Failed
+2025.11.11 11:16:00.622|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export: Starting Workflow
+2025.11.11 11:16:00.623|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export Started
+2025.11.11 11:16:00.623|Info|watchfolder_metadata_export|watchfolder_metadata_export|Rendering ingest
+2025.11.11 11:16:00.665|Info|watchfolder_metadata_export|watchfolder_metadata_export|Rendering ProRes
+2025.11.11 11:16:00.668|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:16:00.712|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:16:00.712|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:17:10.728|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:17:10.801|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:17:10.801|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:18:27.088|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:18:27.097|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:18:27.097|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:18:27.097|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:18:27.112|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:18:27.171|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:18:27.171|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:20:13.866|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:13.930|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:13.930|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:20:15.304|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:15.362|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:15.362|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:20:25.237|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:25.270|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:25.270|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:20:26.845|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:26.909|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:26.909|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:20:35.870|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:35.922|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:35.922|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:20:39.157|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:39.167|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:20:39.167|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:20:39.167|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:20:39.177|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:39.243|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:39.243|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:20:40.627|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:40.686|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:40.686|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:20:47.951|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:47.982|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:47.982|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:20:49.652|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:49.712|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:49.712|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:20:56.484|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:56.546|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:56.546|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:20:58.126|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:58.136|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:20:58.136|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:20:58.136|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:20:58.145|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:20:58.204|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:20:58.204|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:22:32.441|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:22:32.503|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:22:32.503|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:22:35.634|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:22:35.692|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:22:35.692|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:22:45.103|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:22:45.136|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:22:45.136|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:22:48.790|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:22:48.839|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:22:48.839|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:22:55.426|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:22:55.466|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:22:55.466|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:22:56.849|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:22:56.859|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:22:56.860|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:22:56.860|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:22:56.871|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:22:56.935|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:22:56.935|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:22:58.193|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:22:58.257|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:22:58.257|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:23:05.153|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:23:05.185|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:23:05.185|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:23:07.781|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:23:07.836|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:23:07.836|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:23:14.528|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:23:14.569|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:23:14.569|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:23:15.963|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:23:16.040|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:23:16.040|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:24:54.385|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:24:54.454|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:24:54.455|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:26:32.439|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:26:32.451|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:26:32.451|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:26:32.451|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:26:32.462|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:26:32.541|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:26:32.541|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:28:14.047|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:14.111|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:14.112|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:28:16.968|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:17.021|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:17.021|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:28:25.169|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:25.201|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:25.201|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:28:26.591|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:26.636|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:26.636|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:28:33.816|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:33.854|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:33.854|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:28:36.379|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:36.389|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:28:36.389|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:28:36.389|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:28:36.395|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:36.442|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:36.442|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:28:37.697|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:37.743|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:37.743|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:28:44.934|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:44.961|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:44.961|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:28:47.402|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:47.450|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:47.450|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:28:54.259|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:54.299|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:54.299|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:28:55.787|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:55.797|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:28:55.797|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:28:55.797|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:28:55.805|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:28:55.848|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:28:55.848|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:OUTPUT.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:30:38.131|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:30:38.212|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:30:38.212|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:30:41.146|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:30:41.195|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:30:41.195|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:30:51.933|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:30:51.965|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:30:51.966|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:30:53.740|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:30:53.787|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:30:53.787|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:31:03.351|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:31:03.394|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:31:03.394|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:31:04.668|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:31:04.676|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:31:04.676|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:31:04.676|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:31:04.682|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:31:04.741|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:31:04.741|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:31:06.099|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:31:06.145|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:31:06.145|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:31:14.496|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:31:14.527|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:31:14.527|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:31:15.893|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:31:15.937|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:31:15.937|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:OUTPUT.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:31:23.647|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:31:23.681|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:31:23.681|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:OUTPUT.mov:23.98:None:None:None
+2025.11.11 11:31:24.938|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export Finished
+2025.11.11 11:31:24.960|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export: Workflow Failed
+2025.11.11 11:36:27.555|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export: Starting Workflow
+2025.11.11 11:36:27.558|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export Started
+2025.11.11 11:36:27.558|Info|watchfolder_metadata_export|watchfolder_metadata_export|Rendering ingest
+2025.11.11 11:36:27.605|Info|watchfolder_metadata_export|watchfolder_metadata_export|Rendering ProRes
+2025.11.11 11:36:27.609|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:36:27.655|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:36:27.655|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:37:37.253|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:37:37.325|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:37:37.325|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:39:09.609|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:39:09.617|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:39:09.617|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:39:09.617|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:39:09.624|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:39:09.678|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:39:09.678|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:40:59.086|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:40:59.178|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:40:59.178|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:tst0010_bg01_v0002.mov:23.98:None:None:None
+2025.11.11 11:41:02.201|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:02.252|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:02.252|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:41:11.126|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:11.171|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:11.171|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:tst0020_cp01_v0002.mov:23.98:None:None:None
+2025.11.11 11:41:12.531|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:12.586|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:12.586|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:tst0030_rf01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:41:20.995|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:21.033|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:21.033|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:tst0030_rf01_v0002.mov:23.98:None:None:None
+2025.11.11 11:41:22.405|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:22.415|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:41:22.415|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:41:22.415|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:41:22.423|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:22.485|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:22.485|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:tst0010_bg01_v0001.mov:23.98:None:None:None
+2025.11.11 11:41:23.788|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:23.844|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:23.844|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:41:30.846|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:30.890|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:30.890|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:tst0020_cp01_v0001.mov:23.98:None:None:None
+2025.11.11 11:41:32.148|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:32.201|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:32.201|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:tst0030_rf01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:41:38.781|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:38.821|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:38.821|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:tst0030_rf01_v0001.mov:23.98:None:None:None
+2025.11.11 11:41:40.401|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:40.407|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:41:40.407|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:41:40.407|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:41:40.414|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:41:40.468|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:41:40.468|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:43:26.966|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:27.025|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:43:27.025|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:tst0010_bg01_v0002.mov:23.98:None:None:None
+2025.11.11 11:43:29.580|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:29.619|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:43:29.619|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:43:38.953|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:38.989|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:43:38.989|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:tst0020_cp01_v0002.mov:23.98:None:None:None
+2025.11.11 11:43:40.986|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:41.028|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:43:41.028|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:tst0030_rf01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:43:48.317|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:48.361|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:43:48.361|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:tst0030_rf01_v0002.mov:23.98:None:None:None
+2025.11.11 11:43:50.135|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:50.144|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:43:50.144|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:43:50.144|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:43:50.150|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:50.211|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:43:50.211|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:tst0010_bg01_v0001.mov:23.98:None:None:None
+2025.11.11 11:43:51.501|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:51.551|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:43:51.551|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:43:58.430|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:58.459|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:43:58.459|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:tst0020_cp01_v0001.mov:23.98:None:None:None
+2025.11.11 11:43:59.931|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:43:59.976|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:43:59.976|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:tst0030_rf01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:44:06.968|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/ANOTHER_TOP_FOLDER/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:44:07.010|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:44:07.010|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:tst0030_rf01_v0001.mov:23.98:None:None:None
+2025.11.11 11:44:08.275|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:44:08.331|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:44:08.331|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:46:05.128|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/000_tst0010_bg01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:46:05.199|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:46:05.200|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:000_tst0010_bg01_v0001:47.95:PQ SMPTE2084:Rec709:To:000_tst0010_bg01_v0001.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:47:52.626|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:47:52.641|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:47:52.641|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:47:52.641|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:47:52.652|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:47:52.705|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:47:52.705|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:49:41.521|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:49:41.575|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:49:41.575|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:tst0010_bg01_v0002.mov:23.98:None:None:None
+2025.11.11 11:49:44.695|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:49:44.750|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:49:44.750|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:49:54.872|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:49:54.911|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:49:54.911|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:tst0020_cp01_v0002.mov:23.98:None:None:None
+2025.11.11 11:49:56.482|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:49:56.537|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:49:56.537|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:tst0030_rf01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:50:05.301|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/FOLDER_4/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:50:05.340|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:50:05.340|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:tst0030_rf01_v0002.mov:23.98:None:None:None
+2025.11.11 11:50:06.492|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:50:06.498|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:50:06.498|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:50:06.498|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:50:06.504|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:50:06.535|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:50:06.535|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:tst0010_bg01_v0001.mov:23.98:None:None:None
+2025.11.11 11:50:07.703|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:50:07.752|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:50:07.752|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:50:14.740|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:50:14.777|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:50:14.777|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:tst0020_cp01_v0001.mov:23.98:None:None:None
+2025.11.11 11:50:18.215|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:50:18.259|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:50:18.259|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:tst0030_rf01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:50:25.034|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/FOLDER_3/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:50:25.071|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:50:25.072|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:tst0030_rf01_v0001.mov:23.98:None:None:None
+2025.11.11 11:50:26.749|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/XR0001_20250313.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:50:26.756|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:50:26.756|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:50:26.756|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:50:26.763|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:50:26.803|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:50:26.803|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:47.95:PQ SMPTE2084:Rec709:To:tst0010_bg01_v0002.mov:47.95:PQ SMPTE2084:Rec709:None
+2025.11.11 11:52:25.876|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0010_bg01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:52:25.947|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:52:25.948|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0002:23.98:None:None:To:tst0010_bg01_v0002.mov:23.98:None:None:None
+2025.11.11 11:52:29.136|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:52:29.185|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:52:29.185|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:52:38.731|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0020_cp01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:52:38.768|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:52:38.769|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0002:23.98:None:None:To:tst0020_cp01_v0002.mov:23.98:None:None:None
+2025.11.11 11:52:40.028|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:52:40.074|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:52:40.074|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:47.95:ItuBt 709:Rec709:To:tst0030_rf01_v0002.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:52:48.609|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/FOLDER_2/tst0030_rf01_v0002.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:52:48.645|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:52:48.645|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0002:23.98:None:None:To:tst0030_rf01_v0002.mov:23.98:None:None:None
+2025.11.11 11:52:50.207|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/XR0001_20250312.ale?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:52:50.214|Critical Error|watchfolder_metadata_export|ProRes|input video not found
+2025.11.11 11:52:50.214|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:52:50.214|Critical Error|watchfolder_metadata_export|ProRes|Unable to create Render Group
+2025.11.11 11:52:50.218|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0010_bg01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:52:50.259|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:52:50.259|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0010_bg01_v0001:23.98:None:None:To:tst0010_bg01_v0001.mov:23.98:None:None:None
+2025.11.11 11:52:51.543|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0020_cp01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:52:51.590|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:52:51.590|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:47.95:ItuBt 709:Rec709:To:tst0020_cp01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:52:58.791|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0020_cp01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:52:58.827|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:52:58.827|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0020_cp01_v0001:23.98:None:None:To:tst0020_cp01_v0001.mov:23.98:None:None:None
+2025.11.11 11:53:00.402|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0030_rf01_v0001.mov?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:53:00.450|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:53:00.451|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:47.95:ItuBt 709:Rec709:To:tst0030_rf01_v0001.mov:47.95:ItuBt 709:Rec709:None
+2025.11.11 11:53:06.991|Info|watchfolder_metadata_export|ProRes|Processing Input File: /Volumes/konsistent/server/ed_test/mistika-testing/INPUT/TOP_FOLDER/tst0030_rf01_v0001.png?root=/Volumes/konsistent/server/ed_test/mistika-testing/INPUT/&format=[path][baseName][.frame][.ext]
+2025.11.11 11:53:07.027|Info|watchfolder_metadata_export|ProRes|Transcoding from EDL: None
+2025.11.11 11:53:07.027|Info|watchfolder_metadata_export|ProRes|Transcoding Info:From:tst0030_rf01_v0001:23.98:None:None:To:tst0030_rf01_v0001.mov:23.98:None:None:None
+2025.11.11 11:53:08.387|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export Finished
+2025.11.11 11:53:08.397|Info|watchfolder_metadata_export|watchfolder_metadata_export|watchfolder_metadata_export: Workflow Failed

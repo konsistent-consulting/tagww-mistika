@@ -1,0 +1,57 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="LeonardAssist" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+    <xsd:sequence>
+        <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+        <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+		<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+        <xsd:element name="edlOutputPath" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="3"/>
+        <xsd:element name="overwrite" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="4"/>
+        <xsd:element name="jsonInputOverride" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="5"/>
+		<xsd:element name="TracksToProcess" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+        <xsd:element name="exportMarkers" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="7"/>
+        <xsd:element name="edlEvents" type="stringPulldown" sgo:stringPulldownValues="Only Clips With Markers$$$1|All Clips In Track$$$2" sgo:visibility="0" sgo:sortOrder="8"/>
+        <xsd:element name="MarkersOptions" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="10">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="getMarkersName" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="1"/>
+                        <xsd:element name="getMarkersNotes" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                        <xsd:element name="MarkersColor1" type="stringPulldown" sgo:stringPulldownValues="Blue|Cyan|Green|Yellow|Red|Pink|Purple" sgo:visibility="0" sgo:sortOrder="3"/>
+                        <xsd:element name="MarkersTrackTarget1" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10" sgo:visibility="0" sgo:sortOrder="4"/>
+                        <xsd:element name="MarkersSuffix1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                        <xsd:element name="MarkersColor2" type="stringPulldown" sgo:stringPulldownValues="Blue|Cyan|Green|Yellow|Red|Pink|Purple" sgo:visibility="0" sgo:sortOrder="6"/>
+                        <xsd:element name="MarkersTrackTarget2" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10" sgo:visibility="0" sgo:sortOrder="7"/>
+                        <xsd:element name="MarkersSuffix2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+                        <xsd:element name="MarkersColor3" type="stringPulldown" sgo:stringPulldownValues="Blue|Cyan|Green|Yellow|Red|Pink|Purple" sgo:visibility="0" sgo:sortOrder="9"/>
+                        <xsd:element name="MarkersTrackTarget3" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10" sgo:visibility="0" sgo:sortOrder="10"/>
+                        <xsd:element name="MarkersSuffix3" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                        <xsd:element name="MarkersColor4" type="stringPulldown" sgo:stringPulldownValues="Blue|Cyan|Green|Yellow|Red|Pink|Purple" sgo:visibility="0" sgo:sortOrder="12"/>
+                        <xsd:element name="MarkersTrackTarget4" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10" sgo:visibility="0" sgo:sortOrder="13"/>
+                        <xsd:element name="MarkersSuffix4" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>
+                        <xsd:element name="MarkersColor5" type="stringPulldown" sgo:stringPulldownValues="Blue|Cyan|Green|Yellow|Red|Pink|Purple" sgo:visibility="0" sgo:sortOrder="15"/>
+                        <xsd:element name="MarkersTrackTarget5" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10" sgo:visibility="0" sgo:sortOrder="16"/>
+                        <xsd:element name="MarkersSuffix5" type="xsd:string" sgo:visibility="0" sgo:sortOrder="17"/>
+                       </xsd:sequence>
+				</xsd:complexType>
+        </xsd:element>
+		<xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="20">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="edlNC" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+						<xsd:element name="filesNC" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="2"/>
+					</xsd:sequence>
+				</xsd:complexType>
+		</xsd:element>
+
+        <xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+    </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <PixellAIDownload>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <color>#ffffff</color>
+    <localPath/>
+    <objectName>PixellAIDownload</objectName>
+  </PixellAIDownload>
+</nodeCommonRoot>

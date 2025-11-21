@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Input &gt; Red File</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node will load RED r3d files and set their properties before passing them to other nodes. Custom debayer options are supported. &nbsp;Outputs &nbsp;AV Out: A video Red" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "redfile.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">RED File</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?redfile.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="input.html">Input</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">RED File</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="raffile.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="input.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="rndfile.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This node will load RED r3d files and set their properties before passing them to other nodes. Custom debayer options are supported.</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">AV Out:</span> <span class="f_BodyText">A video Red RAW file with the settings applied on this node.</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#file" class="topiclink" title="File">File</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink" title="Name Convention">Name Convention</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Input node standard properties</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#contentmetadata" class="topiclink">Content metadata</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Debayer</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#debayer" class="topiclink">Debayer</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_Heading3">r3d Gamma Curve, r3d Color Space:</span> <span class="f_BodyText">Drop-down menu to select r3d gamma &amp; r3d color space. By default they will pass trough the original settings ( --- From File --- value) but you can force them to other values. These particular properties are RED r3d settings, but depending on the selection they will also set the gamma and gamut properties of the node and they will be displayed below.</span></p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Gamma, Gamut:</span><span class="f_BodyText"> As described above.</span></h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_Heading3">RED settings (ISO, &nbsp;Tint, Exposure, Gain, Contrast, &nbsp;Brightness, DRX, Shadow, IPP2 settings, ... ): </span>These properties will use the r3d metadata settings by default, but they can be forced to other values by activating their respective <span class="f_T_Emphasis">Change parameterName </span>buttons.</p>
+<p class="p_BodyText"><span class="f_Heading3">ReduceFactor: </span> Default value is 1. You can set a division factor to make an image extraction at reduced resolution, which is &nbsp;faster than extracting the images at full resolution, then reducing the resolution in posterior transcoder nodes. </p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_TipHeading">Notes about the name convention of RED files</span><span class="f_BodyText">: RED .rrd files have a size limit, and when it is exceeded they are split into multiple enumerated files </span>( xxxxxx_001.r3d, xxxxxx_002.r3d etc.). <span class="f_BodyText">. &nbsp;This is not a problem for this node because it is specialized in this particular format, and in normal cases the metadata output by this node will also pass trough other nodes just fine, even if the </span><span class="f_T_Menu">Name Convention</span><span class="f_BodyText"> is left with an ambiguous syntax such as </span> <span class="f_T_Menu">[path][baseName][.ext]</span>. <span class="f_BodyText"> But certain operations such as EDL conforming are very sensitive to the correct interpretation of the file numbering and may fail if the file number syntax is not explicitly defined in the </span><span class="f_T_Menu">Name Convention</span><span class="f_BodyText">. &nbsp;If you experience conform problems please make sure to set the </span><span class="f_T_Menu">Name Convention </span><span class="f_BodyText">to</span>  <span class="f_T_Menu">[path][baseName][_frame][.ext]</span> &nbsp;( even if the file number is not technically a &nbsp;&quot;frame&quot; it will <span class="f_BodyText">provide the correct &nbsp;file numbering-context).</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_TipHeading">Note about render performance from r3d files</span><span class="f_BodyText">: In order to get the best performance, if C computer has an NVIDIA card with more than 3GB of memory, you can select Cuda New from the preferences menu in the </span><span class="f_T_Menu">File-&gt;Preferences-&gt;Codecs-&gt;RED decoder section. </span><span class="f_BodyText">The Cuda decoder is several times faster than any of the other decoders.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Troubleshooting</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">When using the CUDA decoder for RED Files (File-&gt;Preferences-&gt;Codecs-&gt;RED decoder), if the RED decoder refuses to start with an error related to NVIDIA (or CUDA):</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Install the latest NVIDIA driver supported for your GPU. &nbsp;NVIDIA decoders and encoders are rapidly changing, and having an obsolete NVIDIA driver is a common cause of failure.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">If you are using remote desktops to run &nbsp;Mistika Workflows &nbsp;unattended on virtual machines), make sure that the graphic session has a valid CUDA and openGL context. For example, the basic version of Microsoft RDP is known to destroy the graphics context on user disconnections. In particular, in the case of AWS EC2 better results have been observed by using Amazon own RDP via Fleet Manager.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">You can also select a different RED &nbsp;decoder different to CUDA, &nbsp;(File-&gt;Preferences-&gt;Codecs-&gt;RED decoder), at least to help on troubleshooting. </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

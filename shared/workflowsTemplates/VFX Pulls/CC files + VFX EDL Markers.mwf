@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="CC files + VFX EDL Markers">
+  <view y="-215.654" x="308.966" scale="0.482253"/>
+  <nodes>
+   <node type="input" class="Folder">
+    <properties>
+     <objectName type="string">EDLs</objectName>
+     <color type="color">#808000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-362.543,-255.833</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">false</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">false</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <filterMode type="int">1</filterMode>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="4f7fb1bb-2981-4114-8e1e-321c2bc4cf13"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="029b110c-13db-4724-9c0b-f07089a5ce93"/>
+     <Files type="output" name="Files" id="ec97b7d5-dada-4283-a3df-eabc9b3948cd">
+      <linkedTo>2f07fbdc-921e-4182-99b4-00bfafb8c2dc</linkedTo>
+      <linkedTo>f75f9f46-fdb6-4829-ba0d-86d5532ca444</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node type="task" class="EDLToCC">
+    <properties>
+     <objectName type="string">EDLToCC</objectName>
+     <color type="color">#00b4b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">270.563,-486.964</pos>
+     <schemaName type="string">edltocc</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CnameConvention,CuniversalPath
+from mistikaTools import installModule
+import os
+try:
+    from xml.dom import minidom
+    import re
+except:
+    installModule("xml.dom")
+    installModule("re")
+
+
+
+def init(self):
+    self.setClassName("EDL To CC")
+    self.addConnector("edl",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("cc",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("ccPath")
+    self.addProperty("LOC", "Any")
+    self.addProperty("ShotNaming",0)
+    # self.addProperty("suffix","_cdl")
+    self.setAcceptConnectors(True,"edl")
+    self.bypassSupported=True
+    self.color=QColor(0,180,180)
+    return True
+
+def isReady(self):
+    res=True
+    if self.bypassSupported and self.bypassEnabled:
+        return res
+    if not self.ccPath:
+        res=self.critical("edl2cc2csv:ccPath:notFound","Destination Path can not be empty") and res
+    return res
+
+def process(self):
+
+    def GenerateCC (outputFileCC,VFXName,eventDescription,SOPValues,SATValue):
+
+        document = minidom.Document()
+
+        CCid = document.createElement('ColorCorrection')
+        CCid.setAttribute ('id',VFXName[0])
+
+        Description = document.createElement('Description')
+        DescriptionText = document.createTextNode(eventDescription)
+        CCid.appendChild (Description)
+        Description.appendChild (DescriptionText)
+
+        SOPNode = document.createElement('SOPNode')
+        CCid.appendChild (SOPNode)
+        Slope = document.createElement('Slope')
+        SlopeValue = document.createTextNode(SOPValues[0])
+        Offset = document.createElement('Offset')
+        OffsetValue = document.createTextNode(SOPValues[1])
+        Power = document.createElement('Power')
+        PowerValue = document.createTextNode(SOPValues[2])
+
+        SOPNode.appendChild(Slope)
+        Slope.appendChild(SlopeValue)
+        SOPNode.appendChild(Offset)
+        Offset.appendChild(OffsetValue)
+        SOPNode.appendChild(Power)
+        Power.appendChild(PowerValue)
+
+        SATNode = document.createElement('SATNode')
+        CCid.appendChild (SATNode)
+        Saturation = document.createElement('Saturation')
+        SaturationValue = document.createTextNode(SATValue[0])
+        SATNode.appendChild(Saturation)
+        Saturation.appendChild(SaturationValue)
+
+        document.appendChild(CCid)
+        xmlStr = document.toprettyxml(indent ="\t",encoding='UTF-8')
+
+        with open (outputFileCC, 'wb') as f:
+            f.write(xmlStr)
+
+        return outputFileCC
+
+
+
+    def checkRegEx(locs,vfxRegex):
+        for loc in locs:
+            vfxn = re.fullmatch(vfxRegex, loc)
+            if vfxn:
+                return vfxn
+        self.warning("edl2cc:getVFXName:RegEx", vfxRegex + '\tDoes Not Match any ShotNaming in markers '+str(locs))
+        return
+
+    def getLOCindex(UserLoc,locs):
+        for i, loc in enumerate(locs):
+            if UserLoc == loc:
+                return i
+        self.warning("edl2cc:getLOCindex:locs", UserLoc + '\tCouldn\'t be found in ' + str(locs))
+        return
+    def getLOCindexMarkers(locs):
+        for i, loc in enumerate(locs):
+            if loc in MistikaMarkers:
+                return i
+        self.warning("edl2cc:getLOCindexMarkers:locs", str(locs) + '\tCouldn\'t be found in ' + str(MistikaMarkers))
+        return
+
+    def getVFXName(line,UserLoc,vfxRegex,VFXName):
+        line=line.strip()
+        locs = line.split()
+        StringRules=["Any","FromClipName","TapeName"]
+        illegalChars='\/:*?"&lt;>|'
+        vfxn = ""
+
+        if ((UserLoc in locs or UserLoc in StringRules) and vfxRegex != ""):
+            vfxn = checkRegEx(locs, vfxRegex)
+            if vfxn:
+                vfxn=vfxn[0]
+
+        elif UserLoc in locs:
+            i=getLOCindex(UserLoc,locs)
+            try:
+                vfxn=locs[i+1]
+            except:
+                vfxn=locs[i]
+                self.warning("edl2cc:getVFXName:locs",str(locs) + '   Has not anything after\t' + str(UserLoc))
+
+        elif UserLoc in StringRules:
+            if UserLoc == StringRules[0]:
+                i = getLOCindexMarkers(locs)
+                try:
+                    vfxn=locs[i+1]
+                except:
+                    vfxn = locs[i]
+                    self.warning("edl2cc:getVFXName:locs", str(locs) + '   Has not anything after\t' + str(UserLoc))
+            elif UserLoc == StringRules[1]:
+                locs=line.split(':')
+                vfxn = locs[1]
+            elif UserLoc==StringRules[2]:
+                vfxn = locs[1]
+        else:
+            vfxn = locs[3]
+            self.warning("edl2cc:getVFXName:RegEx", vfxn + '\tNo ShotNaming neither LOC matched, getting default... GoodLuck... ')
+
+        vfxn=vfxn.strip()
+        for i in illegalChars:
+            if i in vfxn:
+                self.warning("edl2cc:getVFXName:illegalChars", vfxn + '\tContains illegal characters \ /:*?"&lt;>| -> Replacing by \"-"')
+                vfxn = vfxn.replace(i, "-")
+
+        # print(VFXName)
+        VFXName.append(vfxn)
+        return VFXName
+
+
+
+
+    def processEDL (up,dstPathCC):
+        ccFiles=[]
+        files=up.getFiles()
+        metadata = up.getMetadata()
+        print(metadata)
+        if not files:
+            self.critical("edl2cc:processEDL:notEDL","Unable to interpret input UP {}".format(up.getFilePath()))
+            return [False,None,None]
+        filename=files[0]
+        self.info("edl2cc:processEDL:edlName","processing {}".format(filename))
+        if filename.endswith('.edl'):
+            VFXName = []
+            SOPValues = []
+            SATValue = []
+            try:
+                with open (filename) as f:
+                    for line in f:
+                        if line.startswith('0'):                            
+                            if VFXName and not SOPValues:
+                                self.info("edl2cc:processEDL:edlName", VFXName[0] +'\tNOT FOUND SOP/SAT Values in edlEvent: '+edlEvent+':'+IDValue)
+                            VFXName = []
+                            SOPValues = []
+                            SATValue = []
+                            eventDescription=line.strip(' \n')
+                            IDValue = line.split()[1]
+                            edlEvent = line.split()[0]
+                            # srcTCin= line.split()[4]
+                            # srcTCout= line.split()[5]
+                            # recTCin= line.split()[6]
+                            # recTCout= line.split()[7]
+                            if UserLoc == "TapeName":
+                                getVFXName(line, UserLoc, vfxRegex, VFXName)
+
+                        elif (line.__contains__('FROM CLIP NAME') and UserLoc=="FromClipName"):
+                            getVFXName(line, UserLoc, vfxRegex, VFXName)
+                        elif (line.startswith('*LOC:') or line.startswith('* LOC')) and UserLoc != "TapeName" and UserLoc != "FromClipName":
+                            getVFXName(line, UserLoc, vfxRegex, VFXName)
+
+                        elif line.startswith('*ASC_SOP') or line.startswith('* ASC_SOP'):
+                            params=line.split(')(')
+                            Slope=(params[0].split('('))[1]
+                            Offset=params[1]
+                            Power=(params[2].replace(')','')).strip(' \n')
+                            SOPValues.append(Slope)
+                            SOPValues.append(Offset)
+                            SOPValues.append(Power)
+
+                        elif line.startswith('*ASC_SAT') or line.startswith ('* ASC_SAT'):
+                            n=len(line.split())
+                            SATValue.append(line.split()[n-1])
+
+                        else:
+                            continue
+
+                        if IDValue and VFXName and SOPValues and SATValue:
+                            outputFileCC = dstPathCC + VFXName[0] +'_cdl.cc'
+                            outputFiles = GenerateCC(outputFileCC,VFXName,eventDescription,SOPValues,SATValue)
+                            ccFiles.append(outputFiles)
+
+                    if VFXName and not SOPValues:
+                        self.info("edl2cc:processEDL:edlName", VFXName[0] +'\tNOT FOUND SOP/SAT Values in edlEvent: '+edlEvent+':'+IDValue)
+                    f.close()
+
+            except OSError:
+                self.critical("edl2cc:processEDL:notFound","Unable to Open File {}".format(filename))
+                return [False,None,None]
+
+        # print (ccFiles)
+        return [True,ccFiles]
+
+    res=True
+    if self.bypassEnabled:
+        #this node leaves the outputs empty during bypass as the files are not generated
+        return True
+
+    # vfxRegex1=r'[a-zA-Z0-9]+_+[a-zA-Z0-9]+_+[a-zA-Z0-9]+_?+[a-zA-Z0-9]+_?+[a-zA-Z0-9]+'
+    # vfxRegex2="([a-zA-Z0-9]+[_]){2,7}[a-zA-Z0-9]+"
+    # vfxRegex check at https: // regex101.com /
+
+    ShotNaming=int(self.ShotNaming)
+    if ShotNaming == 0:
+        vfxRegex=""
+    elif ShotNaming == 1:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2}[a-zA-Z0-9]+"                           #showID_episode_shotID
+    elif ShotNaming == 2:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2,7}[a-zA-Z0-9]+"                         #showID_episode_shotID_[UptoALL]
+    elif ShotNaming == 3:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3}[a-zA-Z0-9]+"                           #showID_episode_seq_shotID
+    elif ShotNaming == 4:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3,7}[a-zA-Z0-9]+"                         #showID_episode_seq_shotID_[UptoALL]
+    elif ShotNaming == 5:
+        vfxRegex = "([a-zA-Z0-9]+[_]){4}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID
+    elif ShotNaming == 6:
+        vfxRegex = "([a-zA-Z0-9]+[_]){5}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID_task
+    elif ShotNaming == 7:
+        vfxRegex = "([a-zA-Z0-9]+[_]){6}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID_task_vendor
+    elif ShotNaming == 8:
+        vfxRegex = "([a-zA-Z0-9]+[_]){7}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID_task_vendorID_version
+
+    MistikaMarkers=['RED','GREEN','BLUE','CYAN','MAGENTA','YELLOW','BLACK','WHITE']
+
+    nc=CnameConvention(self.getNameConvention())
+    if not nc.toString():
+        nc=self.getWorkflow().getNameConvention()
+
+    outConCC=self.getFirstConnectorByName("cc")
+    outConCC.clearUniversalPaths()
+    UserLoc = self.evaluate(self.LOC)
+    input=self.getFirstConnectorByName("edl")
+    dstPath=self.evaluate(self.ccPath).strip()
+    list=input.getUniversalPaths()
+
+    for up in list:
+        if self.isCancelled():
+            return False
+
+        dstPathCC=up.getStringOverride(dstPath)
+        if not os.path.exists(dstPathCC):
+            os.makedirs(dstPathCC)
+
+        [r,CCs]=processEDL(up,dstPathCC)
+        res=res and r
+        if res:
+            if CCs:
+                for c in CCs:
+                    outUP=CuniversalPath(nc,c)
+                    outUP.setMediaFileInfoData(up.getMediaFileInfoData())
+                    outConCC.addUniversalPath(outUP)
+
+    return res
+</code>
+     <ccPath type="string">YOUR-OUTPUT-PATH/</ccPath>
+     <LOC type="string">GREEN</LOC>
+     <ShotNaming type="string">4</ShotNaming>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="b2e7c9c1-3fde-4669-9b95-0329383cfdce"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="da1ce27b-ae4d-477e-b9f3-06a76b650aff"/>
+     <edl type="input" name="edl" id="2f07fbdc-921e-4182-99b4-00bfafb8c2dc">
+      <linkedTo>ec97b7d5-dada-4283-a3df-eabc9b3948cd</linkedTo>
+     </edl>
+     <cc type="output" name="cc" id="582ca1f1-f61e-40df-826b-45b7cb09d67a"/>
+    </connections>
+   </node>
+   <node type="task" class="EDLToMarkers">
+    <properties>
+     <objectName type="string">EDLToMarkers</objectName>
+     <color type="color">#005a5a</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">264.018,-164.226</pos>
+     <schemaName type="string">edltomarkers</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CnameConvention,CuniversalPath
+from mistikaTools import installModule
+import os
+import sys
+
+try:
+    import re
+except:
+    installModule("re")
+
+
+def init(self):
+    self.setClassName("EDL To Markers")
+    self.addConnector("edl",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("edlMarkers",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("edlMarkersPath")
+    self.addProperty("LOC", "Any")
+    self.addProperty("ShotNaming",0)
+    self.addProperty("Mistika", True)
+    self.addProperty("DaVinciResolve", False)
+    self.addProperty("MarkersColorMTK",3)
+    self.addProperty("MarkersColorDVR", 1)
+    # self.addProperty("suffix","_edlMarkers")
+    self.setAcceptConnectors(True,"edl")
+    self.bypassSupported=True
+    self.color=QColor(0,90,90)
+    return True
+
+def isReady(self):
+    res=True
+    if self.bypassSupported and self.bypassEnabled:
+        return res
+    if not self.edlMarkersPath:
+        res=self.critical("edl2Markers:edlMarkersPath:notFound","Destination Path can not be empty") and res
+    return res
+
+def process(self):
+
+    def checkRegEx(locs,vfxRegex):
+        for loc in locs:
+            vfxn = re.fullmatch(vfxRegex, loc)
+            if vfxn:
+                return vfxn
+        self.warning("edl2Markers:getVFXName:RegEx", vfxRegex + '\tDoes Not Match any ShotNaming in markers '+str(locs))
+        return
+
+    def getLOCindex(UserLoc,locs):
+        for i, loc in enumerate(locs):
+            if UserLoc == loc:
+                return i
+        self.warning("edl2Markers:getLOCindex:locs", UserLoc + '\tCouldn\'t be found in ' + str(locs))
+        return
+
+    def getLOCindexMarkers(locs):
+        for i, loc in enumerate(locs):
+            if loc in MistikaMarkers:
+                return i
+        self.warning("edl2Markers:getLOCindexMarkers:locs", str(locs) + '\tCouldn\'t be found in ' + str(MistikaMarkers))
+        return
+
+
+    def getVFXName(line,UserLoc,vfxRegex,VFXName):
+        line=line.strip()
+        locs = line.split()
+        StringRules=["Any","FromClipName","TapeName"]
+        illegalChars='\/:*?"&lt;>|'
+        vfxn = ""
+
+        if ((UserLoc in locs or UserLoc in StringRules) and vfxRegex != ""):
+            vfxn = checkRegEx(locs, vfxRegex)
+            if vfxn:
+                vfxn=vfxn[0]
+
+        elif UserLoc in locs:
+            i = getLOCindex(UserLoc, locs)
+            try:
+                vfxn=locs[i+1]
+            except:
+                vfxn=locs[i]
+                self.warning("edl2Markers:getVFXName:locs",str(locs) + '   Has not anything after\t' + str(UserLoc))
+
+        elif UserLoc in StringRules:
+            if UserLoc == StringRules[0]:
+                i = getLOCindexMarkers(locs)
+                try:
+                    vfxn=locs[i+1]
+                except:
+                    vfxn = locs[i]
+                    self.warning("edl2Markers:getVFXName:locs", str(locs) + '   Has not anything after\t' + str(UserLoc))
+            elif UserLoc == StringRules[1]:
+                locs=line.split(':')
+                vfxn = locs[1]
+            elif UserLoc==StringRules[2]:
+                vfxn = locs[1]
+        else:
+            vfxn = locs[3]
+            self.warning("edl2Markers:getVFXName:RegEx", vfxn + '\tNo ShotNaming neither LOC matched, getting default ')
+
+        vfxn=vfxn.strip()
+        for i in illegalChars:
+            if i in vfxn:
+                self.warning("edl2cc:getVFXName:illegalChars", vfxn + '\tContains illegal characters \ /:*?"&lt;>| -> Replacing by \"-"')
+                vfxn = vfxn.replace(i, "-")
+
+        VFXName.append(vfxn)
+        # print(VFXName)
+        return VFXName
+
+
+    def processEDL (up,dstPath):
+        files=up.getFiles()
+        if not files:
+            self.critical("edl2Markers:processEDL:notEDL","Unable to interpret input UP {}".format(up.getFilePath()))
+            return [False,None,None]
+        filename=files[0]
+        dstFilesDVR = []
+        dstFilesMTK = []
+
+        self.info("edl2Markers:processEDL:edlName","processing {}".format(filename))
+        if filename.endswith('.edl'):
+            VFXName = []
+            VFXNameLine=[]
+            edlMarkers = []
+            edlMarkersLine = []
+            try:
+                with open (filename) as f:
+                    for line in f:
+                        if line.startswith('0'):  ## Weak Condition to find tapename ID (000001  A099C003_220223NE) => should look for int()
+                            VFXName = []
+                            eventDescription = line.strip(' \n')
+                            IDValue = line.split()[1]
+                            edlEvent = line.split()[0]
+                            srcTCin = line.split()[4]
+                            srcTCout = line.split()[5]
+                            recTCin = line.split()[6]
+                            recTCout = line.split()[7]
+
+                            if UserLoc == "TapeName":
+                                getVFXName(line, UserLoc, vfxRegex, VFXName)
+                                VFXNameLine.append(edlEvent + ';' + VFXName[0] + ';' + srcTCin + ';' + srcTCout + ';' + recTCin + ';' + recTCout)
+
+                        elif (line.__contains__('FROM CLIP NAME') and UserLoc=="FromClipName"):
+                            getVFXName(line, UserLoc, vfxRegex, VFXName)
+                            VFXNameLine.append(edlEvent + ';' + VFXName[0] + ';' + srcTCin + ';' + srcTCout + ';' + recTCin + ';' + recTCout)
+                            print(VFXNameLine)
+
+                        elif (line.startswith('*LOC:') or line.startswith('* LOC:')) and UserLoc != "TapeName" and UserLoc != "FromClipName":
+                            getVFXName(line, UserLoc, vfxRegex, VFXName)
+                            VFXNameLine.append(edlEvent + ';' + VFXName[0] + ';' + srcTCin + ';' + srcTCout + ';' + recTCin + ';' + recTCout)
+
+                        else:
+                            continue
+                    # print(VFXNameLine)
+                    if VFXNameLine:
+                        for l in VFXNameLine:
+                            edlMarkers.append(l)
+                f.close()
+
+                [edlMarkersLine.append(x) for x in edlMarkers if x not in edlMarkersLine]  ## REMOVE DUPLICATES IN LIST
+                # print(edlMarkersLine)
+                dstFileDVR = dstPath + os.path.basename(filename)[:-4] + '_edlMarkersDVR.edl'
+                if os.path.isfile(dstFileDVR) and self.DaVinciResolve:
+                    os.remove(dstFileDVR)
+                dstFileMTK = dstPath + os.path.basename(filename)[:-4] + '_edlMarkersMTK.edl'
+                if os.path.isfile(dstFileMTK) and self.Mistika:
+                    os.remove(dstFileMTK)
+
+                for i in edlMarkersLine:
+                    edlEvent = i.split(';')[0]
+                    VFXName = i.split(';')[1]
+                    srcTCin = i.split(';')[2]
+                    srcTCout = i.split(';')[3]
+                    recTCin = i.split(';')[4]
+                    recTCout = i.split(';')[5]
+
+                    if self.DaVinciResolve:
+                        lineDVR = (edlEvent + '  ' + VFXName + '  V  C  ' + srcTCin + ' ' + srcTCout + ' ' + recTCin + ' ' + recTCout + ' ' + '\n'
+                                   + ' ' + DaVinciMarkers[ColorsIndexDVR] + ' |M:' + VFXName + ' |D:1\n')
+                        with open(dstFileDVR, 'a') as f:
+                            f.writelines('\n' + lineDVR)
+                        f.close()
+                        print(lineDVR)
+                    if self.Mistika:
+                        lineMTK = (edlEvent + '  ' + VFXName + '  V  C  ' + srcTCin + ' ' + srcTCout + ' ' + recTCin + ' ' + recTCout + ' ' + '\n'
+                                   + '*LOC:  ' + recTCin + ' ' + MistikaMarkers[ColorsIndexMTK] + '  ' + VFXName + '\n')
+                        with open(dstFileMTK, 'a') as f:
+                            f.writelines('\n' + lineMTK)
+                        f.close()
+                        print(lineMTK)
+
+                if self.DaVinciResolve:
+                    dstFilesDVR.append(dstFileDVR)
+                if self.Mistika:
+                    dstFilesMTK.append(dstFileMTK)
+
+            except OSError:
+                self.critical("edl2Markers:processEDL:notFound","Unable to Open File {}".format(filename))
+                return [False,None,None]
+
+        # print(dstFiles)
+        return [True,dstFilesDVR,dstFilesMTK]
+
+    res=True
+
+
+    if self.bypassEnabled:
+        #this node leaves the outputs empty during bypass as the files are not generated
+        return True
+
+    # vfxRegex check at https: // regex101.com /
+    ShotNaming = int(self.ShotNaming)
+    if ShotNaming == 0:
+        vfxRegex = ""
+    elif ShotNaming == 1:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2}[a-zA-Z0-9]+"  # showID_episode_shotID
+    elif ShotNaming == 2:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2,7}[a-zA-Z0-9]+"  # showID_episode_shotID_[UptoALL]
+    elif ShotNaming == 3:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3}[a-zA-Z0-9]+"  # showID_episode_seq_shotID
+    elif ShotNaming == 4:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3,7}[a-zA-Z0-9]+"  # showID_episode_seq_shotID_[UptoALL]
+    elif ShotNaming == 5:
+        vfxRegex = "([a-zA-Z0-9]+[_]){4}[a-zA-Z0-9]+"  # showID_episode_seq_scene_shotID
+    elif ShotNaming == 6:
+        vfxRegex = "([a-zA-Z0-9]+[_]){5}[a-zA-Z0-9]+"  # showID_episode_seq_scene_shotID_task
+    elif ShotNaming == 7:
+        vfxRegex = "([a-zA-Z0-9]+[_]){6}[a-zA-Z0-9]+"  # showID_episode_seq_scene_shotID_task_vendor
+    elif ShotNaming == 8:
+        vfxRegex = "([a-zA-Z0-9]+[_]){7}[a-zA-Z0-9]+"  # showID_episode_seq_scene_shotID_task_vendorID_version
+
+    ColorsIndexDVR=int(self.MarkersColorDVR)
+    DaVinciMarkers = ['|C:ResolveColorBlue', '|C:ResolveColorCyan', '|C:ResolveColorGreen', '|C:ResolveColorYellow', '|C:ResolveColorRed','|C:ResolveColorPink','|C:ResolveColorPurple','|C:ResolveColorFuchsia',
+                      '|C:ResolveColorRose','|C:ResolveColorLavender','|C:ResolveColorSky','|C:ResolveColorMint','|C:ResolveColorLemon','|C:ResolveColorSand','|C:ResolveColorCocoa','|C:ResolveColorCream']
+    ColorsIndexMTK=int(self.MarkersColorMTK)
+    MistikaMarkers=['RED','GREEN','BLUE','CYAN','MAGENTA','YELLOW','BLACK','WHITE']
+
+    if not self.DaVinciResolve and not self.Mistika:
+        res = self.critical("edl2Markers:edlMarkersFormat:No format selected", "At least one edl format is required") and res
+
+    UserLoc = self.evaluate(self.LOC)
+    outConEDLMarkers=self.getFirstConnectorByName("edlMarkers")
+    outConEDLMarkers.clearUniversalPaths()
+    input=self.getFirstConnectorByName("edl")
+    dstPath=self.evaluate(self.edlMarkersPath).strip()
+    list=input.getUniversalPaths()
+
+    nc=CnameConvention(self.getNameConvention())
+    if not nc.toString():
+        nc=self.getWorkflow().getNameConvention()
+
+    for up in list:
+        if self.isCancelled():
+            return False
+
+        dstPathEDL=up.getStringOverride(dstPath)
+        if not os.path.exists(dstPathEDL):
+            os.makedirs(dstPathEDL)
+
+        [r,dstFilesDVR,dstFilesMTK]=processEDL(up,dstPathEDL)
+        res=res and r
+        if res:
+            if dstFilesDVR:
+                for c in dstFilesDVR:
+                    outUP = CuniversalPath(nc, c)
+                    outConEDLMarkers.addUniversalPath(outUP)
+            if dstFilesMTK:
+                for d in dstFilesMTK:
+                    outUP = CuniversalPath(nc, d)
+                    outConEDLMarkers.addUniversalPath(outUP)
+
+    return res
+</code>
+     <edlMarkersPath type="string">YOUR-OURPUT-PATH/</edlMarkersPath>
+     <LOC type="string">GREEN</LOC>
+     <ShotNaming type="string">4</ShotNaming>
+     <Mistika type="bool">true</Mistika>
+     <DaVinciResolve type="bool">true</DaVinciResolve>
+     <MarkersColorMTK type="int">3</MarkersColorMTK>
+     <MarkersColorDVR type="int">1</MarkersColorDVR>
+    </properties>
+    <connections>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="90e19452-6c7d-4215-9a0d-d9800b012f97"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="3b40371b-8913-42b1-bb15-dac4d4c403a4"/>
+     <edl type="input" name="edl" id="f75f9f46-fdb6-4829-ba0d-86d5532ca444">
+      <linkedTo>ec97b7d5-dada-4283-a3df-eabc9b3948cd</linkedTo>
+     </edl>
+     <edlMarkers type="output" name="edlMarkers" id="5ed8c9d8-aa64-4970-a2a3-33dc61d1062e"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-552.038,-747.347</ScenePos>
+     <Size type="size2">303,37</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">CC files + VFX EDL Markers</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-549.792,-701.44</ScenePos>
+     <Size type="size2">1068,132</Size>
+     <TextSize type="float">19.46477699279785</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">In this workflow auxiliary VFX files are generated based on input EDLs:
+ -> CC files containing CDL values for each VFX shot
+ -> EDL files with VFX naming in edit events, used to conform VFX plates removing handles
+      and/or importing markers information with VFX naming into timeline</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-552.119,-301.847</ScenePos>
+     <Size type="size2">630.72,258.106</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-529.344,-123.309</ScenePos>
+     <Size type="size2">566,54</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">EDLs with VFX Naming Information in its markers
+ -> Only Avid/Premiere/Mistika markers format is accepted (* LOC)</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">153.625,-531.145</ScenePos>
+     <Size type="size2">480.4,267.64</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">CC Files</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff8e6386</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">169.785,-362.185</ScenePos>
+     <Size type="size2">452,77</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">- Green Marker is used to get each VFX shot name
+- RegEx used to match VFX shot naming and discard 
+comments in the same marker   </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">146.278,-206.086</ScenePos>
+     <Size type="size2">971.08,324.984</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">VFX EDL Markers</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ffd6b94f</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">174.24,-33.28</ScenePos>
+     <Size type="size2">922,123</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">- generates new EDLs where OCF tapeName events are replaced by each VFX shot name
+- timeline markers with VFX shot names are added
+  --> Avid/Premiere/Mistika markers format (*LOC)
+  --> DaVinci Resolve format
+* this node can also be used to convert from Avid/Premiere/Mistika markers format to DaVinci Resolve format</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

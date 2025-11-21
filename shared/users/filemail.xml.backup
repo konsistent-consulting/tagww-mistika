@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Filemail>
+    <Optional>
+      <confirmation>false</confirmation>
+      <message/>
+      <notify>false</notify>
+      <subject/>
+      <toMail/>
+      <transferPassword/>
+    </Optional>
+    <color>#ff4167</color>
+    <days>1</days>
+    <objectName>Filemail</objectName>
+    <packFiles>false</packFiles>
+    <username/>
+  </Filemail>
+</nodeCommonRoot>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <HardLink>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#00b4b4</color>
+    <dstPath/>
+    <objectName>HardLink</objectName>
+  </HardLink>
+</nodeCommonRoot>

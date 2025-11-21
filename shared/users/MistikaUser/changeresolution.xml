@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ChangeResolution>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <color>#677688</color>
+    <dstNode/>
+    <forceEvenRes>true</forceEvenRes>
+    <imageResX>1920</imageResX>
+    <imageResY>1080</imageResY>
+    <mode>0</mode>
+    <objectName>ChangeResolution</objectName>
+    <resolution>--- Same As Input ---</resolution>
+    <scaleFactor>1</scaleFactor>
+  </ChangeResolution>
+</nodeCommonRoot>

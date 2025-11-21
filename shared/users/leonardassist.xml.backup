@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+    <LeonardAssist>
+        <color>#deb727</color>
+        <edlOutputPath></edlOutputPath>
+        <overwrite>true</overwrite>
+        <jsonInputOverride>true</jsonInputOverride>
+        <TracksToProcess>1-3,5,8</TracksToProcess>
+        <exportMarkers>true</exportMarkers>
+        <edlEvents>1</edlEvents>
+        <getMarkersName>true</getMarkersName>
+        <getMarkersNotes>false</getMarkersNotes>
+        <MarkersColor1>Blue</MarkersColor1>
+        <MarkersTrackTarget1>1</MarkersTrackTarget1>
+        <MarkersSuffix1></MarkersSuffix1>
+        <MarkersColor2>Blue</MarkersColor2>
+        <MarkersTrackTarget2>2</MarkersTrackTarget2>
+        <MarkersSuffix2>_Layer001</MarkersSuffix2>
+        <MarkersColor3>Blue</MarkersColor3>
+        <MarkersTrackTarget3>3</MarkersTrackTarget3>
+        <MarkersSuffix3>_Layer002</MarkersSuffix3>
+        <MarkersColor4>Red</MarkersColor4>
+        <MarkersTrackTarget4>4</MarkersTrackTarget4>
+        <MarkersSuffix4></MarkersSuffix4>
+        <MarkersColor5>Yellow</MarkersColor5>
+        <MarkersTrackTarget5>5</MarkersTrackTarget5>
+        <MarkersSuffix5></MarkersSuffix5>
+    </LeonardAssist>
+</nodeCommonRoot>

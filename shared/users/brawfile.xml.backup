@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <BRAWFile>
+    <bmBlackLevel>0</bmBlackLevel>
+    <bmContrast>0.5</bmContrast>
+    <bmExposure>0</bmExposure>
+    <bmGamma>--- From File ---</bmGamma>
+    <bmGamut>--- From File ---</bmGamut>
+    <bmHighLight>1</bmHighLight>
+    <bmHighLightRecovery>0</bmHighLightRecovery>
+    <bmISO>--- From File ---</bmISO>
+    <bmKelvin>5600</bmKelvin>
+    <bmLUT>0</bmLUT>
+    <bmMidPoint>0.4099999964237213</bmMidPoint>
+    <bmReduceFactor>1</bmReduceFactor>
+    <bmSaturation>1</bmSaturation>
+    <bmShadows>1</bmShadows>
+    <bmTint>10</bmTint>
+    <bmVideoBlackLevel>0</bmVideoBlackLevel>
+    <bmWhiteLevel>1</bmWhiteLevel>
+    <changebmExposure>false</changebmExposure>
+    <changebmKelvin>false</changebmKelvin>
+    <changebmTint>false</changebmTint>
+    <color>#458c65</color>
+    <debayer>0</debayer>
+    <gamma>Unknown</gamma>
+    <gamut>Unknown</gamut>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>BRAWFile</objectName>
+    <url/>
+  </BRAWFile>
+</nodeCommonRoot>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <CopyTo8KP2Cards>
+    <bufferSize>16</bufferSize>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#677688</color>
+    <errorIfRemaining>0</errorIfRemaining>
+    <exP2_1/>
+    <exP2_2/>
+    <exP2_3/>
+    <exP2_4/>
+    <mP2/>
+    <mode>1</mode>
+    <objectName>CopyTo8KP2Cards</objectName>
+  </CopyTo8KP2Cards>
+</nodeCommonRoot>

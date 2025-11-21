@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <WriteTxt>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#deb727</color>
+    <dstPath/>
+    <objectName>WriteTxt</objectName>
+    <writeToken/>
+  </WriteTxt>
+</nodeCommonRoot>

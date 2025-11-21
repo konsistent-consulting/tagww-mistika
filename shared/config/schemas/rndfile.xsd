@@ -1,0 +1,28 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="RNDFile" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="url" type="xsd:anyURI" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('Render File (*.rnd)')|fileDialogWindowTitle('Select a Render File')" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="createNewRND" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="newRNDdirectory" type="xsd:anyURI" sgo:properties="showDirsOnly|urlVisibleButtonBrowser|fileDialogWindowTitle('Select Folder')" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="renderNameFromInput" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>
+				<xsd:element name="masterInput" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="mediaConnectors" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="20"/>
+                <xsd:element name="useNames" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="21"/>
+                <xsd:element name="trimTails" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="22"/>
+                <xsd:element name="jsonCurvesData" type="textEditor" sgo:visibility="0" sgo:sortOrder="30"/>
+                <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="30">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>				
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <CDL>
+    <Offset>
+      <Offset_Blue>0</Offset_Blue>
+      <Offset_Green>0</Offset_Green>
+      <Offset_Red>0</Offset_Red>
+    </Offset>
+    <Power>
+      <Power_Blue>1</Power_Blue>
+      <Power_Green>1</Power_Green>
+      <Power_Red>1</Power_Red>
+    </Power>
+    <Saturation>
+      <Saturation_Saturation>1</Saturation_Saturation>
+    </Saturation>
+    <Slope>
+      <Slope_Blue>1</Slope_Blue>
+      <Slope_Green>1</Slope_Green>
+      <Slope_Red>1</Slope_Red>
+    </Slope>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#3c9e40</color>
+    <objectName>CDL</objectName>
+    <source>0</source>
+  </CDL>
+</nodeCommonRoot>

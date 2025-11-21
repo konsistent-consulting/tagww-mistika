@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; ShotGrid CSV Reader</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;The ShotGrid CSV Read node is intended to locate the last version of each shot in a typical VFX project folder structure at any storage location. &nbsp;After a vfx reviewi" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "shotgridcsvreader.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">ShotGrid CSV Reader</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?shotgridcsvreader.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">ShotGrid CSV Reader</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="shotgridcreate.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="skyadi.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">The ShotGrid CSV Read node is intended to locate the last version of each shot in a typical VFX project folder structure at any storage location. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">After a vfx reviewing session, it happens that notes have been added to shots reviewed, and also the statuses of those shots have been modified to ‘Complete’, ‘Final’, ‘Pending Review’ or any other agreed status. Then it is normally part of the job of the VFX Editor to gather all shots reviewed, transcode them and prepare the footage to a deliverable platform such as put them on an FTP server, upload them to FrameIO, or just copy them to another storage location.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">ShotGrid CSV Read node takes as input a .csv file generated directly from Shotgrid. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">To make it work it is mandatory to have at least three visible column fields: Shot Code, Status, and Date Updated:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="C7mMoNHLwrzSedKc0XeezMB0smlroUFlbqDsbfCqhSG_sqMrswa55iZcRsoJUCm7dtuftnW3Rh88qtR97x5HCvfRJAALvOy6QoyPJppB7oBvR6NtVJS3HJqyoyI1XGKI4VeLI2rRe8W1b0Md0LHryEM" width="1253" height="328" style="margin:0;width:1253px;height:328px;border:none" src="c7mmonhlwrzsedkc0xeezmb0smlrouflbqdsbfcqhsg_sqmrswa55izcrsojucm7dtuftnw3rh88qtr97x5hcvfrjaalvoy6qoypjppb7obvr6ntvjs3hjqyoyi1xgki4veli2rre8w1b0md0lhryem.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">Then is just a matter of right-click in the shotgrid site and select ‘Export all n shots to Excel (.csv)’:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="regIQPBBRCdzYfpwyNxdaoEddHHcfCsnTNREkKibA22wQiv1IC7uGmupSFZ1rSgJPwdX48vOWb5lK9P4YkHRXwHKoJVzekHrsoJLbfjYrz-vwAmuPEVhbKGdto277yaqMcUSNWobzNkVbc03A02Ch1o" width="1477" height="404" style="margin:0;width:1477px;height:404px;border:none" src="regiqpbbrcdzyfpwynxdaoeddhhcfcsntnrekkiba22wqiv1ic7ugmupsfz1rsgjpwdx48vowb5lk9p4ykhrxwhkojvzekhrsojlbfjyrz-vwamupevhbkgdto277yaqmcusnwobznkvbc03a02ch1o_zoom94.png"/></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">The .csv file exported items in comma-separated should look something like this:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="PXiQXC5wdVvL_oAZzhJuyqo8lTdeAjK2Q76o66QA5K2cXZCnl-5nr3M9BhkzaWsEOUTPc9eJWq2oKCL2LP8e2ExM3AwgZZAYFtG3r4SlhjByXp65jsA1CBym1lW9wijm44nea13hlinRjtk60KhpfXQ" width="1600" height="100" style="margin:0;width:1600px;height:100px;border:none" src="pxiqxc5wdvvl_oazzhjuyqo8ltdeajk2q76o66qa5k2cxzcnl-5nr3m9bhkzawseoutpc9ejwq2okcl2lp8e2exm3awgzzayftg3r4slhjbyxp65jsa1cbym1lw9wijm44nea13hlinrjtk60khpfxq.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">In the ShotGrid CSV Reader node properties we can then adjust the desired rules to search and filter the required Shots Code.</span></p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="zmN6cZuc68wKm7lSx1Uccz0-5Vvk2c5pE4taVdjz63N-PmmYjxkyKDGKT2Zo4HoOL0_sxFX8DVAGfqA3gwRMVRlom1JMagJGbOpeBhaDwd0F9kPvG7exUXvT7y9zJLX2JYg8_HFQf9ioOB5slsRTdFo" width="706" height="191" style="margin:0;width:706px;height:191px;border:none" src="zmn6czuc68wkm7lsx1uccz0-5vvk2c5pe4tavdjz63n-pmmyjxkykdgkt2zo4hool0_sxfx8dvagfqa3gwrmvrlom1jmagjgbopebhadwd0f9kpvg7exuxvt7y9zjlx2jyg8_hfqf9ioob5slsrtdfo.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">CSVShotNaming</span><span class="f_BodyText">: used if a regular expression is required to match a certain Shot Code naming convention. For more information about this option please refer to the </span><span class="f_BodyText" style="font-weight: bold; color: #000000;">EDL to CC node</span><span class="f_BodyText"> documentation.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Shot Tokens</span><span class="f_BodyText">: In the same way that dynamic tokens can be extracted from any file naming with the </span><span class="f_T_Menu"><a href="nctometadata.html" class="topiclink">NC to metadata</a></span><span class="f_BodyText"> node, this field is used to declare the tokens to be extracted from the Shot Code found in the corresponding column of the .csv file.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Status</span><span class="f_BodyText">: The status desired to use to filter the shots. In case the user has its own statuses and wants to add it to the list, this pulldown can be easily customized by editing the corresponding .xsd file.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Since Days</span><span class="f_BodyText">: The n number of days backwards from the actual date to look for modified shots. If set to zero, it will look for all days backwards (hence ‘Date Updated’ field will be ignored). </span></p>
+<p class="p_BodyText"><span class="f_BodyText">Please note that, in order to calculate this bracket, the actual date of the host system is used, therefore having a wrong date in the computer can lead to unexpected behaviours of the node.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">IMPORTANT NOTE</span><span class="f_BodyText">: At the date of writing this manual, the python code of the node parses literally the index of the csv rows and columns needed. In the example provided rows 0 and 1 are ignored and the ‘Shot Code’, ‘Status’ and ‘Date Updated’ columns are located in the indexes 1, 3 and 12, respectively. This will be updated shortly to be non-literal but relative to the column name. In the meantime the user can modify these indexes directly in the python node code to fit its particular csv structure:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="YB4G-JwJ3m-9laPQZEqv8r8nmED4b2KNrifKhckmSE09Dn7lDC7yQ2nnnBGcAXxQ2NgdbHodXmAhZbmUhkCmzBgGzPGy06I7EUsGgKlEmn-KpKqaQ_4hNUClhO9ZhmWKBqL_Ww_rPUmKE-LP4y0RQOI" width="471" height="135" style="margin:0 auto 0 auto;width:471px;height:135px;border:none" src="yb4g-jwj3m-9lapqzeqv8r8nmed4b2knrifkhckmse09dn7ldc7yq2nnnbgcaxxq2ngdbhodxmahzbmuhkcmzbggzpgy06i7eusggklemn-kpkqaq_4hnuclho9zhmwkbql_ww_rpumke-lp4y0rqoi.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Once the Shot Search Rules have been determined, dynamic tokens extracted from the Shot Code can be used to look for the path of the shots in the storage location. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">The</span><span class="f_BodyText" style="font-weight: bold;"> FilePath</span><span class="f_BodyText"> field determines this target path:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="E5kJ1LkZwjQjysmiVoJU0P8mwvaqEYJb5KKzR8Dd1YpuLFOcNXGo0g1RpVidY3-QMWsK8ABG0GteVHAzmoY4dUCJBC7Coqbxg8gUZzZKLxud4bWoLxpVfZDxUGLFU2zEn7oUhHSx-Qfw5zv3KdscnzE" width="686" height="131" style="margin:0;width:686px;height:131px;border:none" src="e5kj1lkzwjqjysmivoju0p8mwvaqeyjb5kkzr8dd1ypulfocnxgo0g1rpvidy3-qmwsk8abg0gtevhazmoy4ducjbc7coqbxg8guzzzklxud4bwolxpvfzdxuglfu2zen7ouhhsx-qfw5zv3kdscnze.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">In the example above the ShotGrid CSV Reader will find the last version of each shot in the Comp/render/mov/ files folder of the following folder structure, offering as output the files contained in the folder 'v003' only:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="LiWpKkxzcibKWGR9xD9ueBft5rbMeByzmeNi_wTffoRweDCByYc2tK3AC2OcSKyM_soOhMhtwQiaOAoYDV1eOwbkHUU_Z7JNopaKPExxTvMrVtjcqC50fT2qG_E_MT9xjh_vSkmRVtO5LzXeYBTWKxM" width="665" height="136" style="margin:0 auto 0 auto;width:665px;height:136px;border:none" src="liwpkkxzcibkwgr9xd9uebft5rbmebyzmeni_wtfforwedcbyyc2tk3ac2ocskym_soohmhtwqiaoaoydv1eowbkhuu_z7jnopakpexxtvmrvtjcqc50ft2qg_e_mt9xjh_vskmrvto5lzxeybtwkxm.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal"><span class="f_Heading3">SGcsv:</span> <span class="f_BodyText">csv file exported from Shotgrid to be processed.</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal"><span class="f_Heading3">MaxVersion:</span> Files found as the last version of the shots, according to the defined Shot Search Rules and the FilePath where look them for.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink">Name Convention</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Python standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#code" class="topiclink">code</a></span></h3>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_T_Emphasis">NOTE: An introduction to all the Python tools in Mistika Workflows is available in the <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools </a>section.</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">FilePath</span><span class="f_BodyText">: Storage path where look for Max Version shots </span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">ShotSearchRules</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">CSVShotNaming</span><span class="f_BodyText">: regular expression used to match a naming structure in the Shot Code column field. Please refer to the </span><span class="f_BodyText" style="font-weight: bold; color: #000000;">EDL to CC node</span><span class="f_BodyText"> documentation to get more details about regEx used in VFX environments.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Shot Tokens</span><span class="f_BodyText">: desired tokens to be extracted from the Shot Code naming structure.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Status</span><span class="f_BodyText">: Filter by status of the shot in the .csv file.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Since Days</span><span class="f_BodyText">: The n days backwards from actual date to look for modified shots. If set to zero, this field is ignored.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

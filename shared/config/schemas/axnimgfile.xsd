@@ -1,0 +1,27 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="AXNImgFile" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="url" type="xsd:anyURI" sgo:properties="readOnly|urlVisibleButtonBrowser|pathNameFilters('jpg (*.jpg)')|fileDialogWindowTitle('Select an jpg file')" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nameFormat" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="caseSensitive" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="mediaID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="title" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="channel" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="rating" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="language" type="xsd:string" sgo:visibility="0" sgo:sortOrder="9"/>
+                <xsd:element name="imgType" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="level" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="requiredX" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="requiredY" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="13"/>
+               <xsd:element name="replacementList" type="xsd:string" sgo:visibility="0" sgo:sortOrder="20"/>
+               <xsd:element name="versionType" type="xsd:string" sgo:visibility="0" sgo:sortOrder="30"/>
+               <xsd:element name="dataPath" type="xsd:string" sgo:visibility="0" sgo:sortOrder="31"/>
+               <xsd:element name="allOrNone" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="33"/>
+               <xsd:element name="sendAlways" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="34"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

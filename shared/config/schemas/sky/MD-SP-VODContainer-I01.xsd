@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 sp1 (http://www.altova.com) by Mark Lowe (British Sky Broadcasting Ltd) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.cablelabs.com/namespaces/metadata/xsd/vod30/1" xmlns:core="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" xmlns:offer="http://www.cablelabs.com/namespaces/metadata/xsd/offer/1" xmlns:title="http://www.cablelabs.com/namespaces/metadata/xsd/title/1" xmlns:terms="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" xmlns:content="http://www.cablelabs.com/namespaces/metadata/xsd/content/1" xmlns:nnds="URN:NNDS:CMS:ADI3:01" targetNamespace="http://www.cablelabs.com/namespaces/metadata/xsd/vod30/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1">
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" schemaLocation="MD-SP-CORE-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/offer/1" schemaLocation="MD-SP-OFFER-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/title/1" schemaLocation="MD-SP-TITLE-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" schemaLocation="MD-SP-TERMS-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/content/1" schemaLocation="MD-SP-CONTENT-I01.xsd"/>
+	<xsd:import namespace="URN:NNDS:CMS:ADI3:01" schemaLocation="NDS-EXT-I03.xsd"/>
+	<!--                               -->
+	<!-- ADI Container Type -->
+	<!--                               -->
+	<xsd:complexType name="ADIContainerType">
+		<xsd:annotation>
+			<xsd:documentation>
+			An ADI container element for holding anything.
+		</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="Title" type="title:TitleType"/>
+			<xsd:element name="ContentGroup" type="offer:ContentGroupType"/>
+			<xsd:element name="Movie" type="content:MovieType"/>
+			<xsd:element name="Preview" type="content:PreviewType" minOccurs="0"/>
+			<xsd:element name="Thumbnail" type="content:ThumbnailType" minOccurs="0"/>
+			<xsd:element name="Offer" type="offer:OfferType"/>
+			<xsd:element name="Terms" type="terms:TermsType"/>
+			<xsd:element name="Ext" type="nnds:ContainerExtType"/>
+			<xsd:element name="Barker" type="content:BarkerType" minOccurs="0" maxOccurs="0"/>
+			<xsd:element name="Poster" type="content:PosterType" minOccurs="0" maxOccurs="0"/>
+			<xsd:element name="BoxCover" type="content:BoxCoverType" minOccurs="0" maxOccurs="0"/>
+			<xsd:element name="Category" type="offer:CategoryType" minOccurs="0" maxOccurs="0"/>
+			<xsd:element name="Trick" type="content:TrickType" minOccurs="0" maxOccurs="0"/>
+		</xsd:choice>
+		<xsd:attribute name="delete" use="optional"/>
+		<xsd:attribute name="version" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<!--                                                                 -->
+	<!--  Elements for use in VOD30 xml documents -->
+	<!--                                                                 -->
+	<xsd:element name="ADI3" type="ADIContainerType"/>
+</xsd:schema>

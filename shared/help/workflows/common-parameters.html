@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Standard properties</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="General properties &nbsp;The properties in this section are available to multiple nodes, and this section is to have them documented in just one place. Nodes using them will just..." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "common-parameters.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Standard properties</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?common-parameters.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Standard properties</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="nodes.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="nodes.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="input.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">General properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">The properties in this section are available to multiple nodes, and this section is to have them documented in just one place. Nodes using them will just show the corresponding links to the property documentation here.</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="objectname" class="hmanchor"></a><span class="f_Heading3">Object Name: </span>Object Name is the name that identifies the node in your workflow as it appears in the top bar of the node block. By default it takes the generic name assigned to it in the list of nodes plus an instance number when appearing multiple times, but you can modify it to help understand the workflow scheme.</h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="color" class="hmanchor"></a><span class="f_Heading3">Color: </span>Each node has a specific color assigned by default. The value of this property can be modified to customize its appearance. This can be useful to achieve more personalized and understandable workflow schemes for the user.</h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="lock" class="hmanchor"></a><span class="f_Heading3">Lock:</span> &nbsp;This property will protect the node and all its properties from involuntary modifications, as no changes will be allowed until explicitly deactivating its Lock property again. It also provides a lock icon on top of the node for easy access. It is available in most of the nodes, except python nodes and some nodes not having any properties to protect.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="bypassenabled" class="hmanchor"></a><span class="f_Heading3">Bypass:</span> Enable or disable the bypass. When it is enabled the node won't be processed, but it will pass the inputs to the outputs. This function is available for most of the nodes but not all (this is a not a Workflows generic function, &nbsp;each node is still responsible to select which inputs are passed to which outputs..). For example python nodes do not have it by default (see the mail node for an implementation example), and neither some switching or classifier nodes which purpose is precisely to divert traffic..</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="file" class="hmanchor"></a><span class="f_Heading3">File Path (Directory, Name), Dst. Folder: </span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;">For the case of <span class="f_T_Menu">task nodes</span> and <span class="f_T_Menu">output nodes</span> these properties will define destination file paths. &nbsp;</h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;">For the case of<span class="f_T_Menu"> Input nodes</span>, they will store the location of the source files. </h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;">A <span class="f_T_Menu">CRC</span> property is also &nbsp;provided for <span class="f_T_Menu">Input nodes,</span> which will load the CRC of the file if a checksum sidecar file is also present (a checksum file is a companion file in the same folder with the same name and having a supported checksum extension, such as <span class="f_Comment">.md4 .md5 </span>or<span class="f_Comment"> .sha1). </span> If present, it can be used by the <a href="checksum.html" class="topiclink">Checksum</a> node in order to validate the file integrity.</h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;">In general these properties can be set in one of these ways:</h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;">- By typing the path</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;">- By pasting text</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;">- By using drag &amp; drop from a file browser</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;">- By clicking the three-point <span class="f_T_Emphasis">&quot;...&quot; </span>icon to open a file browser and select the desired file or folder. </h3>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal">In general, for simple cases <span class="f_TipHeading">we recommend the Drag &amp; Drop action from a file browser to define the file path properties</span>. It works with most nodes, it is the fastest method and it avoids typing mistakes.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_TipHeading">By default, any path properties left empty will inherit the equivalent ones from the input files. For example, if you connect an input file to a transcoder task node without setting up any property then it will place the transcoded file in the same folder and also using the same filename, &nbsp;thus only changing the extension. &nbsp;Or if you only set the Directory then the file name will still come from the input file.</p>
+<p class="p_TipHeading"><span class="f_TipHeading">&nbsp;</span></p>
+<p class="p_TipHeading">Also, a protection system is provided to avoid files overwritten with themselves, so if the input and output files have the same format an location an error will appear in the Validation Inspector. You can solve it either by changing the output <span class="f_TipHeading">Directory</span> or the output<span class="f_TipHeading"> Base Name.</span></p>
+<p class="p_TipHeading"><span class="f_TipHeading">&nbsp;</span></p>
+<p class="p_Normal">When typing a path to a folder you should add and end slash &quot;/&quot; to the path. Please note that in many cases the path may not exist yet, so Workflows can't check if you have typed a file path or a folder path. Example: </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If myFolder is a folder and not a regular file: </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Correct path definition: /This/is/myFolder/</p>
+<p class="p_Normal">Ambigous path definition: /This/is/myFolder</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Note for Python programmers: &nbsp;The node connectors pass all the above metadata to other nodes, as what it goes trough the connectors are not just the file paths but a special objects including &nbsp;all kind of useful metdaata called <a href="common-parameters.html#universalpath" class="topiclink">Universal paths</a>, (the details of this mechanism are only necessary for programmers.. &nbsp;)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Also check that the name convention of the node matches the file paths that it is expected to manage. For example, if a node will receive files made of independent images with no frame numbers in their filenames you should use a name convention not containing the<span class="f_T_Menu"> [frame]</span> field in the <span class="f_T_Menu">Name Convention</span> property (or just remove the [frame] tag &nbsp;if it appeared by default...)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Many path style properties accept metadata token extraction / metadata token injection, For more details about name convention please read this chapter: <a href="auto-naming-tools.html" class="topiclink">Name convention</a></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="universalpath" class="hmanchor"></a><span class="f_Heading3">Universal path</span>:</h3>
+<p class="p_Normal">What travels trough the node connectors are not just &quot;files&quot; or &quot;paths&quot; but more complex data structures called &quot;<span class="f_T_Menu">Universal Paths</span>&quot; (often abbreviated as &quot;UP&quot;, or &quot;url&quot; in older versions ). &nbsp;As a difference to a standard file path, a Mistika <span class="f_T_Menu">Universal Path</span> can fully describe &nbsp;complete enumerated sequences and other types of media packs made of multiple files, &nbsp;including not only a file path (which is mandatory) but also all the metadata Name/Value pairs describing them such as frame ranges, &nbsp;resolution, color space settings, timecodes, associated CRC checksums, server credentials to access the files &nbsp;location, and any other metadata values embedded in the Universal Path by the previous nodes in the workflow. &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In this way no metadata is lost across the whole workflow &nbsp;(each node can inject as much metadata as needed to the Universal Paths to be sent trough the output connectors, so all the previous metadata can be accessed by further nodes even if not contained by the passed files themselves ).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Most of the metadata being passed between nodes can be visualized with the <span class="f_Heading3">pyPrintInputs</span> node, which will dump it into the <a href="introduction-to-python-scripti.html#scripteditorpanel" class="topiclink">Script Editor </a>panel. To better understand the Universal Paths data structures it is highly recommended to make some example workflows and then connect the <span class="f_Heading3">pyPrintInputs</span> node to see what is really going trough the connectors.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Example: Let's suppose we have the following exr sequence:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Entry10pt">D:/Downloads/MyClip.0.exr</span></p>
+<p class="p_Normal"><span class="f_T_Entry10pt">D:/Downloads/MyClip.1.exr</span></p>
+<p class="p_Normal"><span class="f_T_Entry10pt">D:/Downloads/MyClip.2.exr</span></p>
+<p class="p_Normal">...</p>
+<p class="p_Normal"><span class="f_T_Entry10pt">D:/Downloads/MyClip.1014.exr</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If we load it into Mistika Workflows (for example by drag &amp; drop) and connect the resulting node to a <span class="f_Heading3">pyPrintInputs </span>node, when executing the workflow we will see this<span class="f_T_Entry"> Universal Path</span> in the <span class="f_T_Menu">script editor </span>panel, which describes all the media files belonging to the enumerated sequence and all the metadata found on their codec header, thus making it available to posterior nodes:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Entry10pt">MyClip.exr : D:/Downloads/MyClip.exr?uniColor=uniColor:Rec709:Gamma 2 4&amp;sequence=true&amp;format=[path][baseName][.frame][.ext]</span></p>
+<p class="p_Normal"><span class="f_T_Entry10pt">{'Exr Raw': {'Part 1': {'0000:Container.Bitrate:': '2382330', '0001:Container.Long Name:': 'QuickTime / MOV', '0002:Container.Name:': 'mov,mp4,m4a,3gp,3g2,mj2', '0003:Container.Programs:': '0', '0004:Container.Streams:': '2', '0005:Container.URL:': 'd:/Downloads/MyClip.MOV', '0006:Container.compatible_brands:': 'isommp41mp42', '0007:Container.creation_time:': '2023-04-26T15:46:23.000000Z', '0008:Container.major_brand:': 'mp42', '0009:Container.minor_version:': '1', '0010:Stream 0.creation_time:': '2023-04-26T15:46:23.000000Z', '0011:Stream 0.handler_name:': 'Core Media Audio', '0012:Stream 0.language:': 'und', '0013:Stream 0.vendor_id:': '[0][0][0][0]', '0014:Stream 0.clip.audio.channels:': '1', '0015:Stream 0.clip.containerData.Bitrate:': '89357', '0016:Stream 0.clip.containerData.Bits Per Sample:': '0', '0017:Stream 0.clip.containerData.Channels:': '1', '0018:Stream 0.clip.containerData.Codec Long Name:': 'AAC (Advanced Audio Coding)', '0019:Stream 0.clip.containerData.Codec Name:': 'aac', '0020:Stream 0.clip.containerData.Codec Type:': 'audio', '0021:Stream 0.clip.containerData.FourCC:': '1630826605', '0022:Stream 0.clip.containerData.Profile:': 'LC', '0023:Stream 0.clip.containerData.Sample Rate:': '44100', '0024:Stream 0.clip.containerData.contaner:': 'avFormat', '0025:Stream 0.clip.image.codec:': 'EXR.EXR_DWA_RGB', '0026:Stream 1.creation_time:': '2023-04-26T15:46:23.000000Z', '0027:Stream 1.handler_name:': 'Core Media Video', '0028:Stream 1.language:': 'und', '0029:Stream 1.vendor_id:': '[0][0][0][0]', '0030:Stream 1.clip.containerData.Bitrate:': '2288027', '0031:Stream 1.clip.containerData.Bits Per Component:': '8', '0032:Stream 1.clip.containerData.Bits Per Sample:': '24', '0033:Stream 1.clip.containerData.Codec Long Name:': 'H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10', '0034:Stream 1.clip.containerData.Codec Name:': 'h264', '0035:Stream 1.clip.containerData.Codec Type:': 'video', '0036:Stream 1.clip.containerData.Fields Order:': '1', '0037:Stream 1.clip.containerData.FourCC:': '828601953', '0038:Stream 1.clip.containerData.Level:': '31', '0039:Stream 1.clip.containerData.Pixel Format:': 'yuv420p', '0040:Stream 1.clip.containerData.Profile:': 'High', '0041:Stream 1.clip.containerData.b-frames:': '\x01', '0042:Stream 1.clip.containerData.contaner:': 'avFormat', '0043:Stream 1.clip.image.codec:': 'EXR.EXR_DWA_RGB', '0044:clip.endFrame:': 1014, '0045:clip.fps:': '25.00', '0046:clip.frames:': 1015, '0047:clip.startFrame:': '0', '0048:clip.tapeName:': 'MyClip', '0049:clip.timeCode:': '00:00:00:00', '0050:clip.audio.bitDepth:': 'Float', '0051:clip.audio.channels:': '1', '0052:clip.audio.sampleRate:': '44100', '0053:clip.image.aspectRatio:': '1.78', '0054:clip.image.codec:': 'ff:QuickTime / MOV:h264 (avc1)', '0055:clip.image.format:': 7, '0056:clip.image.pixelAspectRatio:': '1', '0057:clip.image.rotation:': '-90', '0058:clip.image.resolution.resolution:': '1280x720', '0059:clip.image.resolution.resolutionX:': 1280, '0060:clip.image.resolution.resolutionY:': 720, '0061:file.created:': '2023-04-26T18:14:58.000', '0062:file.modified:': '2023-04-26T18:15:00.000', '0063:file.name:': 'MyClip.[0-1015].exr', '0064:file.path:': 'd:/Downloads', '0065:file.size:': '12090329', '0066:render.material:': 'D:/tmp/', '0067:render.project:': 'copotato', '0068:sourcesGroup.Input0.name:': 'MyClip.MOV', '0069:sourcesGroup.Input0.path:': 'd:/Downloads/', '0070:uniColor.colorSource:': 'uniColor', '0071:uniColor.gamma:': 'Gamma 2 4', '0072:uniColor.gamut:': 'Rec709', 'channels': {'channels0': 'B', 'channels1': 'G', 'channels2': 'R'}, 'dwaCompressionLevel': 45.0, 'framesPerSecond': Rational (C++ object at: 0x000000018A89F110), 'pixelAspectRatio': 1.0, 'screenWindowWidth': 1.0, 'type': 'scanlineimage'}}, 'clip': {'audio': {'bitDepth': 'Float', 'channels': None, 'sampleRate': '44100'}, 'comment': '#ChannelsList(B:G:R)', 'endFrame': 1014, 'fps': '25.00', 'frameNrOffset': 0, 'frames': 1015, 'image': {'aspectRatio': '1.78', 'codec': 'ff:QuickTime / MOV:h264 (avc1)', 'format': 7, 'pixelAspectRatio': 1.0, 'resolution': {'resolution': '1280x720', 'resolutionX': 1280, 'resolutionY': 720}, 'rotation': '-90'}, 'startFrame': '0', 'tapeName': 'MyClip', 'timeCode': '00:00:00:00@25.000000'}, 'file': {'created': '2023-04-26T18:14:58.000', 'modified': '2023-04-26T18:15:00.000', 'name': 'MyClip.0.exr', 'path': 'D:/Downloads', 'size': '12090329', 'sourceFile': 'D:/Downloads/MyClip.0.exr'}, 'render': {'material': 'D:/tmp/', 'project': 'copotato'}, 'uniColor': {'colorSource': 'uniColor', 'gamma': 'Gamma 2 4', 'gamut': 'Rec709'}}</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Note that you can also inject custom metadata by using specialized nodes, such as the <a href="csvtoupmdata.html" class="topiclink">CSVtoUPmetadata</a>, <a href="setupmetadata.html" class="topiclink">SetUPmetadata</a>, etc.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Python programmers can find the reference guide in <a href="https://www.sgo.es/doc/python/class_cuniversal_path.html#details" target="_blank" class="weblink">CuniversalPath class in the Mistika Python extension library</a>., and some introductory examples in <a href="introduction-to-python-scripti.html#scripteditorpanel" class="topiclink">Python scripting tools</a>. (in fact, the <span class="f_T_Entry10pt">pyPrintInputs</span> node is a python node itself, with its source code provided in its <span class="f_T_Menu10p">code </span>property).</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="nameconvention" class="hmanchor"></a><span class="f_Heading3">Name Convention:</span> Type the output name convention. Here you can learn more about the <a href="auto-naming-tools.html" class="topiclink">Name Convention.</a> </h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;">Also, you can add a Unix Timestamp by selecting &quot;AddTimeStamp&quot; on the output name.</h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">To change or to define a new name convention, you can use the <a href="auto-naming-tools.html#nameconventionmanager" class="topiclink">Name Convention Manager</a>, </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="megapack" class="hmanchor"></a><span class="f_Heading3">Megapack: </span></h3>
+<p class="p_Normal">A multiple file structure that make up a multimedia content package. To load it into Mistika Workflows, you can use a megapack node or drag and drop any video file contained on your set of files. Mistika Workflows will recognize it and will load all the metadata and the related media files.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The megapacks currently supported in Mistika Workflows are the following:</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">DCP</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Panasonic P2</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Panasonic 8KP2</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Sony XDROOT</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Sony XDCAM</span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Input nodes standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="contentmetadata" class="hmanchor"></a><span class="f_Heading3">Content metadata: </span>At the bottom of the properties panel of many input nodes there is a comprehensive list with useful information found in the file metadata, typically used to access image settings or camera settings. This metadata can be also used in posterior nodes of the Workflow as part of the definition of new paths, file names, or sidecar metadata files. An example of use is available in <a href="https://youtu.be/euI9Hc35tpw" target="_blank" class="weblink">this video about metadata tokens</a></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="debayer" class="hmanchor"></a><span class="f_Heading3">Debayer:</span> This pulldown menu allows to use the debayer options to change the extraction from the raw format (&quot;Custom&quot;) or to let these parameters as they were configured in the camera (&quot;From input&quot;)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Transcoding standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">Note: An introduction to transcoding nodes is available in this video: <a href="https://youtu.be/fbT4-dun8Kk" target="_blank" class="weblink">video tutorial using transcoding nodes </a></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Note: Not all the properties below are available to all the transcoding nodes.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="useavaudio" class="hmanchor"></a><span class="f_Heading3">Use AV audio:</span> If active, the audio tracks will be taken from the embedded audio of the source movie files. If deactivated, the <span class="f_T_Menu">Ext.audio</span> input connector will be used instead (multiple <span class="f_T_Menu">Ext.audio </span>inputs can be created by doing drag &amp; drop from other audio sources, but note that not all codecs support it).</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="enableframerange" class="hmanchor"></a><span class="f_Heading3">Enable Frame Range (First frame, Duration): </span>If enabled it will show a <span class="f_T_Menu10p">First frame</span> and <span class="f_T_Menu10p">Duration</span> properties to define which part of the input clips will be rendered (And passed to the next nodes).</h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="resolution" class="hmanchor"></a><span class="f_Heading3">Resolution: </span>Horizontal and vertical resolution of the output images. You can select the most common resolution presets (HD, UHD, etc). The &quot;Same as input&quot; option keeps the input media resolution. &quot;Custom&quot; allows to set a Custom number &nbsp;of pixels for vertical and horizontal. Two new fields are displayed:</h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;"><a id="imageresx" class="hmanchor"></a><span class="f_Heading3">Resolution X: </span>Horizontal resolution of the output images. If you put a value of 0 (zero) it will appear as &quot;From input&quot;, which is the default, and it means to use the same resolution as the input file.</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;">Please note that some image formats require an even number of pixels, mainly because some color components may need to be shared between adjacent pixels (YUV22, YUV420, ...).</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid; margin: 0 0 0 13px;"><a id="imageresy" class="hmanchor"></a><span class="f_Heading3">Resolution Y: </span>Vertical resolution of the output images. If you put a value of 0 (zero) it will appear as &quot;From input&quot;, which is the default, and it means to use the same resolution as the input file.</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;">Please note that some image formats require an even number of lines (some color components may need to be shared between adjacent lines ( YUV420...).</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">Warning: Most formats have their own resolution limits, and error will appear at execution time if exceeded. &nbsp;Few formats have unlimited resolution (EXR, &nbsp;Mistika js are only limited by hardware capabilities). </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="pixelaspectratio" class="hmanchor"></a><span class="f_Heading3">Pixel Aspect Ratio:</span> Changes the <span class="f_T_Entry">pixelAspectRatio</span>., that is, the shape of individual pixels: Most modern imaging formats (HD, UHD...) use square pixels 1:1, but old television formats such as PAL, NTSC, and some film other formats use rectangular pixels with other aspect ratios. This property permits to change the <span class="f_T_Entry">pixelAspectRatio</span> when rendering new media. The image resolution will be changed at render time, compressing the image in one direction (thus reducing the number of pixels) in order to match the new pixel aspect ratio.</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="scalefilter" class="hmanchor"></a><span class="f_Heading3">Scale Filter:</span> Defines which scaleFilter to use (rescaling algorithm) when changing image resolution at render time, both for scale up and scale down. This filter is applied when specifying a different resolution than the input images, and the possibilities are, from lower quality (but fast) to high quality (but slower):</h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Entry">Nearest</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Entry">Bilinear</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Entry">Bicubic</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Entry">7 taps </span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Entry">15 taps</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Note: 7 taps and 15 taps are based on complex Fourier transformations, and they are recommended for the highest quality (they are not based on &nbsp;AI or any math tricks that could create artifacts, instead these modes will simulate an optical scaling. &nbsp;They are slower (but still real-time with modern hardware) and in most cases provide the highest quality.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="fit" class="hmanchor"></a><span class="f_Heading3">Fit: </span>Indicates how to rescale the input images when their aspect ratio does not match the specified output resolution:</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_T_Emphasis">Disabled</span>: It will pass the image pixels 1:1 with no scaling, no matter if part of the original image gets cropped in the process (center cropped in that case) or if it part of the new image is left black (black letterbox)</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_T_Emphasis">Fit</span>: It will proportionally scale the image until it fits in the new resolution, but not cropping any part of the original image. (black letterbox is introduced as necessary).</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_T_Emphasis">Fill</span>: It will proportionally scale the image until it fills all the pixels of the new resolution, thus cropping part of the original image if necessary.</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal"><span class="f_T_Emphasis">Anamorphic</span>: It will apply a non proportional scaling of the image, stretching or shrinking it by a different factor on each axis as necessary in order to match the defined resolution</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="fps" class="hmanchor"></a><span class="f_Heading3">Framerate: </span>Frames per second value for the clip metadata. This is a metadata field that will tell the applications the FPS speed of the clip. Please note that changing it will not make any change to the media tracks themselves, only its metadata. Therefore, it can only be used to properly describe the content, not to do re-timing or frame rate conversions.</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="interlaced" class="hmanchor"></a><span class="f_Heading3">Interlaced: </span>Indicates if the render or encoding process needs to be processed by frames (interlaced=Yes), by fields (interlaced=No) or keep as same as the input (Interlaces=From Input).</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="overwrite_tc" class="hmanchor"></a><span class="f_Heading3">Overwrite TC: </span>It allows to overwrite the TC. A new field called &quot;New Timecode&quot; is displayed when Overwrite TC is activated. A new TC can be added by using it. </h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="firstframefrom" class="hmanchor"></a><span class="f_Heading3">First Frame From</span>: When rendering to enumerated sequences it defines the first frame number to be used in their file names. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu10p">From Input:</span> Same frame number as the source frame being transcoded.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu10p">From TC</span>: &nbsp;Set the frame number based on the time code of the source clip and its frame rate. &nbsp;Logically this only works if the image format contains time code information, which should not be taken for granted.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu10p">Custom:</span> A new property First Frame Nmber will appear, where the user can define this number.</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="dropframe" class="hmanchor"></a><span class="f_Heading3">Drop Frame:</span> &nbsp;Selects the type of Timecode (<span class="f_Heading3">dropframe</span> or<span class="f_Heading3"> non-dropframe</span>). &quot;From input&quot; keeps the input media format (dropframe or non-dropframe) and &quot;auto&quot; function uses the input framerate to decide between &nbsp;dropframe or non-dropframe based on the most common standards. </h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="audiocodec" class="hmanchor"></a><span class="f_Heading3">Audio Codec:</span> Movie format nodes permit to encode embedded audio channels inside a movie file (<span class="f_T_Emphasis">AudioInMovie</span>) or to produce external sidecar audio files. Meanwhile enumerated image formats can only encode it to external files (<span class="f_T_Emphasis">Wav16/24/32, Aiff 16bit, w64 32bit, caf 32bit, rf64 32bit</span>). Please note that some audio formats are limited in size by their own specifications. </h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Many transcoder nodes (but not all) support multitrack audio, by connecting multiple audio files to the input side.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Note that old audio codecs such as <span class="f_T_Menu">wav</span> are very compatible with other applications but do not support very long file sizes. If you need to encode long audio clips use more modern formats such as w64.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="renderfarmenabled" class="hmanchor"></a><span class="f_Heading3">Render Farm: </span>Enable or disable the external render farm selected (render managers from 3rd parties, such as Uberware Smedge and AWS Deadline). When it is selected, this node will send an .rnd to the selected render farm to process it externally.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The render farm type can be selected in File/Preferences/renderFarm</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">3rd party render managers are documented in their own manuals and not here.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Metadata properties</span></h2>
+<p class="p_Normal"><a id="metadata" class="hmanchor"></a></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Here you can find a tutorial about Metadata Management in Mistika Workflows: &nbsp;</p>
+<p class="p_Normal"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #d3cfc9;"> <a href="https://youtu.be/2WC_hGpKkdw" target="_blank" class="weblink">https://youtu.be/2WC_hGpKkdw</a></span></p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="exportmetadata" class="hmanchor"></a><span class="f_Heading3">Export Metadata (None, CSV, Xmp): </span>It will create a <span class="f_T_Emphasis">.csv</span> or<span class="f_T_Emphasis"> .xmp</span> text file in the destination folder of the current node, containing all the metadata obtained from the incoming media files, and also any additional metadata that was obtained, defined, or modified by the previous nodes. &nbsp;</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">The exact metadata fields will depend on the capabilities of each previous node, some nodes can extract a lot of embedded metadata from their media files, while other nodes are more limited (or the additional metadata may not even exist in the original codec).</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;">Note that a convenient method to control the metadata values is by using the  <span class="f_T_Menu">Edit Metadata</span> node (before the current node), which can modify any previous metadata or even create additional custom metadata pairs by using its <span class="f_T_Entry">Custom</span> section. </h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="tapename" class="hmanchor"></a><span class="f_Heading3">Tape Name: </span>The <span class="f_T_Menu10p">Tape Name </span>is a special metadata field with a lot of implications for conforming media in other applications. It defines the principal name of the clip. The user can choose which one of the possible values will be embedded in the new media files as the new<span class="f_T_Menu10p"> Tape Name:</span></h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">Source Tape Name</span>: The <span class="f_T_Emphasis">TapeName</span> metadata field that comes &nbsp;embedded inside internal headers of source media files (if any). It is the &quot;<span class="f_T_Emphasis">name</span>&quot; field that you will see in the metadata properties when you import a media file into Mistika Workflows. but it does not need to match the file name at all (although it happens quite often)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">Source File Name</span>: The file name of the original media file.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">Render File Name</span>: The new file name that will be created for the rendered File, according to the current name convention.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="exportcdl" class="hmanchor"></a><span class="f_Heading3">Export CDL: </span>When CDL metadata is passed to a node having this property active, it will create a sidecar <span class="f_T_Emphasis">.cc</span> file (color primaries information) alongside with the rendered files, according to the <a href="https://en.wikipedia.org/wiki/ASC_CDL#:~:text=The%20American%20Society%20of%20Cinematographers,%3A%20Slope%2C%20Offset%20and%20Power" target="_blank" class="weblink">ASC CDL</a> standard.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Comment"><span class="f_Comment">Example: </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Let's say that you import a sequence in this style:<span class="f_T_Emphasis"> </span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Clipname.1000.dpx </span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Clipname.1001.dpx </span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Clipname.1002.dpx</span> </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">... &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">which is then passed to a <span class="f_T_Menu">Conform Filter </span>node that is given an EDL containing CDL information. Then if you activate <span class="f_Heading3">Export CDL </span>in a posterior <span class="f_T_Menu">EXR</span> transcoder node (for example) it will create a file named<span class="f_T_Emphasis"> Clipname.exr.cc</span> containing the CDL metadata, on the same folder as the destination media. So you will end with content like this in the destination folder:</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Clipname.1000.exr </span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Clipname.1001.exr </span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Clipname.1002.exr</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Emphasis">Clipname.exr.cc</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">It also works the other way: If you import said exr sequence and a <span class="f_T_Emphasis">Clipname.exr.cc</span> file is found in the same folder then its CDL metadata will be available on posterior nodes, for example to be used by <span class="f_Heading3">Export CDL</span> on posterior transcoder nodes.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Advanced image processing properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="lut3d" class="hmanchor"></a><span class="f_Heading3">Lut3D: </span>Apply a 3DLUT. Supported LUT3D formats are .cube, .itx and other formats following compatible industry standards.</h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="colorspace" class="hmanchor"></a><span class="f_Heading3">Gamma, Gamut:</span> <span class="f_BodyText">A drop-down menu allows you to indicate the color space that best describes the images. You can select &quot;Undefined&quot; (in some nodes or &quot;From input in another nodes) to keep default settings coming with the file or to select any other alternative from the list. &nbsp;According to the selected color space, the corresponding values of Gamma and Gamut will be displayed. </span></h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">In the case that this frame or sequence is going to be transcoded, it is important that these parameters are correctly identified and interpreted. </span><span class="f_T_Emphasis">In the case of input nodes, what you select here is just the color space of the original extraction, and this metadata information is then passed to task node transcoders</span><span class="f_BodyText"> which have the option to convert to other color spaces (using the <a href="common-parameters.html#unicolour" class="topiclink">Unicolor</a> property). &nbsp;But logically this conversion will only work properly if the original color space is accurately defined in the previous nodes.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">The drop-down menu allows to select the possible values, but the default behavior is to simply pass through the available metadata settings coming with the original files (if they are defined). But sometimes they are undefined or unsupported by Mistika Workflows decoders, so you have these properties to declare them explicitly. </span><span class="f_T_Emphasis">If you see unexpected colors in the final images then you can use the Gamma and Gamut properties to declare </span><span class="f_BodyText">specific values at import time.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In some cases both parameters can have limited options depending on the nature of the node.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">Some &nbsp;input nodes like </span><span class="f_TipHeading">Watcher </span><span class="f_BodyText">and </span><span class="f_TipHeading">Folder</span><span class="f_BodyText"> &nbsp;are color agnostic because they need to permit to import heterogeneous files, so they do not permit to set these properties. For these cases you can use the</span><a href="tagcolorspace.html" class="topiclink"> tagColorSpace</a><span class="f_TipHeading"> </span><span class="f_BodyText">task node. You will also need to use it for image formats coming wihout this information (or if Mistika Workflows can't find it)</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_BodyText">Here you have a video tutorial about <a href="https://youtu.be/QTdpRYEInAc" target="_blank" class="weblink">Color management in Mistika Workflows</a></span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="unicolour" class="hmanchor"></a><span class="f_Heading3">Unicolor (gamma, gamut): </span>Default: ---Same as Input--- (no changes). &nbsp;This permits to apply a color space transformation (Output color space). This property permits to define the color space to be encoded. Choosing a particular color space from the list will select the destination Gamma curve and Gamut standard corresponding to it (For Mistika Boutique and Ultima users, this is the output field in ACES ODT FX) . Alternatively, it is also possible to select the option ---Custom Standard--- which will show two extra properties to select the gamma curve and gamut standard to be used &nbsp;(For Mistika Boutique and Ultima users, this is the output field in Unicolor FX).</h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">IMPORTANT NOTE: </span> For the color spaces conversion to work, the workflow will also need to know the original color space of the input clip which has to specified in the<span class="f_T_Emphasis"> Color Space</span> properties of the input clip. In some cases the input clip node will set correct values for these properties by default, but in other cases it has to be set by the user. See <span class="f_TipHeading">gamma, gamut </span>above for more details.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="displayfilter" class="hmanchor"></a><span class="f_Heading3">Display Filter: </span>This is one of the most powerful features of Mistika technology. It permits to load a &quot;Mistika Display Filter&quot; to be applied to the images. The display filters are Mistika effect stacks created in other Mistika applications like Mistika Ultima and Mistika Boutique, which provide a complete library of effects. You can use display filters to apply custom color filters, watermarks, noise reduction, overlays, vfx, etc. You can watch a <a href="https://youtu.be/4aTHg1jBIA0" target="_blank" class="weblink">video tutorial here</a></h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Display filters are  <span class="f_T_Emphasis">.dfilt </span> files stored in the <span class="f_T_Emphasis">SGO AppData/shared/display_filters </span>folder. &nbsp;They have the same effect as if you apply them in Mistika Ultima &amp; Boutique as display filters of &quot;render&quot; type.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">A display filter is not limited to use the image clips passed to a node, but it can also reference its own image clips. &nbsp;If a display filter was created using several image layers the <a href="setdisplayfilterfiles.html" class="topiclink">Set DisplayFilter files</a> node permits to substitute those images at execution time, just before using the display filter in another node.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If the display filter contains a Mistika multilayer effect (such as Mistika Comp3D) and the node is left in &quot;From Input&quot; state then the files coming from the input connectors will be used. This permits to apply complex composites without knowing the file paths in advance. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">EXAMPLE: &nbsp;The following example explains how to apply a logo overlay to any incoming media file, by using a display filter:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">- In Mistika Boutique use a <span class="f_T_Emphasis">Comp3D</span> effect to compose the logo over an image &nbsp;clip (by now use any clip and logo you want, we will change it later...), add any other effects you want and create a display filter with the result. Test that it works as expected in Boutique. &nbsp;Just make sure the display filter is saved in the <span class="f_T_Emphasis">shared/display_filters </span>folder as usual. &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">- Now open Mistika Workflows and connect a <span class="f_T_Menu10p">Watcher</span> node to a transcoder task node of the desired type (for example a <span class="f_T_Menu10p">ProRes</span> task node), and leave its file path as &quot;From Input&quot;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">- In the <span class="f_T_Menu10p">transcoder node -&gt; display filter</span><span style="font-weight: bold;"> </span>property select the display filter that you created in Mistika Boutique.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">- Add the workflow to the queue. From this point every time that a media file appears in the <span class="f_T_Menu">Watcher</span> folder the logo will be composed as an overlay on top of the input media as part of the transcoder execution (this method is optimal to maintain the best quality, as both the compositing and the transcoding will happen at the same time, thus avoiding two generations of compression). The files passed trough its input connector are automatically assigned as layer1 of the display filter (background of the composition)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If you also want to change the logo image then you can add an independent flow for this (an independent &quot;island&quot; in the same workflow) :</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">- &nbsp;create a <span class="f_T_Menu">SetDisplayFilterFiles</span> node, and select the same display filter as in the above exampe</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">- &nbsp;connect a node containing the new logo to the <span class="f_T_Menu10p">SetDisplayFilterFiles</span> node. &nbsp;This node will modify the display filter at execution time, so that it will use the new file path (you could also redirect the result to a new display filter file if you want, but it is not necessary for this example).</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">- &nbsp;connect the <span class="f_T_Menu10p">rank</span> connector of the <span class="f_T_Menu10p">SetDisplayFilterFiles</span> node to the transcoder node (ProRes in the above example), to ensure the <span class="f_T_Menu10p">SetDisplayFilterFiles </span>branch of the workflow is executed first. (do not connect the <span class="f_T_Menu10p">SetDisplayFilterFiles </span>output to the transcoder node input, only the rank link must be connected. The rank link will just establish the execution order (modifying the display filter before using it in the transcoder node)</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="virtualslate" class="hmanchor"></a><span class="f_Heading3">VirtualSlate, <a id="virtualslateduration" class="hmanchor"></a>Virtual Slate Duration: </span>Superimpose clip metadata information as an image overlay, for the specified duration (a number of start frames or permanent).</h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Folder standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="recursive" class="hmanchor"></a><span class="f_Heading3">Recursive / Include Subfolders:</span> The recursive mode allows the connection of all the files that are included in any subfolders of the selected path.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="include" class="hmanchor"></a><span class="f_Heading3">Include: </span> You can determine the type of files with which Watcher will react according to their name or extension. In case of writing *. * it will be activated with any name and file extension. </p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="exclude" class="hmanchor"></a><span class="f_Heading3">Exclude: </span> You can assign the types of files that Watcher will ignore, for example * .mov, * .avi.</h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;">Note: Include and Exclude accept a comma separated list, and also support wildcards &quot;*&quot; as most operating systems do.</h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="filtermode" class="hmanchor"></a><span class="f_Heading3">Filter Mode</span>: How to parse the<span class="f_T_Menu"> include</span> / <span class="f_T_Menu">exclude</span> properties for matching filenames.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Text</span>: Characters are interpreted as they are. Symbols like [ or # do not have any special meaning.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Glob</span>: Equivalent to the Glob command used on file browsers of the operating system. For example you can use ? and * for matching. &nbsp;Something like A*.r3d will match all r3d files starting with an &quot;A&quot;.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">Regular Expressions</span>: Accepts regular expressions (<a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank" class="weblink">regexp</a>).</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="includehidden" class="hmanchor"></a><span class="f_Heading3">IncludeHidden: </span>Process hidden files</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="includesystem" class="hmanchor"></a><span class="f_Heading3">IncludeSystem: </span>Process system files</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="alphabeticalorder" class="hmanchor"></a><span class="f_Heading3">Alphabetical Order: </span>Send files trough the output connector in alphabetical order.</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="addroot" class="hmanchor"></a><span class="f_Heading3">Add Root: Add Root: </span><span class="f_BodyText">By default, nodes processing folder files will get any file landing in sub-directory recursively, but the directory hierarchy is ignored for the output connector. For example, if you are transcoding the contents of a </span><span class="f_T_Menu">Folder</span><span class="f_BodyText"> or a </span><span class="f_T_Menu">Watcher</span><span class="f_BodyText"> folder by connecting them to a </span><span class="f_T_Menu">ProRes </span><span class="f_BodyText">node, by default all the rendered files will be sent to the same folder despite of the original &nbsp;subfolder structures. </span></h3>
+<p class="p_Normal"><span class="f_BodyText">If you want to change the default behavior to maintain the original hierarchy then activate the </span><span class="f_BodyText" style="font-weight: bold;">Add Root</span><span class="f_BodyText"> property. </span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Python standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="code" class="hmanchor"></a><span class="f_Heading3">Code: </span>Source code to be executed by the node, written in<a href="https://www.python.org/" target="_blank" class="weblink"> Python programming language</a>. Some nodes are implemented in python, in which case the source code is made available in the <span class="f_T_Menu">code </span>property for the interest of advanced users. &nbsp;For more details, the Mistika Workflows tools related with python are described in the <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools </a>section</h3>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">For more details, read the <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools</a> chapter</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><a id="schemaname" class="hmanchor"></a><span class="f_Heading3">Schema name</span>: Path to an .xsd file to display properties created in a certain node. &nbsp;The .xsd file is an editable file in .xsd format.</h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;">A typical use is to define how to display the new properties created by Python code in the properties panel of the node for interaction with the final user. &nbsp;The python code can define a lot of data structures with cryptic names and the purpose of the schema file is to only display those properties intended for user interaction, also using friendly labels for them. &nbsp;</h3>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="line-height: 1.92; page-break-after: avoid;"><span class="f_Heading3" style="font-size: 19px; font-family: Arial,Helvetica,sans-serif; font-weight: normal; color: #434343;">Example: A copy node with an added property visible in the GUI.</span></h3>
+<p class="p_Normal"><span style="font-size: 11px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.50;"><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #232323;">This node just copies the input to the path defined in the property dstFile and sends it to the output for the next node.</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span class="f_T_Emphasis">Code:</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;">from shutil import copyfile</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;">def init(self): &nbsp; &nbsp; # initialization function to create in/out connectors and properties (attributes)</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> self.addConnector(&quot;in&quot;,1,1) &nbsp; &nbsp; &nbsp; &nbsp;# 1=input. 1=mandatory</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> self.addConnector(&quot;out&quot;,2,0) &nbsp; &nbsp; &nbsp; &nbsp;# 2=output. 0=optional </span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> self.addProperty('dstFile')</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> return True &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# successful initialization</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;">def isReady(self): &nbsp;# check if the node can be processed. in this example, dstFile needs to be defined</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> ifself.dstFile!='':</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp;return self.critical('myErrorID','dstFile can not be empty')</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> return True</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;">def process(self): &nbsp; &nbsp;#copy in file to dst File and set output connector)</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> input=self.firstConnector#(&quot;in&quot;)</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> output=self.firstConnectorByName(&quot;out&quot;)</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> copyfile(input.url(),self.dstFile)</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> output.setUrl(self.dstFile)</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> return True &nbsp; &nbsp; &nbsp; &nbsp;# performed ok (no error management in this example)</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span class="f_T_Emphasis">Schema:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.50;"><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #232323;">In order to make it work correctly, you will need to create an schema file for the node &nbsp;properties. it should be in &quot;SGO AppData/shared/config/schemas&quot; and it should be something like this: (myCopy.xsd)</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.50;"><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #232323;">Note: This example is just a copy of python.xsd but adding the “dstFile” property:</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:schema</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">xmlns:sgo</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;<a href="http://www.sgo.es/2017/sgo.xsd" class="weblink">http://www.sgo.es/2017/sgo.xsd</a>&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">xmlns:xsd</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;<a href="http://www.w3.org/2001/XMLSchema" class="weblink">http://www.w3.org/2001/XMLSchema</a>&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:categoryType</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;categoryCollapsible&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;Python&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:complexType&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:sequence&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;objectName&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">type</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;xsd:string&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">/&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;color&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">type</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;color&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;1&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">/&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; font-weight: bold; color: #008800;">dstFile</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">type</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;universalPath&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;2&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:properties</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;pathNameFilters('All Files (*.*)')&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">/&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;schemaName&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">type</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;xsd:anyURI&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;3&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:properties</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;pathNameFilters('xsd Files (*.xsd)')&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">/&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;code&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">type</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;textEditor&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;4&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">/&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;/xsd:sequence&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;/xsd:complexType&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;/xsd:element&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;/xsd:schema&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.50;"><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #232323;">If you want to remove the code and some schema details (once the node is finished and well tested) you can also remove default lines, in the next example we have removed the source code and the scheme file, to keep it out of sight for normal users:</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:schema</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">xmlns:sgo</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;<a href="http://www.sgo.es/2017/sgo.xsd" class="weblink">http://www.sgo.es/2017/sgo.xsd</a>&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">xmlns:xsd</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;<a href="http://www.w3.org/2001/XMLSchema" class="weblink">http://www.w3.org/2001/XMLSchema</a>&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:categoryType</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;categoryCollapsible&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;Python&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:complexType&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:sequence&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;objectName&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">type</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;xsd:string&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">/&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;color&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">type</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;color&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;1&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">/&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;xsd:element</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">name</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;dstFile&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">type</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;universalPath&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:visibility</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;0&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:sortOrder</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;2&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #660066;">sgo:properties</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #666600;">=</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #008800;">&quot;pathNameFilters('All Files (*.*)')&quot;</span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">/&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;/xsd:sequence&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000000;"> &nbsp;  </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;/xsd:complexType&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;/xsd:element&gt;</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; color: #000088;">&lt;/xsd:schema&gt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

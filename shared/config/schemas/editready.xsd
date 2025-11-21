@@ -1,0 +1,37 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="EditReady" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="url" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="4"/>
+		<xsd:element name="threads" type="integerPulldown" sgo:integerPulldownValues="1|2|4" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="preset" type="stringPulldown" sgo:visibility="0" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_presetList" sgo:sortOrder="11"/>
+				<xsd:element name="metadataDestination" type="xsd:anyURI" sgo:properties="showDirsOnly|urlVisibleButtonBrowser|fileDialogWindowTitle('Select Metadata Folder')" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="normalizeMetadataKeys" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="13"/>
+				<xsd:element name="clipIndexerDestination" type="xsd:anyURI" sgo:properties="showDirsOnly|urlVisibleButtonBrowse|fileDialogWindowTitle('Select Clip Indexer Folder')" sgo:visibility="0" sgo:sortOrder="14"/>
+				<xsd:element name="generateThumbs" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="15"/>
+                <xsd:element name="thumbSize" type="xsd:integer" default="0" sgo:minValue="0" sgo:stepValue="1" sgo:visibility="0" sgo:sortOrder="16"/>
+                <xsd:element name="thumbInterval" type="xsd:integer" default="0" sgo:minValue="0" sgo:stepValue="1" sgo:visibility="0" sgo:sortOrder="17"/>
+                <xsd:element name="thumbCount" type="xsd:integer" default="0" sgo:minValue="0" sgo:stepValue="1" sgo:visibility="0" sgo:sortOrder="18"/>
+				<xsd:element name="Config" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="30">
+                    <xsd:complexType>
+                        <xsd:sequence>
+							<xsd:element name="binFilePath" type="xsd:anyURI" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('AE render File (*.*)')|fileDialogWindowTitle('Select the EditReady Binary')" sgo:visibility="0" sgo:sortOrder="10"/>
+							<xsd:element name="rosettaMode" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>		
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>				
+                <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="50">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>				
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

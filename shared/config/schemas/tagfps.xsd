@@ -1,0 +1,14 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="TagFPS" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="fps" type="stringPulldown" sgo:stringPulldownValues="23.98|24.00|25.00|29.97|30.00|48.00|59.94|60.00|120.00" sgo:visibility="0" sgo:sortOrder="10"/>
+            <xsd:element name="overwriteIfExists" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="14"/>
+            <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

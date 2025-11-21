@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<layoutdescription  version="1.0" type="xml">
+  <layoutlist>
+      
+	    <layout name="Clip Name and TC">
+	    <rmddatalist> 
+		<rmddata name="ClipName">
+		      <rmdshadow line="2" column="5" width="0" height="0" color="0,0,0,0"/>
+			  <rmdvalueslist>
+			  <rmdcursor line="26" column="5"/>
+			  <rmdvalue format="string" 	value=""/>
+			    <rmdvalue format="data" 		source="r3dfile" 	value="tapename"/>
+			  </rmdvalueslist>
+                </rmddata>
+
+                <rmddata name="TimeCode">
+		  <rmdshadow line="28" column="5" width="0" height="0" color="0,0,0,0"/>
+			  <rmdvalueslist>
+			      <rmdcursor line="28" column="5"/>
+				  <rmdvalue format="string" 	value="TC: "/>
+				  <rmdvalue format="data" 	source="r3dfile" 	value="sourcetimecode"/>
+			  </rmdvalueslist>
+                </rmddata>
+	      </rmddatalist> 
+           </layout>
+
+
+	      <layout name="TimeCode">
+	      <rmddatalist> 
+	      <rmddata name="TimeCode">
+		  <rmdshadow line="28" column="5" width="11" height="2" color="0,0,0,0"/>
+			  <rmdvalueslist>
+			      <rmdcursor line="28" column="5"/>
+				  <rmdvalue format="string" 	value="TC: "/>
+				  <rmdvalue format="data" 	source="r3dfile" 	value="sourcetimecode"/>
+			   </rmdvalueslist>
+	      </rmddata>
+
+	      </rmddatalist> 
+	      </layout>
+	      <layout name="FrameIndex">
+	      <rmddatalist>
+	      <rmddata name="FrameIndex">
+	      <rmdshadow line="28" column="5" width="11" height="1" color="0,0,0,0"/>
+	      <rmdvalueslist>
+		  <rmdcursor line="28" column="5"/>
+		      <rmdvalue format="string" 	value="FrameIndex: "/>
+		      <rmdvalue format="data" 	source="file" 	value="framenumber"/>
+	      </rmdvalueslist>
+	      </rmddata>
+	      </rmddatalist>
+            </layout>
+
+
+
+                <layout name="FrameIndex">
+                    <rmddatalist>
+                        <rmddata name="FrameIndex">
+                            <rmdshadow line="28" column="5" width="11" height="1" color="0,0,0,0"/>
+                            <rmdvalueslist>
+                                <rmdcursor line="28" column="5"/>
+                                <rmdvalue format="string" 	value="FrameIndex: "/>
+                                <rmdvalue format="data" 	source="file" 	value="framenumber"/>
+                            </rmdvalueslist>
+                        </rmddata>
+                    </rmddatalist>
+               </layout>
+
+                <layout name="Cartoon">
+                    <rmddatalist>
+                        <rmddata name="Header TapeName">
+                            <rmdshadow line="0" column="2" width="16" height="1" color="0,0,0,40"/>
+                            <rmdvalueslist>
+                                <rmdcursor line="0" column="2"/>
+                                <rmdvalue format="string" 	value=""/>
+                                <rmdvalue format="data" 	source="file" 	value="headertapename"/>
+                            </rmdvalueslist>
+                        </rmddata>
+
+                        <rmddata name="Frame number">
+                            <rmdshadow line="0" column="20" width="3" height="1" color="0,0,0,40"/>
+                            <rmdvalueslist>
+                                <rmdcursor line="0" column="20"/>
+                                <rmdvalue format="string" 	value=""/>
+                                <rmdvalue format="data" 	source="file" 	value="clipframe"/>
+                            </rmdvalueslist>
+                        </rmddata>
+
+                        <rmddata name="Clip duration">
+                            <rmdshadow line="0" column="27" width="3" height="1" color="0,0,0,40"/>
+                            <rmdvalueslist>
+                                <rmdcursor line="0" column="27"/>
+                                <rmdvalue format="string" 	value=""/>
+                                <rmdvalue format="data" 	source="file" 	value="clipduration"/>
+                            </rmdvalueslist>
+                        </rmddata>
+
+                        <rmddata name="TimeLine timeCode">
+                           <rmdshadow line="31" column="1" width="8" height="1" color="0,0,0,40"/>
+                           <rmdvalueslist>
+                                <rmdcursor line="31" column="1"/>
+                                <rmdvalue format="string"  	value="TC: "/>
+                                <rmdvalue format="data" 	source="file" 	value="recordtimecode"/>
+
+                            </rmdvalueslist>
+                        </rmddata>
+
+                        <rmddata name="TimeLine frame">
+                            <rmdshadow line="31" column="15" width="6" height="1" color="0,0,0,40"/>
+                            <rmdvalueslist>
+                                <rmdcursor line="31" column="15"/>
+                                <rmdvalue format="string" 	value="Frame: "/>
+                                <rmdvalue format="data" 	source="file" 	value="recordframenumber"/>
+                            </rmdvalueslist>
+                        </rmddata>
+                   </rmddatalist>
+                </layout>
+	      
+    </layoutlist>
+</layoutdescription>
+
+
+
+  
+  

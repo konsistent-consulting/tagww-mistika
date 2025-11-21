@@ -1,0 +1,21 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="CopyTo8KP2Cards" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+		<xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+		<xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+		<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>	
+		<xsd:element name="mode" type="integerPulldown" sgo:integerPulldownValues="Move$$$0|Copy$$$1"  sgo:visibility="0" sgo:sortOrder="10"/>
+		<xsd:element name="bufferSize" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="11"/>
+		<xsd:element name="errorIfRemaining" type="integerPulldown" sgo:integerPulldownValues="None$$$0|Information$$$1|Warning$$$2|Critical$$$3"  sgo:visibility="0" sgo:sortOrder="15"/>
+		<xsd:element name="exP2_1" type="label"  sgo:visibility="0" sgo:sortOrder="20"/>
+		<xsd:element name="exP2_2" type="label"  sgo:visibility="0" sgo:sortOrder="21"/>
+		<xsd:element name="exP2_3" type="label"  sgo:visibility="0" sgo:sortOrder="22"/>
+		<xsd:element name="exP2_4" type="label"  sgo:visibility="0" sgo:sortOrder="23"/>
+		<xsd:element name="mP2" type="label"  sgo:visibility="0" sgo:sortOrder="24"/>
+        <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

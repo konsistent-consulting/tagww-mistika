@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <CanonFile>
+    <canonACESidt>--- From File ---</canonACESidt>
+    <canonColorSpace>--- From File ---</canonColorSpace>
+    <canonExposure>0</canonExposure>
+    <canonGainB>1</canonGainB>
+    <canonGainG1>1</canonGainG1>
+    <canonGainG2>1</canonGainG2>
+    <canonGainR>1</canonGainR>
+    <canonGamma>--- From File ---</canonGamma>
+    <canonHighQuality>true</canonHighQuality>
+    <canonISO>--- From File ---</canonISO>
+    <canonKelvin>4000</canonKelvin>
+    <canonReduceFactor>1</canonReduceFactor>
+    <canonSharpness>0</canonSharpness>
+    <canonTint>0</canonTint>
+    <canonWhiteBalance>--- From File ---</canonWhiteBalance>
+    <changeGain>false</changeGain>
+    <changecanonKelvin>false</changecanonKelvin>
+    <changecanonTint>false</changecanonTint>
+    <color>#458c65</color>
+    <debayer>0</debayer>
+    <gamma>Unknown</gamma>
+    <gamut>Unknown</gamut>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>CanonFile</objectName>
+    <url/>
+  </CanonFile>
+</nodeCommonRoot>

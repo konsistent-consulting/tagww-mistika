@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ClassifyByAspectRatio>
+    <color>#677688</color>
+    <errorMode>0</errorMode>
+    <objectName>ClassifyByAspectRatio</objectName>
+    <outputList>0.56,1.00,1.33,1.77,1.85,2,2.35</outputList>
+    <threshold>0</threshold>
+  </ClassifyByAspectRatio>
+</nodeCommonRoot>

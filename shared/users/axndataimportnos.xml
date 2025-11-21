@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <AXNDataImportNOS>
+    <color>#141414</color>
+    <excludeOlderThan>5</excludeOlderThan>
+    <imagesDstPath/>
+    <includeCloserThan>32</includeCloserThan>
+    <jobGroup/>
+    <mediaDstPath/>
+    <metadataDstPath/>
+    <metadataToDeliverPath/>
+    <nameConventionsFile/>
+    <objectName>AXNDataImportNOS</objectName>
+    <pelisImgPath></pelisImgPath>
+    <pelisMediaPath></pelisMediaPath>
+    <pelisSubtitlesPath></pelisSubtitlesPath>
+    <providerID></providerID>
+    <pwd></pwd>
+    <restURL/>
+    <seriesImgPath></seriesImgPath>
+    <seriesMediaPath></seriesMediaPath>
+    <seriesSubtitlesPath></seriesSubtitlesPath>
+    <sourceAgent/>
+    <subtitleDstPath/>
+    <targetAgent/>
+    <user/>
+  </AXNDataImportNOS>
+</nodeCommonRoot>

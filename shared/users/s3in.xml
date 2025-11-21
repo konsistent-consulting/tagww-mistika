@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <S3In>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <areYouSure>true</areYouSure>
+    <bucket/>
+    <color>#e19900</color>
+    <deleteAfterDownload/>
+    <localPath/>
+    <objectName>S3In</objectName>
+    <objectPrefix>Leave empty to download the bucket completely</objectPrefix>
+    <schemaName>s3in</schemaName>
+  </S3In>
+</nodeCommonRoot>

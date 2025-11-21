@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ACESODT>
+    <Input>
+      <Input_InputCurve>5</Input_InputCurve>
+      <Input_InputGamut>2</Input_InputGamut>
+    </Input>
+    <Output>
+      <Output_OutputScale>0</Output_OutputScale>
+      <Output_OutputSpace>0</Output_OutputSpace>
+    </Output>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#3c9e40</color>
+    <objectName>ACESODT</objectName>
+  </ACESODT>
+</nodeCommonRoot>

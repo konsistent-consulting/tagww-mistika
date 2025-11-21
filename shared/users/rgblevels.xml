@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <RGBLevels>
+    <Mode>
+      <Mode>1</Mode>
+    </Mode>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#3c9e40</color>
+    <objectName>RGBLevels</objectName>
+  </RGBLevels>
+</nodeCommonRoot>

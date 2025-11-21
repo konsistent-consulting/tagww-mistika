@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ConformFilter>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#677688</color>
+    <compareExtension>false</compareExtension>
+    <comparePath>false</comparePath>
+    <defaultFps>24</defaultFps>
+    <handlers>0</handlers>
+    <nameSource>0</nameSource>
+    <noTrim>false</noTrim>
+    <nodeLocked>false</nodeLocked>
+    <objectName>ConformFilter</objectName>
+    <url/>
+  </ConformFilter>
+</nodeCommonRoot>

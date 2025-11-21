@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Join8KP2Contents>
+    <bypassEnabled>false</bypassEnabled>
+    <cardName>p2Card</cardName>
+    <cardSize>32</cardSize>
+    <color>#677688</color>
+    <dstPath/>
+    <mode>1</mode>
+    <objectName>Join8KP2Contents</objectName>
+  </Join8KP2Contents>
+</nodeCommonRoot>

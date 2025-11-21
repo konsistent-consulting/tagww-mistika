@@ -1,0 +1,34 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="ElevenLabsTextToSpeech" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="apiKey" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+            <xsd:element name="model" type="integerPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_modelList" sgo:visibility="0" sgo:sortOrder="7"/>
+            <xsd:element name="voice" type="integerPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_voiceList" sgo:visibility="0" sgo:sortOrder="10"/>
+            <xsd:element name="format" type="integerPulldown" sgo:integerPulldownValues="MP3 22.05kHz 32kbps$$$mp3_22050_32|MP3 44.1kH 32kbpsz$$$mp3_44100_32|MP3 44.1kHz 64kbps$$$mp3_44100_64|MP3 44.1kHz 96kbps$$$mp3_44100_96|MP3 44.1kHz 128kbps$$$mp3_44100_128|MP3 44.1kHz 192kbps$$$mp3_44100_192" sgo:visibility="0" sgo:sortOrder="10"/>
+            <xsd:element name="dstPath" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="20"/>
+            <xsd:element name="Advanced" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="30">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element type="xsd:decimal" sgo:visibility="0" name="stability" sgo:decimalMaxValue="1" sgo:decimalMinValue="0" sgo:decimalStepValue="0.01" sgo:decimalDigits="2" sgo:sortOrder="30"/>
+                            <xsd:element type="xsd:decimal" sgo:visibility="0" name="similarityBoost" sgo:decimalMaxValue="1" sgo:decimalMinValue="0" sgo:decimalStepValue="0.01" sgo:decimalDigits="2" sgo:sortOrder="31"/>
+                            <xsd:element type="xsd:decimal" sgo:visibility="0" name="style" sgo:decimalMaxValue="1" sgo:decimalMinValue="0" sgo:decimalStepValue="0.01" sgo:decimalDigits="2" sgo:sortOrder="32"/>
+                            <xsd:element type="xsd:boolean" sgo:visibility="0" name="useSpeakerBoost" sgo:sortOrder="33"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="40">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>	
+            <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <MistikaMLNK>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#008000</color>
+    <createSubDirs>true</createSubDirs>
+    <dstPath/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>MistikaMLNK</objectName>
+  </MistikaMLNK>
+</nodeCommonRoot>

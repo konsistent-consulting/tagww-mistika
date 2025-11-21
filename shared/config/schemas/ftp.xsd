@@ -1,0 +1,36 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="FTP" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="protocol" type="stringPulldown" sgo:stringPulldownValues="ftp|sftp" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="url" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="user" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="pwd" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="authType" type="integerPulldown" sgo:integerPulldownValues="Pwd$$$0|Private Key$$$1|Public Key$$$2" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="keyFile" type="xsd:anyURI" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('SSH Key File (*)')|fileDialogWindowTitle('Open')" sgo:visibility="0" sgo:sortOrder="9"/>
+                <xsd:element name="keyPassPhrase" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="port" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="localPath" type="xsd:anyURI" sgo:properties="showDirsOnly|urlVisibleButtonBrowser|pathNameFilters('All Files (*.*)')|fileDialogWindowTitle('Open')" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="include" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+                <xsd:element name="exclude" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>
+                <xsd:element name="newFilesOnly" type="xsd:boolean" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="15"/>
+                <xsd:element name="ignoreStandAloneSidecars" type="xsd:boolean" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="16"/>
+                <xsd:element name="deleteAfterTransfer" type="xsd:boolean" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="17"/>
+                <xsd:element name="areYouSure" type="xsd:boolean" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="18"/>
+                <xsd:element name="retries" type="xsd:integer" sgo:minValue="1" sgo:maxValue="99" sgo:visibility="0" sgo:sortOrder="20"/>
+                <xsd:element name="renameFilesList" type="xsd:string" sgo:visibility="0" sgo:sortOrder="30"/>
+                <xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="100">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="auxCode" type="textEditor" sgo:visibility="0" sgo:sortOrder="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

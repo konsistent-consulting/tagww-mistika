@@ -1,0 +1,29 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="MovistarVODItem" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="isAdditionalMaterial" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="id" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="mediaID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="version" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="6" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_versionList"/>
+                <xsd:element name="videoFormat" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="7" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_videoFormatList"/>
+                <xsd:element name="periodStart" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="periodEnd" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="9"/>
+                <xsd:element name="rights" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="10" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_rightsList"/>
+                <xsd:element name="audio1Lang" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="audio1Type" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="12" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_audio1TypeList"/>
+                <xsd:element name="audio2Lang" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+                <xsd:element name="audio2Type" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="14" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_audio1TypeList"/>
+                <xsd:element name="subtitle1Lang" type="xsd:string" sgo:visibility="0" sgo:sortOrder="15"/>
+                <xsd:element name="subtitle1Impaired" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="16"/>
+                <xsd:element name="subtitle2Lang" type="xsd:string" sgo:visibility="0" sgo:sortOrder="17"/>
+                <xsd:element name="subtitle2Impaired" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="18"/>
+                <xsd:element name="deepLink" type="xsd:string" sgo:visibility="0" sgo:sortOrder="19"/>
+				<xsd:element name="markerCredits" type="xsd:string"  sgo:visibility="0" sgo:sortOrder="20"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

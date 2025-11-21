@@ -1,0 +1,32 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Amberscript" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="dstPath" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="language" type="integerPulldown" sgo:integerPulldownValues="Auto$$$auto|Danish$$$da|English$$$en|Spanish$$$es|Finnish$$$fi|French$$$fr|Italian$$$it|Dutch$$$nl|Norwegian$$$no|Portuguese$$$pt|Romanian$$$ro|Russian$$$ru|Swedish$$$sv|Ukrainian$$$uk" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="transcriptionType" type="integerPulldown" sgo:integerPulldownValues="Transcription$$$transcription|Captions$$$captions|Translated Subtitles$$$translatedSubtitles" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="numberOfSpeakers" type="integerPulldown" sgo:integerPulldownValues="Auto$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|One Per Channel$$$-1" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="glossary" type="integerPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_glossaryList" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="transcriptionStyle" type="integerPulldown" sgo:integerPulldownValues="Clean Read$$$cleanread|Verbatim$$$verbatim" sgo:visibility="0" sgo:sortOrder="8"/>
+                <xsd:element name="targetLanguage" type="integerPulldown" sgo:integerPulldownValues="Danish$$$da|English$$$en|Spanish$$$es|Finnish$$$fi|French$$$fr|Italian$$$it|Dutch$$$nl|Norwegian$$$no|Portuguese$$$pt|Romanian$$$ro|Russian$$$ru|Swedish$$$sv|Ukrainian$$$uk" sgo:visibility="0" sgo:sortOrder="15"/>      
+                <xsd:element name="outputFormat" type="integerPulldown" sgo:integerPulldownValues="SRT$$$srt|VTT$$$vtt|TEXT$$$txt|JSON$$$json" sgo:visibility="0" sgo:sortOrder="25"/>
+       <xsd:element name="Config" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="400">
+			<xsd:complexType>
+				<xsd:sequence>
+                <xsd:element name="apiKey" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+				</xsd:sequence>
+			</xsd:complexType>
+	  </xsd:element>
+       <xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+		  <xsd:complexType>
+			  <xsd:sequence>
+				  <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+			  </xsd:sequence>
+		  </xsd:complexType>
+	  </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <TrimMedia>
+    <color>#677688</color>
+    <objectName>TrimMedia</objectName>
+    <trimHead>0</trimHead>
+    <trimTail>0</trimTail>
+    <units>0</units>
+  </TrimMedia>
+</nodeCommonRoot>

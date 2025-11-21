@@ -1,0 +1,193 @@
+{
+    "workflowsNodes": [
+        {
+            "className": "Aspera Client"
+        },
+        {
+            "className": "Auto Trigger"
+        },
+        {
+            "className": "Canon File"
+        },
+        {
+            "className": "Dropbox In"
+        },
+        {
+            "className": "Failed UPs"
+        },
+        {
+            "className": "File"
+        },
+        {
+            "className": "Folder"
+        },
+        {
+            "className": "FTP"
+        },
+        {
+            "className": "Google Drive In"
+        },
+        {
+            "className": "Media Movie"
+        },
+        {
+            "className": "Media Sequence"
+        },
+        {
+            "className": "Object Matrix In"
+        },
+        {
+            "className": "RND File"
+        },
+        {
+            "className": "S3 In"
+        },
+        {
+            "className": "Watcher"
+        },
+        {
+            "className": "ACES Gamut Compress"
+        },
+        {
+            "className": "ACES InvODT"
+        },
+        {
+            "className": "ACES ODT"
+        },
+        {
+            "className": "Change Resolution"
+        },
+        {
+            "className": "Checksum"
+        },
+        {
+            "className": "Classify By Extension"
+        },
+        {
+            "className": "Classify By Metadata"
+        },
+        {
+            "className": "Copy"
+        },
+        {
+            "className": "CSV to UPmdata"
+        },
+        {
+            "className": "DPX"
+        },
+        {
+            "className": "Edit Metadata"
+        },
+        {
+            "className": "EXR"
+        },
+        {
+            "className": "H264"
+        },
+        {
+            "className": "JPEG"
+        },
+        {
+            "className": "LUT3D"
+        },
+        {
+            "className": "Mistika JS"
+        },
+        {
+            "className": "Mistika Render"
+        },
+        {
+            "className": "Move"
+        },
+        {
+            "className": "MP3"
+        },
+        {
+            "className": "Nvidia H264"
+        },
+        {
+            "className": "Nvidia H265"
+        },
+        {
+            "className": "PNG"
+        },
+        {
+            "className": "ProRes"
+        },
+        {
+            "className": "Serialize Inputs"
+        },
+        {
+            "className": "Seven7th"
+        },
+        {
+            "className": "Stitch Refiner"
+        },
+        {
+            "className": "STMap"
+        },
+        {
+            "className": "Tag ColorSpace"
+        },
+        {
+            "className": "TIFF"
+        },
+        {
+            "className": "Trash"
+        },
+        {
+            "className": "UniColor"
+        },
+        {
+            "className": "Aspera Client"
+        },
+        {
+            "className": "Dropbox Out"
+        },
+        {
+            "className": "Filemail"
+        },
+        {
+            "className": "FrameIO"
+        },
+        {
+            "className": "FTP"
+        },
+        {
+            "className": "Gmail"
+        },
+        {
+            "className": "Google Drive Out"
+        },
+        {
+            "className": "Mail"
+        },
+        {
+            "className": "Object Matrix Out"
+        },
+        {
+            "className": "OneDrive Out"
+        },
+        {
+            "className": "S3 Out"
+        },
+        {
+            "className": "Signiant"
+        },
+        {
+            "className": "Slack"
+        },
+        {
+            "className": "Tar"
+        },
+        {
+            "className": "Vimeo"
+        },
+        {
+            "className": "WhatsApp"
+        },
+        {
+            "className": "YouTube"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ConcatXLS>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#677688</color>
+    <dstFile/>
+    <objectName>ConcatXLS</objectName>
+  </ConcatXLS>
+</nodeCommonRoot>

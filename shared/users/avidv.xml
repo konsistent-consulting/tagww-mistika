@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <AviDV>
+    <DisplayFilter>
+      <displayFilter>---None---</displayFilter>
+    </DisplayFilter>
+    <Lut3D>
+      <lut3D>---None---</lut3D>
+    </Lut3D>
+    <Metadata>
+      <exportCDL>false</exportCDL>
+      <exportMetadata>0</exportMetadata>
+      <tapeNameSource>0</tapeNameSource>
+    </Metadata>
+    <NameConvention>
+      <addTimeStamp>false</addTimeStamp>
+      <nameConvention/>
+    </NameConvention>
+    <Transcoding>
+      <audioCodec>Null.dev</audioCodec>
+      <changetimecode>0</changetimecode>
+      <codec>AVI.MOVIE_AVI_RGB</codec>
+      <dropFrame>-1</dropFrame>
+      <enableFrameRange>false</enableFrameRange>
+      <fit>1</fit>
+      <fps>0</fps>
+      <imageResX>0</imageResX>
+      <imageResY>0</imageResY>
+      <interlaced>-1</interlaced>
+      <rangeDuration>0</rangeDuration>
+      <rangeFirstFrame>0</rangeFirstFrame>
+      <resolution>--- Same As Input ---</resolution>
+      <timecode/>
+      <useMovieAudio>true</useMovieAudio>
+    </Transcoding>
+    <Unicolor>
+      <colorSpace>--- Same As Input ---</colorSpace>
+      <gamma>Unknown</gamma>
+      <gamut>Unknown</gamut>
+    </Unicolor>
+    <VirtualSlate>
+      <virtualSlate>---None---</virtualSlate>
+      <virtualSlateDuration>-1</virtualSlateDuration>
+    </VirtualSlate>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#0063b4</color>
+    <farmParams/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>AviDV</objectName>
+    <renderFarmEnabled>false</renderFarmEnabled>
+    <url/>
+  </AviDV>
+</nodeCommonRoot>

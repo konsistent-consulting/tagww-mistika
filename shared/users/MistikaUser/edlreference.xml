@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <EDLReference>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <VFXNamingMatchRules>
+      <LOC>Any</LOC>
+      <ShotNaming>0</ShotNaming>
+    </VFXNamingMatchRules>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#ccffe5</color>
+    <edlMarkersFormat>
+      <DaVinciResolve>false</DaVinciResolve>
+      <MarkersColorDVR>1</MarkersColorDVR>
+      <MarkersColorMTK>3</MarkersColorMTK>
+      <Mistika>true</Mistika>
+    </edlMarkersFormat>
+    <edlRefPath/>
+    <objectName>EDLReference</objectName>
+  </EDLReference>
+</nodeCommonRoot>

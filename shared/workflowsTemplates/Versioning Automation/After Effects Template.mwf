@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="After Effects Template" nameConvention="[path][baseName][.frame][.ext]">
+  <view scale="0.694444" y="20.16" x="345.6"/>
+  <nodes>
+   <node class="Watcher" type="input">
+    <properties>
+     <objectName type="string">Watcher</objectName>
+     <color type="color">#aa557f</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-312.96,1.44</pos>
+     <schemaName type="string">watcher</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <include type="string">*.csv</include>
+     <exclude type="string"></exclude>
+     <latency type="int">5</latency>
+     <forceCheck type="int">0</forceCheck>
+     <recursive type="bool">true</recursive>
+     <addRoot type="bool">true</addRoot>
+     <deleteAfterProcessing type="bool">false</deleteAfterProcessing>
+     <areYouSure type="bool">false</areYouSure>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">false</alphabeticalOrder>
+     <continuePreviousExecutions type="bool">false</continuePreviousExecutions>
+    </properties>
+    <connections>
+     <rankFrom id="7da40225-618f-4b15-8233-75942d6a1f95" name="rankFrom" specialType="order" type="input"/>
+     <rankTo id="30bfc050-6de5-4acd-98d4-31ad1a0781dd" name="rankTo" specialType="order" type="output"/>
+     <To id="390bb6c8-6e91-4aa7-a391-0a7833abfb15" name="To" type="output">
+      <linkedTo>3a7ee3b1-543d-45e7-8fe8-0b059fb0c25c</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node class="CSVToUPmdata" type="task">
+    <properties>
+     <objectName type="string">CSVToUPmdata</objectName>
+     <color type="color">#94b4f2</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">8.64001,1.44</pos>
+     <schemaName type="string">csvtoupmdata</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">
+import Mistika
+import csv
+import sys
+import os
+from Mistika.classes import Cconnector
+from Mistika.classes import CuniversalPath
+from Mistika.classes import CnameConvention
+from Mistika.Qt import QColor
+# from timecode import Timecode
+try:
+    import re
+except:
+    installModule("re")
+
+def init(self):
+    self.setClassName("CSV To UPmdata")
+    self.addConnector("csv",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_REQUIRED)
+    self.addConnector("mdata",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True, "csv")
+    self.addProperty("csvDelimiter", '-1')
+    self.addProperty("MediaFilesColIndex", 0)
+    self.addProperty("SkipLines",0)
+    self.addProperty("ChangeBackSlashes",True)
+    self.addProperty("SetPrivateData", True)
+    self.addProperty("TokenName1")
+    self.addProperty("ColumnT1", 0)
+    self.addProperty("TokenName2")
+    self.addProperty("ColumnT2", 0)
+    self.addProperty("TokenName3")
+    self.addProperty("ColumnT3", 0)
+    self.addProperty("TokenName4")
+    self.addProperty("ColumnT4", 0)
+    self.addProperty("TokenName5")
+    self.addProperty("ColumnT5", 0)
+    self.addProperty("TokenNameFrom", 0)
+    self.color=QColor(0x94b4f2)
+    self.bypassSupported=True    
+    onPropertyUpdated(self,"TokenNameFrom")
+    return True
+
+def isReady(self):
+
+    res=True
+    if self.bypassSupported and self.bypassEnabled:
+        return res
+    return res
+
+def process(self):
+
+    def checkWinShares(FileName):
+        pattern = r'^[A-Z]:\\'
+        isWinShare=bool(re.match(pattern, FileName, re.IGNORECASE))
+        if isWinShare:
+            FileName=FileName.replace('\\','/')
+        return FileName
+
+    def isEmptyRow(row):
+        for item in row:
+            if item!="":
+                return False;
+        return True;
+        
+    def addToken(token,rowContent,mfid,mfpd,curvesData):
+        if self.ChangeBackSlashes:
+            rowContent=checkWinShares(rowContent)
+            mfid.setToken(token, rowContent)
+            if token.__contains__('.'):
+                mfpd[token]=rowContent
+                curvesData[token]=rowContent
+                
+    def processItem(j,token,lenRow,lenHeader,rowValue,mfid,mfpd,curvesData):
+        res=True
+        if j&lt;lenRow:
+            if token != "" :
+                addToken(token,rowValue,mfid,mfpd,curvesData)
+        else:
+            res=self.critical("CSVToUPmdata:processItem:lenError","CSV File has {} but {} excepted".format(lenRow,lenHeader)) and res
+        return res
+        
+    def getAutoDelimiter(csvFile):
+        with open(csvFile,encoding='utf-8') as f:
+            for i in range (SkipLines+1):
+                line= f.readline()
+        f.close()
+        cnt=0;
+        delimiter=2 #default to ;
+        for idx in range(3):
+            n=line.count(delimiters[idx])
+            if n>cnt:
+                delimiter=idx;
+                cnt=n
+        return delimiter
+        
+    def injectMdata(up):
+        res=True
+        csvFile=up.getFilePath()
+        ShotsUP=[]
+        HeaderTokens=[]
+        self.info('CSVtoUPmdata:injectMdata','Processing CSV {}'.format(csvFile))        
+        csvDelimiterNumber = int(self.csvDelimiter)
+        if csvDelimiterNumber&lt;0:
+            csvDelimiterNumber=getAutoDelimiter(csvFile)
+        csvDelimiter=delimiters[csvDelimiterNumber]
+        with open(csvFile,encoding='utf-8') as f:
+            reader = csv.reader(f, delimiter=csvDelimiter)
+            numRows=sum(1 for row in enumerate(reader))
+            self.setComplexity(numRows*10)
+            f.seek(0)
+            for i,row in enumerate(reader):
+                self.progressUpdated(i*10+1)
+                if (self.isCancelled()):
+                    return [False,[]]                    
+                if i &lt; SkipLines:
+                    continue
+                if i==SkipLines:
+                    HeaderTokens=row
+                    #print('HeaderTokens: ',HeaderTokens)
+                    numHeaders=len(HeaderTokens)
+                    if numHeaders&lt;=1:
+                        self.warning("CSVToUPmdata:injectMdata:columnsWarning","CSV file has {} column(s) only. Please check the csv delimiter currently using {} delimiter".format(numHeaders,csvDelimiter))
+                else:
+                    if isEmptyRow(row):
+                        continue
+                    FileName =row[FilesRowIndex]
+                    if self.ChangeBackSlashes:
+                        FileName=checkWinShares(FileName)
+                    #print (FileName)
+                    upLine = CuniversalPath(nc)
+                    upLine.autoFromName(FileName)
+                    upLine.readMetadataFromFile()
+                    mfid = upLine.getMediaFileInfoData()
+                    mfpd = upLine.getPrivateData("propertiesOverride")
+                    if mfpd == None:
+                        mfpd = {}
+                    curvesData = upLine.getPrivateData("CurvesData")
+                    if curvesData == None:
+                        curvesData = {}
+                    tokensFrom=int(self.TokenNameFrom)
+                    lenHeader = len(HeaderTokens)
+                    if tokensFrom==0: # process GetTokenFromHeader tokens
+                        for j, token in enumerate(HeaderTokens):
+                                res=processItem(j,token,len(row),lenHeader,row[j],mfid,mfpd,curvesData) and res
+                                
+                    elif tokensFrom==1: # process useCustomTokens tokens
+                        for j,k in mfidTokens.items():                                
+                                res=processItem(k,j,len(row),lenHeader,row[k],mfid,mfpd,curvesData) and res
+                                    
+                    if self.SetPrivateData:
+                        upLine.setPrivateData("propertiesOverride", mfpd)
+                        upLine.setPrivateData("CurvesData", curvesData)
+                    upLine.setMediaFileInfoData(mfid)
+                    ShotsUP.append(upLine)
+
+            f.close()
+        return [res,ShotsUP]
+
+    res=True
+    if self.bypassEnabled:
+        #this node leaves the outputs empty during bypass as the files are not generated
+        return True
+
+    input=self.getFirstConnectorByName("csv")
+    list = input.getUniversalPaths()
+    output=self.getFirstConnectorByName("mdata")
+    output.clearUniversalPaths()
+    delimiters={ -1:'Auto',0: '\t', 1: ',', 2:';' }
+    FilesRowIndex = int(self.evaluate(self.MediaFilesColIndex))
+    SkipLines= int(self.evaluate(self.SkipLines))
+    mfidTokens = {}
+    TokenName1 = self.evaluate(self.TokenName1).strip()
+    RowIndexT1 =int(self.evaluate(self.ColumnT1))
+    mfidTokens[TokenName1] = RowIndexT1
+    TokenName2 = self.evaluate(self.TokenName2).strip()
+    RowIndexT2 = int(self.evaluate(self.ColumnT2))
+    mfidTokens[TokenName2] = RowIndexT2
+    TokenName3 = self.evaluate(self.TokenName3).strip()
+    RowIndexT3 = int(self.evaluate(self.ColumnT3))
+    mfidTokens[TokenName3] = RowIndexT3
+    TokenName4 = self.evaluate(self.TokenName4).strip()
+    RowIndexT4 = int(self.evaluate(self.ColumnT4))
+    mfidTokens[TokenName4] = RowIndexT4
+    TokenName5 = self.evaluate(self.TokenName5).strip()
+    RowIndexT5 = int(self.evaluate(self.ColumnT5))
+    mfidTokens[TokenName5] = RowIndexT5
+    # FrameRate = float(self.mediaFilesFPS)
+    # StartFloat = Timecode(FrameRate, StartTC).frame_number
+    # EndFloat = Timecode(FrameRate, EndTC).frame_number
+
+    nc=CnameConvention(self.getNameConvention())
+    if not nc.toString():
+        nc=self.getWorkflow().getNameConvention()
+
+    for upToProcess in list:
+        if self.isCancelled():
+            return False
+        [r, ShotsUP] = injectMdata(upToProcess)
+        res = res and r
+        if res:
+            if ShotsUP:            
+                output.addUniversalPaths(ShotsUP)
+            self.progressUpdated(self.complexity())
+    return res
+        
+def onPropertyUpdated(self,name):
+    try:
+        if name=="TokenNameFrom":
+            visible=int(self.TokenNameFrom)==1
+            for i in range(6):
+                self.setPropertyVisible("TokenName{}".format(i),visible)
+                self.setPropertyVisible("ColumnT{}".format(i),visible)
+                   
+    except AttributeError:
+        pass            </code>
+     <csvDelimiter type="string">-1</csvDelimiter>
+     <MediaFilesColIndex type="int">0</MediaFilesColIndex>
+     <SkipLines type="int">0</SkipLines>
+     <ChangeBackSlashes type="bool">true</ChangeBackSlashes>
+     <SetPrivateData type="bool">true</SetPrivateData>
+     <TokenName1 type="string"></TokenName1>
+     <ColumnT1 type="int">0</ColumnT1>
+     <TokenName2 type="string"></TokenName2>
+     <ColumnT2 type="int">0</ColumnT2>
+     <TokenName3 type="string"></TokenName3>
+     <ColumnT3 type="int">0</ColumnT3>
+     <TokenName4 type="string"></TokenName4>
+     <ColumnT4 type="int">0</ColumnT4>
+     <TokenName5 type="string"></TokenName5>
+     <ColumnT5 type="int">0</ColumnT5>
+     <TokenNameFrom type="int">0</TokenNameFrom>
+    </properties>
+    <connections>
+     <rankFrom id="1f4458d6-6c3c-4724-9f96-c51c0bb40bb0" name="rankFrom" specialType="order" type="input"/>
+     <rankTo id="7b4e3923-0871-4727-a708-ebfb30edcdb3" name="rankTo" specialType="order" type="output"/>
+     <csv id="3a7ee3b1-543d-45e7-8fe8-0b059fb0c25c" name="csv" type="input">
+      <linkedTo>390bb6c8-6e91-4aa7-a391-0a7833abfb15</linkedTo>
+     </csv>
+     <mdata id="bc922813-ff72-47f7-aaa8-df1feae03a25" name="mdata" type="output">
+      <linkedTo>01cdbbaa-2e7f-458a-902d-f79c7d5aa8ec</linkedTo>
+     </mdata>
+    </connections>
+   </node>
+   <node class="AfterEffectsFile" type="default">
+    <properties>
+     <objectName type="string">AfterEffectsFile</objectName>
+     <color type="color">#00005b</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">311.04,-8.40001</pos>
+     <schemaName type="string">aftereffectsfile</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <createNewRND type="bool">true</createNewRND>
+     <newRNDdirectory type="string"></newRNDdirectory>
+     <masterInput type="string"></masterInput>
+     <renderNameFromInput type="bool">true</renderNameFromInput>
+     <mediaConnectors type="bool">false</mediaConnectors>
+     <trimTails type="int">0</trimTails>
+     <useNames type="int">1</useNames>
+     <jsonCurvesData type="string"></jsonCurvesData>
+     <afterFxBinPath type="string"></afterFxBinPath>
+     <composition type="string"></composition>
+     <renderTemplate type="int">0</renderTemplate>
+    </properties>
+    <connections>
+     <rankFrom id="062b03d0-ccbf-4919-87e3-aba6e45de2af" name="rankFrom" specialType="order" type="input"/>
+     <rankTo id="facfa92a-504d-4700-9fe1-4270fc4465c6" name="rankTo" specialType="order" type="output"/>
+     <rnd id="44dd6311-389b-423c-b380-0486473ef68d" label="aep" name="rnd" type="output">
+      <linkedTo>91fd7f15-c64a-4907-948f-11efde43cef1</linkedTo>
+     </rnd>
+     <override id="01cdbbaa-2e7f-458a-902d-f79c7d5aa8ec" name="override" type="input">
+      <linkedTo>bc922813-ff72-47f7-aaa8-df1feae03a25</linkedTo>
+     </override>
+    </connections>
+   </node>
+   <node class="AfterEffectsRender" type="task">
+    <properties>
+     <objectName type="string">AfterEffectsRender</objectName>
+     <color type="color">#00005b</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">740.88,-10.08</pos>
+     <schemaName type="string">aftereffectsrender</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <binFilePath type="string"></binFilePath>
+     <outputRX type="string">Output To.*: (.*)$</outputRX>
+     <errorRX type="string">error\s*:(.*)$</errorRX>
+     <progressRX type="string">PROGRESS:\s+\d{1,2}:\d{2}:\d{2}:\d{2}\s\((\d+)\)</progressRX>
+     <maxProgress type="int">550</maxProgress>
+     <params type="string">-project "[input]" -comp "[privateData{id=adobe/comp}]" -rqindex [privateData{id=adobe/rqindex}] -output "[output]"</params>
+     <rosettaMode type="bool">false</rosettaMode>
+     <language type="string">English</language>
+    </properties>
+    <connections>
+     <rankFrom id="ccc9b825-dbc7-451a-bdb1-08d7ba384af6" name="rankFrom" specialType="order" type="input"/>
+     <rankTo id="356015f7-7245-4bef-a4eb-1fd5b8db90b8" name="rankTo" specialType="order" type="output"/>
+     <in id="91fd7f15-c64a-4907-948f-11efde43cef1" label="aep" name="in" type="input">
+      <linkedTo>44dd6311-389b-423c-b380-0486473ef68d</linkedTo>
+     </in>
+     <out id="4112dde3-e6cc-47b2-92a7-cd3e2f74e4ee" name="out" type="output"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-362.96,-246.72</ScenePos>
+     <Size type="size2">338.88,384.96</Size>
+     <TextSize type="float">8</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Reading the CSV Files From...</Text>
+     <TextColor type="color">#ffffffff</TextColor>
+     <BackgroundColor type="color">#ff004020</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">291.04,-222.72</ScenePos>
+     <Size type="size2">348,364.32</Size>
+     <TextSize type="float">8</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Creating new AEP...</Text>
+     <TextColor type="color">#ffffffff</TextColor>
+     <BackgroundColor type="color">#ff004020</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">714.88,-221.04</ScenePos>
+     <Size type="size2">318.8,363.6</Size>
+     <TextSize type="float">8</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Final Renders...</Text>
+     <TextColor type="color">#ffffffff</TextColor>
+     <BackgroundColor type="color">#ff004020</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-300.72,-165.28</ScenePos>
+     <Size type="size2">245.484,47.2969</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Select:
+- Directory to read your CSV from</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">315.36,-172.48</ScenePos>
+     <Size type="size2">277.609,147.297</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Select:
+- Your AEP file
+- Its composition to use
+- Its output format
+- The folder to store the new AEP files
+
+</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">733.2,-157.6</ScenePos>
+     <Size type="size2">216.75,67.2969</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Select:
+- Final Render Destination
+- Your After Effects Language</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-349.92,221.76</ScenePos>
+     <Size type="size2">1388.16,115.2</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Notes</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-234.72,276.32</ScenePos>
+     <Size type="size2">1181.86,36.9531</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">You can also use the "Create After Effects Workflow" Wizard for a Step by Step configuration of your Workflow</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layoutdescription version="1.1" type="xml">
+  <layout name="Burn Live" fontSize="24" font="OpenSans" drawshadow="true">
+    <datalist>
+      <data name="TapeName">
+        <active value="enable"/>
+        <tolive value="enable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="1" column="1"/>
+          <value format="string" value="TapeName:"/>
+          <value format="data" source="internal" value="tapename"/>
+        </valueslist>
+      </data>
+      <data name="Header TapeName">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="2" column="1"/>
+          <value format="string" value="Header TapeName:"/>
+          <value format="data" source="internal" value="headertapename"/>
+        </valueslist>
+      </data>
+      <data name="Record TC">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="3" column="1"/>
+          <value format="string" value="Record TC:"/>
+          <value format="data" source="internal" value="recordtimecode"/>
+        </valueslist>
+      </data>
+      <data name="Record Frame">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="4" column="1"/>
+          <value format="string" value="Rec Frame:"/>
+          <value format="data" source="internal" value="recordframenumber"/>
+        </valueslist>
+      </data>
+      <data name="Source TC">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="5" column="1"/>
+          <value format="string" value="Source TC:"/>
+          <value format="data" source="internal" value="sourcetimecode"/>
+        </valueslist>
+      </data>
+      <data name="Source Frame">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="6" column="1"/>
+          <value format="string" value="Source Frame:"/>
+          <value format="data" source="internal" value="sourceframenumber"/>
+        </valueslist>
+      </data>
+      <data name="MediaName">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="7" column="1"/>
+          <value format="string" value="Media:"/>
+          <value format="data" source="internal" value="medianame"/>
+        </valueslist>
+      </data>
+      <data name="AbsolutePath">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="8" column="1"/>
+          <value format="string" value="Path:"/>
+          <pathoption show="showFromLevel" level="2"/>
+          <value format="data" source="internal" value="absolutepath"/>
+        </valueslist>
+      </data>
+      <data name="ClipName">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="9" column="1"/>
+          <value format="string" value="Clip:"/>
+          <value format="data" source="internal" value="clipname"/>
+        </valueslist>
+      </data>
+      <data name="FPS">
+        <active value="disable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="10" column="1"/>
+          <value format="string" value="Fps:"/>
+          <value format="data" source="internal" value="fps"/>
+        </valueslist>
+      </data>
+      <data name="Ring Buffer">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="11" column="1"/>
+          <value format="string" value="Buffer:"/>
+          <value format="data" source="internal" value="buffer"/>
+        </valueslist>
+      </data>
+      <data name="Duration Frames">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="12" column="1"/>
+          <value format="string" value="Duration Frames:"/>
+          <value format="data" source="internal" value="durationframes"/>
+        </valueslist>
+      </data>
+      <data name="Duration Timecode">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="13" column="1"/>
+          <value format="string" value="Duration Timecode:"/>
+          <value format="data" source="internal" value="durationtc"/>
+        </valueslist>
+      </data>
+      <data name="Head Frames">
+        <active value="enable"/>
+        <tolive value="disable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="14" column="1"/>
+          <value format="string" value="Head Frames:"/>
+          <value format="data" source="internal" value="headframes"/>
+        </valueslist>
+      </data>
+      <data name="Tail Frames">
+        <active value="enable"/>
+        <tolive value="enable"/>
+        <shadow color="0,0,0,40"/>
+        <valueslist>
+          <cursor line="15" column="1"/>
+          <value format="string" value="Tail Frames:"/>
+          <value format="data" source="internal" value="tailframes"/>
+        </valueslist>
+      </data>
+    </datalist>
+  </layout>
+</layoutdescription>

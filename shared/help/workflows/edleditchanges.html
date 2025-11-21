@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; EDL Edit Changes</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node uses two EDL files as input and checks each event to see if there has been any editing changes between them. &nbsp;Based on that it then creates a new EDL with m" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "edleditchanges.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">EDL Edit Changes</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?edleditchanges.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">EDL Edit Changes</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="editready.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="edlreference.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This node uses two EDL files as input and checks each event to see if there has been any editing changes between them. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">Based on that it then creates a new EDL with markers indicating how much trimming has been done, and if any new event have happened.</span></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="ICP03-6noExsVuchJkkrOssJqTl-o3oEbIzQU5uGKFRGFNk1tDixC7UQW0GQjQNbzmkzx-5giRvUJWQA8jw0O6MChaV1PhahiT-HYBY1wqA4mUlAk4Ce8xs7URQneQBnUmTHZCz2-yaNeNu6LqtBlZE" width="558" height="309" style="margin:0 auto 0 auto;width:558px;height:309px;border:none" src="icp03-6noexsvuchjkkrossjqtl-o3oebizqu5ugkfrgfnk1tdixc7uqw0gqjqnbzmkzx-5girvujwqa8jw0o6mchav1phahit-hyby1wqa4mulak4ce8xs7urqneqbnumthzcz2-yanenu6lqtblze_zoom77.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">The EDL with markers generated can be either in Mistika/Avid or DaVinci Resolve format. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">As in the EDL itself there is no information about the framerate used, it must also be indicated to compute the differences in timecode between each event.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="kllTZfNIG1i4kUCGBE-t5yP5xRAbUswD6yQMVMJ_fsSQ4DeIkifpKurmC5qVQ3a2ICcxbJlwY7dU153Pqsg_flglMwIQm4Avfmd22XL4vRDKgasgtsFcFPdH8USveMnSG_q8UQ7luNWDDHoBpjCSR1Q" width="230" height="131" style="margin:0 auto 0 auto;width:230px;height:131px;border:none" src="klltzfnig1i4kucgbe-t5yp5xrabuswd6yqmvmj_fssq4deikifpkurmc5qvq3a2iccxbjlwy7du153pqsg_flglmwiqm4avfmd22xl4vrdkgasgtsfcfpdh8usvemnsg_q8uq7lunwddhobpjcsr1q.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">It is also possible to determine the color of the marker used to indicate the edit changes detected and new events separately. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">Events that do not present any edit change (which means that they have the same source and rec tc in/out) will not generate any marker and will be omitted. </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="Zd9G_DnPtzapNiWRJCpO5fjaawHmu1CN0R6tZB0p4dhb9fYGNrRVGFc88abfu5bmp8qhjs4idp1p9ywgOegUR18LnaA86tqzU692WOVyrX8NYE7fQGxjU4fliRYpcRgBFS_sk2wqPjY0jBAMyY7ol4s" width="275" height="175" style="margin:0 auto 0 auto;width:275px;height:175px;border:none" src="zd9g_dnptzapniwrjcpo5fjaawhmu1cn0r6tzb0p4dhb9fygnrrvgfc88abfu5bmp8qhjs4idp1p9ywgoegur18lnaa86tqzu692wovyrx8nye7fqgxju4flirypcrgbfs_sk2wqpjy0jbamyy7ol4s.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">It is important to note that normally editors work with the transcoded footage keeping the original clip name across the whole edit process (i.e. A003C007_220930_RNFD). While re-conforming this clips is not a big issue, it can become messy when VFX plates and other elements have already been exported and started to be worked on by the VFX department. These plates may have or not handles, and even if they have them they may not be enough when there is a re-edit of a whole VFX sequence. Furthermore, one same clip can be used several times in the same sequence, so comparing different events that have all of them the same clip name will lead to excessive and redundant information about performed trims of that clip. Only in ideal circumstances the editor will be able to substitute the original clip with the exported VFX so its name will be included in the next .edl export However, this isn't guaranteed, and the VFX clip might not even be in the previous .EDL export. This makes it practically impossible to compare them.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Therefore it is strongly recommended to feed the EDL Edit Changes node with EDL files that contain directly the VFX name in each event: VFX name assignment is unique (or should be), and it is the only way to have unequivocal results when comparing edit changes between all events in both EDLs, before and after the re-edit performed. In order to generate these edls with the VFX name in the events, the EDL To Markers node can be used as follows:</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">To start with, we have two EDLs generated by the editor, before and after the re-edit, with markers in every event to determine the VFX name</span><span style="font-size: 15px; font-family: Arial,Helvetica,sans-serif; color: #000000;">: </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="7cAvKGB1D0e-q1abhYqiXCj-OCIV0u2lXlWikFNgD59qJ1651JQ6NCe1pzToq_pOxN5TC7obE2NAc15UTpIStv_5uvmvvNprgXF-ZlodR3fVg-A767te4u0ZRdqvHcy-6jxtYAyVc9APUqJNtWBjmro" width="881" height="249" style="margin:0;width:881px;height:249px;border:none" src="7cavkgb1d0e-q1abhyqixcj-ociv0u2lxlwikfngd59qj1651jq6nce1pztoq_poxn5tc7obe2nac15utpistv_5uvmvvnprgxf-zlodr3fvg-a767te4u0zrdqvhcy-6jxtyayvc9apuqjntwbjmro.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="PsFjr9vHo-h67y7r3nX1MgsuEjJKdg5xo7QO5yLvXLgNrLVUsigRpq_u-7pfYgqsWnxOw4OUZX_lzD-cCdOIl6J4sX8QnQDtZBp24VoZ8qiT0T9zRYOpkqR3DSBpM3g9xqBGXBFmRZhon138xbuXGkw" width="881" height="342" style="margin:0;width:881px;height:342px;border:none" src="psfjr9vho-h67y7r3nx1mgsuejjkdg5xo7qo5ylvxlgnrlvusigrpq_u-7pfygqswnxow4ouzx_lzd-ccdoil6j4sx8qnqdtzbp24voz8qit0t9zryopkqr3dsbpm3g9xqbgxbfmrzhon138xbuxgkw.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">We can observe that the whole edit uses the same clip throughout all the cuts, and also a new VFX has been added in the last edit. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">Event 003 has its tail trimmed and moved in the timeline, event 004 has no changes, and event 005 is a new vfx that wasn’t declared before.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Then with the</span><span class="f_BodyText" style="font-weight: bold; color: #ff0000;"> </span><span class="f_BodyText" style="font-weight: bold; color: #000000;">EDL To Markers</span><span class="f_BodyText"> node we process both EDLs and get new ones with its corresponding VFX name in the event tapename, thus eliminating the reference to the original clip name:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="pHIR-Xzjwgarkp8yT57lxQXcbyXV37R_AP72qXWbvKZve1w4rhHvCZn6FxBiSp5XrmLyQbz1MWh4FHBnrxCfvp4Qot2ybFVwGDqPfwjS-nEu7X7ukOvLh3zBzJZL-5uAzQ1TC_rt3Ht-6k3Y_5ORG88" width="651" height="173" style="margin:0 auto 0 auto;width:651px;height:173px;border:none" src="phir-xzjwgarkp8yt57lxqxcbyxv37r_ap72qxwbvkzve1w4rhhvczn6fxbisp5xrmlyqbz1mwh4fhbnrxcfvp4qot2ybfvwgdqpfwjs-neu7x7ukovlh3zbzjzl-5uazq1tc_rt3ht-6k3y_5org88.png"/></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="v0SZrBZNvoQkfkfagNehObush9p-f9UrRNVdNgU5wHwD23w9t42wYcQXq26Y_alWAGAPhXFHk5jHvRzhYeCE1G8cP6Rk6EamYw2k-vTu6A6nE9j-1qTBDryqdiqjE39mjzHX4T4nm_ZuphSwM8Al3a0" width="639" height="212" style="margin:0 auto 0 auto;width:639px;height:212px;border:none" src="v0szrbznvoqkfkfagnehobush9p-f9urrnvdngu5whwd23w9t42wycqxq26y_alwagaphxfhk5jhvrzhyece1g8cp6rk6eamyw2k-vtu6a6ne9j-1qtbdryqdiqje39mjzhx4t4nm_zuphswm8al3a0.png"/></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Having already unequivocal names for each EDL event in each of the EDL files, we can thereby make use of the EDL Edit Changes node to look for timecode differences. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">The new generated EDL can be used to conform the affected VFX, and will show information about each event trimmed and/or moved in the timeline in the form of notes added to each marker:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="Xs_JPV-atE--LKzpCea5OgBcGXnHmxRADIDa9M7HYxmSNd0ICRngqotHhmK3QfdpWssuKIZakndy5H5vALxc_hGZ9bs-f1r1aYDfmSfdoRStz7Hu_GXiT0P__8fmep_BQ6fpWKytAbkX_G__ilQree8" width="644" height="196" style="margin:0 auto 0 auto;width:644px;height:196px;border:none" src="xs_jpv-ate--lkzpcea5ogbcgxnhmxradida9m7hyxmsnd0icrngqothhmk3qfdpwssukizakndy5h5valxc_hgz9bs-f1r1aydfmsfdorstz7hu_gxit0p__8fmep_bq6fpwkytabkx_g__ilqree8.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">In the following example we can see how a workflow can be built making use of both -  </span><span class="f_BodyText" style="font-weight: bold; color: #000000;">EDL To Markers</span><span class="f_BodyText"> and</span><span class="f_BodyText" style="font-weight: bold;"> </span><span class="f_BodyText" style="font-weight: bold; color: #000000;">EDL Edit Changes</span><span class="f_BodyText"> nodes. </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="line-height: 1.57;"><img alt="FW6IhshN65civxbs56kZlbhtbp7Rti3jx_DzaLe9jJYRd97DniuHNbfVoZtJNcbwPggTIUvQncyCwM49ncwY68BIrsTvyzu38qbl6p628G8MDcZi_WAZ1nj3stfHbqW6smnxs02RGdADFNn_WwvCw-o" width="1331" height="441" style="margin:0;width:1331px;height:441px;border:none" src="fw6ihshn65civxbs56kzlbhtbp7rti3jx_dzale9jjyrd97dniuhnbfvoztjncbwpggtiuvqncycwm49ncwy68birstvyzu38qbl6p628g8mdczi_waz1nj3stfhbqw6smnxs02rgdadfnn_wwvcw-o.png"/></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">In this case our input are two EDL files corresponding to the previous and actual edit:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="1mEtACpcOcgUPrGR9S7Z35es10_35Aj3HG7g9wLNX7WQG8RKiH-cPuJLtwCEyFxPp8iHtEgmTkLA3Psg8iFOHgGTgW_JDJYkjCD9Nsmhu4xIpHAyxAtUMKfRAaqcL6LEBntzAh7thpCSNGzhUE6l_UU" width="238" height="125" style="margin:0 auto 0 auto;width:238px;height:125px;border:none" src="1metacpcocguprgr9s7z35es10_35aj3hg7g9wlnx7wqg8rkih-cpujltwceyfxpp8ihtegmtkla3psg8ifohggtgw_jdjykjcd9nsmhu4xiphayxatumkfraaqcl6lebntzah7thpcsngzhue6l_uu.png"/></p>
+<p class="p_BodyText"><span class="f_BodyText">Then we generate another EDL for each one with the EDL to Markers node, and establish a name convention suitable to extract the needed tokens in order to classify the files by the following metadata:</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="7iQXO4tl0sIb9xG3VMJ2ww4dXow1k4sWQHP7uEYaXVamX8BpP5PloJyV2YyIQxCnu7iRxOlRkMEuuVQlCw7TJi6zXnk5w7A9pg3HNUioxheA0-yI4xTvlv2aT5vNXhWcaMIWw2wVhrL94OXTkWgKsh0" width="599" height="350" style="margin:0 auto 0 auto;width:599px;height:350px;border:none" src="7iqxo4tl0sib9xg3vmj2ww4dxow1k4swqhp7ueyaxvamx8bpp5plojyv2yyiqxcnu7irxolrkmeuuvqlcw7tji6zxnk5w7a9pg3hnuioxhea0-yi4xtvlv2at5vnxhwcamiww2wvhrl94oxtkwgksh0.png"/></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="V9Z82GUpzC8QQDnhPxZti2ZSMVpLHj5YhOjq1OmfbdwyX1NVtz7HjuIXyzNpY5d6VavLan42DX5SJ8Dkr34gfy2ptl7lKmuwIYDBtoXnn07y5kjRL3qVadvx64czkXgYK_NdVUYzhnQ5UckifzWZTlw" width="331" height="126" style="margin:0 auto 0 auto;width:331px;height:126px;border:none" src="v9z82gupzc8qqdnhpxzti2zsmvplhj5yhojq1omfbdwyx1nvtz7hjuixyznpy5d6vavlan42dx5sj8dkr34gfy2ptl7lkmuwiydbtoxnn07y5kjrl3qvadvx64czkxgyk_ndvuyzhnq5uckifzwztlw.png"/></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">Finally, we make use of the ClassifyByMetadata node to separate both edit steps and feed separately the EDL Edit Changes node:</span></p>
+<p class="p_Normal" style="line-height: 1.57;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="GOu_1liln3ar4dIAMXx1xOa2N17PWi8Vjwu6q4D9_UnaJTmC2182OdTxLFWzawuj5cbxML88fiLyIcReJBwkvlgrSYxpsiJsD_r_rf5ADPnZOwbZ7AShx3bxMPlwF_8V3JN6uPQ7hOzBWvYto3HlBhI" width="1246" height="207" style="margin:0 auto 0 auto;width:1246px;height:207px;border:none" src="gou_1liln3ar4diamxx1xoa2n17pwi8vjwu6q4d9_unajtmc2182odtxlfwzawuj5cbxml88filyicrejbwkvlgrsyxpsijsd_r_rf5adpnzowbz7ashx3bxmplwf_8v3jn6upq7hozbwvyto3hlbhi.png"/></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">As we can see, we have generated two EDL files with markers for Mistika/Avid and DaVinci Resolve formats. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">These can be directly imported into the timeline, allowing for immediate integration into the editing process. This eliminates the need for operators to spend time comparing reference movies to identify differences or referring to auxiliary documents like Excel tables or PDF reports to discern changes between the cuts.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="7XD1If1wSDwFVMk3t5zh1hyQGJUPax3TJokIaWcd4aPif-ijhnZLqx3Mdloc89CuU6R8EeKMGqagS73doudKZgoBUTRTtom6NHNzZRhD4SE0ToAIXbK4bsDoOPd00TPjKfeHmTuh9k4ZqeVXhAsYVBQ" width="1434" height="564" style="margin:0 auto 0 auto;width:1434px;height:564px;border:none" src="7xd1if1wsdwfvmk3t5zh1hyqgjupax3tjokiawcd4apif-ijhnzlqx3mdloc89cuu6r8eekmgqags73doudkzgobutrttom6nhnzzrhd4se0toaixbk4bsdoopd00tpjkfehmtuh9k4zqevxhasyvbq_zoom92.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.57;"><img alt="cD4u_LWOwvLAurYXmQmpH7QWbFjZ7aFMTeClCyUNYj3y9yDyc7thEZXZXLPbmRIY7jgc53_vNaY9Z_Tphw7exVHoc1Ja3lvwHSNnnZ24a6IuRxNcHNNrm-02xUyQKlrQnl3sTk2YksF2CCO88l2n1u8" width="983" height="797" style="margin:0 auto 0 auto;width:983px;height:797px;border:none" src="cd4u_lwowvlauryxmqmph7qwbfjz7afmteclcyunyj3y9ydyc7thezxzxlpbmriy7jgc53_vnay9z_tphw7exvhoc1ja3lvwhsnnnz24a6iurxnchnnrm-02xuyqklrqnl3stk2yksf2cco88l2n1u8_zoom94.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">edlBefore:</span> EDL<span class="f_BodyText"> file containing the cut information before the edit change.</span></p>
+<p class="p_Normal"><span class="f_BodyText" style="font-weight: bold;">edlAfter</span><span class="f_BodyText">: EDL file containing the cut information after the edit change.</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">edlMarkers:</span> <span class="f_BodyText">.edl files for each format selected in the ‘edlMarkersFormat’ containing markers and comments about the edit changes detected.</span></p>
+<p class="p_Normal">.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#nameconvention" class="topiclink">Name Convention</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Python standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#code" class="topiclink">code</a></span></h3>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_T_Emphasis">NOTE: An introduction to all the Python tools in Mistika Workflows is available in the <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools </a>section.</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">EDL Path: </span>Folder to store the .edl files created by this node.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">edlMarkersFormat: </span><span class="f_BodyText">Toggles to select Mistika/Avid or DaVinciResolve format, as well as the framerate to be used to compute the timecode differences between both EDL files</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">MarkersColors</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Edit Changes Mistika</span><span class="f_BodyText">: Pulldown menu with the available colors in Mistika/Avid format to generate the markers when an edit change has been detected.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">New VFX Mistika</span><span class="f_BodyText">: Pulldown menu with the available colors in Mistika/Avid format to generate the markers when a new VFX event has been detected.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">Edit Changes Resolve</span><span class="f_BodyText">: Pulldown menu with the available colors in DaVinci Resolve format to generate the markers when an edit change has been detected.</span></p>
+<p class="p_BodyText"><span class="f_BodyText" style="font-weight: bold;">New VFX Resolve</span><span class="f_BodyText">: Pulldown menu with the available colors in DaVinci Resolve format to generate the markers when a new vfx event has been detected.</span></p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

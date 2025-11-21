@@ -1,0 +1,28 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="Filemail" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="username" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+            <xsd:element name="password" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+            <xsd:element name="packFiles" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="5"/>
+            <xsd:element name="days" type="xsd:integer" sgo:minValue="1" sgo:maxValue="365" sgo:visibility="0" sgo:sortOrder="7"/>
+            <xsd:element name="Optional" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="9">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="toMail" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                        <xsd:element name="subject" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                        <xsd:element name="message" type="xsd:string" sgo:visibility="0" sgo:sortOrder="13"/>
+                        <xsd:element name="transferPassword" type="xsd:string" sgo:visibility="0" sgo:sortOrder="15"/>
+                        <xsd:element name="notify" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="16"/>
+                        <xsd:element name="confirmation" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="18"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>  
+            <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="50"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

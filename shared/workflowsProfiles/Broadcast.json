@@ -1,0 +1,202 @@
+{
+    "workflowsNodes": [
+        {
+            "className": "Aspera Client"
+        },
+        {
+            "className": "Auto Trigger"
+        },
+        {
+            "className": "Failed UPs"
+        },
+        {
+            "className": "File"
+        },
+        {
+            "className": "Folder"
+        },
+        {
+            "className": "FTP"
+        },
+        {
+            "className": "Media Movie"
+        },
+        {
+            "className": "Media Sequence"
+        },
+        {
+            "className": "Object Matrix In"
+        },
+        {
+            "className": "Panasonic 8KP2 Pack"
+        },
+        {
+            "className": "Panasonic P2 Pack"
+        },
+        {
+            "className": "RND File"
+        },
+        {
+            "className": "S3 In"
+        },
+        {
+            "className": "Sony XDROOT Pack"
+        },
+        {
+            "className": "Watcher"
+        },
+        {
+            "className": "Audio Router"
+        },
+        {
+            "className": "Change 8KP2 Metadata"
+        },
+        {
+            "className": "Change Resolution"
+        },
+        {
+            "className": "Checksum"
+        },
+        {
+            "className": "Classify By Age"
+        },
+        {
+            "className": "Classify By Aspect Ratio"
+        },
+        {
+            "className": "Classify By Extension"
+        },
+        {
+            "className": "Classify By Metadata"
+        },
+        {
+            "className": "Copy"
+        },
+        {
+            "className": "Copy To 8KP2 Cards"
+        },
+        {
+            "className": "Crop"
+        },
+        {
+            "className": "CSV to UPmdata"
+        },
+        {
+            "className": "DNxHD"
+        },
+        {
+            "className": "DNxHD OpAtom"
+        },
+        {
+            "className": "DNxHR"
+        },
+        {
+            "className": "DPX"
+        },
+        {
+            "className": "Edit Metadata"
+        },
+        {
+            "className": "Extract Audio Channels"
+        },
+        {
+            "className": "Fix P2 Serial"
+        },
+        {
+            "className": "H264"
+        },
+        {
+            "className": "Join 8KP2 Contents"
+        },
+        {
+            "className": "LUT3D"
+        },
+        {
+            "className": "Mistika JS"
+        },
+        {
+            "className": "Mistika Render"
+        },
+        {
+            "className": "Move"
+        },
+        {
+            "className": "NC To Metadata"
+        },
+        {
+            "className": "NVidia H264"
+        },
+        {
+            "className": "NVidia H265"
+        },
+        {
+            "className": "Panasonic 8KP2"
+        },
+        {
+            "className": "Panasonic AVC Intra"
+        },
+        {
+            "className": "ProRes"
+        },
+        {
+            "className": "Python"
+        },
+        {
+            "className": "RGB Levels"
+        },
+        {
+            "className": "Serialize Inputs"
+        },
+        {
+            "className": "Tag ColorSpace"
+        },
+        {
+            "className": "Tag FPS"
+        },
+        {
+            "className": "Trash"
+        },
+        {
+            "className": "Trim Media"
+        },
+        {
+            "className": "UniColor"
+        },
+        {
+            "className": "WAV"
+        },
+        {
+            "className": "XAVC"
+        },
+        {
+            "className": "XDCAM"
+        },
+        {
+            "className": "Aspera Client"
+        },
+        {
+            "className": "FTP"
+        },
+        {
+            "className": "Gmail"
+        },
+        {
+            "className": "Mail"
+        },
+        {
+            "className": "Object Matrix Out"
+        },
+        {
+            "className": "S3 Out"
+        },
+        {
+            "className": "Signiant"
+        },
+        {
+            "className": "Slack"
+        },
+        {
+            "className": "Tar"
+        }
+    ]
+}

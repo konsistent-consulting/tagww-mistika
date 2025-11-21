@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Tasks &gt; NC to metadata</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;Name Convention to metadata. To extract metadata values from sub-strings of the paths and filenames of the input files, by matching the tokens appearing in the name co" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "nctometadata.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">NC to metadata</span></h1>
+<p class="p_Normal">&nbsp;</p>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?nctometadata.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="tasks.html">Tasks</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">NC to metadata</span></h1>
+<p class="p_Normal">&nbsp;</p>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="mpeg.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="tasks.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="nvidiah264.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="text-align: center; page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">Name Convention to metadata. To extract metadata values from sub-strings of the paths and filenames of the input files, by matching the tokens appearing in the name convention syntax (rather than getting their values from embedded metadata in the file headers). The new token values can then be inserted in new file names and file paths in posterior nodes when creating new media. &nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">This node has priority in case of duplicity (if a token with the same name is found on file embedded metadata it will be ignored) . </span></p>
+<p class="p_BodyText"><span class="f_BodyText">Example: let's suppose that you have declared a &nbsp;token named &quot;version&quot; in the </span><span class="f_T_Menu">Name Convention</span><span class="f_BodyText"> property of a </span><span class="f_T_Menu">Media Sequence</span><span class="f_BodyText"> node (or in a </span><span class="f_T_Menu">Watcher</span><span class="f_BodyText"> node):</span></p>
+<p class="p_BodyText"><span class="f_T_Code">[path][baseName][_version][_frame][.ext]</span></p>
+<p class="p_BodyText"><span class="f_BodyText">And let's suppose the input node loads a sequence in this style:</span></p>
+<p class="p_BodyText"><span class="f_BodyText">  </span><span class="f_T_Emphasis">/test/MyClip_v45_13123.dpx</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Now you connect that node to a </span><span class="f_T_Menu">NC to metadata</span><span class="f_BodyText"> node, which will analyze the syntax &nbsp;and will set the token &quot;</span><span class="f_T_Menu">version</span><span class="f_BodyText">&quot; to the value &quot;</span><span class="f_T_Emphasis">v45</span><span class="f_BodyText">&quot;. &nbsp; </span></p>
+<p class="p_BodyText"><span class="f_BodyText">In that way you can use the </span><span class="f_T_Menu">version</span><span class="f_BodyText"> token in posterior nodes for including it in different places of destination paths and file names. For example, you could connect the </span><span class="f_T_Menu">NC to metadata </span><span class="f_BodyText">to an </span><span class="f_T_Menu">EXR </span><span class="f_BodyText">task node, and type this in in the </span><span class="f_T_Menu">File Path </span><span class="f_BodyText">property of the </span><span class="f_T_Menu">EXR </span><span class="f_BodyText">node, :</span></p>
+<p class="p_BodyText"><span class="f_T_Code">[path]/[version]/[baseName][_frame][.ext] </span><span class="f_BodyText"> </span></p>
+<p class="p_BodyText"><span class="f_BodyText">In this example, the token &quot;version&quot; is re-purposed as a folder name rather than part of the name, which will create files like:</span></p>
+<p class="p_BodyText"><span class="f_T_Emphasis">/test/v45/MyClip_13123.exr</span></p>
+<p class="p_BodyText"><span class="f_BodyText">In the above &nbsp;example the </span><span class="f_T_Menu">baseName</span><span class="f_BodyText"> token was defined with only the initial part of the file name, so if we want the token &quot;version&quot; to also appear in the new file name we will need to add it explicitly:</span></p>
+<p class="p_BodyText"><span class="f_T_Code">[path]/[version]/[baseName][_version][_frame][.ext]</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Which will produce:</span></p>
+<p class="p_BodyText"><span class="f_T_Emphasis">/test/v45/MyClip_v45_13123.exr</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Note that the </span><span class="f_T_Entry">NC to metadata </span><span class="f_BodyText"> node does not &quot;create&quot; any metadata tokens at all (all metadata tokens need to exist in the </span><span class="f_T_Emphasis">NameConventionPlaceHolders.xml</span><span class="f_BodyText"> file before they can be used). All what the </span><span class="f_T_Entry">NC to metadata</span><span class="f_BodyText"> node does is to extract their values from the name convention of the input files rather than from their embedded metadata (which is the default behavior). &nbsp;But that is not enough to create new tokens that didn't exist before. To achieve this for new tokens, you also need to put the token as a placeholder in the configuration file: </span></p>
+<p class="p_BodyText"><span class="f_T_Emphasis">SGO AppData\shared\config\NameConventionPlaceHolders.xml </span></p>
+<p class="p_Normal">In the above example, the token &quot;<span class="f_T_Menu10p">version</span>&quot; already comes in that file, so nothing has to be done. But any new tokens not existing in that file need to be added to it (before opening Mistika Workflows). &nbsp;But before adding new tokens to this file it is recommended to search if they already existed, because the most common tokens used in media production are already there. &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If the token is not existing, an easy way to notice it is because typing the token name (between brackets) in a <span class="f_T_Menu">File Path</span> property should immediately appear in the contextual token list, and become green when the syntax is completed.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Finally, for complex cases where different interpretations are possible please remind this rule: The <span class="f_T_Entry">baseName</span> token will always take the initial part of the name, and <span class="f_T_Emphasis">it will get as many characters as possible </span>while still matching the name convention syntax. So something like the next example will fail to produce the result we wanted:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText">Let;s suppose we have the original name convention as in the previous example:<span class="f_T_Code"> [path][baseName][_version][_frame][.ext]</span></p>
+<p class="p_BodyText">And we get this file:</p>
+<p class="p_Normal"><span class="f_T_Emphasis">/test/MyClip_v45_other_something_13123.dpx</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Then the <span class="f_T_Menu">baseName</span> will receive this value (because it will get as many characters as possible):</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_T_Emphasis">/test/MyClip_v45_other </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">and then the &quot;<span class="f_T_Menu10p">version</span>&quot; token will have to take the value: &quot;<span class="f_T_Emphasis">something&quot;, </span>which is not what we wanted. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">To solve this type of situations you will need to define all the missing tokens, for example by defining enough dummy tokens as needed. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The next example will solve that problem by using this name convention in the input node:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_T_Code">[path]/[version]/[baseName][_version][_dummy1][_dummy2][_frame][.ext]</span></p>
+<p class="p_BodyText"><span class="f_BodyText">And before doing this you will &nbsp;need to define dummy1 and dummy2 in the </span> <span class="f_T_Emphasis">SGO AppData/shared/config/NameConventionPlaceHolders.xml </span><span class="f_BodyText"> file (even if you don't want to use their values). So you will need to add these lines (in any category you prefer):</span></p>
+<p class="p_Normal"> &nbsp; &nbsp; &nbsp;&lt;placeHolder from=&quot;metaData&quot; name=&quot;Dummy1&quot;&gt;</p>
+<p class="p_Normal"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;visibility&gt;true&lt;/visibility&gt;</p>
+<p class="p_Normal"> &nbsp; &nbsp; &nbsp;&lt;/placeHolder&gt;</p>
+<p class="p_Normal"> &nbsp; &nbsp; &nbsp;&lt;placeHolder from=&quot;metaData&quot; name=&quot;Dummy2&quot;&gt;</p>
+<p class="p_Normal"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;visibility&gt;true&lt;/visibility&gt;</p>
+<p class="p_Normal"> &nbsp; &nbsp; &nbsp;&lt;/placeHolder&gt;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Input: </span>Files to be processed, with their name convention indicating the location of the metadata tokens.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Output: </span> The input files, with the name convention tokens changed to their new values.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3">Object Properties</span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Python standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#code" class="topiclink">code</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#schemaname" class="topiclink">Schema name</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_T_Emphasis">This is a python node. Additional documentation: </span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<p class="p_Normal">An introduction to all the Python tools in Mistika Workflows is available in the <a href="python-scripting-tools-in-mist.html" class="topiclink">Python scripting tools </a>section.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Information about library extension is available in the <a href="https://www.sgo.es/doc/python/" target="_blank" class="weblink">Mistika Python Extension Library</a></p>
+<p class="p_Normal"><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #000000;"><a href="https://www.sgo.es/doc/python/" class="weblink">https://www.sgo.es/doc/python/</a></span></p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_BodyText">&nbsp;</span></h3>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

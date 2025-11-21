@@ -1,0 +1,54 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:element name="TopazVideoEnhance" sgo:visibility="0" sgo:sortOrder="0" sgo:categoryType="categoryCollapsible">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element type="xsd:string" name="objectName" sgo:visibility="0" sgo:sortOrder="0"/>
+    <xsd:element type="color" name="color" sgo:visibility="0" sgo:sortOrder="1"/>
+    <xsd:element type="xsd:boolean" name="bypassEnabled" sgo:visibility="0" sgo:sortOrder="2"/>
+    <xsd:element name="Enhance" sgo:visibility="0" sgo:sortOrder="1000" sgo:categoryType="categoryCollapsible">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element type="integerPulldown" name="Enhance_EnhanceAIModelCombobox" sgo:integerPulldownValues="Select Model$$$0|Proteus$$$1|Iris$$$2|Artemis$$$3|Nyx$$$4|Nyx - Fast$$$5|Artemis - Halo$$$6|Artemis - Aliasing or Moire$$$7|Dione Robust$$$8|Dione Robust Dehalo$$$9|Dione DV$$$10|Dione TV$$$11|Dione Dehalo$$$12" sgo:visibility="0" sgo:sortOrder="100"/>
+       <xsd:element type="integerPulldown" name="Enhance_VideoQualityTwoChoices" sgo:integerPulldownValues="Low Quality$$$0|Medium Quality$$$1" sgo:visibility="0" sgo:sortOrder="101"/>
+       <xsd:element type="integerPulldown" name="Enhance_VideoQualityThreeChoices" sgo:integerPulldownValues="Low Quality$$$0|Medium Quality$$$1|High Quality$$$2" sgo:visibility="0" sgo:sortOrder="102"/>
+       <xsd:element type="integerPulldown" name="Enhance_ParameterMode" sgo:integerPulldownValues="Auto$$$0|Relative to Auto$$$1|Manual$$$2" sgo:visibility="0" sgo:sortOrder="103"/>
+       <xsd:element type="integerPulldown" name="Enhance_ScaleFactorTwoChoices" sgo:integerPulldownValues="Original$$$0|2x$$$1" sgo:visibility="0" sgo:sortOrder="104"/>
+       <xsd:element type="integerPulldown" name="Enhance_ScaleFactorThreeChoices" sgo:integerPulldownValues="Original$$$0|2x$$$1|4x$$$2" sgo:visibility="0" sgo:sortOrder="105"/>
+       <xsd:element type="xsd:decimal" name="Enhance_ReduceNoise" sgo:visibility="0" sgo:sortOrder="106" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_RAReduceNoise" sgo:visibility="0" sgo:sortOrder="107" sgo:decimalMinValue="-100" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_ImproveDetails" sgo:visibility="0" sgo:sortOrder="108" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_RAImproveDetails" sgo:visibility="0" sgo:sortOrder="109" sgo:decimalMinValue="-100" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_Dehalo" sgo:visibility="0" sgo:sortOrder="112" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_RADehalo" sgo:visibility="0" sgo:sortOrder="113" sgo:decimalMinValue="-100" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_FixCompression" sgo:visibility="0" sgo:sortOrder="114" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_RAFixCompression" sgo:visibility="0" sgo:sortOrder="115" sgo:decimalMinValue="-100" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_Sharpen" sgo:visibility="0" sgo:sortOrder="116" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_RASharpen" sgo:visibility="0" sgo:sortOrder="117" sgo:decimalMinValue="-100" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_ReduceLargeGrain" sgo:visibility="0" sgo:sortOrder="118" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_RAReduceLargeGrain" sgo:visibility="0" sgo:sortOrder="119" sgo:decimalMinValue="-100" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_AddNoise" sgo:visibility="0" sgo:sortOrder="120" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="10"/>
+       <xsd:element type="xsd:decimal" name="Enhance_RecoverDetails" sgo:visibility="0" sgo:sortOrder="121" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="xsd:decimal" name="Enhance_NyxRecoverDetails" sgo:visibility="0" sgo:sortOrder="122" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="100"/>
+       <xsd:element type="integerPulldown" name="Enhance_EstimateParameters" sgo:integerPulldownValues="Ok$$$0" sgo:visibility="0" sgo:sortOrder="123"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="MotionDeblur" sgo:visibility="0" sgo:sortOrder="1030" sgo:categoryType="categoryCollapsible">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element type="integerPulldown" name="MotionDeblur_MotionDeblurAIModelCombobox" sgo:integerPulldownValues="Select Model$$$0|Themis$$$1" sgo:visibility="0" sgo:sortOrder="124"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Grain" sgo:visibility="0" sgo:sortOrder="1040" sgo:categoryType="categoryCollapsible">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element type="xsd:decimal" name="Grain_Amount" sgo:visibility="0" sgo:sortOrder="125" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="10"/>
+       <xsd:element type="xsd:decimal" name="Grain_Size" sgo:visibility="0" sgo:sortOrder="126" sgo:decimalMinValue="0" sgo:decimalDigits="2" sgo:decimalStepValue="0.01" sgo:decimalMaxValue="5"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>

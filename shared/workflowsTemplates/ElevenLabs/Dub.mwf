@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="ElevenLabs Dub Template" nameConvention="[path][baseName][_frame][.ext]">
+  <view x="-550" scale="1" y="-35"/>
+  <nodes>
+   <node class="Watcher" type="input">
+    <properties>
+     <objectName type="string">Watcher</objectName>
+     <color type="color">#aa557f</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-911.493,45.7559</pos>
+     <schemaName type="string">watcher</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <filterMode type="int">1</filterMode>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <latency type="int">5</latency>
+     <forceCheck type="int">0</forceCheck>
+     <recursive type="bool">true</recursive>
+     <addRoot type="bool">true</addRoot>
+     <deleteAfterProcessing type="bool">false</deleteAfterProcessing>
+     <areYouSure type="bool">false</areYouSure>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">false</alphabeticalOrder>
+     <continuePreviousExecutions type="bool">false</continuePreviousExecutions>
+     <numberOfTries type="int">5</numberOfTries>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" specialType="order" type="input" id="3fa4b44a-97b6-4ce0-abee-91045cea7e00"/>
+     <rankTo name="rankTo" specialType="order" type="output" id="eac50772-0d82-4a1c-ab4a-4317e8e8501f"/>
+     <To name="To" type="output" id="f7d66aca-34e0-4ec0-95db-2ceb5ef67fc3">
+      <linkedTo>ad905a4d-9ffb-4d30-8114-a0469449cb30</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node class="ElevenLabsDub" type="task">
+    <properties>
+     <objectName type="string">ElevenLabsDub</objectName>
+     <color type="color">#ffffff</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-501,45</pos>
+     <schemaName type="string">elevenlabsdub</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CbaseItem
+import requests
+import json
+from elevenlabs.client import ElevenLabs
+import os
+import time
+
+def init(self):
+    self.setClassName("ElevenLabs Dub")
+    self.addConnector("media",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("output",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)     
+    self.setAcceptConnectors(True,"media_%") 
+    self.addProperty("apiKey")
+    self.addProperty("sourceLanguage", "auto")
+    self.addProperty("targetLanguage", "en")
+    self.addProperty("outputFormat", "mp3")
+    self.addProperty("numberOfSpeakers", 1)
+    self.addProperty("dstPath")
+    self.bypassSupported=True
+    self.color=QColor(255,255,255)
+    return True
+
+def isReady(self):
+    res = True
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    if not self.apiKey.strip():
+        res=self.critical("11dub:isReady:apikey","apiKey can not be empty","apiKey")
+    return res
+
+def process(self):
+    client = ElevenLabs(api_key = self.apiKey.strip())
+    def download_dubbed_file(dubbing_id: str, language_code: str, path) -> str:
+        with open(path, "wb") as file:
+            for chunk in client.dubbing.get_dubbed_file(dubbing_id, language_code):
+                file.write(chunk)
+        return path
+
+    def wait_for_dubbing_completion(dubbing_id: str) -> bool:
+        MAX_ATTEMPTS = 120
+        CHECK_INTERVAL = 10  # In seconds
+
+        for _ in range(MAX_ATTEMPTS):
+            metadata = client.dubbing.get_dubbing_project_metadata(dubbing_id)
+            if metadata.status == "dubbed":
+                return True
+            elif metadata.status == "dubbing":
+                print("Dubbing in progress... Will check status again in",CHECK_INTERVAL,"seconds.",)
+                time.sleep(CHECK_INTERVAL)
+            else:
+                return self.critical("11Dub:dubFailed", "Dubbing failed: {}".format(f))
+        print("Dubbing timed out")
+        return self.critical("11Dub:dubTimeOut", "Dubbing timed out")
+
+    if self.bypassEnabled:
+        return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    output=self.getFirstConnectorByName("output")
+    output.clearUniversalPaths()
+
+    res = True 
+
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            self.setPropertiesFromUP(up)
+            f = up.getFilePath()
+            dstPath=self.evaluate(self.dstPath).strip()
+            dst=self.composeDstFilePath(dstPath,up,False,0)
+            dst.setExtension(self.outputFormat)
+
+            try:
+                with open(f, "rb") as audio_file:
+                    response = client.dubbing.dub_a_video_or_an_audio_file(
+                        file=(os.path.basename(f), audio_file),
+                        target_lang=self.targetLanguage,
+                        mode="automatic",
+                        source_lang=self.sourceLanguage,
+                        num_speakers=self.numberOfSpeakers,
+                        watermark=False,
+                    )
+            except Exception as e:
+                res = self.critical("11Dub:error", "Error: {}".format(e)) and res
+                self.addFailedUP(dst)
+                continue
+
+            dubbing_id = response.dubbing_id
+            if wait_for_dubbing_completion(dubbing_id):
+                output_file_path = download_dubbed_file(dubbing_id, self.targetLanguage, dst.getFilePath())
+                output.addUniversalPath(dst)
+            else:
+                res = False
+                self.addFailedUP(dst)
+    return res
+
+def  onPropertyUpdated(self,name):
+    a = 1</code>
+     <apiKey type="string"></apiKey>
+     <sourceLanguage type="string">auto</sourceLanguage>
+     <targetLanguage type="string">en</targetLanguage>
+     <outputFormat type="string">mp3</outputFormat>
+     <numberOfSpeakers type="int">1</numberOfSpeakers>
+     <dstPath type="string"></dstPath>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" specialType="order" type="input" id="b9284e44-b1d4-4fbd-a0e2-170c4d8c53b9"/>
+     <rankTo name="rankTo" specialType="order" type="output" id="c0f6079e-e03b-4bc6-b294-51f225898d67"/>
+     <media name="media" type="input" id="ad905a4d-9ffb-4d30-8114-a0469449cb30">
+      <linkedTo>f7d66aca-34e0-4ec0-95db-2ceb5ef67fc3</linkedTo>
+     </media>
+     <output name="output" type="output" id="f0c5c4d7-6150-42ec-9974-86b0b52a6ce3"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-962.969,-200.056</ScenePos>
+     <Size type="size2">359.72,400.728</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Reading the audio/video files from...</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff004020</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-949.44,-80.32</ScenePos>
+     <Size type="size2">335,46</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Select:
+- Directory to read your audio/video files from</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-548.3,-198.1</ScenePos>
+     <Size type="size2">346.6,400.2</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Creating audio/video file in new language...</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff004020</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-513.4,-143.2</ScenePos>
+     <Size type="size2">197,46</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Write:
+- Your ElevenLabs API Key</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-514.6,-99.8</ScenePos>
+     <Size type="size2">297,160</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Then select:
+- The language of the original file
+- The target language to translate to
+- The format of the output (mp3 or wav)
+- Number of speakers (0 for auto detect)
+- Final audio/video destination/name 
+(leave empty to create at input file path)
+</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

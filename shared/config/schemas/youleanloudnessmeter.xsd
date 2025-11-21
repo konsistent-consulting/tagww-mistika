@@ -1,0 +1,79 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="YouleanLoudnessMeter" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+    <xsd:sequence>
+        <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+        <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+		<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+
+        <xsd:element name="preset" type="stringPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_presetList" sgo:visibility="0" sgo:sortOrder="10"/>
+        <xsd:element name="customPreset" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="11"/>
+        <xsd:element name="channelConfig" type="stringPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_channelConfigList" sgo:visibility="0" sgo:sortOrder="12"/>
+		<xsd:element name="generateReport" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="13"/>
+		<xsd:element name="normalize" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="15"/>
+        <xsd:element name="Reporting" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="100">
+			<xsd:complexType>
+				<xsd:sequence>		
+					<xsd:element name="reportType" type="stringPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_reportTypeList" sgo:visibility="0" sgo:sortOrder="13"/>
+					<xsd:element name="reportFolderPath" type="xsd:anyURI" sgo:properties="showDirsOnly|urlVisibleButtonBrowser|fileDialogWindowTitle('Select Folder')" sgo:visibility="0" sgo:sortOrder="14"/>		
+				</xsd:sequence>
+			</xsd:complexType>					
+		</xsd:element>
+        <xsd:element name="Normalize" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="200">
+			<xsd:complexType>
+				<xsd:sequence>
+					<xsd:element name="normalizeFolderPath" type="xsd:anyURI" sgo:properties="showDirsOnly|urlVisibleButtonBrowser|fileDialogWindowTitle('Select Folder')" sgo:visibility="0" sgo:sortOrder="16"/>
+				</xsd:sequence>
+			</xsd:complexType>	
+		</xsd:element>
+        <xsd:element name="QC" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="300">
+			<xsd:complexType>
+				<xsd:sequence>
+					<xsd:element name="IntegratedMin" type="xsd:decimal" sgo:decimalMinValue="-70.00" sgo:decimalMaxValue="30.00" sgo:visibility="0" sgo:sortOrder="10"/>
+					<xsd:element name="IntegratedMax" type="xsd:decimal" sgo:decimalMinValue="-70.00" sgo:decimalMaxValue="30.00" sgo:visibility="0" sgo:sortOrder="11"/>
+					<xsd:element name="LoudnessRangeMin" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="100.00" sgo:visibility="0" sgo:sortOrder="12"/>
+					<xsd:element name="LoudnessRangeMax" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="100.00" sgo:visibility="0" sgo:sortOrder="13"/>
+					<xsd:element name="IntegratedDialMin" type="xsd:decimal" sgo:decimalMinValue="-70.00" sgo:decimalMaxValue="30.00" sgo:visibility="0" sgo:sortOrder="14"/>
+					<xsd:element name="IntegratedDialMax" type="xsd:decimal" sgo:decimalMinValue="-70.00" sgo:decimalMaxValue="30.00" sgo:visibility="0" sgo:sortOrder="15"/>		
+					<xsd:element name="LoudnessRangeDialMin" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="100.00" sgo:visibility="0" sgo:sortOrder="16"/>
+					<xsd:element name="LoudnessRangeDialMax" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="100.00" sgo:visibility="0" sgo:sortOrder="17"/>	
+					<xsd:element name="SpeechContentMin" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="100.00" sgo:visibility="0" sgo:sortOrder="18"/>
+					<xsd:element name="SpeechContentMax" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="100.00" sgo:visibility="0" sgo:sortOrder="19"/>	
+					<xsd:element name="AverageDynamicsMin" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="100.00" sgo:visibility="0" sgo:sortOrder="20"/>
+					<xsd:element name="AverageDynamicsMax" type="xsd:decimal" sgo:decimalMinValue="0.00" sgo:decimalMaxValue="100.00" sgo:visibility="0" sgo:sortOrder="21"/>	
+					<xsd:element name="MomentaryMaxMin" type="xsd:decimal" sgo:decimalMinValue="-70.00" sgo:decimalMaxValue="30.00" sgo:visibility="0" sgo:sortOrder="22"/>
+					<xsd:element name="MomentaryMaxMax" type="xsd:decimal" sgo:decimalMinValue="-70.00" sgo:decimalMaxValue="30.00" sgo:visibility="0" sgo:sortOrder="23"/>
+					<xsd:element name="ShortTermMaxMin" type="xsd:decimal" sgo:decimalMinValue="-70.00" sgo:decimalMaxValue="30.00" sgo:visibility="0" sgo:sortOrder="24"/>
+					<xsd:element name="ShortTermMaxMax" type="xsd:decimal" sgo:decimalMinValue="-70.00" sgo:decimalMaxValue="30.00" sgo:visibility="0" sgo:sortOrder="25"/>
+					<xsd:element name="TruePeakMaxMin" type="xsd:decimal" sgo:decimalMinValue="-99.00" sgo:decimalMaxValue="10.00" sgo:visibility="0" sgo:sortOrder="26"/>
+					<xsd:element name="TruePeakMaxMax" type="xsd:decimal" sgo:decimalMinValue="-99.00" sgo:decimalMaxValue="10.00" sgo:visibility="0" sgo:sortOrder="27"/>	
+				</xsd:sequence>
+			</xsd:complexType>	
+		</xsd:element>			
+        <xsd:element name="Config" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="400">
+			<xsd:complexType>
+				<xsd:sequence>
+				<xsd:element name="threads" type="integerPulldown" sgo:integerPulldownValues="1|2|4|8" sgo:visibility="0" sgo:sortOrder="18"/>
+				<xsd:element name="binPath" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="19" sgo:properties="fileDialogWindowTitle('Select Youlean Binary')|pathNameFilters('xsd Files (ylm2*)')"/>
+				</xsd:sequence>
+			</xsd:complexType>	
+		</xsd:element>							
+		<xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="400">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="1"/>
+					</xsd:sequence>
+				</xsd:complexType>
+		</xsd:element>
+        <xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+			<xsd:complexType>
+				<xsd:sequence>
+					<xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>
+    </xsd:sequence>	
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

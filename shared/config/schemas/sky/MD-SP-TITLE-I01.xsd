@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 sp1 (http://www.altova.com) by Mark Lowe (British Sky Broadcasting Ltd) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.cablelabs.com/namespaces/metadata/xsd/title/1" xmlns:core="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://www.cablelabs.com/namespaces/metadata/xsd/title/1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" schemaLocation="MD-SP-CORE-I01.xsd"/>
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml_2001.xsd"/>
+	<xsd:simpleType name="TitleSortType">
+		<xsd:annotation>
+			<xsd:documentation>A 22-character string used only for sorting titles.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="22"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TitleBriefType">
+		<xsd:annotation>
+			<xsd:documentation>A 19-character string representing the briefest displayable title.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="19"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TitleMediumType">
+		<xsd:annotation>
+			<xsd:documentation>A 35-character string representing a reasonable length displayable title.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TitleLongType">
+		<xsd:annotation>
+			<xsd:documentation>A 128-character string representing a full displayable title.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="128"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SummaryBriefType">
+		<xsd:annotation>
+			<xsd:documentation>A 150-character string representing the briefest displayable summary.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="150"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SummaryShortType">
+		<xsd:annotation>
+			<xsd:documentation>A 200-character string representing a short summary of a title.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SummaryMediumType">
+		<xsd:annotation>
+			<xsd:documentation>A 1000-character string representing a medium length summary of a title.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="1000"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SummaryLongType">
+		<xsd:annotation>
+			<xsd:documentation>A 4096-character string representing the most detailed summary of a title.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="4096"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RecordingArtistType">
+		<xsd:annotation>
+			<xsd:documentation>A 25-character string representing a recording artist, band or orchestra.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="25"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SongTitleType">
+		<xsd:annotation>
+			<xsd:documentation>A 40-character string representing a song title used for searching.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="core:NonEmptyStringType">
+			<xsd:maxLength value="40"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="ChapterType">
+		<xsd:attribute name="timeCode" type="core:SMPTETimeType" use="required"/>
+		<xsd:attribute name="heading" type="core:NonEmptyStringType" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="LocalizableTitleType">
+		<xsd:annotation>
+			<xsd:documentation>
+				A collection of Title metadata which is specified in multiple lanaguages for localization.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="TitleSortName" type="TitleSortType">
+				<xsd:annotation>
+					<xsd:documentation>A string to be used when sorting the title.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TitleBrief" type="TitleBriefType">
+				<xsd:annotation>
+					<xsd:documentation>A brief version of the movie title (for display).  This field tends to be highly abbreviated.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TitleMedium" type="TitleMediumType">
+				<xsd:annotation>
+					<xsd:documentation>A medium length version of the movie title for displays that can accommodate more characters.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TitleLong" type="TitleLongType">
+				<xsd:annotation>
+					<xsd:documentation>Full movie/show title - for display.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SummaryBrief" type="SummaryBriefType"/>
+			<xsd:element name="SummaryShort" type="SummaryShortType">
+				<xsd:annotation>
+					<xsd:documentation>Movie/show summary - usually in one sentence.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SummaryMedium" type="SummaryMediumType">
+				<xsd:annotation>
+					<xsd:documentation>Movie/show summary - usually in a paragraph for an EPG-like description.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SummaryLong" type="SummaryLongType">
+				<xsd:annotation>
+					<xsd:documentation>Long movie/show summary.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ActorDisplay" type="core:ListDisplayType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A human-readable list of actors for display (e.g. "Tom Hanks, Robin Williams")</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Actor" type="core:PersonType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Each is an actor in the title (including on-air talent) - used for searching or display.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WriterDisplay" type="core:ListDisplayType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A human-readable list of writers for display (e.g. "J.R.R. Tolkien, Peter Jackson, Fran Walsh")</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Writer" type="core:PersonType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Each is a writer for this title - used for searching or display.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DirectorDisplay" type="core:ListDisplayType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A human-readable list of writers for display (e.g. "James Cameron")</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Director" type="core:PersonType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Each is a director for this title - used for searching or display.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ProducerDisplay" type="core:ListDisplayType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A human-readable list of producers for display (e.g. "Ethan Coen, Joel Coen")</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Producer" type="core:PersonType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Each is a producer for this title - used for searching or dispaly.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StudioDisplay" type="core:ListDisplayType">
+				<xsd:annotation>
+					<xsd:documentation>A human-readable list of studio names for display (e.g. "Universal Studios")</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RecordingArtist" type="RecordingArtistType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Listing that provides the recording artist of a song for display (e.g. "REM", "Justin Timberlake", "U2")</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RecordingArtistDisplay" type="core:ListDisplayType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A human-readable list of recording artists for display (e.g. Rush, Styx, REO Speedwagon).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SongTitle" type="SongTitleType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Each is a name of a song or concert in the title.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Chapter" type="ChapterType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Chapter location and heading pair.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute ref="xml:lang" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="TitleType">
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="LocalizableTitle" type="LocalizableTitleType" maxOccurs="unbounded"/>
+					<xsd:element name="Rating" type="core:RatingType" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>MPAA, TV or custom rating, whichever is appropriate.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Audience" type="core:AudienceType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Indicates intended target audience.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Advisory" type="core:AdvisoryType" minOccurs="0" maxOccurs="6">
+						<xsd:annotation>
+							<xsd:documentation>One advisory per element.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="IsClosedCaptioning" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>A flag to indicate closed captioning encoding.  This value MUST be explicitly provided if the title originated as V3.0.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="DisplayRunTime" type="core:DisplayRunTimeType">
+						<xsd:annotation>
+							<xsd:documentation>Dispalyable run time as hH:MM:ss.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Year" type="xsd:gYear" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Year of release. This element MUST be explicitly provided if the title originated as V3.0.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="CountryOfOrigin" type="core:CountryType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The country from where the title originates.  Expressed using country code as defined in ISO-3166-1.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Genre" type="core:GenreType" maxOccurs="5">
+						<xsd:annotation>
+							<xsd:documentation>Subject matter classification of the show.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ShowType" type="core:ShowTypeType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Indicate usage of the release.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="IsEncryptionRequired" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Encryption on the movie asset is required for this title.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="BoxOffice" type="xsd:integer" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Box office dollars of revenue (in whole numbers).</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ProgrammerCallLetters" type="core:ProgrammerCallLettersType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>A sequence of characters to be displayed with a title, providing a "brand label" for the title.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+		<!-- startDateTime and endDateTime used to represent licencing window start/end -->
+	</xsd:complexType>
+</xsd:schema>

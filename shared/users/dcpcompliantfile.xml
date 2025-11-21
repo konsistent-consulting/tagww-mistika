@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <DCPCompliantFile>
+    <Unicolor>
+      <colorSpace>--- Custom ---</colorSpace>
+      <gamma>DCDM 2 6</gamma>
+      <gamut>XYZ</gamut>
+    </Unicolor>
+    <aspectRatio>Flat (1.85:1)</aspectRatio>
+    <bitrate>230</bitrate>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#677688</color>
+    <fit>1</fit>
+    <format/>
+    <frameRate>24</frameRate>
+    <nodeLocked>false</nodeLocked>
+    <objectName>DCPCompliantFile</objectName>
+    <resolution>-- From Reel --</resolution>
+    <url/>
+  </DCPCompliantFile>
+</nodeCommonRoot>

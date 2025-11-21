@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <XLSXtoCSV>
+    <color>#00b4b4</color>
+    <delimiter>;</delimiter>
+    <dstPath/>
+    <objectName>XLSXtoCSV</objectName>
+  </XLSXtoCSV>
+</nodeCommonRoot>

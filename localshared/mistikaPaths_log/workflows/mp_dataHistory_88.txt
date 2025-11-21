@@ -1,0 +1,167 @@
+0:   KeyData: ProductName
+OldData: workflows
+NewData: 
+
+1:   KeyData: CurrentDateTime
+OldData: Fri November 14 25 14:58:09.602
+NewData: 
+
+2:   KeyData: installation.xml
+OldData: filePath: /Applications/SGO Apps/installation.xml
+absoluteFilePath: /Applications/SGO Apps/installation.xml
+completeBaseName: installation
+bundleName: 
+
+isReadable: 1
+isWritable: 1
+isExecutable: 1
+isHidden: 0
+isNativePath: 1
+isRelative: 0
+
+caching: 0
+isFile: 1
+isSymbolicLink: 0
+
+owner: root
+ownerId: 0
+group: admin
+groupId: 80
+permissions: 30583
+size: 471
+
+birthTime: Tue Aug 12 01:10:23 2025
+metadataChangeTime: Thu Nov 6 09:52:40 2025
+lastModified: Thu Nov 6 09:52:40 2025
+lastRead: Thu Nov 6 09:52:40 2025
+
+/installation: /Applications/SGO Apps/Users/ed/SGO AppData/Users/ed/SGO Data/Media/Users/ed/SGO Data/Projects/Users/ed/SGO AppData/shared
+/installation/paths: /Applications/SGO Apps/Users/ed/SGO AppData/Users/ed/SGO Data/Media/Users/ed/SGO Data/Projects/Users/ed/SGO AppData/shared
+/installation/paths/app: /Applications/SGO Apps
+/installation/paths/env: /Users/ed/SGO AppData
+/installation/paths/media: /Users/ed/SGO Data/Media
+/installation/paths/projects: /Users/ed/SGO Data/Projects
+/installation/paths/shared: /Users/ed/SGO AppData/shared
+/installation/sw: 
+/installation/sw/activationTool: 10.14.12-20250929
+/installation/sw/licenseServer: 10.14.12-20250929
+/installation/sw/mistika: 
+/installation/sw/review: 
+/installation/sw/vr: 
+/installation/sw/workflows: 10.14.12-20250929
+
+
+NewData: 
+
+3:   KeyData: MistikaPaths::updateVariablesWithDefaultPaths: 1
+OldData: 
+NewData: 
+
+4:   KeyData: MistikaPaths::loadConfigFile: m_dataChangedFromLastLoad 1
+OldData: 0
+NewData: 
+
+5:   KeyData: MistikaPaths::loadConfigFile: 1
+OldData: /Users/ed/.sgoMistika/mistikaPaths.xml
+NewData: 
+
+6:   KeyData: MistikaPaths::loadConfigFile: 2
+OldData: <installation>
+ <paths>
+  <env>/Users/ed/SGO AppData</env>
+  <shared>/Users/ed/SGO AppData/shared</shared>
+  <localshared>/Users/ed/SGO AppData/localshared</localshared>
+  <media>/Users/ed/SGO Data/Media</media>
+  <projects>/Users/ed/SGO Data/Projects</projects>
+ </paths>
+ <sw>
+  <licenseServer version="10.14.12-20250929"/>
+  <activationTool version="10.14.12-20250929"/>
+  <mistika/>
+  <vr/>
+  <review/>
+  <workflows version="10.14.12-20250929"/>
+ </sw>
+</installation>
+NewData: 
+
+7:   KeyData: /installation/sw/workflows
+OldData: 
+NewData: 10.14.12-20250929
+
+8:   KeyData: MistikaPaths::loadConfigFile: 4
+OldData: <installation>
+ <paths>
+  <env>/Users/ed/SGO AppData</env>
+  <shared>/Users/ed/SGO AppData/shared</shared>
+  <localshared>/Users/ed/SGO AppData/localshared</localshared>
+  <media>/Users/ed/SGO Data/Media</media>
+  <projects>/Users/ed/SGO Data/Projects</projects>
+ </paths>
+ <sw>
+  <licenseServer version="10.14.12-20250929"/>
+  <activationTool version="10.14.12-20250929"/>
+  <mistika/>
+  <vr/>
+  <review/>
+  <workflows version="10.14.12-20250929"/>
+ </sw>
+</installation>
+
+NewData: 
+
+9:   KeyData: MistikaPaths::loadConfigFile: m_dataChangedFromLastLoad 2
+OldData: 1
+NewData: 
+
+KeyData: installation.xml
+OldData: 
+NewData: filePath: /Applications/SGO Apps/installation.xml
+absoluteFilePath: /Applications/SGO Apps/installation.xml
+completeBaseName: installation
+bundleName: 
+
+isReadable: 1
+isWritable: 1
+isExecutable: 1
+isHidden: 0
+isNativePath: 1
+isRelative: 0
+
+caching: 0
+isFile: 1
+isSymbolicLink: 0
+
+owner: root
+ownerId: 0
+group: admin
+groupId: 80
+permissions: 30583
+size: 471
+
+birthTime: Tue Aug 12 01:10:23 2025
+metadataChangeTime: Thu Nov 6 09:52:40 2025
+lastModified: Thu Nov 6 09:52:40 2025
+lastRead: Thu Nov 6 09:52:40 2025
+
+/installation: /Applications/SGO Apps/Users/ed/SGO AppData/Users/ed/SGO Data/Media/Users/ed/SGO Data/Projects/Users/ed/SGO AppData/shared
+/installation/paths: /Applications/SGO Apps/Users/ed/SGO AppData/Users/ed/SGO Data/Media/Users/ed/SGO Data/Projects/Users/ed/SGO AppData/shared
+/installation/paths/app: /Applications/SGO Apps
+/installation/paths/env: /Users/ed/SGO AppData
+/installation/paths/media: /Users/ed/SGO Data/Media
+/installation/paths/projects: /Users/ed/SGO Data/Projects
+/installation/paths/shared: /Users/ed/SGO AppData/shared
+/installation/sw: 
+/installation/sw/activationTool: 10.14.12-20250929
+/installation/sw/licenseServer: 10.14.12-20250929
+/installation/sw/mistika: 
+/installation/sw/review: 
+/installation/sw/vr: 
+/installation/sw/workflows: 10.14.12-20250929
+
+
+
+KeyData: CurrentDateTime
+OldData: 
+NewData: Fri November 14 25 14:58:09.614
+

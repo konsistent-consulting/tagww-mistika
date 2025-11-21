@@ -1,0 +1,43 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Crop" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="Modes_Mode" type="integerPulldown" sgo:integerPulldownValues="RGBA$$$0|RGB$$$1|A$$$2|Extrude$$$3" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="Crop" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="5">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Crop_Left" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="Crop_Right" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="Crop_Up" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="Crop_Down" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100" sgo:visibility="0" sgo:sortOrder="3"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Soft" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="6">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Soft_Left" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="Soft_Right" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="Soft_Up" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="Soft_Down" type="xsd:decimal" sgo:decimalMinValue="0" sgo:decimalMaxValue="100" sgo:visibility="0" sgo:sortOrder="3"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Color" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="7">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Color_Red" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="Color_Green" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="Color_Blue" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="Color_Alpha" type="xsd:decimal" sgo:decimalMinValue="0" sgo:visibility="0" sgo:sortOrder="3"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

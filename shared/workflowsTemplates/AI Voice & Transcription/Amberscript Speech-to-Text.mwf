@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="Amberscript Speech-to-Text">
+  <view y="60" scale="1" x="174"/>
+  <nodes>
+   <node class="Amberscript" type="task">
+    <properties>
+     <objectName type="string">Amberscript</objectName>
+     <color type="color">#005a50</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">258,-55</pos>
+     <schemaName type="string">amberscript</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.Qt import QColor
+from Mistika.classes import Cconnector,CbaseItem,CuniversalPath
+import time
+import requests
+import os
+
+def init(self):
+    self.setClassName("Amberscript")
+    self.color=QColor(0x005a50)
+    self.addConnector("in",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("out",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)     
+    self.setAcceptConnectors(True,"in_%") 
+    self.addProperty("apiKey")
+    self.addProperty("language", "en")
+    self.addProperty("transcriptionType", "transcription")
+    self.addProperty("numberOfSpeakers", "2")
+    self.addProperty("glossary", "")
+    self.addProperty("_glossaryList", "")
+    if self.apiKey and self._glossaryList=="":
+        url = "https://api.amberscript.com/api/glossary"
+        querystring = {"apiKey":self.apiKey}
+        payload = ""
+        response = requests.request("GET", url, data=payload, params=querystring)
+        print(response.text)
+        data = response.json()
+        try:
+            glossaryList = [f"{glossary['name']}$$${glossary['id']}" for glossary in data]
+            glossaryList = ["No Glossary$$$None"]+glossaryList
+            print(glossaryList)
+        except Exception:
+            pass
+        self._glossaryList = glossaryList
+    self.addProperty("transcriptionStyle", "cleanread")
+    self.addProperty("targetLanguage", "en")
+    self.setPropertyVisible("transcriptionStyle", self.transcriptionType == "transcription")
+    self.setPropertyVisible("targetLanguage", self.transcriptionType == "translatedSubtitles")
+    self.addProperty("outputFormat", "srt")
+    self.addProperty("dstPath")
+    self.bypassSupported=True
+    self.addActionToContextMenu("Authenticate")
+    return True
+
+def isReady(self):
+    res = True
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    return res
+
+def process(self):
+    if self.bypassEnabled:
+      return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.CONNECTOR_SPECIALTYPE_NORMAL)
+    out = self.getFirstConnectorByName("out")
+    out.clearUniversalPaths()
+    res = True
+
+    apiKey = self.apiKey
+    language = self.language
+    transcriptionType = self.transcriptionType
+    numberOfSpeakers= self.numberOfSpeakers
+    transcriptionStyle = self.transcriptionStyle
+    targetLanguage = self.targetLanguage
+    outputFormat = self.outputFormat
+    glossaryId = self.glossary
+    print(glossaryId)
+
+    for c in inputs:
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            #self.setPropertiesFromUP(up)
+            #mfid = up.getMediaFileInfoData()
+            f = up.getFilePath()
+            dstPath=self.evaluate(self.dstPath).strip()
+            dstPathTokens=up.getStringOverride(dstPath)
+            dst=self.composeDstFilePath(dstPathTokens,up,False,0)
+            if not os.path.exists(os.path.dirname(str(dst.getFilePath()))):
+                os.makedirs(os.path.dirname(str(dst.getFilePath())))
+            dst.setExtension(outputFormat)
+            
+            url = 'https://api.amberscript.com/api/jobs/upload-media'
+            if glossaryId == "None":
+                querystring = {"jobType":"direct","language":language,"transcriptionType":transcriptionType, "numberOfSpeakers":numberOfSpeakers, "transcriptionStyle":transcriptionStyle, "targetLanguage":targetLanguage, "apiKey":apiKey}
+            else:
+                querystring = {"jobType":"direct","language":language,"transcriptionType":transcriptionType, "numberOfSpeakers":numberOfSpeakers, "transcriptionStyle":transcriptionStyle, "targetLanguage":targetLanguage, "glossaryId":glossaryId, "apiKey":apiKey}
+            files = {'file': open(f, 'rb')}
+            response = requests.post(url, files=files, params=querystring)
+
+            if response.status_code == 400:
+                self.addFailedUP(up)
+                return self.critical("Amberscript:error", response.json()["message"]) and res
+
+            jobId = response.json()["jobStatus"]["jobId"]
+            print(jobId)
+
+            status = None
+            elapsed=0
+            while status != "DONE" and status != "ERROR":
+                url = "https://api.amberscript.com/api/jobs/status"
+                querystring = {"jobId":jobId,"apiKey":apiKey}
+                payload = ""
+                response = requests.request("GET", url, data=payload, params=querystring)
+                status=response.json()["jobStatus"]["status"]
+                elapsed +=2
+                print(status, "Elapsed time:", elapsed)
+                time.sleep(2)
+            if status == "ERROR":
+                res = self.critical("Amberscript:error", response.json()["jobStatus"]["errorMsg"]) and res
+                self.addFailedUP(up)
+                continue
+            print("ACABADO")
+
+            url = "https://api.amberscript.com/api/jobs/export-" + outputFormat
+            querystring = {"jobId":jobId, "apiKey":apiKey}
+            payload = ""
+            response = None
+            while response == None or hasattr(response, "json") and "invalid_job_status" in response.text:
+                response = requests.request("GET", url, data=payload, params=querystring)
+                print("Preparing file")
+                time.sleep(2)
+
+            with open(dst.getFilePath(), "w", encoding="utf-8") as filee:
+                filee.write(response.text)
+            out.addUniversalPath(dst)
+        #-------------------------------------------------------------------------------------------------------------------
+    # getWorkListResponse = getWorkList("video", apiKey, size=100)
+    # print(getWorkListResponse)
+    return res
+
+def  onPropertyUpdated(self,name):
+    if name=="transcriptionType":
+        self.setPropertyVisible("transcriptionStyle", self.transcriptionType == "transcription")
+        self.setPropertyVisible("targetLanguage", self.transcriptionType == "translatedSubtitles")
+    if name=="apiKey":
+        url = "https://api.amberscript.com/api/glossary"
+        querystring = {"apiKey":self.apiKey}
+        payload = ""
+        response = requests.request("GET", url, data=payload, params=querystring)
+        print(response.text)
+        data = response.json()
+        try:
+            glossaryList = [f"{glossary['name']}$$${glossary['id']}" for glossary in data]
+            glossaryList = ["No Glossary$$$None"]+glossaryList
+            print(glossaryList)
+        except Exception:
+            return
+        self._glossaryList = glossaryList
+    self.rebuild()</code>
+     <apiKey type="string"></apiKey>
+     <language type="string">en</language>
+     <transcriptionType type="string">transcription</transcriptionType>
+     <numberOfSpeakers type="string">2</numberOfSpeakers>
+     <glossary type="string"></glossary>
+     <transcriptionStyle type="string">cleanread</transcriptionStyle>
+     <targetLanguage type="string">en</targetLanguage>
+     <outputFormat type="string">srt</outputFormat>
+     <dstPath type="string"></dstPath>
+    </properties>
+    <connections>
+     <rankFrom id="02387a38-0120-479a-9065-784a65e489dc" specialType="order" name="rankFrom" type="input"/>
+     <rankTo id="35fbe6a6-d229-4daa-9f00-7155c7e5a980" specialType="order" name="rankTo" type="output"/>
+     <in id="6dbf470a-aa22-4476-9768-5e22393cd27b" name="in" type="input">
+      <linkedTo>d02aa4a7-fd44-4bcb-8333-310e3d89c30c</linkedTo>
+     </in>
+     <out id="4fe957ae-2bb9-42bf-9ba8-032928e6649f" name="out" type="output"/>
+    </connections>
+   </node>
+   <node class="Watcher" type="input">
+    <properties>
+     <objectName type="string">Watcher</objectName>
+     <color type="color">#aa557f</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-247,-31</pos>
+     <schemaName type="string">watcher</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <filterMode type="int">1</filterMode>
+     <fileNameOnly type="bool">true</fileNameOnly>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <latency type="int">5</latency>
+     <forceCheck type="int">0</forceCheck>
+     <recursive type="bool">true</recursive>
+     <addRoot type="bool">true</addRoot>
+     <deleteAfterProcessing type="bool">false</deleteAfterProcessing>
+     <areYouSure type="bool">false</areYouSure>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">false</alphabeticalOrder>
+     <continuePreviousExecutions type="bool">false</continuePreviousExecutions>
+     <numberOfTries type="int">5</numberOfTries>
+     <globalTimer type="bool">true</globalTimer>
+    </properties>
+    <connections>
+     <rankFrom id="21806e5c-e16d-41dc-94e9-24b5e828162e" specialType="order" name="rankFrom" type="input"/>
+     <rankTo id="4bf2d2c6-13c3-48aa-8118-ba05e35cceb4" specialType="order" name="rankTo" type="output"/>
+     <To id="d02aa4a7-fd44-4bcb-8333-310e3d89c30c" name="To" type="output">
+      <linkedTo>6dbf470a-aa22-4476-9768-5e22393cd27b</linkedTo>
+     </To>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-254,-256</ScenePos>
+     <Size type="size2">134.25,36.9531</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Amberscript</Text>
+     <TextColor type="color">#ff006b5e</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-255,-208</ScenePos>
+     <Size type="size2">449.375,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Transform your audio and video to text and subtitles</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-272.5,-83.5</ScenePos>
+     <Size type="size2">299,261</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input Media</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff394672</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-255,95</ScenePos>
+     <Size type="size2">264.047,67.2969</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">You can use any type of input node,
+from folders or individual files to a
+Watcher or a cloud storage service.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">138.5,-108.5</ScenePos>
+     <Size type="size2">503,395</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Amberscript</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff212f38</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">166,75</ScenePos>
+     <Size type="size2">447.063,187.297</Size>
+     <TextSize type="float">12</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">1. Connect your Amberscript account using your API Key
+
+2. Set up the subtitle/text generation settings:
+   - Language
+   - Transcription type
+   - Transcription style
+   - Output format
+
+3. Finally, specify the output folder for your subtitle/text files  </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

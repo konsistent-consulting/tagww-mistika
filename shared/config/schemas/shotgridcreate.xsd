@@ -1,0 +1,43 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="ShotGridCreate" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="table" type="stringPulldown" sgo:stringPulldownValues="Project|Asset|Sequence|Shot|Version" sgo:visibility="0" sgo:sortOrder="21"/>				
+                <xsd:element name="projectList" type="stringPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_projectList" sgo:visibility="0" sgo:sortOrder="31"/>
+                <xsd:element name="project" type="xsd:string" sgo:visibility="0" sgo:sortOrder="32"/>	
+                <xsd:element name="asset" type="xsd:string" sgo:visibility="0" sgo:sortOrder="42"/>				
+                <xsd:element name="sequence" type="xsd:string" sgo:visibility="0" sgo:sortOrder="52"/>
+                <xsd:element name="shot" type="xsd:string" sgo:visibility="0" sgo:sortOrder="62"/>
+                <xsd:element name="taskTemplateList" type="stringPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_taskTemplateList" sgo:visibility="0" sgo:sortOrder="63"/>
+                <xsd:element name="taskTemplate" type="xsd:string" sgo:visibility="0" sgo:sortOrder="64"/>
+                <xsd:element name="version" type="xsd:string" sgo:visibility="0" sgo:sortOrder="72"/>
+		        <xsd:element name="task" type="xsd:string" sgo:visibility="0" sgo:sortOrder="74"/>
+                <xsd:element name="status" type="stringPulldown" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_statusList" sgo:visibility="0" sgo:sortOrder="75"/>
+		        <xsd:element name="upload" type="integerPulldown" sgo:integerPulldownValues="Disabled$$$0|As Attachment$$$1|As Thumbnail$$$2"  sgo:visibility="0" sgo:sortOrder="80"/>
+       		<xsd:element name="credentials" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="100">
+				<xsd:complexType>
+					<xsd:sequence>			
+						<xsd:element name="credentialsType" type="integerPulldown" sgo:integerPulldownValues="Api Key$$$1|User/Pwd$$$2" sgo:visibility="0" sgo:sortOrder="10"/>
+						<xsd:element name="url" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+						<xsd:element name="scriptName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+						<xsd:element name="apiKey" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+						<xsd:element name="user" type="xsd:string" sgo:visibility="0" sgo:sortOrder="21"/>
+						<xsd:element name="pwd" type="xsd:string" sgo:visibility="0" sgo:sortOrder="22"/>
+					</xsd:sequence>
+				</xsd:complexType>
+				</xsd:element>					
+				<xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>				
+             </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

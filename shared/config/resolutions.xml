@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resolutions>
+  <resolution name="10K LatLong (10240x5120)" x="10240" y="5120"/>
+  <resolution name="12K LatLong (12288x6144)" x="12288" y="6144"/>
+  <resolution name="1K Square (1024x1024)" x="1024" y="1024"/>
+  <resolution name="2K DCP Flat (1998x1080)" x="1998" y="1080"/>
+  <resolution name="2K DCP Full (2048x1080)" x="2048" y="1080"/>
+  <resolution name="2K DCP Scope (2048x858)" x="2048" y="858"/>
+  <resolution name="2K Full Ap (2048x1556)" x="2048" y="1556"/>
+  <resolution name="2K LatLong (2048x1024)" x="2048" y="1024"/>
+  <resolution name="2K Square (2048x2048)" x="2048" y="2048"/>
+  <resolution name="3K Square (3072x3072)" x="3072" y="3072"/>
+  <resolution name="4K DCP Flat (3996x2160)" x="3996" y="2160"/>
+  <resolution name="4K DCP Full (4096x2160)" x="4096" y="2160"/>
+  <resolution name="4K DCP Scope (4096x1716)" x="4096" y="1716"/>
+  <resolution name="4K Full Ap (4096x3112)" x="4096" y="3112"/>
+  <resolution name="4K LatLong (4096x2048)" x="4096" y="2048"/>
+  <resolution name="4K Square (4096x4096)" x="4096" y="4096"/>
+  <resolution name="4K UHD (3840x2160)" x="3840" y="2160"/>
+  <resolution name="6K LatLong (6144x3072)" x="6144" y="3072"/>
+  <resolution name="6K Square (6144x6144)" x="6144" y="6144"/>
+  <resolution name="8K LatLong (8192x4096)" x="8192" y="4096"/>
+  <resolution name="8K Square (8192x8192)" x="8192" y="8192"/>
+  <resolution name="8K UHD (7680x4320)" x="7680" y="4320"/>
+  <resolution name="CGA (320x200)" x="320" y="200"/>
+  <resolution name="HD 1080 (1920x1080)" x="1920" y="1080"/>
+  <resolution name="HD 720 (1280x720)" x="1280" y="720"/>
+  <resolution name="HD Square (1920x1920)" x="1920" y="1920"/>
+  <resolution name="NTSC (720x486)" x="720" y="486"/>
+  <resolution name="PAL (720x576)" x="720" y="576"/>
+  <resolution name="UHD LatLong (3840x1920)" x="3840" y="1920"/>
+  <resolution name="VGA (640x480)" x="640" y="480"/>
+</resolutions>

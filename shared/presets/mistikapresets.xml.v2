@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MistikaPresets>
+	<Presets tipo="default" version="1">
+		<preset row="0" id="STANDARD">Standard Preset</preset>
+		<preset row="1" id="IMAGESIZEX">Resolution X</preset>
+		<preset row="2" id="IMAGESIZEY">Resolution Y</preset>
+		<preset row="3" id="SCREENRATIO">Aspect ratio</preset>
+		<preset row="4" id="FRAMESSEG">Frame rate</preset>
+		<preset row="5" id="VIDEO_SIZE">Video Format</preset>
+		<preset row="6" id="VIDEO_IO_MODE">Video IO Mode</preset>
+		<preset row="7" id="COLOR_SPACE_709">Use Color Space 709</preset>
+		<preset row="9" id="PULLDOWN">Video out use pulldown</preset>
+		<preset row="10" id="RED_KELVIN">RED Kelvin value</preset>
+		<preset row="11" id="RED_TINT">RED Tint value</preset>
+		<preset row="12" id="RED_EXPOSURE_COMPENSATION">RED Exposure Compensation value</preset>
+		<preset row="13" id="RED_GAIN_RED">RED Gain red Compensation value</preset>
+		<preset row="14" id="RED_GAIN_GREEN">RED Gain green Compensation value</preset>
+		<preset row="15" id="RED_GAIN_BLUE">RED Gain blue Compensation value</preset>
+		<preset row="16" id="RED_SATURATION">RED Saturation value</preset>
+		<preset row="17" id="RED_CONTRAST">RED Contrast value</preset>
+		<preset row="18" id="RED_BRIGHTNESS">RED Brightness value</preset>
+		<preset row="19" id="RED_DRX">RED DRX value</preset>
+		<preset row="20" id="RED_ISO">RED ISO value</preset>
+		<preset row="21" id="RED_GAMMA_CURVE">RED Gamma Curve</preset>
+		<preset row="22" id="RED_COLOR_SPACE">RED Color Space</preset>
+		<preset row="23" id="RED_DETAIL">RED Detail</preset>
+		<preset row="24" id="RED_OLPF_COMPENSATION">RED OLPF compensation</preset>
+		<preset row="25" id="RED_DENOISE">RED Denoise</preset>
+	</Presets>
+	<Presets tipo="default" version="0">
+		<preset row="0" id="MISTIKA_PRESET">Standard Preset</preset>
+		<preset row="1" id="MISTIKA_RESX">Resolution X</preset>
+		<preset row="2" id="MISTIKA_RESY">Resolution Y</preset>
+		<preset row="3" id="MISTIKA_ASPECT_RATIO">Aspect ratio</preset>
+		<preset row="4" id="MISTIKA_FPS">Frame rate</preset>
+		<preset row="5" id="MISTIKA_VIDEO_FORMAT">Video Format</preset>
+		<preset row="6" id="MISTIKA_VIDEO_IO">Video IO Mode</preset>
+		<preset row="7" id="MISTIKA_USES_709">Use Color Space 709</preset>
+		<preset row="8" id="MISTIKA_USES_RGB_FULL">Use RGB full range</preset>
+		<preset row="9" id="MISTIKA_USES_PULLDOWN">Video out use pulldown</preset>
+		<preset row="10" id="MISTIKA_RED_KELVIN">RED Kelvin value</preset>
+		<preset row="11" id="MISTIKA_RED_TINT">RED Tint value</preset>
+		<preset row="12" id="MISTIKA_RED_EXPOSURE_COMPENSATION">RED Exposure Compensation value</preset>
+		<preset row="13" id="MISTIKA_RED_GAIN_RED">RED Gain red Compensation value</preset>
+		<preset row="14" id="MISTIKA_RED_GAIN_GREEN">RED Gain green Compensation value</preset>
+		<preset row="15" id="MISTIKA_RED_GAIN_BLUE">RED Gain blue Compensation value</preset>
+		<preset row="16" id="MISTIKA_RED_SATURATION">RED Saturation value</preset>
+		<preset row="17" id="MISTIKA_RED_CONTRAST">RED Contrast value</preset>
+		<preset row="18" id="MISTIKA_RED_BRIGHTNESS">RED Brightness value</preset>
+		<preset row="19" id="MISTIKA_RED_DRX">RED DRX value</preset>
+		<preset row="20" id="MISTIKA_RED_ISO">RED ISO value</preset>
+		<preset row="21" id="MISTIKA_RED_GAMMA_CURVE">RED Gamma Curve</preset>
+		<preset row="22" id="MISTIKA_RED_COLOR_SPACE">RED Color Space</preset>
+		<preset row="23" id="MISTIKA_RED_DETAIL">RED Detail</preset>
+		<preset row="24" id="MISTIKA_RED_OLPF_COMPENSATION">RED OLPF compensation</preset>
+		<preset row="25" id="MISTIKA_RED_DENOISE">RED Denoise</preset>
+	</Presets>
+	<RED_ONE tipo="strings">
+		<GammaCurve>
+			<GammaCurve id="0">LINEAR</GammaCurve>
+			<GammaCurve id="1">REC709</GammaCurve>
+			<GammaCurve id="2">RED_SPACE</GammaCurve>
+			<GammaCurve id="3">RED_LOG</GammaCurve>
+			<GammaCurve id="4">PDLOG_685</GammaCurve>
+			<GammaCurve id="5">PDLOG_985</GammaCurve>
+			<GammaCurve id="default">CAMERA</GammaCurve>
+		</GammaCurve>
+		<ColorSpace>
+			<ColorSpace id="0">RGB</ColorSpace>
+			<ColorSpace id="1">REC709</ColorSpace>
+			<ColorSpace id="2">RED_SPACE</ColorSpace>
+			<ColorSpace id="default">CAMERA</ColorSpace>
+		</ColorSpace>
+		<Detail>
+			<Detail id="0">LOW</Detail>
+			<Detail id="1">MEDIUM</Detail>
+			<Detail id="2">HIGH</Detail>
+			<Detail id="default">CAMERA</Detail>
+		</Detail>
+		<OLPFCompensation>
+			<OLPFCompensation id="0">OFF</OLPFCompensation>
+			<OLPFCompensation id="1">LOW</OLPFCompensation>
+			<OLPFCompensation id="2">MEDIUM</OLPFCompensation>
+			<OLPFCompensation id="3">HIGH</OLPFCompensation>
+			<OLPFCompensation id="default">CAMERA</OLPFCompensation>
+		</OLPFCompensation>
+		<Denoise>
+			<Denoise id="0">OFF</Denoise>
+			<Denoise id="1">MINIMUM</Denoise>
+			<Denoise id="2">MILDER</Denoise>
+			<Denoise id="3">MILD</Denoise>
+			<Denoise id="4">MEDIUM</Denoise>
+			<Denoise id="5">STRONG</Denoise>
+			<Denoise id="6">MAXIMUM</Denoise>
+			<Denoise id="default">CAMERA</Denoise>
+		</Denoise>
+	</RED_ONE>
+</MistikaPresets>
+

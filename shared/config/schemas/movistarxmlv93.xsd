@@ -1,0 +1,108 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="MovistarXMLv93" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="assetNr" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="version" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                <xsd:element name="catalog" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="providerID" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="linkedChannel" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="Supra" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="8">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="useSupra" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="supraId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="supraExternalId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="supraTitle1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                            <xsd:element name="supraLocale1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                            <xsd:element name="supraTitle2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                            <xsd:element name="supraLocale2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                            <xsd:element name="supraSynopsis" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                            <xsd:element name="supraReview" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+                            <xsd:element name="supraDescripion" type="xsd:string" sgo:visibility="0" sgo:sortOrder="9"/>
+                            <xsd:element name="supraGenre" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+                            <xsd:element name="supraGenre2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                            <xsd:element name="supraGenre3" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+                            <xsd:element name="supraOriginalContent" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="13"/>
+                            <xsd:element name="supraIdImdb" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Series" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="9">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="useSeries" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="seriesId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="seriesExternalId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="seriesTitle1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                            <xsd:element name="seriesLocale1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                            <xsd:element name="seriesTitle2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                            <xsd:element name="seriesLocale2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                            <xsd:element name="seriesSynopsis" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                            <xsd:element name="seriesReview" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+                            <xsd:element name="seriesDescripion" type="xsd:string" sgo:visibility="0" sgo:sortOrder="9"/>
+                            <xsd:element name="seriesGenre" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+                            <xsd:element name="seriesGenre2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                            <xsd:element name="seriesGenre3" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+                            <xsd:element name="seriesOriginalContent" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="13"/>
+                            <xsd:element name="seriesIdImdb" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>
+                            <xsd:element name="seriesDuration" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="15"/>
+                            <xsd:element name="seriesSeason" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="16"/>
+                            <xsd:element name="seriesActors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="17"/>
+                            <xsd:element name="seriesDirectors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="18"/>
+                            <xsd:element name="seriesYear" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="19"/>
+                            <xsd:element name="seriesRating" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="20" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_seriesRating"/>
+                            <xsd:element name="seriesTarget" type="xsd:string" sgo:visibility="0" sgo:sortOrder="21"/>
+                            <xsd:element name="seriesCountries" type="xsd:string" sgo:visibility="0" sgo:sortOrder="22"/>
+                            <xsd:element name="seriesFrequency" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="23" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_seriesFrequency"/>
+                            <xsd:element name="seriesPublicationMode" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="24" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_seriesPublicationMode"/>										
+							<xsd:element name="episodeCount" type="xsd:integer"  sgo:visibility="0" sgo:sortOrder="25"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Content" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="10">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="useContent" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="contentId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="contentExternalId" type="xsd:string" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="contentTitle1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+                            <xsd:element name="contentLocale1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                            <xsd:element name="contentTitle2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="5"/>
+                            <xsd:element name="contentLocale2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="6"/>
+                            <xsd:element name="contentSynopsis" type="xsd:string" sgo:visibility="0" sgo:sortOrder="7"/>
+                            <xsd:element name="contentReview" type="xsd:string" sgo:visibility="0" sgo:sortOrder="8"/>
+                            <xsd:element name="contentDescripion" type="xsd:string" sgo:visibility="0" sgo:sortOrder="9"/>
+                            <xsd:element name="contentGenre" type="xsd:string" sgo:visibility="0" sgo:sortOrder="10"/>
+                            <xsd:element name="contentGenre2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="11"/>
+                            <xsd:element name="contentGenre3" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+                            <xsd:element name="contentOriginalContent" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="13"/>
+                            <xsd:element name="contentIdImdb" type="xsd:string" sgo:visibility="0" sgo:sortOrder="14"/>
+                            <xsd:element name="contentDuration" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="15"/>
+                            <xsd:element name="contentSeason" type="xsd:string" sgo:visibility="0" sgo:sortOrder="16"/>
+                            <xsd:element name="contentActors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="17"/>
+                            <xsd:element name="contentDirectors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="18"/>
+                            <xsd:element name="contentYear" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="19"/>
+                            <xsd:element name="contentRating" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="20" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_seriesRating"/>
+                            <xsd:element name="contentTarget" type="xsd:string" sgo:visibility="0" sgo:sortOrder="21"/>
+                            <xsd:element name="contentCountries" type="xsd:string" sgo:visibility="0" sgo:sortOrder="22"/>
+                            <xsd:element name="contentFrequency" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="23" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_seriesFrequency"/>
+                            <xsd:element name="contentPublicationMode" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="24" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_seriesPublicationMode"/>
+                            <xsd:element name="contentExpiryDate" type="xsd:dateTime" sgo:visibility="0" sgo:sortOrder="25"/>
+                            <xsd:element name="contentNumber" type="xsd:integer" sgo:visibility="0" sgo:sortOrder="26"/>
+                            <xsd:element name="contentTags" type="xsd:string" sgo:visibility="0" sgo:sortOrder="27"/>
+                            <xsd:element name="contentAwards" type="xsd:string" sgo:visibility="0" sgo:sortOrder="28"/>
+                            <xsd:element name="contentD2Go" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="29"/>
+                            <xsd:element name="contentDescriptors" type="xsd:string" sgo:visibility="0" sgo:sortOrder="30"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="adiFile" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="versionFileName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="12"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

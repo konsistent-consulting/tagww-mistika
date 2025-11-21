@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="Transcode and Notifications" nameConvention="[path][baseName][.frame][.ext]">
+  <view scale="0.482253" x="518.4" y="-360.806"/>
+  <nodes>
+   <node type="input" class="Folder">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#808000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-392.064,-421.142</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="53bc9189-d432-48c9-957c-5dd7ad64147f" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="58300893-0d55-41e6-8ba9-145ae9c3e32f" name="rankTo" specialType="order"/>
+     <Files type="output" id="e8183a65-6bc1-444d-9564-b3a84fe204bf" name="Files">
+      <linkedTo>b1fefaf2-4409-4d10-adf4-9cd0244a7fe2</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node type="task" class="ProRes">
+    <properties>
+     <objectName type="string">ProRes</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">167.616,-403.776</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">true</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="e193db92-760c-441e-a766-c481d920232b" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="69b952d8-1dc4-4b42-b4f0-e8a46569b6e5" name="rankTo" specialType="order"/>
+     <VideoOut type="output" id="46966e0c-e4fa-4b2c-afe8-9d942530e8a1" name="VideoOut" label="AV Out">
+      <linkedTo>d64adecb-d940-4abb-bb77-c0b0a111d1ef</linkedTo>
+      <linkedTo>a69826f2-fb48-4925-905f-23614241eead</linkedTo>
+     </VideoOut>
+     <AudioOut type="output" id="ce791b0d-2942-4b7a-aa3f-7b3b47ff219e" visible="0" name="AudioOut" label="Ext. Audio"/>
+     <VideoIn type="input" id="b1fefaf2-4409-4d10-adf4-9cd0244a7fe2" name="VideoIn" label="AV In">
+      <linkedTo>e8183a65-6bc1-444d-9564-b3a84fe204bf</linkedTo>
+     </VideoIn>
+     <AudioIn type="input" id="a4470955-c937-46b9-a507-d29a08052745" name="AudioIn" label="Ext. Audio"/>
+    </connections>
+   </node>
+   <node type="output" class="FrameIO">
+    <properties>
+     <objectName type="string">FrameIO</objectName>
+     <color type="color">#6845ff</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">586.426,-436.435</pos>
+     <schemaName type="string">frameio</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <token type="string" encrypted="1">AwVU7sqkFkgCK8O4hmGwN2qMjvYiYttibU6O</token>
+     <api type="string">https://api.frame.io/v2</api>
+     <accountID type="string"></accountID>
+     <email type="string"></email>
+     <team type="string">--- None ---</team>
+     <project type="string">--- None ---</project>
+     <directory type="string">--- None ---</directory>
+     <createReviewLink type="bool">false</createReviewLink>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="53d79036-ea14-4a35-a1e7-cd096ff7bbf9" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="87da7c5c-5908-4d21-ac7c-5b1cd7e7d7cc" name="rankTo" specialType="order">
+      <linkedTo>ad9250d0-e030-4ae9-9fca-7245f0b61507</linkedTo>
+     </rankTo>
+     <File type="input" id="d64adecb-d940-4abb-bb77-c0b0a111d1ef" name="File">
+      <linkedTo>46966e0c-e4fa-4b2c-afe8-9d942530e8a1</linkedTo>
+     </File>
+     <uploaded type="output" id="e9399102-246d-4ec0-8375-2f270bcea9b1" name="uploaded"/>
+    </connections>
+   </node>
+   <node type="output" class="Mail">
+    <properties>
+     <objectName type="string">Mail</objectName>
+     <color type="color">#e1e1d2</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">902.813,-292.214</pos>
+     <schemaName type="string">mail</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+
+mailModulesLoaded=False
+try:
+    import sys
+    import smtplib
+    import re
+    from email.mime.text import MIMEText
+    from email.mime.multipart import MIMEMultipart
+    mailModulesLoaded=True
+except ImportError as e:
+    print("Unable to import modules: "+e.message)
+    print("check your sys.path ")
+            
+_WF_MAIL_DEFAULT_MSG="""Put Your Text Here
+&lt;?py
+if self.onePerFile:
+    print("Input file:")
+    up=self._localDict['up']
+    print (up.getFilePath())
+else:
+    print("List of input Files:")
+    for c in self.getConnectors():
+        for p in c.getUniversalPaths():
+            print (p.getFilePath())
+?>"""
+
+def init(self):
+    self.color=QColor(225,225,210)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("login")
+    self.addProperty("onlySendIfInput")
+    self.addProperty("onePerFile",False)
+    self.addEncryptedProperty("pwd")
+    self.addProperty("smtpServer","smtp.gmail.com")
+    self.addProperty("port",587)
+    self.addProperty("mailFrom")
+    self.addProperty("to") #comma separated list
+    self.addProperty("subject","Mistika Workflows Mail Node Processed")
+    self.addProperty("bodyType","plain")
+    self.addProperty("body",_WF_MAIL_DEFAULT_MSG)    
+    self.bypassSupported=True
+    self.setAcceptConnectors(True,"input")
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)
+    return True
+    
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    if not mailModulesLoaded:
+        res=self.critical("mail:modules","Modules not loaded. Check your sys.path or install them")
+#    if self.login=="":
+#        res=self.critical("mail:loginEmpty","'Login' can not be empty") and res
+    to=str(self.to).strip()
+    if to=="":
+        res=self.critical("mail:toEmpty","'To' can not be empty") and res
+    else:
+        list=to.split(',')
+        for item in list:
+            item=item.strip()
+            if re.match('^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,20})$',item) == None:
+                res=self.critical("mail:invalidTo","Invalid email address: "+item+". Use ',' to separate multiple mail addresses.") and res
+
+    return res
+    
+def process(self):
+    res=True
+    def sendMail(up=None):
+        s = smtplib.SMTP(self.smtpServer,int(self.port))
+        try:
+            s.starttls()
+        except smtplib.SMTPException as e:
+             self.warning("process:tls","TLS not supported by server")
+        try:
+            s.ehlo()
+            if self.login!="":
+                s.login(self.login,self.pwd)
+            msg = MIMEMultipart()
+            subject=self.evaluate(str(self.subject))
+            body=self.evaluate(str(self.body))
+            if up!=None:
+                subject=up.evaluateTokensString(subject)
+                body=up.evaluateTokensString(body)
+            msg['Subject']=subject
+            f=self.mailFrom.strip()
+            msg['From']=f if len(f)>0 else self.login
+            msg['To']=str(self.to)
+            msg.attach(MIMEText(body,self.bodyType))
+            s.sendmail(self.login,str(self.to).split(","),msg.as_string())
+            s.quit()
+            return True
+        except Exception as e:
+            return self.critical("process:smtp","smtp Error: {}".format(e))
+            
+    if self.bypassEnabled:
+        return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    hasInput = False
+    for c in inputs:                                  
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            hasInput = True
+    if not hasInput and self.onlySendIfInput: 
+        return True     
+    if self.onePerFile:
+        for c in self.getConnectors():
+            for up in c.getUniversalPaths():
+                d={}
+                d["up"]=up
+                self._localDict=d
+                self.setPropertiesFromUP(up)     
+                done=sendMail(up)
+                if not done:
+                    self.addFailedUP(up)
+                res=done and res
+    else:
+        res=sendMail()
+    return res</code>
+     <login type="string"></login>
+     <onlySendIfInput type="string"></onlySendIfInput>
+     <onePerFile type="bool">false</onePerFile>
+     <pwd type="string" encrypted="1">AwWsFjJc7rD60ztAfplIz5J0dg7amiOalbZ2</pwd>
+     <smtpServer type="string">smtp.gmail.com</smtpServer>
+     <port type="string">587</port>
+     <mailFrom type="string"></mailFrom>
+     <to type="string"></to>
+     <subject type="string">Mistika Workflows Mail Node Processed</subject>
+     <bodyType type="string">plain</bodyType>
+     <body type="string">Put Yout Text Here
+List of input Files:
+&lt;?py
+for c in self.getConnectors():
+    for p in c.getUniversalPaths():
+      print (p.getFilePath())
+?></body>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="3c4f850b-8c34-43bd-9c64-512731d40ccf" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="a4b184ba-b5cd-489c-bce9-1c97ef1ab295" name="rankTo" specialType="order"/>
+     <input type="input" id="52f55c0d-350d-491e-8f77-21e0418c04f1" name="input"/>
+    </connections>
+   </node>
+   <node type="output" class="Gmail">
+    <properties>
+     <objectName type="string">Gmail</objectName>
+     <color type="color">#e1e1d2</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">621.331,-293.587</pos>
+     <schemaName type="string">gmail</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+from googleAuth import GoogleAuth
+import Mistika
+import os
+import base64
+import json
+from requests import HTTPError
+
+mailModulesLoaded=False
+try:
+    import re
+    from email.mime.text import MIMEText
+    from email.mime.multipart import MIMEMultipart
+    mailModulesLoaded=True
+except ImportError as e:
+    print("Unable to import modules: "+e.message)
+    print("check your sys.path ")
+            
+_WF_MAIL_DEFAULT_MSG="""Put Your Text Here
+&lt;?py
+if self.onePerFile:
+    print("Input file:")
+    up=self._localDict['up']
+    print (up.getFilePath())
+else:
+    print("List of input Files:")
+    for c in self.getConnectors():
+        for p in c.getUniversalPaths():
+            print (p.getFilePath())
+?>"""
+
+def init(self):
+    self.color=QColor(225,225,210)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("clientId")
+    self.addProperty("onlySendIfInput")
+    self.addProperty("onePerFile",False)
+    self.addEncryptedProperty("clientSecret")
+    self.addProperty("to") #comma separated list
+    self.addProperty("subject","Mistika Workflows Mail Node Processed")
+    self.addProperty("bodyType","plain")
+    self.addProperty("body",_WF_MAIL_DEFAULT_MSG)
+    self.addProperty("credentialsString", "")  
+    self.addProperty("_credentialsDict", {})
+    self.bypassSupported=True
+    self.setAcceptConnectors(True,"input")
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)
+    self.addActionToContextMenu("Authenticate")
+    return True
+    
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    if not mailModulesLoaded:
+        res=self.critical("mail:modules","Modules not loaded. Check your sys.path or install them")
+    if self.clientId == "":
+       res = self.critical("Gmail:clientId", "'clientI' can not be empty") and res
+    if self.clientSecret == "":
+       res = self.critical("Gmail:clientSecret", "'clientSecret' can not be empty") and res
+#    if self.login=="":
+#        res=self.critical("mail:loginEmpty","'Login' can not be empty") and res
+    to=str(self.to).strip()
+    if to=="":
+        res=self.critical("mail:toEmpty","'To' can not be empty") and res
+    else:
+        list=to.split(',')
+        for item in list:
+            item=item.strip()
+            if re.match('^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,20})$',item) == None:
+                res=self.critical("mail:invalidTo","Invalid email address: "+item+". Use ',' to separate multiple mail addresses.") and res
+
+    return res
+    
+def process(self):
+    res = True
+    def sendMail(drive, up=None):
+        msg = MIMEMultipart()
+        subject=self.evaluate(str(self.subject))
+        body=self.evaluate(str(self.body))
+        if up!=None:
+            subject=up.evaluateTokensString(subject)
+            body=up.evaluateTokensString(body)
+        msg['subject']=subject
+        msg['to']=str(self.to)
+        body=self.evaluate(self.body)
+        msg.attach(MIMEText(body,self.bodyType))
+        create_message = {'raw': base64.urlsafe_b64encode(msg.as_bytes()).decode()}
+        try:
+            msg = (drive.users().messages().send(userId="me", body=create_message).execute())
+            print(F'sent message to {msg} Message Id: {msg["id"]}')
+            return True
+        except Exception as error:
+            return self.critical("process:smtp","An error ocurred: {}".format(error))
+
+    if self.bypassEnabled:
+        return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    hasInput = False
+    for c in inputs:                                 
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            hasInput = True
+    if not hasInput and self.onlySendIfInput: 
+        return True  
+
+    self._credentialsDict = {} if not self.credentialsString else json.loads(self.credentialsString)
+    goo = GoogleAuth(self, "https://www.googleapis.com/auth/gmail.send", "gmail", "v1", self._credentialsDict)
+    drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)
+    self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)
+
+    if drive == "TimeOut": 
+        return self.critical("GoogleMail:process:authCanceled", "Authentication timeout")
+    if self.credentialsString == None or self.credentialsString == "{}": 
+        return self.critical("GoogleMail:process:authCanceled", "Authentication was rejected") 
+    
+    if self.onePerFile:
+        for c in self.getConnectors():
+            for up in c.getUniversalPaths():
+                d={}
+                d["up"]=up
+                self._localDict=d
+                self.setPropertiesFromUP(up)     
+                done=sendMail(drive,up)
+                if not done:
+                    self.addFailedUP(up)
+                res=done and res
+    else:
+        res=sendMail(drive)
+    return res
+
+def menuAction(self,name):
+    print ("menuAction",name)
+    if name=="Authenticate":
+        self.credentialsString = ""
+        self._credentialsDict = {}
+        goo = GoogleAuth(self, "https://www.googleapis.com/auth/gmail.send", "gmail", "v1", self._credentialsDict)
+        drive = goo.get_authenticated_service(self.clientId.strip(), self.clientSecret.strip(), 60)
+        self.credentialsString = goo.updateCredentials(self._credentialsDict, self.clientId)
+
+        if drive == "TimeOut": 
+            return self.critical("GoogleMail:process:authCanceled", "Authentication timeout")
+        if self.credentialsString == None or self.credentialsString == "{}": 
+            return self.critical("GoogleMail:process:authCanceled", "Authentication was rejected") 
+        </code>
+     <clientId type="string"></clientId>
+     <onlySendIfInput type="string"></onlySendIfInput>
+     <onePerFile type="bool">false</onePerFile>
+     <clientSecret type="string" encrypted="1">AwV5w+eJO2UvBu6Vq0ydGkeho9sPT/ZPQGOj</clientSecret>
+     <to type="string"></to>
+     <subject type="string">Mistika Workflows Mail Node Processed</subject>
+     <bodyType type="string">plain</bodyType>
+     <body type="string">Put Your Text Here
+&lt;?py
+if self.onePerFile:
+    print("Input file:")
+    up=self._localDict['up']
+    print (up.getFilePath())
+else:
+    print("List of input Files:")
+    for c in self.getConnectors():
+        for p in c.getUniversalPaths():
+            print (p.getFilePath())
+?></body>
+     <credentialsString type="string"></credentialsString>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="ad9250d0-e030-4ae9-9fca-7245f0b61507" name="rankFrom" specialType="order">
+      <linkedTo>87da7c5c-5908-4d21-ac7c-5b1cd7e7d7cc</linkedTo>
+     </rankFrom>
+     <rankTo type="output" id="373b202d-7527-48c3-b861-111ea84c9445" name="rankTo" specialType="order"/>
+     <input type="input" id="a69826f2-fb48-4925-905f-23614241eead" name="input">
+      <linkedTo>46966e0c-e4fa-4b2c-afe8-9d942530e8a1</linkedTo>
+     </input>
+    </connections>
+   </node>
+   <node type="output" class="Slack">
+    <properties>
+     <objectName type="string">Slack</objectName>
+     <color type="color">#000000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">622.648,-162.091</pos>
+     <schemaName type="string">slack</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <webHook type="string"></webHook>
+     <message type="string">List of Input Files:
+&lt;?py
+for c in self.getConnectors():
+  for p in c.getUniversalPaths():
+    print (p.toString())
+?></message>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="12468111-63c3-46ed-95ca-cb251ce70d0f" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="f185921c-c094-41f0-a05f-7693fa1ff4bb" name="rankTo" specialType="order"/>
+     <File type="input" id="40f24a89-f350-4340-8cd3-0ded48750ba7" name="File"/>
+    </connections>
+   </node>
+   <node type="output" class="WhatsApp">
+    <properties>
+     <objectName type="string">WhatsApp</objectName>
+     <color type="color">#25d366</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">899.165,-159.917</pos>
+     <schemaName type="string">whatsapp</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector
+from Mistika.Qt import QColor
+import requests
+import json
+            
+_WF_WHATSAPP_DEFAULT_MSG="""Put your text here
+List of Input Files: 
+&lt;?py
+for c in self.getConnectors():
+    for p in c.getUniversalPaths():
+      print (p.toString())
+?>"""
+
+def init(self):
+    self.color=QColor(0x25d366)
+    self.addConnector("input",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addProperty("onlySendIfInput")
+    self.addEncryptedProperty("phoneNumberID")
+    self.addEncryptedProperty("accessToken")
+    self.addProperty("msgTo")
+    self.addProperty("body",_WF_WHATSAPP_DEFAULT_MSG)    
+    self.bypassSupported=True
+    self.setAcceptConnectors(True,"input")
+    self.setSupportedTypes(self.NODETYPE_OUTPUT)
+    return True
+    
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    
+    if self.phoneNumberID.strip()=="":
+      res=self.critical("mail:phoneNumberID","'phoneNumberID' can not be empty") and res
+    if self.accessToken.strip()=="":
+      res=self.critical("mail:accessToken","'accessToken' can not be empty") and res
+    if self.msgTo.strip()=="":
+      res=self.critical("mail:msgTo","'msgTo' can not be empty") and res
+    return res
+    
+def process(self):
+    if self.bypassEnabled:
+        return True
+    inputs=self.getConnectorsByType(Cconnector.CONNECTOR_TYPE_INPUT)
+    hasInput = False
+    for c in inputs:                                 
+        for up in c.getUniversalPaths():
+            if self.isCancelled():
+                return False
+            hasInput = True
+    if not hasInput and self.onlySendIfInput: return True 
+
+    headers = {
+        "Authorization": "Bearer " + self.accessToken.strip(),
+        "Content-Type": "application/json"
+    }
+    url = f"https://graph.facebook.com/v17.0/{self.phoneNumberID.strip()}/messages"
+
+    try:
+        body=self.evaluate(self.body)
+
+        splitBody = []
+        chunkLength = 4096
+
+        for i in range(0, len(body), chunkLength):
+            splitBody.append(body[i:i + chunkLength])
+        
+        for bodyChunk in splitBody:
+            data ={
+                "messaging_product": "whatsapp",
+                "recipient_type": "individual",
+                "to": self.msgTo.strip(),
+                "type": "text",
+                "text": {
+                    "preview_url": False,
+                    "body": bodyChunk
+                }
+            }
+
+            response = requests.post(url, data=json.dumps(data), headers=headers)
+            if "error" in response.json():
+                return self.critical("process:smtp","Error: {}".format(response.json()["error"]["message"]))
+            #print(response.json())
+        
+    except Exception as e:
+        return self.critical("error","Error: {}".format(e))
+    return True</code>
+     <onlySendIfInput type="string"></onlySendIfInput>
+     <phoneNumberID type="string" encrypted="1">AwUZo4fpWwVPZo71yyz9eifBw7tvL5YvIAPD</phoneNumberID>
+     <accessToken type="string" encrypted="1">AwXHfVk3hduRuFArFfIjpPkfHWWx8Ujx/t0d</accessToken>
+     <msgTo type="string"></msgTo>
+     <body type="string">Put your text here
+List of Input Files: 
+&lt;?py
+for c in self.getConnectors():
+    for p in c.getUniversalPaths():
+      print (p.toString())
+?></body>
+    </properties>
+    <connections>
+     <rankFrom type="input" id="91a75fc7-b5c8-44c8-b0af-4e8ba952bbf2" name="rankFrom" specialType="order"/>
+     <rankTo type="output" id="d39e54cd-1844-4984-a1ac-a5b02047f685" name="rankTo" specialType="order"/>
+     <input type="input" id="557435d5-0a21-4eb4-b0da-49e88ecb7738" name="input"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-552.038,-701.728</ScenePos>
+     <Size type="size2">449,51</Size>
+     <TextSize type="float">26.98122215270996</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Transcode and Notifications</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-551.52,-626.79</ScenePos>
+     <Size type="size2">1704,70</Size>
+     <TextSize type="float">19.46477699279785</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">After a transcode job, notifications can be added to inform about the files that have been processed
+If processed files are uploaded to a remote platform, priorities between the nodes can be set by connecting them with the yellow arrow connector </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-554.4,-485.568</ScenePos>
+     <Size type="size2">568.771,338.88</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff0e6d72</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-546.912,-266.944</ScenePos>
+     <Size type="size2">560,54</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Inputs can be either local, LAN, or remote 
+- please consult other Basic Transcode templates for more details </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">102.113,-483.052</ScenePos>
+     <Size type="size2">387.371,341.362</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Transcoding</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">570.926,-486.935</ScenePos>
+     <Size type="size2">661.787,562.944</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Upload And Notifications</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff344d72</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">602.4,-29.2</ScenePos>
+     <Size type="size2">610,92</Size>
+     <TextSize type="float">13</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">After uploading processed files to FrameIO, an email
+with Gmail account will be sent with information about those files.
+Note the yellow arrow connector used to set priorities between nodes processes.
+Also other mail clients, Slack and WhatsApp are available for notifications</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

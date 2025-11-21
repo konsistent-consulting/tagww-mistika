@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <QuickTime>
+    <burnLayout/>
+    <codec>ffmpeg_MOV.MOVIE_MOV_MPEG4</codec>
+    <color>#0063b4</color>
+    <displayFilter/>
+    <objectName>QuickTime</objectName>
+    <pos/>
+    <url/>
+  </QuickTime>
+</nodeCommonRoot>

@@ -1,0 +1,54 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="CSVToUPmdata" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+		    <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+            <xsd:element name="csvOptions" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="50">
+				<xsd:complexType>
+					<xsd:sequence>
+                        <xsd:element name="csvDelimiter" type="stringPulldown" sgo:stringPulldownValues="Auto$$$-1|tab$$$0|,$$$1|;$$$2" sgo:visibility="0" sgo:sortOrder="51"/>
+                        <xsd:element name="MediaFilesColIndex" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10|11$$$11|12$$$12|13$$$13|14$$$14|15$$$15" sgo:visibility="0" sgo:sortOrder="52"/>
+                        <xsd:element name="SkipLines" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10|11$$$11|12$$$12|13$$$13|14$$$14|15$$$15" sgo:visibility="0" sgo:sortOrder="53"/>
+                        <xsd:element name="ChangeBackSlashes" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="54"/>
+                        <xsd:element name="SetPrivateData" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="55"/>
+                        <xsd:element name="TokenNameFrom" type="integerPulldown" sgo:integerPulldownValues="From Header$$$0|Custom$$$1" sgo:visibility="0" sgo:sortOrder="56"/>
+                    </xsd:sequence>
+				</xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CustomTokens" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="60">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="TokenName1" type="xsd:string" sgo:visibility="0" sgo:sortOrder="61"/>
+                        <xsd:element name="ColumnT1" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10|11$$$11|12$$$12|13$$$13|14$$$14|15$$$15" sgo:visibility="0" sgo:sortOrder="62"/>
+                        <xsd:element name="TokenName2" type="xsd:string" sgo:visibility="0" sgo:sortOrder="63"/>
+                        <xsd:element name="ColumnT2" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10|11$$$11|12$$$12|13$$$13|14$$$14|15$$$15" sgo:visibility="0" sgo:sortOrder="64"/>
+                        <xsd:element name="TokenName3" type="xsd:string" sgo:visibility="0" sgo:sortOrder="65"/>
+                        <xsd:element name="ColumnT3" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10|11$$$11|12$$$12|13$$$13|14$$$14|15$$$15" sgo:visibility="0" sgo:sortOrder="66"/>
+                        <xsd:element name="TokenName4" type="xsd:string" sgo:visibility="0" sgo:sortOrder="67"/>
+                        <xsd:element name="ColumnT4" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10|11$$$11|12$$$12|13$$$13|14$$$14|15$$$15" sgo:visibility="0" sgo:sortOrder="68"/>
+                        <xsd:element name="TokenName5" type="xsd:string" sgo:visibility="0" sgo:sortOrder="69"/>
+                        <xsd:element name="ColumnT5" type="stringPulldown" sgo:stringPulldownValues="0$$$0|1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10|11$$$11|12$$$12|13$$$13|14$$$14|15$$$15" sgo:visibility="0" sgo:sortOrder="70"/>
+                    </xsd:sequence>
+				</xsd:complexType>
+            </xsd:element>
+            <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="80">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="81"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="501"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+         </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

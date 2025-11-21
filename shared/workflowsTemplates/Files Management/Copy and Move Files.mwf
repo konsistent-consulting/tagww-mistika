@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="Copy and Move Files">
+  <view scale="0.694444" y="224.64" x="-4.32"/>
+  <nodes>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-370.6,-91.144</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="af4c8d99-a876-4bd8-9e25-55e5cb8e8adc"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="dfdd4364-0c2a-45db-bada-32f834b2da75"/>
+     <Files type="output" name="Files" id="6aa3c675-327d-4093-8996-14f4f275986d">
+      <linkedTo>b0a34829-6f1b-4eac-af51-521fbb67a74c</linkedTo>
+      <linkedTo>1abb8567-029f-4165-9fa6-de9c4a507211</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="Copy" type="task">
+    <properties>
+     <objectName type="string">Copy</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">19.64,-91.8</pos>
+     <schemaName type="string">copy</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="8d463bb5-8b97-4ef1-bb11-69c3694406e7"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="1c02ea3c-56b8-497a-9fc3-1e7742deb52e"/>
+     <File type="input" name="File" id="b0a34829-6f1b-4eac-af51-521fbb67a74c">
+      <linkedTo>6aa3c675-327d-4093-8996-14f4f275986d</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="a0d2f349-aecb-4053-a391-1898b8fb7c6b"/>
+    </connections>
+   </node>
+   <node class="Move" type="task">
+    <properties>
+     <objectName type="string">Move</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">19.64,68.456</pos>
+     <schemaName type="string">move</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="dc8a5fcb-187b-4b6d-9f7f-819aba1fc05f"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="d194fb0a-091e-4508-9fe0-9a5e43d025f8"/>
+     <File type="input" name="File" id="1abb8567-029f-4165-9fa6-de9c4a507211">
+      <linkedTo>6aa3c675-327d-4093-8996-14f4f275986d</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="085b589a-56e2-47e2-bc53-5e0c3436b980"/>
+    </connections>
+   </node>
+   <node class="FTP" type="input">
+    <properties>
+     <objectName type="string">FTP</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-371.52,55.296</pos>
+     <schemaName type="string">ftp</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <protocol type="string">ftp</protocol>
+     <url type="string"></url>
+     <user type="string"></user>
+     <authType type="int">0</authType>
+     <keyFile type="string"></keyFile>
+     <keyPassPhrase encrypted="1" type="string">AwVL8dW7CVcdNNynmX6vKHWTkek9fcR9clGR</keyPassPhrase>
+     <pwd encrypted="1" type="string">AwWYIgZo2oTO5w90Sq18+6ZAQjrurheuoYJC</pwd>
+     <port type="ushort">21</port>
+     <localPath type="string"></localPath>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <newFilesOnly type="bool">false</newFilesOnly>
+     <deleteAfterTransfer type="bool">false</deleteAfterTransfer>
+     <areYouSure type="bool">false</areYouSure>
+     <renameFilesList type="string"></renameFilesList>
+     <maintainPadding type="bool">true</maintainPadding>
+     <ignoreStandAloneSidecars type="bool">false</ignoreStandAloneSidecars>
+     <retries type="int">10</retries>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="a7a77206-fd3a-45c2-abc9-51db721240fa"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="d2851827-2685-4c01-9dc6-86ef18795853"/>
+     <To type="output" name="To" id="4a35e797-f9a5-4622-bf88-01ab8a0e47c7"/>
+    </connections>
+   </node>
+   <node class="S3In" type="input">
+    <properties>
+     <objectName type="string">S3In</objectName>
+     <color type="color">#e19900</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-369.792,198.72</pos>
+     <schemaName type="string">s3in</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">from Mistika.classes import Cconnector&#xd;
+from Mistika.Qt import QColor&#xd;
+from Mistika.classes import CuniversalPath&#xd;
+from wfAWS import wfAWS&#xd;
+&#xd;
+&#xd;
+def init(self):&#xd;
+    self.setClassName("S3 In")&#xd;
+    self.color=QColor(0xe19900)&#xd;
+    self.addConnector("out",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)&#xd;
+    self.addProperty("bucket")&#xd;
+    self.addProperty("objectPrefix", "Leave empty to download the bucket completely")&#xd;
+    self.addEncryptedProperty("key")&#xd;
+    self.addEncryptedProperty("secret")&#xd;
+    self.addProperty("localPath")&#xd;
+    self.addProperty("areYouSure")&#xd;
+    self.addProperty("deleteAfterDownload")&#xd;
+    self.setPropertyVisible("areYouSure", False)&#xd;
+    self.addProperty("objectName")&#xd;
+    self.bypassSupported=True&#xd;
+    self.setSupportedTypes(self.NODETYPE_INPUT)&#xd;
+    self.setComplexity(100)&#xd;
+    return True&#xd;
+&#xd;
+def isReady(self):&#xd;
+    if self.bypassSupported and self.bypassEnabled:&#xd;
+        return True&#xd;
+    res = True&#xd;
+    bucket = self.evaluate(self.bucket).strip()&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    localPath = self.evaluate(self.localPath).strip()&#xd;
+    areYouSure = self.areYouSure&#xd;
+    if localPath == "":&#xd;
+        res = self.critical("s3Out:path", "'path' can not be empty") and res&#xd;
+    if key == "":&#xd;
+        res = self.critical("s3Out:key", "'key' can not be empty") and res&#xd;
+    if secret == "":&#xd;
+        res = self.critical("s3Out:secret", "'secret' can not be empty") and res&#xd;
+    if bucket=="":&#xd;
+        res=self.critical("s3in:emptyBucket","'bucket' can not be empty") and res&#xd;
+    if not areYouSure:&#xd;
+        res = self.critical("s3in:notSure", "can not delete files from bucket after download if not sure") and res&#xd;
+    return res&#xd;
+&#xd;
+def process(self):&#xd;
+    out = self.getFirstConnectorByName("out")&#xd;
+    out.clearUniversalPaths()&#xd;
+&#xd;
+    if self.bypassEnabled:&#xd;
+        return True&#xd;
+&#xd;
+    res = True&#xd;
+&#xd;
+    bucket=self.evaluate(self.bucket).strip()&#xd;
+    objectPrefix = self.evaluate(self.objectPrefix).strip()&#xd;
+    if objectPrefix == "Leave empty to download the bucket completely":&#xd;
+       objectPrefix = ""&#xd;
+    if objectPrefix.startswith("/"):&#xd;
+        objectPrefix = objectPrefix[1:]&#xd;
+    key = self.key.strip()&#xd;
+    secret = self.secret.strip()&#xd;
+    localPath = self.evaluate(self.localPath).strip()&#xd;
+    deleteAfterDownload = self.deleteAfterDownload&#xd;
+    aws = wfAWS(self)&#xd;
+&#xd;
+    if not aws.connect(key, secret) or not aws.checkIfBucketExists(bucket):&#xd;
+        return False&#xd;
+&#xd;
+    [res, fileList, metadataList] = aws.downloadPath(objectPrefix, localPath, deleteAfterDownload)&#xd;
+    up = CuniversalPath()&#xd;
+    upList= up.buildUPfromFileList(fileList, self.getNameConvention(), localPath)&#xd;
+    aws.addMetadataToUp(upList, metadataList)&#xd;
+    out.setUniversalPaths(upList)&#xd;
+&#xd;
+    return res&#xd;
+&#xd;
+def onPropertyUpdated(self, name):&#xd;
+    try:&#xd;
+        if name == "deleteAfterDownload":&#xd;
+            self.setPropertyVisible("areYouSure", self.deleteAfterDownload)&#xd;
+            self.areYouSure = not self.deleteAfterDownload&#xd;
+    except AttributeError:&#xd;
+        pass&#xd;
+</code>
+     <bucket type="string"></bucket>
+     <objectPrefix type="string">Leave empty to download the bucket completely</objectPrefix>
+     <key encrypted="1" type="string">AwV8xuKMPmAqA+uQrkmYH0Kkpt4KSvNKRWam</key>
+     <secret encrypted="1" type="string">AwUvlbHfbTN5ULjD/RrLTBH39Y1ZGaAZFjX1</secret>
+     <localPath type="string"></localPath>
+     <areYouSure type="bool">true</areYouSure>
+     <deleteAfterDownload type="string"></deleteAfterDownload>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="6f189e45-6adf-4fcf-8d71-b7ad8242d6c6"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="8908219b-9cf9-4308-8904-3fddb4423b99"/>
+     <out type="output" name="out" id="a0fedd10-b6dc-4d32-ae6a-5ab24b315863"/>
+    </connections>
+   </node>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder_2</objectName>
+     <color type="color">#8b66a8</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-378,560.4</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][project]_[sequence]_[shot][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="6175cdd8-e7e7-4371-8de8-66f3bc1ce174"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="f6521cbc-d57a-4e07-9e54-94ce3cf3e939"/>
+     <Files type="output" name="Files" id="e4035582-a602-4345-adda-59ecceee3bee">
+      <linkedTo>1a50b7af-46ae-4a05-9112-2dfd468d9475</linkedTo>
+      <linkedTo>8b50bda6-2a86-4cb3-bb8c-0041e317a060</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="Copy" type="task">
+    <properties>
+     <objectName type="string">Copy_2</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">14.4,559.2</pos>
+     <schemaName type="string">copy</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/[project]/[sequence]/[shot]/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="237b4a99-dd11-46ac-926e-65e831553b53"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="aff3521e-fcfe-4d7f-8d1c-0d08b1982037"/>
+     <File type="input" name="File" id="1a50b7af-46ae-4a05-9112-2dfd468d9475">
+      <linkedTo>e4035582-a602-4345-adda-59ecceee3bee</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="9458fd39-c960-4c23-913d-039ff1e6c210"/>
+    </connections>
+   </node>
+   <node class="Move" type="task">
+    <properties>
+     <objectName type="string">Move_2</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">19.2,723.6</pos>
+     <schemaName type="string">move</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">Vol/[project]/[sequence]/[shot]/</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom specialType="order" type="input" name="rankFrom" id="f06bdb48-7f42-4fc0-831c-a288a2a602b0"/>
+     <rankTo specialType="order" type="output" name="rankTo" id="5f0dd6cc-56cd-4b84-92a3-b0c16318f54c"/>
+     <File type="input" name="File" id="8b50bda6-2a86-4cb3-bb8c-0041e317a060">
+      <linkedTo>e4035582-a602-4345-adda-59ecceee3bee</linkedTo>
+     </File>
+     <Files type="output" name="Files" id="0c7ed444-c28f-4fb0-9056-9bd967b21e73"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-384.4,-315</ScenePos>
+     <Size type="size2">225.297,36.9531</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Copy and Move Files</Text>
+     <TextColor type="color">#ff7bd1ff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-385.8,-250.8</ScenePos>
+     <Size type="size2">803.734,53.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Moving or copying files in Mistika Workflows is very easy. 
+Just define an input (folders, FTPs, AWS Buckets, etc.) and connect it to a Copy or Move node.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-385.344,-134.784</ScenePos>
+     <Size type="size2">281.664,478.656</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff554872</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-378,436.4</ScenePos>
+     <Size type="size2">655.438,53.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Dynamic tokens can be used to generate subfolders based on the file names. 
+For more information, refer to the Name Convention templates.</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-396,696.8</ScenePos>
+     <Size type="size2">286.641,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Check the Name Convention field</Text>
+     <TextColor type="color">#ffcbbef4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">13.2,857.6</ScenePos>
+     <Size type="size2">275.094,30.9219</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Check the destination File Paths</Text>
+     <TextColor type="color">#ffcbbef4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

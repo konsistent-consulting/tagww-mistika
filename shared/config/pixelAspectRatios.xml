@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pixelAspectRatios>
+  <pixelAspectRatio denominator="1" numerator="1">Square (1:1=1.00)</pixelAspectRatio>
+  <pixelAspectRatio denominator="11" numerator="10">NTSC 704 (10:11=0.91)</pixelAspectRatio>
+  <pixelAspectRatio denominator="11" numerator="12">PAL 704 (12:11=1.09)</pixelAspectRatio>
+  <pixelAspectRatio denominator="11" numerator="16">PAL 704 16:9 (16:11=1.45)</pixelAspectRatio>
+  <pixelAspectRatio denominator="15" numerator="16">PAL 720 (16:15=1.07)</pixelAspectRatio>
+  <pixelAspectRatio denominator="27" numerator="32">NTSC 720 16:9 (32:27=1.19)</pixelAspectRatio>
+  <pixelAspectRatio denominator="3" numerator="4">HDV/HDCAM (4:3=1.33)</pixelAspectRatio>
+  <pixelAspectRatio denominator="33" numerator="40">NTSC 704 16:9 (40:33=1.21)</pixelAspectRatio>
+  <pixelAspectRatio denominator="45" numerator="64">PAL 720 16:9 (64:45=1.42)</pixelAspectRatio>
+  <pixelAspectRatio denominator="9" numerator="8">NTSC 720 (8:9=0.89)</pixelAspectRatio>
+</pixelAspectRatios>

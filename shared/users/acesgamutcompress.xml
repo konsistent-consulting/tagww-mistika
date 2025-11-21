@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ACESGamutCompress>
+    <Inverse>
+      <Inverse>0</Inverse>
+    </Inverse>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#3c9e40</color>
+    <objectName>ACESGamutCompress</objectName>
+  </ACESGamutCompress>
+</nodeCommonRoot>

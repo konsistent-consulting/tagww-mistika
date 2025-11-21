@@ -1,0 +1,41 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Watcher" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="url" type="xsd:anyURI" sgo:properties="showDirsOnly|pathNameFilters('All Files (*.*)')|fileDialogWindowTitle('Select a Folder')" sgo:visibility="0" sgo:sortOrder="4"/>
+               <xsd:element name="Filter" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="5">
+					<xsd:complexType>
+                        <xsd:sequence>
+							<xsd:element name="filterMode" type="integerPulldown" sgo:integerPulldownValues="Text$$$0|Glob$$$1|Regular Expression$$$2" sgo:visibility="0" sgo:sortOrder="1"/> 
+							<xsd:element name="fileNameOnly" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+							<xsd:element name="include" type="xsd:string" sgo:visibility="0" sgo:sortOrder="3"/>
+							<xsd:element name="exclude" type="xsd:string" sgo:visibility="0" sgo:sortOrder="4"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="recursive" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="globalTimer" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="8"/>
+				<xsd:element name="alphabeticalOrder" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="addRoot" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="11"/>
+                <xsd:element name="latency" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="12"/>
+                <xsd:element name="forceCheck" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="13"/>
+                <xsd:element name="deleteAfterProcessing" type="xsd:boolean" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="14"/>
+                <xsd:element name="areYouSure" type="xsd:boolean" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="15"/>
+                <xsd:element name="continuePreviousExecutions" type="xsd:boolean" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="16"/>
+                <xsd:element name="numberOfTries" type="xsd:integer" sgo:minValue="1" sgo:maxValue="100" sgo:visibility="0" sgo:sortOrder="16"/>
+                <xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="20">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="maintainPadding" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

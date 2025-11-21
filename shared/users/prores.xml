@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ProRes>
+    <DisplayFilter>
+      <displayFilter>---None---</displayFilter>
+    </DisplayFilter>
+    <Lut3D>
+      <lut3D>---None---</lut3D>
+    </Lut3D>
+    <Metadata>
+      <exportCDL>false</exportCDL>
+      <exportMetadata>0</exportMetadata>
+      <tapeNameSource>0</tapeNameSource>
+    </Metadata>
+    <NameConvention>
+      <addTimeStamp>false</addTimeStamp>
+      <nameConvention/>
+    </NameConvention>
+    <Transcoding>
+      <audioCodec>Null.dev</audioCodec>
+      <bitrate>85</bitrate>
+      <changetimecode>0</changetimecode>
+      <codec>ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+      <dropFrame>-1</dropFrame>
+      <enableFrameRange>false</enableFrameRange>
+      <fit>1</fit>
+      <fps>0</fps>
+      <imageResX>0</imageResX>
+      <imageResY>0</imageResY>
+      <interlaced>-1</interlaced>
+      <interpolationType>0</interpolationType>
+      <rangeDuration>0</rangeDuration>
+      <rangeFirstFrame>0</rangeFirstFrame>
+      <resolution>--- Same As Input ---</resolution>
+      <timecode/>
+      <trimIfOdd>false</trimIfOdd>
+      <useMovieAudio>true</useMovieAudio>
+    </Transcoding>
+    <Unicolor>
+      <colorSpace>--- Same As Input ---</colorSpace>
+      <gamma>Unknown</gamma>
+      <gamut>Unknown</gamut>
+    </Unicolor>
+    <VirtualSlate>
+      <virtualSlate>---None---</virtualSlate>
+      <virtualSlateDuration>-1</virtualSlateDuration>
+    </VirtualSlate>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#0063b4</color>
+    <farmParams/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>ProRes</objectName>
+    <renderFarmEnabled>false</renderFarmEnabled>
+    <url/>
+  </ProRes>
+</nodeCommonRoot>

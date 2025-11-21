@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow name="Transcode with EditReady" nameConvention="[path][baseName][.frame][.ext]">
+  <view y="-375.84078174882598" scale="0.69444300000000003" x="129.60026956856069"/>
+  <nodes>
+   <node class="Folder" type="input">
+    <properties>
+     <objectName type="string">Folder</objectName>
+     <color type="color">#808000</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-515.098,-431.51</pos>
+     <schemaName type="string">folder</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <path type="string"></path>
+     <include type="string"></include>
+     <exclude type="string"></exclude>
+     <addRoot type="bool">true</addRoot>
+     <recursive type="bool">true</recursive>
+     <maintainPadding type="bool">true</maintainPadding>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="b397700c-bc29-4a8a-842d-28210ba7cc5e" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="620e3008-7d2e-490f-85a9-7a0a52b476b7" specialType="order" type="output"/>
+     <Files name="Files" id="7301439f-3bf8-4da0-ba51-051639be433c" type="output">
+      <linkedTo>50625be2-74e5-493b-8b9b-183f913d24cb</linkedTo>
+      <linkedTo>e2712689-40ff-47dd-aaa8-18dd938fc91e</linkedTo>
+     </Files>
+    </connections>
+   </node>
+   <node class="ExternalBinary" type="task">
+    <properties>
+     <objectName type="string">ExternalBinary</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">44.1446,-312.25</pos>
+     <schemaName type="string">externalbinary</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <binFilePath type="string"></binFilePath>
+     <outputRX type="string">Output To: (.*)$</outputRX>
+     <errorRX type="string">ERROR: (.*)$</errorRX>
+     <progressRX type="string">Precentage: (.*)$</progressRX>
+     <maxProgress type="int">100</maxProgress>
+     <params type="string"></params>
+     <rosettaMode type="bool">true</rosettaMode>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="72fed6b5-d178-4c0f-b2e0-286db96fe14d" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="e2d1d81d-45a1-4b74-aa47-be9e435aab32" specialType="order" type="output"/>
+     <in name="in" id="50625be2-74e5-493b-8b9b-183f913d24cb" type="input">
+      <linkedTo>7301439f-3bf8-4da0-ba51-051639be433c</linkedTo>
+     </in>
+     <out name="out" id="b4163ee4-7a11-4538-824a-d6baf707280f" type="output"/>
+    </connections>
+   </node>
+   <node class="EditReady" type="task">
+    <properties>
+     <objectName type="string">EditReady</objectName>
+     <color type="color">#0e0e0e</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">4.32001,-430.561</pos>
+     <schemaName type="string">editready</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <binFilePath type="string">/Applications/EditReady Server.app/Contents/MacOS/EditReady Server</binFilePath>
+     <outputRX type="string">STATUS:.*"destination":.*?:\/\/([^"]*)</outputRX>
+     <errorRX type="string">ERROR:.*"errorDescription":.*?"([^"]*)</errorRX>
+     <progressRX type="string">STATUS:.*"progress":.*?"([^"]*)"</progressRX>
+     <maxProgress type="int">100</maxProgress>
+     <params type="string">--sourceFile "[input-firstFile]" --destFile "[_outputPath]" --preset "[_presetFilePath]"</params>
+     <rosettaMode type="bool">false</rosettaMode>
+     <mode type="int">1</mode>
+     <preset type="string">--- Select Preset ---</preset>
+     <metadataDestination type="string"></metadataDestination>
+     <normalizeMetadataKeys type="bool">false</normalizeMetadataKeys>
+     <clipIndexerDestination type="string"></clipIndexerDestination>
+     <generateThumbs type="bool">false</generateThumbs>
+     <thumbSize type="int">0</thumbSize>
+     <thumbInterval type="int">0</thumbInterval>
+     <thumbCount type="int">0</thumbCount>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" id="023ae36f-1e8b-4f00-9db6-0d128cddcb98" specialType="order" type="input"/>
+     <rankTo name="rankTo" id="980fb1dc-4f56-4c84-a2da-3774ff97c855" specialType="order" type="output"/>
+     <in name="in" id="e2712689-40ff-47dd-aaa8-18dd938fc91e" type="input">
+      <linkedTo>7301439f-3bf8-4da0-ba51-051639be433c</linkedTo>
+     </in>
+     <out name="out" id="420050c2-082c-4b86-8fa0-5c5dcba5e82d" type="output"/>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-552.038,-745.274</ScenePos>
+     <Size type="size2">408.609,50.3906</Size>
+     <TextSize type="float">26.98122215270996</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Transcode with EditReady</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-553.594,-674.483</ScenePos>
+     <Size type="size2">1326.91,131.609</Size>
+     <TextSize type="float">19.46477699279785</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Hedge Video's EditReady Server app can be used in any workflow with its own dedicated node.
+The node will look for EditReady factory and custom presets, and will take advantage of all EditReady app's CLI features.
+
+Any other external program available via CLI can also be used with the External Binary node </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-554.4,-485.568</ScenePos>
+     <Size type="size2">345.928,302.938</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff0e6d72</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-73.3136,-483.052</ScenePos>
+     <Size type="size2">432.99,303.403</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">External App</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-557.81,-148.873</ScenePos>
+     <Size type="size2">930.505,195.494</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">OS Platform Requirements</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ffff7e7e</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-537.073,-73.6352</ScenePos>
+     <Size type="size2">820.219,94.2656</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">IMPORTANT NOTE:
+Depending on your OS platform, some transcode nodes may be available or not.
+Please check your OS and hw compatibility to know your transcode options</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

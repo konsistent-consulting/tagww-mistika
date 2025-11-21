@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <RNDFile>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#157f5f</color>
+    <createNewRND>true</createNewRND>
+    <jsonCurvesData/>
+    <masterInput/>
+    <mediaConnectors>true</mediaConnectors>
+    <newRNDdirectory/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>RNDFile</objectName>
+    <renderNameFromInput>true</renderNameFromInput>
+    <trimTails>655422</trimTails>
+    <url/>
+    <useNames>1</useNames>
+  </RNDFile>
+</nodeCommonRoot>

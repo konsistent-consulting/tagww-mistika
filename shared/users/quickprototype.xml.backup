@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <quickPrototype>
+    <color>#00b4b4</color>
+    <inputs>input0, input1, input2</inputs>
+    <objectName>quickPrototype</objectName>
+    <outputs>output0, output1, output2</outputs>
+  </quickPrototype>
+</nodeCommonRoot>

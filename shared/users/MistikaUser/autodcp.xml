@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <AutoDCP>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#677688</color>
+    <objectName>AutoDCP</objectName>
+    <schemaName>autodcp</schemaName>
+  </AutoDCP>
+</nodeCommonRoot>

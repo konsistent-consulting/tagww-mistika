@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ACESInvODT>
+    <Input>
+      <Input_InputScale>0</Input_InputScale>
+      <Input_InputSpace>0</Input_InputSpace>
+    </Input>
+    <Output>
+      <Output_OutputCurve>5</Output_OutputCurve>
+      <Output_OutputGamut>2</Output_OutputGamut>
+    </Output>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#3c9e40</color>
+    <objectName>ACESInvODT</objectName>
+  </ACESInvODT>
+</nodeCommonRoot>

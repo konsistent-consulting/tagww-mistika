@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Folder>
+    <Filter>
+      <exclude/>
+      <include/>
+    </Filter>
+    <NameConvention>
+      <maintainPadding>true</maintainPadding>
+      <nameConvention/>
+    </NameConvention>
+    <RenderFarm>
+      <renderFarmSplitContent>false</renderFarmSplitContent>
+    </RenderFarm>
+    <addRoot>true</addRoot>
+    <alphabeticalOrder>true</alphabeticalOrder>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#808000</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Folder</objectName>
+    <path/>
+    <recursive>true</recursive>
+  </Folder>
+</nodeCommonRoot>

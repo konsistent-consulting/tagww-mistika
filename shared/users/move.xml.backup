@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Move>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#00ffff</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Move</objectName>
+    <overwrite>0</overwrite>
+    <url/>
+  </Move>
+</nodeCommonRoot>

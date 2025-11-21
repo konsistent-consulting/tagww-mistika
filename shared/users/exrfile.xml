@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <EXRFile>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <color>#0000ff</color>
+    <gamma>Gamma 2 4</gamma>
+    <gamut>Rec709</gamut>
+    <layer>--- Default ---</layer>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>EXRFile</objectName>
+    <url/>
+  </EXRFile>
+</nodeCommonRoot>

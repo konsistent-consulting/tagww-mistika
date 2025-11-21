@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ARRIFile>
+    <ariAnamorphFactor>1</ariAnamorphFactor>
+    <ariColorSpace>LogC/Wide Gamut</ariColorSpace>
+    <ariContainerType>0</ariContainerType>
+    <ariISO>200</ariISO>
+    <ariKelvin>5600</ariKelvin>
+    <ariReduceFactor>1</ariReduceFactor>
+    <ariSharpness>0</ariSharpness>
+    <ariTint>0</ariTint>
+    <changeariISO>false</changeariISO>
+    <changeariKelvin>false</changeariKelvin>
+    <changeariTint>false</changeariTint>
+    <color>#458c65</color>
+    <debayer>0</debayer>
+    <gamut>Unknown</gamut>
+    <metadata/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>ARRIFile</objectName>
+    <url/>
+  </ARRIFile>
+</nodeCommonRoot>

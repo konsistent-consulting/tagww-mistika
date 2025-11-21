@@ -1,0 +1,29 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="VRInputBunches" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+			<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+			<xsd:element name="InputCameras" type="integerPulldown" sgo:integerPulldownValues="1$$$1|2$$$2|3$$$3|4$$$4|5$$$5|6$$$6|7$$$7|8$$$8|9$$$9|10$$$10|11$$$11|12$$$12" sgo:visibility="0" sgo:sortOrder="4"/>
+			<xsd:element name="MediaNaming" type="stringPulldown" sgo:stringPulldownValues="None$$$0|GoPro -- GOPR001.ext, GOPR002.ext...$$$1|GoProOmni -- A001XXXX.ext, A002XXXX.ext...$$$13|F360Broadcaster -- 4a.ext, 4b.ext...$$$12|Freedom360 -- xxx_Cam1_xxx_xxxx.ext, xxx_Cam2_xxx_xxxx.ext...$$$5|Trinity -- 1GX0xxxxx.ext, 2GX0xxxxx.ext...$$$17|Meta3 -- A001C0001_xxxxxxxxxxxxxx_xxxx.ext, B001C0001_xxxxxxxxxxxxxx_xxxx.ext... $$$18|iZugar -- Cam1_xxx.ext, Cam2_xxx.ext...$$$2|iZugar -- A_xxx.ext, B_xxx.ext...$$$11|iZugar -- 0001A.ext, 0001B.ext...$$$14|insta360Pro -- xx_xxx_1.ext, xx_xxx_2.ext...$$$16|KandaoObsidian -- xxx_xxxxxxxx_xxxxxx_01.ext, xxx_xxxxxxxx_xxxxxx_02.ext...$$$8|Brahma -- Cam 1.ext, Cam 2.ext...$$$3|BoxFish -- xxx_xxx_Cam1.ext, xxx_xxx_Cam2.ext...$$$4|ZCam -- xxxxxxxx_0000_xxxxxxxxxxxx.ext, xxxxxxxx_0001_xxxxxxxxxxxx.ext...$$$6|Giga -- xxx_01.ext, xxx_02.ext...$$$7|Entanya250 -- xx_xxxx2.ext, xx_xxxx3.ext...$$$15|Other -- 1_1.ext, 2_1.ext...$$$9|Other -- xxxxxx_A.ext, xxxxxx_B.ext...$$$10|2Freedom - c1_xxxxxxxx_xxxxxxxxxx.ext, c2i_xxxxxxxx_xxxxxxxxxx.ext, c3d_xxxxxxxx_xxxxxxxxxx.ext...$$$19|FieldGeo -- yyyy-mm-dd_cam0_framexxx.ext, yyyy-mm-dd_cam1_framexxx.ext...$$$20" sgo:visibility="0" sgo:sortOrder="5"/>
+			<xsd:element name="useRelativePaths" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="6"/>
+			<xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="10">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

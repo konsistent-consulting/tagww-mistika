@@ -1,0 +1,35 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="EDLToCC" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+			<xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+			<xsd:element name="ccPath" type="nameConventionFilePathTextEditor" sgo:visibility="0" sgo:sortOrder="3"/>
+            <xsd:element name="NamingMatchRules" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="4">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LOC" type="stringPulldown" sgo:stringPulldownValues="Any|RED|GREEN|BLUE|CYAN|MAGENTA|YELLOW|BLACK|WHITE|PINK|ORANGE|TURQUOISE|PURPLE|FromClipName|TapeName" sgo:visibility="0" sgo:sortOrder="0"/>
+						<xsd:element name="ShotNaming" type="stringPulldown" sgo:stringPulldownValues="None$$$0|showID_episode_shotID$$$1|showID_episode_shotID_[UptoALL]$$$2|showID_episode_seq_shotID$$$3|showID_episode_seq_shotID_[UptoALL]$$$4|showID_episode_seq_scene_shotID$$$5|showID_episode_seq_scene_shotID_task$$$6|showID_episode_seq_scene_shotID_task_vendorID$$$7|showID_episode_seq_scene_shotID_task_vendorID_version$$$8" sgo:visibility="0" sgo:sortOrder="1"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="NameConvention" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="5">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="nameConvention" type="nameConventionSimpleEditor" sgo:visibility="0" sgo:sortOrder="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="500">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

@@ -1,0 +1,6 @@
+
+DEVICETYPE              XFS
+MESSAGES                FALSE
+MAX_FILES_OPENED        4096
+
+PATH                    /Users/ed/SGO Data/Media

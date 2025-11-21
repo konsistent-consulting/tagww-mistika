@@ -1,0 +1,18 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sgo="http://www.sgo.es/2017/sgo.xsd">
+ <xsd:element name="RGBLevels" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="objectName" sgo:visibility="0" type="xsd:string" sgo:sortOrder="0"/>
+    <xsd:element name="color" sgo:visibility="0" type="color" sgo:sortOrder="1"/>
+    <xsd:element name="bypassEnabled" sgo:visibility="0" type="xsd:boolean" sgo:sortOrder="2"/>
+    <xsd:element name="Mode" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="1000">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="Mode" sgo:visibility="0" sgo:integerPulldownValues="Video->Data$$$0|Data->Video$$$1" type="integerPulldown" sgo:sortOrder="100"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>

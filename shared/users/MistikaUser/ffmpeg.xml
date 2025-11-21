@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <FFmpeg>
+    <cmdLineParams/>
+    <color>#5cb85c</color>
+    <dstExtension>mp4</dstExtension>
+    <param1/>
+    <param2/>
+    <param3/>
+    <param4/>
+    <param5/>
+    <param6/>
+    <param7/>
+    <param8/>
+    <threads>1</threads>
+    <url/>
+  </FFmpeg>
+</nodeCommonRoot>

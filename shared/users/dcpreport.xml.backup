@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <DCPReport>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#0063b4</color>
+    <format>1</format>
+    <objectName>DCPReport</objectName>
+    <type>2</type>
+  </DCPReport>
+</nodeCommonRoot>

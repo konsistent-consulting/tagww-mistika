@@ -1,0 +1,55 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="LUT3D" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="bypassEnabled" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="Input" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="4">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Input_Scale" type="xsd:decimal" sgo:decimalMinValue="-100000" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" sgo:decimalDigits="3" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="Input_Offset" type="xsd:decimal" sgo:decimalMinValue="-100000" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" sgo:decimalDigits="3" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="Input_Gamma" type="xsd:decimal" sgo:decimalMinValue="-100" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" sgo:decimalDigits="3" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="Input_Use" type="integerPulldown" sgo:integerPulldownValues="Direct$$$0|Inverse$$$1" sgo:visibility="0" sgo:sortOrder="3"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Lut1Da" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="5">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Lut1Da_LUT1DFile" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="Lut1Da_Use" type="integerPulldown" sgo:integerPulldownValues="Direct$$$0|Inverse$$$1" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Lut3D" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="6">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Lut3D_LUT3DFile" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Lut1Db" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="7">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Lut1Db_LUT1DFile" type="xsd:anyURI" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="Lut1Db_Use" type="integerPulldown" sgo:integerPulldownValues="Direct$$$0|Inverse$$$1" sgo:visibility="0" sgo:sortOrder="1"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Output" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="8">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Output_Scale" type="xsd:decimal" sgo:decimalMinValue="-100000" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" sgo:decimalDigits="3" sgo:visibility="0" sgo:sortOrder="0"/>
+                            <xsd:element name="Output_Offset" type="xsd:decimal" sgo:decimalMinValue="-100000" sgo:decimalMaxValue="100000" sgo:decimalStepValue="0.01" sgo:decimalDigits="3" sgo:visibility="0" sgo:sortOrder="1"/>
+                            <xsd:element name="Output_Gamma" type="xsd:decimal" sgo:decimalMinValue="-100" sgo:decimalMaxValue="100" sgo:decimalStepValue="0.01" sgo:decimalDigits="3" sgo:visibility="0" sgo:sortOrder="2"/>
+                            <xsd:element name="Output_Use" type="integerPulldown" sgo:integerPulldownValues="Direct$$$0|Inverse$$$1|Input Direct$$$2|Input Inverse$$$3" sgo:visibility="0" sgo:sortOrder="3"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

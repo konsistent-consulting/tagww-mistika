@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpsList>
+  <fps name="24" value="24"/>
+  <fps name="25" value="25"/>
+  <fps name="29.97" value="29.97"/>
+  <fps name="30" value="30"/>
+  <fps name="50" value="50"/>
+  <fps name="59.94" value="59.94"/>
+  <fps name="60" value="60"/>
+  <fps name="100" value="100"/>
+  <fps name="119.8" value="119.88"/>
+  <fps name="120" value="120"/>
+</fpsList>

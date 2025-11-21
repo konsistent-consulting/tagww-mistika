@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <fitDuration>
+    <NameConvention>
+      <nameConvention>[path][baseName][.ext]</nameConvention>
+    </NameConvention>
+    <color>#000000</color>
+    <objectName>fitDuration</objectName>
+    <videoPath/>
+  </fitDuration>
+</nodeCommonRoot>

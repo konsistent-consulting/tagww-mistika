@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <PixellAIUpload>
+    <bestQuality>N</bestQuality>
+    <bitRate>100</bitRate>
+    <br>VBR</br>
+    <codec>libx264</codec>
+    <color>#ffffff</color>
+    <format>mp4</format>
+    <model>M001</model>
+    <objectName>PixellAIUpload</objectName>
+    <twoPass>N</twoPass>
+  </PixellAIUpload>
+</nodeCommonRoot>

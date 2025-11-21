@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <JoinMovies>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#677688</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>JoinMovies</objectName>
+    <url/>
+  </JoinMovies>
+</nodeCommonRoot>

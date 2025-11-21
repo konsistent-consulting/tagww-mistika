@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Comp3D>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#000040</color>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Comp3D</objectName>
+  </Comp3D>
+</nodeCommonRoot>

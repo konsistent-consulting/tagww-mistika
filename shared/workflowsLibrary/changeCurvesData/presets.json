@@ -1,0 +1,11 @@
+{
+    "presets":[
+        ["Custom", {
+        }],
+        ["VR Stitch ContactSheet", {
+            "VR Stitch.Apply":2
+        }],
+        ["Change ST-Map (Color)", {
+            "VR Stitch.On Output":"0"
+        }]]
+}

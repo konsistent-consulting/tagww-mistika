@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <MovistarVODItem>
+    <audio1Lang/>
+    <audio1Type/>
+    <audio2Lang/>
+    <audio2Type/>
+    <color>#019df4</color>
+    <deepLink/>
+    <id/>
+    <isAdditionalMaterial>false</isAdditionalMaterial>
+    <mediaID/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>MovistarVODItem</objectName>
+    <periodEnd/>
+    <periodStart/>
+    <rights>SVOD</rights>
+    <subtitle1Impaired>false</subtitle1Impaired>
+    <subtitle1Lang/>
+    <subtitle2Impaired>false</subtitle2Impaired>
+    <subtitle2Lang/>
+    <version/>
+    <videoFormat/>
+  </MovistarVODItem>
+</nodeCommonRoot>

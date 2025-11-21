@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Input &gt; Rnd File</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node will load a .rnd file (Mistika render script) and set its properties before passing it to other nodes, such as the Mistika Render that will render it This n" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "rndfile.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">RND File</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?rndfile.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="input.html">Input</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">RND File</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="redfile.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="input.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="s3in.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This node will load a</span><span class="f_T_Emphasis"> .rnd</span><span class="f_BodyText"> file (Mistika render script) and set its properties before passing it to other nodes, such as the </span><span class="f_T_Menu">Mistika Render </span><span class="f_BodyText">that will render it</span></p>
+<p class="p_BodyText"><span class="f_BodyText">This node can also create a new </span><span class="f_T_Emphasis">.rnd</span><span class="f_BodyText"> file, by passing the appropriate metadata to it and activating its </span><span class="f_T_Menu">Create New Rnd</span><span class="f_BodyText"> property.</span></p>
+<p class="p_Normal">An RND File is a Mistika render script, which is a text file describing a render job in Mistika own format. &nbsp;Mistika RNDs can contain all the work that you can normally do in other Mistika products (clips, timeline editions, effects, VR stitching, ...) &nbsp;but are also ready to be used as render jobs or be sent to render nodes, as these files contain all the mastering metadata such as the desired resolution and the media formats to be produced.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Another advanced feature of <span class="f_T_Emphasis">.rnd</span><span class="f_BodyText"> files </span>is that they can also be conformed as if they were any other kind of clips. For example, you can create a <span class="f_T_Menu">.rnd</span> file per clip in other Mistika products that will contain all the work that you have done to each clip, and then conform new EDL, XML, or AAF files against the <span class="f_T_Menu">.rnd</span> Files. &nbsp;In this way when an editor send you a new EDL / XML / AAF affecting the same clips then you can re-conform against your work in progress in non destructive manner.</p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Normal">RNDs can also be used as render &quot;templates&quot;. That is, you use examples clips to apply all the effects that you need and then substitute the example clips at execution time with this node. In this regard, &nbsp;this node is also capable for basic substitution of effect parameter values (see the <span class="f_T_Menu">JSON Curves data </span>property below), and also for massive replacement of rnd metadata based on the content of a csv file (see the <span class="f_T_Menu">override </span>input connector)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">rnd:</span> <span class="f_BodyText">A Mistika render script in .</span><span class="f_T_Emphasis">rnd</span><span class="f_BodyText"> format, optionally creating a new</span><span class="f_T_Emphasis"> .rnd</span><span class="f_BodyText"> file containing it.</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Comment"><span class="f_Comment">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">rndFrom:</span> <span class="f_BodyText">Input to receive the &nbsp;.</span><span class="f_T_Emphasis">rnd </span><span class="f_BodyText"> from other node</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">mdataFrom:</span> Metadata input.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">input1..inputn</span>: (they will appear after loading an rnd, if <span class="f_T_Menu">single inputs </span>is off). If <span class="f_T_Menu">Use Names </span>is on then the names of the input clips will appear, otherwise it will use <span class="f_T_Menu">Input0</span>... <span class="f_T_Menu">Inputn </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">override:  </span>Clip metadata override. Normally it will be left empty, but it can be connected to a <span class="f_T_Menu">CSV To UPmdata </span>node upstream, creating a workflow like this:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;"><span class="f_T_Menu">csvFile </span>(load you .csv file here)<span class="f_T_Menu"> </span>-&gt; <span class="f_T_Menu">CSV to UPmdata </span>-&gt; <span class="f_T_Menu">RND File (override </span>input connector) -&gt; <span class="f_T_Menu">MistikaRender</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">This permits massive replacement of rnd metadata based on the content of a <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank" class="weblink">.csv file</a>. </p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">This is &nbsp;equivalent to overriding the other input connectors, but doing that can be impractical when there hundreds of combinations to be replaced, and using a replacement table contained in a .csv file can be more convenient.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Currently, the <span class="f_T_Menu">override </span>connector &nbsp;supports these metadata tokens from clips appearing in the rnd:</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">Clipname.<span class="f_T_Menu">media</span>: The path to the media file of the clip</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">Clipname.<span class="f_T_Menu">text</span>: The text of a Title effect.</p>
+<p class="p_Normal" style="margin: 0 0 0 26px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">For example, let's suppose that our rnd have a media clip named <span class="f_T_Emphasis">City</span> and a <span class="f_T_Menu">Title</span> clip named <span class="f_T_Emphasis">Temperature</span> on top, which is used to show a video of a city with a temperature text overlay. &nbsp;We can create a.csv file with two columns:</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">City.media</span>, <span class="f_T_Menu">Temperature.text</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">And below we could put hundreds of lines in this style, with one line per city. &nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Menu">City.media</span>, <span class="f_T_Menu">Temperature.text</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&quot;/MapPictures/Helsinki.jpg&quot;, &quot;7 degrees&quot;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&quot;/MapPictures/Los Angeles.jpg&quot;, &quot;32 degrees&quot;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&quot;/MapPictures/Madrid.jpg&quot;, &quot;Temperature: 50 degrees&quot;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"> ...</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Using the above workflow, the <span class="f_T_Menu">override </span>connector will replace the media path and the text in the rnd file, creating a new rnd for each line of the .csv file, finally rendering them in the <span class="f_T_Menu">MistikaRender </span>node.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#file" class="topiclink" title="File">RND File</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_T_Menu">Create new RND, New RND Directory:</span><span class="f_BodyText"> &nbsp;If </span><span class="f_T_Menu">Create new RND is </span><span class="f_BodyText">active it will create a new </span><span class="f_T_Menu">.rnd </span><span class="f_BodyText"> file containing &nbsp;the input metadata, and it will place it in </span><span class="f_T_Menu">New RND Directory</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_T_Menu">Name from Input:  </span><span class="f_BodyText">Decides if the render name is taken from the name of an input connector (original input) or from the incoming media connected to it. </span></p>
+<p class="p_BodyText"><span class="f_BodyText">This is normally used in combination with the </span><span class="f_T_Menu">Autobuild inputs </span><span class="f_BodyText">action mentioned below. For rnd files with multiple inputs you can change which input is taken into account in the </span><span class="f_T_Menu">Master Input </span><span class="f_BodyText">property below.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_T_Menu">Master Input: </span><span class="f_BodyText">When an rnd file contains multiple input clips, the Master Input decides which input will provide master metadata for rendering (such as the clip name, Timecode, clip duration, etc).</span></p>
+<p class="p_BodyText"><span class="f_BodyText">It must be specified in </span><span class="f_BodyText" style="font-style: italic;">inputN</span><span class="f_BodyText"> notation, so you have to type one of the connector names shown when the  </span><span class="f_T_Menu">Use Names</span><span class="f_BodyText"> property is active (see below)</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_TipHeading">Example</span><span class="f_BodyText">: Let's suppose you import an rnd file created in Mistika Boutique representing an horizontal edition with 3 clips (and their effects): first a promo clip, followed by a main content clip, and finally and end slate clip. </span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_BodyText">If you execute  </span><span class="f_T_Menu">Autobuild inputs </span><span class="f_BodyText">in &nbsp;the contextual menu of the node and you switch off the </span><span class="f_T_Menu">Use Names </span><span class="f_BodyText">property then you will see these connectors:</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">input0</span><span class="f_BodyText">: Promo clip</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">input1</span><span class="f_BodyText">: Main content clip</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 26px;"><span class="f_T_Menu">input2</span><span class="f_BodyText">: End slate clip. &nbsp;</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_BodyText">Now if you type </span><span class="f_T_Menu">input1</span><span class="f_BodyText"> in the Master Input property, the incoming media from that connector &nbsp;will provide all the principal metadata for the render process, and if the clip duration is different than the original clip used in the .rnd file then a ripple edit will be applied to accommodate the </span><span class="f_T_Menu">input1 </span><span class="f_BodyText">clip with its new duration (without creating holes or overlapping adjacent clips).</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_BodyText">As a result, this node permits to create powerful .rnd templates by using example clips that can then be replaced at render time by other clips, while re-applying any number of effects and even changing the duration of a clip as needed.</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_T_Menu">Use Names: </span><span class="f_BodyText">This is normally used in combination with the </span><span class="f_T_Menu">Autobuild inputs </span><span class="f_BodyText">action mentioned above. If </span><span class="f_T_Menu">Use Names </span><span class="f_BodyText">is not active, the input connectors will be named </span><span class="f_T_Menu">Input1</span><span class="f_BodyText">, </span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_T_Menu">Input2</span><span class="f_BodyText">... </span><span class="f_T_Menu">Input</span><span class="f_T_Emphasis">n</span><span class="f_BodyText"> (one per used clip in the rnd). If active, the input connectors will show the names of the original clips that were used to create the rnd originally (just to remind you which one is which). &nbsp;Note that this node permits using a generic render template that was prepared with some example clips but then connecting different clips at execution time.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_T_Menu">Trim tails:  </span><span class="f_BodyText">This only applies to RND files containing just one segment. If active it will trim the extra frames when connecting new media files, if the duration was different than the original </span><span class="f_T_Menu">.rnd</span><span class="f_BodyText">., so it will render the duration that was defined in the </span><span class="f_T_Menu">.rnd.</span><span class="f_BodyText"> If it is disabled then it will adapt the render duration to that of the input media (thus using the </span><span class="f_T_Menu">.rnd</span><span class="f_BodyText"> as a simple effects template). In some sense it acts like the </span><span class="f_T_Menu">master input</span><span class="f_BodyText"> property, but this is specialized on cases with only one segment with a simple stack of effects.</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_T_Menu">JSON Curves data: </span>A placeholder property for substitution of parameter curve data. Normally used by python user scripts, not manually. Supports simple substitution pairs for flat animation curves, given in JSON syntax. </p>
+<p class="p_BodyText">Generic example:</p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;">{</p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;">&quot;Clipname1.parameterName1=&quot;MyText1&quot;,</p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;">&quot;Clipname1.parameterName2=&quot;MyText2&quot;,</p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;">&quot;Clipname2&quot;.otherParameter=7</p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;">}</p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Example 2:</span></p>
+<p class="p_BodyText"><span class="f_BodyText">This example will find a Title effect named &quot;PROMO&quot; and it will change its </span><span class="f_T_Menu">text</span><span class="f_BodyText"> parameter to &quot;Alicante&quot;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">{</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&quot;PROMO.text&quot;: &quot;Alicante&quot;,</span></p>
+<p class="p_BodyText"><span class="f_BodyText">}</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Contextual menu specific options:</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The <span class="f_T_Menu">rndFile </span>node provides an additional menu option in the contextual menu (when clicking with right mouse button over the node):</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_Heading3">Contextural Menu -&gt; Autobuild Inputs: </span> It will only be active when a specific <span class="f_T_Emphasis">.rnd </span>file has been loaded into the node, and it will automatically create new nodes for all the clips that were used inside the .rnd file, also connecting them to the inputs. Then you can replace inputs with other media files of your interest.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_Heading3">Contextural Menu -&gt; Reload render file: </span> It Reload the rnd file. Useful when you are changing the rnd from other application, or just to refresh a reconnected rnd.</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+<p class="p_BodyText"><span class="f_BodyText">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

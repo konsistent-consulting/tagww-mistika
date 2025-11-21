@@ -1,0 +1,82 @@
+{
+    "workflowsNodes": [
+        {
+            "className": "After Effects File"
+        },
+        {
+            "className": "Auto Trigger"
+        },
+        {
+            "className": "Failed UPs"
+        },
+        {
+            "className": "File"
+        },
+        {
+            "className": "Folder"
+        },
+        {
+            "className": "Watcher"
+        },
+        {
+            "className": "After Effects Render"
+        },
+        {
+            "className": "CSV To UPmdata"
+        },
+        {
+            "className": "Trash"
+        },
+        {
+            "className": "Aspera Client"
+        },
+        {
+            "className": "Dropbox Out"
+        },
+        {
+            "className": "Filemail"
+        },
+        {
+            "className": "FrameIO"
+        },
+        {
+            "className": "FTP"
+        },
+        {
+            "className": "Gmail"
+        },
+        {
+            "className": "Google Drive Out"
+        },
+        {
+            "className": "Mail"
+        },
+        {
+            "className": "Object Matrix Out"
+        },
+        {
+            "className": "OneDrive Out"
+        },
+        {
+            "className": "S3 Out"
+        },
+        {
+            "className": "Signiant"
+        },
+        {
+            "className": "Slack"
+        },
+        {
+            "className": "Tar"
+        },
+        {
+            "className": "Vimeo"
+        },
+        {
+            "className": "WhatsApp"
+        },
+        {
+            "className": "YouTube"
+        }
+    ]
+}

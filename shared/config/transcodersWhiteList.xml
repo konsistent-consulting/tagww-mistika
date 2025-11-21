@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<whiteListFilter>
+    <includeIfNotDefined>true</includeIfNotDefined>
+    <whitelist>
+    </whitelist>
+    <blacklist>
+        <filter matchType="exactlyMatches">file</filter>
+        <filter matchType="exactlyMatches">uniColor</filter>
+        <filter matchType="exactlyMatches">clip</filter>
+        <filter matchType="exactlyMatches">Container</filter>
+        <filter matchType="regex">Stream \d+</filter>
+        <filter matchType="exactlyMatches">ProRes Raw</filter>
+    </blacklist>
+</whiteListFilter>

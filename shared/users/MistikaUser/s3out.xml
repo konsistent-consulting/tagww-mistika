@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <S3Out>
+    <bucket/>
+    <color>#e19900</color>
+    <objectName>S3Out</objectName>
+    <schemaName>s3out</schemaName>
+  </S3Out>
+</nodeCommonRoot>

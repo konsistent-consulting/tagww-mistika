@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <Signiant>
+    <autoSchedule>false</autoSchedule>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#aac42d</color>
+    <jobGroup>MediaDistributor</jobGroup>
+    <jobTemplateLibrary>Media_Mover_Workflows</jobTemplateLibrary>
+    <nodeLocked>false</nodeLocked>
+    <objectName>Signiant</objectName>
+    <pwd/>
+    <sourceAgent/>
+    <targetAgent/>
+    <targetDirectory/>
+    <url/>
+    <user/>
+  </Signiant>
+</nodeCommonRoot>

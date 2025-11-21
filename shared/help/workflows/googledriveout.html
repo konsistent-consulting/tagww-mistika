@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Nodes &gt; Output &gt; Google Drive Out</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="Purpose &nbsp;This node upload incoming files to a Google Drive folder Before you can use this node you will need to get some credentials from Google. It only needs to be done one" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #404040; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_yellow.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "googledriveout.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Google Drive Out</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?googledriveout.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="nodes.html">Nodes</a> &gt; <a href="output.html">Output</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-after: avoid;"><span class="f_Heading1">Google Drive Out</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="mail_2.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="output.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="mail.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Purpose</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_BodyText"><span class="f_BodyText">This node upload incoming files to a Google Drive folder</span></p>
+<p class="p_BodyText"><span class="f_BodyText">Before you can use this node you will need to get some credentials from Google. It only needs to be done one time, but the node will not work until then:</span></p>
+<p class="p_CodeExample"><span class="f_TipHeading" style="color: #c0504d;">Warning</span><span style="color: #c0504d;">:&nbsp;&nbsp;After&nbsp;following&nbsp;the&nbsp;below&nbsp;procedure&nbsp;and&nbsp;save&nbsp;the&nbsp;workflows&nbsp;file&nbsp;the&nbsp;new&nbsp;</span></p>
+<p class="p_CodeExample"><span style="color: #c0504d;">Mistika&nbsp;Workflows&nbsp;</span><span class="f_T_Emphasis">&nbsp;.mwf</span><span style="color: #c0504d;">&nbsp;file&nbsp;will&nbsp;contain&nbsp;your&nbsp;credentials&nbsp;and&nbsp;long&nbsp;term&nbsp;token.&nbsp;</span></p>
+<p class="p_CodeExample"><span style="color: #c0504d;">Anyone&nbsp;having&nbsp;access&nbsp;to&nbsp;the&nbsp;</span><span class="f_T_Emphasis">&nbsp;.mwf</span><span style="color: #c0504d;">&nbsp;file&nbsp;can&nbsp;use&nbsp;the&nbsp;associated&nbsp;google&nbsp;services&nbsp;in&nbsp;your&nbsp;account.</span></p>
+<p class="p_CodeExample"><span style="color: #c0504d;">For&nbsp;more&nbsp;safety&nbsp;or&nbsp;if&nbsp;not&nbsp;sure,&nbsp;create&nbsp;a&nbsp;dedicated&nbsp;google&nbsp;account&nbsp;for&nbsp;your&nbsp;workflows,&nbsp;not&nbsp;personal&nbsp;accounts.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_BodyText">We can't go into much detail (screenshots and so on) because Google change this procedure quite often, but basically it works as follows. Once you have a Google Drive:</span></p>
+<p class="p_BodyText" style="margin: 0 0 10px 13px;"><span class="f_BodyText">1 - Obtain Google OAuth 2.0 cloud credentials for your project. In general your Google cloud credentials are managed in the </span><span class="f_T_Menu">google cloud console</span><span class="f_BodyText"> in this web page: </span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><a href="https://console.cloud.google.com/apis/credentials/oauthclient" target="_blank" class="weblink">https://console.cloud.google.com/apis/credentials/oauthclient</a></p>
+<p class="p_Comment" style="margin: 0 0 0 13px;"><span class="f_Comment">&nbsp;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_BodyText">If your never used the google console you will need to use the </span><span class="f_T_Menu">Create new project </span><span class="f_BodyText">menu to create a new project (as a project name, for example name it &quot;Mistika Workflows&quot;).</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_BodyText">Having your project selected, go to</span><span class="f_T_Menu"> Enable APIS and Services</span><span class="f_BodyText"> and select the google resources you want to give access to Mistika Workflows (YouTube API, google drive API, Gmail,...), and click </span><span class="f_T_Menu">Enable </span><span class="f_BodyText">on each one.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_BodyText">2 - Then go to </span><span class="f_T_Menu">Credentials </span><span class="f_BodyText">and:</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_BodyText">- </span><span class="f_T_Menu">Configure consent screen</span><span class="f_BodyText">: Follow Google instructions to select if you want internal or external access from your organization. Then fill the form with your own email (both the support email and developer email). &nbsp;And for the app name just type Mistika Workflows. At the date of this document the rest of the fields are optional and can be left by default. When it is done press </span><span class="f_T_Menu">Save </span><span class="f_BodyText">and continue.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_BodyText">- </span><span class="f_T_Menu">Credentials</span><span class="f_BodyText">: After the above step, go to </span><span class="f_T_Menu">Credentials-&gt;Create Credentials -&gt; Oauth client ID </span><span class="f_BodyText">and select ApplicationType = Desktop App, Name = Mistika Workflows. Then click </span><span class="f_T_Menu">Create</span><span class="f_BodyText">. By doing that you will get  </span><span class="f_T_Menu10p">Client ID</span><span class="f_BodyText"> and </span><span class="f_T_Menu">Client Secret</span><span class="f_BodyText"> credentials that you can then use in this node. Click </span><span class="f_T_Menu">Save</span><span class="f_BodyText"> to confirm and exit.</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_BodyText">3 - &nbsp;Once in Mistika Workflows, put the credentials in the node properties </span><span class="f_T_Menu10p">clientID</span><span class="f_BodyText"> / </span><span class="f_T_Menu">clientSecret</span><span class="f_BodyText">, you need to authenticate a first time. Depending on the Workflows version the </span><span class="f_T_Menu">Authenticate </span><span class="f_BodyText">action may appear as a property of the node, or in the contextual menu of the node, or by executing the workflow a first time. When it is executed for the first time a new web browser will appear where you have to login one time to the Google account (the account giving access to the google resources you want to access). &nbsp;</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_BodyText">If successfully done an &quot;authentication successful&quot; &nbsp;or &quot;The authentication flow has completed&quot; message will appear. &nbsp;This means the node is ready to use (depending on the node more properties may appear in the properties panel for additional configuration of your Google resource).</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal">Each node can have the same credentials or be different to access different Google accounts and resources</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Inputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">In:</span> Files to upload</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Outputs</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Out:</span> To pass uploaded files to other nodes.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#objectname" class="topiclink" title="Object Name">Object Name</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#color" class="topiclink" title="Color">Color</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#bypassenabled" class="topiclink" title="Color">Bypass</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#lock" class="topiclink">Lock</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Python standard properties</span></h2>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#code" class="topiclink">code</a></span></h3>
+<h3 class="p_Heading3" style="page-break-after: avoid;"><span class="f_Heading3"><a href="common-parameters.html#schemaname" class="topiclink">Schema name</a></span></h3>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-after: avoid;"><span class="f_Heading2">Node specific properties</span></h2>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Client ID, Client Secret: </span><span class="f_BodyText">Access credentials for the Google Drive.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading3">Folder ID: </span><span class="f_BodyText">The ID of the Google Drive folder to receive the files. To get the ID, navigate to your Google drive folder manually and then copy/paste the last part of the url to this property (the string after the last &quot;/&quot; character). </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_BodyText">Example. If the url in your browser is this:</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;"><span class="f_T_Entry10pt">https://drive.google.com/drive/u/0/folders/1hifq1yft3Gqu86uqasdaV8BCFkhEwlis0</span></p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0 0 0 13px;">Then copy/paste this string: <span class="f_T_Entry10pt">1hifq1yft3Gqu86uqasdaV8BCFkhEwlis0</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

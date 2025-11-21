@@ -1,0 +1,15 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element sgo:categoryType="categoryCollapsible" name="ClassifyByAge" sgo:visibility="0" sgo:sortOrder="0">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+            <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+            <xsd:element name="timer" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="2"/>
+            <xsd:element name="timeUnits" type="stringPulldown" sgo:stringPulldownValues="Seconds$$$0|Minutes$$$1|Hours$$$2|Days$$$3|Weeks$$$4" sgo:visibility="0" sgo:sortOrder="10"/>			
+            <!---<xsd:element name="dateType" type="stringPulldown" sgo:stringPulldownValues="Accessed$$$0|Modified$$$1" sgo:visibility="0" sgo:sortOrder="12"/>	-->		
+            <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="51"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>

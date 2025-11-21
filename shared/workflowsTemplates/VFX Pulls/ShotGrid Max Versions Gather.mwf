@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transcoder>
+ <workflow nameConvention="[path][baseName][.frame][.ext]" name="ShotGrid Max Versions Gather">
+  <view x="791.287" y="-169.206" scale="0.401877"/>
+  <nodes>
+   <node type="input" class="File">
+    <properties>
+     <objectName type="string">ShotGrid_CSVFile</objectName>
+     <color type="color">#458c65</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">-441.976,-282.989</pos>
+     <schemaName type="string">file</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string">.csv?format=[path][baseName][.ext]</url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="6410f314-11be-43e3-9b8c-15fbcdde82fe"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="6ae7ce7b-124c-45f1-85e6-008764487f48"/>
+     <To name="To" type="output" id="09ff1797-9ae9-4094-b2b6-54286040cdd6">
+      <linkedTo>7c7d4f9f-ad99-4b06-be95-2af92869744f</linkedTo>
+     </To>
+    </connections>
+   </node>
+   <node type="task" class="ShotGridCSVReader">
+    <properties>
+     <objectName type="string">ShotGridCSVReader</objectName>
+     <color type="color">#94b4f2</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">214.955,-284.382</pos>
+     <schemaName type="string">shotgridcsvreader</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <code type="string">
+import Mistika
+import csv
+import sys
+import os
+from datetime import date,datetime,timedelta
+from Mistika.classes import Cconnector
+from Mistika.classes import CuniversalPath
+from Mistika.classes import CnameConvention
+from Mistika.Qt import QColor
+from token2mdata import token2mdataMapper
+try:
+    import re
+except:
+    installModule("re")
+
+def init(self):
+    self.setClassName("ShotGrid CSV Reader")
+    self.addConnector("SGcsv",Cconnector.CONNECTOR_TYPE_INPUT,Cconnector.MODE_OPTIONAL)
+    self.addConnector("MaxVersion",Cconnector.CONNECTOR_TYPE_OUTPUT,Cconnector.MODE_OPTIONAL)
+    self.setAcceptConnectors(True, "SGcsv")
+    self.addProperty("SearchPath")
+    self.addProperty("ShotNaming",2)
+    self.addProperty("CSVShotTokens")
+    self.addProperty("Status", "apr")
+    self.addProperty("SinceDays",0)
+    # self.addProperty("delimiter",",")
+    self.color=QColor(0x94b4f2)
+    self.bypassSupported=True
+    return True
+
+def isReady(self):
+    if self.bypassSupported and self.bypassEnabled:
+        return True
+    res=True
+    # if self.delimiter=="":
+    #     res=self.critical("ShotGridCSVReader:delimiter","'Delimiter can not be empty")
+    return res
+
+def process(self):
+
+    def maxVersion(SearchPath):
+        dirs=[]
+        for dirpath, dirnames, files in os.walk(SearchPath):
+            dirs.append(dirpath)
+        maxVersionFolder = max(dirs)
+        maxVersionFiles=os.listdir(maxVersionFolder)
+        maxVFF = f'{maxVersionFolder}/{(maxVersionFiles[0])}'
+        # print (maxVFF)
+        return maxVFF
+
+
+    def checkRegEx(vfxRegex,ShotCode):
+        vfxn = re.fullmatch(vfxRegex,ShotCode)
+        if vfxn:
+            return True
+        else:
+            self.warning("ShotGridCSVReader:checkRegEx:RegEx", ShotCode + '\tDoes Not Match Regex '+vfxRegex)
+            return False
+
+    def isNamed(ShotCode):
+        if ShotNaming == 0:
+            isNamed=True
+        else:
+            isNamed=checkRegEx(vfxRegex,ShotCode)
+        return isNamed
+
+    def isStatus(ShotStatus):
+        if ShotStatus==Status:
+            isStatus = True
+        else:
+            isStatus = False
+        return isStatus
+
+    def isDated(ShotDate):
+        dtShotDate = datetime.strptime(ShotDate,'%Y/%m/%d')
+        if Days ==0.0 or (dtShotDate + DeltaDays >= dtToday):
+            isDated=True
+        else:
+            isDated=False
+        return isDated
+
+    def readCSV(up,sourcePath):
+        filename=up.getFilePath()
+        MatchShots=[]
+        ShotsUP=[]
+        # separator = self.evaluate(self.delimiter).strip()
+        self.info('ShotGridCSVReader:readCSV','Processing CSV {}'.format(filename))
+
+        with open(filename) as f:
+            reader = csv.reader(f, delimiter=',')
+            for i,row in enumerate(reader):
+                if i==0 or i==1:
+                    continue
+                ShotCode=row[1]
+                ShotStatus=row[3]
+                ShotDate=(row[12].split())[0]
+                hasName=isNamed(ShotCode)
+                hasStatus=isStatus(ShotStatus)
+                hasDate=isDated(ShotDate)
+                if hasName and hasStatus and hasDate:
+                    MatchShots.append(ShotCode)
+
+        for shot in MatchShots:
+            shotUP = CuniversalPath(nc)
+            shotUP.setSequence(False)
+            shotUP.autoFromName(shot)
+            tokensMapper = token2mdataMapper(self)
+            shotUP = tokensMapper.nc2mdata(shotUP)
+            SearchPath = shotUP.getStringOverride(sourcePath)
+            if not os.path.exists(SearchPath):
+                self.critical("ShotGridCSVReader:SearchPath:notFound","Search Path does not exist".format(SearchPath))
+            maxVFF=maxVersion(SearchPath)
+            shotUP2 = CuniversalPath(nc2)
+            shotUP2.autoFromName(maxVFF)
+            shotUP2.readMetadataFromFile()
+            shotUP2 = tokensMapper.nc2mdata(shotUP2)
+
+            ShotsUP.append(shotUP2)
+        return [True,ShotsUP]
+
+    res=True
+
+    if self.bypassEnabled:
+        #this node leaves the outputs empty during bypass as the files are not generated
+        return True
+
+    # vfxRegex1=r'[a-zA-Z0-9]+_+[a-zA-Z0-9]+_+[a-zA-Z0-9]+_?+[a-zA-Z0-9]+_?+[a-zA-Z0-9]+'
+    # vfxRegex2="([a-zA-Z0-9]+[_]){2,7}[a-zA-Z0-9]+"
+    # vfxRegex check at https: // regex101.com /
+    ShotNaming = int(self.ShotNaming)
+    # print(ShotNaming)
+    if ShotNaming == 0:
+        vfxRegex=""
+    elif ShotNaming == 1:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2}[a-zA-Z0-9]+"                           #showID_episode_shotID
+    elif ShotNaming == 2:
+        vfxRegex = "([a-zA-Z0-9]+[_]){2,7}[a-zA-Z0-9]+"                         #showID_episode_shotID_[UptoALL]
+    elif ShotNaming == 3:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3}[a-zA-Z0-9]+"                           #showID_episode_seq_shotID
+    elif ShotNaming == 4:
+        vfxRegex = "([a-zA-Z0-9]+[_]){3,7}[a-zA-Z0-9]+"                         #showID_episode_seq_shotID_[UptoALL]
+    elif ShotNaming == 5:
+        vfxRegex = "([a-zA-Z0-9]+[_]){4}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID
+    elif ShotNaming == 6:
+        vfxRegex = "([a-zA-Z0-9]+[_]){5}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID_task
+    elif ShotNaming == 7:
+        vfxRegex = "([a-zA-Z0-9]+[_]){6}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID_task_vendor
+    elif ShotNaming == 8:
+        vfxRegex = "([a-zA-Z0-9]+[_]){7}[a-zA-Z0-9]+"                           #showID_episode_seq_scene_shotID_task_vendorID_version
+
+    dtToday = datetime.now()
+    dateToday = dtToday.strftime("%Y%m%d")
+    # print(dateToday)
+
+    input=self.getFirstConnectorByName("SGcsv")
+    list = input.getUniversalPaths()
+    outConnMV=self.getFirstConnectorByName("MaxVersion")
+    outConnMV.clearUniversalPaths()
+    sourcePath = self.evaluate(self.SearchPath).strip()
+    Status=self.Status
+    Days=float(self.SinceDays)
+    DeltaDays=timedelta(days=Days)
+
+    tokensMapper = token2mdataMapper(self)
+    # nc=self.CSVShotTokens
+    nc=CnameConvention(self.CSVShotTokens)
+    if not nc.toString():
+        nc=self.getWorkflow().getNameConvention()
+
+    nc2=CnameConvention(self.getNameConvention())
+    if not nc2.toString():
+        nc2=self.getWorkflow().getNameConvention()
+
+    for up in list:
+        if self.isCancelled():
+            return False
+        [r, ShotsUP] = readCSV(up,sourcePath)
+        res = res and r
+        if res:
+            if ShotsUP:
+                for sh in ShotsUP:
+                    outConnMV.addUniversalPath(sh)
+    return res</code>
+     <SearchPath type="string">YOUR-STORAGE-PATH/[project]/episodes/[project]_[episodeNr]/[project]_[episodeNr]_[sequence]/[project]_[episodeNr]_[sequence]_[shot]/Comp/render/exr/</SearchPath>
+     <ShotNaming type="int">2</ShotNaming>
+     <CSVShotTokens type="string">[project]_[episodeNr]_[sequence]_[shot]</CSVShotTokens>
+     <Status type="string">wtg</Status>
+     <SinceDays type="int">0</SinceDays>
+     <CSVShotNaming type="string">3</CSVShotNaming>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="dcdf61d3-3e23-4840-8fb0-6205b2042714"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="e8c47a82-f3e6-4a76-8a7d-7a492025fe49"/>
+     <SGcsv name="SGcsv" type="input" id="7c7d4f9f-ad99-4b06-be95-2af92869744f">
+      <linkedTo>09ff1797-9ae9-4094-b2b6-54286040cdd6</linkedTo>
+     </SGcsv>
+     <MaxVersion name="MaxVersion" type="output" id="070606f5-9d7f-4f67-aec2-1a06d028e30a">
+      <linkedTo>8761d681-ee13-41af-b38d-c6cc9a4eb82e</linkedTo>
+      <linkedTo>5502349c-0833-420d-9b14-916fe69270de</linkedTo>
+      <linkedTo>5ab39bde-09c8-4c11-88d2-4320b1ad5f80</linkedTo>
+     </MaxVersion>
+    </connections>
+   </node>
+   <node type="task" class="Copy">
+    <properties>
+     <objectName type="string">Copy</objectName>
+     <color type="color">#677688</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">807.68,-388.475</pos>
+     <schemaName type="string">copy</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <overwrite type="int">0</overwrite>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="b9e66850-c89f-4db4-8d09-73189c5c8e09"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="26c3ec2f-5db3-423c-a9d2-d26fbd13db4b"/>
+     <File name="File" type="input" id="8761d681-ee13-41af-b38d-c6cc9a4eb82e">
+      <linkedTo>070606f5-9d7f-4f67-aec2-1a06d028e30a</linkedTo>
+     </File>
+     <Files name="Files" type="output" id="42b484f8-c121-466b-9aa8-ceb9d9933c78"/>
+    </connections>
+   </node>
+   <node type="task" class="EXR">
+    <properties>
+     <objectName type="string">Exr</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">809.622,-261.31</pos>
+     <schemaName type="string">exr</schemaName>
+     <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">EXR.EXR_DWA_RGB</codec>
+     <audioCodec type="string">None</audioCodec>
+     <imageResX type="int">0</imageResX>
+     <imageResY type="int">0</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">false</useMovieAudio>
+     <resolution type="string">--- Same As Input ---</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">0</firstFrameFrom>
+     <firstFrameNumber type="int">1002</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <pixelAspectRatio type="string">0</pixelAspectRatio>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="a6ba03ac-648c-487c-a953-2c3c57117593"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="18774120-396e-4c68-bd42-bf3d225b731a"/>
+     <VideoOut name="VideoOut" type="output" label="AV Out" id="9f59c0f7-8e25-4b09-b033-6fc4c195b3c8"/>
+     <AudioOut name="AudioOut" type="output" label="Ext. Audio" visible="0" id="9ed7bbde-6f46-4321-9174-058068ac4da6"/>
+     <VideoIn name="VideoIn" type="input" label="AV In" id="5502349c-0833-420d-9b14-916fe69270de">
+      <linkedTo>070606f5-9d7f-4f67-aec2-1a06d028e30a</linkedTo>
+     </VideoIn>
+     <AudioIn name="AudioIn" type="input" label="Ext. Audio" id="a844a5b6-bf52-4b64-acba-927e23691c45"/>
+    </connections>
+   </node>
+   <node type="task" class="ProRes">
+    <properties>
+     <objectName type="string">ProRes</objectName>
+     <color type="color">#0063b4</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1091.75,-123.31</pos>
+     <schemaName type="string">prores</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">true</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <url type="string"></url>
+     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <metadata type="MediaFileInfoData"></metadata>
+     <uniColorValue type="CuniColorValue">uniColor:Unknown:Unknown</uniColorValue>
+     <gamma type="string">Unknown</gamma>
+     <gamut type="string">Unknown</gamut>
+     <codec type="string">ffmpeg_MOV.MOVIE_MOV_PRORES</codec>
+     <audioCodec type="string">Null.dev</audioCodec>
+     <imageResX type="int">1920</imageResX>
+     <imageResY type="int">1080</imageResY>
+     <imageFormat type="string"></imageFormat>
+     <fps type="double">0</fps>
+     <interlaced type="int">-1</interlaced>
+     <dropFrame type="int">-1</dropFrame>
+     <frames type="int">0</frames>
+     <tracks type="int">0</tracks>
+     <comments type="string"></comments>
+     <timeLength type="string"></timeLength>
+     <timeStart type="string"></timeStart>
+     <timeEnd type="string"></timeEnd>
+     <timeTcAux1 type="string"></timeTcAux1>
+     <timeTcAux2 type="string"></timeTcAux2>
+     <useMovieAudio type="bool">false</useMovieAudio>
+     <resolution type="string">HD 1080 (1920x1080)</resolution>
+     <interpolationType type="int">0</interpolationType>
+     <trimIfOdd type="bool">false</trimIfOdd>
+     <forceEvenLength type="bool">false</forceEvenLength>
+     <fit type="int">1</fit>
+     <tapeNameSource type="int">0</tapeNameSource>
+     <lut3D type="string">---None---</lut3D>
+     <displayFilter type="string">---None---</displayFilter>
+     <virtualSlate type="string">---None---</virtualSlate>
+     <virtualSlateDuration type="int">-1</virtualSlateDuration>
+     <colorSpace type="string">--- Same As Input ---</colorSpace>
+     <exportCDL type="bool">false</exportCDL>
+     <addTimeStamp type="bool">false</addTimeStamp>
+     <changetimecode type="int">0</changetimecode>
+     <timecode type="string"></timecode>
+     <firstFrameFrom type="int">2</firstFrameFrom>
+     <firstFrameNumber type="int">0</firstFrameNumber>
+     <exportMetadata type="int">0</exportMetadata>
+     <enableFrameRange type="bool">false</enableFrameRange>
+     <rangeFirstFrame type="int">0</rangeFirstFrame>
+     <rangeDuration type="int">0</rangeDuration>
+     <audioSampleRate type="int">0</audioSampleRate>
+     <audioChannels type="int">0</audioChannels>
+     <audioBitDepth type="int">0</audioBitDepth>
+     <gop type="uint">50</gop>
+     <bitrate type="uint">85</bitrate>
+     <quality type="uint">10</quality>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="c631ebd2-468d-49a2-94ba-90794b3ca300"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="28e6f68a-7126-414c-a43a-b26e41bc0be4"/>
+     <VideoOut name="VideoOut" type="output" label="AV Out" id="5b3de07e-e4ef-4eb0-83b1-2a37b4659a90">
+      <linkedTo>0ed5c404-c319-4d80-9dc2-750052a18049</linkedTo>
+     </VideoOut>
+     <AudioOut name="AudioOut" type="output" label="Ext. Audio" visible="0" id="c001f976-748b-4174-913b-cd33b7f6db71"/>
+     <VideoIn name="VideoIn" type="input" label="AV In" id="4e0d8ee5-60c0-4f8e-8338-01abfa7b6fec">
+      <linkedTo>9a7c7f0a-8bd7-4b48-a703-eb8fa093be09</linkedTo>
+     </VideoIn>
+     <AudioIn name="AudioIn" type="input" label="Ext. Audio" id="0d0679d5-365d-47bb-bf1b-b11b52821b71"/>
+    </connections>
+   </node>
+   <node type="output" class="FrameIO">
+    <properties>
+     <objectName type="string">FrameIO</objectName>
+     <color type="color">#6845ff</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">1368.23,-123.31</pos>
+     <schemaName type="string">frameio</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <token type="string" encrypted="1">AwWcJgJs3oDK4wtwTql4/6JERj7qqhOqpYZG</token>
+     <api type="string">https://api.frame.io/v2</api>
+     <accountID type="string"></accountID>
+     <email type="string"></email>
+     <team type="string">--- None ---</team>
+     <project type="string">--- None ---</project>
+     <directory type="string">--- None ---</directory>
+     <createReviewLink type="bool">false</createReviewLink>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="30ba9c2d-9389-4f3e-b502-f306b7dd2e70"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="e5a76122-c01b-4fd5-96a8-03a33d2f77e5"/>
+     <File name="File" type="input" id="0ed5c404-c319-4d80-9dc2-750052a18049">
+      <linkedTo>5b3de07e-e4ef-4eb0-83b1-2a37b4659a90</linkedTo>
+     </File>
+     <uploaded name="uploaded" type="output" id="53850e2e-1c34-4df6-b564-9cf4b1e40e7e"/>
+    </connections>
+   </node>
+   <node type="task" class="ACESODT">
+    <properties>
+     <objectName type="string">ACESODT</objectName>
+     <color type="color">#3c9e40</color>
+     <colorByStatus type="bool">false</colorByStatus>
+     <pos type="point2">808.36,-123.31</pos>
+     <schemaName type="string">acesodt</schemaName>
+     <nameConvention type="CnameConvention"></nameConvention>
+     <nodeLocked type="bool">false</nodeLocked>
+     <bypassSupported type="bool">true</bypassSupported>
+     <bypassEnabled type="bool">false</bypassEnabled>
+     <renderFarmSupported type="bool">false</renderFarmSupported>
+     <renderFarmSplitContent type="bool">false</renderFarmSplitContent>
+     <farmParams type="string"></farmParams>
+     <auxCode type="string"></auxCode>
+     <renderFarmEnabled type="bool">false</renderFarmEnabled>
+     <inputsAlignment type="int">0</inputsAlignment>
+     <Input_InputCurve type="string">0</Input_InputCurve>
+     <Input_InputGamut type="string">1</Input_InputGamut>
+     <Input_SECRETUseBradfordMatrix type="float">1</Input_SECRETUseBradfordMatrix>
+     <Output_OutputSpace type="float">0</Output_OutputSpace>
+     <Output_SECRETPrecision type="float">1</Output_SECRETPrecision>
+     <Output_OutputScale type="float">0</Output_OutputScale>
+    </properties>
+    <connections>
+     <rankFrom name="rankFrom" type="input" specialType="order" id="244c5a7c-2829-46d8-bfe3-fec51bc8358e"/>
+     <rankTo name="rankTo" type="output" specialType="order" id="57b01769-6ed5-42e0-ac91-8635efa44885"/>
+     <Output name="Output" type="output" id="9a7c7f0a-8bd7-4b48-a703-eb8fa093be09">
+      <linkedTo>4e0d8ee5-60c0-4f8e-8338-01abfa7b6fec</linkedTo>
+     </Output>
+     <Input_1 name="Input_1" type="input" id="5ab39bde-09c8-4c11-88d2-4320b1ad5f80">
+      <linkedTo>070606f5-9d7f-4f67-aec2-1a06d028e30a</linkedTo>
+     </Input_1>
+    </connections>
+   </node>
+  </nodes>
+  <backDropItems>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-552.038,-752.531</ScenePos>
+     <Size type="size2">327,37</Size>
+     <TextSize type="float">18</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">ShotGrid Max Versions Gather</Text>
+     <TextColor type="color">#ff55aaff</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">0</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-549.792,-707.661</ScenePos>
+     <Size type="size2">1515,258</Size>
+     <TextSize type="float">16</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">In this workflow we gather the last version of every VFX located in a storage where the folder structure makes use of part of the VFX name itself
+i.e., if the VFX name is SGO_101_015_0010, we want to retrieve the last Comp version located in a folder structure such as:
+/YOUR-STORAGE-PATH/SGO/episodes/SGO_101/SGO_101_015/SGO_101_015_0010/Comp/render/exr/
+This can be done by dynamically mapping tokens metadata based on the VFX name such as:
+/YOUR-STORAGE-PATH/[project]/episodes/[project]_[episodeNr]/[project]_[episodeNr]_[sequence]/[project]_[episodeNr]_[sequence]_[shot]/Comp/render/mov/
+where:
+[project] = SGO
+[episodeNr] = 101
+[sequence] = 015
+[shot] = 0010</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">1</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-548.179,-321.754</ScenePos>
+     <Size type="size2">492.192,262.752</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Input</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff884809</BackgroundColor>
+     <indexGroup type="int">2</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">-529.651,-167.546</ScenePos>
+     <Size type="size2">462,100</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">A CSV file exported from ShotGrid shots database.
+- Shot Code information should be at column index 01
+- Status information should be at column index 03
+- Date Updated should be at column index 12 </Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">3</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">-8.8252,-320.239</ScenePos>
+     <Size type="size2">703.125,384.37</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">ShotGrid CSV Reader</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff357254</BackgroundColor>
+     <indexGroup type="int">4</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">28.2338,-157.36</ScenePos>
+     <Size type="size2">659,215</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">This node mainly does 4 operations:
+1. Determines the metadata tokens to be extracted from the Shot Code name
+2. Uses those tokens to determine the storage path of every Shot
+3. Filters by status and last date modified
+(in the shape of 'Since n days' before than the actual date)
+4. In the resultant storage path, it looks for the Maximum Version XX (_v0XX)
+ 
+Also a RegEx is provided in order to filter all Shot Codes by the number 
+of their tokens separated by underscore (CSVShotNaming)</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">5</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65558">
+    <properties>
+     <objectName type="string">CboxBackDropItem</objectName>
+     <ScenePos type="point2">799.72,-434.351</ScenePos>
+     <Size type="size2">1017.79,499.393</Size>
+     <TextSize type="float">6</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">Do things with retrieved MaxVersions</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff6b7221</BackgroundColor>
+     <indexGroup type="int">6</indexGroup>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1086.57,-324.207</ScenePos>
+     <Size type="size2">435,31</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">... copy them to another location for a VFX revision</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">7</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">1084.84,-191.15</ScenePos>
+     <Size type="size2">416,31</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">... transcode them to another format for delivery</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">8</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+   <backDropItem type="65557">
+    <properties>
+     <objectName type="string">CtextBackDropItem</objectName>
+     <ScenePos type="point2">842.92,11.026</ScenePos>
+     <Size type="size2">959,31</Size>
+     <TextSize type="float">14</TextSize>
+     <TextBold type="bool">false</TextBold>
+     <TextItalic type="bool">false</TextItalic>
+     <Text type="string">... or place an ACES ODT to b709, transcode to low res ProRes, and upload all to Frame.IO for final client revision</Text>
+     <TextColor type="color">#fff4f4f4</TextColor>
+     <BackgroundColor type="color">#ff000000</BackgroundColor>
+     <indexGroup type="int">9</indexGroup>
+     <editMode type="bool">true</editMode>
+    </properties>
+   </backDropItem>
+  </backDropItems>
+ </workflow>
+</transcoder>

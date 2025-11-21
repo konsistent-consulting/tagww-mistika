@@ -1,0 +1,48 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="PixellAI" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>    
+                <xsd:element name="localPath" type="xsd:anyURI" sgo:properties="showDirsOnly|urlVisibleButtonBrowser|fileDialogWindowTitle('Select Folder')" sgo:visibility="0" sgo:sortOrder="5"/>
+                <xsd:element name="pixellYn" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="10"/>
+                <xsd:element name="model" type="integerPulldown" sgo:integerPulldownValues="SharpClear$$$M001|Upscale-G$$$M002|Upscale-L$$$M003" sgo:visibility="0" sgo:sortOrder="20"/>
+                <xsd:element name="deinterlaceYn" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="30"/>
+                <xsd:element name="addGrainYn" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="35"/>
+                <xsd:element name="addGrain" type="xsd:integer" sgo:minValue="10" sgo:maxValue="100" sgo:visibility="0" sgo:sortOrder="37"/>
+                <xsd:element name="slowMotionYn" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="40"/>
+                <xsd:element name="slowMotion" type="integerPulldown" sgo:integerPulldownValues="2x$$$SM001|4x$$$SM002 " sgo:visibility="0" sgo:sortOrder="50"/>
+                <xsd:element name="colorEnhancementYn" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="60"/>
+                        
+                <xsd:element name="ExportSettings" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="65">
+                    <xsd:complexType>
+                        <xsd:sequence>  
+                            <xsd:element name="resizeYn" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="70"/>
+                            <xsd:element name="resizeCode" type="integerPulldown" sgo:integerPulldownValues="720x480$$$RE001|1280x720$$$RE002|1920x1080$$$RE003|3840x2160$$$RE004|7680x4320$$$RE005" sgo:visibility="0" sgo:sortOrder="80"/>
+                            <xsd:element name="targetFrameRate" type="integerPulldown" sgo:integerPulldownValues="Same as originals (default)$$$FR001|23.976$$$FR002|24$$$FR003|29.97$$$FR004|30$$$FR005|50$$$FR006|59.94$$$FR007|60$$$FR008|90$$$FR009|120$$$FR010" sgo:visibility="0" sgo:sortOrder="90"/>
+                            <xsd:element name="aspectRatio" type="integerPulldown" sgo:integerPulldownValues="Same as originals (default)$$$AR001|Square Pixels (1.0)$$$AR002|DV NTSC (0.9091)$$$AR003|DV NTSC 16:9 (1.2121)$$$AR004|DV PAL (1.0940)$$$AR005|DV PAL 16:9 (1.4587)$$$AR006|Anamorphic 2:1 (2.0)$$$AR007|HD Anamorphic (1.333)$$$AR008|DVCPRO HD (1.5)$$$AR009" sgo:visibility="0" sgo:sortOrder="100"/>
+                            <xsd:element name="codec" type="integerPulldown" sgo:integerPulldownValues="H.264$$$libx264|H.265$$$libx265|VP9$$$vp9|ProRes$$$prores_ks" sgo:visibility="0" sgo:sortOrder="110"/>
+                            <xsd:element name="container" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="120" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_container"/>
+                            <xsd:element name="audioCodec" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="130" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_audioCodec"/>
+                            <xsd:element name="audioBitRate" type="integerPulldown" sgo:integerPulldownValues="64k$$$AB001|80k$$$AB002|96k$$$AB003|112k$$$AB004|128k$$$AB005|160k$$$AB006|192k$$$AB007|224k$$$AB008|256k$$$AB009|320k$$$AB010" sgo:visibility="0" sgo:sortOrder="140"/>
+                            <xsd:element name="quality" type="integerPulldown" sgo:integerPulldownValues="Low$$$0|Good (default)$$$1|Best$$$2" sgo:visibility="0" sgo:sortOrder="150"/>
+                            <xsd:element name="advancedSettingYn" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="160"/>
+                            <xsd:element name="profile" type="integerPulldown" sgo:visibility="0" sgo:sortOrder="170" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_profile"/>
+                            <xsd:element name="bitRateType" type="integerPulldown" sgo:integerPulldownValues="Variable Bit Rate$$$VBR|Constant Bit Rate$$$CBR" sgo:visibility="0" sgo:sortOrder="180"/>
+                            <xsd:element name="targetBitRate" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="190"/>
+                            <xsd:element name="maxBitRate" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="200"/>
+                            <xsd:element name="twoPass" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="210"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="python" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="228">
+                    <xsd:complexType>
+                        <xsd:sequence> 
+                <xsd:element name="code" type="textEditor" sgo:visibility="0" sgo:sortOrder="230"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

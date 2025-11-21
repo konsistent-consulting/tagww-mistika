@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <DNxHDOpAtom>
+    <DisplayFilter>
+      <displayFilter>---None---</displayFilter>
+    </DisplayFilter>
+    <Lut3D>
+      <lut3D>---None---</lut3D>
+    </Lut3D>
+    <Metadata>
+      <exportCDL>false</exportCDL>
+      <exportMetadata>0</exportMetadata>
+      <tapeNameSource>0</tapeNameSource>
+    </Metadata>
+    <NameConvention>
+      <addTimeStamp>false</addTimeStamp>
+      <nameConvention/>
+    </NameConvention>
+    <Transcoding>
+      <changetimecode>0</changetimecode>
+      <codec>MXFVC3.MOVIE_MXF_VC3_36</codec>
+      <dropFrame>-1</dropFrame>
+      <fit>1</fit>
+      <fps>0</fps>
+      <imageResX>0</imageResX>
+      <imageResY>0</imageResY>
+      <interlaced>-1</interlaced>
+      <interpolationType>0</interpolationType>
+      <resolution>--- Same As Input ---</resolution>
+      <timecode/>
+      <trimIfOdd>false</trimIfOdd>
+      <useMovieAudio>true</useMovieAudio>
+    </Transcoding>
+    <Unicolor>
+      <colorSpace>--- Same As Input ---</colorSpace>
+      <gamma>Unknown</gamma>
+      <gamut>Unknown</gamut>
+    </Unicolor>
+    <VirtualSlate>
+      <virtualSlate>---None---</virtualSlate>
+      <virtualSlateDuration>-1</virtualSlateDuration>
+    </VirtualSlate>
+    <color>#0063b4</color>
+    <farmParams/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>DNxHDOpAtom</objectName>
+    <renderFarmEnabled>false</renderFarmEnabled>
+    <url/>
+  </DNxHDOpAtom>
+</nodeCommonRoot>

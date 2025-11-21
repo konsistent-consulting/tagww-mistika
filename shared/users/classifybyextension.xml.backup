@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <ClassifyByExtension>
+    <caseSensitive>false</caseSensitive>
+    <color>#00b4b4</color>
+    <errorMode>0</errorMode>
+    <extensions>mov,mxf,mp4,j2k,r3d,rnd</extensions>
+    <filterMode>0</filterMode>
+    <objectName>ClassifyByExtension</objectName>
+  </ClassifyByExtension>
+</nodeCommonRoot>

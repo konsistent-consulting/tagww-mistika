@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <MetadataToCSV>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#41b450</color>
+    <csvOptions>
+      <BodyText01/>
+      <BodyText02/>
+      <BodyText03/>
+      <Footer/>
+      <FullMediaPath>true</FullMediaPath>
+      <Header/>
+      <MediaNameOnly>false</MediaNameOnly>
+      <RemoveExtension>false</RemoveExtension>
+      <singleCSVperFile>false</singleCSVperFile>
+    </csvOptions>
+    <csvPath/>
+    <objectName>MetadataToCSV</objectName>
+    <overwrite>true</overwrite>
+  </MetadataToCSV>
+</nodeCommonRoot>

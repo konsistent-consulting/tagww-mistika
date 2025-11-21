@@ -1,0 +1,17 @@
+<xsd:schema xmlns:sgo="http://www.sgo.es/2017/sgo.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="J2KSequence" sgo:categoryType="categoryCollapsible" sgo:visibility="0" sgo:sortOrder="0">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="objectName" type="xsd:string" sgo:visibility="0" sgo:sortOrder="0"/>
+                <xsd:element name="color" type="color" sgo:visibility="0" sgo:sortOrder="1"/>
+                <xsd:element name="url" type="universalPath" sgo:properties="urlVisibleButtonBrowser|pathNameFilters('Movie (*.j2k)')|fileDialogWindowTitle('Select an Image Sequence File')" sgo:visibility="0" sgo:sortOrder="2"/>
+                <xsd:element name="nodeLocked" type="xsd:boolean" sgo:visibility="0" sgo:sortOrder="3"/>
+                <xsd:element name="gamma" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="4" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_gammaList"/>
+                <xsd:element name="gamut" type="stringPulldown" sgo:visibility="0" sgo:sortOrder="5" sgo:actionType="getDataFromProperty" sgo:actionTypeProperties="_gamutList"/>
+                <xsd:element name="reduceFactor" type="stringPulldown" sgo:stringPulldownValues="1:1$$$0|1:2$$$1|1:4$$$2|1:8$$$3" sgo:visibility="0" sgo:sortOrder="6"/>
+                <xsd:element name="layer" type="xsd:integer" sgo:minValue="0" sgo:visibility="0" sgo:sortOrder="7"/>
+                <xsd:element name="metadata" type="mediaFileInfoWidget" sgo:visibility="0" sgo:sortOrder="8"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

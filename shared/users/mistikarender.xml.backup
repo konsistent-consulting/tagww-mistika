@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <MistikaRender>
+    <NameConvention>
+      <nameConvention/>
+    </NameConvention>
+    <bypassEnabled>false</bypassEnabled>
+    <color>#0063b4</color>
+    <farmParams/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>MistikaRender</objectName>
+    <renderFarmEnabled>false</renderFarmEnabled>
+    <url/>
+  </MistikaRender>
+</nodeCommonRoot>

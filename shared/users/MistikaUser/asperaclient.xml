@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeCommonRoot>
+  <AsperaClient>
+    <bypassEnabled>false</bypassEnabled>
+    <certificate/>
+    <color>#74207b</color>
+    <localFilePath/>
+    <nodeLocked>false</nodeLocked>
+    <objectName>AsperaClient</objectName>
+    <pwd>AwV3D7s/Oxag42uee+/mAMkMyK5xvSCZlrV/LbpV1qJgDODk4WjoVVpvBihH</pwd>
+    <remoteFilePath>ascp://demo.asperasoft.com/Upload</remoteFilePath>
+    <renameFilesList/>
+    <retries>3</retries>
+    <targetRate>100</targetRate>
+    <tcpPort>22</tcpPort>
+    <udpPort>33001</udpPort>
+    <user>aspera</user>
+  </AsperaClient>
+</nodeCommonRoot>
