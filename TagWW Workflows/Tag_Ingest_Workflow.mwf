@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <transcoder>
  <workflow name="Tag_Ingest_Workflow" nameConvention="[path][baseName][.frame][.ext]">
-  <view y="-612.2876624131078" x="-150.16548682599952" scale="1.0321945693127366"/>
+  <view x="-405.73745730792666" y="-485.95489156078321" scale="0.86016214109394673"/>
   <nodes>
-   <node type="input" class="Watcher">
+   <node type="input" class="Folder">
     <properties>
-     <objectName type="string">Watchfolder</objectName>
-     <color type="color">#aa557f</color>
+     <objectName type="string">input_iconik_2</objectName>
+     <color type="color">#808000</color>
      <colorByStatus type="bool">false</colorByStatus>
-     <pos type="point2">-926.988,-676.124</pos>
-     <schemaName type="string">watcher</schemaName>
+     <pos type="point2">-920.236,-661.153</pos>
+     <schemaName type="string">folder</schemaName>
      <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
      <nodeLocked type="bool">false</nodeLocked>
      <bypassSupported type="bool">true</bypassSupported>
@@ -19,30 +19,24 @@
      <farmParams type="string"></farmParams>
      <auxCode type="string"></auxCode>
      <renderFarmEnabled type="bool">false</renderFarmEnabled>
-     <url type="string">/Volumes/konsistent/server/mistika-testing/INPUT/</url>
-     <autoUpdateNameConvention type="bool">false</autoUpdateNameConvention>
+     <path type="string">/Volumes/konsistent/server/mistika-testing/INPUT/</path>
      <filterMode type="int">1</filterMode>
      <fileNameOnly type="bool">true</fileNameOnly>
      <include type="string"></include>
      <exclude type="string"></exclude>
-     <latency type="int">5</latency>
-     <forceCheck type="int">0</forceCheck>
-     <recursive type="bool">true</recursive>
      <addRoot type="bool">true</addRoot>
-     <deleteAfterProcessing type="bool">false</deleteAfterProcessing>
-     <areYouSure type="bool">true</areYouSure>
+     <recursive type="bool">true</recursive>
      <maintainPadding type="bool">true</maintainPadding>
-     <alphabeticalOrder type="bool">false</alphabeticalOrder>
-     <continuePreviousExecutions type="bool">false</continuePreviousExecutions>
-     <numberOfTries type="int">5</numberOfTries>
-     <globalTimer type="bool">true</globalTimer>
+     <alphabeticalOrder type="bool">true</alphabeticalOrder>
+     <includeHidden type="bool">false</includeHidden>
+     <includeSystem type="bool">false</includeSystem>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="781edd60-bc29-4d51-bf1f-78e130faf861"/>
-     <rankTo type="output" specialType="order" name="rankTo" id="b3a49d3f-afef-4ee0-bf53-b3898a1dce49"/>
-     <To type="output" name="To" id="483b133f-9b78-4a50-b730-03f2417ee591">
+     <rankFrom type="input" name="rankFrom" specialType="order" id="0c749f32-7418-480e-912c-747ec3863d7a"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="5942848b-bd23-4efb-83fb-c0f7accffead"/>
+     <Files type="output" name="Files" id="27791b0f-57d9-49b9-bfae-a84569657b16">
       <linkedTo>11a77302-3841-4dc6-b7b5-d1afce2d9ba0</linkedTo>
-     </To>
+     </Files>
     </connections>
    </node>
    <node type="task" class="jsonToTokens">
@@ -50,7 +44,7 @@
      <objectName type="string">jsonToTokens</objectName>
      <color type="color">#01376b</color>
      <colorByStatus type="bool">false</colorByStatus>
-     <pos type="point2">-590.546,-677.819</pos>
+     <pos type="point2">-589.577,-677.819</pos>
      <schemaName type="string">jsontotokens</schemaName>
      <nameConvention type="CnameConvention"></nameConvention>
      <nodeLocked type="bool">false</nodeLocked>
@@ -279,10 +273,10 @@ def onPropertyUpdated(self, name):
      <jsonFile type="string">/Volumes/konsistent/server/mistika-testing/json/sample.json</jsonFile>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="e871caad-c5db-4ee5-8c74-8de6e196d463"/>
-     <rankTo type="output" specialType="order" name="rankTo" id="5a60a7b5-f288-48d1-9af0-7a38a582c837"/>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="e871caad-c5db-4ee5-8c74-8de6e196d463"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="5a60a7b5-f288-48d1-9af0-7a38a582c837"/>
      <input type="input" name="input" id="11a77302-3841-4dc6-b7b5-d1afce2d9ba0">
-      <linkedTo>483b133f-9b78-4a50-b730-03f2417ee591</linkedTo>
+      <linkedTo>27791b0f-57d9-49b9-bfae-a84569657b16</linkedTo>
      </input>
      <output type="output" name="output" id="e0ae5b88-2d5f-4091-8f17-555e27d0956e">
       <linkedTo>edf578e0-3b21-4c8e-ab01-501a0096c864</linkedTo>
@@ -361,14 +355,14 @@ def onPropertyUpdated(self, name):
      <quality type="uint">10</quality>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="221f6629-8bd3-409a-8028-e6873ca14638"/>
-     <rankTo type="output" specialType="order" name="rankTo" id="7c2634d8-34eb-401c-a8c9-fe799835e5fd"/>
-     <VideoOut type="output" name="VideoOut" id="94a6e3f8-d7ab-4011-af52-3278a8ee46b2" label="AV Out"/>
-     <AudioOut type="output" name="AudioOut" id="eb87e4b4-df65-4ed7-b270-b2f9f994457e" label="Ext. Audio" visible="0"/>
-     <VideoIn type="input" name="VideoIn" id="edf578e0-3b21-4c8e-ab01-501a0096c864" label="AV In">
+     <rankFrom type="input" name="rankFrom" specialType="order" id="221f6629-8bd3-409a-8028-e6873ca14638"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="7c2634d8-34eb-401c-a8c9-fe799835e5fd"/>
+     <VideoOut type="output" name="VideoOut" label="AV Out" id="94a6e3f8-d7ab-4011-af52-3278a8ee46b2"/>
+     <AudioOut type="output" name="AudioOut" label="Ext. Audio" id="eb87e4b4-df65-4ed7-b270-b2f9f994457e" visible="0"/>
+     <VideoIn type="input" name="VideoIn" label="AV In" id="edf578e0-3b21-4c8e-ab01-501a0096c864">
       <linkedTo>e0ae5b88-2d5f-4091-8f17-555e27d0956e</linkedTo>
      </VideoIn>
-     <AudioIn type="input" name="AudioIn" id="5b9101fa-188e-4cf9-9a64-68675116d92f" label="Ext. Audio"/>
+     <AudioIn type="input" name="AudioIn" label="Ext. Audio" id="5b9101fa-188e-4cf9-9a64-68675116d92f"/>
     </connections>
    </node>
    <node type="task" class="H264">
@@ -441,16 +435,16 @@ def onPropertyUpdated(self, name):
      <quality type="uint">10</quality>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="cba1342b-c7ec-4924-b880-a850065b1f54"/>
-     <rankTo type="output" specialType="order" name="rankTo" id="f2511470-23aa-4c60-849a-f6b042b3bcc0"/>
-     <VideoOut type="output" name="VideoOut" id="01d4d179-dcfa-4bf5-88a3-6bb7e2a6a8a5" label="AV Out">
+     <rankFrom type="input" name="rankFrom" specialType="order" id="cba1342b-c7ec-4924-b880-a850065b1f54"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="f2511470-23aa-4c60-849a-f6b042b3bcc0"/>
+     <VideoOut type="output" name="VideoOut" label="AV Out" id="01d4d179-dcfa-4bf5-88a3-6bb7e2a6a8a5">
       <linkedTo>af5aa667-ca2e-4899-a6ba-b71fc475b310</linkedTo>
      </VideoOut>
-     <AudioOut type="output" name="AudioOut" id="c46f8056-a483-48c7-a43d-578f621019a5" label="Ext. Audio" visible="0"/>
-     <VideoIn type="input" name="VideoIn" id="9a571c3e-f5e1-451e-b066-881408ad2b28" label="AV In">
+     <AudioOut type="output" name="AudioOut" label="Ext. Audio" id="c46f8056-a483-48c7-a43d-578f621019a5" visible="0"/>
+     <VideoIn type="input" name="VideoIn" label="AV In" id="9a571c3e-f5e1-451e-b066-881408ad2b28">
       <linkedTo>e0ae5b88-2d5f-4091-8f17-555e27d0956e</linkedTo>
      </VideoIn>
-     <AudioIn type="input" name="AudioIn" id="0871343c-64f1-4164-a8bf-61776dffc54a" label="Ext. Audio"/>
+     <AudioIn type="input" name="AudioIn" label="Ext. Audio" id="0871343c-64f1-4164-a8bf-61776dffc54a"/>
     </connections>
    </node>
    <node type="task" class="iconikIn">
@@ -1757,7 +1751,7 @@ def onPropertyUpdated(self, name):
         pass
 </code>
      <iconik_appId type="string">8518e744-c53d-11f0-a825-063ff9288a04</iconik_appId>
-     <iconik_authToken type="string" encrypted="1">AwXDwfeDiG6KWQ3VjSmmrTxJZRNLwvNKRWZnNaITFGRlxDQKB3KX/FsQw347Pfg4Y9kT1TzwVoZYm1uFI1J1kQJag1RCU3pBRHjqw32Jgyn8t7KF6JxqIeIwJ95YFOGS4lEAiKumvICx8orgPiTelq20x4gNm0zReV8l5usW9Ub6CI1b1QV5PFBb9lc8QwiX+HppSGvmL2RFqESSi3XKco6Bf5uDOg8wozUailQGOcRx+LEE2t6th7TtIExJn0160cR8iqD/i6nb+UmSnmY=</iconik_authToken>
+     <iconik_authToken type="string" encrypted="1">AwUlJxFlbohsv+sza89AS9qvg/WtJBWso4CB00T18oKDItLs4ZRxGr32JZjd2x7ehT/1M9oWsGC+fb1jxbSTd+S8ZbKktZynop4MJZtvZc8aUVRjDnqMxwTWwTi+8gd0BLfmbk1AWmZXFGwG2MI4cEtSIW7rfao3n7nDAA3wE6Ac7mu9M+Of2ra9ELHape5xHpyPro0AyYKjTqJ0bZMslGhnmX1l3OnWRdP8bLLg3yKXHlfiPDhLYVILxqqveaucNyKabEYZbU89H690eIA=</iconik_authToken>
      <iconik_domain type="string">https://app.iconik.io</iconik_domain>
      <fileTypes type="string">.mov,.mp4,.mxf</fileTypes>
      <collectionPath type="string">[brand]/[campaign]/[job]</collectionPath>
@@ -1765,8 +1759,8 @@ def onPropertyUpdated(self, name):
      <skipKeyframes type="bool">false</skipKeyframes>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="7d4e0ff7-9490-4d96-90fd-616ca9f18c16"/>
-     <rankTo type="output" specialType="order" name="rankTo" id="04f3bec8-ba4f-4033-bd84-8e6438a26152">
+     <rankFrom type="input" name="rankFrom" specialType="order" id="7d4e0ff7-9490-4d96-90fd-616ca9f18c16"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="04f3bec8-ba4f-4033-bd84-8e6438a26152">
       <linkedTo>5a09f0ab-1b68-4e0f-b378-6fdbf966404d</linkedTo>
      </rankTo>
      <in type="input" name="in" id="af5aa667-ca2e-4899-a6ba-b71fc475b310">
@@ -1780,7 +1774,7 @@ def onPropertyUpdated(self, name):
      <objectName type="string">input_iconik</objectName>
      <color type="color">#808000</color>
      <colorByStatus type="bool">false</colorByStatus>
-     <pos type="point2">70.2752,-862.278</pos>
+     <pos type="point2">69.1126,-862.278</pos>
      <schemaName type="string">folder</schemaName>
      <nameConvention type="CnameConvention">[path][baseName][.frame][.ext]</nameConvention>
      <nodeLocked type="bool">false</nodeLocked>
@@ -1804,10 +1798,10 @@ def onPropertyUpdated(self, name):
      <includeSystem type="bool">false</includeSystem>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="5a09f0ab-1b68-4e0f-b378-6fdbf966404d">
+     <rankFrom type="input" name="rankFrom" specialType="order" id="5a09f0ab-1b68-4e0f-b378-6fdbf966404d">
       <linkedTo>04f3bec8-ba4f-4033-bd84-8e6438a26152</linkedTo>
      </rankFrom>
-     <rankTo type="output" specialType="order" name="rankTo" id="56fa5e96-d35f-4de5-8263-cb4766d321b5"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="56fa5e96-d35f-4de5-8263-cb4766d321b5"/>
      <Files type="output" name="Files" id="01f01856-47bc-482e-8e4a-8bf6d5367e2d">
       <linkedTo>e2a14554-6479-4210-890f-7b4c01196d50</linkedTo>
      </Files>
@@ -1834,8 +1828,8 @@ def onPropertyUpdated(self, name):
      <overwrite type="int">1</overwrite>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="45985763-e310-4b6f-98a9-2804abbd1d45"/>
-     <rankTo type="output" specialType="order" name="rankTo" id="f82815a1-d3be-4cc5-9998-22b1e5004bdf"/>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="45985763-e310-4b6f-98a9-2804abbd1d45"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="f82815a1-d3be-4cc5-9998-22b1e5004bdf"/>
      <File type="input" name="File" id="e2a14554-6479-4210-890f-7b4c01196d50">
       <linkedTo>01f01856-47bc-482e-8e4a-8bf6d5367e2d</linkedTo>
      </File>
@@ -2099,11 +2093,11 @@ def process(self):
 </code>
      <aws_bucket type="string">[s3_path]/[brand]/[campaign]/[job]</aws_bucket>
      <aws_key type="string">AKIAVYGUPQV3QO4PJ2AY</aws_key>
-     <aws_secret type="string" encrypted="1">AwWP5tDl/u4xHfTXZwIrXg9gtThLmepTXH+XxVKFRVZVuoiuFHye0ZPHjQ+wW2DSFT5Q8Hd7O/LOGxTOy2AeVy4nyquTM/lgET8K</aws_secret>
+     <aws_secret type="string" encrypted="1">AwUoQXdCWUmWulNwwKWM+ajHEp/sPk30+9gwYvUi4vHyHS8Js9s5djRgKqgX/Md1spn3V9DcnFVpvLNpbMe58ImAbQw0lF7Htpit</aws_secret>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="a76211e8-13bd-4a04-9c72-e4c68d32aa41"/>
-     <rankTo type="output" specialType="order" name="rankTo" id="ea35e508-0d95-47de-a40b-de9285cb1c22"/>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="a76211e8-13bd-4a04-9c72-e4c68d32aa41"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="ea35e508-0d95-47de-a40b-de9285cb1c22"/>
      <in type="input" name="in" id="8a2f21e4-543c-4a90-adc7-dc6d0e7f3352">
       <linkedTo>e0ae5b88-2d5f-4091-8f17-555e27d0956e</linkedTo>
      </in>
@@ -2963,18 +2957,18 @@ def onPropertyUpdated(self, name):
         pass
 </code>
      <iconik_appId type="string">8518e744-c53d-11f0-a825-063ff9288a04</iconik_appId>
-     <iconik_authToken type="string" encrypted="1">AwWDgbfDyC7KGU2VzWnm7XwJJVMLgrMKBSYndeJTVCQlhHRKRzLXvBtQgz57fbh4I5lTlXywFsYY2xvFYxI10UIawxQCEzoBBDiqgz3Jw2m89/LFqNwqYaJwZ54YVKHSohFAyOvm/MDxssqgfmSe1u30h8hN2wyROR9lpqtWtQa6SM0blUU5fBAbthd8A0jXuDopCCumbyQF6ATSyzWKMs7BP9vDek9w43VayhRGeYQxuPFEmp7tx/StYAwJ3w06kYQ8yuC/y+mbuQnS3iY=</iconik_authToken>
+     <iconik_authToken type="string" encrypted="1">AwUrKR9rYIZiseU9ZcFORdShjfujKhuirY6P3Ur7/IyNLNzi75p/FLP4K5bT1RDQizH7PdQYvm6wc7Nty7qdeeqya7yqu5KprJACK5Vha8EUX1ptAHSCyQrYzzaw/Al6CrnoYENOVGhZGmII1sw2fkVcL2Dlc6Q5kbfNDgP+Ha4S4GWzPe2R1LizHr/Uq+B/EJKBoIMOx4ytQKx6Y50immZpl3Nr0ufYS93yYrzu0SyZEFnsMjZFb1wFyKShd6WSOSyUYkgXY0EzEaF6do4=</iconik_authToken>
      <iconik_domain type="string">https://app.iconik.io</iconik_domain>
      <aws_bucket type="string">[s3_path]</aws_bucket>
      <s3Prefix type="string"></s3Prefix>
      <aws_key type="string">AKIAVYGUPQV3QO4PJ2AY</aws_key>
-     <aws_secret type="string" encrypted="1">AwUVfEp/ZHSrh25N/ZixxJX6L6LRA3DJxuUNX8gf38zPIBI0juYESwldF5UqwfpIj6TKau3hoWhUgY5UUfqEzbS9UDEJqWP6i6WQ</aws_secret>
+     <aws_secret type="string" encrypted="1">AwXMpZOmva1yXreUJEFoHUwj9nsI2qkQHzzUhhHGBhUW+cvtVz/dktCEzkzzGCORVn0TszQ4eLGNWFeNiCNdFG1kiejQcLojUnxJ</aws_secret>
      <metadataViewId type="string">5522f18c-bbfc-11f0-875b-bae5e7a01d69</metadataViewId>
      <overwriteExisting type="bool">false</overwriteExisting>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="4bd127b8-eee0-48e6-a804-8ab8f1df7414"/>
-     <rankTo type="output" specialType="order" name="rankTo" id="7fe03f42-f60e-4036-b131-144bf65e0047">
+     <rankFrom type="input" name="rankFrom" specialType="order" id="4bd127b8-eee0-48e6-a804-8ab8f1df7414"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="7fe03f42-f60e-4036-b131-144bf65e0047">
       <linkedTo>e593e0aa-bc97-4aea-9b16-a36180eec11e</linkedTo>
      </rankTo>
      <input type="input" name="input" id="d38fac5e-b8cf-4dba-ac6a-e34052694fc4">
@@ -3012,10 +3006,10 @@ def onPropertyUpdated(self, name):
      <includeSystem type="bool">false</includeSystem>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="e593e0aa-bc97-4aea-9b16-a36180eec11e">
+     <rankFrom type="input" name="rankFrom" specialType="order" id="e593e0aa-bc97-4aea-9b16-a36180eec11e">
       <linkedTo>7fe03f42-f60e-4036-b131-144bf65e0047</linkedTo>
      </rankFrom>
-     <rankTo type="output" specialType="order" name="rankTo" id="e2bde446-0bd0-41f2-8ade-cde23a05e8a3"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="e2bde446-0bd0-41f2-8ade-cde23a05e8a3"/>
      <Files type="output" name="Files" id="e937cc7d-72ce-47e1-bb5e-8faa473f5d5f">
       <linkedTo>ecb766d3-3934-43bd-926c-e5deab8acf79</linkedTo>
      </Files>
@@ -3042,8 +3036,8 @@ def onPropertyUpdated(self, name):
      <overwrite type="int">1</overwrite>
     </properties>
     <connections>
-     <rankFrom type="input" specialType="order" name="rankFrom" id="7edd3594-86a9-404d-b18f-9f01049d4855"/>
-     <rankTo type="output" specialType="order" name="rankTo" id="279a1472-55b7-42de-9823-948dd8895701"/>
+     <rankFrom type="input" name="rankFrom" specialType="order" id="7edd3594-86a9-404d-b18f-9f01049d4855"/>
+     <rankTo type="output" name="rankTo" specialType="order" id="279a1472-55b7-42de-9823-948dd8895701"/>
      <File type="input" name="File" id="ecb766d3-3934-43bd-926c-e5deab8acf79">
       <linkedTo>e937cc7d-72ce-47e1-bb5e-8faa473f5d5f</linkedTo>
      </File>
