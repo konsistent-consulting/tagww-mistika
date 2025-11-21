@@ -1757,7 +1757,7 @@ def onPropertyUpdated(self, name):
         pass
 </code>
      <iconik_appId type="string">8518e744-c53d-11f0-a825-063ff9288a04</iconik_appId>
-     <iconik_authToken type="string" encrypted="1">AwWdn6nd1jDUB1OL03f482IXO00VnK0UGzg5a/xNSjo7mmpUWSzJogVOnSBlY6ZmPYdNi2KuCNgGxQXbfQwrz1wE3QocDSQfGia0nSPX3Xei6ezbtsI0f7xueYAGSr/MvA9e1vX44t7vrNS+YHqAyPPqmdZTxRKPJwF7uLVIqxikVtMFi1snYg4FqAliHVbJpiQ3FjW4cTob9hrM1SuULNDfIcXdZFFu/WtE1ApYZ5ovpu9ahIDz2eqzfhIXwRMkj5oi1P6h1feFpxfMwDg=</iconik_authToken>
+     <iconik_authToken type="string" encrypted="1">AwUEBjBET6lNnsoSSu5havuOotSMBTSNgqGg8mXU06OiA/PNwLVQO5zXBLn8+j//pB7UEvs3kUGfXJxC5JWyVsWdRJOFlL2Gg78tBLpORO47cHVCL1ut5iX34Bmf0yZVJZbHT2xhe0d2NU0n+eMZUWpzAE/KXIsWvpjiISzRMoE9z0qcEsK++5ecMZD7hM9QP72uj6wh6KOCb4NVTLINtUlGuFxE/cj3ZPLdTZPB/gO2P3bDHRlqQHMq54uOWIq9FgO7TWc4TG4cPo5VWaE=</iconik_authToken>
      <iconik_domain type="string">https://app.iconik.io</iconik_domain>
      <fileTypes type="string">.mov,.mp4,.mxf</fileTypes>
      <collectionPath type="string">[brand]/[campaign]/[job]</collectionPath>
@@ -2099,7 +2099,7 @@ def process(self):
 </code>
      <aws_bucket type="string">[s3_path]/[brand]/[campaign]/[job]</aws_bucket>
      <aws_key type="string">AKIAVYGUPQV3QO4PJ2AY</aws_key>
-     <aws_secret type="string" encrypted="1">AwWK49Xg++s0GPHSYgcuWwplsD1OnO9WWXqSwFeAQFNQv42rEXmb1JbCiAq1XmXXEDtV9XJ+PvfLHhHLzmUbUisiz66WNvxlFDoP</aws_secret>
+     <aws_secret type="string" encrypted="1">AwXKo5Wgu6t0WLGSIkduG0ol8H0O3K8WGTrSgBfAABMQ/83rUTnblNaCyEr1HiWXUHsVtTI+freLXlGLjiVbEmtij+7WdrwlVHpP</aws_secret>
     </properties>
     <connections>
      <rankFrom type="input" specialType="order" name="rankFrom" id="a76211e8-13bd-4a04-9c72-e4c68d32aa41"/>
@@ -2963,12 +2963,12 @@ def onPropertyUpdated(self, name):
         pass
 </code>
      <iconik_appId type="string">8518e744-c53d-11f0-a825-063ff9288a04</iconik_appId>
-     <iconik_authToken type="string" encrypted="1">AwWIirzIwyXBEkaexmLt5ncCLlgAibgBDi0sfulYXy8uj39BTDnctxBbiDVwdrNzKJJYnne7Hc0T0BDOaBk+2kkRyB8JGDEKDzOhiDbCyGK3/PnOo9chaql7bJUTX6rZqRpLw+Dt98v6ucGrdW+V3eb/jMNG0AeaMhRuraBdvg2xQ8YQnk4ydxsQvRx3CEPcszEiAyCtZC8O4w/ZwD6BOcXKNNDIcUR76H5RwR9Nco86s/pPkZXmzP+mawcC1AYxmo83weu0wOKQsgLZ1S0=</iconik_authToken>
+     <iconik_authToken type="string" encrypted="1">AwWMjrjMxyHFFkKawmbp4nMGKlwEjbwFCikoeu1cWysqi3tFSD3YsxRfjDF0crd3LJZcmnO/GckX1BTKbB063k0VzBsNHDUOCzeljDLGzGaz+P3Kp9Mlbq1/aJEXW67drR5Px+Tp88/+vcWvcWuR2eL7iMdC1AOeNhBqqaRZugm1R8IUmko2cx8UuRhzDEfYtzUmBySpYCsK5wvdxDqFPcHOMNTMdUB/7HpVxRtJdos+t/5LlZHiyPuibwMG0AI1noszxe+wxOaUtgbd0Sk=</iconik_authToken>
      <iconik_domain type="string">https://app.iconik.io</iconik_domain>
      <aws_bucket type="string">[s3_path]</aws_bucket>
      <s3Prefix type="string"></s3Prefix>
      <aws_key type="string">AKIAVYGUPQV3QO4PJ2AY</aws_key>
-     <aws_secret type="string" encrypted="1">AwUCa11oc2O8kHla6o+m04LtOLXGFGfe0fIaSN8IyNvYNwUjmfETXB5KAII91u1fmLPdffr2tn9DlplDRu2T2qOqRyYevnTtnLKH</aws_secret>
+     <aws_secret type="string" encrypted="1">AwXuh7GEn49QfJW2BmNKP24B1Fkq+IsyPR72pDPkJDc02+nPdR3/sPKm7G7ROgGzdF8xkRYaWpOvenWvqgF/Nk9Gq8ryUpgBcF5r</aws_secret>
      <metadataViewId type="string">5522f18c-bbfc-11f0-875b-bae5e7a01d69</metadataViewId>
      <overwriteExisting type="bool">false</overwriteExisting>
     </properties>
